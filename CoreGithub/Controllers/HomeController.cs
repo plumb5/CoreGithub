@@ -10,6 +10,7 @@ namespace CoreGithub.Controllers
 
         public HomeController(ILogger<HomeController> logger)
         {
+            //test gngfjfgj
             _logger = logger;
         }
 
