@@ -2,10 +2,12 @@ name: Publish
 
 on:
   workflow_dispatch:
+  
   push:
-    branches:
-    - main
-
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
 env:
   AZURE_WEBAPP_NAME: plumb5
   AZURE_WEBAPP_PACKAGE_PATH: "./publish"
