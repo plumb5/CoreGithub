@@ -39,24 +39,17 @@ jobs:
           path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
 
 
- # Checks-out your repository under $GITHUB_WORKSPACE, 
-      # so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-
-          # Fetch all history for all tags and branches
-          fetch-depth: 0
-
-          # Checkout a specific branch
-          ref: master
-
+  deploy_core:
+      name: Deploy Core
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: Core
+          name: Core  
           
-      - name: SFTP-Deploy-Action
+      - name: SFTP-Deploy-Action        
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: sftp
@@ -73,6 +66,3 @@ jobs:
           # Port for SFTP access to server
           remote-port: 22
 
-
-        
-     
