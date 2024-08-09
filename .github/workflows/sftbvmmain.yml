@@ -49,17 +49,10 @@ jobs:
         with:
           name: Core  
 
-      # Checks-out your repository under $GITHUB_WORKSPACE, 
-      # so your job can access it
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: "Checkout"
+        uses: actions/checkout@v4
         with:
-
-          # Fetch all history for all tags and branches
           fetch-depth: 0
-
-          # Checkout a specific branch
-          ref: master
           
       - name: SFTP-Deploy-Action        
         uses: milanmk/actions-file-deployer@master
@@ -73,8 +66,9 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
+          local-path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
           remote-path: /deploy-test
-
+          sync: "full"
           # Port for SFTP access to server
           remote-port: 22
 
