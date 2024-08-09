@@ -13,7 +13,7 @@ env:
 
 jobs:
   publish:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
@@ -43,17 +43,24 @@ jobs:
 
           # Checkout a specific branch
           ref: master
+
+
+
           
       - name: SFTP-Deploy-Action
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: sftp
-
+          files: | 
+           **/*.dll
+           **/*.js 
+           **/*.view
+      
           # Credentials for SFTP access to server using GitHub secrets
           remote-host: ${{ secrets.FTP_HOST }}
           remote-user: ${{ secrets.FTP_USER }}
           remote-password: ${{ secrets.FTP_PASSWORD }}
-          local-path:  ./publish/
+          
           
           # Path for specific folder on server for files deployment
           remote-path: /deploy-test
