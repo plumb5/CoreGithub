@@ -31,7 +31,12 @@ jobs:
         
       - name: Publish
         run: dotnet publish -c Release --output ./Release
-
+      
+      - name: Upload Core artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Core
+          path: ./Publish/Core
 
       # Checks-out your repository under $GITHUB_WORKSPACE, 
       # so your job can access it
@@ -45,8 +50,10 @@ jobs:
           # Checkout a specific branch
           ref: master
 
-
-
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Core
           
       - name: SFTP-Deploy-Action
         uses: milanmk/actions-file-deployer@master
@@ -60,7 +67,6 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
-          local-path: ./Release/
           remote-path: /deploy-test
 
           # Port for SFTP access to server
