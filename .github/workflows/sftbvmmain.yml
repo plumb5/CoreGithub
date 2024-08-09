@@ -30,7 +30,7 @@ jobs:
         run: dotnet build ./CoreGithub.sln --configuration Release --no-restore
         
       - name: Publish
-        run: dotnet publish -c Release --output ./Release
+        run: dotnet publish -c Release --output ./Publish
       
       - name: Upload Core artifacts
         uses: actions/upload-artifact@v3
