@@ -11,8 +11,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
+        server: ftps://103.146.242.243
+        username: yakkub
+        password: DASPL@yakkub!@#
         protocol: ftps
-        port: 22 # todo replace with your web hosts ftps port
+        port: 990 # todo replace with your web hosts ftps port
