@@ -9,7 +9,6 @@ on:
     branches: [ "master" ]
     
 env:
-  AZURE_WEBAPP_NAME: plumb5
   AZURE_WEBAPP_PACKAGE_PATH: "./publish"
 
 jobs:
@@ -56,7 +55,7 @@ jobs:
           remote-password: ${{ secrets.FTP_PASSWORD }}
 
           # Path for specific folder on server for files deployment
-          local_path: /home/runner/work/CoreGithub/CoreGithub/publish/
+          local-path: /home/runner/work/CoreGithub/CoreGithub/publish/
           remote-path: /deploy-test
 
           # Port for SFTP access to server
