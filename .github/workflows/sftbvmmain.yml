@@ -45,7 +45,7 @@ jobs:
           ref: master
           
       - name: SFTP-Deploy-Action
-        uses: milanmk/actions-file-deployer@master
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
         with:
           remote-protocol: sftp
 
@@ -55,6 +55,7 @@ jobs:
           remote-password: ${{ secrets.FTP_PASSWORD }}
 
           # Path for specific folder on server for files deployment
+          local-path: ./*
           remote-path: /deploy-test
 
           # Port for SFTP access to server
