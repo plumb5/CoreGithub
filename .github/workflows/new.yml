@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftps://103.146.242.243
+        server: 103.146.242.243
         username: yakkub
         password: DASPL@yakkub!@#
         protocol: ftps
