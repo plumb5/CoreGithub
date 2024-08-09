@@ -30,7 +30,8 @@ jobs:
         run: dotnet build ./CoreGithub.sln --configuration Release --no-restore
         
       - name: Publish
-        run: dotnet publish ./CoreGithub.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        run: dotnet publish -c Release --output ./Release
+
 
       # Checks-out your repository under $GITHUB_WORKSPACE, 
       # so your job can access it
@@ -63,9 +64,12 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
+          local-dir: ./Release/
           remote-path: /deploy-test
 
           # Port for SFTP access to server
           remote-port: 22
+
+
         
      
