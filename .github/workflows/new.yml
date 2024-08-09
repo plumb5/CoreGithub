@@ -1,18 +1,38 @@
-on: push
-name: 🚀 Deploy website on push
-jobs:
-  web-deploy:
-    name: 🎉 Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
+name: BuildAndTest
 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ftps://103.146.242.243
-        username: yakkub
-        password: DASPL@yakkub!@#
-        protocol: ftps
-        port: 990 # todo replace with your web hosts ftps port
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+runs-on: ubuntu-latest
+
+steps:
+- uses: actions/checkout@v2
+- name: Setup .NET Core
+  uses: actions/setup-dotnet@v1
+  with:
+    dotnet-version: 3.1.101
+- name: Install dependencies
+  run: dotnet restore
+- name: Build with dotnet
+  run: dotnet build --configuration Release --no-restore
+- name: Test
+  run: dotnet test --no-restore --verbosity normal
+- name: Publish
+  run: dotnet publish MyApp.sln --configuration Release --framework netcoreapp3.1 --output ./publish --runtime win-x86  --self-contained true -p:PublishTrimmed=true -p:PublishSingleFile=true
+- name: FTP Deploy
+  uses: SamKirkland/FTP-Deploy-Action@3.0.0
+  with:
+    # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+    ftp-server: ftps://103.146.242.243
+    # FTP account username
+    ftp-username: yakkub
+    # FTP account password
+    ftp-password: DASPL@yakkub!@#
+    # The local folder to copy, defaults to root project folder
+    local-dir: /home/runner/work/MyApp/MyApp/publish/
