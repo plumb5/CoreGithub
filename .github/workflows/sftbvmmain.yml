@@ -1,0 +1,52 @@
+name: Sftp Publish 
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+    
+env:
+  AZURE_WEBAPP_NAME: plumb5
+  AZURE_WEBAPP_PACKAGE_PATH: "./publish"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+          
+      - name: Restore
+        run: dotnet restore ./CoreGithub.sln
+        
+      - name: Build
+        run: dotnet build ./CoreGithub.sln --configuration Release --no-restore
+        
+      - name: Publish
+        run: dotnet publish ./CoreGithub.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+      
+      - name: SFTP-Deploy-Action
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: sftp
+
+          # Credentials for SFTP access to server using GitHub secrets
+          remote-host: ${{ secrets.FTP_HOST }}
+          remote-user: ${{ secrets.FTP_USER }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}
+
+          # Path for specific folder on server for files deployment
+          remote-path: /deploy-test
+
+          # Port for SFTP access to server
+          remote-port: 22
+        
+     
