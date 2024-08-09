@@ -52,11 +52,7 @@ jobs:
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: sftp
-          files: | 
-           **/*.dll
-           **/*.js 
-           **/*.view
-      
+          
           # Credentials for SFTP access to server using GitHub secrets
           remote-host: ${{ secrets.FTP_HOST }}
           remote-user: ${{ secrets.FTP_USER }}
@@ -64,7 +60,7 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
-          local-dir: ./Release/
+          local-path: ./Release/
           remote-path: /deploy-test
 
           # Port for SFTP access to server
