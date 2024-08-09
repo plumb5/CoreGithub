@@ -56,6 +56,7 @@ jobs:
           remote-password: ${{ secrets.FTP_PASSWORD }}
 
           # Path for specific folder on server for files deployment
+          local_path: /home/runner/work/CoreGithub/CoreGithub/publish/
           remote-path: /deploy-test
 
           # Port for SFTP access to server
