@@ -18,5 +18,5 @@ jobs:
           compress: true                             # Compression
           forceUpload: true                          # Optional, Force uploading all files, Default to false(upload only newer files).
           localDir: '/home/runner/work/CoreGithub/CoreGithub'                              # Required, Absolute or relative to cwd.
-          remoteDir: '/deploy-test'                             # Required, Absolute path only.
+          remoteDir: '/deploy-test/'                             # Required, Absolute path only.
           exclude: '.git*,.DS_Store'                 # Optional. exclude patterns (glob) like .gitignor
