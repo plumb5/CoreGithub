@@ -7,6 +7,27 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2.3.4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+      
+    - name: Build solution
+      run: dotnet build -c Release --verbosity minimal
+      
+    - name: Run tests
+      run: dotnet test -c Release --verbosity minimal --no-build --no-restore
+      
+    - name: Publish
+      run: dotnet publish -c Release --no-build --no-restore
+      
+    - name: Upload Core artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Core
+        path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
+
     - name: Upload Files
       id: upload
       uses: Creepios/sftp-action@v1.0.3
@@ -15,5 +36,5 @@ jobs:
         port: 22
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localPath: './'
+        localPath: './home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
         remotePath: './github'
