@@ -21,13 +21,7 @@ jobs:
       
     - name: Publish
       run: dotnet publish -c Release --no-build --no-restore
-      
-    - name: Upload Core artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Core
-        path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
-
+ 
     - name: Upload Files
       id: upload
       uses: Creepios/sftp-action@v1.0.3
