@@ -34,8 +34,8 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
-          local-path: /home/runner/work/CoreGithub/CoreGithub
-          remote-path: /deploy-test
+          local-path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
+          remote-path: /
           # sync: "full"
           # Port for SFTP access to server
           remote-port: 22
