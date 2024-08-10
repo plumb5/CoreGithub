@@ -21,14 +21,22 @@ jobs:
       
     - name: Publish
       run: dotnet publish -c Release --no-build --no-restore
- 
-    - name: Upload Files
-      id: upload
-      uses: Creepios/sftp-action@v1.0.3
-      with:
-        host: ${{ secrets.FTP_HOST }}
-        port: 22
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localPath: '/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
-        remotePath: './'
+
+    - name: SFTP-Deploy-Action        
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: sftp
+          
+          # Credentials for SFTP access to server using GitHub secrets
+          remote-host: ${{ secrets.FTP_HOST }}
+          remote-user: ${{ secrets.FTP_USER }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}
+          
+          
+          # Path for specific folder on server for files deployment
+          local-path: /home/runner/work/CoreGithub/CoreGithub
+          remote-path: /deploy-test
+          # sync: "full"
+          # Port for SFTP access to server
+          remote-port: 22
+    
