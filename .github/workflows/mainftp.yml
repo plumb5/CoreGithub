@@ -31,4 +31,4 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: '/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
-        remotePath: './github'
+        remotePath: './'
