@@ -12,13 +12,25 @@ jobs:
       cert-path: './server-cert'
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: IIS stop
-        # You may also reference the major or major.minor version
-        uses: im-open/iis-service-action@v1.0.7
-        with:
-         action: 'stop'
-         server: ${{ env.server }}
-         service-account-id: 'Administrator'
-         service-account-password: 'e7ntA#zN5x2Brk'
+      ...
+
+jobs:
+  restart-app-pool:
+   runs-on: [windows-2019]
+   env:
+      server: '103.146.242.243'
+      pool-name: 'github'
+
+   steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: IIS stop
+      # You may also reference the major or major.minor version
+      uses: im-open/app-pool-action@v2.0.4
+      with:
+        action: 'stop'
+        server: ${{ env.server }}
+        app-pool-name: ${{ env.pool-name }}
+        service-account-id: 'Administrator'
+        service-account-password: 'e7ntA#zN5x2Brk'
+  
