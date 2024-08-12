@@ -5,24 +5,20 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: self-hosted
-    
-    defaults:
-      run:
-        shell: cmd
+  stop-iis-service:
+    runs-on: [windows-2019]
+    env:
+      server: '103.146.242.243'
+      cert-path: './server-cert'
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Stop example.com
-      run: appcmd stop sites "core1.plumb5.in"
-    - name: Publish Release
-      run: dotnet publish example.com --configuration Release -o C:\Path\To\Website\www\example.com
-    - name: Start example.com
-      run: appcmd start sites "core1.plumb5.in"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: IIS stop
+        # You may also reference the major or major.minor version
+        uses: im-open/iis-service-action@v1.0.7
+        with:
+         action: 'stop'
+         server: ${{ env.server }}
+         service-account-id: 'Administrator'
+         service-account-password: 'e7ntA#zN5x2Brk'
