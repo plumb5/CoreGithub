@@ -1,0 +1,23 @@
+name: IIS manage
+
+# Controls when the workflow will run
+on:
+
+  # Triggers the workflow on push request event 
+  # but only for the specific branch
+  push:
+    branches: [ master ]
+
+
+jobs:
+  example:
+    runs-on: [self-hosted, deploy]
+    steps:
+      - name: Start app pool
+        id: start_app_pool
+        uses: 1k-off/iis-apppool-action@1.0.0
+        with:
+          action: start
+          siteName: "Default Web Site"
+      - run: Write-Host "App pool for the Default Web Site ${{ steps.start_app_pool.outputs.state }}" 
+
