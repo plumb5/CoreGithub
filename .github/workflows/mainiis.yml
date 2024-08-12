@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Stop IIS Website via SSH
-      uses: appleboy/ssh-action@master
+    - name: Copy folder content recursively to remote
+      uses: garygrossgarten/github-action-scp@release
       with:
+        local: /
+        remote: pub
         host: '103.146.242.243'
         username: 'Administrator'
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-          powershell -Command "Import-Module WebAdministration; Stop-Website -Name 'github"
+        password: 'e7ntA#zN5x2Brk'
