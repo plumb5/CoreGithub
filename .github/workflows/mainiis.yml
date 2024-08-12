@@ -1,23 +1,28 @@
-name: IIS manage
+name: My .NET Action
 
-# Controls when the workflow will run
 on:
-
-  # Triggers the workflow on push request event 
-  # but only for the specific branch
   push:
     branches: [ master ]
 
-
 jobs:
-  example:
-    runs-on: [self-hosted, deploy]
-    steps:
-      - name: Start app pool
-        id: start_app_pool
-        uses: 1k-off/iis-apppool-action@1.0.0
-        with:
-          action: start
-          siteName: "Default Web Site"
-      - run: Write-Host "App pool for the Default Web Site ${{ steps.start_app_pool.outputs.state }}" 
+  build:
+    runs-on: self-hosted
+    
+    defaults:
+      run:
+        shell: cmd
 
+    steps:
+    - uses: actions/checkout@v3
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Stop example.com
+      run: appcmd stop sites "core1.plumb5.in"
+    - name: Publish Release
+      run: dotnet publish example.com --configuration Release -o C:\Path\To\Website\www\example.com
+    - name: Start example.com
+      run: appcmd start sites "core1.plumb5.in"
