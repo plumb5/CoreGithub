@@ -1,27 +1,20 @@
-name: My .NET Action
+name: Stop IIS Website
 
 on:
   push:
     branches: [ master ]
-
+  workflow_dispatch:
 
 jobs:
-  restart-app-pool:
-   runs-on: [windows-2019]
-   env:
-      server: '103.146.242.243'
-      pool-name: 'github'
-
-   steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    - name: IIS stop
-      # You may also reference the major or major.minor version
-      uses: im-open/app-pool-action@v2.0.4
+  stop-website:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Stop IIS Website via SSH
+      uses: appleboy/ssh-action@master
       with:
-        action: 'stop'
-        server: ${{ env.server }}
-        app-pool-name: ${{ env.pool-name }}
-        service-account-id: 'Administrator'
-        service-account-password: 'e7ntA#zN5x2Brk'
-  
+        host: '103.146.242.243'
+        username: 'Administrator'
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          powershell -Command "Import-Module WebAdministration; Stop-Website -Name 'github"
