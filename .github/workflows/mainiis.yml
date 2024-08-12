@@ -2,7 +2,7 @@ name: Stop IIS Website
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@release
+    - name: Stop IIS Website via SSH
+      uses: appleboy/ssh-action@master
       with:
-        local: /
-        remote: pub
         host: '103.146.242.243'
         username: 'Administrator'
-        password: 'e7ntA#zN5x2Brk'
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          powershell -Command "Import-Module WebAdministration; Stop-Website -Name 'github'
