@@ -18,11 +18,4 @@ jobs:
        customHeaders: '{"Content-Type": "application/json"}'
        data: '{  "Id": 78912,  "Customer": "Jason Sweet",  "Quantity": 1,  "Price": 18.00}'
           
-    - name: Stop IIS Website via SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: '103.146.242.243'
-        username: 'Administrator'
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-          powershell -Command "Import-Module WebAdministration; Stop-Website -Name 'github'
+   
