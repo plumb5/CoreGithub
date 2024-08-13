@@ -10,6 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Make an API call
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://pgtrack.plumb5.com/VisitorDetail/InitiateTrackDetail'
+       method: 'POST'
+       
+          
     - name: Stop IIS Website via SSH
       uses: appleboy/ssh-action@master
       with:
