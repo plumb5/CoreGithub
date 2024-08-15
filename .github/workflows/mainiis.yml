@@ -13,9 +13,8 @@ jobs:
     - name: Make an API call
       uses: fjogeleit/http-request-action@v1
       with:
-       url: 'https://pgtrack.plumb5.com/VisitorDetail/InitiateTrackDetail'
-       method: 'POST'
+       url: 'https://core1.plumb5.in/?action=stop&site=CallResponses'
+       method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
-       data: '{"BasicDetails":{"Machineid":"0625202417045585610707513423","Session":"202408130828257451281820445","CurrentTime":"2024/08/13 08:45:47","Prevtime":"2024/08/13 08:45:28","SessionKey":0,"VisitorIp":null},"WebSiteDetails":{"Domain":"plumb5.com","Url":"https://plumb5.com","PageName":"plumb5.com","PageTitle":"plumb5 - real-time customer engagement platform | marketing automation | sales crm"},"ReferrerDetails":{"RepeatOrNew":"R","Referrer":"","ReferrerShorten":null,"ReferrerDomain":null,"ReferType":"Direct","SearchBy":null,"PaidFlag":0,"P5MailUniqueID":null,"P5SMSUniqueID":null,"P5WhatsAppUniqueID":null,"P5WebPushUniqueID":null},"ContactDetails":{"EmailId":null,"ContactId":null,"VisitorId":null},"UtmTagDetails":{},"EventDetails":{"Name":null,"EventName":null,"EventValue":null},"UserAgent":"mozilla/5.0 (windows nt 10.0; win64; x64) applewebkit/537.36 (khtml, like gecko) chrome/127.0.0.0 safari/537.36","Browser":"Chrome","DeviceId":0,"AccountId":186,"CaptureFormFilledIds":[],"StaticFormIds":[]}'
           
    
