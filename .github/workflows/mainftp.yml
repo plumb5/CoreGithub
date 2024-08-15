@@ -5,17 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Upload a builded file.
     steps:
-    - name: Make an API call
-      uses: fjogeleit/http-request-action@v1
-      with:
-       url: 'https://iis.plumb5.in/?action=stop&site=GitHubPublish'
-       method: 'GET'
-       customHeaders: '{"Content-Type": "application/json"}'
-
-    - name: Sleep for 30 seconds
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '30s'
+    
         
     - name: Checkout
       uses: actions/checkout@v2.3.4
