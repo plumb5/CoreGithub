@@ -8,7 +8,7 @@ jobs:
     - name: Stop AppPool
       uses: fjogeleit/http-request-action@v1
       with:
-       url: 'https://iis.plumb5.in/?action=stop&site=GitHubPublish'
+       url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
        method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
         
@@ -44,6 +44,6 @@ jobs:
     - name: Start AppPool
       uses: fjogeleit/http-request-action@v1
       with:
-       url: 'https://iis.plumb5.in/?action=start&site=GitHubPublish'
+       url: 'https://iis.plumb5.in/?actiontype=start&site=GitHubPublish'
        method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
