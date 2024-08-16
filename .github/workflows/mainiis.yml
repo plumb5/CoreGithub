@@ -1,0 +1,21 @@
+name: Stop IIS Website
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  stop-website:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Make an API call
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?action=stop&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
+
+  
+   

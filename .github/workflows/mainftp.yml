@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Upload a builded file.
     steps:
+    
+        
     - name: Checkout
       uses: actions/checkout@v2.3.4
       
@@ -21,7 +23,8 @@ jobs:
       
     - name: Publish
       run: dotnet publish -c Release --no-build --no-restore
- 
+   
+       
     - name: Upload Files
       id: upload
       uses: Creepios/sftp-action@v1.0.3
@@ -32,3 +35,10 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: '/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
         remotePath: './'
+
+    - name: Make an API call
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?action=start&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
