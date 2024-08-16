@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreGithub", "CoreGithub\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5GenralML", "P5GenralML\P5GenralML.csproj", "{DF56E9AE-FC24-4D2A-B03C-4586F10DAE4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p5Admin", "p5Admin\p5Admin.csproj", "{5D6ADB0D-7ABA-4B98-8AD8-83658C513994}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DF56E9AE-FC24-4D2A-B03C-4586F10DAE4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF56E9AE-FC24-4D2A-B03C-4586F10DAE4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF56E9AE-FC24-4D2A-B03C-4586F10DAE4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6ADB0D-7ABA-4B98-8AD8-83658C513994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6ADB0D-7ABA-4B98-8AD8-83658C513994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6ADB0D-7ABA-4B98-8AD8-83658C513994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6ADB0D-7ABA-4B98-8AD8-83658C513994}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
