@@ -2,7 +2,7 @@ name: Publish to Beta
 on:
   push:
     branches:
-      - Master
+      - master
 jobs:
   upload_files:
     runs-on: ubuntu-latest
