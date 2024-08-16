@@ -2,7 +2,7 @@ name: Publish to Beta
 on:
   push:
     branches:
-      - CoreGithub
+      - Master
 jobs:
   upload_files:
     runs-on: ubuntu-latest
