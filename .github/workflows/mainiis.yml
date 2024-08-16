@@ -1,9 +1,4 @@
-name: Stop IIS Website
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+on: [push]
 
 jobs:
   stop-website:
