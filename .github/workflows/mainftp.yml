@@ -5,7 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Upload a builded file.
     steps:
-    
+    - name: Stop AppPool
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?action=stop&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
         
     - name: Checkout
       uses: actions/checkout@v2.3.4
@@ -36,7 +41,7 @@ jobs:
         localPath: '/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
         remotePath: './'
 
-    - name: Make an API call
+    - name: Start AppPool
       uses: fjogeleit/http-request-action@v1
       with:
        url: 'https://iis.plumb5.in/?action=start&site=GitHubPublish'
