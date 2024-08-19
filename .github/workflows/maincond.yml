@@ -9,14 +9,21 @@ jobs:
     name: Upload a builded file.
     steps:
     - name: Logging
-      run: |
-       echo "msg: ${{github.event.commits[0].message}}"
-       
+      run: echo "Msg:${{github.event.commits[0].message}}"
+      
       
     - name: Stop AppPool
       if : ${{ github.event.commits[0].message == 'plumb5' }}
       uses: fjogeleit/http-request-action@v1
       with:
        url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
+
+    - name: Start AppPool
+      if : ${{ github.event.commits[0].message == 'plumb6' }}
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?actiontype=start&site=GitHubPublish'
        method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
