@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Upload a builded file.
     steps:
+    - name: Logging
+      run: |
+       echo "${{toJSON(github.event)}}"
+      
     - name: Stop AppPool
       uses: fjogeleit/http-request-action@v1
       with:
