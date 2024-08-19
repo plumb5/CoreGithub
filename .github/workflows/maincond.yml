@@ -1,4 +1,4 @@
-name: Publish to Beta
+name: Publish with condition
 on:
   push:
     branches:
@@ -11,7 +11,8 @@ jobs:
     - name: Logging
       run: |
        echo "${{github.event.commits[0].message}}"
-      
+       
+      if : ${{ github.event.commits[0].message == 'plumb5' }}
     - name: Stop AppPool
       uses: fjogeleit/http-request-action@v1
       with:
