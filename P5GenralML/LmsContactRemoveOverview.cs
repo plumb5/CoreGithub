@@ -22,6 +22,6 @@ namespace P5GenralML
         public int TotalInputRow { get; set; }
         public int TotalCompletedRow { get; set; }
 
-        public byte[] FileContent { get; set; }
+        public byte[]? FileContent { get; set; }
     }
 }

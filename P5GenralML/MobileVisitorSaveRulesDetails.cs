@@ -60,7 +60,7 @@ namespace P5GenralML
         public bool MailCampignResponsiveStageIsTheirData { get; set; }
 
         public bool FormRespondedListIsTheirData { get; set; }
-        public List<Int32> FormRespondedList { get; set; }
+        public List<Int32>? FormRespondedList { get; set; }
 
         public Int16 CloseCount { get; set; }
         public bool CloseCountSessionWise { get; set; }

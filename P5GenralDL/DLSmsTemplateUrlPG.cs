@@ -28,20 +28,20 @@ namespace P5GenralDL
         public async Task<Int32> SaveSmsTemplateUrl(SmsTemplateUrl smsTemplateUrls)
         {
             string storeProcCommand = "select * from sms_templateurl_save(@SmsTemplateId,@UrlContent)";
-            object? param = new { smsTemplateUrls.SmsTemplateId, smsTemplateUrls.UrlContent};
+            object? param = new { smsTemplateUrls.SmsTemplateId, smsTemplateUrls.UrlContent };
             using var db = GetDbConnection(connection.Connection);
             return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
         }
 
-        public async Task<bool>  Update(SmsTemplateUrl smsTemplateUrls)
+        public async Task<bool> Update(SmsTemplateUrl smsTemplateUrls)
         {
             string storeProcCommand = "select * from sms_templateurl_update(@Id,@SmsTemplateId,@UrlContent)";
             object? param = new { smsTemplateUrls.Id, smsTemplateUrls.SmsTemplateId, smsTemplateUrls.UrlContent };
             using var db = GetDbConnection(connection.Connection);
-            return await db.ExecuteScalarAsync<int>(storeProcCommand, param)>0;
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param) > 0;
         }
 
-        public async Task<IEnumerable<SmsTemplateUrl>>  GetDetail(int SmsTemplateId)
+        public async Task<IEnumerable<SmsTemplateUrl>> GetDetail(int SmsTemplateId)
         {
             string storeProcCommand = "select * from sms_templateurl_getdetailsbytemplateid(@SmsTemplateId)";
             object? param = new { SmsTemplateId };
@@ -66,13 +66,13 @@ namespace P5GenralDL
             return await db.ExecuteScalarAsync<int>(storeProcCommand, param) > 0;
         }
 
-        public async Task<IEnumerable<string>> GetUrlAsync(int smsTemplateUrlId)
+        public async Task<string?> GetUrlAsync(int smsTemplateUrlId)
         {
             string storeProcCommand = "select * from sms_templateurl_gettemplateurlbyid(@smsTemplateUrlId)";
             object? param = new { smsTemplateUrlId };
 
             using var db = GetDbConnection(connection.Connection);
-            return await db.QueryAsync<string>(storeProcCommand, param);
+            return await db.ExecuteScalarAsync<string>(storeProcCommand, param);
         }
 
         public async Task<SmsTemplateUrl?> GetDetailByUrl(string Url)

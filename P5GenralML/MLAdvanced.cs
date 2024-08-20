@@ -8,7 +8,7 @@ namespace P5GenralML
         public string? DomainName { get; set; }
         public string? ScoreType { get; set; }
         public string? SearchValue { get; set; }
-        public DataTable Data { get; set; }
+        public DataTable? Data { get; set; }
         public decimal Score { get; set; }
         public string? FullText { get; set; }
         public string? Channel { get; set; }

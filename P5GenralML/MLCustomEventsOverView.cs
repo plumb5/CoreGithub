@@ -10,6 +10,6 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public string? EventName { get; set; }
-        public List<MLCustomEventsOverViewMappings> ColumnNames { get; set; }
+        public List<MLCustomEventsOverViewMappings>? ColumnNames { get; set; }
     }
 }

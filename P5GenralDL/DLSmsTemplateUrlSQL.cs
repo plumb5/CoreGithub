@@ -27,7 +27,7 @@ namespace P5GenralDL
         public async Task<Int32> SaveSmsTemplateUrl(SmsTemplateUrl smsTemplateUrls)
         {
             string storeProcCommand = "Sms_TemplateUrl";
-            object? param = new { Action= "Save", smsTemplateUrls.UrlContent, smsTemplateUrls.SmsTemplateId };
+            object? param = new { Action = "Save", smsTemplateUrls.UrlContent, smsTemplateUrls.SmsTemplateId };
             using var db = GetDbConnection(connection.Connection);
             return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
         }
@@ -65,19 +65,19 @@ namespace P5GenralDL
             return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
         }
 
-        public async Task<IEnumerable<string>> GetUrlAsync(int smsTemplateUrlId)
+        public async Task<string?> GetUrlAsync(int smsTemplateUrlId)
         {
             string storeProcCommand = "Sms_TemplateUrl";
             object? param = new { Action = "GetTemplateUrlById", smsTemplateUrlId };
 
             using var db = GetDbConnection(connection.Connection);
-            return await db.QueryAsync<string>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            return await db.ExecuteScalarAsync<string>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
         }
 
         public async Task<SmsTemplateUrl?> GetDetailByUrl(string Url)
-        { 
+        {
             string storeProcCommand = "Sms_TemplateUrl";
-            object? param = new { Action = "GET", Url  };
+            object? param = new { Action = "GET", Url };
             using var db = GetDbConnection(connection.Connection);
             return await db.QueryFirstOrDefaultAsync<SmsTemplateUrl?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
 

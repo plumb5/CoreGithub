@@ -36,7 +36,7 @@ namespace P5GenralML
         public DateTime ExpiryDate { get; set; }
         public DateTime LastTrack { get; set; }
         public int Status { get; set; }
-        public List<P5GenralML.Purchase> PurchaseInfo { get; set; }
+        public List<P5GenralML.Purchase>? PurchaseInfo { get; set; }
         public string? AccountManager { get; set; }
         public string? SupportManager { get; set; }
         public DateTime RegistrationDate { get; set; }

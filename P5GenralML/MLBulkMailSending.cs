@@ -11,6 +11,6 @@ namespace P5GenralML
         public bool Status { get; set; }
         public string? Message { get; set; }
         public int NumberOfMailSent { get; set; }
-        public MailSendingSetting mailSendingSetting { get; set; }
+        public MailSendingSetting? mailSendingSetting { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System;
+﻿mainusing System;
 
 namespace P5GenralML
 {
@@ -10,7 +10,7 @@ namespace P5GenralML
         public decimal FileSize { get; set; }
         public string? AttachmentResponseId { get; set; }
         public string? AttachmentFileType { get; set; }
-        public byte[] AttachmentFileContent { get; set; }
+        public byte[]? AttachmentFileContent { get; set; }
         public DateTime? CreatedDate { get; set; }
     }
 }

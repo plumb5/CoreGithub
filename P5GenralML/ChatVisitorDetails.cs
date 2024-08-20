@@ -36,6 +36,6 @@ namespace P5GenralML
         public int NumOfPageVisited { get; set; }
         public decimal OverAllScore { get; set; }
 
-        public List<ChatFullTranscipt> Messages { get; set;}
+        public List<ChatFullTranscipt>? Messages { get; set;}
     }
 }

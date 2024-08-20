@@ -9,9 +9,9 @@ namespace P5GenralML
         public string? UserName { get; set; }
         public string? EmailId { get; set; }
         public List<int>? UserGroupIdList { get; set; }
-        public List<Members> Members { get; set; }
-        public List<UserPermissions> UserPermissions { get; set; }
-        public List<MLUserHierarchy> UserMembers { get; set; }
+        public List<Members>? Members { get; set; }
+        public List<UserPermissions>? UserPermissions { get; set; }
+        public List<MLUserHierarchy>? UserMembers { get; set; }
         public bool FirstTimePasswordReset { get; set; }
         public string? UserAccountType { get; set; }
         public int PreferredAccountId { get; set; }

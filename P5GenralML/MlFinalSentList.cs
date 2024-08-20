@@ -6,8 +6,8 @@ namespace P5GenralML
     public class MlFinalSentList
     {
         public int AccountId { get; set; }
-        public List<FinalContactList> ContactList { get; set; }
-        public List<FinalMachineList> MachineList { get; set; }
+        public List<FinalContactList>? ContactList { get; set; }
+        public List<FinalMachineList>? MachineList { get; set; }
         public int WorkFlowId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int ConfigId { get; set; }
