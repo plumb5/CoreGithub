@@ -8,10 +8,10 @@ namespace P5GenralML
         public int AccountId { get; set; }
         public int UserInfoUserId { get; set; }
         public int FeatureId { get; set; }
-        public string ProviderName { get; set; }
+        public string? ProviderName { get; set; }
         public long TotalCredit { get; set; }
         public DateTime CreditAddDate { get; set; }
-        public string Remarks { get; set; }
+        public string? Remarks { get; set; }
 
     }
 }

@@ -9,9 +9,9 @@ namespace P5GenralML
     public class MLVisitorInformation
     {
         public int ContactId { get; set; }
-        public string MachineId { get; set; }
-        public string DeviceId { get; set; }
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? MachineId { get; set; }
+        public string? DeviceId { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
     }
 }

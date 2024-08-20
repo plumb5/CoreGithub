@@ -11,7 +11,7 @@ namespace P5GenralML
         public DateTime FromDate { get; set; }
 
         public DateTime ToDate { get; set; }
-        public string CampaignName { get; set; }
+        public string? CampaignName { get; set; }
         public bool OrderBy { get; set; }
     }
 }

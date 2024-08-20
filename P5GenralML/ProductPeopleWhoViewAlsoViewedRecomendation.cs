@@ -10,9 +10,9 @@ namespace P5GenralML
     {
         public int Id { get; set; }
 
-        public string ProductId { get; set; }
+        public string? ProductId { get; set; }
 
-        public string LastViewedProduct { get; set; }
+        public string? LastViewedProduct { get; set; }
 
         public int Hits { get; set; }
 

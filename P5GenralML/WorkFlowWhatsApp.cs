@@ -20,7 +20,7 @@ namespace P5GenralML
         public int NotSentCount { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool IsStopped { get; set; }
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
         public bool IsSplitTester { get; set; }
         public Int16 IsSplitTestWinner { get; set; }
         public int WhatsAppConfigurationNameId { get; set; }

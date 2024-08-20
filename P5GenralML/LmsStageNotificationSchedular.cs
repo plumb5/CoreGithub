@@ -13,8 +13,8 @@ namespace P5GenralML
         public bool Sms { get; set; }
         public bool ReportToSeniorId { get; set; }
         public int UserGroupId { get; set; }
-        public string EmailIds { get; set; }
-        public string PhoneNos { get; set; }
+        public string? EmailIds { get; set; }
+        public string? PhoneNos { get; set; }
         public DateTime CreatedDate { get; set; }
         public int InteractiveHours { get; set; }
         public int SalesPersonNotInteractedHours { get; set; }

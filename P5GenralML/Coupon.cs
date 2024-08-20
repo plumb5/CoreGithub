@@ -12,7 +12,7 @@ namespace P5GenralML
 
         public int UserInfoUserId { get; set; }
 
-        public string CouponIdentifier { get; set; }
+        public string? CouponIdentifier { get; set; }
 
         public int NumOfCoupon { get; set; }
 
@@ -22,15 +22,15 @@ namespace P5GenralML
 
         public DateTime? ExpiryDate { get; set; }
 
-        public string CodeType { get; set; }
+        public string? CodeType { get; set; }
 
-        public string Code { get; set; }
+        public string? Code { get; set; }
 
-        public string IfAutoCouponThenStartWith { get; set; }
+        public string? IfAutoCouponThenStartWith { get; set; }
 
         public DateTime? CreatedDate { get; set; }
 
-        public string FileName { get; set; }
+        public string? FileName { get; set; }
 
         public bool? IsArchive { get; set; }
     }

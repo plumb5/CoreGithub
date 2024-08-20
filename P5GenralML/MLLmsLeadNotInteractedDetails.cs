@@ -9,8 +9,8 @@ namespace P5GenralML
     public class MLLmsLeadNotInteractedDetails
     {
         public int UserInfoUserId { get; set; }
-        public string NotInteractedLeadEmailId { get; set; }
-        public string NotInteractedLeadPhoneNumber { get; set; }
+        public string? NotInteractedLeadEmailId { get; set; }
+        public string? NotInteractedLeadPhoneNumber { get; set; }
         public int ContactId { get; set; }
     }
 }

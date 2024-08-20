@@ -10,10 +10,10 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int AccountId { get; set; }
-        public string StoreProcedureName { get; set; }
+        public string? StoreProcedureName { get; set; }
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
-        public string TimeTookToExecute { get; set; }        
-        public string ErrorLog { get; set; }
+        public string? TimeTookToExecute { get; set; }        
+        public string? ErrorLog { get; set; }
     }
 }

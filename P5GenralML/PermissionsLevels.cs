@@ -5,8 +5,8 @@ namespace P5GenralML
     public class PermissionsLevels
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string PermissionDescription { get; set; }
+        public string? Name { get; set; }
+        public string? PermissionDescription { get; set; }
         public bool IsSuperAdmin { get; set; }
         public bool UserRole { get; set; }
         public bool UserRoleHasFullControl { get; set; }

@@ -17,10 +17,10 @@ namespace P5GenralML
     public class MLContactFieldEditSetting
     {
         public int Id { get; set; }
-        public string PropertyName { get; set; }
-        public string DisplayName { get; set; }
+        public string? PropertyName { get; set; }
+        public string? DisplayName { get; set; }
         public short FieldType { get; set; }
-        public string FieldOption { get; set; }
+        public string? FieldOption { get; set; }
         public int PropertyId { get; set; }
         public int DisplayOrder { get; set; }
         public bool IsMandatory { get; set; }

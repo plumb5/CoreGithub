@@ -12,27 +12,27 @@ namespace P5GenralML
 
         public LastName LastName { get; set; }
 
-        public string Education { get; set; }
+        public string? Education { get; set; }
 
         public Genders Gender { get; set; }
 
-        public string Occupation { get; set; }
+        public string? Occupation { get; set; }
 
         public Martial MaritalStatus { get; set; }
 
-        public string Location { get; set; }
+        public string? Location { get; set; }
 
-        public string Interests { get; set; }
+        public string? Interests { get; set; }
 
-        public string UtmSource { get; set; }
+        public string? UtmSource { get; set; }
 
-        public string UtmMedium { get; set; }
+        public string? UtmMedium { get; set; }
 
-        public string UtmCampaign { get; set; }
+        public string? UtmCampaign { get; set; }
 
-        public string UtmTerm { get; set; }
+        public string? UtmTerm { get; set; }
 
-        public string UtmContent { get; set; }
+        public string? UtmContent { get; set; }
 
         public MailSubscribe MailSubscribe { get; set; }
 
@@ -40,17 +40,17 @@ namespace P5GenralML
 
         public WhatsAppOptin IsWhatsAppOptIn { get; set; }
 
-        //public string AccountType { get; set; }
+        //public string? AccountType { get; set; }
 
-        //public string AccountOpenedSource { get; set; }
+        //public string? AccountOpenedSource { get; set; }
 
-        //public string LastActivityLoginDate { get; set; }
+        //public string? LastActivityLoginDate { get; set; }
 
-        //public string LastActivityLoginSource { get; set; }
+        //public string? LastActivityLoginSource { get; set; }
 
-        //public string CustomerScore { get; set; }
+        //public string? CustomerScore { get; set; }
 
-        //public string AccountAmount { get; set; }
+        //public string? AccountAmount { get; set; }
 
         //public Customer IsCustomer { get; set; }
 
@@ -64,16 +64,16 @@ namespace P5GenralML
 
         //public ComplaintRaised IsComplaintRaised { get; set; }
 
-        //public string ComplaintType { get; set; }
+        //public string? ComplaintType { get; set; }
 
-        //public string WhatsAppConsentDate { get; set; }
+        //public string? WhatsAppConsentDate { get; set; }
     }
     public class FieldDetails
     {
-        public string FieldName { get; set; }
-        public string FieldType { get; set; }
-        public string FieldValue { get; set; }
-        public string CustomFieldName { get; set; }
+        public string? FieldName { get; set; }
+        public string? FieldType { get; set; }
+        public string? FieldValue { get; set; }
+        public string? CustomFieldName { get; set; }
     }
     public enum Genders
     {

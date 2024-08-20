@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLFacebookPages
     {
-        public string PageId { get; set; }
-        public string PageName { get; set; }
-        public string ImageUrl { get; set; }
+        public string? PageId { get; set; }
+        public string? PageName { get; set; }
+        public string? ImageUrl { get; set; }
     }
 }

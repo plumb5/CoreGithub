@@ -2,6 +2,6 @@
 {
     public class MLCommonInfo
     {
-        public string Connection { get; set; }
+        public string? Connection { get; set; }
     }
 }

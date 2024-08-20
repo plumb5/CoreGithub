@@ -10,9 +10,9 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public bool? IsLandingPageConfigEnabled { get; set; }
-        public string LandingPageName { get; set; }
-        public string BucketUrl { get; set; }
-        public string CloudFrontUrl { get; set; }
+        public string? LandingPageName { get; set; }
+        public string? BucketUrl { get; set; }
+        public string? CloudFrontUrl { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

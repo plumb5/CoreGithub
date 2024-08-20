@@ -10,6 +10,6 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int SmsTemplateId { get; set; }
-        public string UrlContent { get; set; }
+        public string? UrlContent { get; set; }
     }
 }

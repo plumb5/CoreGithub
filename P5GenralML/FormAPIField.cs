@@ -10,6 +10,6 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int FormAPIId { get; set; }
-        public string FieldIdentityTag { get; set; }
+        public string? FieldIdentityTag { get; set; }
     }
 }

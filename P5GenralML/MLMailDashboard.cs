@@ -13,7 +13,7 @@ namespace P5GenralML
         public int Forward { get; set; }
         public int Unsubscribe { get; set; }
         public int Bounced { get; set; }
-        public string GDate { get; set; }
+        public string? GDate { get; set; }
         public int Hour { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }

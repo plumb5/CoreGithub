@@ -10,8 +10,8 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int SpreadsheetsImportId { get; set; }
-        public string ServerResponses { get; set; }
+        public string? ServerResponses { get; set; }
         public DateTime ReceivedDate { get; set; }
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
     }
 }

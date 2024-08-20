@@ -9,8 +9,8 @@ namespace P5GenralML
     public class FacebookAssignmentSettings
     {
         public int Id { get; set; }
-        public string PageId { get; set; }
-        public string PageName { get; set; }
+        public string? PageId { get; set; }
+        public string? PageName { get; set; }
         public bool IsAssignIndividualOrRoundRobin { get; set; }
         public int UserId { get; set; }
         public int UserGroupId { get; set; }

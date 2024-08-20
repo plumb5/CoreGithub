@@ -8,9 +8,9 @@ namespace P5GenralML
 {
     public class PermissionDetailsForCode
     {
-        public string AreaName { get; set; }
-        public string ControllerName { get; set; }
-        public string ActionName { get; set; }
+        public string? AreaName { get; set; }
+        public string? ControllerName { get; set; }
+        public string? ActionName { get; set; }
         public bool? HasFullControl { get; set; }
         public bool? ViewControl { get; set; }
         public bool? ContributeControl { get; set; }

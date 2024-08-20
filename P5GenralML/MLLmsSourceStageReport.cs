@@ -9,9 +9,9 @@ namespace P5GenralML
     public class MLLmsSourceStageReport
     {
         public int UserInfoUserId { get; set; }
-        public string Stage { get; set; }
+        public string? Stage { get; set; }
         public int Total { get; set; }
-        public string Source { get; set; }
+        public string? Source { get; set; }
         public int Paid { get; set; }
     }
 }

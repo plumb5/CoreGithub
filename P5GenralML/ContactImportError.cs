@@ -8,11 +8,11 @@ namespace P5GenralML
 {
     public class ContactImportError
     {
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
-        public string ContactInfoInString { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? ContactInfoInString { get; set; }
         public DateTime CreatedDate { get; set; }
         public int ContactImportOverviewId { get; set; }
-        public string RejectReason { get; set; }
+        public string? RejectReason { get; set; }
     }
 }

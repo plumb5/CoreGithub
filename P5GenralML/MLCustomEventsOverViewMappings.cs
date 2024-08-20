@@ -8,7 +8,7 @@ namespace P5GenralML
 {
     public class MLCustomEventsOverViewMappings
     {
-        public string ColumnName { get; set; }
-        public string DataType { get; set; }
+        public string? ColumnName { get; set; }
+        public string? DataType { get; set; }
     }
 }

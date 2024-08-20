@@ -10,18 +10,18 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string ProviderName { get; set; }
+        public string? ProviderName { get; set; }
         public Boolean IsDefaultProvider { get; set; }
 
-        public string ApiKey { get; set; }
-        public string WhatsappBussinessNumber { get; set; }
-        public string Sender { get; set; }
+        public string? ApiKey { get; set; }
+        public string? WhatsappBussinessNumber { get; set; }
+        public string? Sender { get; set; }
         public Int64 MessageSent { get; set; }
         public Int64 MessageLimit { get; set; }
         public DateTime UpdatedDate { get; set; }
         public Boolean IsPromotionalOrTransactionalType { get; set; }
-        public string Password { get; set; }
-        public string UserName { get; set; }
+        public string? Password { get; set; }
+        public string? UserName { get; set; }
         public bool ActiveStatus { get; set; }
         public bool? IsTimeRestriction { get; set; }
         public bool? WeekDays { get; set; }
@@ -36,10 +36,10 @@ namespace P5GenralML
         public bool? Holiday { get; set; }
         public TimeSpan? HolidayStartTime { get; set; }
         public TimeSpan? HolidayEndTime { get; set; }
-        public string HolidayListJson { get; set; }
+        public string? HolidayListJson { get; set; }
         public bool? IsBulkSupported { get; set; }
-        public string ConfigurationUrl { get; set; }
-        public string CountryCode { get; set; }
+        public string? ConfigurationUrl { get; set; }
+        public string? CountryCode { get; set; }
         public int WhatsAppConfigurationNameId { get; set; }
         public bool ArchiveStatus { get; set; }
     }

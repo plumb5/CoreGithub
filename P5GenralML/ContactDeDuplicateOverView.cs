@@ -10,7 +10,7 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string ImportedFileName { get; set; }
+        public string? ImportedFileName { get; set; }
         public byte[] ImportedFileContent { get; set; }
         public int IsCompleted { get; set; }
         public int TotalCounts{ get; set; }
@@ -24,6 +24,6 @@ namespace P5GenralML
         public Nullable<DateTime> CreatedDate { get; set; }
         public Nullable<DateTime> UpdatedDate { get; set; }
         public Nullable<DateTime> ImportVerifyStartDate { get; set; }
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
     }
 }

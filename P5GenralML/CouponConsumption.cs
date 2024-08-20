@@ -12,13 +12,13 @@ namespace P5GenralML
 
         public int CouponId { get; set; }
 
-        public string CouponIdentifier { get; set; }
+        public string? CouponIdentifier { get; set; }
 
-        public string CouponCode { get; set; }
+        public string? CouponCode { get; set; }
 
         public bool? IsSent { get; set; }
 
-        public string Channel { get; set; }
+        public string? Channel { get; set; }
 
         public DateTime? SentDate { get; set; }
 
@@ -28,9 +28,9 @@ namespace P5GenralML
 
         public int? ContactId { get; set; }
 
-        public string EmailOrPhone { get; set; }
+        public string? EmailOrPhone { get; set; }
 
-        public string MachineId { get; set; }
+        public string? MachineId { get; set; }
 
         public DateTime? CreatedDate { get; set; }
     }

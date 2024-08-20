@@ -9,9 +9,9 @@ namespace P5GenralML
     public class MLSmsDashboardCampaignEffectiveness
     {
 
-        public string campaignname { get; set; }
+        public string? campaignname { get; set; }
 
-        public string templatename { get; set; }
+        public string? templatename { get; set; }
 
         public int TotalDelivered { get; set; }
         public int TotalClicked { get; set; }

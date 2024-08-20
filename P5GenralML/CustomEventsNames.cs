@@ -9,6 +9,6 @@ namespace P5GenralML
     public class CustomEventsNames
     {
         public int Id { get; set; }
-        public string EventName { get; set; }
+        public string? EventName { get; set; }
     }
 }

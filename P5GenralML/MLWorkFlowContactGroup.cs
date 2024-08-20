@@ -8,10 +8,10 @@ namespace P5GenralML
 {
     public class MLWorkFlowContactGroup
     {
-        public string DeviceId { get; set; }
-        public string Name { get; set; }
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? DeviceId { get; set; }
+        public string? Name { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
         public Nullable<short> IsVerifiedMailId { get; set; }
         public byte? Unsubscribe { get; set; }
         public Nullable<short> IsVerifiedContactNumber { get; set; }

@@ -8,6 +8,6 @@ namespace P5GenralML
 {
    public class IpligenceCityList
     {
-       public string CityName { get; set; }
+       public string? CityName { get; set; }
     }
 }

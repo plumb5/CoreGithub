@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLWorkFlowMobileResponseBackup
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int WorkFlowId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int TotalAndroidSent { get; set; }

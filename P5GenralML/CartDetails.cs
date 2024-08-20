@@ -10,13 +10,13 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string TxId { get; set; }
+        public string? TxId { get; set; }
         public Int16 FeatureId { get; set; }
-        public string FeatureName { get; set; }
-        public string PurchaseLink { get; set; }
+        public string? FeatureName { get; set; }
+        public string? PurchaseLink { get; set; }
         public decimal MonthlyPrice { get; set; }
         public decimal YearlyPrice { get; set; }
-        public string UnitType { get; set; }
+        public string? UnitType { get; set; }
         public int OpttedRange { get; set; }
         public bool SelectedYearly { get; set; }
         public bool PriceInINRorDollar { get; set; }

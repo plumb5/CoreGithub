@@ -10,8 +10,8 @@ namespace P5GenralML
     {
 
         public int AccountId { get; set; }
-        public string DomainName { get; set; }
-        public string Connection { get; set; }
+        public string? DomainName { get; set; }
+        public string? Connection { get; set; }
 
         public byte AccountType { get; set; }
         public int Status { get; set; }

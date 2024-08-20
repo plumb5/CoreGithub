@@ -9,10 +9,10 @@ namespace P5GenralML
     public class MobileIOSSettings
     {
         public int Id { get; set; }
-        public string Certificate { get; set; }
-        public string Password { get; set; }
+        public string? Certificate { get; set; }
+        public string? Password { get; set; }
         public int Pushmode { get; set; }
-        public string PackageName { get; set; }
+        public string? PackageName { get; set; }
         public DateTime Date { get; set; }
     }
 }

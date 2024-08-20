@@ -10,7 +10,7 @@ namespace P5GenralML
     {
         public int LmsContactRemoveOverViewId { get; set; }
         public int UserInfoUserId { get; set; }
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
     }
 }

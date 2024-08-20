@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int GroupMemberId { get; set; }
         public int GroupId { get; set; }
-        public string DeviceId { get; set; }
+        public string? DeviceId { get; set; }
         public DateTime Date { get; set; }
     }
 }

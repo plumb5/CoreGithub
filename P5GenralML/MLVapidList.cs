@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLVapidList
     {
-        public string EndpointUrl { get; set; }
-        public string tokenkey { get; set; }
-        public string authkey { get; set; }
+        public string? EndpointUrl { get; set; }
+        public string? tokenkey { get; set; }
+        public string? authkey { get; set; }
     }
 }

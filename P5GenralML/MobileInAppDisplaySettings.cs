@@ -8,9 +8,9 @@ namespace P5GenralML
     public class MobileInAppDisplaySettings
     {
         public int Id { get; set; }
-        public string CampaignName { get; set; }
-        public string Design { get; set; }
-        public string RuleStatus { get; set; }
-        public string ResponseStatus { get; set; }
+        public string? CampaignName { get; set; }
+        public string? Design { get; set; }
+        public string? RuleStatus { get; set; }
+        public string? ResponseStatus { get; set; }
     }
 }

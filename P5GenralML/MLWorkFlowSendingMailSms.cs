@@ -10,12 +10,12 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int ContactId { get; set; }
-        public string MachineId { get; set; }
-        public string Channel { get; set; }
+        public string? MachineId { get; set; }
+        public string? Channel { get; set; }
         public int ConfigId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int WorkFlowId { get; set; }
-        public string ChannelType { get; set; }
+        public string? ChannelType { get; set; }
         public bool ActiveStatus { get; set; }
     }
 }

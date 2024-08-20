@@ -9,11 +9,11 @@ namespace P5GenralML
     public class Notes
     {
         public int Id { get; set; }
-        public string Content { get; set; }
-        public string MachineId { get; set; }
+        public string? Content { get; set; }
+        public string? MachineId { get; set; }
         public int ContactId { get; set; }
         public DateTime Date { get; set; }
-        public String Attachment { get; set; }
+        public string? Attachment { get; set; }
         public int UserInfoUserId { get; set; }
     }
 }

@@ -11,8 +11,8 @@ namespace P5GenralML
         public int Id { get; set; }
         public int FormId { get; set; }
         public bool? IsFormTagIdType { get; set; }
-        public string FormTag { get; set; }
+        public string? FormTag { get; set; }
         public bool? IsSubmitTagIdType { get; set; }
-        public string SubmitTag { get; set; }
+        public string? SubmitTag { get; set; }
     }
 }

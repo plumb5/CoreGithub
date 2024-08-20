@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLLeadsByStage
     {
-        public string Name { get; set; }
-        public string Stage { get; set; }
+        public string? Name { get; set; }
+        public string? Stage { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int LastModifyByUserId { get; set; }
     }

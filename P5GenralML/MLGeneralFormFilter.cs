@@ -10,11 +10,11 @@ namespace P5GenralML
     {
         public int FormId { get; set; }
 
-        public string SearchByText { get; set; }
+        public string? SearchByText { get; set; }
 
-        public string MachineId { get; set; }
+        public string? MachineId { get; set; }
 
-        public string IPAddress { get; set; }
+        public string? IPAddress { get; set; }
 
         public DateTime FromDate { get; set; }
 
@@ -24,7 +24,7 @@ namespace P5GenralML
 
         public int Fetch { get; set; }
 
-        public string EmbeddedFormOrPopUpFormOrTaggedForm { get; set; }
+        public string? EmbeddedFormOrPopUpFormOrTaggedForm { get; set; }
 
         public int VisitorType { get; set; }
     }

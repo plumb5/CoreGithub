@@ -10,13 +10,13 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int FormBannerId { get; set; }
-        public string TrackIp { get; set; }
-        public string MachineId { get; set; }
-        public string SessionRefeer { get; set; }
+        public string? TrackIp { get; set; }
+        public string? MachineId { get; set; }
+        public string? SessionRefeer { get; set; }
         public Int64 ViewedCount { get; set; }
         public Int64 ClosedCount { get; set; }
         public Int64 ResponseCount { get; set; }
-        public string CloseCountSessionWise { get; set; }
+        public string? CloseCountSessionWise { get; set; }
         public DateTime? RecentDate { get; set; }
     }
 }

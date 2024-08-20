@@ -12,8 +12,8 @@ namespace P5GenralML
         public int ConfigureMailId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int ContactId { get; set; }
-        public string TrackIp { get; set; }
-        public string UrlLink { get; set; }
+        public string? TrackIp { get; set; }
+        public string? UrlLink { get; set; }
         public DateTime ClickedDate { get; set; }
     }
 }

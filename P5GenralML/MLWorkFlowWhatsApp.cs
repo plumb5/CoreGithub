@@ -10,7 +10,7 @@ namespace P5GenralML
     {
         public int ConfigureWhatsAppId { get; set; }
         public int WhatsAppTemplateId { get; set; }
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
         public Int32 SentCount { get; set; }
         public Int32 NotSentCount { get; set; }
         public Int32 DeliverCount { get; set; }

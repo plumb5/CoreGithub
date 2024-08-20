@@ -10,12 +10,12 @@ namespace P5GenralML
     {
         public long RowsNumber { get; set; }
         public int MailSplitTestId { get; set; }
-        public string MailTemplateName { get; set; }
+        public string? MailTemplateName { get; set; }
         public int MailSendingSettingId { get; set; }
         public int MailTemplateId { get; set; }
-        public string GroupName { get; set; }
-        public string Subject { get; set; }
-        public string FromName { get; set; }
+        public string? GroupName { get; set; }
+        public string? Subject { get; set; }
+        public string? FromName { get; set; }
         public int SplitTestScore { get; set; }
         public int TotalSent { get; set; }
         public int TotalOpen { get; set; }

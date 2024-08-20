@@ -11,9 +11,9 @@ namespace P5GenralML
         public int LmsContactImportOverViewId { get; set; }
         public int UserInfoUserId { get; set; }
         public int UserGroupId { get; set; }
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
         public DateTime CreatedDate { get; set; }
-        public string RejectReason { get; set; }
+        public string? RejectReason { get; set; }
     }
 }

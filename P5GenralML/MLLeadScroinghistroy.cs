@@ -11,9 +11,9 @@ namespace P5GenralML
         public int ScoreSettingsId { get; set; }
         public int LeadScore { get; set; }
         public int Score { get; set; }
-        public string IdentifierName { get; set; }
-        public string scorevalue { get; set; }
-        public string CreatedDate { get; set; }
+        public string? IdentifierName { get; set; }
+        public string? scorevalue { get; set; }
+        public string? CreatedDate { get; set; }
  
     }
 }

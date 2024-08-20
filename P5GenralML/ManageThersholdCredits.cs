@@ -11,8 +11,8 @@ namespace P5GenralML
         public int Id { get; set; }
         public int AccountId { get; set; }
         public int UserId { get; set; }
-        public string ConsumableType { get; set; }
-        public string ProviderName { get; set; }
+        public string? ConsumableType { get; set; }
+        public string? ProviderName { get; set; }
         public Int64 ThresholdCredit { get; set; }
         public bool IsEmailNotification { get; set; }
         public DateTime? CreatedDate { get; set; }

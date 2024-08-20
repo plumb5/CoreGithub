@@ -9,7 +9,7 @@ namespace P5GenralML
     public class CustomEventsOverView
     {
         public int Id { get; set; }
-        public string EventName { get; set; }
+        public string? EventName { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
         public int TrackScript { get; set; }

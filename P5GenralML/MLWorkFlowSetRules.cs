@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLWorkFlowSetRules
     {
         public int RuleId { get; set; }
-        public string TriggerHeading { get; set; }        
+        public string? TriggerHeading { get; set; }        
         public Nullable<DateTime> TriggerCreateDate { get; set; }
         public Boolean TriggerStatus { get; set; }
         public int IsSplitTester { get; set; }

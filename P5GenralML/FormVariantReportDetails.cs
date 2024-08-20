@@ -9,9 +9,9 @@ namespace P5GenralML
     public class FormVariantReportDetails
     {
         public int FormVariantId { get; set; }
-        public string MachineId { get; set; }
-        public string SessionRefeer { get; set; }
-        public string TagSelector { get; set; }
+        public string? MachineId { get; set; }
+        public string? SessionRefeer { get; set; }
+        public string? TagSelector { get; set; }
 
 
 

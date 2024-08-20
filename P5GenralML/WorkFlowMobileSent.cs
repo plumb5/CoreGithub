@@ -12,9 +12,9 @@ namespace P5GenralML
 
         public int ContactId { get; set; }
 
-        public string DeviceId { get; set; }
+        public string? DeviceId { get; set; }
 
-        public string SessionId { get; set; }
+        public string? SessionId { get; set; }
 
         public int? WorkFlowId { get; set; }
 
@@ -26,9 +26,9 @@ namespace P5GenralML
 
         public byte CampaignType { get; set; }
 
-        public string ScreenName { get; set; }
+        public string? ScreenName { get; set; }
 
-        public string FormResponces { get; set; }
+        public string? FormResponces { get; set; }
 
         public int SentCount { get; set; }
 
@@ -46,9 +46,9 @@ namespace P5GenralML
 
         public DateTime CloseDate { get; set; }
 
-        public string GeofenceName { get; set; }
+        public string? GeofenceName { get; set; }
 
-        public string BeaconName { get; set; }
+        public string? BeaconName { get; set; }
 
         public bool? IsSplitTester { get; set; }
 
@@ -60,11 +60,11 @@ namespace P5GenralML
 
         public DateTime? BounceDate { get; set; }
 
-        public string ResponseId { get; set; }
+        public string? ResponseId { get; set; }
 
-        public string VendorName { get; set; }
+        public string? VendorName { get; set; }
 
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
 
         public byte? SendStatus { get; set; }
     }

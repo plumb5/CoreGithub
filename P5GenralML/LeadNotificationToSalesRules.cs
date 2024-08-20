@@ -9,10 +9,10 @@ namespace P5GenralML
     public class LeadNotificationToSalesRules
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public Boolean Mail { get; set; }
         public Boolean Sms { get; set; }
-        public string Conditions { get; set; }
+        public string? Conditions { get; set; }
         public int AssignUserInfoUserId { get; set; }
         public int AssignUserGroupId { get; set; }
         public int LastAssignUserInfoUserId { get; set; }

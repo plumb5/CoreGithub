@@ -10,8 +10,8 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string IdentifierName { get; set; }
-        public string DescriptionDetails { get; set; }
+        public string? IdentifierName { get; set; }
+        public string? DescriptionDetails { get; set; }
         public int Idenitifer { get; set; }
     }
 }

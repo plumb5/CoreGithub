@@ -10,7 +10,7 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int FormId { get; set; }
-        public string Url { get; set; }
+        public string? Url { get; set; }
         public byte Weightage { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastUpdatedDate { get; set; }

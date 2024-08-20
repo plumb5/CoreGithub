@@ -9,9 +9,9 @@ namespace P5GenralML
     public class MLSmsCampaignEffectivenessReport
     {
         public int ContactId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
         public int SmsSendingSettingId { get; set; }
         public int IsUniqe { get; set; }
-        public string UrlLink { get; set; }
+        public string? UrlLink { get; set; }
     }
 }

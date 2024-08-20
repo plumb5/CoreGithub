@@ -10,6 +10,6 @@ namespace P5GenralML
     {
         public int MachineId { get; set; }
         public int ContactId { get; set; }
-        public string CalledNumber { get; set; }
+        public string? CalledNumber { get; set; }
     }
 }

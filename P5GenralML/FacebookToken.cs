@@ -8,6 +8,6 @@ namespace P5GenralML
 {
     public class FacebookToken
     {
-        public string Token { get; set; }
+        public string? Token { get; set; }
     }
 }

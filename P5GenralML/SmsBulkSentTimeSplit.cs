@@ -10,10 +10,10 @@ namespace P5GenralML
         public int SmsSendingSettingId { get; set; }
         public int GroupId { get; set; }
         public int ContactId { get; set; }
-        public string PhoneNumber { get; set; }
-        public string MessageContent { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? MessageContent { get; set; }
         public int SendStatus { get; set; }
-        public string P5UniqueId { get; set; }
+        public string? P5UniqueId { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? ScheduleDate { get; set; }
     }

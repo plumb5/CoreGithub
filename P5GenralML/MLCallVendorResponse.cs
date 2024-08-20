@@ -9,12 +9,12 @@ namespace P5GenralML
     public class MLCallVendorResponse
     {
         public int Id { get; set; }
-        public string Called_Sid { get; set; }
+        public string? Called_Sid { get; set; }
         public DateTime? CalledDate { get; set; }
-        public string PhoneNumber { get; set; }
-        public string CalledNumber { get; set; }
-        public string P5UniqueId { get; set; }
-        public string ErrorMessage { get; set; }        
+        public string? PhoneNumber { get; set; }
+        public string? CalledNumber { get; set; }
+        public string? P5UniqueId { get; set; }
+        public string? ErrorMessage { get; set; }        
         public Int16 SendStatus { get; set; }
     }
 }

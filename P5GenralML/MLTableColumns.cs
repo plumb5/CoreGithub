@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLTableColumns
     {
-        public string ColumnName { get; set; }
-        public string DataType { get; set; }
-        public string DisplayColumnName { get; set; }
+        public string? ColumnName { get; set; }
+        public string? DataType { get; set; }
+        public string? DisplayColumnName { get; set; }
     }
 }

@@ -8,6 +8,6 @@ namespace P5GenralML
 {
     public class ChatIpAddress
     {
-        public string  IpAddress { get; set; }
+        public string?  IpAddress { get; set; }
     }
 }

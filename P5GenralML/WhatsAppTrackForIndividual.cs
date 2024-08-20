@@ -10,11 +10,11 @@ namespace P5GenralML
     {
 
         public int Id { get; set; }
-        public string PhoneNumber { get; set; }
-        public string WhatsAppContent { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? WhatsAppContent { get; set; }
         public int ContactId { get; set; }
         public int WhatsAppTemplateId { get; set; }
-        public string IsFormIsChatIsLmsIsMail { get; set; }
+        public string? IsFormIsChatIsLmsIsMail { get; set; }
         public DateTime SentDate { get; set; }
         public bool? IsUnicodeMessage { get; set; }
         public int UserInfoUserId { get; set; }

@@ -5,11 +5,11 @@ namespace P5GenralML
     public class MLSmsReport
     {
         public int Id { get; set; }
-        public string TemplateName { get; set; }
-        public string CampaignName { get; set; }
-        public string Name { get; set; }
-        public string CampaignDescription { get; set; }
-        public string SentTo { get; set; }
+        public string? TemplateName { get; set; }
+        public string? CampaignName { get; set; }
+        public string? Name { get; set; }
+        public string? CampaignDescription { get; set; }
+        public string? SentTo { get; set; }
         public int TotalDelivered { get; set; }
         public int TotalSent { get; set; }
         public int TotalClick { get; set; }
@@ -23,10 +23,10 @@ namespace P5GenralML
         public int UniqueClick { get; set; }
         public int Click { get; set; }
         public bool? IsUnicodeMessage { get; set; }
-        public string StoppedReason { get; set; }
+        public string? StoppedReason { get; set; }
         public int MessageParts { get; set; }
-        public string MessageContent { get; set; }
-        public string ConfigurationName { get; set; }
+        public string? MessageContent { get; set; }
+        public string? ConfigurationName { get; set; }
 
     }
 }

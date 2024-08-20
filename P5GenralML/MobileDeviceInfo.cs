@@ -9,16 +9,16 @@ namespace P5GenralML
     public class MobileDeviceInfo
     {
         public int Id { get; set; }
-        public string DeviceId { get; set; }
-        public string Manufacturer { get; set; }
-        public string Name { get; set; }
-        public string OS { get; set; }
-        public string OsVersion { get; set; }
-        public string AppVersion { get; set; }
-        public string CarrierName { get; set; }
+        public string? DeviceId { get; set; }
+        public string? Manufacturer { get; set; }
+        public string? Name { get; set; }
+        public string? OS { get; set; }
+        public string? OsVersion { get; set; }
+        public string? AppVersion { get; set; }
+        public string? CarrierName { get; set; }
         public DateTime DeviceDate { get; set; }
-        public string GcmRegId { get; set; }
-        public string Resolution { get; set; }
+        public string? GcmRegId { get; set; }
+        public string? Resolution { get; set; }
         public bool InstalledStatus { get; set; }
         public int GcmSettingsId { get; set; }
         public DateTime IsInstalledStatusDate { get; set; }

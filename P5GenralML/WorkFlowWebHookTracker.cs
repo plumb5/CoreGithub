@@ -10,11 +10,11 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int ConfigureAlertId { get; set; }
-        public string CallingSource { get; set; }
-        public string PostedUrl { get; set; }
-        public string Response { get; set; }
+        public string? CallingSource { get; set; }
+        public string? PostedUrl { get; set; }
+        public string? Response { get; set; }
         public double ResponseCode { get; set; }
-        public string ResponseFromServer { get; set; }
+        public string? ResponseFromServer { get; set; }
         public DateTime SentDate { get; set; }
         public int WorkFlowDataId { get; set; }
         public int PostedDataCount { get; set; }

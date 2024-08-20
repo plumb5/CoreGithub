@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
         public int UserGroupId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int WhatsAppTemplateId { get; set; }
         public int GroupId { get; set; }
         public DateTime? CreatedDate { get; set; }
@@ -26,7 +26,7 @@ namespace P5GenralML
         public short ScheduledStatus { get; set; }
         public DateTime? ScheduledCompletedDate { get; set; }
         public int TotalContact { get; set; }
-        public string StoppedReason { get; set; }
+        public string? StoppedReason { get; set; }
         public DateTime? StoppedDate { get; set; }
         public int TotalRead { get; set; }
         public short? IsWhatsAppOpted { get; set; }

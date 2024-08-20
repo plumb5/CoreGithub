@@ -14,9 +14,9 @@ namespace P5GenralML
 
         public int MobilePushTemplateId { get; set; }
 
-        public string SessionId { get; set; }
+        public string? SessionId { get; set; }
 
-        public string DeviceId { get; set; }
+        public string? DeviceId { get; set; }
 
         public byte IsSent { get; set; }
 
@@ -34,7 +34,7 @@ namespace P5GenralML
 
         public int WorkFlowDataId { get; set; }
 
-        public string CampaignJobName { get; set; }
+        public string? CampaignJobName { get; set; }
 
         public DateTime? SentDate { get; set; }
 
@@ -48,24 +48,24 @@ namespace P5GenralML
 
         public int ContactId { get; set; }
 
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
 
-        public string Title { get; set; }
-        public string SubTitle { get; set; }
-        public string MessageContent { get; set; }
+        public string? Title { get; set; }
+        public string? SubTitle { get; set; }
+        public string? MessageContent { get; set; }
 
-        public string P5UniqueId { get; set; }
+        public string? P5UniqueId { get; set; }
 
-        public string ResponseId { get; set; }
+        public string? ResponseId { get; set; }
 
-        public string OSName { get; set; }
+        public string? OSName { get; set; }
 
-        public string FCMRegId { get; set; }
+        public string? FCMRegId { get; set; }
 
-        public string ClickedDevice { get; set; }
+        public string? ClickedDevice { get; set; }
 
-        public string ClickedDeviceType { get; set; }
+        public string? ClickedDeviceType { get; set; }
 
-        public string ClickedUserAgent { get; set; }
+        public string? ClickedUserAgent { get; set; }
     }
 }

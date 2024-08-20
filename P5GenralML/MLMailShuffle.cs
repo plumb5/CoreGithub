@@ -9,8 +9,8 @@ namespace P5GenralML
     public class MLMailShuffle
     {
         public int ContactId { get; set; }
-        public string Name { get; set; }
-        public string EmailId { get; set; }
+        public string? Name { get; set; }
+        public string? EmailId { get; set; }
         public int UserInfoUserId { get; set; }
      
         public long toGroupId { get; set; }

@@ -11,8 +11,8 @@ namespace P5GenralML
 
         public short Id { get; set; }
         public int CustomEventOverViewId { get; set; }
-        public string FieldName { get; set; }
-        public string EventName { get; set; }
+        public string? FieldName { get; set; }
+        public string? EventName { get; set; }
 
 
     }

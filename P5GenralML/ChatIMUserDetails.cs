@@ -8,9 +8,9 @@ namespace P5GenralML
 {
     public class ChatIMUserDetails
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string IMEmailId { get; set; }
-        public string IMNetWork { get; set; }
+        public string? Id { get; set; }
+        public string? Name { get; set; }
+        public string? IMEmailId { get; set; }
+        public string? IMNetWork { get; set; }
     }
 }

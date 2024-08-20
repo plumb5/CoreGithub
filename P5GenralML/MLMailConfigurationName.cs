@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLMailConfigurationName
     {
         public int Id { get; set; }
-        public string ConfigurationName { get; set; }
+        public string? ConfigurationName { get; set; }
         public bool IsDefaultProvider { get; set; }
     }
 }

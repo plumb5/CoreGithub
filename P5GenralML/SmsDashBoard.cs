@@ -12,7 +12,7 @@ namespace P5GenralML
         public int Clicked { get; set; }
         public int SentSms { get; set; }
         public int Unsubscribe { get; set; }
-        public string GDate { get; set; }
+        public string? GDate { get; set; }
         public int Hour { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }

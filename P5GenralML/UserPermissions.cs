@@ -8,7 +8,7 @@ namespace P5GenralML
 {
     public class UserPermissions
     {
-        public String AppName { get; set; }
+        public string? AppName { get; set; }
         public int PermissionsType { get; set; }
     }
 }

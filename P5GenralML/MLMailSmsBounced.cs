@@ -8,7 +8,7 @@ namespace P5GenralML
 {
    public class MLMailSmsBounced
     {
-        public string BouncedReason { get; set; }
+        public string? BouncedReason { get; set; }
         public int Counts { get; set; }
     }
 }

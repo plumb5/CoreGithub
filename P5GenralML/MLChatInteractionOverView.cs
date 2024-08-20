@@ -8,7 +8,7 @@ namespace P5GenralML
 {
     public class MLChatInteractionOverView
     {
-        public string ChatInitiatedOnPageUrl { get; set; }
+        public string? ChatInitiatedOnPageUrl { get; set; }
         public Int64 ResponseCount { get; set; }
         public Int64 AutoPingCount { get; set; }
     }

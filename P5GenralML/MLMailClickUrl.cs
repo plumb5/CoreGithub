@@ -11,6 +11,6 @@ namespace P5GenralML
         public int MailSendingSettingId { get; set; }
         public int TotalClick { get; set; }
         public int TotalUniqueClick { get; set; }
-        public string ClickURL { get; set; }
+        public string? ClickURL { get; set; }
     }
 }

@@ -9,10 +9,10 @@ namespace P5GenralML
     public class WorkFlowMobileIOSSettings
     {
         public int Id { get; set; }
-        public string Certificate { get; set; }
-        public string Password { get; set; }
+        public string? Certificate { get; set; }
+        public string? Password { get; set; }
         public int Pushmode { get; set; }
-        public string PackageName { get; set; }
+        public string? PackageName { get; set; }
         public DateTime Date { get; set; }
     }
 }

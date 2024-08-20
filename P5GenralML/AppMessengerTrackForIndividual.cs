@@ -9,11 +9,11 @@ namespace P5GenralML
     public class AppMessengerTrackForIndividual
     {
         public int Id { get; set; }
-        public string PhoneNumber { get; set; }
-        public string AppMessengerContent { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? AppMessengerContent { get; set; }
         public int ContactId { get; set; }
         public int AppMessengerTemplateId { get; set; }
-        public string IsFormIsChatIsLmsIsMail { get; set; }
+        public string? IsFormIsChatIsLmsIsMail { get; set; }
         public DateTime SentDate { get; set; }
     }
 }

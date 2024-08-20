@@ -10,8 +10,8 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int LmsGroupMemberId { get; set; }
-        public string publisher { get; set; }
-        public string CreatedDate { get; set; }
+        public string? publisher { get; set; }
+        public string? CreatedDate { get; set; }
      
     }
 }

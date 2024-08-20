@@ -13,8 +13,8 @@ namespace P5GenralML
         public int URLId { get; set; }
         public int WhatsappSendingSettingId { get; set; }
         public int WorkflowId { get; set; }
-        public string CampaignType { get; set; }
+        public string? CampaignType { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public string P5WhatsappUniqueID { get; set; }
+        public string? P5WhatsappUniqueID { get; set; }
     }
 }

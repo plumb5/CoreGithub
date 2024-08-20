@@ -14,7 +14,7 @@ namespace P5GenralML
         public int SalesUserInfoUserId { get; set; }
         public int ReportUserInfoUserId { get; set; }
         public bool Daily { get; set; }
-        public string Weekly { get; set; }
+        public string? Weekly { get; set; }
         public int Monthly { get; set; }
         public DateTime CreatedDate { get; set; }      
         public DateTime ScheduleTime { get; set; }

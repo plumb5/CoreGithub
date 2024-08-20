@@ -9,9 +9,9 @@ namespace P5GenralML
     public class MLSiteSearchPages
     {
 
-        public string PageURL { get; set; }
+        public string? PageURL { get; set; }
         public Int64 PageViews { get; set; }
-        public string AvgTime { get; set; }
+        public string? AvgTime { get; set; }
 
     }
 }

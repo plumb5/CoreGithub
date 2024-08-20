@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLSegmentOutputColumns
     {
-        public string ContactId { get; set; }
-        public string MachineId { get; set; }
-        public string DeviceId { get; set; }
+        public string? ContactId { get; set; }
+        public string? MachineId { get; set; }
+        public string? DeviceId { get; set; }
     }
 }

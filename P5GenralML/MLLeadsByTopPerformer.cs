@@ -8,7 +8,7 @@ namespace P5GenralML
 {
     public class MLLeadsByTopPerformer
     {
-        public string Stage { get; set; }
+        public string? Stage { get; set; }
         public int NumberOfLead { get; set; }
         public int LastModifyByUserId { get; set; }
     }

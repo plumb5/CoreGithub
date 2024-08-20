@@ -10,11 +10,11 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int FormVariantId { get; set; }
-        public string TagSelector { get; set; }
-        public string BannerContent { get; set; }
-        public string ActionType { get; set; }
+        public string? TagSelector { get; set; }
+        public string? BannerContent { get; set; }
+        public string? ActionType { get; set; }
         public bool VariantStatus { get; set; }
-        public string Identifier { get; set; }
+        public string? Identifier { get; set; }
         public int ClickCount { get; set; }
     }
 }

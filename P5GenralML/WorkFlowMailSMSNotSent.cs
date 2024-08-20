@@ -12,8 +12,8 @@ namespace P5GenralML
         public int WorkFlowDataId { get; set; }
         public int ConfigId { get; set; }
         public int ContactId { get; set; }
-        public string ChannelType { get; set; }
+        public string? ChannelType { get; set; }
         public int CreatedDate { get; set; }
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
     }
 }

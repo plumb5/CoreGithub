@@ -9,14 +9,14 @@ namespace P5GenralML
     public class MLFormDashboard
     {
         public int FormId { get; set; }
-        public string FormName { get; set; }
+        public string? FormName { get; set; }
 
         public Int64 ViewedCount { get; set; }
 
         public Int64 ClosedCount { get; set; }
 
         public Int64 ResponseCount { get; set; }
-        public string GDate { get; set; }
+        public string? GDate { get; set; }
         public int Hour { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }

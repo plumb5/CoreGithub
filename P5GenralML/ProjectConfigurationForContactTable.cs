@@ -11,9 +11,9 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserGroupId { get; set; }
         public int UserInfoUserId { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string Content { get; set; }
+        public string? Name { get; set; }
+        public string? Type { get; set; }
+        public string? Content { get; set; }
         public bool? ProjectStatus { get; set; }
         public bool? IsArchive { get; set; }
         public Int16 ProjectPriority { get; set; }

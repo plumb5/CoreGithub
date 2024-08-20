@@ -9,7 +9,7 @@ namespace P5GenralML
     public class VisitorInformation
     {
         public int ContactId { get; set; }
-        public string MachineId { get; set; }
+        public string? MachineId { get; set; }
         public Int16 SourceType { get; set; }
         public Nullable<DateTime> Date { get; set; }
     }

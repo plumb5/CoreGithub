@@ -10,7 +10,7 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int LastAssignUserInfoUserId { get; set; }
-        public string UserGroupId { get; set; }
+        public string? UserGroupId { get; set; }
         public DateTime UpdatedDate { get; set; }
     }
 }

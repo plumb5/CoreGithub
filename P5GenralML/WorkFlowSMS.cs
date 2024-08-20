@@ -19,7 +19,7 @@ namespace P5GenralML
         public int NotClickCount { get; set; }
         public DateTime CreatedDate { get; set; }
         public bool IsStopped { get; set; }
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
         public bool IsSplitTester { get; set; }
         public Int16 IsSplitTestWinner { get; set; }
         public Int16 IsTriggerEveryActivity { get; set; }

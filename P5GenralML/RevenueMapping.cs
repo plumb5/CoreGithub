@@ -9,10 +9,10 @@ namespace P5GenralML
     public class RevenueMapping
     {
         public int Id { get; set; }
-        public string CurrencyType { get; set; }
+        public string? CurrencyType { get; set; }
         public int CustomEventOverViewId { get; set; }
-        public string CustomEventName { get; set; }
-        public string CustomEventFiledName { get; set; }
+        public string? CustomEventName { get; set; }
+        public string? CustomEventFiledName { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLBulkSmsSending
     {
         public bool Status { get; set; }
-        public string Message { get; set; }
+        public string? Message { get; set; }
         public int NumberOfSmsSent { get; set; }
     }
 }

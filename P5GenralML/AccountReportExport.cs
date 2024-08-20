@@ -9,10 +9,10 @@ namespace P5GenralML
     public class AccountReportExport
     {
         public int AccountId { get; set; }
-        public string DomainName { get; set; }
-        public string AccountType { get; set; }
-        public string AccountManager { get; set; }
-        public string SupportManager { get; set; }
+        public string? DomainName { get; set; }
+        public string? AccountType { get; set; }
+        public string? AccountManager { get; set; }
+        public string? SupportManager { get; set; }
         public int Status { get; set; }
         public int WeeklyCount { get; set; }
         public int OldWeeklyCount { get; set; }

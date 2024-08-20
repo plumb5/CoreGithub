@@ -8,7 +8,7 @@ namespace P5GenralML
 {
    public class MobileEndRequest
     {
-        public string SessionId { get; set; }
-        public string DeviceId { get; set; }
+        public string? SessionId { get; set; }
+        public string? DeviceId { get; set; }
     }
 }

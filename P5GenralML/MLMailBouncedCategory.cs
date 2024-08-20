@@ -8,7 +8,7 @@ namespace P5GenralML
 {
     public class MLMailBouncedCategory
     {
-        public string Category { get; set; }
+        public string? Category { get; set; }
         public int Total { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLLmsSourceReport
     {
         public int UserInfoUserId { get; set; }
-        public string Source { get; set; }
+        public string? Source { get; set; }
         public int Paid { get; set; }
         public int Total { get; set; }
     }

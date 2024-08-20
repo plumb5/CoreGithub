@@ -13,7 +13,7 @@ namespace P5GenralML
         public Int64 ResponseCount { get; set; }
         public DateTime? RecentDate { get; set; }
         public int Score { get; set; }
-        public string Heading { get; set; }
+        public string? Heading { get; set; }
         public int FormType { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace P5GenralML
 
         public int ContactId { get; set; }
 
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
         public int GroupId { get; set; }
 
@@ -30,10 +30,10 @@ namespace P5GenralML
 
         public Int16 SendStatus { get; set; }
 
-        public string MessageContent { get; set; }
+        public string? MessageContent { get; set; }
 
-        public string CampaignJobName { get; set; }
+        public string? CampaignJobName { get; set; }
 
-        public string P5SMSUniqueID { get; set; }
+        public string? P5SMSUniqueID { get; set; }
     }
 }

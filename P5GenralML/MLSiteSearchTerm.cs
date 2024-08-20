@@ -9,7 +9,7 @@ namespace P5GenralML
     public class MLSiteSearchTerm
     {
 
-        public string SearchedData { get; set; }
+        public string? SearchedData { get; set; }
         public Int64 UniqueSearch { get; set; }
         public Int64 PageViews { get; set; }
     }

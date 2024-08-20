@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int P5SqlJobsId { get; set; }
         public int AccountId { get; set; }
-        public string ScheduleTime { get; set; }
+        public string? ScheduleTime { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? LastExecuteDateTime { get; set; }
     }

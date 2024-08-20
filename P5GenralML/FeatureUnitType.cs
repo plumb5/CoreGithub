@@ -9,6 +9,6 @@ namespace P5GenralML
     public class FeatureUnitType
     {
         public Byte Id { get; set; }
-        public string UnitsType { get; set; }
+        public string? UnitsType { get; set; }
     }
 }

@@ -9,13 +9,13 @@ namespace P5GenralML
     public class MobileGcmSettings
     {
         public int Id { get; set; }
-        public string GcmProjectNo { get; set; }
-        public string GcmApiKey { get; set; }
-        public string PackageName { get; set; }
+        public string? GcmProjectNo { get; set; }
+        public string? GcmApiKey { get; set; }
+        public string? PackageName { get; set; }
 
-        public string IosPackageName { get; set; }
+        public string? IosPackageName { get; set; }
         public DateTime CreatedDate { get; set; }
-        public string Type { get; set; }
+        public string? Type { get; set; }
         public byte Status { get; set; }
         public byte IsDefault { get; set; }
     }

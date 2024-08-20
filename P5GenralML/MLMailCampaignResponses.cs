@@ -8,13 +8,13 @@ namespace P5GenralML
         public int Id { get; set; }
 
         public int TemplateId { get; set; }
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
 
-        public string CampaignIdentifier { get; set; }
-        public string CampaignName { get; set; }
-        public string CampaignDescription { get; set; }
-        public string GroupName { get; set; }
-        public string Subject { get; set; }
+        public string? CampaignIdentifier { get; set; }
+        public string? CampaignName { get; set; }
+        public string? CampaignDescription { get; set; }
+        public string? GroupName { get; set; }
+        public string? Subject { get; set; }
 
         public int TotalSent { get; set; }
         public int TotalOpen { get; set; }
@@ -35,20 +35,20 @@ namespace P5GenralML
 
         public DateTime ScheduledDate { get; set; }
 
-        public string FormName { get; set; }
-        public string FromEmailId { get; set; }
-        public string ReplyTo { get; set; }
+        public string? FormName { get; set; }
+        public string? FromEmailId { get; set; }
+        public string? ReplyTo { get; set; }
         public int IsPromotionalOrTransactionalType { get; set; }
-        public string StoppedReason { get; set; }
+        public string? StoppedReason { get; set; }
         public int ABTestResultForSent { get; set; }
         public int ABTestResultForOpened { get; set; }
         public int ABTestResultForClicked { get; set; }
         public bool? IsABWinner { get; set; }
-        public string SplitVariation { get; set; }
-        public string ABWinningMetricRate { get; set; }
+        public string? SplitVariation { get; set; }
+        public string? ABWinningMetricRate { get; set; }
         public int ABTestDuration { get; set; }
-        public string FallbackTemplate { get; set; }
-        public string ConfigurationName { get; set; }
+        public string? FallbackTemplate { get; set; }
+        public string? ConfigurationName { get; set; }
         public int TotalDelivered { get; set; }
     }
 }

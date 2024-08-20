@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int MailSendingSettingId { get; set; }
         public int MailTemplateId { get; set; }
-        public string DripSubject { get; set; }
+        public string? DripSubject { get; set; }
         public bool Subscribe { get; set; }
         public bool Forward { get; set; }
         public short DripSequence { get; set; }

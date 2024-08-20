@@ -10,8 +10,8 @@ namespace P5GenralML
         public int SMSSendingSettingId { get; set; }
         public int WorkflowId { get; set; }
         public int TriggerSMSDripsId { get; set; }
-        public string CampaignType { get; set; }
+        public string? CampaignType { get; set; }
         public DateTime? CreatedDate { get; set; }
-        public string P5SMSUniqueID { get; set; }
+        public string? P5SMSUniqueID { get; set; }
     }
 }

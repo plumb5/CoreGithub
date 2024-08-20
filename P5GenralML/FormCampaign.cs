@@ -12,9 +12,9 @@ namespace P5GenralML
 
         public int UserInfoUserId { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string CampaignDescription { get; set; }
+        public string? CampaignDescription { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

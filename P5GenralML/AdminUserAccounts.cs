@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserId { get; set; }
         public int AccountId { get; set; }
-        public string ServerName { get; set; }
+        public string? ServerName { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

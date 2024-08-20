@@ -11,7 +11,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserGroupId { get; set; }
         public int UserInfoUserId { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int MobilePushTemplateId { get; set; }
         public int GroupId { get; set; }
         public int TotalSent { get; set; }
@@ -26,7 +26,7 @@ namespace P5GenralML
         public DateTime ScheduledDate { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public string StoppedReason { get; set; }
+        public string? StoppedReason { get; set; }
         public DateTime? StoppedDate { get; set; }
     }
 }

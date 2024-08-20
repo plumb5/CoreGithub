@@ -8,9 +8,9 @@ namespace P5GenralML
 {
     public class MLWebPushCampaign
     {
-        public string MachineId { get; set; }
-        public string CampaignName { get; set; }
-        public string TemplateName { get; set; } 
+        public string? MachineId { get; set; }
+        public string? CampaignName { get; set; }
+        public string? TemplateName { get; set; } 
         public int IsSent { get; set; }
         public int IsViewed { get; set; }
         public int IsClicked { get; set; }
@@ -21,6 +21,6 @@ namespace P5GenralML
         public Nullable<DateTime> ClickedDate { get; set; }
         public Nullable<DateTime> ClosedDate { get; set; }
         public Nullable<DateTime> UnSubScribedDate { get; set; }
-        public string ResponseId { get; set; } 
+        public string? ResponseId { get; set; } 
     }
 }

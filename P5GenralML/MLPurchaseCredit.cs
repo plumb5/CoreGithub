@@ -35,7 +35,7 @@ namespace P5GenralML
     public class CombinedCreditInfo
     {
         public MLPurchaseCredit PurchaseConsumption { get; set; }
-        public string AccountManagerName { get; set; }
-        public string SupportManagerName { get; set; }
+        public string? AccountManagerName { get; set; }
+        public string? SupportManagerName { get; set; }
     }
 }

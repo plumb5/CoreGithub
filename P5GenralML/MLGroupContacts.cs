@@ -8,15 +8,15 @@ namespace P5GenralML
 {
     public class MLGroupContacts
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string EmailId { get; set; }
+        public string? EmailId { get; set; }
 
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
 
-        public string IsVerifiedMailId { get; set; }
+        public string? IsVerifiedMailId { get; set; }
 
-        public string IsVerifiedContactNumber { get; set; }
+        public string? IsVerifiedContactNumber { get; set; }
 
         public DateTime CreatedDate { get; set; }
     }

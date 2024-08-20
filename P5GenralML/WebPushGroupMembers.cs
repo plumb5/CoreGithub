@@ -13,7 +13,7 @@ namespace P5GenralML
         public int UserGroupId { get; set; }
         public int ContactId { get; set; }
         public int GroupId { get; set; }
-        public string MachineId { get; set; }
+        public string? MachineId { get; set; }
         public DateTime Date { get; set; }
     }
 }

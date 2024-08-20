@@ -10,8 +10,8 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int GoogleImportsettingsId { get; set; }
-        public string ResourceName { get; set; }
+        public string? ResourceName { get; set; }
         public DateTime CreatedDate { get; set; }
-        public string Status { get; set; }
+        public string? Status { get; set; }
     }
 }

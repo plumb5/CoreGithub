@@ -11,8 +11,8 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
         public int UserGroupId { get; set; }
-        public string Name { get; set; }
-        public string GroupDescription { get; set; }
+        public string? Name { get; set; }
+        public string? GroupDescription { get; set; }
         public Nullable<DateTime> CreatedDate { get; set; }
         public Int16 AppType { get; set; }
         public int CafeId { get; set; }

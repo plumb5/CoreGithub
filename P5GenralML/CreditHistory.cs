@@ -10,7 +10,7 @@ namespace P5GenralML
         public long TotalCredit { get; set; }
         public long TotalAllocated { get; set; }
         public DateTime CreditAddDate { get; set; }
-        public string Remarks { get; set; }
+        public string? Remarks { get; set; }
         public int AccountId { get; set; }
     }
 }

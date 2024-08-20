@@ -11,11 +11,11 @@ namespace P5GenralML
         public int Id { get; set; }
 
         public int TemplateId { get; set; }
-        public string TemplateName { get; set; }
+        public string? TemplateName { get; set; }
 
-        public string CampaignName { get; set; }
-        public string GroupName { get; set; }
-        public string Subject { get; set; }
+        public string? CampaignName { get; set; }
+        public string? GroupName { get; set; }
+        public string? Subject { get; set; }
 
         public int URL { get; set; }
         public int Click { get; set; }

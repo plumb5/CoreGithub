@@ -11,29 +11,29 @@ namespace P5GenralML
         public int WorkFlowId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int ConfigId { get; set; }
-        public string Channel { get; set; }
-        public string ChannelType { get; set; }
-        public string PreChannel { get; set; }
-        public string SegmentIds { get; set; }
+        public string? Channel { get; set; }
+        public string? ChannelType { get; set; }
+        public string? PreChannel { get; set; }
+        public string? SegmentIds { get; set; }
         public bool IsBelongsToGroup { get; set; }
     }
     public class FinalContactList
     {
         public int ContactId { get; set; }
 
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
         public Int16? IsVerifiedMailId { get; set; }
         public Int16? IsVerifiedContactNumber { get; set; }
         public byte? Unsubscribe { get; set; }
     }
     public class FinalMachineList
     {
-        public string MachineId { get; set; }
+        public string? MachineId { get; set; }
         public int ContactId { get; set; }
 
-        public string EmailId { get; set; }
-        public string PhoneNumber { get; set; }
+        public string? EmailId { get; set; }
+        public string? PhoneNumber { get; set; }
         public Int16? IsVerifiedMailId { get; set; }
         public Int16? IsVerifiedContactNumber { get; set; }
         public byte? Unsubscribe { get; set; }

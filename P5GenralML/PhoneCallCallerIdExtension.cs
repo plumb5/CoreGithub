@@ -10,9 +10,9 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string PhoneNumber { get; set; }
-        public string CallerId { get; set; }
-        public string Extension { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? CallerId { get; set; }
+        public string? Extension { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
     }

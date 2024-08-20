@@ -9,8 +9,8 @@ namespace P5GenralML
     public class MLLmsAdvancedSettings
     {
         public int Id { get; set; }
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public string? Key { get; set; }
+        public string? Value { get; set; }
         public DateTime CreatedDate { get; set; }
     }
 }

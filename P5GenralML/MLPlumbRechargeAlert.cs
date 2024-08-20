@@ -11,7 +11,7 @@ namespace P5GenralML
         public int UserInfoUserId { get; set; }
         public long Allocated { get; set; }
         public long Consumed { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public Nullable<DateTime> LastUpdatedDate { get; set; }
         public Nullable<DateTime> ExpiryDate { get; set; }

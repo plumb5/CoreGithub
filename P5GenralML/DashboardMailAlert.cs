@@ -11,8 +11,8 @@ namespace P5GenralML
         public int AlertId { get; set; }
         public int MailAlertType { get; set; }
         public int DashboardId { get; set; }
-        public string ToEmailId { get; set; }
-        public string CCFromEmailId { get; set; }
+        public string? ToEmailId { get; set; }
+        public string? CCFromEmailId { get; set; }
         public bool? IsFornightly { get; set; }
         public bool? IsDaily { get; set; }
         public bool? IsWeekly { get; set; }

@@ -10,8 +10,8 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
-        public string Name { get; set; }
-        public string UserGroupDescription { get; set; }
+        public string? Name { get; set; }
+        public string? UserGroupDescription { get; set; }
         public int UserGroupId { get; set; }
         public Nullable<DateTime> CreatedDate { get; set; }
         public int CreatedByUserId { get; set; }

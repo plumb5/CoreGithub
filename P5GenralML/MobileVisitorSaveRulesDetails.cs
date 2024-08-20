@@ -31,25 +31,25 @@ namespace P5GenralML
         public Int16 FrequencyIs { get; set; }
         public bool FrequencyIsTheirData { get; set; }
 
-        //public string ReferrerUrl { get; set; }
+        //public string? ReferrerUrl { get; set; }
         //public bool ReferrerUrlIsTheirData { get; set; }
-        //public string SearchString { get; set; }
+        //public string? SearchString { get; set; }
         //public bool SearchStringIsTheirData { get; set; }
 
         public bool IsMailIsRespondent { get; set; }
         public bool IsMailIsRespondentlIsTheirData { get; set; }
 
-        public string Country { get; set; }
-        public string City { get; set; }
+        public string? Country { get; set; }
+        public string? City { get; set; }
         public bool CountryCityIsTheirData { get; set; }
 
-        public string IsClickedSpecificButtons { get; set; }
+        public string? IsClickedSpecificButtons { get; set; }
         public bool IsClickedSpecificButtonsIsTheirData { get; set; }
 
-        public string IsClickedRecentButtons { get; set; }
+        public string? IsClickedRecentButtons { get; set; }
         public bool IsClickedRecentButtonsIsTheirData { get; set; }
 
-        public string ClickedPriceRangeProduct { get; set; }
+        public string? ClickedPriceRangeProduct { get; set; }
         public bool ClickedPriceRangeProductIsTheirData { get; set; }
 
         public bool IsVisitorRespondedChat { get; set; }
@@ -66,16 +66,16 @@ namespace P5GenralML
         public bool CloseCountSessionWise { get; set; }
         public bool CloseCountIsTheirData { get; set; }
 
-        public string AddedProductsToCart { get; set; }
+        public string? AddedProductsToCart { get; set; }
         public bool AddedProductsToCartIsTheirData { get; set; }
 
-        public string ViewedButNotAddedProductsToCart { get; set; }
+        public string? ViewedButNotAddedProductsToCart { get; set; }
         public bool ViewedButNotAddedProductsToCartIsTheirData { get; set; }
 
-        public string DroppedProductsFromCart { get; set; }
+        public string? DroppedProductsFromCart { get; set; }
         public bool DroppedProductsFromCartIsTheirData { get; set; }
 
-        public string PurchasedProducts { get; set; }
+        public string? PurchasedProducts { get; set; }
         public bool PurchasedProductsIsTheirData { get; set; }
 
         public Int16 CustomerTotalPurchase { get; set; }
@@ -108,13 +108,13 @@ namespace P5GenralML
         public byte ProductRatingIs { get; set; }
         public bool ProductRatingIsTheirData { get; set; }
 
-        public string GenderIs { get; set; }
+        public string? GenderIs { get; set; }
         public bool GenderIsTheirData { get; set; }
 
         public byte MaritalStatusIs { get; set; }
         public bool MaritalStatusIsTheirData { get; set; }
 
-        public string ProfessionIs { get; set; }
+        public string? ProfessionIs { get; set; }
         public bool ProfessionIsTheirData { get; set; }
 
         public byte NotConnectedSocially { get; set; }

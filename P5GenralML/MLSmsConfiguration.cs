@@ -9,10 +9,10 @@ namespace P5GenralML
     public class MLSmsConfiguration
     {
         public int Id { get; set; }
-        public string ProviderName { get; set; }
-        public string PromotionalAPIKey { get; set; }
-        public string TransactionalAPIKey { get; set; }
-        public string ConfigurationName { get; set; }
+        public string? ProviderName { get; set; }
+        public string? PromotionalAPIKey { get; set; }
+        public string? TransactionalAPIKey { get; set; }
+        public string? ConfigurationName { get; set; }
         public bool IsDefaultProvider { get; set; }
         public int SmsConfigurationNameId { get; set; }
         public DateTime UpdatedDate { get; set; }

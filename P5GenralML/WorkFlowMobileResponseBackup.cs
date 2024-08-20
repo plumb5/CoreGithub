@@ -9,7 +9,7 @@ namespace P5GenralML
     public class WorkFlowMobileResponseBackup
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public int WorkFlowId { get; set; }
         public int WorkFlowDataId { get; set; }
         public int TotalAndroidSent { get; set; }
@@ -17,7 +17,7 @@ namespace P5GenralML
         public int TotalAndroidFailed { get; set; }
         public int TotalIOSFailed { get; set; }
         public DateTime CreatedDate { get; set; }
-        public string ResponseJson { get; set; }
+        public string? ResponseJson { get; set; }
         public DateTime RequestTime { get; set; }
         public DateTime ResponseTime { get; set; }
     }

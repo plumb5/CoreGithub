@@ -9,8 +9,8 @@ namespace P5GenralML
     public class GoogleToken
     {
         public int Id { get; set; }
-        public string AccessToken { get; set; }
+        public string? AccessToken { get; set; }
         public DateTime UpdateDate { get; set; }
-        public string RefreshToken { get; set; }
+        public string? RefreshToken { get; set; }
     }
 }

@@ -8,8 +8,8 @@ namespace P5GenralML
 {
     public class MLMobileInAppDashBoard
     {
-        public string Name { get; set; }
-        public string InAppCampaignType { get; set; }
+        public string? Name { get; set; }
+        public string? InAppCampaignType { get; set; }
         public Int64 TotalAndroid { get; set; }
         public Int64 TotalIOS { get; set; }
         public Int64 ViewedCount { get; set; }

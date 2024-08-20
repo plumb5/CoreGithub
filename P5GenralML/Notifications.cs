@@ -11,9 +11,9 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
         public int ContactId { get; set; }
-        public string Heading { get; set; }
-        public string Details { get; set; }
-        public string PageUrl { get; set; }
+        public string? Heading { get; set; }
+        public string? Details { get; set; }
+        public string? PageUrl { get; set; }
         public bool? IsThatSeen { get; set; }
         public DateTime CreatedDate { get; set; }
 

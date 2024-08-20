@@ -10,9 +10,9 @@ namespace P5GenralML
     {
         public int UserId { get; set; }
         public int ChatId { get; set; }
-        public string FromDate { get; set; }
-        public string ToDate { get; set; }
-        public string IpAddress { get; set; }
-        public string SearchContent { get; set; }
+        public string? FromDate { get; set; }
+        public string? ToDate { get; set; }
+        public string? IpAddress { get; set; }
+        public string? SearchContent { get; set; }
     }
 }

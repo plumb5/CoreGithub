@@ -3,6 +3,6 @@
     public class MLShareReport
     {
         public int AccountId { get; set; }
-        public string SearchText { get; set; }
+        public string? SearchText { get; set; }
     }
 }

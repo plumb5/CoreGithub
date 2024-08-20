@@ -10,14 +10,14 @@ namespace P5GenralML
     {
         public int Id { get; set; }
         public int GroupId { get; set; }
-        public string ControlGroupName { get; set; }
-        public string ControlGroupDescription { get; set; }
+        public string? ControlGroupName { get; set; }
+        public string? ControlGroupDescription { get; set; }
         public int ControlGroupId { get; set; }
         public int ControlGroupCount { get; set; }
         public int ControlGroupPercentage { get; set; }
         public bool IsNotControlGroupChecked { get; set; }
-        public string NonControlGroupName { get; set; }
-        public string NonControlGroupDescription { get; set; }
+        public string? NonControlGroupName { get; set; }
+        public string? NonControlGroupDescription { get; set; }
         public int NonControlGroupId { get; set; }
         public int NonControlGroupCount { get; set; }
         public int NonControlGroupPercentage { get; set; }

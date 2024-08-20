@@ -7,7 +7,7 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
         public int ChatBotId { get; set; }
-        public string ReportToMailIds { get; set; }
+        public string? ReportToMailIds { get; set; }
         public int AssignToUserId { get; set; }
         public int AssignToGroupId { get; set; }
         public int AssignToLmsGroupId { get; set; }

@@ -12,10 +12,10 @@ namespace P5GenralML
         public int Twitter { get; set; }
         public int Facebook { get; set; }
         public int LinkedIn { get; set; }
-        public string Message { get; set; }
-        public string FacebookToken { get; set; }
-        public string TwitterToken { get; set; }
-        public string TwitterSecretToken { get; set; }
-        public string LinkedinToken { get; set; }
+        public string? Message { get; set; }
+        public string? FacebookToken { get; set; }
+        public string? TwitterToken { get; set; }
+        public string? TwitterSecretToken { get; set; }
+        public string? LinkedinToken { get; set; }
     }
 }

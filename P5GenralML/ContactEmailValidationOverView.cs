@@ -8,12 +8,12 @@ namespace P5GenralML
         public int GroupId { get; set; }
         public int GroupUniqueCount { get; set; }
         public Int16 IsCompleted { get; set; }
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
         public DateTime CreatedDate { get; set; }
         public int ServerNode { get; set; }
-        public string File_Id { get; set; }
-        public string File_Name { get; set; }
-        public string Status { get; set; }
+        public string? File_Id { get; set; }
+        public string? File_Name { get; set; }
+        public string? Status { get; set; }
         public int Unique_Emails { get; set; }
         public DateTime Updated_At { get; set; }
         public int Percent { get; set; }

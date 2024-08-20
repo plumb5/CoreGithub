@@ -11,8 +11,8 @@ namespace P5GenralML
         public int Id { get; set; }
         public int UserInfoUserId { get; set; }
         public int UserGroupId { get; set; }
-        public string PageName { get; set; }
-        public string PageDescription { get; set; }
+        public string? PageName { get; set; }
+        public string? PageDescription { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int LandingPageConfigurationId { get; set; }
