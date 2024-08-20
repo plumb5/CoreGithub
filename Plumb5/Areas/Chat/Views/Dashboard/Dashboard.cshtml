@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Live Chat Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Chat Dashboard</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Live Chat</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{ Html.RenderPartial("_PageHeadingWithDate"); }
+            </div>
+            <div class="iconsWrap">
+                <i class="icon ion-ios-printer-outline"></i>
+            </div>
+        </div>
+    </div>
+    <div class="chtdashwrp mr-tp-15">
+        <div class="row m-gut">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-3">
+                <div class="box-white h-100">
+                    <h6 class="box-title">Conversations</h6>
+                    <p class="totalleads" id="ui_TotalNewLeads">Total New Leads: 0</p>
+                    <div class="chtdetdashwrp card-activities">
+                        <div class="media-list">
+                            <div class="media">
+                                <div class="activity-icon bg-success">
+                                    <h4 id="ui_TotalCompleted">0</h4>
+                                </div><!-- activity-icon -->
+                                <div class="media-body">
+                                    <h6 class="font-14">Completed Chats</h6>
+                                </div><!-- media-body -->
+                            </div><!-- media -->
+                            <div class="media">
+                                <div class="activity-icon bg-orange">
+                                    <h4 id="ui_TotalInCompleted">0</h4>
+                                </div><!-- activity-icon -->
+                                <div class="media-body">
+                                    <h6 class="font-14">Incomplete Chats</h6>
+                                </div><!-- media-body -->
+                            </div><!-- media -->
+                            <div class="media">
+                                <div class="activity-icon bg-danger">
+                                    <h4 id="ui_TotalMissed">0</h4>
+                                </div><!-- activity-icon -->
+                                <div class="media-body">
+                                    <h6 class="font-14">Chat Missed</h6>
+                                </div><!-- media-body -->
+                            </div><!-- media -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-col-lg-9 col-xl-9 p-gut">
+                <div class="box-white h-100">
+                    <h6 class="box-title">Chat Performance</h6>
+                    <div class="charteeWrap position-relative h-250">
+                        <canvas id="ui_chatperformance"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-gut mt-2">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-3">
+                <div class="box-white h-100">
+                    <h6 class="box-title">Top 3 Agents</h6>
+                    <div class="chatagentwrp" id="ui_TopThreeAgents">
+                        <div class="no-data">There is no data for this view.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-col-lg-9 col-xl-9 p-gut">
+                <div class="row m-gut h-100">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut m-mb-3">
+                        <div class="box-white h-100">
+                            <h6 class="box-title">Top 5 Chat Rooms</h6>
+                            <div class="charteeWrap position-relative h-250">
+                                <canvas id="ui_topchatroom"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut">
+                        <div class="box-white h-100">
+                            <h6 class="box-title">Top 5 Chats by URL</h6>
+                            <div class="charteeWrap position-relative h-250">
+                                <canvas id="ui_topchaturl"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Chart.bundle.js"></script>
+<script src="~/js/Chart.js"></script>
+<script src="~/js/Chat/Dashboard.js"></script>

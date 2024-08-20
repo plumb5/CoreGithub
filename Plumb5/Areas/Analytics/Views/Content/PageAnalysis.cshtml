@@ -1,0 +1,277 @@
+﻿@{
+    ViewBag.Title = "Page Analysis Content - Analytics | Plumb5";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Page Analysis <span id="spnPage"></span></h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Content Analysis</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Page Analysis</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem" id="dvDesktop">
+                <a id="dektopactivelink" class="tap-nav-link active" href="javascript:void(0);">
+                    <i class="fa fa-desktop font-14 pr-2"></i>Desktop
+                </a>
+            </div>
+            <div class="tabItem" id="dvMobile">
+                <a id="mobileactivelink" class="tap-nav-link" href="javascript:void(0);">
+                    <i class="fa fa-mobile font-20 pr-2"></i>Mobile
+                </a>
+            </div>
+        </div>
+        <div class="pageanalyUrlwrp">
+            <div class="searchCampWrap position-relative mr-3">
+                <input class="form-control" type="text" name="" id="txt_PageURL"
+                       placeholder="Enter Page URL">
+                <button type="button" class="btn btn-primary pageanalbtn" id="btnSearch">Go</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-white mr-tp-15">
+
+        <div class="showDateIconWrap">
+
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+            </div>
+            <div class="iconsWrap-docu">
+                <div class="iconsWrap-docu">
+                    @{
+                        Html.RenderPartial("_Export");
+                    }
+                </div>
+
+
+                <i data-toggle="modal" data-target=".bd-example-modal-sm"></i>
+                <span class="moredataDiv" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-ellipsis-h"></i>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a id="showtimespentdata" class="dropdown-item" href="#timespentsecmain">Show Time Spent Data</a>
+                        <a id="showtimetrendsdata" class="dropdown-item" href="#timetrendsmain">Show Time Trends Data</a>
+                        <a id="overalltabledata" class="dropdown-item" href="#tbl-pageanalysis">
+                            Show Overall Data in
+                            table
+                        </a>
+                    </div>
+                </span>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row equal-height mb-2 mt-2 m-gut">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mob-mb-2 p-gut">
+            <div class="box-white h-100">
+                <h6 class="box-title">Page Views vs Unique Visitors</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="graphData"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut">
+            <div class="box-white h-100">
+                <h6 class="box-title">Top 5 Sources</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="ui_canvas_ReferSourceData"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut mb-2 mt-2">
+            <div class="box-white h-100">
+                <h6 class="box-title">Lead Sources</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="ui_canvas_LeadSourceData"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="timespentsecmain" class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mob-mb-2 p-gut mb-2 mt-2 hideDiv">
+            <div class="box-white h-100">
+                <h6 class="box-title">Time Spent in secs</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="ui_canvas_timespendData"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="timetrendsmain" class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mob-mb-2 p-gut mb-2 mt-2 hideDiv">
+            <div class="box-white h-100">
+                <h6 class="box-title">Time Trends</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="ui_canvas_TimeTrendsData"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mob-mb-2 p-gut mb-2 mt-2">
+            <div class="box-white h-100">
+                <h6 class="box-title">Frequency</h6>
+                <div class="charteeWrap position-relative h-250">
+                    <canvas id="ui_canvas_WebFrequencyData"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="ui_divReportSummary" class="sheet">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white position-relative">
+                <div class="tableWrapper">
+                    <div class="table-responsive min-h-300">
+                        <table id="tbl-pageanalysis" class="table first-row">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-120 td-wid-7">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Day <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-9" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Total Visits <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-8" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Sessions <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-160 td-wid-12" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140 td-wid-8" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Sources <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Cities <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140 td-wid-12" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Single Visitor <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140 td-wid-12" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Repeat Visitor <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140 td-wid-12" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Return Visitor
+                                        <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+
+                                    <th class="helpIcon m-p-w-140 td-wid-13" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Avg.Time <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    @*<th class="helpIcon m-p-w-140" scope="col">
+                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Search Keys <i class="icon ion-ios-help-outline"></i>
+                                    <div class="toottipWrap"></div>
+                                    </th>*@
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_Paging");
+                }
+                <div class="rightPopupwrap">
+                    <div class="popupslideItem show">
+                        <div class="topbandWrap">
+                            <h6>Sources</h6>
+                            <i class="icon ion-android-close"></i>
+                        </div>
+                        <div class="popup-body">
+                            <div class="popuptblWrap">
+                                <div class="table-responsive">
+                                    <table class="table tbl-sources">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-70 m-p-w-170" scope="col">Sources</th>
+                                                <th class="td-wid-30 m-p-w-120" scope="col">Page Views</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_tbodySourceReportData">
+                                        </tbody>
+                                    </table>
+                                    <table class="table tbl-cities hideDiv">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-35 m-p-w-170" scope="col">City Name</th>
+                                                <th class="td-wid-30 m-p-w-140" scope="col">Page Views</th>
+                                                <th class="td-wid-35 m-p-w-150" scope="col">Unique Visitors</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_tbodyCityReportData">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-650 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6 id="dvTitle"></h6>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody bg-white">
+            <div class="popupbodycont">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table id="ui_tblLeadsSourceReportData" class="table first-row">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-200">
+                                        Name
+                                    </th>
+                                    <th class="helpIcon m-p-w-200" scope="col">
+                                        EmailId
+                                    </th>
+                                    <th class="helpIcon m-p-w-200" scope="col">
+                                        PhoneNumber
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyLeadSourceReportData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_InnerPaging");
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="hdDomain" data-domain="@ViewBag.DomainName" />
+<script src="~/js/Analytics/Web_PageAnalysis.js"></script>
+

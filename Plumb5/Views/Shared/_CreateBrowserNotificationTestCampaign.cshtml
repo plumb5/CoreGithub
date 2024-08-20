@@ -1,0 +1,104 @@
+﻿<div class="popupcontainer hideDiv" id="ui_div_CreateTestWebPushCampaign">
+    <div class="popupItem w-650 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Test Campaign</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="smsTestTemp" class="smsEditinfowrp pad-20 position-relative">
+                    <div class="testmailtempwrp pl-3 pr-3">
+                        <div class="mailtranspromowrp mb-3">
+                            <div class="df-ac-sbet">
+                                <div class="mailcontypewrp"></div>
+                                <div class="prevwrp">
+                                    <span class="lmstempprev previewthis">Preview</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">Campaign Identifier</label>
+                                    <input type="text" name="" class="form-control" id="ui_txt_CampaignIdentifier">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="checkeebx-group mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="indivCampaign" id="testcampaignindiv" name="testcampaignType"
+                                               class="custom-control-input" checked>
+                                        <label class="custom-control-label" for="testcampaignindiv">Individual</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="groupcampaign" id="testcampaigngroup" name="testcampaignType"
+                                               class="custom-control-input">
+                                        <label class="custom-control-label" for="testcampaigngroup">Group</label>
+                                    </div>
+                                </div>
+                                <div id="indivtxtbox" class="textcampWrap mt-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="MachineId" id="ui_txt_WebPushMachineId">
+                                    </div>
+                                </div>
+                                <div id="groupdropdownbox" class="textcampWrap mt-3 hideDiv">
+                                    <div class="testcampgroup">
+                                        <select id="testcampgroupname" class="form-control" data-placeholder="Select Group">
+                                            <option label="Choose one">Select Group</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                        </div>
+                    </div>
+                    <div class="previewtempsidewrp hideDiv">
+                        <div class="bwnotifprevtemp">
+                            <div class="notifprevmain">
+                                <div class="notifbanwrp"></div>
+                                <div class="notiprevcontent">
+                                    <div class="notiprevcontwrp">
+                                        <div class="notifbelcont">
+                                            <div class="notificonwrp"></div>
+                                            <div class="notifititcontwrp">
+                                                <h3 class="notiftitle"></h3>
+                                                <p class="notifdescript"></p>
+                                            </div>
+                                        </div>
+                                        <div class="notifbtnwrp mt-2">
+                                            <button id="ui_test_notifsubbtn" type="button" class="btn btn-notifprimary w-49 mr-1">
+                                                <a class="bnotbtn1" href="javascript:void(0);"></a>
+                                            </button>
+                                            <button id="ui_test_notifcanbtn" type="button" class="btn btn-notisecondary w-49">
+                                                <a class="bnotbtn2" href="javascript:void(0);"></a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clseprevtemp">
+                            <i class="icon ion-android-close fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <a href="javascript:void(0);" id="ui_a_CreateTestCampaign" class="btn btn-primary mr-2 btn-test">
+                    Test Now <i class="icon ion-android-send pl-1"></i>
+                </a>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/WebPush/CreateBrowserNotificationTestCampaign.js"></script>

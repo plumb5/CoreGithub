@@ -1,0 +1,40 @@
+﻿namespace Plumb5.Areas.Analytics.Dto
+{
+    public record Content_GetPopularPagesDto(int accountId, int duration, string fromdate, string todate, int start, int end);
+    public record Content_PopularPageExportDto(int AccountId, int Duration, string FromDateTime, string TodateTime, int OffSet, int FetchNext, string FileType);
+    public record Content_BindPopularPageDto(int accountId, int duration, string fromdate, string todate);
+    public record Content_BindPageViewUniqueVisitorDataDto(int accountId, string fromdate, string todate, string pagename, int devicetype);
+    public record Content_BindGraphDto(int accountId, string fromdate, string todate, string pagename, int devicetype);
+    public record Content_PageAnalysisExportDto(int AccountId, int Duration, string FromDateTime, string TodateTime, int OffSet, int FetchNext, string FileType);
+    public record Content_OverallPercentageDto(int accountId, int duration, string fromdate, string todate, string pagename, int deviceType);
+    public record Content_SearchKeysForPageMethodDto(int accountId, int duration, string fromdate, string todate, string Url, int start, int end);
+    public record Content_BindPieChartsDto(int accountId, string fromdate, string todate, string pagename, int devicetype);
+    public record Content_BindLocationDto(int accountId, int duration, string fromdate, string todate, string pagename);
+    public record Content_BindSourceGridDto(int accountId, string fromdate, string todate, string pagename, int devicetype, int start = 1, int end = 10);
+    public record Content_BindCityGridDto(int accountId, string fromdate, string todate, string pagename, int devicetype, int start = 1, int end = 10);
+    public record Content_GetTopEntryExitPagesCountDto(int accountId, int duration, string fromdate, string todate, string key);
+    public record Content_GetTopEntryExitPagesDto(int accountId, int duration, string fromdate, string todate, string key, int start, int end);
+    public record Content_ExportTopEntryExitPagesDto(int AccountId, int Duration, string FromDateTime, string TodateTime, int OffSet, int FetchNext, string FileType);
+    public record Content_GetPageFiltersDto(int accountId, string fromdate, string todate, int start, int end, string filterPage);
+    public record Content_GetEventTrackingReportCountDto(int accountId, string fromdate, string todate, string drpSearchBy = "", string txtSearchBy = "");
+    public record Content_BindEventTrackingReportDto(int accountId, string fromdate, string todate, int start = 0, int end = 10, string drpSearchBy = "", string txtSearchBy = "");
+    public record Content_GetEventValueMaxCountDto(int accountId, string fromdate, string todate, string Events);
+    public record Content_BindEventValueReportDto(int accountId, string eventName, string events, string eventType, string fromdate, string todate, int OffSet, int FetchNext);
+    public record Content_BindEventTrackingFilterValuesDto(int accountId, string fromdate, string todate, string drpSearchBy = "");
+    public record Content_BindExistingEventTrackSettingDto(int accountId);
+    public record Content_SaveEventTrackSettingDto(int accountId, string Names, string Events, string EventType, string Action);
+    public record Content_UpdateEventTrackSettingDto(int accountId, string Names, string Events, string EventType, string Action, int Id);
+    public record Content_UpdateStatusDto(int accountId, int Id, int Status);
+    public record Content_DeleteEventTrackSettingDto(int accountId, string Action, int Id);
+    public record Content_RecommendationReportDto(int accountId, string fromdate, string todate);
+    public record Content_GetHeatMapDto(string Page, int accountId, string fromdate, string todate);
+    public record Content_GetHeatMapNewDto(string Page, int accountId, string fromdate, string todate);
+    public record Content_GetPageNameDto(int accountId, string fromdate, string todate);
+    public record Content_GetLeadSourceMaxInnerCountDto(int accountId, string fromdate, string todate, string pagename, int devicetype, string LeadSource);
+    public record Content_GetLeadSourceDto(int accountId, string fromdate, string todate, string pagename, int devicetype);
+    public record Content_GetLeadDetailsDto(int accountId, string fromdate, string todate, string pagename, int devicetype, string LeadSource, int OffSet, int FetchNext);
+    public record Content_GetTimeSpentDataDto(int accountId, string fromdate, string todate, string pagename, int deviceType, string domainName = "");
+    public record Content_GetTimeTrendsDataDto(int accountId, string fromdate, string todate, string pagename, int devicetype, string domainName = "");
+    public record Content_GetFrequencyDataDto(int accountId, string fromdate, string todate, string pagename, int devicetype, string domainName = "");
+    public record Content_GetPopularPagesCountDto(int accountId, int duration, string fromdate, string todate);
+}

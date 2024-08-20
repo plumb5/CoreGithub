@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: NewVsReturn";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Behaviour</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Web</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Analytics Overview</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Behaviour</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0);">New vs Return</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Dashboard/TimeOnSite">Time on Site</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Dashboard/TimeTrends">Time Trends</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Audience/Frequency">Frequency</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Audience/Recency">Recency</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Audience/TimeSpend">Time Spent</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Analytics/Audience/PageDepth">Page Depth</a></div>
+        </div>
+        @{
+            Html.RenderPartial("_Export");
+        }
+    </div>
+    <div class="topTabWrap brd-TRL">
+        @{
+            Html.RenderPartial("_PageHeadingWithDate");
+        }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="charteeWrap position-relative h-350">
+            <canvas id="ui_canvas_NewVsReturn"></canvas>
+        </div>
+    </div>
+</section>
+<section class="sheet">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white mt-4">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table first-row" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-120">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Day <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Day</div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-120" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Sessions <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Sessions </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Unique Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> New Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">New Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Single Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Single Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Repeat Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Repeat Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-170" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Returning Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Returning Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-170" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Avg.Time <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Avg.Time </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_Paging");
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/Analytics/Web_NewReturn.js"></script>

@@ -1,0 +1,1417 @@
+﻿@{
+    ViewBag.Title = "Create Chat Room";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+@*<link href="~/Content/css/form-editor-main-style.css" rel="stylesheet" />*@
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/jscolor.js"></script>
+<script type="text/javascript">
+    var domainName = '@ViewBag.DomainName';
+</script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Create Chat Room</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Live Chat</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Manage Chat</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create Chat Room</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="campaingmaincontainer">
+            <div class="container-page-head h-45 pl-0 pr-0">
+                <div class="campTabWrap">
+                    <ul class="campaign-nav">
+                        <li class="campnav-item">
+                            <a class="campnav-link active  border-left-0" id="tab1">Design</a>
+                        </li>
+                        <li class="campnav-item">
+                            <a class="campnav-link" id="tab2">
+                                Event <span>
+                                    &nbsp; Messages
+                                </span>
+                            </a>
+                        </li>
+                        <li class="campnav-item">
+                            <a class="campnav-link" id="tab3">
+                                <span>Display &nbsp;</span>
+                                Rules
+                            </a>
+                        </li>
+                        <li class="campnav-item">
+                            <a class="campnav-link prevtest" id="tab4">
+                                <span>
+                                    Response
+                                    &nbsp;
+                                </span>
+                                Settings
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="container-page-bodychat box-bodycol">
+                <div class="chatdesgnwrp h-100">
+                    <div class="row h-100 m-0">
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 bg-white" id="ui_divDesign">
+                            <div class="box-white border-0">
+                                <div class="chatdesignwrp pt-3 mb-3">
+                                    <div id="accordion" class="accordion-one" role="tablist"
+                                         aria-multiselectable="true">
+                                        <div class="card">
+
+                                            <div class="card-header" role="tab" id="headingOne">
+
+                                                <a data-toggle="collapse" data-parent="#accordion"
+                                                   href="#collapseOne" aria-expanded="true"
+                                                   aria-controls="collapseOne"
+                                                   class="tx-gray-800 transition collapsed">
+
+                                                    Chat Styling
+
+                                                </a>
+
+                                            </div><!-- card-header -->
+
+
+
+                                            <div id="collapseOne" class="collapse show" role="tabpanel"
+                                                 aria-labelledby="headingOne" data-parent="#accordion">
+
+                                                <div class="card-body p-4">
+
+                                                    <div class="chatfrmcont">
+                                                        <div class="formColwrap">
+                                                            <div class="form-group row w-100 mb-0">
+                                                                <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                                    Chat Room
+                                                                    Identifier
+                                                                </label>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <input type="text"
+                                                                           class="form-control" id="ui_txtChatRoom">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="form-group row w-100 mb-0">
+                                                                <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4">Chat Header</label>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <input type="text" id="chattitlebox"
+                                                                           placeholder="Chat with us" value="Chat with us"
+                                                                           class="form-control"
+                                                                           onkeyup="chattitcharcount(this, 30, 'ui_span_ChatHeadersTextCount');">
+                                                                    <p class="current-count">
+                                                                        Character Count: <span id="ui_span_ChatHeadersTextCount">18</span> <small class="text-muted">(Maximum Restricted to 30)</small>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="checkeebx-group row w-100 mb-0">
+                                                                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                    <label class="frmlbltxt">Minimised Window</label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio"
+                                                                               id="chattopbar"
+                                                                               value="0"
+                                                                               name="chattopbartype"
+                                                                               class="custom-control-input">
+                                                                        <label class="custom-control-label"
+                                                                               for="chattopbar">Bar</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio"
+                                                                               id="chattopbarbub" checked
+                                                                               value="1"
+                                                                               name="chattopbartype"
+                                                                               class="custom-control-input">
+                                                                        <label class="custom-control-label"
+                                                                               for="chattopbarbub">Bubble</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="checkeebx-group row w-100 mb-0">
+                                                                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                    <label class="frmlbltxt">Position</label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio"
+                                                                               id="chatalignleft"
+                                                                               value="1"
+                                                                               name="chataligns"
+                                                                               class="custom-control-input">
+                                                                        <label class="custom-control-label"
+                                                                               for="chatalignleft">Left</label>
+                                                                    </div>
+                                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                                        <input type="radio"
+                                                                               id="chatalignright"
+                                                                               value="2"
+                                                                               name="chataligns" checked
+                                                                               class="custom-control-input">
+                                                                        <label class="custom-control-label"
+                                                                               for="chatalignright">Right</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="form-group row w-100 mb-0">
+                                                                <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4">Chat Foreground Color</label>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="chatcustcolwrp">
+                                                                        <div class="chatcustCol">
+                                                                            <input id="chattitlecol"
+                                                                                   class="jscolor colorinput"
+                                                                                   type="text"
+                                                                                   value="#F6F6F6">
+                                                                        </div>
+                                                                        <div class="chattitcustbgcol" id="chattitlecolIcon" style="background-color:#F6F6F6">
+                                                                            <i class='icon ion-checkmark-round font-16'></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="formColwrap mt-4">
+                                                            <div class="checkeebx-group row w-100 mb-0">
+                                                                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl d-flex align-items-center">
+                                                                    <label class="frmlbltxt mb-0">
+                                                                        Choose a background
+                                                                        color
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="chatbarcolwrp">
+                                                                        <div class="chatgradwrp">
+                                                                            <div id="bg-grandeur"
+                                                                                 class="chatbgcol bg-grandeur">
+                                                                            </div>
+                                                                            <div id="bg-transfile"
+                                                                                 class="chatbgcol bg-transfile">
+                                                                            </div>
+                                                                            <div id="bg-reef"
+                                                                                 class="chatbgcol bg-reef">
+                                                                                <i class="icon ion-checkmark-round font-16"></i>
+                                                                            </div>
+                                                                            <div id="bg-dance"
+                                                                                 class="chatbgcol bg-dance">
+                                                                            </div>
+                                                                            <div id="bg-flickr"
+                                                                                 class="chatbgcol bg-flickr">
+                                                                            </div>
+                                                                            <div id="bg-mantle"
+                                                                                 class="chatbgcol bg-mantle">
+                                                                            </div>
+                                                                            <div id="bg-neon"
+                                                                                 class="chatbgcol bg-neon">
+                                                                            </div>
+                                                                            <div id="bg-delicate"
+                                                                                 class="chatbgcol bg-delicate">
+                                                                            </div>
+                                                                            <div id="bg-crystal-clear"
+                                                                                 class="chatbgcol bg-crystal-clear">
+                                                                            </div>
+                                                                            <div id="bg-emerald"
+                                                                                 class="chatbgcol bg-emerald">
+                                                                            </div>
+                                                                            <div id="bg-teal-love"
+                                                                                 class="chatbgcol bg-teal-love">
+                                                                            </div>
+                                                                            <div id="bg-mojito"
+                                                                                 class="chatbgcol bg-mojito">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="chatcustcolwrp">
+                                                                            <div class="chatcustCol">
+                                                                                <input id="chatcustbgbar"
+                                                                                       class="jscolor colorinput"
+                                                                                       type="text"
+                                                                                       value="#8899af">
+                                                                            </div>
+                                                                            <div class="chatcustbgcol">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        @*<div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                        <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                        <label class="frmlbltxt">
+                                                        Pre-Chat
+                                                        Survey
+                                                        </label>
+                                                        </div>
+                                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                                        <input type="checkbox"
+                                                        class="custom-control-input"
+                                                        id="ui_chkPrivateChat"
+                                                        name="prechatsurvy">
+                                                        <label class="custom-control-label"
+                                                        for="ui_chkPrivateChat"></label>
+                                                        </div>
+                                                        </div>
+
+                                                        </div>
+
+                                                        </div>*@
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="checkeebx-group row w-100 mb-0">
+                                                                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                    <label class="frmlbltxt">
+                                                                        Desktop
+                                                                        Notification
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                                        <input type="checkbox"
+                                                                               class="custom-control-input"
+                                                                               id="ui_chkDesktopNotify">
+                                                                        <label class="custom-control-label"
+                                                                               for="ui_chkDesktopNotify">
+                                                                            *Only on
+                                                                            supported desktops
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="formColwrap mt-3">
+                                                            <div class="checkeebx-group row w-100 mb-0">
+                                                                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                    <label class="frmlbltxt">
+                                                                        Assigned
+                                                                        Sound
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <select class="form-control w-50 mr-2"
+                                                                                id="dllSoundNotificationVisitor">
+                                                                            <option value="0">Select</option>
+                                                                            <option value="alert.mp3">Alert</option>
+                                                                            <option value="bonk.mp3">Bonk</option>
+                                                                            <option value="Dong.mp3">Dong</option>
+                                                                            <option value="Flipped.mp3">Flipped</option>
+                                                                            <option value="icq.mp3">Fog Horn</option>
+                                                                            <option value="indian.mp3">Indian Brass</option>
+                                                                            <option value="IncomingimIm.mp3">Incoming IM</option>
+                                                                            <option value="ohoh.mp3">Oh oh</option>
+                                                                            <option value="OugoingimIm.mp3">Outgoing IM</option>
+                                                                            <option value="Teaser.mp3">Teaser</option>
+                                                                            <option value="tzer.mp3">Tzer</option>
+                                                                            <option value="whip.mp3">Whip</option>
+                                                                            <option value="whistle.mp3">Whistle</option>
+                                                                            <option value="whizz.mp3">Whizz</option>
+                                                                        </select>
+                                                                        <i id="ui_btnSoundTest"
+                                                                           class="icon ion-play font-24 cursor-pointer"></i>
+                                                                        <audio id="ui_soundChat">
+                                                                            <source src="" type="audio/mpeg" />
+                                                                            Your browser isn't invited for super fun audio time.
+                                                                        </audio>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="card">
+
+                                            <div class="card-header" role="tab" id="headingTwo">
+
+                                                <a class="tx-gray-800 transition collapsed"
+                                                   data-toggle="collapse" data-parent="#accordion"
+                                                   href="#collapseTwo" aria-expanded="false"
+                                                   aria-controls="collapseTwo">
+
+                                                    Auto Message
+
+                                                </a>
+
+                                            </div>
+
+                                            <div id="collapseTwo" class="collapse" role="tabpanel"
+                                                 aria-labelledby="headingTwo" data-parent="#accordion">
+
+                                                <div class="card-body">
+
+                                                    <div class="landpagewrap mt-2">
+                                                        <div class="addlandwrp mt-2">
+                                                            <button id="addlandpage" type="button"
+                                                                    class="btn textbtnblu">
+                                                                <i class="fa fa-plus mr-1"></i> Add
+                                                                Custom Message
+                                                            </button>
+                                                        </div>
+                                                        <div class="addlandfieldwrp" style="display:none;" id="ui_dvAddAutoMessage">
+                                                            <div class="clsediv" id="ui_dvCloseAutoMessage">
+                                                                <i class="fa fa-close"></i>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6 col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">Minutes</label>
+                                                                                <select id="ui_txtTimeMinutes"
+                                                                                        class="form-control">
+                                                                                    <option value="00">
+                                                                                        00
+                                                                                    </option>
+                                                                                    <option value="01">
+                                                                                        01
+                                                                                    </option>
+                                                                                    <option value="02">
+                                                                                        02
+                                                                                    </option>
+                                                                                    <option value="03">
+                                                                                        03
+                                                                                    </option>
+                                                                                    <option value="04">
+                                                                                        04
+                                                                                    </option>
+                                                                                    <option value="05">
+                                                                                        05
+                                                                                    </option>
+                                                                                    <option value="06">
+                                                                                        06
+                                                                                    </option>
+                                                                                    <option value="07">
+                                                                                        07
+                                                                                    </option>
+                                                                                    <option value="08">
+                                                                                        08
+                                                                                    </option>
+                                                                                    <option value="09">
+                                                                                        09
+                                                                                    </option>
+                                                                                    <option value="10">
+                                                                                        10
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6 col-md-6">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">Seconds</label>
+                                                                                <select class="form-control"
+                                                                                        id="ui_txtTimeSec">
+                                                                                    <option value="00">
+                                                                                        00
+                                                                                    </option>
+                                                                                    <option value="05">
+                                                                                        05
+                                                                                    </option>
+                                                                                    <option value="10">
+                                                                                        10
+                                                                                    </option>
+                                                                                    <option value="15">
+                                                                                        15
+                                                                                    </option>
+                                                                                    <option value="20">
+                                                                                        20
+                                                                                    </option>
+                                                                                    <option value="25">
+                                                                                        25
+                                                                                    </option>
+                                                                                    <option value="30">
+                                                                                        30
+                                                                                    </option>
+                                                                                    <option value="35">
+                                                                                        35
+                                                                                    </option>
+                                                                                    <option value="40">
+                                                                                        40
+                                                                                    </option>
+                                                                                    <option value="45">
+                                                                                        45
+                                                                                    </option>
+                                                                                    <option value="50">
+                                                                                        50
+                                                                                    </option>
+                                                                                    <option value="55">
+                                                                                        55
+                                                                                    </option>
+                                                                                    <option value="60">
+                                                                                        60
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputEmail1">
+                                                                            Your
+                                                                            Message
+                                                                        </label>
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="ui_txtMessage">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                                                    <div class="form-group">
+                                                                        <label for="exampleInputEmail1">
+                                                                            Enter
+                                                                            URL
+                                                                        </label>
+                                                                        <input type="text"
+                                                                               class="form-control"
+                                                                               id="ui_txtUrl">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="btnwrp">
+                                                                <button type="button" id="ui_btnEditMessage"
+                                                                        class="btn btn-primary mr-2 " style="display:none">
+                                                                    Add
+                                                                </button>
+                                                                <button type="button" id="ui_btnAddMessage"
+                                                                        class="btn btn-primary mr-2 ">
+                                                                    Add
+                                                                </button>
+                                                                <button type="button" id="ui_btnCancelAutoMessage"
+                                                                        class="btn btn-secondary btn-lg">
+                                                                    Cancel
+                                                                </button>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="chatautomesswrp mt-2">
+                                                            <div class="tableWrapper">
+                                                                <div class="table-responsive td-tr-bg-white">
+                                                                    <table class="table tbl-td-ta-lft border">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th class="td-wid-15 m-p-w-150"
+                                                                                    scope="col">
+                                                                                    Time
+                                                                                </th>
+                                                                                <th class="td-wid-25 m-p-w-150"
+                                                                                    scope="col">
+                                                                                    Message
+                                                                                </th>
+                                                                                <th class="td-wid-45 m-p-w-400"
+                                                                                    scope="col">URL</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody id="ui_tbodyAutoMessageData"></tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="card">
+
+                                            <div class="card-header" role="tab" id="headingTwo">
+
+                                                <a class="tx-gray-800 transition collapsed"
+                                                   data-toggle="collapse" data-parent="#accordion"
+                                                   href="#collapseThree" aria-expanded="false"
+                                                   aria-controls="collapseThree">
+
+                                                    Pre-Chat Survey
+
+                                                </a>
+
+                                            </div>
+
+                                            <div id="collapseThree" class="collapse" role="tabpanel"
+                                                 aria-labelledby="headingTwo" data-parent="#accordion">
+
+                                                <div class="card-body">
+
+                                                    <div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Pre-Chat
+                                                                    Survey
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                                                        <input type="checkbox"
+                                                                               class="custom-control-input"
+                                                                               id="prechatsurvy"
+                                                                               name="prechatsurvy">
+                                                                        <label class="custom-control-label"
+                                                                               for="prechatsurvy"></label>
+                                                                    </div>
+
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="prechatpreview" name="prechatpreview">
+                                                                        <label id="" class="custom-control-label frmlbltxt" for="prechatpreview">
+                                                                            Show
+                                                                            Preview
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Name
+                                                                    Placeholder Text
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       class="form-control"
+                                                                       id="prechatfrmname" value="Your Name"
+                                                                       placeholder="Your Name" onkeyup="chattitcharcount(this, 40, 'ui_span_NamePlaceTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_NamePlaceTextCount">31</span> <small class="text-muted">(Maximum Restricted to 40)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Email
+                                                                    Placeholder Text
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="Email Id" value="Email Id"
+                                                                       class="form-control"
+                                                                       id="prechatfrmemailid" onkeyup="chattitcharcount(this, 40, 'ui_span_EmailIdPlaceTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_EmailIdPlaceTextCount">32</span> <small class="text-muted">(Maximum Restricted to 40)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Phone
+                                                                    Placeholder Text
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="Phone" value="Phone"
+                                                                       class="form-control"
+                                                                       id="prechatfrmphone" onkeyup="chattitcharcount(this, 40, 'ui_span_PhoneTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_PhoneTextCount">35</span> <small class="text-muted">(Maximum Restricted to 40)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Message
+                                                                    Placeholder Text
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="Message" value="Message"
+                                                                       class="form-control"
+                                                                       id="prechatfrmmessage" onkeyup="chattitcharcount(this, 40, 'ui_span_MessageTextCount');">
+                                                                @*<p class="current-count">
+                                                                Character Count: <span id="ui_span_MessageTextCount">35</span> <small class="text-muted">(Maximum Restricted to 40)</small>
+                                                                </p>*@
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Privacy
+                                                                    Content
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="I agree to have my personal data processed by plumb5.com for chat support"
+                                                                       value="I agree to have my personal data processed by plumb5.com for chat support"
+                                                                       class="form-control"
+                                                                       id="prechatfrmprivacy" onkeyup="chattitcharcount(this, 80, 'ui_span_PrivacyContentTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_PrivacyContentTextCount">7</span> <small class="text-muted">(Maximum Restricted to 80)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Button
+                                                                    Text
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="Start Chat" value="Start Chat"
+                                                                       class="form-control"
+                                                                       id="startchataddtext" onkeyup="chattitcharcount(this, 25, 'ui_span_ButtonTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_ButtonTextCount">15</span> <small class="text-muted">(Maximum Restricted to 25)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Response
+                                                                    Message
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <input type="text" name=""
+                                                                       placeholder="Happy Chatting" value="Happy Chatting"
+                                                                       class="form-control"
+                                                                       id="prechatrespmesstext" onkeyup="chattitcharcount(this, 30, 'ui_span_ResponseMessageTextCount');">
+                                                                <p class="current-count">
+                                                                    Character Count: <span id="ui_span_ResponseMessageTextCount">16</span> <small class="text-muted">(Maximum Restricted to 30)</small>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="formColwrap mt-3 mb-3">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Response
+                                                                    Message Text Color
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatRespMessTxtcol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#dc3545">
+                                                                    </div>
+                                                                    <div id="addRespMesTxtcol"
+                                                                         class="chattitcustbgcol" style="background-color:#dc3545">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="card">
+
+                                            <div class="card-header" role="tab" id="headingTwo">
+
+                                                <a class="tx-gray-800 transition collapsed"
+                                                   data-toggle="collapse" data-parent="#accordion"
+                                                   href="#collapsefour" aria-expanded="false"
+                                                   aria-controls="collapsefour">
+
+                                                    Message Styling
+
+                                                </a>
+
+                                            </div>
+
+                                            <div id="collapsefour" class="collapse" role="tabpanel"
+                                                 aria-labelledby="headingTwo" data-parent="#accordion">
+
+                                                <div class="card-body">
+                                                    <div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Chat Body
+                                                                    Background Color
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatUserBgcol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#F1F3F5">
+                                                                    </div>
+                                                                    <div class="chattitcustbgcol" id="chatUserBgcolIcon" style="background-color:#F1F3F5">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Agent
+                                                                    Message Bg Color
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatAgentBgcol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#4662AF">
+                                                                    </div>
+                                                                    <div class="chattitcustbgcol" id="chatAgentBgcolIcon" style="background-color:#4662AF">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Agent
+                                                                    Message Forecolor
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatAgentForecol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#F2F2F2">
+                                                                    </div>
+                                                                    <div id="chatAgentForecolIcon"
+                                                                         class="chattitcustbgcol" style="background-color:#F2F2F2">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Visitor
+                                                                    Message Bg Color
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatVisitorBgcol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#dee2e6">
+                                                                    </div>
+                                                                    <div id="chatVisitorBgcolIcon"
+                                                                         class="chattitcustbgcol" style="background-color:#dee2e6">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="formColwrap mt-4 mb-4">
+                                                        <div class="checkeebx-group row w-100 mb-0">
+                                                            <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                                                <label class="frmlbltxt" for="">
+                                                                    Visitor
+                                                                    Message Forecolor
+                                                                </label>
+                                                            </div>
+                                                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                                                <div class="chatcustcolwrp">
+                                                                    <div class="chatcustCol">
+                                                                        <input id="chatVisitorforecol"
+                                                                               class="jscolor colorinput"
+                                                                               type="text" value="#868ba1">
+                                                                    </div>
+                                                                    <div id="chatVisitorforecolIcon"
+                                                                         class="chattitcustbgcol" style="background-color:#868ba1">
+                                                                        <i class="icon ion-checkmark-round font-16"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 bg-white hideDiv" id="ui_divEventMessages">
+                            <div class="chatdesignwrp pt-4 mb-3">
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Set Online Title</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <input type="text" class="form-control" placeholder="Please leave your detailst to connect with us." id="ui_txtCustomTitle" value="Please leave your detailst to connect with us." />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Set Offline Title</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <input type="text" class="form-control" placeholder="We are offline, Please share your details to contact you!" id="ui_txtOfflineTitle" value="We are offline, Please share your details to contact you!" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Set Form Online Title</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <input type="text" class="form-control" placeholder="We are online" id="ui_txtFormOnlineTitle" value="We are online" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Set Form Offline Title</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <input type="text" class="form-control" placeholder="Get In Touch" id="ui_txtFormOfflineTitle" value="Get In Touch" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Set default message when online</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_chkDefaultMesg" />
+                                                    <label class="custom-control-label" for="ui_chkDefaultMesg"></label>
+                                                </div>
+                                                <div class="chattxtarewrp hideDiv" id="ui_DvDefaultMesg">
+                                                    <textarea class="form-control" id="ui_txtWelcomeMesg" cols="3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">When agent is idle for 5 or more minutes</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_ChkIdelMesg" />
+                                                    <label class="custom-control-label" for="ui_ChkIdelMesg"></label>
+                                                </div>
+                                                <div class="chattxtarewrp hideDiv" id="ui_DvChkIdelMesg">
+                                                    <textarea class="form-control" id="txtIdelMesg" cols="3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">When agent goes offline</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_ChkOfflineMesg" />
+                                                    <label class="custom-control-label" for="ui_ChkOfflineMesg"></label>
+                                                </div>
+                                                <div class="chattxtarewrp hideDiv" id="ui_DvChkOfflineMesg">
+                                                    <textarea class="form-control" id="txtOfflineMesg" cols="3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">When agent ends chat</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_ChkChatEndMesg" />
+                                                    <label class="custom-control-label" for="ui_ChkChatEndMesg"></label>
+                                                </div>
+                                                <div class="chattxtarewrp hideDiv" id="ui_DvChkChatEndMesg">
+                                                    <textarea class="form-control" id="txtEndMesg" cols="3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-4">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0">Auto Suggestion for agent</label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_ChkMessageHelper" />
+                                                    <label class="custom-control-label" for="ui_ChkMessageHelper"></label>
+                                                </div>
+                                                <div class="chattxtarewrp hideDiv" id="ui_DvChkMessageHelper">
+                                                    <textarea class="form-control" id="ui_txtAutoSuggestion" cols="3" rows="2"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0"></label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_chkGreeting" />
+                                                    <label class="custom-control-label" for="ui_chkGreeting">Show Greetings Message</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0"></label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_chkAgentOnline" />
+                                                    <label class="custom-control-label" for="ui_chkAgentOnline">Show Chat if agent is online</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="formColwrap mb-3">
+                                    <div class="form-group row w-100 mb-0 df-ac">
+                                        <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4 mb-0"></label>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="df-ac setchkbxmess">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input" id="ui_chkEngaged" />
+                                                    <label class="custom-control-label" for="ui_chkEngaged">Show Agent name with a message</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 bg-white hideDiv" id="ui_divDisplayRules">
+                            @{
+                                Html.RenderPartial("_Rules");
+                            }
+                        </div>
+
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 bg-white hideDiv" id="ui_divResponseSettings">
+                            <div class="chatdesignwrp pt-4 mb-3 pl-3 pr-3">
+                                <div class="chatrespitemwrp mb-4">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input"
+                                               id="ui_chkReportMail">
+                                        <label class="custom-control-label" for="ui_chkReportMail">
+                                            Report
+                                            Through Email
+                                        </label>
+                                    </div>
+                                    <div class="chatresponseitem mt-3 hideDiv" id="ui_divReportMail">
+                                        <textarea id="ui_txtReportMail" class="form-control" cols="2"
+                                                  rows="3"></textarea>
+                                        <small class="form-text text-muted">
+                                            Add email id separated by
+                                            comma
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="chatrespitemwrp mb-4">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input"
+                                               id="ui_chkSalesPerson">
+                                        <label class="custom-control-label" for="ui_chkSalesPerson">
+                                            Assign
+                                            Sales Person
+                                        </label>
+                                    </div>
+                                    <div class="chatresponseitem mt-3 w-50 m-w-100 hideDiv" id="ui_divSalesPerson">
+                                        <select class="form-control" id="ui_ddlUserList">
+                                            <option value="0">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="frmrespsetwrp  mb-4">
+                                    <div class="frmrepreschktitwrp">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkoverridesource" name="frmrepoverridesource">
+                                            <label class="custom-control-label" for="ui_chkoverridesource">Assign Sources</label>
+                                        </div>
+                                    </div>
+                                    <div class="frmresoptwrp border-top-0 hideDiv" id="IsOverriseSource_Tr">
+                                        <div id="frmrepemailcondi" class="frmcondiwrp">
+                                            <div class="chatresponseitem mt-3 w-50 m-w-100">
+                                                <select class="form-control form-control-sm notspecificbtn select2" data-placeholder="" name="" id="ui_ddlIsoverridesourceList">
+                                                    <option value="Select Group">Select Source</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="custom-control custom-checkbox mt-2" id="ui_divLMSImportOverrideSources" style="padding-left: 0px;width:500px">
+
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" value="0" class="custom-control-input" id="lmsStaySource" name="lmsSourceType" checked>
+                                                    <label class="custom-control-label" for="lmsStaySource">Create and Stay Source</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" value="1" class="custom-control-input" id="lmsOverrideSource" name="lmsSourceType">
+                                                    <label class="custom-control-label" for="lmsOverrideSource">Override Source</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" value="2" class="custom-control-input" id="lmsNewSource" name="lmsSourceType">
+                                                    <label class="custom-control-label" for="lmsNewSource">Create New Source</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="chatrespitemwrp mb-4">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input"
+                                               id="ui_chkGroups">
+                                        <label class="custom-control-label" for="ui_chkGroups">
+                                            Assign
+                                            to Group
+                                        </label>
+                                    </div>
+                                    <div class="chatresponseitem mt-3 w-50 m-w-100 hideDiv" id="ui_divGroups">
+                                        <select class="form-control addCampName chatselgroup" id="ui_ddlGroups">
+                                            <option value="0">Select</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="chatrespitemwrp mb-4">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="ui_chkWebHookUrl">
+                                        <label class="custom-control-label" for="ui_chkWebHookUrl">
+                                            Web hooks
+                                        </label>
+                                    </div>
+                                    <div class="chatresponseitem mt-3 hideDiv" id="ui_addwebhookforchats">
+                                        <div class="addwebhoodwrp">
+                                            <button id="addwebhookbtn" type="button"
+                                                    class="btn btn-primary">
+                                                Add <i class="fa fa-plus"></i>
+                                            </button>
+                                        </div>
+
+                                        <div class="chatresponseitem mt-3 hideDiv" id="ui_divWebHookUrl">
+                                            <div class="frmresoptwrp border-top-0">
+                                                <div id="frmrepemailcondi" class="frmcondiwrp">
+                                                    <div class="wrkflwwebhookwrp w-50">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt" for="">Request URL</label>
+                                                            <input type="text" name="" class="form-control" id="ui_txtRequestUrl">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt" for="">Method</label>
+                                                            <select name="" class="form-control" id="ui_ddl_MethodType">
+                                                                <option value="select">Select Method</option>
+                                                                <option value="Post">Post</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt" for="">Content Type</label>
+                                                            <select name="" class="form-control" id="ui_ddl_ContentType">
+                                                                <option value="select">Select Content Type</option>
+                                                                <option value="Form">Form</option>
+                                                                <option value="Raw Body">Raw Body</option>
+                                                            </select>
+                                                        </div>
+                                                        <div id="rawbodytxtinpt" class="form-group hideDiv">
+                                                            <label class="frmlbltxt" for="">Body</label>
+                                                            <textarea name="" id="ui_txtRequestBody" class="form-control" cols="3" rows="3"></textarea>
+                                                            <small class="form-text text-muted">
+                                                                Data to be sent with the request. You may need to add a
+                                                                'Content-Type' header such as 'application/xml' or 'text/plain'.
+                                                            </small>
+                                                        </div>
+                                                        <div id="formtxtinput" class="form-group hideDiv">
+                                                            <label class="frmlbltxt w-100" for="">Data</label>
+                                                            <div class="adddatafildwrp"></div>
+                                                            <div class="btn-group">
+                                                                <button type="button" class="btn btn-action adddatafild">
+                                                                    <i class="fa fa-plus" id="btndatadetails"></i>Add
+                                                                </button>
+                                                                <button type="button"
+                                                                        class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown"
+                                                                        aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                                </button>
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item adddatafild" href="javascript:void(0)">Add Plumb5 Field</a>
+                                                                    <a class="dropdown-item adddatacustfild" href="javascript:void(0)">Add Custom Field</a>
+                                                                </div>
+                                                            </div>
+                                                            <!-- <button type="button" class="btn btn-action adddatafild"><i class="fa fa-plus"></i> Add</button> -->
+                                                            <small class="text-muted d-block pt-2">
+                                                                Data to be sent with the request in key/value pairs.
+                                                            </small>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt w-100" for="">Headers</label>
+                                                            <div class="addheaderfildwrp"></div>
+                                                            <button type="button" class="btn btn-action addheaderfild">
+                                                                <i class="fa fa-plus"></i>Add
+                                                            </button>
+                                                            <small class="text-muted d-block pt-2">
+                                                                Headers to be sent with the request in key/value pairs.
+                                                            </small>
+                                                        </div>
+                                                        <div class="basicautenwrp">
+                                                            <label class="frmlbltxt w-100" for="">
+                                                                Basic Authentication
+                                                            </label>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                                    <input type="text" name="" class="form-control" id="ui_txt_BasicAuthenticationKey">
+                                                                </div>
+                                                                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                                    <input type="text" name="" class="form-control" id="ui_txt_BasicAuthenticationValue">
+                                                                </div>
+                                                            </div>
+                                                            <small class="text-muted d-block pt-2">
+                                                                Basic Authentication username and password. if needed.
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="webhookbtnwrp mt-4 mb-4">
+                                                <button id="cancelwebhook" type="button"
+                                                        class="btn btn-secondary">
+                                                    Cancel
+                                                </button>
+                                                <button id="btnsavewebhook" type="button"
+                                                        class="btn btn-primary">
+                                                    Save
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="landtablewrap mt-2 webhooktbldatawrp">
+                                            <div class="tableWrapper">
+                                                <div class="table-responsive td-tr-bg-white min-h-200">
+                                                    <table class="table tbl-td-ta-lft border">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="td-wid-45 m-p-w-400"
+                                                                    scope="col">Request URL</th>
+                                                                <th class="td-wid-15 m-p-w-150"
+                                                                    scope="col">Method</th>
+                                                                <th class="td-wid-15 m-p-w-150"
+                                                                    scope="col">Content Type</th>
+                                                                <th class="td-wid-15 m-p-w-60"
+                                                                    scope="col">Edit</th>
+                                                                <th class="td-wid-10 m-p-w-60"
+                                                                    scope="col">Delete</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="ui_tbodyReportData">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        @{
+                            Html.RenderPartial("_ChatPreveiw");
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="container-page-footer" id="footer1">
+                <div class="backbtnWrap"></div>
+                <div class="nextbtnWrap" id="ui_btnStep1Next">
+                    <a href="javascript:void(0);" class="btn btn-primary">
+                        Next <i class="icon ion-chevron-right pl-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container-page-footer hideDiv" id="footer2">
+                <div class="backbtnWrap" id="ui_btnStep2Back">
+                    <a href="javascript:void(0);" class="btn btn-second">
+                        <i class="icon ion-chevron-left pr-2"></i> Back
+                    </a>
+                </div>
+                <div class="nextbtnWrap" id="ui_btnStep2Next">
+                    <a href="javascript:void(0);" class="btn btn-primary">
+                        Next <i class="icon ion-chevron-right pl-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container-page-footer hideDiv" id="footer3">
+                <div class="backbtnWrap" id="ui_btnStep3Back">
+                    <a href="javascript:void(0);" class="btn btn-second">
+                        <i class="icon ion-chevron-left pr-2"></i> Back
+                    </a>
+                </div>
+                <div class="nextbtnWrap" id="ui_btnStep3Next">
+                    <a href="javascript:void(0);" class="btn btn-primary">
+                        Next <i class="icon ion-chevron-right pl-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="container-page-footer hideDiv" id="footer4">
+                <div class="backbtnWrap" id="ui_btnStep4Back">
+                    <a href="javascript:void(0);" class="btn btn-second">
+                        <i class="icon ion-chevron-left pr-2"></i> Back
+                    </a>
+                </div>
+                <div class="nextbtnWrap" id="ui_lnkSaveDetails">
+                    <a href="javascript:void(0);" class="btn btn-primary">
+                        Save <i class="icon ion-chevron-right pl-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Delete Confirm Modal-->
+    <!--Remove Auto Message Confirm Modal-->
+    <div class="modal fade bd-example-modal-sm" id="removeautomessage" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header delete-modal-header">
+                    <h5 class="modal-title">Remove Auto Message?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal" onclick="CreateChatUtil.DeleteAutoMessage();">Delete</button>
+                    <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Delete Confirm Modal-->
+    <!--Delete Confirm Modal webhook-->
+    <div class="modal fade bd-example-modal-sm" id="deleterow" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header delete-modal-header">
+                    <h5 class="modal-title">Delete this Row?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="webdeleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                    <button id="webcancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Delete Confirm Modal-->
+</section>
+<script src="~/js/ManageContact/ContactProperties.js"></script>
+<script src="~/js/Rules.js"></script>
+<script src="~/js/Chat/CreateChat.js"></script>
+<script src="~/js/colorjs/jscolor.js"></script>

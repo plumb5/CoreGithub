@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: AdvancedSettings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Lead Management</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/Settings">Stages</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/InactiveNotification">In-Activity Notification</a></div>
+        @*<div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/NotificationRules">Notification Rules</a></div>*@
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/AgentNotification">Lead Notification</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/Settings/AlertNotification">Alert Notification</a></div>
+        @*<div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/LeadAssignNotificationSetting">Lead Assignment Agent Notification</a></div>*@
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/CallSettings">Call Settings</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/LeadProperties">Lead Properties</a></div>
+        <div class="setttabitem active" data-setttype="javascript:void(0);"><a href="javascript:void(0);">Advanced Settings</a></div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="inactivitynotif" class="setttabcontainer">
+                        <div class="lmsinactivnotifwrp p-3">
+                            <div class="lmsassignuserchkbxwrp mt-3">
+                                <label for="" class="frmlbltxt w-100">
+                                    Show Handled By
+                                </label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" checked="" class="custom-control-input" id="ui_radHierarchy" name="HandledBy" value="0">
+                                    <label class="custom-control-label" for="ui_radHierarchy">Hierarchy</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_radAll" name="HandledBy" value="1">
+                                    <label class="custom-control-label" for="ui_radAll">All</label>
+                                </div>
+                            </div>
+
+
+                            <div class="lmssavebtnwrp mt-4">
+                                <button id="ui_btnSaveNotification" type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="lmsinactivnotifwrp p-3">
+                            <label for="" class="frmlbltxt w-100">
+                                Select Publishers
+                            </label>
+                            <div class="lmsrepfildanswrp" id="dvConditionalSettingsforsalesperson">
+                                <div class="row position-relative">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Publisher's Name</label>
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlUserListcon_1">
+                                                <option value="0">Select User</option>
+                                            </select>
+                                        </div>
+                                    </div>                                    
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Value</label>
+                                            <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_assignsalesvalue_1">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Masking Data</label>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ui_mask_1" name="maskdatamod">
+                                                <label class="custom-control-label" for="ui_mask_1"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span style="width: 35px;">&nbsp;</span>
+                                </div>
+                                <div class="Publisherfields"></div>
+                                <button id="addPublisher" type="button" class="btn btn-primary">Add</button>
+                            </div>
+                            <div class="lmssavebtnwrp mt-4">
+                                <button id="ui_btnSavePublisherSettings" type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+
+                        <div class="lmsinactivnotifwrp p-3">
+                            <div class="droplistwrap mr-2 w-20">
+                                <label for="" class="frmlbltxt w-100">
+                                    Select Source Type
+                                </label>
+                                <select name="" class="form-control form-control-sm mr-2" id="ddlSourceType">
+                                    <option value="0">Create and Stay</option>
+                                    <option value="1">Override</option>
+                                    <option value="2">Create New</option>
+                                </select>
+                            </div>
+
+
+                            <div class="lmssavebtnwrp mt-4">
+                                <button type="button" class="btn btn-primary btn-sm lmscreatesources AddSource" id="btnSourceType">
+                                    <a href="javascript:void(0)">Save</a>
+                                </button>
+                            </div>
+                            <p class="bwsnote mt-2 font-weight-light">
+                                <b>Note: </b>
+                                Select Source Type is a one-time operation as involves re-building of the system.
+                            </p>
+                            <p class=" font-weight-light">
+                                If you need to change the settings again, please contact <a href="mailto:Support@plumb5.com" class="font-weight-bold">Support@plumb5.com.</a>
+                            </p>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<script src="~/js/Prospect/AdvancedSettings.js"></script>

@@ -1,0 +1,787 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Create WhatsApp Templates";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<script src="~/js/toggles.min.js"></script>
+<link href="~/Content/css/toggles-full.css" rel="stylesheet" />
+<link href="/Content/select2/css/select2.min.css" rel="stylesheet" />
+<link href="/Content/dist/devices.css" rel="stylesheet" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <div class="contentHead">
+            <h6 class="pagetitle">Create WhatsApp Templates</h6>
+            <small class="totalCountTitle"><span id="spnName"></span></small>
+        </div>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">WhatsApp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Create WhatsApp Templates
+            </li>
+        </ol>
+    </div>
+    <div class="bwsnoticontainer">
+        <div class="bnoticretwrp h-100">
+            <div class="bnotisavewrp">
+                <button id="ui_btn_SaveTemplate" type="button" class="btn btn-primary">
+                    <a id="ui_a_ButnHtml" href="javascript:void(0);">Save</a>
+                </button>
+            </div>
+            <div class="bnoticreatebody mt-3">
+                <div class="row m-0">
+                    <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 pl-0 m-mb-3 m-pr-0">
+                        <div class="brwsernotiwrp">
+                            <div class="box-whitebdr mb-3">
+                                <div class="browstitlwrp">
+                                    <h6 class="box-title p-0 m-0">Layout</h6>
+                                </div>
+                                <div class="browscontent pt-4">
+                                    <div class="checkeebx-group row">
+                                        <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
+                                            <label class="frmlbltxt" for="">Template Type</label>
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 m-pl-30">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" checked id="whatsapptext"
+                                                       name="templatetype" value="text"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="whatsapptext">Text</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="whatsappimage"
+                                                       name="templatetype" value="image"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="whatsappimage">Image</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="whatsappvideo"
+                                                       name="templatetype" value="video"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="whatsappvideo">Video</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="whatsappdocument"
+                                                       name="templatetype" value="document"
+                                                       class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                       for="whatsappdocument">Document</label>
+                                            </div>
+                                            @*<div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="whatsapplocation"
+                                            name="templatetype" value="location"
+                                            class="custom-control-input">
+                                            <label class="custom-control-label"
+                                            for="whatsapplocation">Location</label>
+                                            </div>*@
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-whitebdr mb-3">
+                                <div class="browstitlwrp">
+                                    <h6 class="box-title p-0 m-0">General Information</h6>
+                                </div>
+                                <div class="browscontent pt-4">
+                                    <div class="frmwrp p-4">
+                                        <div class="form-group row overflow-x-vis">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">
+                                                    Whitelisted Template
+                                                    Name
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <input type="text" name="" class="form-control" id="ui_txt_WhiteListedTempName">
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row overflow-x-vis">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">Template Text</label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <textarea name="" id="ui_txtArea_whatsapptxtmess"
+                                                          class="form-control" cols="30" rows="3"></textarea>
+                                                <small class="form-text text-muted">
+                                                    Character(s)
+                                                    Count <span class="whatsappmesscount">0</span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row overflow-x-vis">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">Template Language</label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <select class="form-control addCampName" name="" id="ui_drpdwn_TempLang">
+                                                    <option value="select">Select</option>
+                                                    <option value="Arabic">Arabic</option>
+                                                    <option value="French">French</option>
+                                                    <option value="English" selected>English</option>
+                                                    <option value="English(US)">English (US)</option>
+                                                    <option value="English(UK)">English (UK)</option>
+                                                    <option value="Tamil">Tamil</option>
+                                                    <option value="Hindi">Hindi</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="whatsappuploadtype" class="hideDiv">
+                                            <div class="form-group row overflow-x-vis">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Upload Type</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" checked
+                                                               id="whatsappmediaurl"
+                                                               name="whatsappmediatype"
+                                                               value="mediaurllink"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="whatsappmediaurl">Media URL</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="whatsappmediaupload"
+                                                               name="whatsappmediatype"
+                                                               value="mediauploadfile"
+                                                               class="custom-control-input">
+                                                        <label class="custom-control-label"
+                                                               for="whatsappmediaupload">Upload</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div id="mediaurlmain" class="form-group row overflow-x-vis mt-3 hideDiv">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">Media URL</label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <input type="text" class="form-control"
+                                                       placeholder="https://www.plumb5.com/assets/filename"
+                                                       id="whatsappimgurl">
+                                                <small class="form-text text-muted">
+                                                    Maximum size of
+                                                    resource<span class="mediaexp"></span> from Media URL shouldn't exceed 16
+                                                    MB
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div id="mediauploadfiles"
+                                             class="form-group row overflow-x-vis mt-3 hideDiv">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">Media Upload Files</label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <div class="uplbtnwrp">
+                                                    <div class="chosebtnwrp">
+                                                        <button type="button"
+                                                                class="btn btn-second upldbtn">
+                                                            Upload
+                                                        </button>
+                                                        <input type="file" name="" id="brwsnotiflogo"
+                                                               class="chosefile" onchange="CreateWhatsAppTemplateUtil.SaveUploadFile('brwsnotiflogo');">
+                                                    </div>
+                                                    <div class="uplfilwrp">
+                                                        <p class="brwsfilename hideDiv">
+                                                            <span class="appndfile"></span>
+                                                            <span class="brwsfileremove">
+                                                                <i class="icon ion-ios-close-outline"></i>
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <small class="form-text text-muted">
+                                                    Maximum size of
+                                                    resource<span class="mediaexp"></span> shouldn't exceed 16
+                                                    MB
+                                                </small>
+                                            </div>
+                                        </div>
+
+                                        <div id="addwhatsattruser"
+                                             class="form-group row overflow-x-vis mt-3 hideDiv">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">Add User Attributes</label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative" id="dvUserAttributes"></div>
+                                        </div>
+                                        <div class="form-group row overflow-x-vis">
+                                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                <label class="frmlbltxt">
+                                                    Footer
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                                                <input type="text" name="" class="form-control" id="ui_txt_Footer">
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkConvertLinkToShortenUrl" name="ConvertLinkToShortenUrl" checked="checked">
+                                                <label class="custom-control-label" for="ui_chkConvertLinkToShortenUrl">Convert Url To Shorten Link</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            @*<div class="box-whitebdr imgoptns mb-3 hideDiv">
+                            <div class="browstitlwrp">
+                            <h6 class="box-title p-0 m-0">Image</h6>
+                            </div>
+                            <div class="browscontent pt-4">
+                            <div class="frmwrp p-4">
+                            <div class="uploadlogowrp">
+                            <div class="bwsnotifilselwrp">
+                            <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" checked id="bwsnotifileupload"
+                            name="bwsnotifileuploadtype"
+                            value="bwsnotifilefild"
+                            class="custom-control-input">
+                            <label class="custom-control-label"
+                            for="bwsnotifileupload">File Upload</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="bwsnotiaddimg"
+                            name="bwsnotifileuploadtype"
+                            value="bwsnotiaddimgfild"
+                            class="custom-control-input">
+                            <label class="custom-control-label"
+                            for="bwsnotiaddimg">Add Image URL</label>
+                            </div>
+                            </div>
+
+                            <div class="brwsnotifilupl">
+                            <div class="row">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                            <label class="frmlbltxt">Icon Image</label>
+                            </div>
+                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                            <div class="uplbtnwrp">
+                            <div class="chosebtnwrp">
+                            <button type="button"
+                            class="btn btn-second upldbtn">
+                            Upload
+                            </button>
+                            <input type="file" name=""
+                            id="brwsnotifban" class="chosefile">
+                            </div>
+                            <div class="uplfilwrp">
+                            <p class="brwsnotimgban hideDiv">
+                            <span class="appndimgban"></span>
+                            <span class="brwsbanremove">
+                            <i class="icon ion-ios-close-outline"></i>
+                            </span>
+                            </p>
+                            </div>
+                            </div>
+
+                            <small class="form-text">
+                            Recommended size 720px
+                            X 480px. Minimum size 360px X 240px.
+                            Aspect ratio (width,height):3:2. Actual
+                            rendering depends on screen
+                            size.JPG,JPEG,PNG formats only. Less than 1
+                            MB in size. URL must begin with
+                            HTTPS.
+                            </small>
+                            <small class="form-text">
+                            To ensure that your
+                            notificaion image is rendered properly
+                            on all browser/OS combinations. please
+                            follow the instructions <a href="javascript:void(0)"
+                            target="_blank">here</a>.
+                            </small>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="bwsnotiimgurl hideDiv">
+                            <div class="form-group row overflow-x-vis mt-3">
+                            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                            <label class="frmlbltxt">Image URL</label>
+                            </div>
+                            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9 position-relative">
+                            <input type="text" class="form-control"
+                            placeholder="https://www.example.com/images/offer-banner.png"
+                            id="bwsernotititle">
+                            <small class="form-text text-muted">
+                            URL can be
+                            HTTP or HTTPS
+                            </small>
+                            </div>
+
+                            </div>
+                            </div>
+                            </div>
+
+                            </div>
+                            </div>
+                            </div>*@
+                            <div class="box-whitebdr mb-3">
+                                <div class="rsscontwrp">
+                                    <h6 class="box-title m-0 p-0 mr-3">Buttons</h6>
+                                    <div class="subcribeWrap">
+                                        <div class="toggle-wrapper">
+                                            <div class="toggle toggle-light success whatsappbtnsett" style="height: 26px; width: 60px;">
+                                                <div class="toggle-slide">
+                                                    <div class="toggle-inner"
+                                                         style="width: 94px; margin-left: 0px;">
+                                                        <div class="toggle-on active"
+                                                             style="height: 26px; width: 47px; text-indent: -8.66667px; line-height: 26px;">
+                                                            ON
+                                                        </div>
+                                                        <div class="toggle-blob"
+                                                             style="height: 26px; width: 26px; margin-left: -13px;">
+                                                        </div>
+                                                        <div class="toggle-off"
+                                                             style="height: 26px; width: 47px; margin-left: -13px; text-indent: 8.66667px; line-height: 26px;">
+                                                            OFF
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <label class="unsubTxt pl-2" for="">Unsubcribe Option</label> -->
+                                    </div>
+                                </div>
+                                <div class="rsscontItem p-0">
+                                    <div class="bnotibtntabwrp">
+                                        <div data-btntab="button1" class="bnotbtnwrp mr-1 active">
+                                            Button-1
+                                        </div>
+                                        <div id="ui_btn_Button2" data-btntab="button2" class="bnotbtnwrp mr-1 hideDiv">
+                                            Button-2
+                                        </div>
+                                        <div class="plusbtnwhats ml-1">
+                                            <i class="icon ion-plus"></i>
+                                        </div>
+                                        <div class="minusbtnwhats ml-1 hideDiv">
+                                            <i class="icon ion-close"></i>
+                                        </div>
+                                    </div>
+                                    <div id="button1" class="bnotbtncontwrp">
+                                        <h6 class="box-title">Button-1</h6>
+                                        <div class="frmwrp p-4">
+                                            <div class="form-group row overflow-x-vis mt-2">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Type of Action</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="selectactiontype">
+                                                        <option value="select">Select</option>
+                                                        <option value="Call">
+                                                            Call to Action
+                                                        </option>
+                                                        <option value="Reply">
+                                                            Quick Reply
+                                                        </option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div id="btnonebuynow"
+                                                 class="form-group row overflow-x-vis mt-2">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button Text</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Buy Now" id="txtBtnText1">
+                                                </div>
+
+                                            </div>
+                                            <div id="btnonetype"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button Type</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="btnonetypeselect">
+                                                        <option value="select">Select</option>
+                                                        <option value="Website">
+                                                            Visit Website
+                                                        </option>
+                                                        <option value="Call">
+                                                            Call Phone
+                                                            Number
+                                                        </option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div id="btnoneurltype"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button URL Type</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="btnurllink">
+                                                        <option value="select">Select</option>
+                                                        <option value="Static">Static</option>
+                                                        <option value="Dynamic">Dynamic</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div id="dynamicurlwrp"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Dynamic URL</label>
+
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <div class="postion-relative">
+                                                        <input type="text" name=""
+                                                               placeholder="https://www.plumb5.com"
+                                                               class="form-control" id="txtDynamicValueBtn1">
+                                                        <div class="addsmsatrib dropdown whtsappdrpdwn">
+                                                            <div class="drpicon" data-toggle="dropdown" title="User Attributes" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="icon ion-android-person"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right keepopen p-0" aria-labelledby="filterTags" x-placement="bottom-end" style="position: absolute; transform: translate3d(12px, 24px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                                <div class="dropdwntabwrap">
+                                                                    <div class="dropdwntabitem">
+                                                                        <div id="userattrDynamicValueBtn1" dataclass="#userattrDynamicValueBtn1,#cstattrDynamicValueBtn1" data-tabcontid="userattrDynamicbt1" class="dropdwntabs active">User Attribute</div>
+                                                                        <div id="cstattrDynamicValueBtn1" dataclass="#userattrDynamicValueBtn1,#cstattrDynamicValueBtn1" data-tabcontid="csteventDynamicbt1" class="dropdwntabs">Custom Events</div>
+                                                                    </div>
+                                                                    <div class="dropdwntabcontwrap">
+                                                                        <div id="userattrDynamicbt1" class="userattribwrap">
+                                                                            <h6 class="dropdown-title">User Attribute</h6>
+                                                                            <select id="draganddropcustomtitle" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select User Attributes" tabindex="-1" aria-hidden="true">
+                                                                                <option label="Select">Select</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div id="csteventDynamicbt1" class="userattribwrap hideDiv">
+                                                                            <h6 class="dropdown-title">Custom Events</h6>
+                                                                            <select id="eventnametitle" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                                <option label="Select">Select</option>
+
+                                                                            </select>
+                                                                            <div class="mt-3">
+                                                                                <select id="eventitemstitle" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                                    <option label="Events Items">Select Event Items</option>
+
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="button2" class="bnotbtncontwrp hideDiv">
+                                        <h6 class="box-title">Button-2</h6>
+                                        <div class="frmwrp p-4">
+                                            <div class="form-group row overflow-x-vis mt-2">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Type of Action</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="selectactiontypedrp">
+                                                        <option value="select">Select</option>
+                                                        <option value="Call">
+                                                            Call to Action
+                                                        </option>
+                                                        <option value="Reply">
+                                                            Quick Reply
+                                                        </option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-group row overflow-x-vis mt-2">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button Text</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <input type="text" class="form-control"
+                                                           placeholder="Call Support"
+                                                           id="txtBtnText2">
+                                                </div>
+
+                                            </div>
+                                            <div id="btntypetwo"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button Type</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="btntypetwoseldrp">
+                                                        <option value="select">Select</option>
+                                                        <option value="Website">
+                                                            Visit Website
+                                                        </option>
+                                                        <option value="Call">
+                                                            Call Phone
+                                                            Number
+                                                        </option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div id="btnurltypetwo"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Button URL Type</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <select name="" class="form-control"
+                                                            id="btnurllink2">
+                                                        <option value="select">Select</option>
+                                                        <option value="Static">Static</option>
+                                                        <option value="Dynamic">Dynamic</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                            <div id="dynamicurlwrp2"
+                                                 class="form-group row overflow-x-vis mt-2 hideDiv">
+                                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 text-right m-text-left">
+                                                    <label class="frmlbltxt">Dynamic URL</label>
+                                                </div>
+                                                <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+                                                    <div class="postion-relative">
+                                                        <input type="text" name=""
+                                                               placeholder="https://www.plumb5.com"
+                                                               class="form-control" id="txtDynamicValueBtn2">
+                                                        <div class="addsmsatrib dropdown whtsappdrpdwn">
+                                                            <div class="drpicon" data-toggle="dropdown" title="User Attributes" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="icon ion-android-person"></i>
+                                                            </div>
+                                                            <div class="dropdown-menu dropdown-menu-right keepopen p-0" aria-labelledby="filterTags" x-placement="bottom-end" style="position: absolute; transform: translate3d(12px, 24px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                                <div class="dropdwntabwrap">
+                                                                    <div class="dropdwntabitem">
+                                                                        <div id="userattrDynamicValueBtn2" dataclass="#userattrDynamicValueBtn2,#cstattrDynamicValueBtn2" data-tabcontid="userattrdynamicbtn2" class="dropdwntabs active">User Attribute</div>
+                                                                        <div id="cstattrDynamicValueBtn2" dataclass="#userattrDynamicValueBtn2,#cstattrDynamicValueBtn2" data-tabcontid="csteventdynamicbtn2" class="dropdwntabs">Custom Events</div>
+                                                                    </div>
+                                                                    <div class="dropdwntabcontwrap">
+                                                                        <div id="userattrdynamicbtn2" class="userattribwrap">
+                                                                            <h6 class="dropdown-title">User Attribute</h6>
+                                                                            <select id="draganddropcustomtitlebtn2" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select User Attributes" tabindex="-1" aria-hidden="true">
+                                                                                <option label="Select">Select</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div id="csteventdynamicbtn2" class="userattribwrap hideDiv">
+                                                                            <h6 class="dropdown-title">Custom Events</h6>
+                                                                            <select id="eventnametitlebtn2" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                                <option label="Select">Select</option>
+
+                                                                            </select>
+                                                                            <div class="mt-3">
+                                                                                <select id="eventitemstitlebtn2" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                                    <option label="Events Items">Select Event Items</option>
+
+                                                                                </select>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 bg-white pb-3">
+
+                        <div class="box-white p-3 h-100 border-0">
+                            <div class="devicontabwrp">
+                                <div data-devtabcont="androidprev" title="Android"
+                                     class="devwrphvr active mr-3">
+                                    <i class="fa fa-android fa-2x"></i>
+                                </div>
+                                <div data-devtabcont="ios" title="ios" class="devwrphvr">
+                                    <i class="fa fa-apple fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="deviceprevwrap mt-4">
+                                <div id="androidprev" class="devsmsprev">
+                                    <div class="device device-google-pixel-2-xl mr-auto">
+                                        <div class="device-frame">
+                                            <div class="device-content"
+                                                 style="background-image: url('/Content/images/whatsapp-bg.jpg')">
+                                                <div class="devicesreenwrap border-radius-5">
+                                                    <div class="batthead">
+                                                        <div class="baticnwrp">
+                                                            <div class="fa fa-wifi"></div>
+                                                            <div class="fa fa-signal"></div>
+                                                            <div class="fa fa-battery-half"></div>
+                                                            <div class="timewrp">19:28</div>
+                                                        </div>
+                                                        <div class="messheadwrp">
+                                                            <div class="arrwrp">
+                                                                <i class="icon ion-android-arrow-back"></i>
+                                                            </div>
+                                                            <div class="icnphone">
+                                                                <i class="fa fa-video-camera mr-4"></i>
+                                                                <i class="fa fa-phone mr-4"></i>
+                                                                <i class="fa fa-ellipsis-v"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="devicemesscont">
+                                                        <div class="whatsappprevwrp">
+                                                            <div class="whatsappbox-white">
+                                                                <div class="whatsappimgwrp hideDiv">
+                                                                    <img id="addwhatsappimage"
+                                                                         src="~/Content/images/white_image.png"
+                                                                         alt="">
+                                                                </div>
+                                                                <p id="addwhatsapptext" class="mb-0">
+                                                                </p>
+                                                            </div>
+                                                            <div class="btnwhatsappwrp hideDiv">
+                                                                <button id="whatsvisitwebsite"
+                                                                        type="button"
+                                                                        class="btn btnwhatsapp">
+                                                                    <i id="imgBtn1" class="fa fa-external-link"></i>
+                                                                    <span id="spn_whatsvisitwebsite">Buy Now</span>
+                                                                </button>
+                                                                <button id="whatscallphone"
+                                                                        type="button"
+                                                                        class="btn btnwhatsapp hideDiv">
+                                                                    <i id="imgBtn2" class="fa fa-phone"></i><span id="spn_whatscallphone"> Call Support</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- <div class="devicemessfoot h-40">
+                                                           <div class="sendwrp position-relative">
+                                                             <input placeholder="Send an SMS" type="text" class="form-control" name="" id="">
+                                                             <div class="sendbtn">
+                                                               <i class="icon ion-android-send"></i>
+                                                             </div>
+                                                           </div>
+                                                        </div> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="device-stripe"></div>
+                                        <div class="device-header"></div>
+                                        <div class="device-sensors"></div>
+                                        <div class="device-btns"></div>
+                                        <div class="device-power"></div>
+                                    </div>
+                                </div>
+                                <div id="ios" class="devsmsprev hideDiv">
+                                    <div class="device device-iphone-8 mr-auto">
+                                        <div class="device-frame">
+                                            <div class="device-content h-100"
+                                                 style="background-image: url('/Content/images/whatsapp-bg.jpg')">
+                                                <div class="devicescreenioswrp">
+                                                    <div class="iosbathead">
+                                                        <div class="iostopbtry pl-2 pr-2">
+                                                            <div class="signwrp d-flex h-20p">
+                                                                <i class="icon ion-android-more-horizontal mr-01"></i><i class="icon ion-android-more-horizontal"></i>
+                                                                <i class="icon ion-wifi ml-2"></i>
+                                                            </div>
+                                                            <div class="timwrp">
+                                                                9:41 AM
+                                                            </div>
+                                                            <div class="battp d-flex">
+                                                                <div class="timwrp mr-1">50%</div>
+                                                                <div class="fa fa-battery-half"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="iosmeshead h-35 border-bottom pl-2 pr-2">
+                                                            <div class="messtit d-flex align-items-center">
+                                                                <i class="icon ion-ios-arrow-left fa-2x"></i><span class="ml-2 iosmsstxt">Message</span>
+                                                            </div>
+                                                            <div class="iosmsstxt">Details</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="devicemescontwrp">
+
+                                                        <div class="whatsappprevwrp">
+                                                            <div class="whatsappbox-white">
+                                                                <div class="whatsappimgwrp hideDiv">
+                                                                    <img id="addwhatsappimageIos"
+                                                                         src="~/Content/images/white_image.png"
+                                                                         alt="">
+                                                                </div>
+                                                                <p id="addwhatsapptextios" class="mb-0"></p>
+                                                            </div>
+                                                            <div class="btnwhatsappwrp hideDiv">
+                                                                <button id="whatsvisitwebsiteios"
+                                                                        type="button"
+                                                                        class="btn btnwhatsapp">
+                                                                    <i id="imgBtn1ios" class="fa fa-external-link"></i>
+                                                                    <span id="spn_whatsvisitwebsiteios">Buy Now</span>
+                                                                </button>
+                                                                <button id="whatscallphoneios"
+                                                                        type="button"
+                                                                        class="btn btnwhatsapp hideDiv">
+                                                                    <i id="imgBtn2ios" class="fa fa-phone"></i> <span id="spn_whatscallphoneios">Call Support</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="iosfoot h-45 border-top">
+                                                      <div class="iossendwrp">
+                                                        <div class="ioscamera"><i class="icon ion-ios-camera fa-2x"></i></div>
+                                                        <div class="inptwrp"><input class="form-control form-control-sm" type="text" name="" id=""></div>
+                                                        <div class="iosmic"><i class="icon ion-ios-mic"></i></div>
+                                                      </div>
+                                                    </div> -->
+
+                                                </div>
+                                            </div>
+                                            <div class="device-stripe"></div>
+                                            <div class="device-header"></div>
+                                            <div class="device-sensors"></div>
+                                            <div class="device-btns"></div>
+                                            <div class="device-power"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+<script src="~/js/UserCustomEventsAttributes.js"></script>
+<script src="~/js/WhatsApp/CreateWhatsAppTemplates.js"></script>

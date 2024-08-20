@@ -1,0 +1,1535 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: In App Campaign";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/select2/css/select2.min.css" />
+<link rel="stylesheet" href="~/Content/css/ion.rangeSlider.css" />
+<link rel="stylesheet" href="~/Content/css/ion.rangeSlider.skinFlat.css" />
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js'></script>
+<script src="~/js/ion.rangeSlider.min.js"></script>
+<script src="~/js/colorjs/jscolor.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Create In-App Nativ Campaign</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Mobile</a></li>
+            <li class="breadcrumb-item"><a href="#">In-App Notifications</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Campaigns</li>
+        </ol>
+    </div>
+
+
+    <div class="box-white mr-tp-15">
+        <div class="campaingmaincontainer">
+            @*Tab Headers*@
+            <div class="container-page-head h-45 pl-0 pr-0">
+                <div class="campTabWrap">
+                    <ul class="campaign-nav">
+                        <li class="campnav-item"><a id="ui_headerGeneralInfo" class="campnav-link active border-left-0"><span>General &nbsp;</span> Information</a></li>
+                        <li class="campnav-item"><a id="ui_headerTheme" class="campnav-link">Theme</a></li>
+                        <li class="campnav-item"><a id="ui_headerRules" class="campnav-link prevtest">Rules</a></li>
+                    </ul>
+                </div>
+            </div>
+            @* General information *@
+            <div id="dvGeneralInformation" class="container-page-body df-ac-jcenter">
+                <div class="campaignContainer">
+                    <div class="formColwrap">
+                        <div class="form-group row w-100">
+                            <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4" for="">
+                                Campaign
+                                Identifier
+                            </label>
+                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                <input type="text" class="form-control" id="ui_txtCampaignIdentifier">
+                            </div>
+                        </div>
+                        <div class="addcol wid-100 m-p-wid-40 ml-3"></div>
+                    </div>
+                    <div class="formColwrap">
+                        <div class="form-group row w-100 mb-0">
+                            <label class="frmlbltxt text-right-lbl col-sm-4 col-md-4 col-lg-4 col-xl-4" for="">
+                                Campaign
+                                Name
+                            </label>
+                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 emailtempdropdown">
+                                <select id="ddlCampaignName" class="form-control">
+                                    <option label="Choose one" value="0">Select Campaign Name</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="addcol wid-100 m-p-wid-40 ml-3"></div>
+                    </div>
+
+                </div>
+            </div>
+            @*Theme*@
+            <div id="dvTheme" class="container-page-body p-0 hideDiv">
+                <div class="inAppthemewrp">
+                    <div class="row mr-0">
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 p-0">
+                            <div class="inappmaineditcont">
+                                <div class="inAppnotifwrp border-right">
+                                    <div class="inApptabcontainer border-bottom">
+                                        <div class="inapptabswrp">
+                                            <div title="Layout" class="inapptabitemwrp active">
+                                                Layout
+                                            </div>
+                                            <div title="Container" class="inapptabitemwrp">
+                                                Container
+                                            </div>
+                                        </div>
+                                        <div class="inappaddfildbtn">
+                                            <i class="fa fa-plus"></i> Add
+                                            Fields
+                                        </div>
+                                    </div>
+                                    <div class="inapptabcontent">
+                                        <div id="Layout" class="inappcontentwrp">
+                                            <div class="inappselgalwrp">
+                                                <input id="inapppoptemname" type="text" name="" value="Banner &amp; Text &amp; Button" disabled="" class="form-control h-50px">
+                                                <button type="button" class="btn btn-purple inappviewtemp">
+                                                    View
+                                                    Template
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div id="Container" class="inappcontentwrp hideDiv">
+                                            <div class="inappcontainerdes">
+                                                <div class="inapppaddwrp">
+                                                    <div class="inappbgoptwrp w-100 mb-2">
+                                                        <label class="frmlbltxt">
+                                                            Background-Image
+                                                            Option
+                                                        </label>
+                                                    </div>
+                                                    <div class="inappbgiptchekwrp mb-3">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+
+                                                            <input type="radio" checked="" class="custom-control-input" id="inappbgfileupld" value="fileupload" name="inappbgoptiontype">
+
+                                                            <label class="custom-control-label" for="inappbgfileupld">
+                                                                Upload
+                                                                File
+                                                            </label>
+
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+
+                                                            <input type="radio" class="custom-control-input" id="inappfileurl" value="onlineurl" name="inappbgoptiontype">
+
+                                                            <label class="custom-control-label" for="inappfileurl">
+                                                                Add Online
+                                                                URL
+                                                            </label>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="inappbgfileuplwrp">
+                                                    <div class="inappbguploadfile">
+                                                        <div class="inappbgupldbtn">
+                                                            <button type="button" class="btn btn-second">
+                                                                Upload
+                                                                Background
+                                                                Image
+                                                            </button>
+                                                            <input id="inappfileuploadbtn" type="file" name="" class="fileopac" onchange="SaveImage('inappfileuploadbtn');">
+                                                        </div>
+                                                        <div class="inappbgupldfilewrp hideDiv">
+                                                            <p class="inappfilename">
+                                                                background-image.jpg
+                                                            </p>
+                                                            <i class="icon ion-ios-close-outline inappclsefile"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="inappbgonlineurlwrp hideDiv">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt" for="">
+                                                                Add Image
+                                                                URL
+                                                            </label>
+                                                            <input type="text" name="" placeholder="https://www.plumb5.com/images/bell.png" class="form-control" id="txtBgImage">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">Background-color</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappmainbgcol" autocomplete="off" style="background-image: none;">
+                                                                <div class="inappbgcolicon"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">Border-Color</label>
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control jscolor" value="#E72EB6" name="" id="inappmainbgbrdcol" autocomplete="off" style="background-image: none;">
+                                                                <div class="inappbgbrdcolicon"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">Border-Width</label>
+                                                            <select name="" class="form-control" id="inappmainbgbrdwid">
+                                                                <option value="0">None</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">Border-Radius</label>
+                                                            <select name="" class="form-control" id="inappmainbgbrdradi">
+                                                                <option value="0">None</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2">2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                                <option value="9">9</option>
+                                                                <option value="10">10</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">Position</label>
+                                                            <select name="" class="form-control" id="inappmainpos">
+                                                                <option value="Top">Top</option>
+                                                                <option value="Center">Center</option>
+                                                                <option value="Bottom">Bottom</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">
+                                                                Entry
+                                                                Animation
+                                                            </label>
+                                                            <select name="" class="form-control" id="inappanimatban">
+                                                                <option value="0">None</option>
+                                                                <option value="1">Slide Up</option>
+                                                                <option value="2">Slide Down</option>
+                                                                <option value="3">Slide Left</option>
+                                                                <option value="4">Slide Right</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">
+                                                                Set
+                                                                Interval
+                                                            </label>
+                                                            <input type="number" class="form-control" name="" id="inappmaininterval">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt">
+                                                                Close
+                                                                Button
+                                                            </label>
+                                                            <select name="" class="form-control" id="inappmainclose">
+                                                                <option value="1">Yes</option>
+                                                                <option value="0">No</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inapppaddwrp">
+                                                    <div class="form-group mb-0">
+                                                        <label class="frmlbltxt">
+                                                            Padding
+                                                            Style
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="inapppaddindivwrp">
+                                                    <div class="row mb-3">
+                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                            <div class="rangeslidwrap mt-3">
+                                                                <div class="inapppadindivlbl mb-3">
+                                                                    <label class="frmlbltxt">
+                                                                        Padding
+                                                                        Top
+                                                                    </label>
+                                                                </div>
+                                                                <input type="number" class="form-control" id="inappbodypaddTop">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                            <div class="rangeslidwrap mt-3">
+                                                                <div class="inapppadindivlbl mb-3">
+                                                                    <label class="frmlbltxt">
+                                                                        Padding
+                                                                        Right
+                                                                    </label>
+                                                                </div>
+                                                                <input id="inappbodypaddRight" type="number" class="form-control" name="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                            <div class="rangeslidwrap mt-3">
+                                                                <div class="inapppadindivlbl mb-3">
+                                                                    <label class="frmlbltxt">
+                                                                        Padding
+                                                                        Bottom
+                                                                    </label>
+                                                                </div>
+                                                                <input type="number" id="inappbodypaddbttm" class="form-control" name="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                            <div class="rangeslidwrap mt-3">
+                                                                <div class="inapppadindivlbl mb-3">
+                                                                    <label class="frmlbltxt">
+                                                                        Padding
+                                                                        Left
+                                                                    </label>
+                                                                </div>
+                                                                <input id="inappbodypaddLeft" type="number" class="form-control" name="">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inappbgstylewrp">
+                                    <div class="inappbgbannerwrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">Top Banner Design</h6>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div class="inappbgiptchekwrp mb-3">
+                                                    <div class="custom-control custom-radio custom-control-inline">
+
+                                                        <input type="radio" checked="" class="custom-control-input" id="inapptopbanupldimg" value="fileupload" name="inapptopbantype" />
+
+                                                        <label class="custom-control-label" for="inapptopbanupldimg">Upload File</label>
+
+                                                    </div>
+                                                    <div class="custom-control custom-radio custom-control-inline">
+
+                                                        <input type="radio" class="custom-control-input" id="inapptopbanurl" value="onlineurl" name="inapptopbantype">
+
+                                                        <label class="custom-control-label" for="inapptopbanurl">Add Online URL</label>
+                                                    </div>
+                                                </div>
+                                                <div class="inappbgfileuplwrp">
+                                                    <div id="inapptopbanupld" class="inappbguploadfile">
+                                                        <div class="inappbgupldbtn">
+                                                            <button type="button" class="btn btn-second">
+                                                                Upload
+                                                                Background
+                                                                Image
+                                                            </button>
+                                                            <input id="inapptopbanuplfile" type="file" name="" class="fileopac" onchange="SaveImage('inapptopbanuplfile');">
+                                                        </div>
+                                                        <div class="inappbgupldfilewrp hideDiv">
+                                                            <p class="inapptopbanfilename">
+                                                                banner-image.jpg
+                                                            </p>
+                                                            <i class="icon ion-ios-close-outline inappclsefile"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div id="inapptopbanonline" class="inappbgonlineurlwrp hideDiv">
+                                                        <div class="form-group">
+                                                            <label class="frmlbltxt" for="">
+                                                                Add Image
+                                                                URL
+                                                            </label>
+                                                            <input type="text" name="" placeholder="https://www.plumb5.com/images/bell.png" class="form-control" id="txtFieldImage">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="inappbantitlewrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">Title Style Design</h6>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div class="inapptextstyledeswrp">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Size
+                                                                </label>
+                                                                <input id="inapptitfntsize" type="text" value="16" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Align
+                                                                </label>
+                                                                <select name="" class="form-control" id="inapptittextalign">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="Left" selected="">
+                                                                        Left
+                                                                    </option>
+                                                                    <option value="Center">
+                                                                        Center
+                                                                    </option>
+                                                                    <option value="Right">Right</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Font-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inapptittextcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Background-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inapptittxtbgcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Margin</label>
+                                                                <select name="" class="form-control" id="inapptittxtmarg">
+                                                                    <option value="select">
+                                                                        select
+                                                                    </option>
+                                                                    <option value="5">05</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inapptittextbrdcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Width</label>
+                                                                <input type="text" class="form-control" value="0" name="" id="inapptittextbrdwid">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Radius</label>
+                                                                <select name="" class="form-control" id="inapptittextbrdradi">
+                                                                    <option value="select">
+                                                                        select
+                                                                    </option>
+                                                                    <option value="5">05</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <div class="form-group mb-0">
+                                                                <label class="frmlbltxt">
+                                                                    Padding
+                                                                    Style
+                                                                </label>
+                                                            </div>
+                                                            <div class="inapptextpadwrp">
+                                                                <div class="custom-control custom-radio custom-control-inline">
+
+                                                                    <input type="radio" checked="" class="custom-control-input" id="inapptittextallpadd" value="allside" name="inapptittextpaddingtype">
+
+                                                                    <label class="custom-control-label" for="inapptittextallpadd">
+                                                                        All
+                                                                        Side
+                                                                        Padding
+                                                                    </label>
+
+                                                                </div>
+                                                                <div class="custom-control custom-radio custom-control-inline">
+                                                                    <input type="radio" class="custom-control-input" id="inapptittextindivpadd" value="indivside" name="inapptittextpaddingtype">
+                                                                    <label class="custom-control-label" for="inapptittextindivpadd">
+                                                                        Individual
+                                                                        Padding
+                                                                    </label>
+                                                                </div>
+                                                                <div class="inappallpaddwrp mt-3">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    All
+                                                                                </label>
+                                                                                <input type="text" value="0" name="" class="form-control" id="inapptittextpaddall">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="inapppaddindivwrp mt-3 hideDiv">
+                                                                    <div class="row mb-3">
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Top
+                                                                                </label>
+                                                                                <input type="text" value="0" name="" class="form-control" id="inapptittxtpaddtop">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Right
+                                                                                </label>
+                                                                                <input type="text" value="0" name="" class="form-control" id="inapptittxtpaddright">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    bottom
+                                                                                </label>
+                                                                                <input type="text" value="0" name="" class="form-control" id="inapptittxtpaddbttm">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Left
+                                                                                </label>
+                                                                                <input type="text" value="0" name="" class="form-control" id="inapptittxtpaddleft">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="inappbantextwrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">Style Design</h6>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div class="inapptextstyledeswrp">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Size
+                                                                </label>
+                                                                <input id="inapptextsize" type="number" value="13" name="" class="form-control" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Align
+                                                                </label>
+                                                                <select name="" class="form-control" id="inapptextalign">
+                                                                    <option value="Left">Left</option>
+                                                                    <option value="Right">Right</option>
+                                                                    <option value="Center">Center</option>
+                                                                    <option value="Top">Top - Absolute</option>
+                                                                    <option value="Bottom">Full Screen - Bottom</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Font-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#495057" name="" id="inapptextcol" autocomplete="off" style="background-image: none;">
+                                                                    <div id="inapptextcolsty" class="inappbgcolicon" style="background-color: rgb(73, 80, 87);"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Bold
+                                                                </label>
+                                                                <select name="" class="form-control" id="inapptextbold">
+                                                                    <option value="Normal">Normal</option>
+                                                                    <option value="Bold">Bold</option>
+                                                                    <option value="Italic">Italic</option>
+                                                                    <option value="Bold_Italic">Bold_Italic</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Background-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#ffff" name="" id="inapptextbgcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon" id="inapptextbgcolsty"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#ffffff" name="" id="inapptextbrdcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Width</label>
+                                                                <input type="number" class="form-control" value="0" name="" id="inapptextbrdwid">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Radius</label>
+                                                                <input type="number" class="form-control" value="0" name="" id="inapptextbrdradi">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Margin</label>
+                                                                <select name="" class="form-control" id="inapptextmarg">
+                                                                    <option value="0">00</option>
+                                                                    <option value="5">05</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                            <div class="form-group mb-0">
+                                                                <label class="frmlbltxt">
+                                                                    Padding
+                                                                    Style
+                                                                </label>
+                                                            </div>
+                                                            <div class="inapptextpadwrp">
+
+                                                                <div class="inapppaddindivwrp mt-3 ">
+                                                                    <div class="row mb-3">
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Top
+                                                                                </label>
+                                                                                <input type="number" value="0" name="" class="form-control" id="inapptxtpaddtop">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Right
+                                                                                </label>
+                                                                                <input type="number" value="10" name="" class="form-control" id="inapptxtpaddright">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    bottom
+                                                                                </label>
+                                                                                <input type="number" value="20" name="" class="form-control" id="inapptxtpaddbttm">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-12 col-md-3 col-xl-3 col-lg-3">
+                                                                            <div class="form-group">
+                                                                                <label class="frmlbltxt">
+                                                                                    Padding
+                                                                                    Left
+                                                                                </label>
+                                                                                <input type="number" value="10" name="" class="form-control" id="inapptxtpaddleft">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="inappchckradiowrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">
+                                                    Checkbox and Radio Label
+                                                    Style Design
+                                                </h6>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div class="inapptextstyledeswrp">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Main Label
+                                                                    color
+                                                                </label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappchcklblcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Font-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappcheckfntcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Main Label Font
+                                                                    Bold
+                                                                </label>
+                                                                <select name="" class="form-control" id="inappchckbxfntbold">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="400">
+                                                                        Normal
+                                                                    </option>
+                                                                    <option value="700">
+                                                                        Bold
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Margin</label>
+                                                                <select name="" class="form-control" id="inappchckbxmarg">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="1">
+                                                                        1
+                                                                    </option>
+                                                                    <option value="2">
+                                                                        2
+                                                                    </option>
+                                                                    <option value="3">
+                                                                        3
+                                                                    </option>
+                                                                    <option value="4">
+                                                                        4
+                                                                    </option>
+                                                                    <option value="5">
+                                                                        5
+                                                                    </option>
+                                                                    <option value="6">
+                                                                        6
+                                                                    </option>
+                                                                    <option value="7">
+                                                                        7
+                                                                    </option>
+                                                                    <option value="8">
+                                                                        8
+                                                                    </option>
+                                                                    <option value="9">
+                                                                        9
+                                                                    </option>
+                                                                    <option value="10">
+                                                                        10
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="inapprattingwrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">
+                                                    Rattings
+                                                    Style Design
+                                                </h6>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div class="inapptextstyledeswrp">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Star Background
+                                                                    color
+                                                                </label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappstarbgcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Star Broder
+                                                                    color
+                                                                </label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappstarbrdcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Align</label>
+                                                                <select name="" class="form-control" id="inappstaralign">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="justify-content-start">
+                                                                        Left
+                                                                    </option>
+                                                                    <option value="justify-content-center">
+                                                                        Center
+                                                                    </option>
+                                                                    <option value="justify-content-end">
+                                                                        Right
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Margin</label>
+                                                                <select name="" class="form-control" id="inappstarmarging">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="5">
+                                                                        5
+                                                                    </option>
+                                                                    <option value="10">
+                                                                        10
+                                                                    </option>
+                                                                    <option value="15">
+                                                                        15
+                                                                    </option>
+                                                                    <option value="20">
+                                                                        20
+                                                                    </option>
+                                                                    <option value="25">
+                                                                        25
+                                                                    </option>
+                                                                    <option value="30">
+                                                                        30
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="inappbanbtnwrp hideDiv">
+                                        <div class="inAppnotifwrp border-right mt-3">
+                                            <div class="inAppsellaywrp border-bottom">
+                                                <h6 class="box-title p-0 m-0">Button Style Design</h6>
+                                            </div>
+                                            <div class="inappbtntabwrp">
+                                                <div data-btntab="button1" class="inappbtnwrp mr-1 active">Button-1</div>
+                                                <div data-btntab="button2" class="inappbtnwrp mr-1 hideDiv">Button-2</div>
+                                                <div class="plusinappbtnwrp ml-1"><i class="icon ion-plus"></i></div>
+                                                <div class="minusinappbtnwrp ml-1 hideDiv"><i class="icon ion-close"></i></div>
+                                            </div>
+                                            <div class="inAppnotifcontwrp">
+                                                <div id="button1" class="inappbtnstyledeswrp">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Add Button
+                                                                    Name
+                                                                </label>
+                                                                <input type="text" id="addbtnName1" value="Buy Now" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Background-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn1bgcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Width</label>
+                                                                <select name="" class="form-control" id="inappbtn1brdwid">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="0" selected="">
+                                                                        None
+                                                                    </option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn1brdcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-radius</label>
+                                                                <select name="" class="form-control" id="inappbtn1brdradi">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Size
+                                                                </label>
+                                                                <input type="text" value="13" name="" class="form-control" id="inappbtn1fntsiz">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Font-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn1fntcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Bold
+                                                                </label>
+                                                                <select name="" class="form-control" id="inappbtn1fntbld">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="400" selected="">
+                                                                        Normal
+                                                                    </option>
+                                                                    <option value="700">
+                                                                        Bold
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="button2" class="inappbtnstyledeswrp hideDiv">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Add Button
+                                                                    Name
+                                                                </label>
+                                                                <input type="text" id="addbtnName2" value="Learn More" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Background-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn2bgcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-Width</label>
+                                                                <select name="" class="form-control" id="inappbtn2brdwid">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="0" selected="">
+                                                                        None
+                                                                    </option>
+                                                                    <option value="1">1</option>
+                                                                    <option value="2">2</option>
+                                                                    <option value="3">3</option>
+                                                                    <option value="4">4</option>
+                                                                    <option value="5">5</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn2brdcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Border-radius</label>
+                                                                <select name="" class="form-control" id="inappbtn2brdradi">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="0">0</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="25">25</option>
+                                                                    <option value="30">30</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Size
+                                                                </label>
+                                                                <input type="text" value="13" name="" class="form-control" id="inappbtn2fntsiz">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">Font-color</label>
+                                                                <div class="position-relative">
+                                                                    <input type="text" class="form-control jscolor" value="#1b84e7" name="" id="inappbtn2fntcol" autocomplete="off" style="background-image: none;">
+                                                                    <div class="inappbgcolicon"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                            <div class="form-group">
+                                                                <label class="frmlbltxt">
+                                                                    Font
+                                                                    Bold
+                                                                </label>
+                                                                <select name="" class="form-control" id="inappbtn2fntbld">
+                                                                    <option value="select">
+                                                                        Select
+                                                                    </option>
+                                                                    <option value="400" selected="">
+                                                                        Normal
+                                                                    </option>
+                                                                    <option value="700">
+                                                                        Bold
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="inappactionwrp mt-3 mb-4 hideDiv">
+                                        <div class="inAppsellaywrp border-bottom border-right">
+                                            <h6 class="box-title p-0 m-0">Action</h6>
+                                        </div>
+                                        <div class="inAppnotifcontwrp border-right">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Action Type</label>
+                                                <select name="" class="form-control" id="mobdefclickactbtn2">
+                                                    <option value="0">--None--</option>
+                                                    <option value="Screen">
+                                                        Navigate to a
+                                                        screen
+                                                    </option>
+                                                    <option value="Deeplink">Deeplinking</option>
+                                                    <option value="Browser">Browser URL</option>
+                                                    <option value="Cancel">Dismiss</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group naviscreenbtn2 hideDiv">
+                                                <label class="frmlbltxt">
+                                                    Take the user to specific
+                                                    screen in the
+                                                    App
+                                                </label>
+                                                <select name="" class="form-control" id="ui_ddlScreen">
+                                                    <option value="select">Select Screen</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group deeplinkingfildbtn2 hideDiv">
+                                                <label class="frmlbltxt">
+                                                    Enter Deep linking
+                                                    URL
+                                                </label>
+                                                <input type="text" name="" class="form-control" placeholder="Deep linking URL" id="txtDeeplink">
+                                            </div>
+                                            <div class="form-group brwserurlbtn2 hideDiv">
+                                                <label class="frmlbltxt">Enter Browser URL</label>
+                                                <input type="text" name="" class="form-control" placeholder="Browser URL" id="txtBrowser">
+                                            </div>
+                                            <div class="mobnotifvalpairbtn2 hideDiv">
+                                                <div class="form-group">
+                                                    <label class="frmlbltxt">
+                                                        Additional Key Value
+                                                        pairs <span class="text-muted font-11">(Optional)</span>
+                                                    </label>
+                                                    <div class="mobvalpairfield KeyPairValue">
+                                                        <input type="text" class="form-control txtparameter" name="" placeholder="Name" id="">
+                                                        <input type="text" class="form-control mr-2 border-left-0 txtparameter" placeholder="Data" name="" id="">
+                                                        <button type="button" class="btn btn-second addmobvalpairbtn2"><i class="fa fa-plus"></i></button>
+                                                    </div>
+                                                    <div class="mobvalpairmorebtn2">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group naviscreenbtn2ios hideDiv">
+                                                <label class="frmlbltxt">
+                                                    Take the user to specific
+                                                    screen in the
+                                                    IOS App
+                                                </label>
+                                                <select name="" class="form-control" id="ui_ddlScreenIos">
+                                                    <option value="select">Select Screen</option>
+
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Message</label>
+                                                <textarea name="" id="txtActionMsg" class="form-control" cols="5" rows="5"></textarea>
+                                            </div>
+                                            <div class="inappbgiptchekwrp mb-3">
+                                                <label class="frmlbltxt w-100">Close Dialog</label>
+                                                <div class="custom-control custom-radio custom-control-inline">
+
+                                                    <input value="1" type="radio" checked="" class="custom-control-input" id="inappclsedialogYes" name="inappclsedialtype">
+
+                                                    <label class="custom-control-label" for="inappclsedialogYes">Yes</label>
+
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+
+                                                    <input type="radio" class="custom-control-input" id="inappclsedialogNo" value="0" name="inappclsedialtype">
+
+                                                    <label class="custom-control-label" for="inappclsedialogNo">No</label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 bg-body">
+                            <!-- <div class="inappaddfieldwrp">
+                                <button class="btn inappaddfildbtn"><i class="fa fa-plus"></i> Add
+                                    Fields</button>
+                            </div>-->
+                            <div class="pushnotifprevrite pt-3">
+                                <div class="chatmobileprevwrp pt-0 max-wid-100">
+                                    <div class="chatmobdevwrp">
+                                        <div class="chatmobdevtopband"></div>
+                                        <div class="chatmobdevbody df-ac-top bg-black p-1">
+                                            <div class="inAppmaincontainer animate__animated">
+                                                <div class="inAppclsewrp">
+                                                    <i class="ion ion-ios-close-empty"></i>
+                                                </div>
+                                                <div class="inAppbantxtimgwrp">
+                                                    <div id="inappdefaultImg_1" class="inappparatext">
+                                                        <div data-inputtype="image" class="inAppbanwrp custbgban"></div>
+                                                    </div>
+                                                    <div id="inappdefaulttext_1" class="inappparatext">
+                                                        <p data-inputtype="inapptitltext" class="inAppbantitle">
+                                                            Buy one get
+                                                            one offer
+                                                            starting from today. Get your goodie now!
+                                                        </p>
+                                                    </div>
+                                                    <div id="inappdefbtn" class="inappaddbtnswrp">
+                                                        <a data-inputtype="inappbtnprim" id="inappbtnName1" href="javascript:void(0)" class="btn btn-danger btn-block" target="_blank">
+                                                            Buy Now
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="chatmobdevfooter"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*Rules*@
+            <div class="container-page-body hideDiv" id="dvRules">
+                @{Html.RenderPartial("_Rules");}
+
+            </div>
+            @* Back & Next Footer *@
+            <div class="container-page-footer">
+                <div class="backbtnWrap">
+                    <button id="ui_btnBackContent" type="button" class="btn btn-second hideDiv" onclick="InAppCampaignUtil.NavigateToBack();"><i class="icon ion-chevron-left pr-2"></i>Back</button>
+                </div>
+                <div class="nextbtnWrap">
+                    <button id="ui_btnNext" type="button" class="btn btn-primary" onclick="InAppCampaignUtil.NavigateToNext();">Next <i class="icon ion-chevron-right pl-2"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Popup window left-->
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Add Widgets</h6>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-20">
+                <div class="form-group">
+                    <label class="frmlbltxt">
+                        Field
+                        Type
+                    </label>
+                    <select name="" class="form-control" id="inappaddfieldtype">
+                        <option value="select">
+                            Select
+                        </option>
+                        <option value="Tv">Label</option>
+                        <option value="Et">Input Text</option>
+                        <option value="Img">Image</option>
+                        <option value="Sp">
+                            Dropdown
+                            List
+                        </option>
+                        <option value="Cb">Check Box</option>
+                        <option value="Rg">RadioButton</option>
+                        @*<option value="Rat">Rattings</option>*@
+                        <option value="Btn">Button</option>
+                    </select>
+                </div>
+                <div class="inapptextcontwrp hideDiv">
+                    <div class="form-group">
+                        <label class="frmlbltxt">Add Field Content</label>
+                        <textarea name="" id="inappaddtextcont" cols="30" class="form-control"
+                                  rows="3">
+                            Buy one get one offer starting from today. Get your goodie now!
+                        </textarea>
+                    </div>
+                </div>
+                <div class="inappformwidwrp hideDiv">
+                    <div class="form-group">
+                        <label class="frmlbltxt">
+                            Field
+                            Name
+                        </label>
+                        <input id="inappinptlblname" type="text" value="Field-1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt">
+                            Field
+                            Value
+                        </label>
+                        <input id="inappinptvalue" type="text" value="Field-1" class="form-control">
+                        <small class="text-muted font-11  hideDiv" id="spnTips">
+                            Add multiple values followed by
+                            commas.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt">
+                            Field Mapping
+                        </label>
+                        <select name="" class="form-control" id="ddlFieldCategory">
+                            <option value="None">None</option>
+                        </select>
+                    </div>
+                    <div class="form-group inappdrpdwnedit hideDiv">
+                        <label class="frmlbltxt">Dropdown List</label>
+                        <textarea name="" placeholder="Dropdown List Ex: India,Cannada" class="form-control"
+                                  id="inappadddrpdwnlist" cols="30" rows="2"></textarea>
+                    </div>
+                    <div class="form-group inappchckbxedit hideDiv">
+                        <label class="frmlbltxt">List Item Names</label>
+                        <textarea name="" placeholder="List Item Ex: Male,Female" class="form-control"
+                                  id="inappaddchckbxlist" cols="30" rows="2"></textarea>
+                    </div>
+                    <div class="form-group hideDiv">
+                        <label class="frmlbltxt">
+                            Horizontally Align
+                        </label>
+                        <select name="" class="form-control" id="ddlHorizontalAlign">
+                            <option value="1">1 field</option>
+                            <option value="2">2 fields</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt">
+                            Mandatory
+                        </label>
+                        <select name="" class="form-control" id="ddlMandatory">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt">Score</label>
+                        <input type="text" value="2" class="form-control" id="txtScore">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2 addinappcuswid" type="button">Submit</button>
+                <button class="btn btn-primary mr-2 addinappEditwid hideDiv" type="button">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Modal-->
+
+<div class="modal fade" id="inappviewtempmod" tabindex="-1" role="dialog">
+
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">Select Template</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <a href="javascript:void(0)" class="inappviewtemplay"
+                               data-inapptemp="Banner & Text & Button">
+                                <div class="box-white">
+                                    <div class="inappgallitemwrp inappbgimgtxtbtn"></div>
+                                    <h5 class="inappfetname">Banner & Text & Button</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <a href="javascript:void(0)" class="inappviewtemplay"
+                               data-inapptemp="Full Screen Banner">
+                                <div class="box-white">
+                                    <div class="inappgallitemwrp inappbgfullbanner"></div>
+                                    <h5 class="inappfetname">Full Screen Banner</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <a href="javascript:void(0)" class="inappviewtemplay"
+                               data-inapptemp="Title & Banner & Button">
+                                <div class="box-white">
+                                    <div class="inappgallitemwrp inappbgtitbanbtn"></div>
+                                    <h5 class="inappfetname">Title & Banner & Button</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <a href="javascript:void(0)" class="inappviewtemplay"
+                               data-inapptemp="Full Screen Banner & Button">
+                                <div class="box-white">
+                                    <div class="inappgallitemwrp inappbgfullbantxtbtn"></div>
+                                    <h5 class="inappfetname">Full Screen Banner & Button</h5>
+                                </div>
+                            </a>
+                        </div>
+                        @*<div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <a href="javascript:void(0)" class="inappviewtemplay" data-inapptemp="InApp Rattings">
+                                    <div class="box-white">
+                                        <div class="inappgallitemwrp inappbgrattingbtn"></div>
+                                        <h5 class="inappfetname">InApp Rattings</h5>
+                                    </div>
+                                </a>
+                            </div>*@
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <a href="javascript:void(0)" class="inappviewtemplay" data-inapptemp="Capture Form">
+                                <div class="box-white">
+                                    <div class="inappgallitemwrp inappbgfrm"></div>
+                                    <h5 class="inappfetname">Capture Form</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--Modal-->
+<!--Popup window left-->
+<script src="~/js/ManageContact/ContactProperties.js"></script>
+<script src="~/js/MobileInApp/inappnative.js"></script>
+<script src="~/js/Rules.js"></script>
+<script src="~/js/MobileInApp/CreateInAppCampaign.js"></script>

@@ -1,0 +1,1326 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: API Import Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<style>
+    dropdwntabitem .dropdwntabs, .dropdwntabitem .dropdwntabs1, .dropdwntabitem .dropdwntabs2, .dropdwntabitem .dropdwntabs3, .dropdwntabitem .dropdwntabs4, .dropdwntabitem .dropdwntabs5, .dropdwntabitem .dropdwntabs6 {
+        padding: 10px;
+        font-size: 13px;
+        color: #495057;
+        padding: 6px 10px;
+        background-color: #e9ecef;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .userattribwrap, .userattribwrap1, .userattribwrap2, .userattribwrap3, .userattribwrap4, .userattribwrap5, .userattribwrap6 {
+        padding: 10px;
+    }
+
+        .userattribwrap .dropdown-title, .userattribwrap1 .dropdown-title, .userattribwrap2 .dropdown-title, .userattribwrap3 .dropdown-title, .userattribwrap4 .dropdown-title, .userattribwrap5 .dropdown-title, .userattribwrap6 .dropdown-title {
+            background-color: transparent;
+        }
+
+    .dropdwntabs.active, .dropdwntabs1.active, .dropdwntabs2.active, .dropdwntabs3.active, .dropdwntabs4.active, .dropdwntabs5.active, .dropdwntabs6.active {
+        background-color: #4662d4;
+        color: #ffffff;
+    }
+
+    .mailsubiconuncondi .browse-dropdown-menu {
+        position: absolute;
+        top: 35px;
+        left: -232px;
+        display: none;
+        z-index: 1000;
+    }
+
+    .mailsubiconuncondi .ion-close-circled {
+        color: #b51f2e;
+        position: absolute;
+        top: -14px;
+        right: -10px;
+        font-size: 18px;
+    }
+
+    .mailsubiconuncondi.zindex10 {
+        z-index: 10000 !important;
+    }
+
+    .mailsubiconuncondi {
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        cursor: pointer;
+        color: #1b84e7;
+        z-index: 1;
+    }
+
+        .mailsubiconuncondi .ion-android-person {
+            position: absolute;
+            right: 0;
+        }
+
+    .dropdwntabwrap {
+        width: 240px;
+    }
+
+        .dropdwntabwrap .dropdwntabitem {
+            display: flex;
+            align-items: center;
+        }
+</style>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Contacts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem"><a href="/ManageContact/Settings">Contact Merge Configuration</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ContactProperties">Contact Properties</a></div>
+        <div class="setttabitem"><a href="/ManageContact/FtpImportSettings">FTP Import Settings</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ApiImportRequest">API Import Requests</a></div>
+        <div class="setttabitem active"><a href="javascript:void(0);">API Import Responses</a></div>
+    </div>
+    <div class="box-white p-0">
+        <div id="apiimportresp" class="setttabcontainer pr-0 pl-0">
+            <div class="topTabWrap m-0 pl-2 pr-2">
+                <div class="lmsaddrules">
+                    <a id="addnewapiresp" href="javascript:void(0)" class="btn btn-primary btn-sm">Add New Response</a>
+                </div>
+                <div class="iconsettingswrp" style="width:160px;">
+                    <div class="searchInput">
+                        <input class="form-control form-control-sm contsearchfocus" type="text" placeholder="Search" id="ui_txtSearchBy">
+                        <div class="searchIcon">
+                            <i class="icon ion-android-search" id="ui_i_SearchBy"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-white border-0">
+                <div class="subdivWrap-one border-0">
+                    <div class="searchWrap hideDiv">
+                        <div class="searchInput">
+                            <input class="form-control form-control-sm contsearchfocus" type="text" placeholder="Search" id="ui_txtSearchBy">
+                            <div class="searchIcon">
+                                <i class="icon ion-android-search" id="ui_i_SearchBy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mgefrmfiltwrp d-flex">
+                        <div class="badgewrpfrmstatus hideDiv">
+                            <div class="badge badge-primary">
+                                Filter by <span class="filtapiresval mr-1">Active</span> <i class="icon ion-android-close cursor-pointer apirespcliseicn"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableWrapper">
+                    <div class="table-responsive min-h-300">
+                        <table class="table tbl-td-ta-lft  border-0" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-250 td-wid-40">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>API Response
+                                        Name
+                                        <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                            API Response
+                                            Name
+                                        </div>
+                                    </th>
+                                    <th scope="col" class="helpIcon m-p-w-250 td-wid-30">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Status
+                                        <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Active/In-Active Status</div>
+                                    </th>
+                                    <th scope="col" class="helpIcon m-p-w-250 td-wid-30">
+                                        Updated Date
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Paging"); }
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="setfrmrulewrp hideDiv">
+    <div class="responsetitlewrp">
+        <h6>Add Api Import Responses</h6>
+        <i id="close-response" class="icon ion-close"></i>
+    </div>
+    <div class="addapiformwrp">
+        <div class="row dsk-50-mob-100">
+            <div class="col-sm-6 col-md-10 mob-mr-btm-20px position-relative">
+                <input type="text" placeholder="Api Import Response Name" class="form-control" id="apirespnametext">
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <button id="ui_btn_SaveOrUpdateSettings" type="button" class="btn btn-primary">Save Settings</button>
+            </div>
+        </div>
+    </div>
+    <div id="cont_setresponserule" class="setfrmrulecontwrp">
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="frmrepemail" name="frmrepemail">
+                    <label class="custom-control-label" for="frmrepemail">Report through Email</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_ReportEmail">
+                <div id="frmrepemailcondi" class="frmcondiwrp">
+                    <div class="frmrepcondideswrp fiftperc">
+                        <textarea name="" class="form-control" id="ui_txtArea_ReportByEmail" cols="3" rows="3"></textarea>
+                        <small class="text-muted">Add email id(s) separated by comma</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="frmrepsms" name="frmrepsms">
+                    <label class="custom-control-label" for="frmrepsms">Report through SMS</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_ReportSMS">
+                <div id="frmrepemailcondi" class="frmcondiwrp">
+                    <div class="frmrepsmscondideswrp fiftperc">
+                        <textarea name="" class="form-control" id="ui_txtArea_ReportBySms" cols="3" rows="3"></textarea>
+                        <small class="text-muted">Add phone number(s) separated by comma</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="frmrepwa" name="frmrepwa">
+                    <label class="custom-control-label" for="frmrepwa">Report through WhatsApp</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_ReportWA">
+                <div id="frmrepemailcondi" class="frmcondiwrp">
+                    <div class="frmrepsmscondideswrp fiftperc">
+                        <textarea name="" class="form-control" id="ui_txtArea_ReportByWA" cols="3" rows="3"></textarea>
+                        <small class="text-muted">Add phone number(s) separated by comma</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkSendMailOut" name="frmrepemailrespond">
+                    <label class="custom-control-label" for="ui_chkSendMailOut">Send Email out responder</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_sendmailoutresponder">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalmailoutresp" name="Ismailoutresp">
+                        <label class="custom-control-label" for="ui_chkUnConditionalmailoutresp">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalmailoutresp" name="Ismailoutresp">
+                        <label class="custom-control-label" for="ui_chkConditionalmailoutresp">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalmailoutresp">
+
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepemlrespcondideswrp" id="ui_chkUnConditionalMailOutTd">
+                            <div class="frmrepemlresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Template Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_drpdwn_MailTemplate">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3">Subject</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <input type="text" name="" class="form-control" id="ui_txt_MailSubject" autocomplete="off">
+                                        <div class="addsmsatrib dropdown" style="bottom: 2px;">
+                                            <div class="smsdrpwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                <i class="fa fa-user-o" title="User Attributes"></i>
+                                            </div>
+                                            <div class="dropdown-menu dropdown-menu-right keepopen p-0" aria-labelledby="filterTags" x-placement="bottom-end" style="position: absolute; transform: translate3d(12px, 24px, 0px); top: 0px; left: 0px; will-change: transform;">
+                                                <div class="dropdwntabwrap">
+                                                    <div class="dropdwntabitem">
+                                                        <div id="mailtemplatesubuserattr" dataclass="#mailtemplatesubuserattr,#mailtemplatesubcsteventattr" data-tabcontid="userattrmailtemplatesub" class="dropdwntabs active">User Attribute</div>
+                                                        <div id="mailtemplatesubcsteventattr" dataclass="#mailtemplatesubuserattr,#mailtemplatesubcsteventattr" data-tabcontid="csteventmailtemplatesub" class="dropdwntabs">Custom Events</div>
+                                                    </div>
+                                                    <div class="dropdwntabcontwrap">
+                                                        <div id="userattrmailtemplatesub" class="userattribwrap">
+                                                            <h6 class="dropdown-title">User Attribute</h6>
+                                                            <select id="draganddropcutomre" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select User Attributes" tabindex="-1" aria-hidden="true">
+                                                                <option label="Select">Select</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div id="csteventmailtemplatesub" class="userattribwrap hideDiv">
+                                                            <h6 class="dropdown-title">Custom Events</h6>
+                                                            <select id="eventnamemessage" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                <option label="Events Items">Select</option>
+                                                            </select>
+                                                            <div class="mt-3">
+                                                                <select id="eventitemsmessage" class="form-control addCampName select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true">
+                                                                    <option label="Events Items">Select Event Items</option>
+
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="" class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3">From Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <input type="text" name="" class="form-control" id="ui_txt_MailFromName" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-2 col-lg-2 col-xl-2" for="">From Email Id</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlFromEmailSender">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="frmlbltxt" for="ui_chkUnCon_Sendrepeatmail">IsRepeat</label>
+                                        <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkUnCon_Sendrepeatmail" name="">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lmsrepfildanswrp" id="dvConditionalmailoutresp">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_sendmailoutrespcontactfields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-1.8">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_sendmailoutresponvalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Template Name</label>
+
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_drpdwn_conMailTemplate_1">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Mail Subject</label>
+                                <div class="postion-relative">
+                                    <input type="text" class="form-control" id="ui_txt_conMailSubject_1">
+                                    <div class="mailsubiconuncondi zindex10">
+                                        <div class="mailsubuserattwrp dropdown">
+                                            <i class="icon ion-android-person mailsubdrp top-40"></i>
+                                            <div class="browse-dropdown-menu top-70">
+                                                <div class="dropdwntabwrap border bg-white">
+                                                    <div class="dropdwntabitem">
+                                                        <div data-tabcontid="userattr_1" class="dropdwntabs3 active" id="userattrheader_1">
+                                                            User Attributes
+                                                        </div>
+                                                        <div data-tabcontid="customeve_1" class="dropdwntabs3" id="customeveheader_1">
+                                                            Custom Events
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="dropdwntabcontwrap">
+                                                        <div id="userattr_1" class="userattribwrap2">
+                                                            <h6 class="dropdown-title">
+                                                                User Attribute
+                                                            </h6>
+                                                            <select id='draganddropuncustomtitle'
+                                                                    class="form-control addCampName"
+                                                                    data-index='1'
+                                                                    data-placeholder="Select Group(s)">
+                                                                <option value="0">Select</option>
+
+                                                            </select>
+                                                        </div>
+                                                        <div id="customeve_1" class="userattribwrap2 hideDiv">
+                                                            <h6 class="dropdown-title">
+                                                                Custom Events
+                                                            </h6>
+                                                            <select id="eventnameconditionalsubject"
+                                                                    class="form-control addCampName"
+                                                                    data-placeholder="Select Group(s)">
+                                                                <option label="Events Name">
+                                                                    Select Event Name
+                                                                </option>
+
+                                                            </select>
+                                                            <div class="mt-3">
+                                                                <select id="eventitemsconditionalsubject_1"
+                                                                        class="form-control addCampName"
+                                                                        data-index='1'
+                                                                        data-placeholder="Select Group(s)">
+                                                                    <option label="Events Items">
+                                                                        Select Event Items
+                                                                    </option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <i class="icon ion-close-circled"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-0">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">From Name</label>
+
+                                <input type="text" name="" class="form-control" id="ui_txt_conMailFromName_1" autocomplete="off">
+
+                            </div>
+                        </div>
+                        <div class="col-sm-1 col-md-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">
+                                    From Email Id
+                                </label>
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_conddlFromEmailSender_1">
+                                    <option value="0">Select</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-0.6">
+
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="ui_chkSendrepeatmail">IsRepeat</label>
+                                <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkSendrepeatmail_1" name="">
+
+                            </div>
+                        </div>
+
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+                    <div class="divconsendoutmailresp"></div>
+                    <button id="addsendmailoutresp" type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkSendSmsOut" name="frmrepsmsrespond">
+                    <label class="custom-control-label" for="ui_chkSendSmsOut">Send SMS out responder</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_sendsmsoutresponder">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalsmsoutresp" name="Issmsoutresp">
+                        <label class="custom-control-label" for="ui_chkUnConditionalsmsoutresp">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalsmsoutresp" name="Issmsoutresp">
+                        <label class="custom-control-label" for="ui_chkConditionalsmsoutresp">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalsmsoutresp">
+
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepsmsrespcondideswrp" id="ui_chkUnConditionalSmsOutTd">
+                            <div class="frmrepsmsresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-2 col-lg-2 col-xl-2" for="">Template Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlSmsTemplate">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="frmlbltxt" for="ui_chkUnCon_Sendrepeatsms">IsRepeat</label>
+                                        <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkUnCon_Sendrepeatsms" name="">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lmsrepfildanswrp" id="dvConditionalsmsoutresp">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_sendsmsoutrespcontactfields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_sendsmsoutresponvalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Template Name</label>
+
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddl_conSmsTemplate_1">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-0">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="ui_chkSendrepeatsms_1">IsRepeat</label>
+                                <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkSendrepeatsms_1" name="">
+
+                            </div>
+                        </div>
+
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+                    <div class="divconsendoutsmsresp"></div>
+                    <button id="addsendsmsoutresp" type="button" class="btn btn-primary">Add</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkSendWhatsAppOut" name="frmrepWhatsApprespond">
+                    <label class="custom-control-label" for="ui_chkSendWhatsAppOut">Send WhatsApp out responder</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_sendwhatsappoutresponder">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalwhatsappoutresp" name="Iswhatsappoutresp">
+                        <label class="custom-control-label" for="ui_chkUnConditionalwhatsappoutresp">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalwhatsappoutresp" name="Iswhatsappoutresp">
+                        <label class="custom-control-label" for="ui_chkConditionalwhatsappoutresp">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalwhatsappoutresp">
+
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepwhatsapprespcondideswrp" id="ui_chkUnConditionalwhatsappOutTd">
+                            <div class="frmrepsmsresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-2 col-lg-2 col-xl-2" for="">Template Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlWhatsAppTemplate">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="frmlbltxt" for="ui_chkUnCon_Sendrepeatwhatsapp">IsRepeat</label>
+                                        <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkUnCon_Sendrepeatwhatsapp" name="">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lmsrepfildanswrp" id="dvConditionalwhatsappoutresp">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_sendwhatsappoutrespcontactfields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_sendwhatsappoutresponvalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Template Name</label>
+
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddl_conwhatsappTemplate_1">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-0">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="ui_chkSendrepeatwhatsapp_1">IsRepeat</label>
+                                <input type="checkbox" class="form-control form-control-sm notspecificbtn" id="ui_chkSendrepeatwhatsapp_1" name="">
+
+                            </div>
+                        </div>
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+
+                    <div class="divconsendoutwhatsappresp"></div>
+                    <button id="addsendwhatsappoutresp" type="button" class="btn btn-primary">Add</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="chkboxClickToCall" name="chkboxClickToCall">
+                    <label class="custom-control-label" for="chkboxClickToCall">Make Call out responder</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_ClickToCall">
+                <div id="frmrepemailcondi" class="frmcondiwrp">
+                    <div class="frmrepcondideswrp fiftperc">
+                        <label class="frmlbltxt" for="ui_chkUnCon_Sendrepeatcall">IsRepeat</label>
+                        <input type="checkbox" class="" id="ui_chkUnCon_Sendrepeatcall" name="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="frmrepassgnsalper"
+                           name="frmrepassgnsalper">
+                    <label class="custom-control-label" for="frmrepassgnsalper">Assign sales person</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_AssignSales">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalsalesperson" name="Isassignsalesperson">
+                        <label class="custom-control-label" for="ui_chkUnConditionalsalesperson">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalsalesperson" name="Isassignsalesperson">
+                        <label class="custom-control-label" for="ui_chkConditionalsalesperson">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalSettingsforsalesperson">
+                    <div class="frmchkrepwrp mb-3" id="divOverRideAssignment">
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="ui_chkIsOverrideAssignment" name="OverRideAssignment" value="1">
+                            <label class="custom-control-label" for="ui_chkIsOverrideAssignment">Override Assignment</label>
+                        </div>
+                    </div>
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepasssalpercondideswrp">
+                            <div class="frmrepsmsresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Sales Person's Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlUserList">
+                                                <option value="0">Select User</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">OR</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Select Group Name</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlusergroupList">
+                                                <option value="0">Select Group</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frmchkrepwrp mb-3" id="divIsUnconditionalGroupSticky">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="ui_chkIsUnconditionalGroupSticky" name="IsUnconditionalGroupSticky" value="1">
+                                        <label class="custom-control-label" for="ui_chkIsUnconditionalGroupSticky">Group Stickyness</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lmsrepfildanswrp" id="dvConditionalSettingsforsalesperson">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_assignsalescontactfields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_assignsalesvalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Sales Person's Name</label>
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlUserListcon_1">
+                                    <option value="0">Select User</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-0 col-md-0 col-lg-1 col-xl-0">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">OR</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Select User Groups</label>
+                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlusergroupListcon_1">
+                                    <option value="0">Select Group</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Group Stickyness</label>
+                                <input type="checkbox" id="ui_checkboxIsGroupSticky_1" name="ui_checkboxIsGroupSticky_1">
+                            </div>
+                        </div>
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+                    <div class="salescusteventrepfields"></div>
+                    <button id="addsalescusteventnamerep" type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="frmrepoverridesource"
+                           name="frmrepoverridesource">
+                    <label class="custom-control-label" for="frmrepoverridesource">Assign Sources</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_overridesource">
+                <div id="frmrepemailcondi" class="frmcondiwrp">
+                    <div class="frmrepautassgngrpcondideswrp">
+                        <div class="frmrepsmsresptemwrp fiftperc">
+
+                            <div class="frmchkrepwrp mb-3">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionaloverridesource" name="Isoverridesource">
+                                    <label class="custom-control-label" for="ui_chkUnConditionaloverridesource">Un-Conditional</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_chkConditionaloverridesource" name="Isoverridesource">
+                                    <label class="custom-control-label" for="ui_chkConditionaloverridesource">Conditional</label>
+                                </div>
+                            </div>
+
+                            <div class="lmsrepfildanswrp" id="dvConditionalSettings">
+                                <div class="row position-relative">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Fields</label>
+                                            <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_contactfields_1" data-placeholder="Add Fields">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Value</label>
+                                            <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_value_1">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="" class="frmlbltxt">Source</label>
+                                            <select class="form-control select2drpdwnbrd select2drpdwnbrdSource" name="" id="ui_lmssourece_1" data-placeholder="Add Fields">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <span style="width: 35px;">&nbsp;</span>
+                                </div>
+                                <div class="custeventrepfields"></div>
+                                <button id="addcusteventnamerep" type="button" class="btn btn-primary">Add</button>
+                            </div>
+
+                            <div class="form-group row" id="dvUnConditionalSettings">
+                                <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Sources</label>
+                                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                    <div class="droplistwrap mr-2 w-100">
+                                        <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlIsoverridesourceList">
+                                            <option value="0">Select Source</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="custom-control custom-checkbox mt-2" id="ui_divLMSImportOverrideSources" style="padding-left: 0px;width:500px">
+
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" value="0" disabled="yes" class="custom-control-input" id="lmsStaySource" name="lmsSourceType" checked>
+                                    <label class="custom-control-label" for="lmsStaySource">Create and Stay Source</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" value="1" disabled="yes" class="custom-control-input" id="lmsOverrideSource" name="lmsSourceType">
+                                    <label class="custom-control-label" for="lmsOverrideSource">Override Source</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" value="2" disabled="yes" class="custom-control-input" id="lmsNewSource" name="lmsSourceType">
+                                    <label class="custom-control-label" for="lmsNewSource">Create New Source</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkAssignStage" name="frmrepAssignStage">
+                    <label class="custom-control-label" for="ui_chkAssignStage">Assign Stage</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_AssignStage">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalAssignStage" name="IsAssignStage">
+                        <label class="custom-control-label" for="ui_chkUnConditionalAssignStage">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalAssignStage" name="IsAssignStage">
+                        <label class="custom-control-label" for="ui_chkConditionalAssignStage">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalAssignStage">
+
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepwhatsapprespcondideswrp" id="ui_chkUnConditionalAssignStage">
+                            <div class="frmrepsmsresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Stage</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2 ddlassignstage" id="ui_ddlAssignStage">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lmsrepfildanswrp" id="dvConditionalAssignStage">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_AssignStagefields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_AssignStagevalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Stage</label>
+
+                                <select class="form-control form-control-sm notspecificbtn select2 ddlassignstage" id="ui_ddl_conAssignStage_1">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+
+                    <div class="divconAssignStage"></div>
+                    <button id="addAssignStage" type="button" class="btn btn-primary">Add</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkAssignGroup" name="frmrepAssignGroup">
+                    <label class="custom-control-label" for="ui_chkAssignGroup">Assign Group</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_AssignGroup">
+                <div class="frmchkrepwrp mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" checked="" class="custom-control-input" id="ui_chkUnConditionalAssignGroup" name="IsAssignGroup">
+                        <label class="custom-control-label" for="ui_chkUnConditionalAssignGroup">Un-Conditional</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" id="ui_chkConditionalAssignGroup" name="IsAssignGroup">
+                        <label class="custom-control-label" for="ui_chkConditionalAssignGroup">Conditional</label>
+                    </div>
+                </div>
+                <div id="dvUnConditionalAssignGroup">
+
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="frmrepwhatsapprespcondideswrp" id="ui_chkUnConditionalAssignGroup">
+                            <div class="frmrepsmsresptemwrp fiftperc">
+                                <div class="form-group row">
+                                    <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3" for="">Group</label>
+                                    <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                        <div class="droplistwrap mr-2 w-100">
+                                            <select class="form-control form-control-sm notspecificbtn select2 ui_ddlGroupList" id="ui_ddlGroupList">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="lmsrepfildanswrp" id="dvConditionalAssignGroup">
+                    <div class="row position-relative">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_AssignGroupfields_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_AssignGroupvalue_1">
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Group</label>
+
+                                <select class="form-control form-control-sm notspecificbtn select2 ddlassignGroup" id="ui_ddl_conAssignGroup_1">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <span style="width: 35px;">&nbsp;</span>
+                    </div>
+
+                    <div class="divconAssignGroup"></div>
+                    <button id="addAssignGroup" type="button" class="btn btn-primary">Add</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="chkboxVerifiedEmail"
+                           name="chkboxVerifiedEmail">
+                    <label class="custom-control-label" for="chkboxVerifiedEmail">Verified Email</label>
+                </div>
+            </div>
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="chkboxAutoWhatsApp"
+                           name="chkboxAutoWhatsApp">
+                    <label class="custom-control-label" for="chkboxAutoWhatsApp">Auto WhatsApp Optin</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkIncluded" name="frmrepIncluded">
+                    <label class="custom-control-label" for="ui_chkIncluded">Is Included</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_Included">
+                <div class="row position-relative">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="" class="frmlbltxt">Fields</label>
+                            <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_Includedcontactfields_1" data-placeholder="Add Fields">
+                                <option value="0">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="" class="frmlbltxt">Value</label>
+                            <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_Includedvalue_1">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="divincludedlead"></div>
+                <button id="addisincludedleads" type="button" class="btn btn-primary col-sm-1">Add</button>
+
+            </div>
+
+        </div>
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepresmain" id="ui_chkExcluded" name="frmrepExcluded">
+                    <label class="custom-control-label" for="ui_chkExcluded">Is Excluded</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_Excluded">
+                <div class="row position-relative">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="" class="frmlbltxt">Fields</label>
+                            <select class="form-control select2drpdwnbrd select2drpdwnbrdfield" name="" id="ui_Excludedcontactfields_1" data-placeholder="Add Fields">
+                                <option value="0">Select</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <label for="" class="frmlbltxt">Value</label>
+                            <input type="text" name="" class="form-control form-control-sm frmlbltxtvalue" id="ui_Excludedvalue_1">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="divExcludedlead"></div>
+                <button id="addis_Excludedleads" type="button" class="btn btn-primary col-sm-1">Add</button>
+
+            </div>
+
+        </div>
+
+        <div class="frmrespsetwrp">
+            <div class="frmrepreschktitwrp df-ac-fw m-h-auto">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input frmrepmobnotiweb" id="frmrepmobnotiwbhk"
+                           name="frmrepmobnotiwbhk">
+                    <label class="custom-control-label" for="frmrepmobnotiwbhk">Web hooks</label>
+                </div>
+            </div>
+            <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_Webhooks">
+                <div class="addwebhoodwrp">
+                    <button id="addwebhookbtn" type="button" class="btn btn-primary">Add <i class="fa fa-plus"></i></button>
+                </div>
+                <div id="webhookeditoption" class="formreswebhookwrp p-3 hideDiv">
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="wrkflwwebhookwrp" style="width: 50%;">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Request URL</label>
+                                <input id="requestUrlWebhook" type="text" name="" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Method</label>
+                                <select name="" class="form-control" id="methodwebhook">
+                                    <option value="0" selected>Select Method</option>
+                                    <option value="Post">Post</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Content Type</label>
+                                <select id="contentTypewebhook" name="" class="form-control">
+                                    <option value="0" selected>Select Content Type</option>
+                                    <option value="form">Form</option>
+                                    <option value="raw body">Raw Body</option>
+                                </select>
+                            </div>
+                            <div id="rawbodytxtinpt" class="form-group hideDiv">
+                                <label class="frmlbltxt" for="">Body</label>
+                                <textarea name="" id="ui_txtRequestBody" class="form-control" cols="3" rows="3"></textarea>
+                                <small class="form-text text-muted">
+                                    Data to be sent with the request. You may need to add a
+                                    'Content-Type' header such as 'application/xml' or 'text/plain'.
+                                </small>
+                            </div>
+                            <div id="formtxtinput" class="form-group hideDiv">
+                                <label class="frmlbltxt w-100" for="">Data</label>
+                                <div class="adddatafildwrp"></div>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-action drpdowndatafield">
+                                        <i class="fa fa-plus mr-2"></i>Add
+                                    </button>
+                                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item drpdowndatafield" href="javascript:void(0);">Add Plumb5 Field</a>
+                                        <a class="dropdown-item drpdowndatafield" href="javascript:void(0);">Add Custom Field</a>
+                                    </div>
+                                </div>
+                                <small class="text-muted d-block pt-2">
+                                    Data to be sent with the request in key/value
+                                    pairs.
+                                </small>
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt w-100" for="">Headers</label>
+                                <button type="button" class="btn btn-action addheaderfild">
+                                    <i class="fa fa-plus"></i>
+                                    Add
+                                </button>
+                                <small class="text-muted d-block pt-2">
+                                    Headers to be sent with the request in key/value
+                                    pairs.
+                                </small>
+                            </div>
+                            <div class="basicautenwrp">
+                                <label class="frmlbltxt w-100" for="">Basic Authentication</label>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <input type="text" name="" class="form-control" id="ui_txt_Authentication1">
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <input type="text" name="" class="form-control" id="ui_txt_Authentication2">
+                                    </div>
+                                </div>
+                                <small class="text-muted d-block pt-2">
+                                    Basic Authentication username and password. if
+                                    needed.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="webhookbtnwrp mt-4">
+                            <button id="cancelwebhook" type="button" class="btn btn-secondary">Cancel</button>
+                            <button id="savewebhook" type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="landtablewrap mt-2 webhooktbldatawrp">
+                    <div class="tableWrapper">
+                        <div class="table-responsive td-tr-bg-white">
+                            <table id="ui_tbl_WebHookReportData" class="table tbl-td-ta-lft border">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-45 m-p-w-400" scope="col">Request URL</th>
+                                        <th class="td-wid-15 m-p-w-150" scope="col">Method</th>
+                                        <th class="td-wid-15 m-p-w-150" scope="col">Content Type</th>
+                                        <th class="td-wid-15 m-p-w-60" scope="col">Edit</th>
+                                        <th class="td-wid-10 m-p-w-60" scope="col">Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_tbody_WebHookReportData"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-data-start hideDiv">Webhook Not yet started</div>
+            </div>
+        </div>
+        @*<div class="frmrespsetwrp">
+                <div class="frmrepreschktitwrp df-ac-fw m-h-auto">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input frmrepmobnotiweb" id="frmrepwebhookresp"
+                               name="frmrepwebhookresp">
+                        <label class="custom-control-label" for="frmrepwebhookresp">URL Parameters Response</label>
+                    </div>
+                </div>
+                <div class="frmresoptwrp border-top-0 hideDiv" id="ui_div_URLParameters">
+                    <div id="frmrepemailcondi" class="frmcondiwrp">
+                        <div class="wrkflwwebhookwrp w-50">
+                            <div class="form-group">
+                                <label class="frmlbltxt w-100" for="">Data</label>
+                                <button type="button" class="btn btn-action addwebhooksreps">
+                                    <i class="fa fa-plus"></i>
+                                    Add
+                                </button>
+                                <small class="text-muted d-block pt-2">Data to be sent with the request in key/value pairs.</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+</div>
+
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="delete" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Settings?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletewebhook" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Settings?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deletewebhookRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelwebhookRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+
+<div id="ui_div_FormChatWebHookResponses" class="popupcontainer hideDiv">
+    <div class="popupItem  m-p-wid-300 position-relative w-650">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>API Details</h6>
+                <small id="ui_subtitle_smalls" class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <table id="ui_tbl_ResponseReportDatas" class="table no-data-records hideDiv">
+                <thead>
+                    <tr>
+                        <th class="td-wid-30 m-p-w-170" scope="col">Response</th>
+                    </tr>
+                </thead>
+                <tbody id="ui_tbody_ResponseReportDatas">
+                    <tr><td colspan="1" class='border-bottom-none'><div class='no-data'>There is no data for this view</div></td></tr>
+                </tbody>
+            </table>
+            <div id="ui_div_ResponseJsons" class="hideDiv"></div>
+        </div>
+        <div class="popupfooter">
+            @* Pagging pop up bottom *@
+            <div class="pagiWrap p-0 w-100" id="ui_Paggingdivs">
+                <div class="paginItem">
+                    <div class="showrowWrap mr-3">
+                        <label class="rowTxt">Show rows: </label>
+                        <select class="rowdropdown" name="" id="ui_drpdwn_NumberOfRecordss">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div class="pagiarrow">
+                        <div class="pagicount">
+                            <label class="rowTxt pl-2" id="ui_lbl_Pagings"></label>
+                        </div>
+                        <div class="arrowWrap">
+                            <div class="arrleft disableDiv" id="ui_div_BackPopPagings">
+                                <i class="icon ion-chevron-left"></i>
+                            </div>
+                            <div class="arrleft" id="ui_div_NextPopPagings">
+                                <i class="icon ion-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@{Html.RenderPartial("_FormChatWebHookResponse"); }
+
+<script src="~/js/jquery.json-editor.min.js"></script>
+<script src="~/js/UserCustomEventsAttributes.js"></script>
+<script src="~/js/ManageContact/ApiImportSettings.js"></script>
+<script src="~/js/ManageContact/ContactProperties.js"></script>

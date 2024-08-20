@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Preferences";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem m-border-bottom" data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem active" data-setttype="tabcontthree">Integration Status</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+
+                    <div id="tabcontthree" class="setttabcontainer">
+                        <div class="prefcontainer">
+                            <div class="df-ac-sbet">
+                                <h6 class="box-title m-pt-20 pl-0">Integration Status</h6>
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount"></select>
+                                </div>
+                            </div>
+                            <div class="prefaccountwrp">
+                                <div class="prefaccstatuswrp">
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Web Tracking</h6>
+                                        <div class="statuswrp" id="dvWebTracking">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Event Tracking</h6>
+                                        <div class="statuswrp" id="dvEventTracking">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Email Setup</h6>
+                                        <div class="statuswrp" id="dvEmailSetup">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Site Search</h6>
+                                        <div class="statuswrp" id="dvSiteSearch">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Email Verification Setup</h6>
+                                        <div class="statuswrp" id="dvEmailVerification">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Spam Tester Setup</h6>
+                                        <div class="statuswrp" id="dvSpamTester">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">SMS Setup</h6>
+                                        <div class="statuswrp" id="dvSmsSetup">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Web Push Setup</h6>
+                                        <div class="statuswrp" id="dvWebPushTracking">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Mobile SDK Setup</h6>
+                                        <div class="statuswrp" id="dvMobileSdkTracking">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Click to Call</h6>
+                                        <div class="statuswrp" id="dvClickToCall">Pending</div>
+                                    </div>
+                                    <div class="prefaccstatItem">
+                                        <h6 class="featname">Whats App Setup</h6>
+                                        <div class="statuswrp" id="dvWhatsApp">Pending</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="~/js/Preference/IntegrationStatus.js"></script>

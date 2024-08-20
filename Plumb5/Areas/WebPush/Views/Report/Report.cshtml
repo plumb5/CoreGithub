@@ -1,0 +1,190 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Reports Browser Notification";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Reports</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Browser Notification</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Reports</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap border-bottom">
+                <div class="showingWrap pt-2 pb-2">
+                    @{ Html.RenderPartial("_PageHeadingWithDate"); }
+                </div>
+
+
+                <div class="searchWrap">
+                    <div class="searchInput w-250">
+                        <select class="form-control addCampName" data-placeholder="" id="ui_ddCampaignnames">
+                            <option value="0">Filter by Campaigns</option>
+                        </select>
+                    </div>
+                    @{ Html.RenderPartial("_Export"); }
+                </div>
+
+            </div>
+            <div class="subdivWrap border-top-0">
+                <div class="selectedItemWrap">
+                    <div class="checkBxCount">
+                        <span class="checkedCount">1</span> Campaigns selected
+                    </div>
+                    <div class="addgrupcampresp ml-3">
+                        <button class="btn btn-third btn-sm addremcampres ContributePermission" type="button"><i class="icon ion-android-people"></i> <span>Add/Remove Group</span></button>
+                        <button title="Download Report" class="btn btn-primary btn-sm downldreprt" type="button" data-toggle="modal" data-target=".bd-example-modal-sm">
+                            <i class="icon ion-ios-cloud-download"></i> <span>Download Report</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="brwsernotificwrp">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+                            <div class="tableWrapper">
+                                <div class="table-responsive campaignresponse">
+                                    <table id="ui_tblReportData" class="table tbl-td-ta-lft">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input selchbxall" id="contacts_check" name="example1">
+                                                        <label class="custom-control-label" for="contacts_check"></label>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="helpIcon m-p-w-250 td-wid-18">
+                                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                    Campaign Identifier
+                                                </th>
+                                                <th scope="col" class="helpIcon m-p-w-250 td-wid-18">
+                                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                    Template Name
+                                                </th>
+                                                <th class="helpIcon m-p-w-250 td-wid-18" scope="col">
+                                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                    Sent To
+                                                </th>
+                                                <th class="helpIcon m-p-w-160 td-wid-5" scope="col">
+                                                    Sent
+                                                </th>
+                                                <th class="helpIcon m-p-w-140  td-wid-5" scope="col">
+                                                    Viewed
+                                                </th>
+                                                <th class="helpIcon m-p-w-140  td-wid-5" scope="col">
+                                                    Clicked
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-5" scope="col">
+                                                    Closed
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-5" scope="col">
+                                                    Unsubscribed
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-5" scope="col">
+                                                    Errors
+                                                </th>                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trbodyReportData"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @{ Html.RenderPartial("_Paging"); }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="popupcontainer hideDiv" id="dvaddgrpmember">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Remove Group</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="remvgrupcont" class="camppopupwrppr[
+                     ;]">
+                    <div class="popcontWrap">
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4" for="">Action</label>
+                            <div class="spamscoreradi col-sm-8">
+                                <div class="filetypewrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_rad_Add" name="addremovetype" class="custom-control-input" checked="checked">
+                                        <label class="custom-control-label" for="ui_rad_Add">Add</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_rad_Remove" name="addremovetype" class="custom-control-input">
+                                        <label class="custom-control-label" for="ui_rad_Remove">Remove</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Select Group</label>
+                            <div class="emailtempdropdown">
+                                <select class="form-control addCampName" data-placeholder="Select Group(s)" id="ui_ddlGroup">
+                                    <option value="0">Select Group</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chbxcampreswrp mt-4">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="opencampres" name="Campaign" value="1">
+                                <label class="custom-control-label" for="opencampres">Viewed</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="clickcampres" name="Campaign" value="2">
+                                <label class="custom-control-label" for="clickcampres">Click</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="optoutcampres" name="Campaign" value="3">
+                                <label class="custom-control-label" for="optoutcampres">Closed</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="bouncecampres" name="Campaign" value="4">
+                                <label class="custom-control-label" for="bouncecampres">Errors</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            @* Add to group pop up bottom *@
+            <div class="btnwrp" id="ui_Groupsdiv">
+                <button id="ui_btnAddOrRemove" class="btn btn-primary mr-2" type="button">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Popover html-->
+<div class="camptypwrap hideDiv">
+    <p><strong>Campaign Type:</strong> <span id="ui_popoverDataCampaign">NA</span></p>
+    <p>
+        <strong>Template Content:</strong> <span class="d-block" id="ui_popoverDataMsg">
+           NA
+        </span>
+    </p>
+    <p><strong>Sent To:</strong> <span id="ui_popoverDataSentTo">NA</span></p>
+    <p><strong>Stopped Reason:</strong> <span id="ui_popoverDataStoppedReason">NA</span></p>
+</div>
+
+@{ Html.RenderPartial("_WebPushCampaignResponsesUsers"); }
+<script src="~/js/WebPush/ReportDetails.js"></script>
+

@@ -1,0 +1,163 @@
+﻿@{
+    ViewBag.Title = "DndHours";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem m-border-bottom" data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem active" data-setttype="tabcontfour">DND Hours</div>
+        <div class="setttabitem" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="tabcontsix" class="setttabcontainer">
+                        <div class="subcontainer">
+                            <div class="df-ac-sbet">
+                                <h6 class="box-title m-pt-20 pl-0">DND Hours</h6>
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="pcont mt-4">
+                                Avoid disturbing your users with messages during odd hours by specifying the
+                                DND (Do Not
+                                Disturb)
+                                time slots when messages should not be delivered. Please note DND does not apply to In-app and
+                                On-site campaigns.
+                            </p>
+                            <div class="dndhourswrp mb-3">
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectDndHours">
+                                        <option value="0">No DND Hours</option>
+                                        <option value="Weekdays">Weekdays</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    Between
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectStartHour">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option selected value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    :
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectStartminute">
+                                        <option value="0">00</option>
+                                        <option value="5">05</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="25">25</option>
+                                        <option value="30">30</option>
+                                        <option value="35">35</option>
+                                        <option value="40">40</option>
+                                        <option value="45">45</option>
+                                        <option value="50">50</option>
+                                        <option value="60">55</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    :
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectStartPMAM">
+                                        <option value="PM">PM</option>
+                                        <option selected value="AM">AM</option>
+                                        <option value="PM">PM</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    and
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectEndHour">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option selected value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    :
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectEndminute">
+                                        <option value="0">00</option>
+                                        <option value="5">05</option>
+                                        <option value="10">10</option>
+                                        <option value="15">15</option>
+                                        <option value="20">20</option>
+                                        <option value="25">25</option>
+                                        <option value="30">30</option>
+                                        <option value="35">35</option>
+                                        <option value="40">40</option>
+                                        <option value="45">45</option>
+                                        <option value="50">50</option>
+                                        <option value="60">55</option>
+                                    </select>
+                                </div>
+                                <div class="dndbettxt m-mb-3">
+                                    :
+                                </div>
+                                <div class="drpdwn m-mb-3">
+                                    <select name="" class="form-control" id="ui_selectEndAMPM">
+                                        <option value="AM">AM</option>
+                                        <option selected value="PM">PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="dndhourswrpdynmaic">
+                            </div>
+                            <div class="btnwrp mt-4">
+                                <button class="btn btn-primary adddndhourslot" type="button">Add New DND Time Slot</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Preference/Dndhours.js"></script>

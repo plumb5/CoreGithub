@@ -1,0 +1,122 @@
+﻿
+
+#P5MMdiv_1 {
+    position: fixed;
+    float: right;
+    right: 355px;
+    bottom: -10px;
+    width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: #8fc01c;
+    z-index: 13;
+    background: #FFF;
+}
+
+    #P5MMdiv_1:hover {
+        z-index: 50;
+    }
+
+#P5MMdiv_2 {
+    position: fixed;
+    float: right;
+    right: 400px;
+    bottom: -10px;
+ 
+    width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: #707070;
+    z-index: 14;
+    background: #FFF;
+}
+
+    #P5MMdiv_2:hover {
+        z-index: 50;
+    }
+
+#P5MMdiv_3 {
+    position: fixed;
+    float: right;
+    right: 450px;
+    bottom: -10px;
+    width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: #707070;
+    z-index: 15;
+    background: #FFF;
+}
+
+    #P5MMdiv_3:hover {
+        z-index: 50;
+    }
+
+#P5MMdiv_4 {
+    position: fixed;
+    float: right;
+    right: 500px;
+    bottom: -10px;
+    width: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    color: #707070;
+    z-index: 16;
+    background: #FFF;
+}
+
+    #P5MMdiv_4:hover {
+        z-index: 50;
+    }
+
+.p5img {
+    width: 285px;
+    border:0px;
+}
+
+.bannerMainDiv {
+padding:12px 10px 10px 8px;
+}
+
+
+.themeborder1 {
+    border: 3px solid #8fc01c;
+}
+
+.themeborder2 {
+    border: 3px solid #5d0d7b;
+}
+
+.themeborder3 {
+    border: 3px solid #f8bf13;
+}
+
+.themeborder4 {
+    border: 3px solid #2081ac;
+}
+
+.themeborder5 {
+    border: 3px solid #C8513D;
+}
+
+
+.closeButton {
+    position: absolute;
+    right: 3px;
+    font-weight: bold;
+    color: #707070;
+    cursor: pointer;
+    margin-top: -4px;
+}

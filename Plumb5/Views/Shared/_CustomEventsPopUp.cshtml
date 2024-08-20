@@ -1,0 +1,75 @@
+﻿<div class="popupcontainer hideDiv" id="dvmasterfieltercustomeventsReports" style="z-index: 2;">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Master Fielter</h6>
+            </div>
+            <i id="dvmasterfieltercustomeventsReportsclose-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont colwhiteh-100">
+
+                <div id="eventnewreport" class="eventnwsavedrepwrp p-3">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="txtStartDate" class="frmlbltxt">Start Date</label>
+                                <input type="text" class="form-control addcalend" id="txtStartDate">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="txtEndDate" class="frmlbltxt">End Date</label>
+                                <input type="text" class="form-control addcalend" id="txtEndDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eventrepfildanswrp">
+                        <div class="row" id="trsearch0">
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="drpFields_0" class="frmlbltxt">Fields</label>
+                                    <select class="form-control select2drpdwnbrd" id="drpFields_0" data-placeholder="Add Fields"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="txtFieldAnswer_0" class="frmlbltxt">Your Answer</label>
+                                    <div class="d-flex align-items-center">
+                                        <div id="sel_drpFields_0"> <input type="text" class="form-control form-control-sm" id="txtFieldAnswer_0" /></div>
+                                        <i class="fa fa-plus lmsfildswrp"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="eventaddrepcontainer"></div>
+                    </div>
+                    <div class="lmssaverepdet mt-3" id="savereport">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ChkSave" chkid="1" name="groupckeckbox">
+                            <label class="custom-control-label" id="checkbox" for="ChkSave">Create New Group</label>
+                        </div>
+                        <div class="eventrepdetwrp mt-3 hideDiv" id="dvReportName">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt" id="ui_name">Group Name</label>
+                                <input type="text" name="" class="form-control" id="ui_txtName">
+                            </div>
+                            <div class="form-group" id="divui_description">
+                                <label for="" class="frmlbltxt" id="ui_description">Group Description</label>
+                                <input type="text" name="" class="form-control" id="ui_txtdescription">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnSearch">Submit</button>
+                <button class="btn btn-secondary clsepopup" id="btnCancel" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/CustomEvents/ViewCustomEventPopUp.js"></script>

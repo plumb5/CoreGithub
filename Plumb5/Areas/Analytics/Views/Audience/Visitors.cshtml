@@ -1,0 +1,169 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Visitor";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Visitors</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Analytics Overview</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Visitors</li>
+        </ol>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        @{ Html.RenderPartial("_PageHeadingWithDate"); }
+        <div class="iconsWrap-docu">
+            <div class="dropdown">
+                <button id="filterTags" class="btn-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span>Filter By</span> <i class="icon ion-android-funnel"></i></button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterTags">
+                    <div class="visitfiltWrap">
+                        <a class="dropdown-item" value="All">All</a>
+                        <a class="dropdown-item" value="VisitorIp">Only Ip</a>
+                        <a class="dropdown-item" value="PageName">By Page</a>
+                        <a class="dropdown-item" value="City">City</a>
+                        <a class="dropdown-item" value="MachineId">Machine Id</a>
+                    </div>
+                </div>
+            </div>
+            @*<i class="icon ion-ios-download-outline" data-toggle="modal" data-target=".bd-example-modal-sm"></i><i class="icon ion-ios-printer-outline"></i><i class="icon ion-ios-refresh-empty iconBrd-lft"></i>*@
+            @{Html.RenderPartial("_Export"); }
+        </div>
+    </div>
+    <div class="subdivFiltWrap">
+        <div class="filtSearchBox">
+            <div class="searchBoxWrap">
+                <div class="dropdownSelectItem">
+                    <select class="form-control form-control-sm filterbyItem" data-placeholder="Select" id="searchFilterBox">
+                        <option label="Choose one"></option>
+
+                    </select>
+                </div>
+
+                <!-- <input class="form-control form-control-sm mr-2"  placeholder="All" type="text" name="" id="searchFilterBox"> -->
+                <button class="btn btn-primary btn-sm" type="button" onclick="SearchData();">Go</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="subdivWrap">
+        <div class="selectedItemWrap">
+            <div class="checkBxCount">
+                <span class="checkedCount">0</span> Contacts selected
+            </div>
+            <div class="addDropdownWrap">
+                <select class="form-control form-control-sm addgroupselect w-100" data-placeholder="Add to Group" id="drp_AddToGroup">
+                    <option label="Choose one">Add to Group</option>
+
+                </select>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table" id="ui_tblReportData">
+                            <thead>
+                                <tr>
+                                    <th class="helpIcon td-wid-15 m-p-w-190" scope="col">
+                                        <div class="sortWrap">
+
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                        </div>Visitor Ip Address<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon td-wid-10  m-p-w-120" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                        Sessions<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon td-wid-15 m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                        </div>Avg.Time Spent<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon td-wid-15 m-p-w-190" scope="col">
+                                        <div class="sortWrap">
+
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                        </div>Last Interaction Date <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                        <div class="sortWrap">
+
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                        </div>Recent Visited Pages <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon td-wid-10 m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                        </div>City <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Paging"); }
+            </div>
+        </div>
+    </div>
+
+</section>
+@{ Html.RenderPartial("_ContactUCP"); }
+
+<!--Modal confirm-->
+<div class="modal fade bd-example-modal-sm" id="confirmDialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add to Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><span class="visitorsCount"></span> Selected Visitors will be added to the following Group</p>
+                <p class="font-bold"><span>Group Name:</span> <span class="addgroupname"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="addtoGroupdis" class="btn btn-primary ContributePermission" data-dismiss="modal">Add to Group</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal confirm-->
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script>
+
+
+
+    $(".filterbyselect").select2({
+        minimumResultsForSearch: '',
+        dropdownAutoWidth: false
+    });
+
+    $(".filterbyItem").select2({
+        minimumResultsForSearch: '',
+        dropdownAutoWidth: false
+    });
+
+</script>
+<script src="~/js/Analytics/Web_Visitors.js"></script>
+

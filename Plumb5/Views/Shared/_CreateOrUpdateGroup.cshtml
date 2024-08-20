@@ -1,0 +1,147 @@
+﻿<!--Popup window left-->
+
+<div class="popupcontainer hideDiv" id="dv_FilterContacts">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Create a new Group</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="dvgroupPopup" class="groupaccordWrap hideDiv">
+                    <div id="groupaccordion" class="accordion-one" role="tablist" aria-multiselectable="true">
+                        <div class="card" id="dv_BasicInformationGrp">
+                            <div class="card-header" role="tab" id="groupheadingone">
+                                <a data-toggle="collapse" data-parent="#groupaccordion" href="#groupcollapseone" aria-expanded="true" aria-controls="groupcollapseone" class="tx-gray-800 transition collapsed">
+                                    Basic Information
+                                </a>
+                            </div><!-- card-header -->
+                            <div id="groupcollapseone" class="collapse show" role="tabpanel" aria-labelledby="groupheadingone" data-parent="#groupaccordion">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label class="frmlbltxt" for="">Name</label>
+                                        <input type="text" class="form-control" id="ui_txtGrpName" maxlength="200">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="frmlbltxt" for="">Description</label>
+                                        <textarea name="" class="form-control" id="ui_txtGrpDescription" cols="30" rows="2" maxlength="200"></textarea>
+                                    </div>
+                                    <div id="dvContactDetails" style="display:none">
+                                        <div class="contcountWrap pt-2 pb-2">
+                                            <p>Counts: <span class="text-blu" id="totalcounts">0</span> Contacts</p>
+                                        </div>
+                                        <div class="subscribewrap mb-2">
+                                            <div class="table-responsive">
+                                                <table class="table tbl-td-ta-lft border">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="helpIcon td-wid-30 m-p-w-170" scope="col">Verified Email</th>
+                                                            <th class="helpIcon td-wid-40 m-p-w-150" scope="col">Un-Verified Email</th>
+                                                            <th class="helpIcon td-wid-30 m-p-w-150" scope="col">Invalid Email</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><p class="subscribTit m-0" id="ui_verifiedmailcount">0 </p></td>
+                                                            <td><p class="subscribTit m-0" id="ui_unverifiedmailcount">0</p></td>
+                                                            <td><p class="subscribTit m-0" id="ui_invalidmailcount">0</p></td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                <table class="table tbl-td-ta-lft border">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="helpIcon td-wid-50 m-p-w-170" scope="col">Subscribe</th>
+                                                            <th class="helpIcon td-wid-50 m-p-w-150" scope="col">Unsubscribe</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><p class="subscribTit m-0">Email : <span class="countItem font-weight-bold" id="ui_mailsubscribecount">0</span></p></td>
+                                                            <td><p class="subscribTit m-0">Email : <span class="countItem font-weight-bold" id="ui_mailunsubscribecount">0</span></p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><p class="subscribTit m-0">SMS : <span class="countItem font-weight-bold" id="ui_smssubscribecount">0</span></p></td>
+                                                            <td><p class="subscribTit m-0">SMS : <span class="countItem font-weight-bold" id="ui_smsunsubscribecount">0</span></p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><p class="subscribTit m-0">Whatsapp : <span class="countItem font-weight-bold" id="ui_whatsappsubscribecount">0</span></p></td>
+                                                            <td><p class="subscribTit m-0">Whatsapp : <span class="countItem font-weight-bold" id="ui_whatsappunsubscribecount">0</span></p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><p class="subscribTit m-0">Web Push : <span class="countItem font-weight-bold" id="ui_webpushsubscribecount">0</span></p></td>
+                                                            <td><p class="subscribTit m-0">Web Push : <span class="countItem font-weight-bold" id="ui_webpushunsubscribecount">0</span></p></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordCheckbxwrap" id="dvAddcontactFilter">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="addcontactcheck">
+                                            <label class="custom-control-label font-12" for="addcontactcheck">
+                                                Add contacts to the group using custom Filters
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card hideDiv" id="dvAddcontact">
+                            <div class="card-header" role="tab" id="groupheadingTwo">
+                                <a id="btnHeadingText" class="tx-gray-800 transition collapsed" data-toggle="collapse" data-parent="#groupaccordion" href="#groupcollapsetwo" aria-expanded="false" aria-controls="groupcollapsetwo">
+                                    Add Contacts
+                                </a>
+                            </div>
+                            <div id="groupcollapsetwo" class="collapse" role="tabpanel" aria-labelledby="groupheadingTwo" data-parent="#groupaccordion">
+                                <div class="card-body">
+                                    <div class="row" id="dvField">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt" for="">Start Count<span style='color:red;'>*</span></label>
+                                                <input type="number" min="0" class="form-control form-control-sm" id="ui_txtStartCount">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt" for="">End Count<span style='color:red;'>*</span></label>
+                                                <input type="number" min="0" class="form-control form-control-sm" id="ui_txtEndCount">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="dvField2">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt" for="">From Date</label>
+                                                <input type="text" class="form-control form-control-sm" id="ui_txtFromDate">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt" for="">To Date</label>
+                                                <input type="text" class="form-control form-control-sm" id="ui_txtToDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form id="formfields">
+                                        <div class="row" id="dvField1"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" groupid="0" duplicategroupid="0" id="btnAddToGroup">Save Group</button>
+                <button class="btn btn-secondary" type="button" id="btnCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/ManageContact/CreateOrUpdateGroup.js"></script>

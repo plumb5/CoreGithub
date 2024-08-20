@@ -1,0 +1,31 @@
+﻿<div class="pagiWrap hideDiv" id="ui_divInnerPaging">
+    <p class="text-color-error font-11 w-100 mb-2 pt-1 hideDiv" id="ui_PNotForDelay">Response details are delayed by 5 mins</p>
+    <div class="paginItem">
+        <div class="showrowWrap">
+            <label class="rowTxt" for="">Show rows: </label>
+            <select class="rowdropdown" name="pageRows" id="drp_RecordsInnerPerPage">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="1000">1000</option>
+            </select>
+        </div>
+        <div class="pagiarrow">
+            <div class="pagicount">
+                <label class="rowTxt pl-2">Showing</label>
+                <label class="rowTxt pl-2" for="" id="ui_lblInnerPagingDesc">&nbsp;</label>
+            </div>
+            <div class="arrowWrap">
+                <div class="arrleft" id="ui_divInnerPreviousPage" title="Previous">
+                    <i class="icon ion-chevron-left"></i>
+                </div>
+                <div class="arrleft" id="ui_divInnerNextPage" title="Next">
+                    <i class="icon ion-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/InnerPaging.js"></script>

@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Mobile Time on site";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Mobile Behaviour</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Mobile</a></li>
+            <li class="breadcrumb-item"><a href="#">Analytics Overview</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mobile Behaviour</li>
+        </ol>
+    </div>
+
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link" href="/MobileAnalytics/MobileApp/NewReturn">New vs Return</a></div>
+            <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0)">Time on App</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/MobileAnalytics/MobileApp/Frequency">Frequency</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/MobileAnalytics/MobileApp/Recency">Recency</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/MobileAnalytics/MobileApp/TimeSpend">Time Spent</a></div>
+        </div>
+        @{ Html.RenderPartial("_Export"); }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateWrap">
+            @{ Html.RenderPartial("_PageHeadingWithDate"); }
+        </div>
+        <div class="charteeWrap position-relative h-350">
+            <canvas id="sessionsData"></canvas>
+        </div>
+    </div>
+</section>
+<section class="sheet">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white mt-4">
+
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table first-row" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-120">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Day <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-170" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Average Time <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Sessions <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-160" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Page Views <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>New Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_trbodyReportData">                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/MobileAnalytics/Mobile_TimeOnApp.js"></script>

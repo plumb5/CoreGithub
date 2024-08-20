@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Group Validation";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link rel="stylesheet" href="~/Content/select2/css/select2.min.css" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Group Validation</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Contacts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Group Validation</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap pt-2 pb-2 border-bottom">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+                <div class="btngroupwrap d-flex align-items-center pr-2">
+                    <div class="startbtnwrap mr-2">
+                        <button type="button" class="btn btn-primary btn-sm newvalidbtn ContributePermission" id="ui_btnShowGroupValidationPopUp">
+                            New Validation
+                        </button>
+                    </div>
+                    <div class="searchInput">
+                        <input class="form-control form-control-sm" type="text" placeholder="Search By Name" id="ui_txtSearchName" />
+                        <div class="searchIcon">
+                            <i class="icon ion-android-search" id="ui_div_SearchIcon"></i>
+                        </div>
+                    </div>
+                    @{
+                        Html.RenderPartial("_Export");
+                    }
+                </div>
+            </div>
+            <div class="importTableWrap">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+                            <div class="tableWrapper">
+                                <div class="table-responsive contimportrep">
+                                    <table id="ui_tblReportData" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="helpIcon m-p-w-220 td-wid-20">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Group Name
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-190 td-wid-18" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Created Date
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-190 td-wid-17" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Updated Date
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-140 td-wid-12" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Unique Emails
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-140 td-wid-15" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Time Taken (Secs)
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-18" scope="col">
+                                                    Progress
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_tbodyReportData"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @{
+                                Html.RenderPartial("_Paging");
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Popover html-->
+<div class="emlvalidfilewrp hideDiv">
+    <div class="tableemvalid" id="ui_filedetails">
+    </div>
+</div>
+<!--Popover html-->
+<!--Modal group operation confirm-->
+<div class="modal fade bd-example-modal-sm" id="ui_divGroupValidationPopUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Groups to Validate</h5>
+                <button type="button" class="close" aria-label="Close" id="ui_btnCloseGroupValidation">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="groupoperat">
+                    <select id="ui_ddlValidationGroupList" class="form-control select2" data-placeholder="Type Group Name" multiple></select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="ui_btnStartGroupValidation" class="btn btn-primary">Start Validation</button>
+                <button type="button" class="btn btn-secondary" id="ui_btnCancelGroupValidation">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal group operation confirm-->
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/ManageContact/ContactEmailValidationOverViewSummary.js"></script>
+

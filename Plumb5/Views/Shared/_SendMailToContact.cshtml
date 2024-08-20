@@ -1,0 +1,242 @@
+﻿<script>
+    var TemplatePath = "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BUCKETPATH"])" + "/" + "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["TEMPLATEBUCKETMAINFOLDER"])"+"/";
+</script>
+
+<div id="ui_divSendMailPopUp" class="popupcontainer hideDiv">
+    <div class="popupItem w-900 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>SEND MAIL</h6>
+                <small class="popupsubtitle" id="ui_smallMailContactName"></small>
+            </div>
+            <i id="ui_iconCloseMailPopUp" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div class="dropItemWrap position-relative">
+                    <div class="testmailtempwrp pl-3 pr-3">
+                        <div class="mailtranspromowrp mb-3">
+                            <div class="df-ac-sbet">
+                                <div class="mailcontypewrp">
+                                    <label class="frmlbltxt w-100">Content Type</label>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="0" class="custom-control-input" id="ui_rdbtnMailSchedulePromotional" name="MailScheduleCampaignType" />
+                                        <label class="custom-control-label" for="ui_rdbtnMailSchedulePromotional">Promotional</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="1" class="custom-control-input" id="ui_rdbtnMailScheduleTransactional" name="MailScheduleCampaignType" checked />
+                                        <label class="custom-control-label" for="ui_rdbtnMailScheduleTransactional">Transactional</label>
+                                    </div>
+                                </div>
+                                <div class="prevwrp">
+                                    @*<p class="emailcc mb-0">cc</p>*@
+                                    <span class="lmstempprev previewthis" id="ui_spanMailTemplatePreview">Preview</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">To</label>
+                                    <select class="form-control border-0" id="ui_ddlContactEmailIds"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div id="ui_div_CCEmailId" class="form-group hideDiv">
+                                    <label class="frmlbltxt w-100">CC</label>
+                                    <input type="text" placeholder="Ccemail@example.com" class="form-control border-0" id="ui_txt_CCEmailId">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">Template</label>
+                                    <select class="form-control select2drpdwn mr-2" id="ui_ddlMailTemplate" data-placeholder="Select Template">
+                                        <option value="0">Select Template</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <label class="frmlbltxt w-100">Subject</label>
+                                <input type="text" class="form-control border-0" id="ui_txtMailSubject" placeholder="Subject" maxlength="1000" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">From EmailId</label>
+                                    <select class="form-control border-0" id="ui_ddlFromEmailId">
+                                        <option value="0">Select From EmailId</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">Reply To</label>
+                                    <input type="text" name="ReplyTo" class="form-control" id="ui_txtReplyAtEmail" placeholder="Reply To">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">From Name</label>
+                                    <input type="text" class="form-control border-0" id="ui_txtMailFromName" placeholder="From Name" maxlength="100" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="checkeebx-group mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="0" class="custom-control-input" id="ui_rdbtnMailScheduleNow" name="MailScheduleNowLater" checked />
+                                        <label class="custom-control-label" for="ui_rdbtnMailScheduleNow">Send Now</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="1" class="custom-control-input" id="ui_rdbtnMailScheduleLater" name="MailScheduleNowLater" />
+                                        <label class="custom-control-label" for="ui_rdbtnMailScheduleLater">Send Later</label>
+                                    </div>
+                                </div>
+                                <div class="lmsschedulemailwrp hideDiv" id="ui_divMailScheduleLaterTime">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Date</label>
+                                                <input type="text" class="form-control" id="ui_txtMailScheduleDate" placeholder="Date (mm/dd/yyyy)" autocomplete="off" readonly="readonly" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Time</label>
+                                                <select class="form-control" id="ui_ddlMailScheduleTime">
+                                                    <option value="00:00">00:00</option>
+                                                    <option value="00:15">00:15</option>
+                                                    <option value="00:30">00:30</option>
+                                                    <option value="00:45">00:45</option>
+                                                    <option value="01:00">01:00</option>
+                                                    <option value="01:15">01:15</option>
+                                                    <option value="01:30">01:30</option>
+                                                    <option value="01:45">01:45</option>
+                                                    <option value="02:00">02:00</option>
+                                                    <option value="02:15">02:15</option>
+                                                    <option value="02:30">02:30</option>
+                                                    <option value="02:45">02:45</option>
+                                                    <option value="03:00">03:00</option>
+                                                    <option value="03:15">03:15</option>
+                                                    <option value="03:30">03:30</option>
+                                                    <option value="03:45">03:45</option>
+                                                    <option value="04:00">04:00</option>
+                                                    <option value="04:15">04:15</option>
+                                                    <option value="04:30">04:30</option>
+                                                    <option value="04:45">04:45</option>
+                                                    <option value="05:00">05:00</option>
+                                                    <option value="05:15">05:15</option>
+                                                    <option value="05:30">05:30</option>
+                                                    <option value="05:45">05:45</option>
+                                                    <option value="06:00">06:00</option>
+                                                    <option value="06:15">06:15</option>
+                                                    <option value="06:30">06:30</option>
+                                                    <option value="06:45">06:45</option>
+                                                    <option value="07:00">07:00</option>
+                                                    <option value="07:15">07:15</option>
+                                                    <option value="07:30">07:30</option>
+                                                    <option value="07:45">07:45</option>
+                                                    <option value="08:00">08:00</option>
+                                                    <option value="08:15">08:15</option>
+                                                    <option value="08:30">08:30</option>
+                                                    <option value="08:45">08:45</option>
+                                                    <option value="09:00">09:00</option>
+                                                    <option value="09:15">09:15</option>
+                                                    <option value="09:30">09:30</option>
+                                                    <option value="09:45">09:45</option>
+                                                    <option selected="selected" value="10:00">10:00</option>
+                                                    <option value="10:15">10:15</option>
+                                                    <option value="10:30">10:30</option>
+                                                    <option value="10:45">10:45</option>
+                                                    <option value="11:00">11:00</option>
+                                                    <option value="11:15">11:15</option>
+                                                    <option value="11:30">11:30</option>
+                                                    <option value="11:45">11:45</option>
+                                                    <option value="12:00">12:00</option>
+                                                    <option value="12:15">12:15</option>
+                                                    <option value="12:30">12:30</option>
+                                                    <option value="12:45">12:45</option>
+                                                    <option value="13:00">13:00</option>
+                                                    <option value="13:15">13:15</option>
+                                                    <option value="13:30">13:30</option>
+                                                    <option value="13:45">13:45</option>
+                                                    <option value="14:00">14:00</option>
+                                                    <option value="14:15">14:15</option>
+                                                    <option value="14:30">14:30</option>
+                                                    <option value="14:45">14:45</option>
+                                                    <option value="15:00">15:00</option>
+                                                    <option value="15:15">15:15</option>
+                                                    <option value="15:30">15:30</option>
+                                                    <option value="15:45">15:45</option>
+                                                    <option value="16:00">16:00</option>
+                                                    <option value="16:15">16:15</option>
+                                                    <option value="16:30">16:30</option>
+                                                    <option value="16:45">16:45</option>
+                                                    <option value="17:00">17:00</option>
+                                                    <option value="17:15">17:15</option>
+                                                    <option value="17:30">17:30</option>
+                                                    <option value="17:45">17:45</option>
+                                                    <option value="18:00">18:00</option>
+                                                    <option value="18:15">18:15</option>
+                                                    <option value="18:30">18:30</option>
+                                                    <option value="18:45">18:45</option>
+                                                    <option value="19:00">19:00</option>
+                                                    <option value="19:15">19:15</option>
+                                                    <option value="19:30">19:30</option>
+                                                    <option value="19:45">19:45</option>
+                                                    <option value="20:00">20:00</option>
+                                                    <option value="20:15">20:15</option>
+                                                    <option value="20:30">20:30</option>
+                                                    <option value="20:45">20:45</option>
+                                                    <option value="21:00">21:00</option>
+                                                    <option value="21:15">21:15</option>
+                                                    <option value="21:30">21:30</option>
+                                                    <option value="21:45">21:45</option>
+                                                    <option value="22:00">22:00</option>
+                                                    <option value="22:15">22:15</option>
+                                                    <option value="22:30">22:30</option>
+                                                    <option value="22:45">22:45</option>
+                                                    <option value="23:00">23:00</option>
+                                                    <option value="23:15">23:15</option>
+                                                    <option value="23:30">23:30</option>
+                                                    <option value="23:45">23:45</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                        </div>
+                    </div>
+                    <div class="previewtempsidewrp hideDiv" id="ui_divMailTemplatePreview">
+                        <div class="mailDeskWrap">
+                            <div class="windowbar"></div>
+                            <div id="ui_div_MailTemplatePreview" class="mailbodyWrap">
+                                <iframe id="ui_iframeMailTemplatePreview" src="" style="border:none; width:100%; height:100%;" frameborder="0"></iframe>
+                            </div>
+                        </div>
+                        <div class="clseprevtemp">
+                            <i class="icon ion-android-close fa-2x" id="ui_iconMailPreviewClose"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_btnSendMail">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button" id="ui_btnCancelMail">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/SendMailToContact.js"></script>

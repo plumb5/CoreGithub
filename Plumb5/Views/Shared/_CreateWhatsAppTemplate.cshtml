@@ -1,0 +1,63 @@
+﻿<div id="whatsappEditInfo" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Create Template</h6>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="pad-20">
+                    <form action="">
+                        <div class="custFormWrap">
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="frmlbltxt" for="">Campaign Name</label>
+                                    <div class="emailtempdropdown">
+                                        <select id="ui_ddlTemplateCampaign" class="form-control addCampName" data-placeholder="Select Campaign"></select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="frmlbltxt" for="ui_txt_WATemplateName">Template Name</label>
+                                    <input id="ui_txt_WATemplateName" type="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label class="frmlbltxt" for="ui_txt_WATemplateDESC">Template Description</label>
+                                    <textarea name="" id="ui_txt_WATemplateDESC" class="form-control" cols="30" rows="2"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp mb-0">
+                <button class="btn btn-primary mr-2" type="button"><a onclick="CreateTemplateNext();">Next</a></button>
+                @*<a id="ui_btn_next_whats" href="javascript:void(0);" class="btn btn-primary mr-2 btn-next ContributePermission">Next</a>*@
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm show" id="tempexistmod" tabindex="-1" role="dialog" wfd-invisible="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Template already exists</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>A template with the same name already exists in the archive. Do you want to restore it ?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0)" id="archiverestore" type="button" class="btn btn-primary">Yes</a>
+                <a href="javascript:void(0)" id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">No</a>
+            </div>
+        </div>
+    </div>
+</div>

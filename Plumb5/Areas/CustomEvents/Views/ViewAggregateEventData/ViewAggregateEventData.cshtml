@@ -1,0 +1,278 @@
+﻿@{
+    ViewBag.Title = "ViewAggregateEventData";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<div class="container position-relative">
+    <section class="sheet">
+        <div class="pageheader">
+            <div class="contentHead">
+                <h6 class="pagetitle">Aggregate Data: </h6>
+                <small class="totalCountTitle">Total Contacts: <span id="totalcountspan">0</span></small>
+            </div>
+            <ol class="breadcrumb slim-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Advanced</a></li>
+                <li class="breadcrumb-item"><a href="#">Custom Events</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Aggregate Data</li>
+            </ol>
+        </div>
+        <div class="topTabWrap brd-TRL">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+            </div>
+            <div class="iconsWrap-docu">
+                <i class="icon ion-ios-gear-outline" id="addedprodpop"></i>
+                @{
+                    Html.RenderPartial("_Export");
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div class="tableWrapper">
+                        <div class="table-responsive">
+                            <table class="table tbl-td-ta-lft" id="ui_trheadReportData">
+                                <thead>
+                                    <tr>
+                                        <th class="helpIcon td-wid-30 m-p-w-190" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                            <div class="spacBet">
+                                                <div id="producttitle">Product</div>
+                                                @*<div class="th-iconWrp">
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap"></div>
+                                                </div>*@
+                                            </div>
+                                        </th>
+                                        <th class="helpIcon td-wid-20  m-p-w-120" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                            <div class="spacBet">
+                                                <div>Last Interaction Date</div>
+                                                <div class="th-iconWrp">
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="helpIcon td-wid-15 m-p-w-150" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                            <div class="spacBet">
+                                                <div>Total Views</div>
+                                                <div class="th-iconWrp">
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap"></div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th class="helpIcon td-wid-15 m-p-w-190" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique
+                                            Visitors
+                                            <i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap"></div>
+                                        </th>
+                                        <th class="helpIcon td-wid-20 m-p-w-190" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique
+                                            Customer <i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap"></div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trbodyReportData">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @{
+                        Html.RenderPartial("_Paging");
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+<div id="viewcontactdatapop" class="popupcontainer hideDiv">
+
+    <div class="popupItem m-p-wid-300 position-relative popup-tbl w-650">
+        <div class="popuptitle bg-primary">
+            <div class="popuptitlwrp">
+                <h6>Event Name</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="popcontWrap p-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="helpIcon td-wid-20 m-p-w-170" scope="col">Name</th>
+                                    <th class="helpIcon td-wid-20 m-p-w-120" scope="col">Phone Number&nbsp</th>
+                                    <th class="helpIcon td-wid-30 m-p-w-120" scope="col">Email ID</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tblReportData"><tr><td colspan="10" class="border-bottom-none"><div class="no-data">There is no data for this view</div></td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pagiWrap" id="ui_divPaging">
+                <div class="paginItem">
+                    <div class="showrowWrap">
+                        <label class="rowTxt" for="">Show rows: </label>
+                        <select class="rowdropdown" name="pageRows" id="drp_CustomRecordsPerPage">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="1000">1000</option>
+                        </select>
+                    </div>
+                    <div class="pagiarrow">
+                        <div class="pagicount">
+                            <label class="rowTxt pl-2">Showing</label>
+                            <label class="rowTxt pl-2" for="" id="ui_lblPagingDesccustom">&nbsp;</label>
+                        </div>
+                        <div class="arrowWrap">
+                            <div class="arrleft" id="ui_divPreviousPagecustom" title="Previous">
+                                <i class="icon ion-chevron-left"></i>
+                            </div>
+                            <div class="arrleft" id="ui_divNextPagecustom" title="Next">
+                                <i class="icon ion-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*@{ Html.RenderPartial("_CustomEventsUniqueContacts"); }*@
+
+
+<div id="viewvisitordatapop" class="popupcontainer hideDiv">
+    <div class="popupItem m-p-wid-300 position-relative popup-tbl w-350">
+        <div class="popuptitle bg-primary">
+            <div class="popuptitlwrp">
+                <h6>Event Name</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="popcontWrap p-0">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="td-wid-20 m-p-w-170" scope="col">MachineID</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tblVisitorReportData"><tr><td colspan="10" class="border-bottom-none"><div class="no-data">There is no data for this view</div></td></tr></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pagiWrap" id="ui_divPaginguniqemachineid">
+                <div class="paginItem">
+                    <div class="showrowWrap">
+                        <label class="rowTxt" for="">Show rows: </label>
+                        <select class="rowdropdown" name="pageRows" id="drp_RecordsPerPageuniqemachineid">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="1000">1000</option>
+                        </select>
+                    </div>
+                    <div class="pagiarrow">
+                        <div class="pagicount">
+                            <label class="rowTxt pl-2">Showing</label>
+                            <label class="rowTxt pl-2" for="" id="ui_lblPagingDescuniqemachineid">&nbsp;</label>
+                        </div>
+                        <div class="arrowWrap">
+                            <div class="arrleft" id="ui_divPreviousPageuniqemachineid" title="Previous">
+                                <i class="icon ion-chevron-left"></i>
+                            </div>
+                            <div class="arrleft" id="ui_divNextPageuniqemachineid" title="Next">
+                                <i class="icon ion-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="~/js/Paging.js"></script>
+    </div>
+
+</div>
+<div id="groubydiv" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle bg-primary">
+            <div class="popuptitlwrp">
+                <h6>Manage Properties</h6>
+                <small class="popupsubtitle hideDiv">Intel I3 12th Gen Processor</small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="addtocartlead" class="addtocartwrp hideDiv">
+                    <table class="table bg-white">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="aggrecatedtable" class="aggrecatedwrp">
+                    <h6 class="box-title">
+                        Choose the properties to make group-by and display for
+                        binding the data.
+                    </h6>
+                    <div class="tableWrapper p-4">
+                        <div class="table-responsive">
+                            <table class="table tbl-td-ta-lft border bg-white">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-50 m-p-w-220 m-auto">Select Fields</th>
+                                        <th class="td-wid-25 m-p-w-40">Group-By</th>
+                                        <th class="td-wid-25 m-p-w-40">Display</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_tblCustomgroupbydiv">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnSearch">Search</button>
+
+                <button class="btn btn-secondary clsepopup" id="btnCancel" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@{
+    Html.RenderPartial("_CustomEventFields");
+}
+<script src="~/js/CustomEvents/ViewAggregateEventData.js"></script>
+
+

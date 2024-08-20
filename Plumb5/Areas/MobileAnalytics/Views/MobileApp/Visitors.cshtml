@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Visitor";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Mobile Visitors</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Mobile</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Analytics Overview</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mobile Visitors</li>
+        </ol>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        @{ Html.RenderPartial("_PageHeadingWithDate"); }
+        <div id="ui_div_FilterSelection" class="iconsWrap-docu hideDiv">
+            <div class="dropdown">
+                <button id="filterTags" class="btn-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span>Filter By </span> <i class="icon ion-android-funnel"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterTags">
+                    <div id="drp_SearchBy" class="visitfiltWrap">
+                        <a class="dropdown-item" value="All">All</a>
+                        <a class="dropdown-item" value="VisitorIP">IP Address</a>
+                        <a class="dropdown-item" value="Device">Device Name</a>
+                    </div>
+                </div>
+            </div>
+            @{ Html.RenderPartial("_Export"); }
+        </div>
+    </div>
+    <div class="subdivFiltWrap">
+        <div class="filtSearchBox">
+            <div class="searchBoxWrap">
+                <div class="dropdownSelectItem">
+                    <select class="form-control form-control-sm filterbyItem" data-placeholder="Select" id="searchFilterBox">
+                        <option label="Choose One"></option>
+                    </select>
+                </div>
+                <button id="ui_btn_FilterGo" class="btn btn-primary btn-sm" type="button">Go</button>
+            </div>
+        </div>
+    </div>
+    <div class="subdivWrap">
+        <div class="selectedItemWrap">
+            <div class="checkBxCount">
+                <span class="checkedCount">0</span> Contacts selected
+            </div>
+            <div class="addDropdownWrap">
+                <select class="form-control form-control-sm addgroupselect w-100" data-placeholder="Add to Group" id="drp_AddToGroup">
+                    <option label="Choose one">Add to Group</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    @*<th class="td-wid-5 h-20p pl-0 m-p-w-40" scope="col">
+                                        <div class="chbxWrap">
+                                            <label class="ckbox">
+                                                <input class="selchbxall" value="1" type="checkbox"><span></span>
+                                            </label>
+                                        </div>
+                                    </th>*@
+                                    <th class="helpIcon td-wid-20 m-p-w-190" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                            
+                                        </div>IP Address<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">IP Address </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-10  m-p-w-120" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                            
+                                        </div>Sessions<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Sessions </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-15 m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                            
+                                        </div>Avg.Time Spent<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Avg.Time Spent </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-20 m-p-w-190" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                            
+                                        </div>Last Interaction Date <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Last Interaction Date </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+                                            
+                                        </div>Device Name <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Device Name </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Paging"); }
+            </div>
+        </div>
+    </div>
+</section>
+@{ Html.RenderPartial("_ContactUCP"); }
+<!--Modal confirm AddToGroup-->
+<div class="modal fade bd-example-modal-sm" id="confirmDialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add to Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><span class="visitorsCount"></span> Selected Visitors will be added to the following Group</p>
+                <p class="font-bold"><span>Group Name:</span> <span class="addgroupname"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="addtoGroupdis" class="btn btn-primary" data-dismiss="modal">Add to Group</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal confirm AddToGroup-->
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script>
+    //$(".filterbyselect").select2({
+    //    minimumResultsForSearch: '',
+    //    dropdownAutoWidth: false
+    //});
+
+    $(".filterbyItem").select2({
+        minimumResultsForSearch: '',
+        dropdownAutoWidth: false
+    });
+</script>
+<script src="~/js/MobileAnalytics/Mobile_AnalyticsOverView_Visitors.js"></script>

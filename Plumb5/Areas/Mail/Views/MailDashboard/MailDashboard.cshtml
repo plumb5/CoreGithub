@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "MailDashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Mail Dashboard</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Mail</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+            </div>
+        </div>
+    </div>
+    <div class="dashcontainer mt-2">
+        <div class="bubWrap">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="box-white">
+                        <h6 class="box-title">Campaign Effectiveness</h6>
+                        <div id="ui_div_CampaignEffectiveness" class="bubbwrap bubb-hite m-h-200"></div>
+                        <div class="legendWrap  border-top">
+                            <div class="redcolWrap legendpop" data-toggle="popover" title="Low Open, Low Clicks" data-content="Campaigns in this region are not doing very well. You could try a different subject line or different time to improve upon the open rates. It is also advisable to revisit the content of the mail for better click rates">Low Open, Low Clicks</div>
+                            <div class="orgcolWrap legendpop" data-toggle="popover" title="High Open, Low Clicks" data-content="Many opened the mail but were not compelled to click. These campaigns could have done better with a better Call-to-action or an engaging content">High Open, Low Clicks</div>
+                            <div class="blucolWrap legendpop" data-toggle="popover" title="Low Open, High Clicks" data-content="Those who opened it, clicked it. But not a lot of folks opened it. This email could have fared better with a different subject line, preview text or if sent at a different time.">Low Open, High Clicks</div>
+                            <div class="greencolWrap legendpop" data-toggle="popover" title="High Open, High Clicks" data-content="These campaigns have done above average. These campaigns have found the right subject line, right content & send time.">High Open, High Clicks</div>
+                        </div>
+                    </div>
+                    <div class="row m-gut">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut">
+                            <div class="box-white mt-2">
+                                <h6 class="box-title">Mail Performance over time</h6>
+                                <div class="charteeWrap position-relative h-350">
+                                    <canvas id="ui_canvas_MailOpenRate"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut">
+                            <div class="box-white mt-2">
+                                <h6 class="box-title">Email opens by hour of day</h6>
+                                <div class="charteeWrap position-relative h-350">
+                                    <canvas id="mailopenhourday"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="engageWrap">
+                        <div class="card card-sales">
+                            <h6 class="slim-card-title tx-primary mb-3">Engagement</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="tx-12">Sent</label>
+                                    <div id="ui_div_TotalSent" class="countsWrap"></div>
+                                </div>
+                                <div class="col">
+                                    <label class="tx-12">Opened</label>
+                                    <div id="ui_div_TotalOpened" class="countsWrap"></div>
+                                </div>
+                                <div class="col">
+                                    <label class="tx-12">Clicked</label>
+                                    <div id="ui_div_TotalClicked" class="countsWrap"></div>
+                                </div>
+                            </div>
+                            <div id="ui_div_OpenRate" class="progress mg-b-5 mt-2"></div>
+                            <p class="tx-12 mg-b-0">Open Rate</p>
+                        </div>
+                    </div>
+                    <div class="delivWrap mt-2">
+                        <div class="card card-sales">
+                            <h6 class="slim-card-title tx-success mb-10">Delivery</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="tx-12">Bounced</label>
+                                    <div id="ui_div_TotalBounced" class="countsWrap"></div>
+                                </div>
+                                <div class="col">
+                                    <label class="tx-12">Unsubscribed</label>
+                                    <div id="ui_div_TotalUnsubcribed" class="countsWrap"></div>
+                                </div>
+                                <div class="col">
+                                    <label class="tx-12">Forwarded</label>
+                                    <div id="ui_div_TotalForwarded" class="countsWrap"></div>
+                                </div>
+                            </div>
+                            <div id="ui_div_DeliveryRate" class="progress mg-b-5 mt-2"></div>
+                            <p class="tx-12 mg-b-0">Delivery Rate</p>
+                        </div>
+                    </div>
+                    <div class="box-white mt-2">
+                        <h6 class="box-title"><span id="ui_span_NotDelivered"></span>Not Delivered (hard bounce)</h6>
+                        <div class="charteeWrap position-relative h-300">
+                            <canvas id="ui_canvas_hardBouncedMail"></canvas>
+                            <div class="no-data hideDiv" id="ui_divHardBounceNoData">There is no data to view</div>
+                        </div>
+                        <div class="legendWrap border-top">
+                            <div class="blucolWrap legendpop" data-toggle="popover" title="Content Related" data-content="The recipient/contact has a blocked status for either hard bouncing, being unsubscribed or complained. Connection Terminated as the receipient believes the email is a SPAM">Content Related</div>
+                            <div class="purpcolWrap legendpop" data-toggle="popover" title="Address Related" data-content="The email address does not appear to exist or there is something wrong with the mailbox of the recipient, eg. the mailbox is full and cannot accept more emails. It could also be a Grey-listed mail and temporarily rejected.Grey-listed mails will be re-tried.">Address Related</div>
+                            <div class="orgcolWrap legendpop" data-toggle="popover" title="Domain Related" data-content="This could be a DNS problem or The email bounced due to a poor reputation of the sending IP address or the email was not delivered because there was an issue validating the SPF record for the domain of this email.">Domain Related</div>
+                            <div class="greencolWrap legendpop" data-toggle="popover" title="Other Issues" data-content="Suppressed Email or Throttling error or a time-out. This could also be due to a connection problem or a Whitelisting problem or Mail was cancelled by the Administrator.">Other Issues</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/d3.v4.js"></script>
+<script src="~/js/Mail/MailDashboard.js"></script>
+

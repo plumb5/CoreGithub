@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("../css/font-awesome.min.css");
+/*Global Variables*/
+/*Global Variables*/
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  background-color: #f0f2f7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.top-band {
+  background-color: #ffffff;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+.top-band .logowrp {
+  width: 125px;
+  height: 35px;
+  background-image: url(../images/plumb5_logo.png);
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+.top-band .logowrp a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pageconthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.pageconthead .pagetitle {
+  margin-bottom: 10px;
+  color: #343a40;
+  padding-left: 10px;
+  border-left: 4px solid #4662D4;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+.pageconthead .breadcrumb {
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.btn-second {
+  color: #6f42c1;
+  font-size: 14px;
+  border-color: #6f42c1;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.btn-second:hover {
+  background-color: #6f42c1;
+  color: #ffffff !important;
+}
+.btn-second a {
+  color: #6f42c1;
+}
+
+.btn-second:hover a {
+  color: #ffffff;
+}
+
+.tempNamewrpedit h6 {
+  font-size: 13px;
+  padding-left: 15px;
+  color: #e83e8c;
+  margin-top: -5px;
+}
+
+.tempeditactwrap .box-band {
+  height: 50px;
+  background-color: #fff;
+  border-top: solid 1px #ced4da;
+  border-right: solid 1px #ced4da;
+  border-left: solid 1px #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+.tempeditactwrap .box-band .usebtnwrp {
+  display: flex;
+  align-items: center;
+}
+.tempeditactwrap .box-band .btn-primary {
+  color: #fff;
+  background-color: #1b84e7;
+  border-color: #1b84e7;
+  font-size: 13px;
+  font-weight: 300;
+}
+.tempeditactwrap .box-band .btn-primary:hover {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+.tempeditactwrap .box-band .inputfilebtn {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  width: 25px;
+  height: 31px;
+  left: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+.tempeditactwrap .box-band .attachitemwrp {
+  display: flex;
+  flex-direction: column;
+}
+.tempeditactwrap .box-band .attachItem {
+  padding: 8px 10px;
+  border-bottom: solid 1px #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.tempeditactwrap .box-band .attachItem .attchfilename {
+  font-size: 12px;
+  color: #495057;
+  word-break: break-all;
+  padding-right: 10px;
+}
+.tempeditactwrap .box-band .deldownld .ion-android-arrow-down, .tempeditactwrap .box-band .deldownld .ion-android-delete {
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #495057;
+}
+.tempeditactwrap .box-band .attachfiledet .dropdown-menu {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-bottom: none;
+}
+.tempeditactwrap .box-band .attachfiledet .ion-android-document {
+  display: none;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.dropdown-menu {
+  border-radius: 0px;
+  color: #868ba1;
+  border: solid 1px #ced4da;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.autosavewrp {
+  width: 15px;
+  height: 25px;
+  display: flex;
+  margin-top: 6px;
+}
+.autosavewrp .sk-double-bounce {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.autosavewrp .sk-double-bounce .sk-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e83e8c;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+  animation: sk-doubleBounce 2s infinite ease-in-out;
+}
+.autosavewrp .sk-double-bounce .sk-double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.font-11 {
+  font-size: 11px !important;
+}
+
+.w-110 {
+  width: 110px;
+}
+
+.w-95 {
+  width: 95px;
+}
+
+.autsav {
+  font-size: 11px;
+  color: #495057;
+  padding-left: 5px;
+  padding-left: 2.5px;
+}
+
+.footer.editor {
+  margin-top: 30px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.footer.editor .copyriteWrp {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #495057;
+}
+
+.hideDiv {
+  display: none !important;
+}
+
+/*UPload editor*/
+.dropdowneditor {
+  background-color: #ffffff;
+  padding: 10px;
+  width: 180px;
+  border: solid 1px #ced4da;
+}
+
+/*UPload editor*/
+select + .select2-container {
+  width: 100% !important;
+  font-family: "Roboto", sans-serif !important;
+  color: #495057 !important;
+  font-weight: 400 !important;
+}
+
+[class^=select2] {
+  border-radius: 0px !important;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+  .attachfiledet .ion-android-document {
+    display: block !important;
+  }
+  .attachfiledet .seeattch {
+    display: none;
+  }
+  .pageconthead .pagetitle {
+    font-size: 16px;
+  }
+  .tempNamewrpedit h6 {
+    margin-top: 10px !important;
+    margin-bottom: 10px;
+  }
+}
+.deldownmodalwrp {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.deldownmodal {
+  width: 300px;
+  max-width: 300px;
+  border: solid 1px #ced4da;
+  display: flex;
+  flex-direction: column;
+}
+.deldownmodal .deldownheader {
+  height: 40px;
+  background-color: #dc3545;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.deldownmodal .deldownheader .deldownmodal-title {
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 700;
+}
+.deldownmodal .deldownheader .close {
+  color: #fff;
+}
+.deldownmodal .deldownmodalbody {
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+}
+.deldownmodal .deldownmodalfoot {
+  height: 50px;
+  background-color: #f8f9fa;
+  border-top: solid 1px #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+.deldownmodal .deldownmodalfoot .font-12 {
+  font-size: 12px;
+}
+
+.deldownmodalwrp.show {
+  display: flex;
+}
+
+/* Tagged an existing form*/
+.tagfrmeditwrp {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border: solid 1px #ced4da;
+  min-height: 64vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taggextfrmwrp {
+  width: 50%;
+  margin: auto;
+}
+
+.taggextfrmitem {
+  position: relative;
+}
+
+.taggobtn {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+}
+
+.form-control {
+  border-radius: 0px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.h-60px {
+  height: 60px;
+}
+
+.bwsnote {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 0;
+}
+
+.text-color-blue {
+  color: #1b84e7;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 992px) {
+  .copyriteWrp {
+    flex-wrap: wrap !important;
+    flex-direction: column;
+    text-align: center;
+    line-height: 24px;
+  }
+  .taggextfrmwrp {
+    width: 100%;
+  }
+}/*# sourceMappingURL=upload-editor.css.map */

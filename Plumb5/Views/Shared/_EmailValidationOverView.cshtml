@@ -1,0 +1,55 @@
+﻿<div id="emailvalidwrap" class="popupcontainer hideDiv">
+    <div class="popupItem w-650 m-p-wid-300 position-relative popup-tbl">
+        <div class="popuptitle">
+            <h6>Contact Email Validaton <span id="ui_spBindGroupName"></span></h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody bg-white">
+            <div class="tableWrapper">
+                <div class="table-responsive">
+                    <table class="table tbl-td-ta-lft" id="ui_tblValidationOverviewReportData">
+                        <thead>
+                            <tr>
+                                <th class="m-p-w-190 td-wid-15" scope="col">
+                                    Created Date
+                                </th>
+                                <th class="m-p-w-190 td-wid-13" scope="col">
+                                    Status
+                                </th>
+                                <th class="m-p-w-190 td-wid-15" scope="col">
+                                    Unique Emails
+                                </th>
+                                <th class="m-p-w-190 td-wid-10" scope="col">
+                                    Valid
+                                </th>
+                                <th class="m-p-w-190 td-wid-12" scope="col">
+                                    In-Valid
+                                </th>
+                                <th class="m-p-w-190 td-wid-20" scope="col">
+                                    Progress
+                                </th>
+                                <th class="m-p-w-190 td-wid-15" scope="col">
+                                    Updated Date
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="ui_tbodyValidationOverviewReportData">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("_InnerPaging");
+        }
+    </div>
+</div>
+
+<!--Popover html-->
+<div class="emlvalidfilewrp hideDiv">
+    <div class="tableemvalid" id="ui_filedetails">
+    </div>
+</div>
+
+<!--Popover html-->
+<script src="~/js/ManageContact/ContactEmailValidationOverView.js"></script>

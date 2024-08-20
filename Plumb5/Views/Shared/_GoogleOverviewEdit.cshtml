@@ -1,0 +1,144 @@
+﻿<div id="googleoverview" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Export Group to Google</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="googwrap p-4">
+                    <div class="form-group">
+                        <label for="Group">Group</label>
+                        <select id="ddlgoogle_contactgroups" name="" class="form-control groupgoogle select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                            <option value="0">Select Group</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Group">Groogle Account</label>
+                        <select id="ddlgoogle_accounts" name="" class="form-control groupgoogle select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                            <option value="0">Select Google Account</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Group">Google Audience</label>
+                        <div class="googlradiowrap">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="createnewgoog" name="googleaudiencetype" value="Create New" checked="" class="custom-control-input">
+                                <label class="custom-control-label" for="createnewgoog">Create New</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="existgoog" name="googleaudiencetype" value="Existing" class="custom-control-input">
+                                <label class="custom-control-label" for="existgoog">Existing</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="createnewinput">
+                        <div class="form-group">
+                            <label for="Group">Google Audience</label>
+                            <input id="txtgoogleaudience" type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="Group">Google Discription</label>
+                            <input id="txtgoogleaudiencedis" type="text" name="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="existornewwrap">
+                        <div class="createnewwrap hideDiv">
+                            <div class="form-group">
+                                <select id="ddlgoogle_audiencegroups" name="" class="form-control groupgoogle select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                    <option value="0">Select Google Account</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="existwrap mt-4">
+                            <div class="form-group">
+                                <div class="googlradiowrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="onetime" name="googletime" value="One-Time" class="custom-control-input">
+                                        <label class="custom-control-label" for="onetime">One-Time</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="recurrin" name="googletime" value="Recurring" class="custom-control-input">
+                                        <label class="custom-control-label" for="recurrin">Recurring</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="googloption w-50">
+                                <div id="dayfield" class="form-group">
+                                    <label for="Group">Day</label>
+                                    <select name="" class="form-control" id="ddltimeday">
+                                        <option value="Select">Select</option>
+                                        <option value="Monday" selected="">Monday</option>
+                                        <option value="Tuesday">Tuesday</option>
+                                        <option value="Wednesday">Wednesday</option>
+                                        <option value="Thursday">Thursday</option>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Saturday">Saturday</option>
+                                        <option value="Sunday">Sunday</option>
+                                    </select>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="Group">Hours</label>
+                                            <select name="" class="form-control" id="ddlhour">
+                                                <option value="Select">Select</option>
+                                                <option value="01" selected="">1 Hour</option>
+                                                <option value="02">2 Hours</option>
+                                                <option value="03">3 Hours</option>
+                                                <option value="04">4 Hours</option>
+                                                <option value="05">5 Hours</option>
+                                                <option value="06">6 Hours</option>
+                                                <option value="07">7 Hours</option>
+                                                <option value="08">8 Hours</option>
+                                                <option value="09">9 Hours</option>
+                                                <option value="10">10 Hours</option>
+                                                <option value="11">11 Hours</option>
+                                                <option value="12">12 Hours</option>
+                                                <option value="13">13 Hours</option>
+                                                <option value="14">14 Hours</option>
+                                                <option value="15">15 Hours</option>
+                                                <option value="16">16 Hours</option>
+                                                <option value="17">17 Hours</option>
+                                                <option value="18">18 Hours</option>
+                                                <option value="19">19 Hours</option>
+                                                <option value="20">20 Hours</option>
+                                                <option value="21">21 Hours</option>
+                                                <option value="22">22 Hours</option>
+                                                <option value="23">23 Hours</option>
+                                                <option value="24">24 Hours</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="form-group">
+                                            <label for="Group">Minutes</label>
+                                            <select name="" class="form-control" id="ddlminute">
+                                                <option value="Select">Select</option>
+                                                <option value="01" selected="">00</option>
+                                                <option value="15">15 Min</option>
+                                                <option value="30">30 Min</option>
+                                                <option value="45">45 Min</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button id="btngooglesave" class="btn btn-primary mr-2" type="button">
+                    Save
+                </button>
+                <button class="btn btn-secondary clsepopup" type="button">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

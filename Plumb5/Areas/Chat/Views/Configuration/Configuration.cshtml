@@ -1,0 +1,356 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Chat Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Chat Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Live Chat</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active" data-setttype="configuration">Configuration</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="configuration" class="setttabcontainer">
+                        <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingOne">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="tx-gray-800 transition collapsed">
+                                        External Resources
+                                    </a>
+                                </div><!-- card-header -->
+                                <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="addemailWrap m-mb-3">
+                                            <div class="embtnwrap">
+                                                <button type="button" class="btn btn-primary btn-sm addfrmresourc DesignPermission">
+                                                    Add Resources
+                                                </button>
+                                            </div>
+                                            <div class="tableWrapper tbl-settings">
+                                                <div class="table-responsive">
+                                                    <table id="ui_tableReport" class="table tbl-td-ta-lft border-right border-left">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="helpIcon td-wid-30 m-p-w-220" scope="col">
+                                                                    <div class="spacBet">
+                                                                        <div>Link Type</div>
+                                                                        <div class="th-iconWrp">
+                                                                            <i class="icon ion-ios-help-outline"></i>
+                                                                            <div class="toottipWrap">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th class="helpIcon td-wid-25 m-p-w-220" scope="col">
+                                                                    <div class="spacBet">
+                                                                        <div>Link Description</div>
+                                                                        <div class="th-iconWrp">
+                                                                            <i class="icon ion-ios-help-outline"></i>
+                                                                            <div class="toottipWrap">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th class="helpIcon td-wid-35 m-p-w-220" scope="col">
+                                                                    <div class="spacBet">
+                                                                        <div>link URL</div>
+                                                                        <div class="th-iconWrp">
+                                                                            <i class="icon ion-ios-help-outline"></i>
+                                                                            <div class="toottipWrap">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </th>
+                                                                <th class="helpIcon td-wid-10 m-p-w-150" scope="col">
+                                                                    <div class="spacBet">
+                                                                        <div>Status</div>
+                                                                    </div>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="ui_tbodyReportData">
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="h-70"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingTwo">
+                                    <a class="tx-gray-800 transition collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Visitor Limit (Per Agent)
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <div class="addemailWrap m-mb-3">
+                                            <h6 class="box-title">Visitor Limit</h6>
+                                        </div>
+                                        <div class="form-group ml-4 w-110">
+                                            <select class="form-control" id="ui_ddlVisitorLimit">
+                                                <option value="Select">Select</option>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="25">25</option>
+                                                <option value="30">30</option>
+                                            </select>
+                                        </div>
+                                        <div class="btnwrp pl-4 pb-4">
+                                            <button type="button" class="btn btn-primary" id="btn_SaveAgentLimit">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" role="tab" id="headingThree">
+                                    <a class="tx-gray-800 transition collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                        Chatbot Settings
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body p-4">
+                                        <div class="chatrepfrmemail">
+                                            <div class="chatrepreschktitwrp">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input chatrepresmain" id="ui_chkChatBotReportMail" name="ui_chkChatBotReportMail" />
+                                                    <label class="custom-control-label" for="ui_chkChatBotReportMail">Report through Email</label>
+                                                </div>
+                                            </div>
+                                            <div class="chatresoptwrp border-top-0 hideDiv" id="ui_divChatBotReportMailBody">
+                                                <div class="chatcondiwrp">
+                                                    <div class="chatrepcondideswrp fiftperc">
+                                                        <textarea class="form-control" cols="3" rows="3" maxlength="780" id="ui_txtChatBotReportMail"></textarea>
+                                                        <small class="text-muted">Add email id separated by comma</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chatrepassgntoper mt-3">
+                                            <div class="chatrepreschktitwrp">
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input chatrepresmain" id="ui_chkChatBotAssignSales" name="ui_chkChatBotAssignSales" value="1" />
+                                                    <label class="custom-control-label" for="ui_chkChatBotAssignSales">Assign sales person</label>
+                                                </div>
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" class="custom-control-input chatrepresmain" id="ui_chkChatBotAssignSalesBasedOnRule" name="ui_chkChatBotAssignSales" value="2">
+                                                    <label class="custom-control-label" for="ui_chkChatBotAssignSalesBasedOnRule">Assign sales person based on Rules</label>
+                                                </div>
+                                            </div>
+                                            <div class="chatresoptwrp border-top-0 hideDiv" id="ui_divChatBotAssignSalesBody">
+                                                <div class="chatcondiwrp">
+                                                    <div class="chatrepasssalpercondideswrp">
+                                                        <div class="chatrepsmsresptemwrp fiftperc">
+                                                            <div class="form-group row">
+                                                                <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3">Person Name</label>
+                                                                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                                                    <div class="droplistwrap mr-2 w-100">
+                                                                        <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlChatBotAssignSales"></select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chatrepassgntogrp mt-3">
+                                            <div class="chatrepreschktitwrp">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input chatrepresmain" id="ui_chkChatBotAssignGroup" name="ui_chkChatBotAssignGroup" />
+                                                    <label class="custom-control-label" for="ui_chkChatBotAssignGroup">Auto assign to group</label>
+                                                </div>
+                                            </div>
+                                            <div class="chatresoptwrp border-top-0 hideDiv" id="ui_divChatBotAssignGroupBody">
+                                                <div class="chatcondiwrp">
+                                                    <div class="chatrepautassgngrpcondideswrp">
+                                                        <div class="chatrepsmsresptemwrp fiftperc">
+                                                            <div class="form-group row">
+                                                                <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3">Group Name</label>
+                                                                <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                                                    <div class="droplistwrap mr-2 w-100">
+                                                                        <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlChatBotAssignGroup"></select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chatrepassgntolmsgrp mt-3">
+                                            <div class="chatrepreschktitwrp">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input chatrepresmain" id="ui_chkChatBotAssignLmsGroup" name="ui_chkChatBotAssignLmsGroup" />
+                                                    <label class="custom-control-label" for="ui_chkChatBotAssignLmsGroup">Auto assign to LMS source</label>
+                                                </div>
+                                            </div>
+                                            <div class="assgntolmsgrpwrp border border-top-0 p-4 hideDiv" id="ui_divChatBotAssignLmsGroupBody">
+                                                <div class="fiftperc">
+                                                    <div class="form-group row">
+                                                        <label class="frmlbltxt col-sm-12 col-md-3 col-lg-3 col-xl-3">Source Name</label>
+                                                        <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                                            <div class="droplistwrap mr-2 w-100">
+                                                                <select class="form-control form-control-sm notspecificbtn select2" id="ui_ddlChatBotAssignLmsGroup"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="custom-control custom-checkbox mt-2" id="ui_divLMSImportOverrideSources" style="padding-left: 15px;width:500px">
+
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" value="0" class="custom-control-input" id="lmsStaySource" name="lmsSourceType" checked>
+                                                                <label class="custom-control-label" for="lmsStaySource">Create and Stay Source</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" value="1" class="custom-control-input" id="lmsOverrideSource" name="lmsSourceType">
+                                                                <label class="custom-control-label" for="lmsOverrideSource">Override Source</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" value="2" class="custom-control-input" id="lmsNewSource" name="lmsSourceType">
+                                                                <label class="custom-control-label" for="lmsNewSource">Create New Source</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="btnwrp mt-3">
+                                            <button type="button" class="btn btn-primary" id="ui_btnChatBotSettingSave" ChatBotSettingId="0">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Popup window right-->
+
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Resources</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="popcontWrap">
+                    <div class="campinfowrp mt-2 bg-white">
+                        <div class="popheadtitlewrp">
+                            <h6>Add Links</h6>
+                        </div>
+                        <div class="mulitvariatfrmwrp mt-4">
+                            <div class="form-group row">
+                                <label class="frmlbltxt col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                                    Resources
+                                    Source
+                                </label>
+                                <div class="chbxwrp col-sm-8 col-md-8 col-lg-8 col-xl-84">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="frmfilelink" checked name="linkrestype"
+                                               value="resourceurl" class="custom-control-input">
+                                        <label class="custom-control-label" for="frmfilelink">URL</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="frmsetfilupld" name="linkrestype"
+                                               value="resourceupload" class="custom-control-input">
+                                        <label class="custom-control-label" for="frmsetfilupld">Upload</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="frmrestypurlwrp">
+                                <div class="form-group">
+                                    <label class="frmlbltxt">Resource URL</label>
+                                    <input type="text" class="form-control" id="ui_txtLink">
+                                </div>
+                            </div>
+                            <div class="frmresuplwrp hideDiv">
+                                <div class="bwsnotifupldwrp">
+                                    <button type="button" class="btn btn-second upldbtn">Upload Source File</button>
+                                    <input type="file" id="frmsettupldresfile" class="chosefile">
+                                </div>
+                                <div id="ui_div_FormUploadFileName" class="frmsetbrwfile ml-3 hideDiv">
+                                    <span id="ui_span_FormUploadFileName" class="appndfrmresfile"></span>
+                                    <span class="frmsetresremove"><i class="icon ion-ios-close-outline"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt">Resource Description</label>
+                                <textarea id="ui_txtLinkdescription" class="form-control" cols="30" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt">Resource Type</label>
+                                <select class="form-control" id="ui_ddlLinkType">
+                                    <option value="select">Select</option>
+                                    <option value="true">Javasctipt Link</option>
+                                    <option value="false">Css Link</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_btn_SaveResources">Save File</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--Popup window right-->
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="dvDeleteChatSetting" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Group?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                    Delete
+                </button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<script src="~/js/Chat/ChatSettings.js"></script>

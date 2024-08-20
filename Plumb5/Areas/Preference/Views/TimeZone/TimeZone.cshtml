@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "TimeZone";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem m-border-bottom" data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem active" data-setttype="tabcontfive">Time Zone</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="tabcontfive" class="setttabcontainer">
+
+                        <div class="subcontainer">
+                            <div class="df-ac-sbet">
+                                <h6 class="box-title m-pt-20 pl-0">Time Zone</h6>
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                        <option value="0">Select Account</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="timezonewrp mt-4 mb-4 w-50 m-w-100">
+                                <div class="form-group">
+                                    <select name="timezone_offset" id="ui_timezoneoffset" class="span5 form-control">
+                                        <option value="0">Select time zone name</option>
+                                        <option value="Dateline Standard Time" title="DST">(GMT-12:00) International Date Line West</option>
+                                        <option value="Samoa Standard Time" title="SST">(GMT-11:00) Midway Island, Samoa</option>
+                                        <option value="Hawaiian Standard Time" title="HST">(GMT-10:00) Hawaii</option>
+                                        <option value="Alaskan Standard Time" title="AST">(GMT-09:00) Alaska</option>
+                                        <option value="Pacific Standard Time" title="PST">(GMT-08:00) Pacific Time (US and Canada); Tijuana</option>
+                                        <option value="Mountain Standard Time" title="MST">(GMT-07:00) Mountain Time (US and Canada)</option>
+                                        <option value="Mexico Standard Time 2" title="MST2">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+                                        <option value="U.S. Mountain Standard Time" title="USMST">(GMT-07:00) Arizona</option>
+                                        <option value="Central Standard Time" title="CST">(GMT-06:00) Central Time (US and Canada)</option>
+                                        <option value="Canada Central Standard Time" title="CCST">(GMT-06:00) Saskatchewan</option>
+                                        <option value="Mexico Standard Time" title="MST">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+                                        <option value="Central America Standard Time" title="CAST">(GMT-06:00) Central America</option>
+                                        <option value="Eastern Standard Time" title="EST">(GMT-05:00) Eastern Time (US and Canada)</option>
+                                        <option value="U.S. Eastern Standard Time" title="USEST">(GMT-05:00) Indiana (East)</option>
+                                        <option value="S.A. Pacific Standard Time" title="SAPST">(GMT-05:00) Bogota, Lima, Quito</option>
+                                        <option value="Atlantic Standard Time" title="AST">(GMT-04:00) Atlantic Time (Canada)</option>
+                                        <option value="S.A. Western Standard Time" title="SAWST">(GMT-04:00) Caracas, La Paz</option>
+                                        <option value="Pacific S.A. Standard Time" title="PSAST">(GMT-04:00) Santiago</option>
+                                        <option value="Newfoundland and Labrador Standard Time" title="NLST">(GMT-03:30) Newfoundland and Labrador</option>
+                                        <option value="E. South America Standard Time" title="ESAST">(GMT-03:00) Brasilia</option>
+                                        <option value="S.A. Eastern Standard Time" title="SAEST">(GMT-03:00) Buenos Aires, Georgetown</option>
+                                        <option value="Greenland Standard Time" title="GST">(GMT-03:00) Greenland</option>
+                                        <option value="Mid-Atlantic Standard Time" title="MAST">(GMT-02:00) Mid-Atlantic</option>
+                                        <option value="Azores Standard Time" title="AST">(GMT-01:00) Azores</option>
+                                        <option value="Cape Verde Standard Time" title="CVST">(GMT-01:00) Cape Verde Islands</option>
+                                        <option value="GMT Standard Time" title="GMTST">(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London</option>
+                                        <option value="Greenwich Standard Time" title="GST">(GMT) Casablanca, Monrovia</option>
+                                        <option value="Central Europe Standard Time" title="CEST">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+                                        <option value="Central European Standard Time" title="CEST">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                        <option value="Romance Standard Time" title="RST">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+                                        <option value="W. Europe Standard Time" title="WEST">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+                                        <option value="W. Central Africa Standard Time" title="WCAST">(GMT+01:00) West Central Africa</option>
+                                        <option value="E. Europe Standard Time" title="EEST">(GMT+02:00) Bucharest</option>
+                                        <option value="Egypt Standard Time" title="EST">(GMT+02:00) Cairo</option>
+                                        <option value="FLE Standard Time" title="FLEST">(GMT+02:00) Helsinki, Kiev, Riga, Sofia, Tallinn, Vilnius</option>
+                                        <option value="GTB Standard Time" title="GTBST">(GMT+02:00) Athens, Istanbul, Minsk</option>
+                                        <option value="Israel Standard Time" title="IST">(GMT+02:00) Jerusalem</option>
+                                        <option value="South Africa Standard Time" title="SAST">(GMT+02:00) Harare, Pretoria</option>
+                                        <option value="Russian Standard Time" title="RST">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+                                        <option value="Arab Standard Time" title="AST">(GMT+03:00) Kuwait, Riyadh</option>
+                                        <option value="E. Africa Standard Time" title="EAST">(GMT+03:00) Nairobi</option>
+                                        <option value="Arabic Standard Time" title="AST">(GMT+03:00) Baghdad</option>
+                                        <option value="Iran Standard Time" title="IST">(GMT+03:30) Tehran</option>
+                                        <option value="Arabian Standard Time" title="AST">(GMT+04:00) Abu Dhabi, Muscat</option>
+                                        <option value="Caucasus Standard Time" title="CST">(GMT+04:00) Baku, Tbilisi, Yerevan</option>
+                                        <option value="Transitional Islamic State of Afghanistan Standard Time" title="TISAST">(GMT+04:30) Kabul</option>
+                                        <option value="Ekaterinburg Standard Time" title="EST">(GMT+05:00) Ekaterinburg</option>
+                                        <option value="West Asia Standard Time" title="WAST">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+                                        <option value="India Standard Time" title="IST" selected>(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+                                        <option value="Nepal Standard Time" title="NST">(GMT+05:45) Kathmandu</option>
+                                        <option value="Central Asia Standard Time" title="CAST">(GMT+06:00) Astana, Dhaka</option>
+                                        <option value="Sri Lanka Standard Time" title="SLST">(GMT+06:00) Sri Jayawardenepura</option>
+                                        <option value="N. Central Asia Standard Time" title="NCAST">(GMT+06:00) Almaty, Novosibirsk</option>
+                                        <option value="Myanmar Standard Time" title="MST">(GMT+06:30) Yangon Rangoon</option>
+                                        <option value="S.E. Asia Standard Time" title="SEAST">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+                                        <option value="North Asia Standard Time" title="NAST">(GMT+07:00) Krasnoyarsk</option>
+                                        <option value="China Standard Time" title="CST">(GMT+08:00) Beijing, Chongqing, Hong Kong SAR, Urumqi</option>
+                                        <option value="Singapore Standard Time" title="SST">(GMT+08:00) Kuala Lumpur, Singapore</option>
+                                        <option value="Taipei Standard Time" title="TST">(GMT+08:00) Taipei</option>
+                                        <option value="W. Australia Standard Time" title="WAST">(GMT+08:00) Perth</option>
+                                        <option value="North Asia East Standard Time" title="NAEST">(GMT+08:00) Irkutsk, Ulaanbaatar</option>
+                                        <option value="Korea Standard Time" title="KST">(GMT+09:00) Seoul</option>
+                                        <option value="Tokyo Standard Time" title="TST">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+                                        <option value="Yakutsk Standard Time" title="YST">(GMT+09:00) Yakutsk</option>
+                                        <option value="A.U.S. Central Standard Time" title="AUSCST">(GMT+09:30) Darwin</option>
+                                        <option value="Cen. Australia Standard Time" title="CAST">(GMT+09:30) Adelaide</option>
+                                        <option value="A.U.S. Eastern Standard Time" title="AUSEST">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+                                        <option value="E. Australia Standard Time" title="EAST">(GMT+10:00) Brisbane</option>
+                                        <option value="Tasmania Standard Time" title="TST">(GMT+10:00) Hobart</option>
+                                        <option value="Vladivostok Standard Time" title="VST">(GMT+10:00) Vladivostok</option>
+                                        <option value="West Pacific Standard Time" title="WPST">(GMT+10:00) Guam, Port Moresby</option>
+                                        <option value="Central Pacific Standard Time" title="CPST">(GMT+11:00) Magadan, Solomon Islands, New Caledonia</option>
+                                        <option value="Fiji Islands Standard Time" title="FIST">(GMT+12:00) Fiji Islands, Kamchatka, Marshall Islands</option>
+                                        <option value="New Zealand Standard Time" title="NZST">(GMT+12:00) Auckland, Wellington</option>
+                                        <option value="Tonga Standard Time" title="TST">(GMT+13:00) Nuku'alofa</option>
+
+                                        @*<option value="India Standard Time">India Standard Time</option>
+                                        <option value="South Africa Standard Time">South Africa Standard Time</option>
+                                        <option value="Philippine Standard Time">Philippine Standard Time</option>*@
+                                    </select>
+                                </div>
+                                <p class="pcont mt-4">
+                                    <strong>Note:</strong> click the Time zone dropdown menu and select the
+                                    time zone for your
+                                    account. This
+                                    setting localizes all of your plumb5 tools, including scheduled email sends, scheduled social
+                                    media messages, reporting and analytics.
+                                </p>
+                                <div class="btnwrp mt-3 mb-3">
+                                    <button class="btn btn-primary mr-2" type="button" id="ui_Savetimezone">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Preference/TimeZone.js"></script>

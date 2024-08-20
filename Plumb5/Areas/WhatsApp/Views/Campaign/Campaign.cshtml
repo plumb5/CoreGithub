@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Manage Campaigns WhatsApp";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+@{
+    @Html.Partial("_CampaignDraft", new ViewDataDictionary(ViewData) { { "channel", "Whatsapp" } }) 
+}

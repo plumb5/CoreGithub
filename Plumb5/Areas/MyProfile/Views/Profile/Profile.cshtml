@@ -1,0 +1,51 @@
+﻿@using Newtonsoft.Json
+@using P5GenralML
+@using Plumb5GenralFunction
+@using Plumb5.Models
+@model Plumb5.Models.MyAccountsDetails
+
+@{
+    ViewBag.Title = "Plumb5 :: My Profile";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+@{
+    LoginInfo? CustomerInfo = null;
+    if (!String.IsNullOrEmpty(Context.Session.GetString("UserInfo")))
+        CustomerInfo = JsonConvert.DeserializeObject<LoginInfo?>(Context.Session.GetString("UserInfo"));
+}
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">My Profile</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active" data-setttype="tabcontone">Profile</div>
+        <div class="setttabitem" data-setttype="tabconttwo">Password</div>
+        @if (CustomerInfo.IsSuperAdmin == 1)
+        {
+            <div class="setttabitem" data-setttype="tabcontthree">API Key</div>
+        }
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    @{
+                        Html.RenderPartial("_Profile");
+                    }
+                    @{
+                        Html.RenderPartial("_Password");
+                    }
+                    @if (CustomerInfo.IsSuperAdmin == 1)
+                    {
+                        Html.RenderPartial("_ApiKey");
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

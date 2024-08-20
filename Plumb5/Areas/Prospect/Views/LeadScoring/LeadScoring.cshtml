@@ -1,0 +1,963 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Lead Scoring";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link href="~/Content/css/toggles-full.css" rel="stylesheet" />
+<link href="~/Content/css/mb.slider.css" rel="stylesheet" />
+<div class="container">
+    <section class="sheet">
+        <div class="pageheader">
+            <h6 class="pagetitle">Lead Scoring</h6>
+            <ol class="breadcrumb slim-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Lead Management</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Lead Scoring</li>
+            </ol>
+        </div>
+
+        <div class="setttabwrap mr-tp-15">
+            <div class="setttabitem active d-flex align-items-center" title="Score Settings" data-setttype="tabcontone"><i class="fa fa-tasks font-16 mr-2"></i><span>Score Settings</span></div>
+            <div class="setttabitem d-flex align-items-center" title="threshold Settings" data-setttype="tabconttwo"><i class="fa fa-tachometer font-16 mr-2"></i><span>Threshold Settings</span></div>
+            <div class="setttabitem d-flex align-items-center" title="Decay Settings" data-setttype="tabcontthree"><i class="fa fa-hourglass font-14 mr-2"></i><span>Decay Settings</span></div>
+        </div>
+        <div class="settcontainer">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="box-white">
+                        <div id="tabcontone" class="setttabcontainer p-0">
+                            <div class="d-flex justify-content-end p-2 border-bottom">
+                                <div class="subcribeWrap">
+                                    <div class="toggle-wrapper">
+                                        <div class="toggle toggle-light success toggleUnsub" style="height: 22px; width: 60px;"><div class="toggle-slide"><div class="toggle-inner" style="width: 98px; margin-left: 0px;"><div class="toggle-on active" style="height: 22px; width: 49px; text-indent: -7.33333px; line-height: 22px;">ON</div><div class="toggle-blob" style="height: 22px; width: 22px; margin-left: -11px;"></div><div class="toggle-off" style="height: 22px; width: 49px; margin-left: -11px; text-indent: 7.33333px; line-height: 22px;">OFF</div></div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demograptabno no-data hideDiv">
+                                Click on the above button to view
+                                Score Settings
+                                details
+                            </div>
+                            <div class="demograptab">
+                                <div class="topTabWrap mt-0 border-bottom">
+                                    <div class="subtabs ml-2 align-self-end">
+                                        <div data-subtabcont="subtabone" class="subtabName btn btn-primary">
+                                            <i class="fa fa-id-card font-16 mr-2"></i>
+                                            <span>Demographic Scores</span>
+                                        </div>
+                                        <div data-subtabcont="subtabtwo" class="subtabName btn btn-secondary">
+                                            <i class="fa fa-handshake-o font-16 mr-2"></i>
+                                            <span>Behaviour Scores</span>
+                                        </div>
+                                    </div>
+                                    <div class="createBtnsrchWrap mr-2">
+                                        <div class="demograpsavewrp">
+                                            <div class="searchCampWrap position-relative mr-3 w-200">
+                                                <input class="form-control scoresearch" type="text" name="" id="ui_txtSearch" placeholder="Search by Score Name">
+                                                <i class="icon ion-android-search serchicon r-10" id="SearchBydemographic"></i>
+                                            </div>
+                                            <i class="icon ion-ios-download-outline demodownmod" data-toggle="modal" data-target="#downloadModal"></i>
+                                            <button id="addscorebtn" type="button" class="btn btn-third btn-sm mr-2 scorebtnpop">
+                                                <i class="icon ion-ios-plus-empty"></i> Add
+                                                Score
+                                            </button>
+                                            <button type="button" onclick="scoringUtil.SaveScoreSettings();" class="btn btn-primary btn-sm">Save</button>
+                                        </div>
+                                        <div class="behavioursavewrp hideDiv">
+                                            <div class="searchCampWrap position-relative mr-3 w-200">
+                                                <input class="form-control scoresearchbehaviour" type="text" name="" id="ui_txtSearch1" placeholder="Search by Score Name">
+                                                <i class="icon ion-android-search serchicon r-10" id="SearchBybehaviour"></i>
+                                            </div>
+                                            <i class="icon ion-ios-download-outline demodownmod" data-toggle="modal" data-target="#downloadModal"></i>
+                                            <button id="addscorebehbtn" type="button" class="btn btn-third btn-sm mr-2">
+                                                <i class="icon ion-ios-plus-empty"></i> Add
+                                                Score
+                                            </button>
+                                            <button type="button" onclick="scoringUtil.SaveScoreSettings();" class="btn btn-primary btn-sm">Save</button>
+                                        </div>
+                                        @{Html.RenderPartial("_Export"); }
+                                    </div>
+                                </div>
+
+                                <div id="subtabone" class="subtabcontent">
+                                    <div class="tableWrapper">
+                                        <div class="table-responsive min-h-360">
+                                            <table id="demoscoresettbl" class="table tbl-td-ta-lft">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="helpIcon m-p-w-250 td-wid-35" scope="col">
+                                                            <div class="sortWrap">
+                                                                <i class="icon ion-arrow-down-c addColor"></i>
+                                                            </div>Score Name
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                User Friendly name for the score
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon td-wid-35 m-p-w-250" scope="col">
+                                                            Score
+                                                            Description
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Short Description of the Score.
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon td-wid-15 m-p-w-190" scope="col">
+                                                            Value
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Value Set to true or false for the score.
+                                                                Score can be assigned for both true & false values.
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                                            <div class="sortWrap">
+                                                                <i class="icon ion-arrow-down-c addColor"></i>
+                                                            </div>Score
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Scoring Points.
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="ui_tbodyReportData"></tbody>
+
+                                                @*<tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Phone Number
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Lead Phone Number
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="5" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Free Email Address
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Lead Enters Free Domain Email Address
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="2" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Company Email Address
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Lead Enters Business Email Address
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="5" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Company
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Lead Enters Company Name
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="2" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Gender Male
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                If Lead is a Male
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="1" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Gender Female
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                If Lead is a Female
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="1" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Age
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                If Lead age is above Selected Value
+                                                            </td>
+                                                            <td>0</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                City
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                List of Comma Separated important Cities
+                                                            </td>
+                                                            <td>Bombay</td>
+                                                            <td><input type="text" value="6" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                City
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                List of Comma Separated important Cities
+                                                            </td>
+                                                            <td>kolkata</td>
+                                                            <td><input type="text" value="5" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Country
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                List of Comma Separated important Countries
+                                                            </td>
+                                                            <td>India</td>
+                                                            <td><input type="text" value="7" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+
+                                                    </tbody>*@
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="subtabtwo" class="subtabcontent hideDiv">
+                                    <div class="tableWrapper">
+                                        <div class="table-responsive">
+                                            <table id="behavscoresettbl" class="table tbl-td-ta-lft">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="helpIcon m-p-w-250 td-wid-35" scope="col">
+                                                            <div class="sortWrap">
+                                                                <i class="icon ion-arrow-down-c addColor"></i>
+                                                            </div>Score Name
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                User Friendly name for the score.
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon td-wid-35 m-p-w-250" scope="col">
+                                                            Score
+                                                            Description
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Short Description of the Score.
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon td-wid-15 m-p-w-190" scope="col">
+                                                            Value
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Value Set to true or false for the score.
+                                                                Score can be assigned for both true & false values.
+                                                            </div>
+                                                        </th>
+                                                        <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                                            <div class="sortWrap">
+                                                                <i class="icon ion-arrow-down-c addColor"></i>
+                                                            </div>Score
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Scoring Points.
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="ui_tbodyReportData1"></tbody>
+                                                @*<tbody>
+                                                        <tr>
+                                                            <td>
+                                                                Traffic source - Direct
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Anyone typing the URL of the website.
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Traffic source - Search
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                A person searching for a solution.
+
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Traffic source - Adwords
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                PPC Campaigns in Search Networks.
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                Site Search
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Any search done on the website.
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Form Submitted</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Form Successfully Submitted.
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Form Closed</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                form closed without submission
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Email Opened</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Email Opened by the Lead
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Email Clicked</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Email Link Clicked by the Lead
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Email Unsubscribe</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Opt-out of Email Subscription
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>SMS Clicked</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                SMS Link Clicked by the Lead
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>SMS Unsubscribe</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                Opt-out of SMS Subscription
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Chat Missed</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                IF the Lead Missed a Chat
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Chat Completed</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                IF the Lead Completed a Chat
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Browser Notification Subscribe</span>
+                                                                    <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                IF the Lead subscribes to Browser Notification
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>
+                                                                        Browser Notification
+                                                                        Unsubscribe
+                                                                    </span> <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                IF the Lead unsubscribes to Browser Notification
+                                                            </td>
+                                                            <td>True</td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="d-flex align-items-center justify-content-between">
+                                                                    <span>Page URL</span> <i class="icon ion-ios-trash pgeurldel"></i>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td-wid-10 wordbreak">
+                                                                If the User Visits the Specified URL
+                                                            </td>
+                                                            <td>
+                                                                <div class="text-truncate w-160pc" title="https://www.thedecorcircle.com/products/home-decor-opertus-outdoor-indoor-flower-black-vase?variant=39439878815933&amp;currency=INR&amp;utm_medium=product_sync&amp;utm_source=google&amp;utm_content=sag_organic&amp;utm_campaign=sag_organic&amp;gclid=Cj0KCQjw6s2IBhCnARIsAP8RfAiDI0nVAEhEA0wS6XTP8dHcLX_NxAkMiuYygKjGoZg3WHpjXwbXKncaAuruEALw_wcB">
+                                                                    https://www.thedecorcircle.com/products/home-decor-opertus-outdoor-indoor-flower-black-vase?variant=39439878815933¤cy=INR&amp;utm_medium=product_sync&amp;utm_source=google&amp;utm_content=sag_organic&amp;utm_campaign=sag_organic&amp;gclid=Cj0KCQjw6s2IBhCnARIsAP8RfAiDI0nVAEhEA0wS6XTP8dHcLX_NxAkMiuYygKjGoZg3WHpjXwbXKncaAuruEALw_wcB
+                                                                </div>
+                                                            </td>
+                                                            <td><input type="text" value="0" name="" class="form-control w-100pc" id=""></td>
+                                                        </tr>
+
+                                                    </tbody>*@
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div id="tabconttwo" class="setttabcontainer p-0 hideDiv">
+                            <div class="d-flex justify-content-end p-2 border-bottom">
+                                <div class="subcribeWrap">
+                                    <div class="toggle-wrapper">
+                                        <div class="toggle toggle-light success togglebehav" style="height: 22px; width: 60px;"><div class="toggle-slide"><div class="toggle-inner" style="width: 98px; margin-left: 0px;"><div class="toggle-on active" style="height: 22px; width: 49px; text-indent: -7.33333px; line-height: 22px;">ON</div><div class="toggle-blob" style="height: 22px; width: 22px; margin-left: -11px;"></div><div class="toggle-off" style="height: 22px; width: 49px; margin-left: -11px; text-indent: 7.33333px; line-height: 22px;">OFF</div></div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="behaviourtabno no-data hideDiv">
+                                Click on the above button to view
+                                Actions
+                                settings details
+                            </div>
+                            <div class="behaviourtab">
+                                <div class="topTabWrap mt-0 border-bottom">
+                                    <div class="showingWrap">
+                                    </div>
+                                    <div class="createBtnsrchWrap mr-2">
+                                        <button id="addactionbtn" type="button" class="btn btn-third btn-sm mr-2">
+                                            <i class="icon ion-ios-plus-empty"></i> Add
+                                            Action
+                                        </button>
+                                        <button type="button" onclick="scoringUtil.SaveThresholdSettings();" class="btn btn-primary btn-sm ">Save</button>
+                                    </div>
+                                </div>
+                                <div class="tableWrapper">
+                                    <div class="table-responsive min-h-300">
+
+                                        <table id="addactiontable" class="table tbl-td-ta-lft">
+                                            <thead>
+                                                <tr>
+                                                    <th class="helpIcon td-wid-10 m-p-w-250" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        <div class="spacBet">
+                                                            <div>Score Value</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    Total Score points at which
+                                                                    the threshold action needs to be set.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="helpIcon td-wid-10 m-p-w-250" scope="col">
+
+                                                        <div class="spacBet">
+                                                            <div>Change Label</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    The Lead Label that needs to change
+                                                                    when the threshold is reached.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        <div class="spacBet">
+                                                            <div>Change Stage</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    The Lead Stage that needs to change
+                                                                    when the threshold is reached.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="helpIcon td-wid-25 m-p-w-170" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        <div class="spacBet">
+                                                            <div>Add to Group</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    The Group that this lead/Contact needs to move to,
+                                                                    once the total score for the lead reaches the threshold value.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="helpIcon td-wid-25 m-p-w-170" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        <div class="spacBet">
+                                                            <div>Assign to Agent</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    The Agent that this lead/Contact needs to be assigned to,
+                                                                    once the total score for the lead reaches the threshold value.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                    <th class="helpIcon td-wid-10 m-p-w-170" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        <div class="spacBet">
+                                                            <div>Delete</div>
+                                                            <div class="th-iconWrp">
+                                                                <i class="icon ion-ios-help-outline"></i>
+                                                                <div class="toottipWrap">
+                                                                    Delete Threshold Setting.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tblThresData">
+                                                @*<tr>
+                                                        <td>
+                                                            <input type="text" value="40" name="" class="form-control w-100pc" id="">
+                                                        </td>
+                                                        <td>
+                                                            <select name="" class="form-control w-100pc" id="">
+                                                                <option value="Warm">Warm</option>
+                                                                <option value="Cold">Cold</option>
+                                                                <option value="Hot">Hot</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <div class="w-160pc">
+                                                                <select name="" class="form-control addactiondrp select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                                    <option value="select">Select Stage</option>
+                                                                    <option value="Un-Stage">Un-Stage</option>
+                                                                    <option value="Lead In" selected="">
+                                                                        Lead In
+                                                                    </option>
+                                                                    <option value="Proposal Sent">
+                                                                        Proposal Sent
+                                                                    </option>
+                                                                    <option value="Contact Mode">
+                                                                        Contact Mode
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="w-200">
+                                                                <select name="" class="form-control addactiondrp w-150 select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                                    <option value="Real Time Engagement" selected="">
+                                                                        Real
+                                                                        Time Engagement
+                                                                    </option>
+                                                                    <option value="test Alex">test Alex</option>
+                                                                    <option value="Push Notification" selected="">
+                                                                        Push
+                                                                        Notification
+                                                                    </option>
+                                                                    <option value="Plumb5Maddy6">
+                                                                        Plumb5Maddy6
+                                                                    </option>
+                                                                    <option value="testgrp">testgrp</option>
+                                                                    <option value="Training">Training</option>
+                                                                    <option value="Calicut GT-India">
+                                                                        Calicut
+                                                                        GT-India
+                                                                    </option>
+                                                                    <option value="Calicut GT-Qatar">
+                                                                        Calicut
+                                                                        GT-Qatar
+                                                                    </option>
+                                                                    <option value="Direct Source">
+                                                                        Direct Source
+                                                                    </option>
+                                                                    <option value="KTM_Grace-Qatar">
+                                                                        KTM_Grace-Qatar
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="w-200">
+                                                                <select name="" class="form-control addactiondrp select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                                    <option value="select">Select Agent</option>
+                                                                    <option value="Anand">Anand</option>
+                                                                    <option value="Mudaiah" selected="">
+                                                                        Mudaiah
+                                                                    </option>
+                                                                    <option value="Suhsant Kumar">
+                                                                        Suhsant Kumar
+                                                                    </option>
+                                                                    <option value="Andeep Singh Chahal">
+                                                                        Andeep
+                                                                        Singh
+                                                                        Chahal
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <i id="delactionrw" class="ion ion-ios-trash pgeurldel"></i>
+                                                        </td>
+                                                    </tr>*@
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabcontthree" class="setttabcontainer p-0 hideDiv">
+                            <div class="d-flex justify-content-end p-2 border-bottom">
+                                <div class="subcribeWrap">
+                                    <div class="toggle-wrapper">
+                                        <div class="toggle toggle-light success toggledecay" style="height: 22px; width: 60px;"><div class="toggle-slide"><div class="toggle-inner" style="width: 98px; margin-left: 0px;"><div class="toggle-on active" style="height: 22px; width: 49px; text-indent: -7.33333px; line-height: 22px;">ON</div><div class="toggle-blob" style="height: 22px; width: 22px; margin-left: -11px;"></div><div class="toggle-off" style="height: 22px; width: 49px; margin-left: -11px; text-indent: 7.33333px; line-height: 22px;">OFF</div></div></div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decaytabno no-data hideDiv">
+                                Click on the above button to view
+                                Decay
+                                settings details
+                            </div>
+                            <div class="decaytabtab">
+                                <div class="topTabWrap mt-0 border-bottom">
+                                    <div class="showingWrap">
+                                    </div>
+                                    <div class="createBtnsrchWrap mr-2">
+                                        <button type="button" onclick="scoringUtil.SaveDecaySettings();" class="btn btn-primary btn-sm ">Save</button>
+                                    </div>
+                                </div>
+                                <div class="leadscoresub p-5" id="tblDecayData">
+                                    @*<div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 15 days</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact15d"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input" id="clrscore_1" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_1">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 30 days</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact30d"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_2" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_2">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 60 days</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact60d"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_3" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_3">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 90 days</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact90d"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_4" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_4">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 6 Months</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact6mnt"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_5" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_5">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 9 Months</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact9mnt"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_6" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_6">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col-lg-4">
+                                                <label for="" class="font-16 frmlbltxt">No activity for 12 Months</label>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="leadinptwrp d-flex align-items-center flex-wrap">
+                                                    <div class="screinptwrp">
+                                                        <input type="number" name="" value="0" class="form-control w-60px" id="leadact12mnt"> <span class="frmlbltxt ml-2">points subtracted </span>
+                                                    </div>
+                                                    <div class="clrchckbxwrp">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input clrscorechck" id="clrscore_7" name="clrscore">
+                                                            <label class="custom-control-label" for="clrscore_7">Clear lead score</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Custom Score</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-20">
+                <div class="addscoredemowrp">
+                    <div class="popcontWrap">
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Scoring Attribute</label>
+                            <select class="form-control addactiondrp select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true" id="ddlScoringName">
+                                <option value="select" label="select">Select</option>
+                                <option value="age" data-channel="contact">Age</option>
+                                <option value="country" data-channel="contact">Country</option>
+                                <option value="city" data-channel="contact">City</option>
+
+
+
+                            </select>
+                        </div>
+                        @*<div class="form-group">
+                                <label class="frmlbltxt" for="">Scoring Attribute</label>
+                                <select name="" class="form-control" id="ddlScoringName">
+                                    <option value="select">Select</option>
+                                    <option value="age" data-channel="contact">Age</option>
+                                    <option value="country" data-channel="contact">Country</option>
+                                    <option value="city" data-channel="contact">City</option>
+                                </select>
+                            </div>*@
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Scoring Description</label>
+                            <textarea name="" id="txtScoringDescription" class="form-control" cols="30" rows="2" spellcheck="false"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Attribute Value</label>
+                            <input type="text" class="form-control" id="txtValue">
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Score</label>
+                            <input type="number" class="form-control" id="txtScore">
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="addscorebehavirwrp hideDiv">
+                    <div class="popcontWrap">
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Scoring Attribute</label>
+                            <select name="" class="form-control addactiondrp select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="ddlChannel">
+                                <option value="select">Select</option>
+                                <option value="form" data-channel="captureform">Web Forms</option>
+                                <option value="email" data-channel="email">Email</option>
+                                <option value="sms" data-channel="sms">SMS</option>
+                                <option value="chat" data-channel="chat">Chat</option>
+                                <option value="webpush" data-channel="webpush">Browser Notification</option>
+                                <option value="pageutmparameters" data-channel="pageutmparameters">Page utm parametrs </option>
+                                <option value="behaviourparameters" data-channel="behaviourparameters">Behaviour  parametrs</option>
+                                <option value="pageurlparameters" data-channel="pageurlparameters">Page url parametrs</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group ActionDiv">
+                            <label class="frmlbltxt" for="">Action</label>
+                            <select name="" class="form-control addactiondrp select2-hidden-accessible" tabindex="-1" aria-hidden="true" id="ddlAction">
+                                <option value="select">Select</option>
+                            </select>
+                        </div>
+                        <div class="form-group CampaignDiv">
+                            <label class="frmlbltxt" for="">Campaign Name</label>
+                            <select class="form-control addactiondrp select2-hidden-accessible" data-placeholder="Select Group(s)" tabindex="-1" aria-hidden="true" id="ddlCampaign">
+                                <option value="select" label="select">Select</option>
+                                <option value="0" label="0">All Campaign</option>
+                                @*<option value="Real Time Engagement">Real Time Engagement</option>
+                                    <option value="test Alex">test Alex</option>*@
+
+                            </select>
+                        </div>
+
+
+                        <div class="form-group txtvaluesDiv hideDiv">
+                            <label class="lblvalues" for="">Action Values</label>
+                            <input type="text" id="txtvalues" class="form-control" spellcheck="false">
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Scoring Description</label>
+                            <textarea name="" id="txtScoringDescription1" class="form-control" cols="30" rows="2" spellcheck="false"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Score Value</label>
+                            <input type="number" class="form-control" id="txtScore1">
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnScoreSave">Save</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="~/js/toggles.min.js"></script>
+<script src="~/js/Prospect/LeadScoring.js"></script>
+

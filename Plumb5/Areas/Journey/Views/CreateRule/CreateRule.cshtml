@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Creat Workflow Rules";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+
+<section class="sheet">
+    <div class="pageheader">
+        <div class="contentHead">
+            <h6 class="pagetitle">Journey Designer</h6>
+            <small class="wrkflwrulname"><span class="wrkflweidt"></span><span id="ui_span_EditRuleNmae" class="fa fa-pencil"></span></small>
+        </div>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Advanced</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Journey Designer</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Rules</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link" href="/Journey/Workflows"><i class="fa fa-code-fork font-16 pr-2"></i>My Workflows</a></div>
+            <div class="tabItem"><a class="tap-nav-link active" href="/Journey/Rules"><i class="fa fa-link font-16 pr-2"></i>Rules</a></div>
+            @*<div class="tabItem"><a class="tap-nav-link" href="/Journey/History"><i class="fa fa-history font-16 pr-2"></i>History</a></div>*@
+        </div>
+        @*<div class="iconsWrap">
+                <div class="searchCampWrap position-relative mr-3">
+                    <input class="form-control" type="text" name="" id="" placeholder="Search Workflows">
+                    <i class="icon ion-android-search serchicon"></i>
+                </div>
+                <i class="icon ion-ios-download-outline" data-toggle="modal" data-target=".bd-example-modal-sm"></i><i class="icon ion-ios-printer-outline"></i>
+            </div>*@
+    </div>
+    <div class="maincontainerfixhite">
+        <div class="mainflxcolumn">
+            <div class="col-hite-100 pd-40 m-pd-20">
+                <div class="chatdesignwrp mb-3">
+                    @{ Html.RenderPartial("_Rules"); }
+                </div>
+            </div>
+            <div class="col-foot-save pl-3 pr-3">
+                <div class="backbtnWrap">
+                    <a href="/Journey/Rules" class="btn btn-second">Cancel</a>
+                </div>
+                <div class="nextbtnWrap">
+                    <a id="ui_btn_SaveWorkflowRule" href="javascript:void(0);" class="btn btn-primary">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Popup window left-->
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Rule Name</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody p-3">
+            <div class="form-group">
+                <label class="frmlbltxt" for="">Rule Name</label>
+                <input type="text" class="form-control" id="wrkflwrulename" placeholder="Rule Name">
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <a id="ui_btn_AddRuleName" href="javascript:void(0);" class="btn btn-primary mr-2 editwrkflwname">Add</a>
+                <a href="javascript:void(0);" class="btn btn-secondary clsepopup">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popup window left-->
+
+<script src="~/js/Journey/CreateRules.js"></script>

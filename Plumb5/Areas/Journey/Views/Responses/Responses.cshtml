@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Responses";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<script src="~/js/Journey/p5journey.js"></script>
+<link href="~/Content/css/journey_style.css" rel="stylesheet" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Workflow Responses (<span id="ui_spnWorkFlowName"></span>)</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Journey</a></li>
+            <li class="breadcrumb-item"><a href="#">Reports</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Responses</li>
+        </ol>
+    </div>
+
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap border-bottom">
+                <div class="showingWrap pt-2 pb-2">
+                    @{
+                        Html.RenderPartial("_PageHeadingWithDate");
+                    }
+                </div>
+                <div class="iconsWrap-docu">
+                    <div id="wrkflowreportprint" class="frmactionbtn previewbg fa fa-print" title="Workflow Report">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-dropdown addstartfiltr active" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span id="ui_searchbytext">Search By</span><i class="icon ion-android-funnel"></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterTags">
+                            <div class="startwith">
+                                <a class="dropdown-item" href="javascript:void(0)">All</a>
+                                <a class="dropdown-item" href="javascript:void(0)">EmailId</a>
+                                <a class="dropdown-item" href="javascript:void(0)">Phone Number</a>
+                                <a class="dropdown-item" href="javascript:void(0)">MachineId</a>
+                                <a class="dropdown-item" href="javascript:void(0)">DeviceId</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subdivFiltWrap border-0 p-0 hideDiv">
+                <div class="filtSearchBox">
+                    <div class="searchBoxWrap">
+                        <div class="dropdownSelectItem">
+                            <input class="form-control form-control-sm mr-2" placeholder="All" type="text" name="" id="searchFilterBox">
+                        </div>
+                        <button class="btn btn-primary btn-sm" type="button" id="ui_btnSearch">Go</button>
+                    </div>
+                </div>
+            </div>
+            <div class="scheduledresponses">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+
+                            @*workflow report*@
+
+                            <div class="scrollbar flowchart" id="flowchart" style="height: 878px;">
+                            </div>
+                            <div id="dvFocus" style="right: 40px;position: fixed;padding-right: 20px;color: #ccc;padding: 20px;top: 250px;z-index: 1;">
+                                <div class="zoom">
+                                    <i onclick="Zooming(1)" id="aZoomIn" class="fa fa-search-plus" aria-hidden="true" style="cursor:pointer;" title="Zoom In"></i>
+                                </div>
+                                <div class="zoom">
+                                    <i onclick="Zooming(0)" id="aZoomIn" class="fa fa-search-minus" aria-hidden="true" style="cursor:pointer;" title="Zoom Out"></i>
+                                </div>
+                            </div>
+                            @*end workflow report*@
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+@{
+    Html.RenderPartial("_Paging");
+}
+@{
+    Html.RenderPartial("Journey/_WorkFLowGroup");
+}
+@{
+    Html.RenderPartial("_MailCampaignResponsesContacts");
+}
+@{
+    Html.RenderPartial("_SmsCampaignResponsesContacts");
+}
+@{
+    Html.RenderPartial("_WebPushCampaignResponsesUsers");
+}
+@{
+    Html.RenderPartial("_MobilePushCampaignResponsesUsers");
+}
+@{
+    Html.RenderPartial("_WebhookResponsesContacts");
+}
+@{
+    Html.RenderPartial("_WhatsappCampaignResponsesContacts");
+}
+
+
+<script src="~/js/Journey/p5journeyReport.js"></script>
+<script src="~/js/Journey/ReportWorkFlow.js"></script>

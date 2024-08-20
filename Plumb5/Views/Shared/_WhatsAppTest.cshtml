@@ -1,0 +1,77 @@
+﻿<div id="whatsapptestcamp" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>TEST CAMPAIGN</h6>
+                <small class="popupsubtitle" id="ui_txt_WhatsAppTemplateName"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="whatsappTestTemp" class="smsEditinfowrp pad-20 position-relative">
+                    <div class="testmailtempwrp pl-3 pr-3">
+                        <div class="mailtranspromowrp mb-3">
+                            <div class="df-ac-sbet">
+                                <div class="mailcontypewrp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">Campaign Identifier</label>
+                                    <input type="text" name="CampaignIdentifier" class="form-control" id="ui_txt_WhatsAppCampaignIdentifier">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="checkeebx-group mt-2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="indivCampaign" id="testcampaignindiv"
+                                               name="testcampaignType" class="custom-control-input" checked>
+                                        <label class="custom-control-label"
+                                               for="testcampaignindiv">Individual</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" value="groupcampaign" id="testcampaigngroup"
+                                               name="testcampaignType" class="custom-control-input">
+                                        <label class="custom-control-label" for="testcampaigngroup">Group</label>
+                                    </div>
+                                </div>
+                                <div id="indivtxtbox" class="textcampWrap mt-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="PhoneNumber" id="ui_txt_WhatsAppIndividualPhoneNumber">
+                                    </div>
+                                </div>
+                                <div id="groupdropdownbox" class="textcampWrap mt-3 hideDiv">
+                                    <div class="form-group">
+                                        <select id="testcampgroupname" class="form-control" data-placeholder="Select Group(s)"></select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label class="frmlbltxt w-100">WSP Configuration Name</label>
+                                    <select name="" class="form-control" id="ui_ConfigurationName"></select>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-danger font-13 mt-3 mb-0">Note:</p>
+                        <p class="frmlbltxt">Selected group should have only 20 contacts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp mb-0">
+                <a id="ui_btntestwhatsapp" href="javascript:void(0);" class="btn btn-primary mr-2 btn-next">Test Now</a>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
