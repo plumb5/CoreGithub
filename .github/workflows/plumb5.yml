@@ -46,7 +46,7 @@ jobs:
         port: 22
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/publish/Plumb5.dll'
+        localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/Plumb5.dll'
         remotePath: './'
 
     - name: Start AppPool
