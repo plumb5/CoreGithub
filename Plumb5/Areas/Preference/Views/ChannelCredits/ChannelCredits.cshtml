@@ -1,0 +1,389 @@
+﻿@{
+    ViewBag.Title = "ChannelCredits";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem  font-12 m-border-bottom" data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem  font-12 m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem  font-12 active" data-setttype="tabcontfour">Channel Credits</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div class="setttabcontainer">
+                        <div class="subcontainer">
+                            <div class="df-ac-sbet">
+                                <h6 class="box-title m-pt-20 pl-0">Channel Credits</h6>
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="creditemcardwrp mt-4 mb-4">
+                                <div class="row mb-4">
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 m-mb-3">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Email</h5>
+                                                    <p class="featsubnam hideDiv">ESP: <span>Netcore</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">SMS</h5>
+                                                    <p class="featsubnam hideDiv">SSP: <span>Dovesoft</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSmsTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSmsAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSmsUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Whats App</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>Twillio</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWhatsappTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWhatsappAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWhatsappUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 m-mb-3">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Email Verification</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>MillionVerifier</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailVerificationTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailVerificationAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelEmailVerificationUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Click to Call</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>Exotel</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb">NA</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb">NA</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb">NA</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Spam Score Check</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>Mailtester</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSpamScoreTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSpamScoreAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelSpamScoreUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 m-mb-3">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Mobile Push</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>Twillio</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelMobilePushTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelMobilePushAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelMobilePushUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                        <div class="box-white box-pad-15 box-shadow">
+                                            <div class="vertiicnwrp addradiusdrop">
+                                                <div class="featwrp">
+                                                    <h5 class="featnametit">Web Push</h5>
+                                                    <p class="featsubnam hideDiv">SP: <span>Exotel</span></p>
+                                                </div>
+                                                <div class="dropdown dropdwnverti hideDiv">
+                                                    @*<i class="icon ion-android-more-vertical" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false"></i>*@
+                                                    <button type="button" class="verticnwrp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        <i class="icon ion-android-more-vertical mr-0"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterbycontacts">
+                                                        <a class="dropdown-item editcreditpref" href="javascript:void(0)">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crdfeturname">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWebPushTotal">0</h1>
+                                                            <small class="text-muted">Total Credits</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp border-right">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWebPushAvailable">0</h1>
+                                                            <small class="text-muted">Credits Available</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="credsdetwrp">
+                                                            <h1 class="crednumb" id="ui_h1ChannelWebPushUsed">0</h1>
+                                                            <small class="text-muted">Credits Used</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Preference/ChannelCredits.js"></script>

@@ -1,0 +1,46 @@
+﻿<div class="popupcontainer hideDiv" id="dvgoogleadsresponse">
+    <div id="dv_dvgoogleadsresponse" class="popupItem w-500 m-p-wid-300 position-relative popup-tbl">
+
+        <div class="popuptitle">
+            <h6 id="spnWebResponsesHead">Job Details</h6>
+            <div>
+
+                <i title="Export" class="font-20 icon ion-close ion-ios-download-outline hideDiv" id="ui_exportgoogleadsresponse"></i>
+                &nbsp;&nbsp;&nbsp;
+                <i id="close-popup" class="icon ion-close"></i>
+            </div>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="WebSent" class="camppopupwrppr">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="ui_tblgoogleadsresponseData">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-40 m-p-w-170" scope="col">Resource Name</th>
+                                        <th class="td-wid-20 m-p-w-100" scope="col">Status</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Date</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="ui_tbodygoogleadsresponseData"></tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("_InnerPaging");
+        }
+    </div>
+
+</div>
+
+@{
+    Html.RenderPartial("_ExportInnerPageData");
+}

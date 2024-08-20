@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Facebook Login";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Login</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Facebook</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="box-white h-400">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div id="fb-root"></div>
+            <div class="fb-login-button" data-size="large" data-button-type="continue_with"
+                 data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="true"
+                 data-width=""
+                 scope="public_profile,pages_manage_posts,read_insights,pages_read_engagement,leads_retrieval">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/FacebookPage/FacebookLogin.js"></script>

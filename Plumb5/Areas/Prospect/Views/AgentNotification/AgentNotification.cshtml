@@ -1,0 +1,206 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Agent Notification";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link href="~/Content/dist/devices.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Lead Management</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/Settings">Stages</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/InactiveNotification">In-Activity Notification</a></div>
+        @*<div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/NotificationRules">Notification Rules</a></div>*@
+        <div class="setttabitem active" data-setttype="javascript:void(0);"><a href="javascript:void(0);">Lead Notification</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/Settings/AlertNotification">Alert Notification</a></div>
+        @*<div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/LeadAssignNotificationSetting">Lead Assignment Agent Notification</a></div>*@
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/CallSettings">Call Settings</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/LeadProperties">Lead Properties</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/AdvancedSettings/">Advanced Settings</a></div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="inactivitynotif" class="setttabcontainer">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-4 col-xl-4 col-lg-4">
+                                <div class="lmsinactivnotifwrp p-3">
+                                    <div class="lmsassignuserchkbxwrp mt-3">
+                                        <label for="" class="frmlbltxt w-100">
+                                            Auto Alert to Lead On Sales Assignment
+                                        </label>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" id="ui_checkautoNotificationMail" name="AutoNotificationMail" value="1">
+                                            <label class="custom-control-label" for="ui_checkautoNotificationMail">Mail</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" id="ui_checkautoNotificationSms" name="AutoNotificationSms" value="0">
+                                            <label class="custom-control-label" for="ui_checkautoNotificationSms">SMS</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" id="ui_checkautoNotificationWA" name="AutoNotificationWA" value="2">
+                                            <label class="custom-control-label" for="ui_checkautoNotificationWA">WhatsApp</label>
+                                        </div>
+                                    </div>
+                                    <div class="lmssavebtnwrp mt-4">
+                                        <button id="ui_btnSaveAutoNotification" type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-8 col-xl-8 col-lg-8">
+                                <div class="leadnotiftempwrap">
+                                    <div class="leadnotiftabwrap">
+                                        <div class="btn-group">
+                                            <button data-tabcontname="notifmailbody" type="button" class="btn btn-light leadnotiftabname active"><i class="fa fa-eye"></i> Mail</button>
+                                            <button data-tabcontname="notifsmsbody" type="button" class="btn btn-light leadnotiftabname"><i class="fa fa-eye"></i> SMS</button>
+                                            <button data-tabcontname="notifwhatsappbody" type="button" class="btn btn-light leadnotiftabname"><i class="fa fa-eye"></i> WhatsApp</button>
+                                        </div>
+                                    </div>
+                                    <div class="leadnofitabcontwrap">
+                                        <div id="notifmailbody" class="leadnofittabcont">
+                                            <div class="tabcontprevwrap">
+                                                <div class="mailDeskWrap">
+                                                    <div class="mailbodyWrap">
+                                                        <iframe src="https://plumb5.com/LeadNotification/ThankYouAlertToLeads.html"
+                                                                frameborder="0"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="notifsmsbody" class="leadnofittabcont hideDiv">
+                                            <div class="tabcontprevwrap">
+                                                <div class="androidwrap">
+                                                    <div class="deviceWrap">
+                                                        <div class="device device-google-pixel-2-xl mr-auto">
+                                                            <div class="device-frame">
+                                                                <div class="device-content">
+                                                                    <div class="devicesreenwrap border-radius-5">
+                                                                        <div class="batthead">
+                                                                            <div class="baticnwrp">
+                                                                                <div class="fa fa-wifi"></div>
+                                                                                <div class="fa fa-signal"></div>
+                                                                                <div class="fa fa-battery-half"></div>
+                                                                                <div class="timewrp">19:28</div>
+                                                                            </div>
+                                                                            <div class="messheadwrp">
+                                                                                <div class="arrwrp"><i class="icon ion-android-arrow-back"></i></div>
+                                                                                <div class="icnphone">
+                                                                                    <i class="fa fa-video-camera mr-4"></i>
+                                                                                    <i class="fa fa-phone mr-4"></i>
+                                                                                    <i class="fa fa-ellipsis-v"></i>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="devicemesscont">
+                                                                            <div class="messcont">
+                                                                                <p class="messdate">Monday, Jun 13, 8:02 AM</p>
+                                                                                <div class="messinboxwrp">
+                                                                                    <div class="namwrp">Y</div>
+                                                                                    <div class="mesinbxcont">
+                                                                                        Dear [{*CustomerName*}], Thank you for contacting us! Our Sales Manager [{*UserName*}] will call you shortly via [{*UserPhone*}] Best Wishes, from [{*AccountName*}] PLUMB5
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="device-stripe"></div>
+                                                            <div class="device-header"></div>
+                                                            <div class="device-sensors"></div>
+                                                            <div class="device-btns"></div>
+                                                            <div class="device-power"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="notifwhatsappbody" class="leadnofittabcont hideDiv">
+                                            <div class="tabcontprevwrap">
+                                                <div class="ioswrap">
+                                                    <div class="deviceWrap">
+                                                        <div class="device device-iphone-8 mr-auto">
+                                                            <div class="device-frame">
+                                                                <div class="device-content h-100 whatsapp-bg">
+                                                                    <div class="devicescreenioswrp">
+                                                                        <div class="iosbathead bg-light">
+                                                                            <div class="iostopbtry pl-2 pr-2">
+                                                                                <div class="signwrp d-flex h-20p">
+                                                                                    <i class="icon ion-android-more-horizontal mr-01"></i><i class="icon ion-android-more-horizontal"></i>
+                                                                                    <i class="icon ion-wifi ml-2"></i>
+                                                                                </div>
+                                                                                <div class="timwrp">
+                                                                                    9:41 AM
+                                                                                </div>
+                                                                                <div class="battp d-flex">
+                                                                                    <div class="timwrp mr-1">50%</div>
+                                                                                    <div class="fa fa-battery-half">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="iosmeshead h-35 border-bottom pl-2 pr-2">
+                                                                                <div class="messtit d-flex align-items-center">
+                                                                                    <i class="icon ion-ios-arrow-left fa-2x"></i><span class="ml-2 iosmsstxt">Message</span>
+                                                                                </div>
+                                                                                <div class="iosmsstxt">Details</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="devicemescontwrp p-2">
+                                                                            <div class="whatsappprevwrp previewshow">
+                                                                                <div class="whatsappbox-white">
+                                                                                    @*<div class="whatsappimgwrp">
+                                                                                            <img class="whatsappban"
+                                                                                                 src="/images/analytics-whatsapp.jpg"
+                                                                                                 alt="">
+                                                                                        </div>*@
+                                                                                    <p class="mb-0">
+                                                                                        Dear [{*CustomerName*}], Thank you for contacting us! Our Sales Manager [{*UserName*}] will call you shortly via [{*UserPhone*}] Best Wishes, from [{*AccountName*}] PLUMB5
+                                                                                    </p>
+                                                                                </div>
+                                                                                @*<div class="btnwhatsappwrp">
+                                                                                        <button type="button"
+                                                                                                class="btn btnwhatsapp">
+                                                                                            <i class="fa fa-external-link"></i>
+                                                                                            Buy
+                                                                                            Now
+                                                                                        </button>
+                                                                                        <button type="button"
+                                                                                                class="btn btnwhatsapp">
+                                                                                            <i class="fa fa-phone"></i>
+                                                                                            Visit
+                                                                                            Products
+                                                                                        </button>
+                                                                                    </div>*@
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="device-stripe"></div>
+                                                                <div class="device-header"></div>
+                                                                <div class="device-sensors"></div>
+                                                                <div class="device-btns"></div>
+                                                                <div class="device-power"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Prospect/AgentNotification.js"></script>

@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Mail Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<script type="text/javascript">
+    var domainName = '@ViewBag.DomainName';
+</script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Mail</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active" data-setttype="configuration">Configuration</div>
+        <div class="setttabitem" data-setttype="spamscoresetts">Spam Score Settings</div>
+        <div class="setttabitem" data-setttype="emailverifisetts">Email Verification Settings</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="configuration" class="setttabcontainer">
+                        <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
+                            @{Html.RenderPartial("_MailSenderEmail");}
+                            @{Html.RenderPartial("_MailServiceProvider");}
+                            @{Html.RenderPartial("_MailDomainValidation");}
+                            @{Html.RenderPartial("_MailUnsubscribe");}
+
+                        </div>
+                    </div>
+                    @{Html.RenderPartial("_MailSpamVerifySettings");}
+                    @{Html.RenderPartial("_MailVerifySettings");}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script type="text/javascript">
+    $(".setttabitem").click(function () {
+        var checktabcontname = $(this).attr("data-setttype");
+        $(".setttabitem").removeClass("active");
+        $(".setttabcontainer").addClass("hideDiv");
+        $(this).addClass("active");
+        $("#" + checktabcontname).removeClass("hideDiv");
+
+        if (checktabcontname === 'emailverifisetts') {
+            ShowPageLoading();
+            GetEmailVerifySettingsDetails();
+        }
+        if (checktabcontname === 'spamscoresetts') {
+            ShowPageLoading();
+            GetSpamVerifySettingsDetails();
+        }
+    });
+</script>
+

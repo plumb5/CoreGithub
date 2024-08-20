@@ -1,0 +1,54 @@
+﻿<div class="popupcontainer hideDiv" id="dvappcampaignUsers">
+    <div id="dv_campaignContacts" class="popupItem w-450 m-p-wid-300 position-relative popup-tbl">
+        <div class="popuptitle">
+            <h6 id="spnAppResponsesHead">Sent Details</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="MobileSent" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="ui_tblMobilePushInnerReportData">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-40 m-p-w-170" scope="col">DeviceId</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">UniqueId</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Date</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="ui_tbodyMobilePushInnerReportData"></tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="MobileError" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="ui_tblMobilePushInnerReportErrorData">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-40 m-p-w-170" scope="col">DeviceId</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">UniqueId</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Date</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">ErrorMessage</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="ui_tbodyMobilePushInnerReportErrorData"></tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        @{ Html.RenderPartial("_InnerMobilePushPaging"); }
+    </div>
+
+</div>
+
+<script src="~/js/MobilePushNotification/MobilePushCampaignResponsesUsers.js"></script>

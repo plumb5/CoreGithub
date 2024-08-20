@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Contacts Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Contacts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem"><a href="/ManageContact/Settings/">Contact Merge Configuration</a></div>
+        <div class="setttabitem active"><a href="javascript:void(0);">Contact Properties</a></div>
+        <div class="setttabitem"><a href="/ManageContact/FtpImportSettings">FTP Import Settings</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ApiImportRequest">API Import Requests</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ApiImportSettings">API Import Responses</a></div>
+    </div>
+    <div class="box-white p-0">
+        @{
+            Html.RenderPartial("_ContactProperties");
+        }
+    </div>
+</section>

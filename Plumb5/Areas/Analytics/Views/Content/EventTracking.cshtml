@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Event Tracking";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Event Tracking</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Content Analysis</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Event Tracking</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+
+            </div>
+            <div class="iconsWrap-docu">
+                <div class="dropdown">
+                    <button id="filterTags" class="btn-dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span>Filter By</span> <i class="icon ion-android-funnel"></i></button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filterTags">
+                        <div class="visitfiltWrap">
+                            <a class="dropdown-item" value="All">All</a>
+                            <a class="dropdown-item" value="Name">Name</a>
+                            <a class="dropdown-item" value="CreatedDate">Sort by Event CreatedDate</a>
+                            @*<a class="dropdown-item" value="TrackedDatr">Sort by Recent Event Tracked Date</a>*@
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="text-dropdown" id="addLandingpage" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><i class="icon ion-ios-plus-empty"></i> Add Event</button>
+                    <div class="dropdown-menu dropdown-menu-right keepopen" aria-labelledby="addLandingpage">
+                        <div class="drop-form p-4">
+                            <h4 class="dropdown-head">Add Event Tracking</h4>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="txtIdentifierName" placeholder="Event Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="txtEventName" placeholder="Tag Identifier Name">
+                            </div>
+                            <div class="radioBtn mb-3">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio1" checked="checked" name="eventname" value="true">
+                                    <label class="custom-control-label" for="customRadio1">Id</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="eventname" value="false">
+                                    <label class="custom-control-label" for="customRadio2">Class</label>
+                                </div>
+                            </div>
+                            <div class="btnWrap">
+                                <button type="button" class="btn-active btn-block ContributePermission" id="btnAddEvent">Add Event</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subdivFiltWrap border-top-0">
+        <div class="filtSearchBox">
+            <div class="searchBoxWrap">
+                <div class="dropdownSelectItem">
+                    <select class="form-control form-control-sm eventfilterbyItem" data-placeholder="Select" id="searchFilterBox">
+                        <option label="Choose one"></option>
+
+                    </select>
+                </div>
+                <!-- <input class="form-control form-control-sm mr-2"  placeholder="All" type="text" name="" id="searchFilterBox"> -->
+                <button class="btn btn-primary btn-sm" type="button" id="ui_btnSearch">Go</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white border-top-0 position-relative">
+                <div class="tableWrapper tbl-settings">
+                    <div class="table-responsive">
+                        <table id="ui_tblReportData" class="table">
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-80 td-wid-15">Event Name</th>
+                                    <th scope="col" class="helpIcon m-p-w-190 td-wid-15">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Tag Identifier <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-15" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Total Event Value <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-15" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Event Type <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-10" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Status <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-160 td-wid-15" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Total Clicks<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_Paging");
+                }
+                <div class="rightPopupwrap">
+                    <div class="popupslideItem">
+                        <div class="topbandWrap">
+                            <h6>Page Visits</h6>
+                            <i class="icon ion-android-close"></i>
+                        </div>
+                        <div class="popup-body">
+                            <div class="popuptblWrap">
+                                <div class="slidPopup p-4 tbl-eventTrack">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="indentifierName" placeholder="Indentifier Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="eventTrackName" placeholder="Event Name">
+                                    </div>
+                                    <div class="radioBtn mb-3">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="eventId" value="true" name="eventtype">
+                                            <label class="custom-control-label" for="eventId">Id</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="eventClass" value="false" name="eventtype">
+                                            <label class="custom-control-label" for="eventClass">Class</label>
+                                        </div>
+                                    </div>
+                                    <div class="btnWrap mt-4">
+                                        <button type="button" class="btn btn-primary mr-2" id="btnUpdate">Update</button>
+                                        <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deleterow" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Row?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<!--Edit Confirm Modal-->
+
+
+<div class="popupcontainer hideDiv" id="dvEventValue">
+    <div id="dv_campaignContacts" class="popupItem m-p-wid-300 position-relative popup-tbl w-450">
+        <div class="popuptitle">
+            <h6 id="spnResponsesHead">Event's DETAILS</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="camppopupwrppr">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table no-data-records" id="tbleventvalue">
+                                <thead>
+                                    <tr id="thUrls" class="">
+                                        <th class="td-wid-40 m-p-w-170" scope="col">Event Value</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Total Click</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Total Unique-Click</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody id="tbleventvaluedata">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("_InnerPaging");
+        }
+    </div>
+
+</div>
+
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script>
+    $(".eventfilterbyItem").select2({
+        minimumResultsForSearch: '',
+        dropdownAutoWidth: false
+    });
+</script>
+<script src="~/js/Analytics/EventTracking.js"></script>
+

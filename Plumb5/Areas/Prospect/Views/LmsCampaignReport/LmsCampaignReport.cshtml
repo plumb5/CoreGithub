@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Campaign Reports";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+<section class="sheet">
+    <div class="pageheader">
+        <div class="contentHead">
+            <h6 class="pagetitle">My Reports</h6>
+        </div>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Lead Management</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Reports
+            </li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Prospect/Reports/MyReports">All Reports</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Prospect/SourceReports">Source Reports</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Prospect/StageReports">Stage Reports</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Prospect/LmsFollowUp">Follow Up Reports</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link active" href="/Prospect/LmsCampaignReport">Campaign Reports</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Prospect/PublisherReport">Publisher Reports</a>
+            </div>
+        </div>
+        <div class="iconsWraplmsrep">
+            @*<div class="ordbydropdownlms">
+                    <button class="btn btn-sm mr-2 border-0"
+                            title="Order By"
+                            id=""
+                            type="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <i class="fa fa-sort-amount-desc mr-0"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right"
+                         aria-labelledby="dropdownMenuButton"
+                         x-placement="bottom-start"
+                         style="
+                          position: absolute;
+                          transform: translate3d(133px, 150px, 0px);
+                          top: 0px;
+                          left: 0px;
+                          will-change: transform;
+                        ">
+                        <a class="dropdown-item lmsorderbymenulmsrep"
+                           data-ordername="Created Date"
+                           href="javascript:void(0)">Created Date</a>
+                        <a class="dropdown-item lmsorderbymenulmsrep"
+                           data-ordername="Updated Date"
+                           href="javascript:void(0)">Updated Date</a>
+                    </div>
+                </div>*@
+            <div class="iconsWrap" id="ExportDivCampaign">
+                @{ Html.RenderPartial("_Export"); }
+            </div>
+        </div>
+    </div>
+    <div class="orderbylmsrepfillwrap hideDiv">
+        <div class="filtwrpbars mr-2">
+            <div class="filtbywrp">Order by : <span class="filttypetextlmsrep">Stage Two (323)</span></div>
+            <i id="clsefillmsrep" class="icon ion-android-close"></i>
+        </div>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        <div class="showDateIconWrap">
+            @{ Html.RenderPartial("_PageHeadingWithDate"); }
+        </div>
+
+        <div class="lmsstagewrpdrpdwn">
+            <div class="lmsallsource mr-2">
+                <select name="" class="form-control form-control-sm" id="campallsources">
+                    <option value="select">Quick Filter By</option>
+                    <option value="Sources">Sources</option>
+                    <option value="Stages">Stages</option>
+                    <option value="Label">Label</option>
+                </select>
+            </div>
+            <div class="lmssearchbyname">
+                <div class="position-relative">
+                    <div class="closeserchbynamelms">
+                        <i class="icon ion-close"></i>
+                    </div>
+                    <input type="text" name="" placeholder="Search by Name" class="form-control form-control-sm" id="txtlmsCampsearchbyname">
+                    <div class="srchlmswrap">
+                        <i class="icon ion-android-search lmsserchicon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <div class="subdivWrap lmsfilthite border-top-0 position-relative">
+            <div class="selectedItemWrap justify-content-between">
+                <div class="checkBxCount">
+                    <span class="checkedCount">0</span> Contacts selected
+                </div>
+                <div class="lmsquickfilterwrp">
+                    <div class="lmssourcefilterwrp hideDiv">
+                        <label for="ui_ddlSourceSort" class="frmlbltxt w-100 mb-0">Source By</label>
+                        <div class="lmsdrpdwnsel">
+                            <select class="form-control selectpicker" data-live-search="true" multiple id="ui_ddlSourceSort"></select>
+                            <i class="fa fa-close ml-2 clselmsfilt" id="btnCloseSourceSort"></i>
+                        </div>
+                    </div>
+                    <div class="lmsstagefilterwrp mr-30 hideDiv">
+                        <label for="ui_dllStageSort" class="frmlbltxt w-100 mb-0">Stage</label>
+                        <div class="lmsdrpdwnsel">
+                            <select class="form-control select2drpdwnbrd" id="ui_dllStageSort">
+                                <option value="-1">Select Stage</option>
+                            </select>
+                            <i class="fa fa-close ml-2 clselmsfilt" id="btnCloseStageSort"></i>
+                        </div>
+                    </div>
+                    <div class="lmshandledfilterwrp mr-30 hideDiv">
+                        <label for="ui_dllHandledByUser" class="frmlbltxt w-100 mb-0">Handled By</label>
+                        <div class="lmsdrpdwnsel">
+                            <select class="form-control select2drpdwnbrd" id="ui_dllHandledByUser">
+                                <option value="0">Select Handled By</option>
+                            </select>
+                            <i class="fa fa-close ml-2 clselmsfilt" id="btnCloseHandledByUser"></i>
+                        </div>
+                    </div>
+                    <div class="lmslabelfilterwrp hideDiv">
+                        <label for="ui_dllLeadLabel" class="frmlbltxt w-100 mb-0">Label</label>
+                        <div class="lmsdrpdwnsel">
+                            <select class="form-control select2drpdwnbrd" id="ui_dllLeadLabel">
+                                <option value="select">Select Label</option>
+                                <option value="Hot">Hot</option>
+                                <option value="Warm">Warm</option>
+                                <option value="Cold">Cold</option>
+                                <option value="NULL">Not Assigned</option>
+                            </select>
+                            <i class="fa fa-close ml-2 clselmsfilt" id="btnCloseFilterLabel"></i>
+                        </div>
+                    </div>
+                    <div class="filtwrpbar mr-2 hideDiv">
+                        <div class="filtbywrp"><span class="filttypetext"></span></div>
+                        <i class="icon ion-android-close"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lmsreportwrapper">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="box-white">
+                        <div class="tableWrapper">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="helpIcon td-wid-25">
+                                                Name
+                                            </th>
+                                            <th class="helpIcon td-wid-20" scope="col">
+                                                Sent Email
+                                            </th>
+                                            <th class="helpIcon td-wid-20" scope="col">
+                                                Sent SMS
+                                            </th> 
+                                            <th class="helpIcon td-wid-20" scope="col">
+                                                Sent WhatsApp
+                                            </th>
+                                            <th class="helpIcon td-wid-20" scope="col">
+                                                Total InBounded
+                                            </th>
+                                            <th class="helpIcon td-wid-20" scope="col">
+                                                Total OutBounded
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyReportData">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        @{ Html.RenderPartial("_Paging"); }
+                        <div class="rightPopupwrap">
+                            <div class="popupslideItem">
+                                <div class="topbandWrap">
+                                    <h6>Lms Call Details</h6>
+                                    <i class="icon ion-android-close"></i>
+                                </div>
+                                <div class="popup-body">
+                                    <div class="popuptblWrap">
+                                        <div class="table-responsive">
+                                            <table class="table tbl-pageVisits">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="td-wid-40 m-p-w-170" scope="col">Call Status</th>
+                                                        <th class="td-wid-70 m-p-w-120" scope="col">No. Of Times Called</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="ui_trlmscalldetails">
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<script src="~/js/Prospect/LmsCampaignReport.js"></script>
+@*<script src="~/js/bootstrap-select.min.js"></script>*@ 

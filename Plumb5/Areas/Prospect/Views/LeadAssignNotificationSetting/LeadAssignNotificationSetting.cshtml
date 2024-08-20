@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "LeadAssignNotificationSetting";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Lead Management</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/Settings/">Stages</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/InactiveNotification">In-Activity Notification</a></div>
+        @*<div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/NotificationRules">Notification Rules</a></div>*@
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/CallSettings/">Call Settings</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/AgentNotification">Notification To Lead</a></div>
+        @*<div class="setttabitem active" data-setttype="javascript:void(0);"><a href="javascript:void(0);">Lead Assignment Agent Notification</a></div>*@
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/LeadProperties/">Lead Properties</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/Prospect/AdvancedSettings/">Advanced Settings</a></div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="inactivitynotif" class="setttabcontainer">
+                        <div class="lmsinactivnotifwrp p-3">
+                            <div class="lmsassignuserchkbxwrp mt-3">
+                                <label for="" class="frmlbltxt w-100">
+                                    Auto Alert to Agents based On Lead Assignment
+                                </label>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="ui_checkautoNotificationMail" name="AutoNotificationMail" value="1">
+                                    <label class="custom-control-label" for="ui_checkautoNotificationMail">Mail</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="ui_checkautoNotificationSms" name="AutoNotificationSms" value="0">
+                                    <label class="custom-control-label" for="ui_checkautoNotificationSms">SMS</label>
+                                </div>
+                            </div>
+                            <div class="lmssavebtnwrp mt-4">
+                                <button id="ui_btnSaveAutoNotification" type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Prospect/LeadAssignmentAgentNotification.js"></script>
+
+

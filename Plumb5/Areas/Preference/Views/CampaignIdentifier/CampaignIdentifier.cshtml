@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Preferences";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+
+}
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem m-border-bottom" data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem m-border-bottom active" data-setttype="tabconttwo">Campaign Identifier</div>
+        <div class="setttabitem" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+
+                    <div id="tabconttwo" class="setttabcontainer p-0">
+                        <div class="topTabWrap mt-0 border-bottom">
+                            <div class="showingWrap">
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount"></select>
+                                </div>
+                            </div>
+                            <div class="iconsWrap">
+                                <div class="createBtnWrap mr-2">
+                                    <div class="searchCampWrap position-relative mr-3">
+                                        <button type="button" class="btn btn-primary btn-sm createdraftPop" id="ui_CreateDrafts"><a href="javascript:void(0)">Create Campaign Identifier</a></button>
+                                    </div>
+                                    <div style="display:none;">  @{
+                                            Html.RenderPartial("_Export");
+                                        }</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tableWrapper">
+                            <div class="table-responsive">
+                                <table id="ui_tblReportData" class="table tbl-td-ta-lft">
+                                    <thead>
+                                        <tr>
+                                            <th class="helpIcon td-wid-30 m-p-w-250" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>Campaign Name</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                                </div>
+                                            </th>
+                                            <th class="td-wid-30 m-p-w-250" scope="col">Description</th>
+                                            <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>Updated On</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"></div></div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyReportData"></tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                        @{
+                            Html.RenderPartial("_Paging");
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6 id="spnCampaign">Create Draft Campaign</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div class="popcontWrap">
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="">Campaign Name</label>
+                        <input type="email" class="form-control" id="ui_txtName">
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="">Campaign Description</label>
+                        <textarea class="form-control" name="" id="ui_txtDescription" cols="30" rows="3"></textarea>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_btnAdd">Save Campaign</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletegroups" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Draft?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be done. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<script src="~/js/Preference/CampaignIdentifier.js"></script>
+<script src="~/js/Mail/Draft.js"></script>

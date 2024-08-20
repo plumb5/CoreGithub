@@ -1,0 +1,307 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Journey Designer";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Journey Designer</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Advanced</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Journey Designer</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0)"><i class="fa fa-code-fork font-16 pr-2"></i>My Workflows</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/Journey/Rules"><i class="fa fa-link font-16 pr-2"></i>Rules</a></div>
+            @*<div class="tabItem"><a class="tap-nav-link" href="/Journey/History"><i class="fa fa-history font-16 pr-2"></i>History</a></div>*@
+        </div>
+        <div class="iconsWrap">
+            <div class="searchCampWrap position-relative mr-3">
+                <input class="form-control contsearchfocus" type="text" name="" id="txt_SearchBy" placeholder="Search Workflows">
+                <i class="icon ion-android-search serchicon"></i>
+            </div>
+            @{
+                Html.RenderPartial("_Export");
+            }
+        </div>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        <div class="showingWrap">
+        </div>
+        <div class="createBtnWrap mr-3">
+            @*<a href="/Journey/CreateWorkflow/?Action=Create" class="btn btn-primary btn-sm ContributePermission">Create Workflow</a>*@
+            <a id="ui_a_CreateWorkflowBtn" href="javascript:void(0);" data-toggle="modal" data-target="#createwrkflwmod" class="btn btn-primary btn-sm DesignPermission">Create Workflow</a>
+        </div>
+    </div>
+    <div id="ui_divReportSummary" class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table id="ui_tblReportData" class="table tbl-td-ta-lft">
+                            <thead>
+                                <tr>
+                                    <th class="helpIcon td-wid-30 m-p-w-250" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                        <div class="spacBet">
+                                            <div>Workflow Name</div>
+                                            <div class="th-iconWrp">
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th class="td-wid-20 m-p-w-150" scope="col">Status</th>
+                                    <th class="helpIcon td-wid-25 m-p-w-170" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                        <div class="spacBet">
+                                            <div>Journey Started</div>
+                                            <div class="th-iconWrp">
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-25 m-p-w-170" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                        <div class="spacBet">
+                                            <div>Updated Date</div>
+                                            <div class="th-iconWrp">
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_Paging");
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletegroups" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Workflow?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be done. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="duplicateconfirmation" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Duplicate this Workflow?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure that you want to duplicate this workflow?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="confirmduplicate" type="button" class="btn btn-danger" data-dismiss="modal">Confirm</button>
+                <button id="cancelconfirmduplicate" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Change workflow status Modal-->
+<div class="modal fade bd-example-modal-sm" id="statusChange" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Workflow?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be done. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="statusChangeConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal for Create Workflow-->
+<div class="modal fade" id="createwrkflwmod" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create an Automation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body h-400 overflow-y-auto">
+                <div class="createwrkflwwrp">
+                    <ul class="list-unstyled crtewrkflwmedbg">
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="Scratch">
+                                <div class="mediaimgbg scratchbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Start from Scratch</h5>
+                                    <p>
+                                        Start from scratch with a fresh, clean slate for your automation, and add
+                                        your own triggers and actions.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="TriggerMail">
+                                <div class="mediaimgbg trigemailbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Trigger an Email</h5>
+                                    <p>
+                                        Send Automatic Mail based on a Event Rule
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="DripMail">
+                                <div class="mediaimgbg dripemailbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Set a Drip Email workflow</h5>
+                                    <p>
+                                        Create communication Workflow strategy that sends, or "drips," a pre-written
+                                        set of Mails to customers or prospects over time.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="TriggerSMS">
+                                <div class="mediaimgbg trigsmsbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Trigger an SMS</h5>
+                                    <p>
+                                        Send Automatic SMS based on a Event Rule
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="DripSMS">
+                                <div class="mediaimgbg dripsmsbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Set a Drip SMS workflow</h5>
+                                    <p>
+                                        Create communication Workflow strategy that sends, or "drips," a pre-written
+                                        set of SMSs to customers or prospects over time.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="TriggerWebPush">
+                                <div class="mediaimgbg trigwebpushbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Trigger a Web Push</h5>
+                                    <p>
+                                        Send Automatic Web Browser Notification based on a Event Rule
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="DripWebPush">
+                                <div class="mediaimgbg dripwebpushbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Set a Drip Web Push workflow</h5>
+                                    <p>
+                                        Create communication Workflow strategy that sends, or "drips," a pre-written
+                                        set of Browser Notifications to customers or prospects over time.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="TriggerMobilePush">
+                                <div class="mediaimgbg trigmobpushbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Trigger a MobilePush</h5>
+                                    <p>
+                                        Send Automatic Mobile Push Notification based on a Event Rule
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="DripMobilePush">
+                                <div class="mediaimgbg dripmobpushbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Set a Drip MobilePush workflow</h5>
+                                    <p>
+                                        Create communication Workflow strategy that sends, or "drips," a pre-written
+                                        set of Mobile Push Notifications to customers or prospects over time.
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="media" href="javacript:void(0);" data-createworkflowtype="TriggerMailSMS">
+                                <div class="mediaimgbg tirgemailsmsbg"></div>
+                                <div class="media-body">
+                                    <h5 class="mt-0 mb-1">Trigger both Email and SMS</h5>
+                                    <p>
+                                        Send Automatic Mail & SMS based on a Event Rule
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="ui_btn_CreateWorkflowContinue" href="javascript:void(0);" class="btn btn-primary">Continue</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Journey/Workflow.js"></script>
+

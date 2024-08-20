@@ -1,0 +1,330 @@
+﻿<div id="dvcustompopupdateandtime" class="popupcontainer hideDiv">
+    <div class="popupItem w-500 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Date and Time</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody p-3">
+            <div class="wrkflwsendmailwr">
+                <div class="row ">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <label class="frmlbltxt" for=""></label>
+                        <div class="radioBtn mb-3">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" checked="" value="0" id="radwaitfor" name="datetimetype">
+                                <label class="custom-control-label" for="radwaitfor">Wait For Time</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="2" id="radwaitforslot" name="datetimetype">
+                                <label class="custom-control-label" for="radwaitforslot">Wait For Slot</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" value="1" id="radproceed" name="datetimetype">
+                                <label class="custom-control-label" for="radproceed">
+                                    Proceed from the
+                                    step
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrkflwwaitforwrp">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Time</label>
+                                <input type="number" name="" value="1" min="1" class="form-control" id="txttime">
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Select Min/Hour/Day</label>
+                                <select name="" class="form-control" id="ui_dlltimetype">
+                                    <option value="0">Minutes</option>
+                                    <option value="1">Hours</option>
+                                    <option value="2">Days</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrkflwwaitforslot hideDiv">
+
+                    <div class="row">
+                        <div class="form-group" style="margin-left: 16px;">
+                            <label class="frmlbltxt" for="">Day</label>
+                            <select name="" class="form-control" id="ui_dllDay">
+                                <option value="anyday">Any Day</option>
+                                <option value="monday_friday">Weekdays (Monday to Friday)</option>
+                                <option value="saturday_sunday">Weekends (Saturday and Sunday)</option>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                                <option value="saturday">Saturday</option>
+                                <option value="sunday">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">From Hours</label>
+                                <select class="form-control" id="ui_dll_Time1">
+                                    <option value="0">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option selected="selected" value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Minutes</label>
+                                <select class="form-control" id="ui_dll_Minute1">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">To Hours</label>
+                                <select class="form-control" id="ui_dll_Time2">
+                                    <option value="0">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option selected="selected" value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Minutes</label>
+                                <select class="form-control" id="ui_dll_Minute2">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="wrkflwproceedstepwrp hideDiv">
+
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Start Date</label>
+                                <input type="text" class="form-control" placeholder="Date" id="txtdateandtime1" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Hours</label>
+                                <select class="form-control" id="ui_dllworkflowTime1">
+                                    <option value="0">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option selected="selected" value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Minutes</label>
+                                <select class="form-control" id="ui_dllworkflowMinute1">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Stop Date</label>
+                                <input type="text" class="form-control" placeholder="Date" id="txtdateandtime2" readonly>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Hours</label>
+                                <select class="form-control" id="ui_dllworkflowTime2">
+                                    <option value="0">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option selected="selected" value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Minutes</label>
+                                <select class="form-control" id="ui_dllworkflowMinute2">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="staticgroup">
+                    <h4 class="font-14 mb-0 mt-4 text-color-queued">Audience Type</h4>
+                    <div class="row mb-3">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <label class="frmlbltxt" for=""></label>
+                            <div class="radioBtn mb-3">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" checked="" value="0" id="wrkflwstatGrp" name="wrkflwAudiGrp">
+                                    <label class="custom-control-label" for="wrkflwstatGrp">Static Group</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" value="1" id="wrkflwDynaGrp" name="wrkflwAudiGrp">
+                                    <label class="custom-control-label" for="wrkflwDynaGrp">Dynamic Group</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="notetxt">
+                    <b>Note:</b> Please use wait function minimum 1 hour for user's "MAIL/SMS"
+                    responses,
+                    before setting the
+                    next related enagagement.
+                </p>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <a href="javascript:void(0)" id="btndateandtime" class="btn btn-primary mr-2">Save</a>
+                <a href="javascript:void(0)" class="btn btn-secondary clsepopup">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

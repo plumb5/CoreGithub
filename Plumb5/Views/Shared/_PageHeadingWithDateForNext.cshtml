@@ -1,0 +1,47 @@
+﻿
+<div class="showDateWrap brd-bttm-none mb-0">
+    <div class="showTxt">Showing Data for :</div>
+    <div class="dateWrap">
+        <div class="datedropdown">
+            <button class="btn dropdown-toggle" id="selectdateDropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Today
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="javascript:void(0)">Today</a>
+                <a class="dropdown-item" href="javascript:void(0)">Next Week</a>
+                <a class="dropdown-item" href="javascript:void(0)">Next Month</a>
+                <a class="dropdown-item m-p-h" href="javascript:void(0)">Custom Date Range</a>
+            </div>
+        </div>
+    </div>
+    <div class="dateBoxWrap">
+        <div class="dateStart">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="icon ion-calendar"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="ui_txtStartDate" placeholder="Start Date" autocomplete="off" />
+            </div>
+        </div>
+        <i class="icon ion-android-arrow-forward"></i>
+        <div class="dateStart">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="icon ion-calendar"></i>
+                    </span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="ui_txtEndDate" placeholder="End Date" autocomplete="off" />
+            </div>
+        </div>
+        <div class="btn-datessubWrap">
+            <button class="btn btn-active" type="button" id="ui_btnCustomDateApplyForNext">Go</button>
+        </div>
+        <div class="dateclseWrap">
+            <i class="icon ion-ios-close-outline"></i>
+        </div>
+    </div>
+</div>
+<script src="~/js/PageHeadingWithDateForNext.js"></script>

@@ -1,0 +1,159 @@
+﻿<div class="popupcontainer hideDiv" id="dvAddOrUpdateReports" style="">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Saved Reports</h6>
+            </div>
+            <i id="dvAddOrUpdateReportsclose-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont colwhiteh-100">
+
+                <div id="lmsnewreport" class="lmsnwsavedrepwrp p-3">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="txtStartDate" class="frmlbltxt">Start Date</label>
+                                <input type="text" class="form-control addcalend" id="txtStartDate">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="txtEndDate" class="frmlbltxt">End Date</label>
+                                <input type="text" class="form-control addcalend" id="txtEndDate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="div_stagesource">
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="drp_Stages" class="frmlbltxt">Stage</label>
+                                <select class="form-control select2drpdwnbrd" id="drp_Stages" data-placeholder="Add Fields">
+                                    <option value="-1">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="drp_Sources" class="frmlbltxt">Source</label>
+                                <select class="form-control select2drpdwnbrd" id="drp_Sources" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="div_handleorder">
+                        <div class="col-sm-12 colmd-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="drp_handledBy" class="frmlbltxt">Handled By</label>
+                                <select class="form-control select2drpdwnbrd" id="drp_handledBy" data-placeholder="Handled By">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 colmd-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="ui_drpdwn_OrderBy" class="frmlbltxt">Order By</label>
+                                <select class="form-control select2drpdwnbrd" id="ui_drpdwn_OrderBy" data-placeholder="Order By">
+                                    <option value="-1">Select</option>
+                                    <option value="0">Created Date</option>
+                                    <option value="1">Updated Date</option>
+                                    <option value="2">Reminder Date</option>
+                                    <option value="3">Inbox</option>
+                                    <option value="4">Planned Follow-Up Date</option>
+                                    <option value="5">Missed Follow-Up Date</option>
+                                    <option value="6">Completed Follow-Up Date</option>
+                                    <option value="7">Non Follow-Up Date</option>
+                                    <option value="8">Non Reminder Date</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 colmd-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="ui_drp_ContactGroups" class="frmlbltxt">Groups</label>
+                                <select class="form-control select2drpdwnbrd" id="ui_drp_ContactGroups" data-placeholder="Groups">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 colmd-6 col-lg-6 col-xl-6">
+                            <div class="form-group">
+                                <label for="ui_drpdwn_Forms" class="frmlbltxt">Forms</label>
+                                <select class="form-control select2drpdwnbrd" id="ui_drpdwn_Forms" data-placeholder="Forms">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lmsrepfildanswrp">
+                        <div class="row" id="trsearch0">
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="drpFields_0" class="frmlbltxt">Fields</label>
+                                    <select class="form-control select2drpdwnbrd" id="drpFields_0" data-placeholder="Add Fields"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="txtFieldAnswer_0" class="frmlbltxt">Your Answer</label>
+                                    <div class="d-flex align-items-center">
+                                        <div id="sel_drpFields_0"> <input type="text" class="form-control form-control-sm" id="txtFieldAnswer_0" /></div>
+                                        <i class="fa fa-plus lmsfildswrp"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmsaddrepcontainer"></div>
+                    </div>
+                    <div class="lmscustomrepfildanswrp">
+                        <div class="row" id="trlmssearch0">
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="drplmsFields_0" class="frmlbltxt">Lms Fields</label>
+                                    <select class="form-control select2drpdwnbrd" id="drplmsFields_0" data-placeholder="Add Lms Fields"></select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 colmd-6 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <label for="txtLmsFieldAnswer_0" class="frmlbltxt">Your Answer</label>
+                                    <div class="d-flex align-items-center">
+                                        <div id="sel_drplmsFields_0"> <input type="text" class="form-control form-control-sm" id="txtLmsFieldAnswer_0" /></div>
+                                        <i class="fa fa-plus lmscustomfildswrp"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmscustomaddrepcontainer"></div>
+                    </div>
+                    <div class="lmssaverepdet mt-3" id="savereport">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="ChkSave" chkid="0"
+                                   name="lmssaverepopt">
+                            <label class="custom-control-label" id="checkbox" for="ChkSave">Save Report</label>
+                        </div>
+                        <div class="lmssaverepdetwrp mt-3 hideDiv" id="dvReportName">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt" id="ui_name">Report Name</label>
+                                <input type="text" name="" class="form-control" id="ui_txtName">
+                            </div>
+                            <div class="form-group hideDiv" id="divui_description">
+                                <label for="" class="frmlbltxt" id="ui_description">Group Description</label>
+                                <input type="text" name="" class="form-control" id="ui_txtdescription">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnSearch">Submit</button>
+                <button class="btn btn-secondary clsepopup" id="btnCancel" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Prospect/LmsCustomReportPopUp.js"></script>

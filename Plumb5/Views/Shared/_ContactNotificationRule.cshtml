@@ -1,0 +1,303 @@
+﻿<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<div class="lmsaddrulewrp hideDiv">
+    <div class="lmsaddruleeditwrp">
+        <div class="lmsaddruleedittop">
+            <div class="df-ac-sbet">
+                <h6 class="box-title">Add / Edit Notification Rule</h6>
+                <i class="fa fa-close lmsclseaddrule"></i>
+            </div>
+        </div>
+        <div class="lmsaddruleeditmid">
+            <div class="row m-0">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 h-100">
+                    <div class="lmsaddrulnotifwrp">
+                        <div class="lmsnotiftypcont">
+                            <label class="frmlbltxt w-100">
+                                Notification Type
+                            </label>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulnotifeml" name="lmsaddrulnotiftype">
+                                <label class="custom-control-label" for="lmsaddrulnotifeml">Email</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulnotifsms" name="lmsaddrulnotiftype">
+                                <label class="custom-control-label" for="lmsaddrulnotifsms">SMS</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulnotifwa" name="lmsaddrulnotiftype">
+                                <label class="custom-control-label" for="lmsaddrulnotifwa">WhatsApp</label>
+                            </div>
+                        </div>
+                        <div class="lmsaddrulautorescont mt-4">
+                            <label class="frmlbltxt w-100">
+                                Visitor Auto Response Notification
+                            </label>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulautonotifeml" name="lmsaddrulautonotifeml">
+                                <label class="custom-control-label" for="lmsaddrulautonotifeml">Email</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulautonotifsms" name="lmsaddrulautonotifsms">
+                                <label class="custom-control-label" for="lmsaddrulautonotifsms">SMS</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulautonotifwa" name="lmsaddrulautonotifwa">
+                                <label class="custom-control-label" for="lmsaddrulautonotifwa">WhatsApp</label>
+                            </div>
+                            <div class="lmsaddrulautoemlbdy mt-3 hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Select Email Template</label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltMailTemplate" data-placeholder="Add Fields">
+                                                <option value="0">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">From Name</label>
+                                            <input type="text" name="" class="form-control form-control-sm" id="ui_MailFromName">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Subject</label>
+                                            <input type="text" name="" class="form-control form-control-sm" id="ui_MailSubject">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">From Email</label>
+                                            <input type="text" name="" class="form-control form-control-sm" id="ui_FromEmail">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lmsaddrulautosmsbdy mt-3 hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Select SMS Template</label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltSmsTemplate" data-placeholder="Add Fields">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lmsaddrulautowhtsapbdy mt-3 hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Select WhatsApp Template</label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltWhatsAppTemplate" data-placeholder="Add Fields">
+                                                <option value="0">Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmsaddrulasgngrpcont mt-4">
+                            <label class="frmlbltxt w-100">
+                                Assignment Type
+                            </label>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulasgnindiv" name="assignmenttype" value="lms Individually">
+                                <label class="custom-control-label" for="lmsaddrulasgnindiv">
+                                    Assign Individually
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulasgnrrbin" name="assignmenttype" value="Round Robin">
+                                <label class="custom-control-label" for="lmsaddrulasgnrrbin">
+                                    Assign Round Robin
+                                </label>
+                            </div>
+                            <div class="lmsaddrulasgntypcont mt-3">
+                                <div class="row lmsaddrulselusrs hideDiv">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">
+                                                Select Users
+                                            </label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltUserInfo" data-placeholder="Add Fields">
+                                                <option value="0">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row lmsaddrulselgrp hideDiv">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">
+                                                Select Group
+                                            </label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltUserInfoGroups" data-placeholder="Add Fields">
+                                                <option value="0">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmsaddrulautorescont mt-4">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulautoassignsource" name="lmsaddrulautoassignsource">
+                                <label class="custom-control-label" for="lmsaddrulautoassignsource">Auto Assign To Source</label>
+                            </div>
+                            <div class="lmsaddrulautosmsbdy mt-3 hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">
+                                                Select Source
+                                            </label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltSource" data-placeholder="Add Fields">
+                                                <option value="0">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmsaddrulautorescont mt-4">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="lmsaddrulautoassigngroup" name="lmsaddrulautoassigngroup">
+                                <label class="custom-control-label" for="lmsaddrulautoassigngroup">Auto Assign To Group</label>
+                            </div>
+                            <div class="lmsaddrulautosmsbdy mt-3 hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">
+                                                Select Group
+                                            </label>
+                                            <select class="form-control select2drpdwnbrd" name="" id="ui_sltGroups" data-placeholder="Add Fields">
+                                                <option value="0">
+                                                    Select
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lmsfieldvalcont mt-4">
+                            <label class="frmlbltxt w-100">
+                                Fields and Value
+                            </label>
+                            <div class="row mt-2">
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <label class="frmlbltxt">
+                                            Field Name
+                                        </label>
+                                        <select class="form-control selectDropdown selectFiledNamedrpdwn" name="" id="FieldType_1" data-placeholder="Add Fields" fieldindex="1">
+                                            <option value="0">
+                                                Select
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                    <div class="form-group">
+                                        <label class="frmlbltxt">Condition</label>
+                                        <select class="form-control selectDropdown conditionrule" name="" id="Condition_FieldType_1" data-placeholder="Add Fields">
+                                            <option value="0">
+                                                Select
+                                            </option>
+                                            <option value="Equal">
+                                                Equal
+                                            </option>
+                                            <option value="Is not Equal">
+                                                Is not Equal
+                                            </option>
+                                            <option value="Greater Than">
+                                                Greater Than
+                                            </option>
+                                            <option value="Less Than">
+                                                Less Than
+                                            </option>
+                                            <option value="Contains">
+                                                Contains
+                                            </option>
+                                            <option value="Not Contains">
+                                                Not Contains
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="d-flex align-items-center">
+                                        <div class="form-group" id="ui_inputdropdowndiv_1">
+                                            <label class="frmlbltxt">Field Answer</label>
+                                            <input type="text" name="" class="form-control form-control-sm" id="Answer_FieldType_1">
+                                        </div>
+                                        <i class="fa fa-plus lmsaddfildval"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lmsfildvaladdwrp hideDiv"></div>
+                        </div>
+                        <div class="lmssrchnmecont mt-4">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <label class="frmlbltxt">
+                                            Search By Name
+                                        </label>
+                                        <input type="text" name="" class="form-control form-control-sm" id="ui_RuleName">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 h-100">
+                    <div class="box-grey position-relative">
+                        <h6 class="box-title text-center pt-2">
+                            Existing Rules that match your condition
+                        </h6>
+                        <div class="lmsnotifrulviewwrp">
+                            <div class="tableWrapper bg-white">
+                                <div class="table-responsive">
+                                    <table class="table table-striped tbl-td-ta-lft border">
+                                        <tbody id="ui_MatchedRule">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div class="no-data">There is no data matching the rule.</div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lmsaddruleditbttm">
+            <button class="btn btn-secondary lmsclseaddrule" type="button">
+                Cancel
+            </button>
+            <button class="btn btn-primary text-color-white" type="button" id="ui_SaveRule">
+                Save
+            </button>
+        </div>
+    </div>
+</div>
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/Prospect/ContactNotificationRule.js"></script>

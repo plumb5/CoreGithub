@@ -1,0 +1,8 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Manage Scheduled";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+@{
+    Html.RenderPartial("_CampaignDraft", new ViewDataDictionary(ViewData) { { "channel", "Webpush" } });
+}

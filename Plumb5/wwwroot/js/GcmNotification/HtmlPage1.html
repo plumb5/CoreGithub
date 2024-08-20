@@ -1,0 +1,239 @@
+﻿
+
+
+<!DOCTYPE html>
+<html style="background:none !important;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>New</title>
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro|Cantora+One|Cabin+Condensed:400,500,600|Francois+One|Homenaje|Allerta|Allerta+Stencil|PT+Sans+Caption' rel='stylesheet' type='text/css'>
+
+
+
+   
+   
+
+    <link rel="manifest" href="/js/GcmNotification/manifest.json">
+    <script src="/js/GcmNotification/Push_Alert.js"></script>
+
+
+</head>
+<body style="background:none !important;">
+    <a href="javascript:void(0);" onclick="webpush(3598, 157128);">Open</a>
+
+
+    <form id="formid">
+
+        <div>
+            <div style="float: left;">
+                <a href="../../index.html">
+                    <img title="Plumb5" class="P5Logo" src="/images/img_trans.gif" style="position: absolute;" />
+                </a>
+            </div>
+            <div class="FeatureMainTabHeading">ENGAGEMENT</div>
+            <div style="margin-left: 73px;">
+                <div class="divSmalLogo"></div>
+                <div class="divSmalLogo Extended" style="widows:250px;"></div>
+            </div>
+
+            <div style="position: absolute; top: -1px; right: 2%; z-index: 111;">
+
+
+
+
+                <div class="plumb-main">
+                    <ul>
+                        <li style="width: 250px;">
+                            <a href="javascript:void(0);" style="border: 1px solid #ababab;">Apps <span style="padding-left: 180px; font-weight: bold; float: right;">&#9662;</span></a>
+                            <ul>
+                                <li><a href="/Analytics/Dashboard/Home" style="width: 235px;">Analytics</a></li>
+                                <li><a href="/Form/Dashboard" style="width: 235px;">Engagement<span id="spLeadNotification" class="LeadNotificationAlert"></span></a></li>
+                                <li><a href="/Prospect/Dashboard" style="width: 235px;">Lead Management</a></li>
+                                <li><a href="/Community/Reports/Dashboard" style="width: 235px;">Community</a></li>
+                                <li><a href="/Social/Reports/Dashboard" style="width: 235px;">Social</a></li>
+                                <li><a href="/DataManagement/Reports/Dashboard" style="width: 235px;">Data Management</a></li>
+                            </ul>
+                        </li>
+                        <li style="width: 50px;">
+                            <a href="#" style="border: 1px solid #ababab; padding-left: 14px;">
+                                <img src="/images/icon_acc.png" width="16" height="16">
+                            </a>
+                            <ul>
+                                <li style="float: right; width: 110px; font-size: 16px; padding: 8px; background-color: #f2f2f2; color: #000; border-bottom: 1px solid #ababab; font-weight: bold;">
+                                    Hi
+                                    117-3162
+                                    <br />
+                                    <span style="font-family: 'Source Sans Pro', sans-serif; font-size: 12px; color: #666; text-transform: uppercase;">187</span>
+                                </li>
+                                <li style="float: right; width: 125px;"><a href="/Account/MyAccounts">Home</a></li>
+                                <li style="float: right; width: 125px;"><a href="/Account/SignOut">Sign Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div style="float: left; width: 100%; min-width: 780px;">
+
+            <div style="float: left; width: 190px; background-color: #fff; padding-top: 10px;" id="dvMainMenu">
+
+
+                <div id="firstpane" class="menu_list">
+                    <p class="menu_head">
+                        Forms
+                    </p>
+                    <div id="dvForm" class="menu_body">
+                        <a id="ui_lnkFormDashboard" href="/Form/Dashboard">Dashboard</a>
+                        <a id="ui_lnkFormAllForms" href="/Form/AllForms/RecentForms">All Forms</a>
+                        <a id="ui_lnkFormResponse" href="/Form/Response">Form Reports</a>
+                        <a id="ui_lnkFormCustomReport" href="/Form/CustomReport">Form Custom Report</a>
+                        <a id="ui_lnkFormBannerResponse" href="/Form/BannerResponse">Banner Reports</a>
+                        <a id="ui_lnkFormAllInteraction" href="/Form/AllInteraction">All Interaction</a>
+                        <a id="ui_lnkFormCreateNew" href="/Form/New">Create new</a>
+                        <a id="ui_lnkFormSetting" href="/Form/Setting">Settings</a>
+                    </div>
+                    <p class="menu_head">
+                        Chat
+                    </p>
+                    <div id="dvChat" class="menu_body">
+                        <a id="ui_lnkChatDashboard" href="/Chat/Dashboard">Dashboard</a>
+                        <a id="ui_lnkChatAllChat" href="/Chat/AllChat">All Chat</a>
+                        <a id="ui_lnkChatResponses" href="/Chat/Responses">Chat Responses</a>
+                        <a id="ui_lnkChatAgentReport" href="/Chat/AgentReport">Chat Agent Report</a>
+                        <a id="ui_lnkChatNew" href="/Chat/NewChat">Create Chat</a>
+                        <a id="ui_lnkChatConfiguration" href="/Chat/Configuration">Configuration</a>
+                    </div>
+                    <p class="menu_head">
+                        Mail Marketing
+                    </p>
+                    <div id="dvMail" class="menu_body">
+                        <a id="ui_lnkMailDashboard" href="/Mail/Dashboard">Dashboard</a>
+                        <a id="ui_lnkMailResponses" href="/Mail/Responses">Campaign Responses</a>
+                        <a id="ui_lnkMailEffectiveness" href="/Mail/Effectiveness">Campaign Effectiveness</a>
+                        <a id="ui_lnkMailTemplates" href="/Mail/Template">Mail Templates</a>
+                        <a id="ui_lnkMailContacts" href="/Mail/Contacts">Contacts(A-Z)</a>
+                        <a id="ui_lnkMailGroupNew" href="/Mail/Group">Groups</a>
+                        <a id="ui_lnkMailShuffle" href="/Mail/Shuffle">Shuffle</a>
+                        <a id="ui_lnkMailSend" href="/Mail/Send">Send Mails</a>
+                        <a id="ui_lnkMailSchedules" href="/Mail/Schedules">Schedules</a>
+                        <a id="ui_lnkMailSplitTest" href="/Mail/SplitTest">Split Test Report</a>
+                        <a id="ui_lnkMailHistory" href="/Mail/History">History</a>
+                        <a id="ui_lnkMailBounced" href="/Mail/Bounced">Bounced Contacts</a>
+                        <a id="ui_lnkMailTriggerDashboard" href="/Mail/TriggerDashboard">Trigger Dashboard</a>
+                        <a id="ui_lnkMailTriggerReport" href="/Mail/TriggerReport">Trigger Report</a>
+                        <a id="ui_lnkMailCreateMailTrigger" href="/Mail/CreateMailTrigger">Create Trigger</a>
+                        <a id="ui_lnkMailConfigration" href="/Mail/Configuration">Configuration</a>
+                        <a id="ui_lnkMailConfigForSending" href="/Mail/VerifyFromEmailId">Verify From EmailID</a>
+                    </div>
+                    <p class="menu_head">
+                        SMS Marketing
+                    </p>
+                    <div id="dvSMSCampaign" class="menu_body">
+                        <a id="ui_lnkSMSDashboard" href="/SMS/Dashboard">Dashboard</a>
+                        <a id="ui_lnkSMSReport" href="/SMS/Report">Report</a>
+                        <a id="ui_lnkSMSGroups" href="/SMS/Groups">Groups</a>
+                        <a id="ui_lnkSMSContacts" href="/SMS/Contacts">Contacts</a>
+                        <a id="ui_lnkSMSTemplate" href="/SMS/Template">Template</a>
+                        <a id="ui_lnkSMSSend" href="/SMS/Send">Send SMS</a>
+                        <a id="ui_lnkSmsSchedules" href="/SMS/SmsSchedules">Schedules</a>
+                        <a id="ui_lnkSmsTriggerDashboard" href="/Sms/TriggerDashboard">Trigger Dashboard</a>
+                        <a id="ui_lnkSmsTriggerReport" href="/Sms/TriggerReport">Trigger Report</a>
+                        <a id="ui_lnkSmsCreateSmsTrigger" href="/Sms/CreateSmsTrigger">Create Trigger</a>
+                        <a id="ui_lnkSMSConfigration" href="/SMS/Configuration">Configuration</a>
+                    </div>
+
+                    <p class="menu_head">
+                        Push Notification
+                    </p>
+                    <div id="dvPushNotification" class="menu_body">
+                        <a id="ui_lnkBrowserDashboard" href="/Push/Browser/Dashboard">Dashboard</a>
+                        <a id="ui_lnkMyNotification" href="/Push/Browser/Notifications">Notifications</a>
+                        <a id="ui_lnkNotificationResponses" href="/Push/Browser/NotificationResponses">Notification Responses</a>
+                        <a id="ui_lnkPushPersmissionSetting" href="/Push/Browser/BrowserNotifySetting">Notification Permission</a>
+                        <a id="ui_lnkSendNotification" href="/Push/Browser/SendNotification">Create Notification</a>
+                    </div>
+
+                    <p class="menu_head">
+                        WorkFlow
+                    </p>
+                    <div id="dv_WorkFlow" class="menu_body">
+                        <a id="ui_lnkWorkFlowDashboard" href="/WorkFlow/Dashboard">Dashboard</a>
+                        <a id="ui_lnkWorkFlowCreate" href="/WorkFlow/New">Create New</a>
+                        <a id="ui_lnkWorkFlowRule" href="/WorkFlow/RuleDashBoard">Rule</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div id="dvExpend" class="dvExpandLead" style="height:962px;"></div>
+
+            <div id="dvControlPanel">
+
+
+
+
+                <div class="boxe">
+                    <div style="float: left;" class="title">
+                        <img src="/images/workflow.png" alt="Heading" /> <label class="PageHeadingLabel">Create New</label>
+                    </div>
+                </div>
+
+                <div class="PageMargin"></div>
+                
+
+
+
+
+            </div>
+        </div>
+        <div class="bgShadedDiv"></div>
+        <div style="position: fixed; z-index: 500; top: 55%; left: 55%;" id="dvLoading">
+            <div style="position: absolute; z-index: 170; top: 30%; left: 48%;">
+                <img id="dvLoadingImg" src="/images/img_trans.gif" alt="Loading..Please Wait" title="Loading..Please Wait.." />
+            </div>
+        </div>
+        <div class="bgShadedDiv"></div>
+        <div id='footer' style='background-color: #fff; color: #999; font-size: 12px; border-top: #ebdaf3 1px solid; height: 35px; width: 100%; float: left;'>
+            <div style="padding: 10px;">
+                <div style='width: 365Px; float: left;'>
+                    <div style='float: left'>
+                        <a target='_blank' href='http://www.plumb5.com/contactus.html' style='font-family: signika negative, sans-serif; font-size: 12px; color: #666; text-decoration: none; padding: 5px;'>Contact Us</a>|
+                    </div>
+                    <div style='float: left'>
+                        <a target='_blank' href='http://www.plumb5.com/Terms.html' style='font-family: signika negative, sans-serif; font-size: 12px; color: #666; text-decoration: none; padding: 5px;'>Termsof Use</a>|
+                    </div>
+                    <div style='float: left'>
+                        <a href='https://privacy.truste.com/reseller/privacy-policy/Decisive-Analytical-Solutions-LLC/certified/af75a19a-9aab-44a3-84a0-76b1158d8753' target='_blank' style='font-family: signika negative, sans-serif; font-size: 12px; color: #666; text-decoration: none; padding: 5px;'>PrivacyPolicy</a>|
+                    </div>
+                    <div style='float: left'>
+                        <a href='http://www.plumb5.com/aboutus.html' target='_blank' style='font-family: signika negative, sans-serif; , sans-serif; font-size: 12px; color: #666; text-decoration: none; padding: 5px;'>About Decisive AS</a>
+                    </div>
+                </div>
+                <div style='width: auto; overflow: hidden; float: right;'>
+                    <div style='float: left'>
+                        <a href='https://privacy.truste.com/privacy-seal/Decisive-Analytical-Solutions-LLC/validation?validationId=1418bf31-161f-4506-8a45-ae0df7fc99a4' title='Decisive Analytical Solutions LLC Privacy Seal Certification' target='_blank'>
+                            <img style='border: none' alt='TRUSTe Certified Privacy Seal' src='https://www.plumb5.com/images/TRUST-Privacy.png'>
+                        </a>
+                    </div>
+                    "<div style='float: left;'>
+                        <span id='siteseal'>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+
+
+
+</body>
+</html>

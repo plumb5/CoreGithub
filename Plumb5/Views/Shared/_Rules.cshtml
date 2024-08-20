@@ -1,0 +1,2095 @@
+﻿@*Trigger Rules *@
+
+<div id="cont_setrules" class="container-page-body setfrmrulecontwrp hideDiv">
+    <div class="trigruleWrap mt-2">
+        <div class="trigrulsearchwrap mb-2">
+            <div class="searchCampWrap srchrulewrp position-relative droplistwrap">
+                <select class="form-control form-control-sm notspecificbtn select2" data-placeholder="Rule" id="selectrule">
+                    <option value="Select">Select Rule</option>
+
+                    <option value="dv_chkVisitorType$Category1">
+                        If the visitor type is
+                    </option>
+                    <option value="dv_chkVisitorGroupBelongs$Category1">
+                        If the visitor belongs to or does not belong to a group
+                    </option>
+                    <option value="dv_chkVisitorDynamicGroupBelongs$Category1">
+                        If the visitor belongs to or does not belong to a dynamic group
+                    </option>
+
+                    @*<option value="dv_chkVisitorBehavioralScore$Category2">
+                            If the visitor behavioural score is
+                        </option>*@
+                    <option value="dv_chkVisitorsession$Category2">
+                        If the visitor session
+                    </option>
+                    <option value="dv_VisitorsPageDepth$Category2">
+                        If the visitor page depth
+                    </option>
+                    <option value="dv_VisitorsPageView$Category2">
+                        If visitor page view
+                    </option>
+                    <option value="dv_VisitorsFrequency$Category2">
+                        If the visitor frequency
+                    </option>
+                    <option value="dv_VisitorsSource$Category2">
+                        If the visitor source is
+                    </option>
+                    <option value="dv_VisitorsParticularPage$Category2">
+                        If the visitor is on a particular page
+                    </option>
+                    <option value="dv_VisitorsExceptPageUrls$Category2">
+                        Except these url(s)
+                    </option>
+                    <option value="dv_VisitorsVisitedPagesWithPageUrlParameter$Category2">
+                        If the visitor visited pages with Page URL parameter equal to
+                    </option>
+                    <option value="dv_VisitorsMailRespondent$Category2">
+                        If the visitor mail respondent
+                    </option>
+                    <option value="dv_VisitorsSMSRespondent$Category2">
+                        If the visitor SMS Respondent
+                    </option>
+                    @*<option value="dv_VisitorsSearchKeyWord$Category2">
+                            If the visitor search keyword is
+                        </option>*@
+                    <option value="dv_VisitorsCountry$Category2">
+                        If the visitor country
+                    </option>
+                    <option value="dv_VisitorsState$Category2">
+                        If the visitor State
+                    </option>
+                    <option value="dv_VisitorsCity$Category2">
+                        If the visitor City
+                    </option>
+                    <option value="dv_VisitorsAlreadyVisitedPages$Category2">
+                        If the visitor is already visited pages
+                    </option>
+                    <option value="dv_VisitorsAlreadyVisitedPagesWithPageUrlParameter$Category2">
+                        If the visitor is already visited pages with Page URL parameter equal to
+                    </option>
+                    <option value="dv_VisitorsNotVisitedPage$Category2">
+                        If the visitor is not already visited pages
+                    </option>
+                    <option value="dv_VisitorsNotAlreadyVisitedPagesWithPageUrlParameter$Category2">
+                        If the visitor is not already visited pages with Page URL parameter equal to
+                    </option>
+                    <option value="dv_VisitorsOverAllTimeSpentInTime$Category2">
+                        If the visitor overall time spent in site
+                    </option>
+                    @*<option value="dv_VisitorsBrowsers$Category2">Visitor's Browser</option>*@
+
+                    <option value="dv_VisitorsClickedSpecificBtn$Category3">
+                        If the visitor has clicked a specific button
+                    </option>
+                    <option value="dv_VisitorsRespondedToChat$Category3">
+                        If the visitor responded with chat agent
+                    </option>
+                    <option value="dv_VisitorsMailResponse$Category3">
+                        If the visitor response to your mail campaigns are
+                    </option>
+                    <option value="dv_VisitorsRespondedToParticularForm$Category3">
+                        If the visitor responded to a particular form
+                    </option>
+                    <option value="dv_VisitorsNotRespondedToParticularForm$Category3">
+                        If the visitor has not responded to a particular form
+                    </option>
+                    <option value="dv_VisitorsAnswerDependencyForm$Category3">
+                        If the visitor responded to a form with an answer
+                    </option>
+                    <option value="dv_VisitorsClosedForm$Category3">
+                        If the visitor closed the form for Nth time, then don't show
+                    </option>
+                    @*<option value="dv_VisitorsAddedProductToCart$Category3">
+                            If the visitor added these products to the cart
+                        </option>
+                        <option value="dv_VisitorsAddedProductCategoriesToCart$Category3">
+                            If the visitor added these products categories to the cart
+                        </option>
+                        <option value="dv_VisitorsNotAddedProductCategoriesToCart$Category3">
+                            If the visitor not added these products categories to the cart
+                        </option>
+                        <option value="dv_VisitorsAddedProductSubCategoriesToCart$Category3">
+                            If the visitor added these products subcategories to the cart
+                        </option>
+                        <option value="dv_VisitorsNotAddedProductSubCategoriesToCart$Category3">
+                            If the visitor not added these products subcategories to the cart
+                        </option>
+                        <option value="dv_VisitorsViewedProductToCart$Category3">
+                            If the visitor viewed but did not add these products to the cart
+                        </option>
+                        <option value="dv_VisitorsDroppedProductToCart$Category3">
+                            If the visitor dropped a product from the cart
+                        </option>
+                        <option value="dv_VisitorsPurchasedProduct$Category3">
+                            If the customer purchased any of these products
+                        </option>
+                        <option value="dv_VisitorsNotPurchasedProduct$Category3">
+                            If the customer has not purchased any of these products
+                        </option>
+                        <option value="dv_VisitorsTotalTransaction$Category3">
+                            If the customer total transaction
+                        </option>
+                        <option value="dv_VisitorsCurrentValue$Category3">
+                            If the customer current value is
+                        </option>
+                        <option value="dv_VisitorsCustomerLastPurchase$Category3">
+                            If the customer duration since last purchase
+                        </option>*@
+
+                    <option value="dv_VisitorsImpressionCount$Category4">
+                        If the visitor form impression
+                    </option>
+                    <option value="dv_VisitorsFormCloseCount$Category4">
+                        If the visitor form close
+                    </option>
+                    <option value="dv_VisitorsFormResponseCount$Category4">
+                        If the visitor total form response
+                    </option>
+                    <option value="dv_VisitorsShowFormNthTime$Category4">
+                        Show this form only Nth Time
+                    </option>
+
+                    @*<option value="dv_ProspectSocialStatus$Category5">
+                            If the customer's/prospect's social status is
+                        </option>
+                        <option value="dv_ProspectInfluentialScore$Category5">
+                            If the customer's/prospect's influential score is
+                        </option>*@
+                    @*<option value="dv_ProspectProductRating$Category5">
+                            If the customer's/prospect's product rating is
+                        </option>*@
+                    <option value="dv_ProspectNurtureStatus$Category5">
+                        If the prospect's nurture status is
+                    </option>
+                    <option value="dv_ProspectGender$Category5">
+                        If the customer's/prospect's gender is
+                    </option>
+                    <option value="dv_ProspectMaritalStatus$Category5">
+                        If the customer's/prospect's marital status is
+                    </option>
+                    <option value="dv_ProspectProfession$Category5">
+                        If the customer's/prospect's profession/industry is
+                    </option>
+                    @*<option value="dv_ProspectConnectedSocially$Category5">
+                            If the visitor is connected socially
+                        </option>*@
+                    @*<option value="dv_ProspectLoyaltyPoints$Category5">
+                            If the customer's/prospect's loyalty points are
+                        </option>*@
+                    @*<option value="dv_ProspectRMFSScore$Category5">
+                            If the customer's RFMS score is
+                        </option>*@
+                    <option value="dv_ProspectDOB$Category5">
+                        If the visitor's DOB is
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="trigrultabwrap mt-2">
+            <div class="trigrultab mr-3">
+                <div class="trigrultabitem active" data-ruletab="byaduience" title="By Audience"><i class="icon ion-ios-people"></i> <span class="tabtitle">By Audience</span> <span class="rulecountaudi">0</span></div>
+                <div class="trigrultabitem" data-ruletab="bybehaviour" title="By Behaviour"><i class="icon ion-monitor"></i> <span class="tabtitle">By Behaviour</span><span class="rulecountbeh">0</span></div>
+                <div class="trigrultabitem" data-ruletab="byinteraction" title="By Interaction"><i class="icon ion-ios-snowy"></i> <span class="tabtitle">By Interaction</span><span class="rulecountinteract">0</span></div>
+                <div class="trigrultabitem" data-ruletab="byevent" title="By Event"><i class="icon ion-mouse"></i> <span class="tabtitle">By Event</span><span class="rulecountevnt">0</span></div>
+                <div class="trigrultabitem" data-ruletab="byprofile" title="By Profile"><i class="icon ion-android-contact"></i> <span class="tabtitle">By Profile</span><span class="rulecountprof">0</span></div>
+            </div>
+            <div class="trigrultabcont">
+                <div id="byaduience" class="ruletabdetWrap">
+                    <h6 class="box-title">By Audience</h6>
+                    <div class="ruledetWrap">
+                        <div class="ruledetItem" id="dv_chkVisitorType">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" data-byaudi="audience" id="ui_chkVisitorType" name="example1">
+                                    <label class="custom-control-label" for="ui_chkVisitorType">
+                                        If the visitor type is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Audience" id="ui_VisitorType"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" checked id="ui_radLead" value="1" name="VisitorType">
+                                    <label class="custom-control-label" for="ui_radLead">Lead/Prospect</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline hideDiv">
+                                    <input type="radio" class="custom-control-input" id="ui_radCustomer" value="2" name="VisitorType">
+                                    <label class="custom-control-label" for="ui_radCustomer">Customer</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_chkVisitorGroupBelongs">
+                            <div class="rulemainchkbxWrap">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="ui_chkSegment" class="custom-control-input checkrulqus" name="belongs">
+                                    <label class="custom-control-label" for="ui_chkSegment">
+                                        If the visitor belongs to or does not belong to a group
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Audience" id="ui_VisitorBelongs"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="ansradiowrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radBelongs" name="BelongsGroup" checked="checked" value="1">
+                                        <label class="custom-control-label" for="ui_radBelongs">Belongs</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radNotBelongs" name="BelongsGroup" value="2">
+                                        <label class="custom-control-label" for="ui_radNotBelongs">Not Belongs</label>
+                                    </div>
+                                </div>
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtGroups_values"></span>
+                                    <input type="text" class="inputtextboxAutoComplete" id="ui_txtGroups" placeholder="Group name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ruledetItem mt-10" id="dv_chkVisitorDynamicGroupBelongs">
+                            <div class="rulemainchkbxWrap">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="ui_chkDynamicSegment" class="custom-control-input checkrulqus" name="belongs">
+                                    <label class="custom-control-label" for="ui_chkDynamicSegment">
+                                        If the visitor belongs to or does not belong to a dynamic group
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Audience" id="ui_VisitorBelongsDynamic"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="ansradiowrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radDynamicBelongs" name="BelongsDynamicGroup" checked="checked" value="1">
+                                        <label class="custom-control-label" for="ui_radDynamicBelongs">Belongs</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radNotDynamicBelongs" name="BelongsDynamicGroup" value="2">
+                                        <label class="custom-control-label" for="ui_radNotDynamicBelongs">Not Belongs</label>
+                                    </div>
+                                </div>
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtDynamicGroups_values"></span>
+                                    <input type="text" class="inputtextboxAutoComplete" id="ui_txtDynamicGroups" placeholder="Group name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="bybehaviour" class="ruletabdetWrap hideDiv">
+                    <h6 class="box-title">By Behaviour</h6>
+                    <div class="ruledetWrap">
+                        <div class="ruledetItem hideDiv" id="dv_chkVisitorBehavioralScore">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkBehavioralScore" name="score">
+                                    <label class="custom-control-label" for="ui_chkBehavioralScore">
+                                        If the visitor's behavioural score is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorBehavioural"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlBehavioralScoreRange">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" name="" value="1" id="ui_VisitorScore1" onkeypress="return onlyNumbers(event);">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input style="display:none;" class="form-control form-control-sm" type="text" autocomplete="off" name="" id="ui_VisitorScore2" onkeypress="return onlyNumbers(event);" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_chkVisitorsession">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkSessionIs" class="custom-control-input checkrulqus" name="belongs">
+                                        <label class="custom-control-label" for="ui_chkSessionIs">If the visitor's session</label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radSessionIsTrue" name="SessionCondition">
+                                        <label class="custom-control-label" for="ui_radSessionIsTrue">Is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radSessionIsFalse" name="SessionCondition">
+                                        <label class="custom-control-label" for="ui_radSessionIsFalse">
+                                            Is Not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorSession"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-90px">
+                                    <input class="form-control form-control-sm" onkeypress="return onlyNumbers(event);" placeholder="Ex: 2" type="text" autocomplete="off" id="ui_txtSession">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsPageDepth">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkPageDepthIs" class="custom-control-input checkrulqus">
+                                        <label class="custom-control-label" for="ui_chkPageDepthIs">If the visitor's page depth</label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radPageDepthIsTrue" name="PageDepthCondition">
+                                        <label class="custom-control-label" for="ui_radPageDepthIsTrue">Is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radPageDepthIsFalse" name="PageDepthCondition">
+                                        <label class="custom-control-label" for="ui_radPageDepthIsFalse">
+                                            Is Not<a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorPageDepth"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-90px" id="ui_chkPageDepthIsTd">
+                                    <input class="form-control form-control-sm" onkeypress="return onlyNumbers(event);" placeholder="Ex: 2" type="text" autocomplete="off" id="ui_txtPageDepthIs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsPageView">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkPageViewIs" class="custom-control-input checkrulqus" name="pageviewis">
+                                        <label class="custom-control-label" for="ui_chkPageViewIs">If visitor's page view</label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radPageViewIsTrue" name="PageViewCondition">
+                                        <label class="custom-control-label" for="ui_radPageViewIsTrue">Is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radPageViewIsFalse" name="PageViewCondition">
+                                        <label class="custom-control-label" for="ui_radPageViewIsFalse">
+                                            Is Not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorPageView"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-90px">
+                                    <input class="form-control form-control-sm" onkeypress="return onlyNumbers(event);" placeholder="Ex: 2" type="text" autocomplete="off" id="ui_txtPageViewIs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsFrequency">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkFrequencyIs" class="custom-control-input checkrulqus" name="freqencyis">
+                                        <label class="custom-control-label" for="ui_chkFrequencyIs">If the visitor's frequency </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radFrequencyIsTrue" name="FrequencyCondition">
+                                        <label class="custom-control-label" for="ui_radFrequencyIsTrue">Is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radFrequencyIsFalse" name="FrequencyCondition">
+                                        <label class="custom-control-label" for="ui_radFrequencyIsFalse">
+                                            Is Not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorFrequency"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-90px">
+                                    <input class="form-control form-control-sm" onkeypress="return onlyNumbers(event);" placeholder="Ex: 2" type="text" autocomplete="off" id="ui_txtFrequencyIs">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsParticularPage">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkOnPageUrl" class="custom-control-input checkrulqus">
+                                        <label class="custom-control-label" for="ui_chkOnPageUrl">
+                                            If the visitor is on a particular page
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorParticularPage"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtPageUrl" cols="1" rows="2"></textarea>
+                                    <div class="querystrwrp mt-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ui_PageUrlCheckContains">
+                                            <label class="custom-control-label" for="ui_PageUrlCheckContains">Check except query string </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ruledetItem mt-10" id="dv_VisitorsExceptPageUrls">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkNotOnPageUrl" class="custom-control-input checkrulqus">
+                                        <label class="custom-control-label" for="ui_chkNotOnPageUrl">
+                                            Except these url(s)
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorsExceptPageUrls"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtNotPageUrl" cols="1" rows="2"></textarea>
+                                    <div class="querystrwrp mt-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ui_PageNotUrlCheckContains">
+                                            <label class="custom-control-label" for="ui_PageNotUrlCheckContains">Check except query string </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ruledetItem mt-10" id="dv_VisitorsVisitedPagesWithPageUrlParameter">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkVisitorsVisitedPagesWithPageUrlParameter" class="custom-control-input checkrulqus" name="vispagewithurlparam">
+                                        <label class="custom-control-label" for="ui_chkVisitorsVisitedPagesWithPageUrlParameter">
+                                            If the visitor
+                                            @*<a href="javascript:void(0)" target="_blank">
+                                                   <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorsVisitedPagesWithPageUrlParameter"></i>
+                                                </a>*@
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radPageUrlParamIsTrue" name="VisitedPagesWithPageUrlParam">
+                                        <label class="custom-control-label" for="ui_radPageUrlParamIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radPageUrlParamFalse" name="VisitedPagesWithPageUrlParam">
+                                        <label class="custom-control-label" for="ui_radPageUrlParamFalse">
+                                            is not  on a urls which contains a keyword @*visited pages with Page URL parameter equal to*@
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorsVisitedPagesWithPageUrlParameter"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtVisitorsVisitedPagesWithPageUrlParameter" cols="1" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsSource">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkSourceIs" name="sourceis">
+                                        <label class="custom-control-label" for="ui_chkSourceIs">If the visitor's source </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radSourceIsTrue" name="sourceistruefalse">
+                                        <label class="custom-control-label" for="ui_radSourceIsTrue">Is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radSourceIsFalse" name="sourceistruefalse">
+                                        <label class="custom-control-label" for="ui_radSourceIsFalse">
+                                            Is Not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorSource"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" checked id="ui_radSourceIsDirect" name="Source">
+                                    <label class="custom-control-label" for="ui_radSourceIsDirect">Direct<a href="javascript:void(0)" class="ml-1" target="_blank"><i class="icon ion-ios-help-outline"></i></a></label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_radSourceIsReferrer" name="Source">
+                                    <label class="custom-control-label" for="ui_radSourceIsReferrer">Referrer<a href="javascript:void(0)" class="ml-1" target="_blank"><i class="icon ion-ios-help-outline"></i></a></label>
+                                </div>
+                                <div class="ruleansitem" style="display: none;" id="dv_txtSoureReferrer">
+                                    <div class="inputboxwrap w-100">
+                                        <textarea name="" class="form-control form-control-sm" id="ui_txtSourceIs" cols="1" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-checkbox" style="display: none;" id="dv_chkSoureReferrer">
+                                    <input type="checkbox" class="custom-control-input" id="ui_chkCheckSourceDomainOnly" name="sourceis">
+                                    <label class="custom-control-label" for="ui_chkCheckSourceDomainOnly">Check Domain Only <i class="icon ion-ios-help-outline"></i></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsMailRespondent">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkIsMailRespondent" class="custom-control-input checkrulqus" name="vismailresp">
+                                        <label class="custom-control-label" for="ui_chkIsMailRespondent">If the visitor </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radMailRespondentIsTrue" name="MailRespondent">
+                                        <label class="custom-control-label" for="ui_radMailRespondentIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radMailRespondentIsFalse" name="MailRespondent">
+                                        <label class="custom-control-label" for="ui_radMailRespondentIsFalse">
+                                            is not  mail respondent
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorMailRespondent"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="droplistwrap mr-2 w-100" data-placeholder="Choose Browser">
+                                    <select id="ui_ddlMailRespondentTemplate" class="form-control form-control-sm addtemprulemail select2" multiple data-placeholder="Select Template(s)">
+                                        <option value='0'>All</option>
+                                    </select>
+                                </div>
+                                <div class="inputradioWrap mt-2">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="ui_chkMailRespondentOpened" class="custom-control-input" name="MailRespOpenClick" disabled checked>
+                                        <label class="custom-control-label" for="ui_chkMailRespondentOpened">Opened </label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="ui_chkMailRespondentClick" class="custom-control-input" name="MailRespOpenClick">
+                                        <label class="custom-control-label" for="ui_chkMailRespondentClick">Clicked </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 m-mt-30" id="dv_VisitorsSMSRespondent">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkIsSmsRespondent" class="custom-control-input checkrulqus" name="vissmsresp">
+                                        <label class="custom-control-label" for="ui_chkIsSmsRespondent">If the visitor </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radSmsRespondentIsTrue" name="SmsRespondent">
+                                        <label class="custom-control-label" for="ui_radSmsRespondentIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radSmsRespondentIsFalse" name="SmsRespondent">
+                                        <label class="custom-control-label" for="ui_radSmsRespondentIsFalse">
+                                            is not sms respondent
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorSmsRespondent"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-100" data-placeholder="Choose Browser">
+                                    <select id="ui_ddlSmsRespondentTemplate" class="form-control form-control-sm addtemprulesms select2" multiple data-placeholder="Select Template(s)">
+                                        <option value='0'>All</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 m-mt-30 hideDiv" id="dv_VisitorsSearchKeyWord">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkSearchKeywordIs" class="custom-control-input checkrulqus" name="searchkey">
+                                        <label class="custom-control-label" for="ui_chkSearchKeywordIs">
+                                            If the visitor's search keyword is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorSearchKeyword"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtSearchKeyword" cols="1" rows="2" placeholder="Ex: Online marketing and measurment tools"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsCountry">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkCountryIs" class="custom-control-input checkrulqus" name="viscountrytype">
+                                        <label class="custom-control-label" for="ui_chkCountryIs">If the visitor's country </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radCountryIsTrue" name="CountryIsCondition">
+                                        <label class="custom-control-label" for="ui_radCountryIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radCountryIsFalse" name="CountryIsCondition">
+                                        <label class="custom-control-label" for="ui_radCountryIsFalse">
+                                            is not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorCountry"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkCountryIsTd">
+                                <div class="droplistwrap mr-2 w-100">
+                                    <select class="form-control form-control-sm addtemprulecountry select2" data-placeholder="" multiple name="" id="ui_txtCountry">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsState">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkStateIs" class="custom-control-input checkrulqus" name="visstatetype">
+                                        <label class="custom-control-label" for="ui_chkStateIs">If the visitor's State </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radStateIsTrue" name="StateCondition">
+                                        <label class="custom-control-label" for="ui_radStateIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radStateIsFalse" name="StateCondition">
+                                        <label class="custom-control-label" for="ui_radStateIsFalse">
+                                            is not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorState"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkStateIsTd">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtState_values"></span>
+                                    <input type="text" class="inputtextboxAutoComplete" id="ui_txtState" placeholder="Ex: Bangkok,Florida">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsCity">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkCityIs" class="custom-control-input checkrulqus" name="viscitytype">
+                                        <label class="custom-control-label" for="ui_chkCityIs">If the visitor's City </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" checked id="ui_radCityIsTrue" name="CityCondition">
+                                        <label class="custom-control-label" for="ui_radCityIsTrue">is</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radCityIsFalse" name="CityCondition">
+                                        <label class="custom-control-label" for="ui_radCityIsFalse">
+                                            is not
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorCity"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkCityIsTd">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtCity_values"></span>
+                                    <input type="text" class="inputtextboxAutoComplete" id="ui_txtCity" placeholder="Ex: Franklin,Washington">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsAlreadyVisitedPages">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkAlreadyVisitedPages" class="custom-control-input checkrulqus" name="alreadyvispage">
+                                        <label class="custom-control-label" for="ui_chkAlreadyVisitedPages">
+                                            If the visitor is already visited pages
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorAlreadyVisitedPages"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="droplistwrap mr-2 w-250 mb-2">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtAlreadyVisitedPageUrls" cols="1" rows="2"></textarea>
+                                    <div class="querystrwrp mt-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ui_AlreadyPageUrlCheckContains">
+                                            <label class="custom-control-label" for="ui_AlreadyPageUrlCheckContains">Check except query string </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inputradioWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radPageViewOverAll" class="custom-control-input" value="true" name="PageviewSessionWiseOrOverAll" checked>
+                                        <label class="custom-control-label" for="ui_radPageViewOverAll">Overall </label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radPageViewSessionWise" class="custom-control-input" value="false" name="PageviewSessionWiseOrOverAll">
+                                        <label class="custom-control-label" for="ui_radPageViewSessionWise">Session wise </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsAlreadyVisitedPagesWithPageUrlParameter">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkVisitorsAlreadyVisitedPagesWithPageUrlParameter" class="custom-control-input checkrulqus" name="alreadyvispagewithurlparam">
+                                        <label class="custom-control-label" for="ui_chkVisitorsAlreadyVisitedPagesWithPageUrlParameter">
+                                            If the visitor is already visited pages with Page URL parameter equal to
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorsAlreadyVisitedPagesWithPageUrlParameter"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtVisitorsAlreadyVisitedPagesWithPageUrlParameter" cols="1" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsNotVisitedPage">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkNotAlreadyVisitedPages" class="custom-control-input checkrulqus" name="alreadynotvispage">
+                                        <label class="custom-control-label" for="ui_chkNotAlreadyVisitedPages">
+                                            If the visitor is not already visited pages
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorNotAlreadyVisitedPages"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="droplistwrap mr-2 w-250 mb-2">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtNotAlreadyVisitedPageUrls" cols="1" rows="2"></textarea>
+                                    <div class="querystrwrp mt-2">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="ui_NotAlreadyPageUrlCheckContains">
+                                            <label class="custom-control-label" for="ui_NotAlreadyPageUrlCheckContains">Check except query string </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inputradioWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radNotPageViewOverAll" class="custom-control-input" value="true" name="NotPageviewSessionWiseOrOverAll" checked>
+                                        <label class="custom-control-label" for="ui_radNotPageViewOverAll">Overall </label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radNotPageViewSessionWise" class="custom-control-input" value="false" name="NotPageviewSessionWiseOrOverAll">
+                                        <label class="custom-control-label" for="ui_radNotPageViewSessionWise">Session wise </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsNotAlreadyVisitedPagesWithPageUrlParameter">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkVisitorsNotAlreadyVisitedPagesWithPageUrlParameter" class="custom-control-input checkrulqus" name="notalreadyvispagewithurlparam">
+                                        <label class="custom-control-label" for="ui_chkVisitorsNotAlreadyVisitedPagesWithPageUrlParameter">
+                                            If the visitor is not already visited pages with Page URL parameter equal to
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorsNotAlreadyVisitedPagesWithPageUrlParameter"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtVisitorsNotAlreadyVisitedPagesWithPageUrlParameter" cols="1" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsOverAllTimeSpentInTime">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkTimeSpentInSite" class="custom-control-input checkrulqus" name="overalltimespent">
+                                        <label class="custom-control-label" for="ui_chkTimeSpentInSite">
+                                            If the visitor's overall time spent in site
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorOverallSpent"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkTimeSpentInSiteTd">
+                                <div class="inputboxwrap w-90px">
+                                    <input class="form-control form-control-sm" placeholder="Ex:2" type="text" autocomplete="off" onkeypress="return onlyNumbers(event);" id="ui_txtTimeSpentInSite">
+                                </div>
+                                <div class="secondslbl">
+                                    Seconds
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsBrowsers">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkIsAndriodMobile" class="custom-control-input checkrulqus" name="browsertype">
+                                        <label class="custom-control-label" for="ui_chkIsAndriodMobile">If the visitor's browser is  </label>
+                                    </div>
+                                </div>
+                                <div class="radiquestWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radMobileDeviceConditionIsTrue" checked name="MobileCondition">
+                                        <label class="custom-control-label" for="ui_radMobileDeviceConditionIsTrue">Mobile</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" id="ui_radMobileDeviceConditionIsFalse" name="MobileCondition">
+                                        <label class="custom-control-label" for="ui_radMobileDeviceConditionIsFalse">
+                                            Desktop
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Behaviour" id="ui_VisitorBrowser"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            @*<div class="ruleansitem hideDiv" id="ui_chkIsMobileDeviceTd">
+                                    <div class="droplistwrap mr-2 w-100">
+                                        <select class="form-control form-control-sm addtemprulecity select2" data-placeholder="" multiple name="" id="">
+                                            <option value="0">Select</option>
+                                            <option value="1">Bengaluru</option>
+                                            <option value="2">Chennai</option>
+                                            <option value="3">Madurai</option>
+                                            <option value="4">Shivamoogga</option>
+                                        </select>
+                                    </div>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+                <div id="byinteraction" class="ruletabdetWrap hideDiv">
+                    <h6 class="box-title">By Interaction</h6>
+                    <div class="ruledetWrap">
+                        <div class="ruledetItem" id="dv_VisitorsClickedSpecificBtn">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkClickedButton" name="specificbtn">
+                                    <label class="custom-control-label" for="ui_chkClickedButton">
+                                        If the visitor has clicked a specific button
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorClickedSpecific"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtClickButton_values"></span>
+                                    <input type="text" class="inputtextboxAutoComplete" id="ui_txtClickButton" placeholder="Tag identifier">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsNotClickedSpecificBtn">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkNotClickedButton" name="notspecificbtn">
+                                    <label class="custom-control-label" for="ui_chkNotClickedButton">
+                                        If the visitor has not clicked a specific button
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorNotClickedSpecific"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtNotClickButton_values"></span>
+                                    <input type="text" name="" class="inputtextboxAutoComplete" id="ui_txtNotClickButton" placeholder="Tag identifier">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsClickedSpecificPriceRange">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkClickedPriceRange" name="specificprice">
+                                    <label class="custom-control-label" for="ui_chkClickedPriceRange">If a visitor clicked a specific price range<a href="javascript:void(0)" target="_blank"><i class="icon ion-ios-help-outline"></i></a></label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtPriceRangeProducts_values"></span>
+                                    <input type="text" name="" class="inputtextboxAutoComplete" id="ui_txtPriceRangeProducts" placeholder="Tag identifier">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsRespondedToChat">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkRespondedInChat" name="chatagent">
+                                    <label class="custom-control-label" for="ui_chkRespondedInChat">
+                                        If the visitor responded with chat agent
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorRespondedChat"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="chattext">
+                                    Assigning this rule will display your content to visitors, who already have a chat history
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsMailResponse">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkMailResponseStage" name="vistresponse">
+                                    <label class="custom-control-label" for="ui_chkMailResponseStage">
+                                        If the visitor's response to your mail campaigns are
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorResponseMail"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-100">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlMailScore">
+                                        <option value="1">Highly Responsive</option>
+                                        <option value="2">Responsive</option>
+                                        <option value="3">Low Response</option>
+                                        <option value="4">Viewer</option>
+                                        <option value="5">Fresh</option>
+                                        <option value="6">Change subjectline</option>
+                                        <option value="7">Rethink </option>
+                                        <option value="8">Dislikers</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsRespondedToParticularForm">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkRespondedForm" name="particularform">
+                                    <label class="custom-control-label" for="ui_chkRespondedForm">
+                                        If the visitor responded to a particular form
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorResponseForm"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-100">
+                                    <select class="form-control form-control-sm notspecificbtn select2" data-placeholder="" name="" id="ui_ddlRespondedFroms">
+                                        <option label="Choose one" value="0">Select Form</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsNotRespondedToParticularForm">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkNotRespondedForm" name="notparticularform">
+                                    <label class="custom-control-label" for="ui_chkNotRespondedForm">
+                                        If the visitor has not responded to a particular form
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorNotResponseForm"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-100">
+                                    <select class="form-control form-control-sm notspecificbtn select2" data-placeholder="" name="" id="ui_ddlNotRespondedFroms">
+                                        <option label="Choose one" value="0">Select Form</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsAnswerDependencyForm">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkAnswerDependencyForm" name="answerform">
+                                    <label class="custom-control-label" for="ui_chkAnswerDependencyForm">
+                                        If the visitor responded to a form with an answer
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorResponseFormAnswer"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="droplistwrap mr-2 w-100">
+                                    <select class="form-control form-control-sm dropdownselcom select2" data-placeholder="" name="" id="ui_ddlAnswerDependencyFroms">
+                                        <option label="Choose one" value="0">Select Form</option>
+                                    </select>
+                                </div>
+                                <div class="frmconditionwrap mt-3 hideDiv" id="trAnswerDependency">
+                                    <div class="frminputwrap" id="ui_dvAnswerDependencyFields">
+                                    </div>
+                                    <div class="conditionWrp mt-2">
+                                        <label class="frmlbltxt font-weight-bold" for="">Condition</label>
+                                        <div class="conditonitem d-flex justify-content-start">
+                                            <div class="droplistitem mr-3">
+                                                <select id="ui_ddlAnswerCondition" class="form-control">
+                                                    <option value="1">Greater Than</option>
+                                                    <option value="2">Less Than</option>
+                                                    <option value="3">Between</option>
+                                                    <option value="4">Equal</option>
+                                                </select>
+                                            </div>
+                                            <div class="inputwrap">
+                                                <input type="text" autocomplete="off" class="form-control" id="ui_txtAnswerCondition1">
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="inputwrap">
+                                                <input type="text" autocomplete="off" class="form-control" style="display: none;" id="ui_txtAnswerCondition2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsClosedForm">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkClosedNTimes" class="custom-control-input checkrulqus" name="ntimeshow">
+                                        <label class="custom-control-label" for="ui_chkClosedNTimes">
+                                            If the visitor closed the form for Nth time, then don't show
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorClosedForm"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-90px mb-2">
+                                    <input type="text" autocomplete="off" class="form-control form-control-sm" id="ui_txtClosedNTimes">
+                                </div>
+                                <div class="inputradioWrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radCloseCountOverAll" class="custom-control-input" value="true" name="CloseCountSessionWiseOrOverAll" checked>
+                                        <label class="custom-control-label" for="ui_radCloseCountOverAll">Overall </label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_radCloseCountSessionWise" class="custom-control-input" value="false" name="CloseCountSessionWiseOrOverAll">
+                                        <label class="custom-control-label" for="ui_radCloseCountSessionWise">Session wise </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsAddedProductToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkAddedToCart" name="prodcart">
+                                    <label class="custom-control-label" for="ui_chkAddedToCart">
+                                        If the visitor added these products to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorAddedCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtAddedToCartProducts_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtAddedToCartProducts" placeholder="Products name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsAddedProductCategoriesToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCategoriesAddedToCart" name="categcart">
+                                    <label class="custom-control-label" for="ui_chkCategoriesAddedToCart">
+                                        If the visitor added these products categories to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorAddedCategoryCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtAddedToCartProductsCategories_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtAddedToCartProductsCategories" placeholder="Products categories" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsNotAddedProductCategoriesToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCategoriesNotAddedToCart" name="notcategcart">
+                                    <label class="custom-control-label" for="ui_chkCategoriesNotAddedToCart">
+                                        If the visitor not added these products categories to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorNotAddedCategoryCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtNotAddedToCartProductsCategories_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtNotAddedToCartProductsCategories" placeholder="Products categories" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsAddedProductSubCategoriesToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkSubCategoriesAddedToCart" name="subcategcart">
+                                    <label class="custom-control-label" for="ui_chkSubCategoriesAddedToCart">
+                                        If the visitor added these products subcategories to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorAddedSubCategoryCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtAddedToCartProductsSubCategories_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtAddedToCartProductsSubCategories" placeholder="Products subcategories" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsNotAddedProductSubCategoriesToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkSubCategoriesNotAddedToCart" name="notsubcategcart">
+                                    <label class="custom-control-label" for="ui_chkSubCategoriesNotAddedToCart">
+                                        If the visitor not added these products subcategories to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorNotAddedSubCategoryCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtNotAddedToCartProductsSubCategories_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtNotAddedToCartProductsSubCategories" placeholder="Products subcategories" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsViewedProductToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkViewedNotAddedToCart" name="notprodcart">
+                                    <label class="custom-control-label" for="ui_chkViewedNotAddedToCart">
+                                        If the visitor viewed but did not add these products to the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorViewedCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtViewedNotAddedToCartProducts_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtViewedNotAddedToCartProducts" placeholder="Products name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsDroppedProductToCart">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkDropedFromCart" name="dropprodcart">
+                                    <label class="custom-control-label" for="ui_chkDropedFromCart">
+                                        If the visitor dropped a product from the cart
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_VisitorDroppedCart"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtDropedFromCartProducts_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtDropedFromCartProducts" placeholder="Products name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsPurchasedProduct">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCustomerPurchased" name="custpurchase">
+                                    <label class="custom-control-label" for="ui_chkCustomerPurchased">
+                                        If the customer purchased any of these products
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_CustomerPurchasedProducts"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtCustomerPurchasedProducts_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtCustomerPurchasedProducts" placeholder="Products name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsNotPurchasedProduct">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCustomerNotPurchased" name="notcustpurchase">
+                                    <label class="custom-control-label" for="ui_chkCustomerNotPurchased">
+                                        If the customer has not purchased any of these products
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_CustomerNotPurchasedProducts"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="textbxautocom mr-2 w-100 inputtextboxAutoCompletediv">
+                                    <span id="ui_txtCustomerNotPurchasedProducts_values"></span>
+                                    <input class="inputtextboxAutoComplete TransactionProducts" id="ui_txtCustomerNotPurchasedProducts" placeholder="Products name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsTotalTransaction">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkTotalPurchaseIs" name="totaltrans">
+                                    <label class="custom-control-label" for="ui_chkTotalPurchaseIs">
+                                        If the customer's total transaction
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_CustomerTransaction"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlCustomerTotalPurchase">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" id="ui_txtCustomerTotalPurchase1" onkeypress="return onlyNumbers(event);" value="0" max="999" min="1" maxlength="3">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" style="display: none;" type="text" autocomplete="off" id="ui_txtCustomerTotalPurchase2" onkeypress="return onlyNumbers(event);" value="1" max="1000" min="1" maxlength="3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsCurrentValue">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCustomerCurrectValue" name="custcurval">
+                                    <label class="custom-control-label" for="ui_chkCustomerCurrectValue">
+                                        If the customer's current value is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_CustomerCurrentValue"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlCustomerCurrentValue">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" id="ui_txtCustomerCurrentValue1" onkeypress="return onlyNumbers(event);" value="0" max="999" min="1">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" style="display: none;" id="ui_txtCustomerCurrentValue2" onkeypress="return onlyNumbers(event);" value="1" max="1000" min="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_VisitorsCustomerLastPurchase">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkCustomerLastPurchase" name="custduration">
+                                    <label class="custom-control-label" for="ui_chkCustomerLastPurchase">
+                                        Customer duration since last purchase
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Interaction" id="ui_CustomerDurationLastPurchase"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkCustomerLastPurchaseTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlLastPurchaseCondition">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" id="ui_txtLastPurchaseRange1" onkeypress="return onlyNumbers(event);" value="0" max="999" min="1" maxlength="3">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" style="display: none;" id="ui_txtLastPurchaseRange2" onkeypress="return onlyNumbers(event);" value="1" max="1000" min="1" maxlength="3">
+                                </div>
+                                <div class="secondslbl">
+                                    Days
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="byevent" class="ruletabdetWrap hideDiv">
+                    <h6 class="box-title">By Event</h6>
+                    <div class="ruledetWrap">
+                        <div class="ruledetItem" id="dv_VisitorsImpressionCount">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkFormImpression" name="frmimpress">
+                                    <label class="custom-control-label" for="ui_chkFormImpression">
+                                        If the visitor's form impression
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Event" id="ui_VisitorFormImpression"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="d-flex">
+                                    <div class="droplistwrap mr-2 w-150">
+                                        <select class="form-control form-control-sm dropdownselcom select2" name="" id="ui_ddlFormImpression">
+                                            <option value="0">All Forms</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputWrap">
+                                        <input class="form-control w-60" placeholder="5" type="text" autocomplete="off" value="1" id="ui_txtFormImpressionCount" onkeypress="return onlyNumbers(event);">
+                                    </div>
+                                </div>
+                                <div class="secondslbl pl-0 text-left w-100 mt-2">Total Impression Count</div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsFormCloseCount">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkFormCloseEvent" name="visclose">
+                                    <label class="custom-control-label" for="ui_chkFormCloseEvent">
+                                        If the visitor form close
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Event" id="ui_VisitorFormClose"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="d-flex">
+                                    <div class="droplistwrap mr-2 w-150">
+                                        <select class="form-control form-control-sm dropdownselcom select2" name="" id="ui_ddlFormCloseEvent">
+                                            <option value="0">All Forms</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputWrap">
+                                        <input class="form-control w-60" type="text" autocomplete="off" value="1" id="ui_txtFormCloseEventCount" onkeypress="return onlyNumbers(event);" placeholder="5">
+                                    </div>
+                                </div>
+                                <div class="secondslbl pl-0 text-left w-100 mt-2">Close Count</div>
+
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsFormResponseCount">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkResponseCountEvent" name="totalfrmresp">
+                                    <label class="custom-control-label" for="ui_chkResponseCountEvent">
+                                        If the visitor's total form response
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Event" id="ui_VisitorFormResponse"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitemcolum hideDiv">
+                                <div class="d-flex">
+                                    <div class="droplistwrap mr-2 w-150">
+                                        <select class="form-control form-control-sm dropdownselcom select2" name="" id="ui_ddlResponseCountEvent">
+                                            <option value="0">All Forms</option>
+                                        </select>
+                                    </div>
+                                    <div class="inputWrap">
+                                        <input class="form-control w-60" type="text" autocomplete="off" onkeypress="return onlyNumbers(event);" value="1" id="ui_txtResponseCountEventCount">
+                                    </div>
+                                </div>
+                                <div class="secondslbl pl-0 text-left w-100 mt-2">Total Response Count</div>
+
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_VisitorsShowFormNthTime">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkShowFormAtNTime" name="shownthtime">
+                                    <label class="custom-control-label" for="ui_chkShowFormAtNTime">
+                                        Show this form only Nth Time
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Event" id="ui_FormNthTime"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv">
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control" type="text" autocomplete="off" value="1" id="ui_txtShowFormAtNTime" placeholder="Ex: 2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="byprofile" class="ruletabdetWrap hideDiv">
+                    <h6 class="box-title">By Profile</h6>
+                    <div class="ruledetWrap">
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectSocialStatus">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkSocialStatusIs" class="custom-control-input checkrulqus" name="socialstatus">
+                                        <label class="custom-control-label" for="ui_chkSocialStatusIs">
+                                            If the customer's/prospect's social status is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectSocial"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkSocialStatusIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlSocialStatus">
+                                        <option value="1">Active</option>
+                                        <option value="2">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectInfluentialScore">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkInfluentialScoreIs" name="influenscore">
+                                    <label class="custom-control-label" for="ui_chkInfluentialScoreIs">
+                                        If the customer's/prospect's influential score is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectInfluential"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkInfluentialScoreIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlInfluentialScoreIs">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" id="ui_txtInfluentialScore1" onkeypress="return onlyNumbers(event);" value="1">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" style="display: none;" type="text" autocomplete="off" id="ui_txtInfluentialScore2" onkeypress="return onlyNumbers(event);" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectProductRating">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkProductRatingIs" class="custom-control-input checkrulqus" name="prodrating">
+                                        <label class="custom-control-label" for="ui_chkProductRatingIs">
+                                            If the customer's/prospect's product rating is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectRating"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkProductRatingIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlRating">
+                                        <option value="1">1/5</option>
+                                        <option value="2">2/5</option>
+                                        <option value="3">3/5</option>
+                                        <option value="4">4/5</option>
+                                        <option value="5">5/5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_ProspectNurtureStatus">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkProspectStatusIs" class="custom-control-input checkrulqus" name="nurtstatus">
+                                        <label class="custom-control-label" for="ui_chkProspectStatusIs">
+                                            If the prospect's nurture status is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_ProspectNurture"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkProspectStatusIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlProspectStatus">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_ProspectGender">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkProspectGenderIs" class="custom-control-input checkrulqus" name="gender">
+                                        <label class="custom-control-label" for="ui_chkProspectGenderIs">
+                                            If the customer's/prospect's gender is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectGender"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkProspectGenderIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlProspectGender">
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_ProspectMaritalStatus">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkMartialStatus" class="custom-control-input checkrulqus" name="maritalstatus">
+                                        <label class="custom-control-label" for="ui_chkMartialStatus">
+                                            If the customer's/prospect's marital status is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectMarital"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkMartialStatusTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlMartialStatus">
+                                        <option value="1">Single</option>
+                                        <option value="2">Married</option>
+                                        <option value="3">Divorced</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10" id="dv_ProspectProfession">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkIndustryIs" class="custom-control-input checkrulqus" name="prospectindustryis">
+                                        <label class="custom-control-label" for="ui_chkIndustryIs">
+                                            If the customer's/prospect's profession/industry is
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerProspectProfession"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkIndustryIsTd">
+                                <div class="inputboxwrap w-100">
+                                    <textarea name="" class="form-control form-control-sm" id="ui_txtIndustryIs" cols="1" rows="2" placeholder="Ex: Sales Person"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectConnectedSocially">
+                            <div class="rulemainchkbxWrap">
+                                <div class="checkquesWrap mr-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="ui_chkIsConnectedSocially" class="custom-control-input checkrulqus" name="connectedsocially">
+                                        <label class="custom-control-label" for="ui_chkIsConnectedSocially">
+                                            If the visitor is connected socially
+                                            <a href="javascript:void(0)" target="_blank">
+                                                <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_VisitorConnectedSocial"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkIsConnectedSociallyTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control" id="ui_ddlConnectedSocially">
+                                        <option value="1">Yes</option>
+                                        <option value="2">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectLoyaltyPoints">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkProspectLoyaltyIs" name="loyaltypoints">
+                                    <label class="custom-control-label" for="ui_chkProspectLoyaltyIs">
+                                        If the customer's/prospect's loyalty points are
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerLoyalty"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkProspectLoyaltyIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlProspectLoyaltyIs">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" onkeypress="return onlyNumbers(event);" value="1" id="ui_txtProspectLoyalty1">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" style="display: none;" type="text" autocomplete="off" onkeypress="return onlyNumbers(event);" value="1" id="ui_txtProspectLoyalty2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ruledetItem mt-10 hideDiv" id="dv_ProspectRMFSScore">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkRFMSScoreIs" name="rfmsscore">
+                                    <label class="custom-control-label" for="ui_chkRFMSScoreIs">
+                                        If the customer's RFMS score is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerRFMS"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv" id="ui_chkRFMSScoreIsTd">
+                                <div class="droplistwrap mr-2 w-150">
+                                    <select class="form-control form-control-sm" name="" id="ui_ddlRFMSScore">
+                                        <option value="1">Greater Than</option>
+                                        <option value="2">Less Than</option>
+                                        <option value="3">Between</option>
+                                        <option value="4">Equal</option>
+                                    </select>
+                                </div>
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" onkeypress="return onlyNumbers(event);" value="1" id="ui_txtRFMSScore1">
+                                </div>
+                                &nbsp;&nbsp;
+                                <div class="inputWrap w-60px">
+                                    <input class="form-control form-control-sm" type="text" autocomplete="off" style="display: none;" name="" onkeypress="return onlyNumbers(event);" value="1" id="ui_txtRFMSScore2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ruledetItem mt-10" id="dv_ProspectDOB">
+                            <div class="rulemainchkbxWrap w-60">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input checkrulqus" id="ui_chkDOBIs" name="dobis">
+                                    <label class="custom-control-label" for="ui_chkDOBIs">
+                                        If the visitor's DOB is
+                                        <a href="javascript:void(0)" target="_blank">
+                                            <i class="icon ion-ios-help-outline" data-toggle="popover" data-trigger="hover" title="" data-original-title="By Profile" id="ui_CustomerDOB"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ruleansitem hideDiv flex-wrap">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" checked id="ui_rdbtnDay" name="DOB" value="0">
+                                    <label class="custom-control-label" for="ui_rdbtnDay">Current Day</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_rdbtnMonth" name="DOB" value="1">
+                                    <label class="custom-control-label" for="ui_rdbtnMonth">Current Month</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_rdbtnDates" name="DOB" value="2">
+                                    <label class="custom-control-label" for="ui_rdbtnDates">Date Range</label>
+                                </div>
+                                <div id="dvVisitorDateRange" class="checkdobwrp row mt-2 mb-2 hideDiv">
+                                    <div class="col-sm-6 m-mb-2">
+                                        <input type="text" class="form-control form-control-sm calender" id="txtFromDate" placeholder="From Date" autocomplete="off">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-sm calender" id="txtToDate" placeholder="To Date" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="ui_rdbtnDayDiff" name="DOB" value="3">
+                                    <label class="custom-control-label" for="ui_rdbtnDayDiff">Number of days relative to current Date</label>
+                                </div>
+                                <div id="dvDOBDayDifference" class="pastfutwrp row mt-2 mb-2 hideDiv">
+                                    <div class="col-sm-6 m-mb-2">
+                                        <input type="text" placeholder="Past / Future Date" class="form-control form-control-sm addcalend calender" id="txtDiffDate">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" placeholder="3 Days" class="form-control form-control-sm" id="ui_txtDOBNoofDays">
+                                    </div>
+                                    <small class="text-muted pl-3 pt-2">Note : Negative (For Days in Past) , Positive (For Days in Future)</small>
+                                </div>
+                                <div id="dv_IgnoreCondition" class="ignoredobwrp hideDiv">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="chk_IgnoreDOB" name="ignoredob">
+                                        <label class="custom-control-label" for="chk_IgnoreDOB">Ignore if the visitor's DOB current date</label>
+                                    </div>
+                                    <div class="ignoredobselwrp w-90px">
+                                        <select class="form-control form-control-sm" id="ui_ddlIgnoreDOB">
+                                            <option value="0" title="select" selected="selected">Select</option>
+                                            <option value="1">=</option>
+                                            <option value="2">&lt;</option>
+                                            <option value="3">&gt;</option>
+                                            <option value="4">&lt;=</option>
+                                            <option value="5">&gt;=</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* This is for Form Display Duration Date & Time div starts*@
+        <div class="row mt-4 hideDiv" id="dvFormDisplayDuration">
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <div class="rulemainchkbxWrap mb-3">
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" id="ui_chkFormDisplayDuration" class="custom-control-input" name="">
+                        <label class="custom-control-label font-weight-bold text-uppercase" for="ui_chkFormDisplayDuration">
+                            Form Display
+                            Duration
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" id="ui_chkIsFormDisplayDurationRecurring" class="custom-control-input" name="">
+                        <label class="custom-control-label font-weight-bold text-uppercase" for="ui_chkIsFormDisplayDurationRecurring">
+                            Is Form Display
+                            Duration Recurring
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="form-group">
+                            <label class="frmlbltxt">Start Date & Time</label>
+                            <div class="frmdtetimewrp">
+                                <input type="text" name="" class="form-control addcalend" id="txtStartDate">
+                                <div class="timedrpdwm">
+                                    <select name="" class="form-control form-control-sm ml-2" id="ddlStartTime">
+                                        <option value="00:00">00:00</option>
+                                        <option value="00:15">00:15</option>
+                                        <option value="00:30">00:30</option>
+                                        <option value="00:45">00:45</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="01:15">01:15</option>
+                                        <option value="01:30">01:30</option>
+                                        <option value="01:45">01:45</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="02:15">02:15</option>
+                                        <option value="02:30">02:30</option>
+                                        <option value="02:45">02:45</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="03:15">03:15</option>
+                                        <option value="03:30">03:30</option>
+                                        <option value="03:45">03:45</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="04:15">04:15</option>
+                                        <option value="04:30">04:30</option>
+                                        <option value="04:45">04:45</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="05:15">05:15</option>
+                                        <option value="05:30">05:30</option>
+                                        <option value="05:45">05:45</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="06:15">06:15</option>
+                                        <option value="06:30">06:30</option>
+                                        <option value="06:45">06:45</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="07:15">07:15</option>
+                                        <option value="07:30">07:30</option>
+                                        <option value="07:45">07:45</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="08:15">08:15</option>
+                                        <option value="08:30">08:30</option>
+                                        <option value="08:45">08:45</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="09:15">09:15</option>
+                                        <option value="09:30">09:30</option>
+                                        <option value="09:45">09:45</option>
+                                        <option selected value="10:00">10:00</option>
+                                        <option value="10:15">10:15</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="10:45">10:45</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:15">11:15</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="11:45">11:45</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:15">12:15</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="12:45">12:45</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:15">13:15</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="13:45">13:45</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:15">14:15</option>
+                                        <option value="14:30">14:30</option>
+                                        <option value="14:45">14:45</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="15:15">15:15</option>
+                                        <option value="15:30">15:30</option>
+                                        <option value="15:45">15:45</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="16:15">16:15</option>
+                                        <option value="16:30">16:30</option>
+                                        <option value="16:45">16:45</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="17:15">17:15</option>
+                                        <option value="17:30">17:30</option>
+                                        <option value="17:45">17:45</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:15">18:15</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="18:45">18:45</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:15">19:15</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="19:45">19:45</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:15">20:15</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="20:45">20:45</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:15">21:15</option>
+                                        <option value="21:30">21:30</option>
+                                        <option value="21:45">21:45</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="22:15">22:15</option>
+                                        <option value="22:30">22:30</option>
+                                        <option value="22:45">22:45</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="23:15">23:15</option>
+                                        <option value="23:30">23:30</option>
+                                        <option value="23:45">23:45</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <div class="form-group">
+                            <label class="frmlbltxt">Expiry Date & Time</label>
+                            <div class="frmdtetimewrp">
+                                <input type="text" name="" class="form-control addcalend" id="txtEndDate">
+                                <div class="timedrpdwm">
+                                    <select name="" class="form-control form-control-sm ml-2" id="ddlEndTime">
+                                        <option value="00:00">00:00</option>
+                                        <option value="00:15">00:15</option>
+                                        <option value="00:30">00:30</option>
+                                        <option value="00:45">00:45</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="01:15">01:15</option>
+                                        <option value="01:30">01:30</option>
+                                        <option value="01:45">01:45</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="02:15">02:15</option>
+                                        <option value="02:30">02:30</option>
+                                        <option value="02:45">02:45</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="03:15">03:15</option>
+                                        <option value="03:30">03:30</option>
+                                        <option value="03:45">03:45</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="04:15">04:15</option>
+                                        <option value="04:30">04:30</option>
+                                        <option value="04:45">04:45</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="05:15">05:15</option>
+                                        <option value="05:30">05:30</option>
+                                        <option value="05:45">05:45</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="06:15">06:15</option>
+                                        <option value="06:30">06:30</option>
+                                        <option value="06:45">06:45</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="07:15">07:15</option>
+                                        <option value="07:30">07:30</option>
+                                        <option value="07:45">07:45</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="08:15">08:15</option>
+                                        <option value="08:30">08:30</option>
+                                        <option value="08:45">08:45</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="09:15">09:15</option>
+                                        <option value="09:30">09:30</option>
+                                        <option value="09:45">09:45</option>
+                                        <option selected value="10:00">10:00</option>
+                                        <option value="10:15">10:15</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="10:45">10:45</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:15">11:15</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="11:45">11:45</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:15">12:15</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="12:45">12:45</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:15">13:15</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="13:45">13:45</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:15">14:15</option>
+                                        <option value="14:30">14:30</option>
+                                        <option value="14:45">14:45</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="15:15">15:15</option>
+                                        <option value="15:30">15:30</option>
+                                        <option value="15:45">15:45</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="16:15">16:15</option>
+                                        <option value="16:30">16:30</option>
+                                        <option value="16:45">16:45</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="17:15">17:15</option>
+                                        <option value="17:30">17:30</option>
+                                        <option value="17:45">17:45</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:15">18:15</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="18:45">18:45</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:15">19:15</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="19:45">19:45</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:15">20:15</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="20:45">20:45</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:15">21:15</option>
+                                        <option value="21:30">21:30</option>
+                                        <option value="21:45">21:45</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="22:15">22:15</option>
+                                        <option value="22:30">22:30</option>
+                                        <option value="22:45">22:45</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="23:15">23:15</option>
+                                        <option value="23:30">23:30</option>
+                                        <option value="23:45">23:45</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Mobile InAppCampaign Assign to Group Div*@
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4  hideDiv" id="dvMobileInAppCampaign">
+                        <div class="autoassigntogroups">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Assign to Group (Optional)</label>
+                                <select id="ddlInappgroup" class="form-control dropdownselcom mr-2"
+                                        data-placeholder="">
+                                    <option value="select">Select Group Name</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    @*Mobile InAppCampaign Assign to Group Div*@
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="~/js/RulesToolTip.js"></script>

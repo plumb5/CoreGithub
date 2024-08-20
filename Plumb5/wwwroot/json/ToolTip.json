@@ -1,0 +1,1032 @@
+{
+  "MANAGECONTACT": {
+    "CONTACT": {
+      "ui_tblReportData": [
+        "Name of the Contact or Lead.",
+        "Email Address of the Contact.",
+        "Phone number of the Contact.",
+        "Verification status of the mail. Status(Unverified, In Progress, Verified). Click the icon to Validate the Email Address.",
+        "Date when this contact was created in the plumb5 system."
+      ],
+      "ui_tableSubscribers": [
+        "Subscriber ID.",
+        "Subscriber Status.",
+        "Subscribed Date.",
+        "Subscribed URL"
+      ],
+      "ui_tableMobSubscribers": [
+        "Subscriber ID.",
+        "Subscriber Status.",
+        "Device Name and Operating System.",
+        "Subscribed Date."
+      ],
+      "ui_tbleventtrackerdata": [
+        "Name of the event",
+        "Active status of the event tracking.",
+        "Last event date"
+      ]
+    },
+
+    "GROUP": {
+      "ui_tblReportData": [
+        "Name of the Group.",
+        "Description of the Group.",
+        "Date when this Group was created in the plumb5 system.",
+        "Percentage Status of the number of Email IDs verified in the group."
+      ],
+      "ui_tblDatewiseReportData": [
+        "Date of Memebers Added.",
+        "MembersCount."
+      ]
+
+    },
+    "CONTACTEMAILVALIDATIONOVERVIEW": {
+      "ui_tblReportData": [
+        "Name of the Validated Group.",
+        "Date when the Group was created.",
+        "Date when the Group was last updated.",
+        "Total number of Unique Email Ids in this group.",
+        "Total time taken to Validate this group.",
+        "Current Progress Update."
+      ]
+    },
+    "CONTACTIMPORTOVERVIEWS": {
+      "ui_tblReportData": [
+        "Name of the Contact Import CSV file.",
+        "Total No. of Contacts in the uploaded File.",
+        "Total number of Contacts Successfully Passed.",
+        "Total number of contacts Successfully imported into the plumb5 system.",
+        "Total number of contacts merged from the imported contacts.",
+        "Total number of contacts rejected by the system.",
+        "Last Date Time when this import was updated.",
+        "Current Percentage progress status."
+      ]
+    },
+    "CONTACTDEDUPLICATEOVERVIEW": {
+      "ui_tblReportData": [
+        "Name of the File uploaded for Duplicate Checking.",
+        "Total No. of Contacts in the uploaded File.",
+        "Total number of New Contacts in the uploaded File.",
+        "Total number of Existing Contacts in the uploaded File.",
+        "Total number of Duplicate Contacts in the uploaded File.",
+        "Last Date Time when this import was updated.",
+        "Current Percentage progress status."
+      ]
+    },
+    "CONTACTIMPORTGROUPDISTRIBUTION": {
+      "ui_tblReportData": [
+        "Name of the Group Imported to.",
+        "Total No. of Contacts successfully imported into the Group.",
+        "Total number of Contacts rejected from addition to the group as they are duplicate or invalid.",
+        "Total number of Invalid Contacts that were rejected due to invalid emailID.",
+        "Date Time when this import was created."
+      ]
+    },
+    "CONTACTPROPERTIES": {
+      "ui_tableReport": [ "Contact properties" ]
+    },
+    "FTPIMPORTSETTINGS": {
+      "ui_tableReport": [
+        "Connection Name",
+        "Server IP",
+        "User ID",
+        "Password",
+        "Protocol"
+      ]
+    }
+  },
+  "ANALYTICS": {
+    "VISITS": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A new visitor is one who has never been to your site before and is initiating their first session on your site.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "SITESEARCHPAGES": {
+      "ui_tableReport": [
+        "The keyword searched in these pages.",
+        "The total unique count of the searched keyword in the particular page.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "VISITORS": {
+      "ui_tblReportData": [
+        "Visitors Internet Protocol address (IP address) which is a numerical label assigned to each device connected to a computer network.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "Last Interaction Date is the last date time the user had visited your page.",
+        "Recently visited pages by the visitors.",
+        "City from where the user accessed your page."
+      ]
+    },
+    "CITIES": {
+      "ui_tableReport": [
+        "City from where the user accessed your page.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser."
+      ]
+    },
+    "COUNTRIES": {
+      "ui_tableReport": [
+        "Countries from where the user accessed your page.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser."
+      ]
+    },
+    "NEWRETURN": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A new visitor is one who has never been to your site before and is initiating their first session on your site.",
+        "A Single visitor in one who has only come once",
+        "Repeat visitor is the No. of users who have visited your site multiple times.",
+        "Returning Visitor is someone who has visited your website from the same device. ",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "TIMEONSITE": {
+      "ui_tblReportData": [
+        "Day of the visit.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A new visitor is one who has never been to your site before and is initiating their first session on your site."
+      ]
+    },
+    "TIMETRENDS": {
+      "ui_tblReportData": [
+        "Hour of the day when the users visited.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A new visitor is one who has never been to your site before and is initiating their first session on your site."
+      ]
+    },
+    "FREQUENCY": {
+      "ui_tblReportData": [
+        "No. of visits",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "RECENCY": {
+      "ui_tblReportData": [
+        "Total no. of days passed since the users last visited your website.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "TIMESPEND": {
+      "ui_tblReportData": [
+        "Amount of time spent on the website in Seconds.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "PAGEDEPTH": {
+      "ui_tblReportData": [
+        "Page depth is the average number of pages that your visitors viewed during a single session.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "BROWSER": {
+      "ui_tblReportData": [
+        "Name of the browser used by the users.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "DEVICES": {
+      "ui_tblReportData": [
+        "Brand name of the device used by the visitor.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "NETWORK": {
+      "ui_tblReportData": [
+        "Name of the Visitor's Network operator during your site visit.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A session is a group of user interactions with your website that take place within a given time frame."
+      ]
+    },
+    "ALLSOURCES": {
+      "ui_tblReportData": [
+        "Time, date and month of all the sources through which the visitors visited your website.",
+        "No. of sessions from a direct source. The direct source refers to the traffic that comes to the website directly by typing the website name.",
+        "No. of sessions from a search source. Search source that comes from different search engines like Google, Yahoo, etc.",
+        "No. of sessions from a referring source. The referral source is traffic that comes from various websites and other channels.",
+        "No. of Sessions from a social source. The social source is traffic that comes from Social media channels or social media links.",
+        "No. of sessions from an email source. Email source is traffic that comes from Email campaign response.",
+        "No. of sessions from an SMS source. SMS source is traffic that comes from SMS campaign response.",
+        "No. of sessions from a Paid source. Paid Source is the traffic originating from channels like search engines or social media platforms generated via AdWords and Adsense."
+      ]
+    },
+    "REFERRAL": {
+      "ui_tblReportData": [
+        "Source website through which the user logged in.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser."
+      ]
+    },
+    "ORGANICSEARCH": {
+      "ui_tableReport": [
+        "Source website through which the user logged in.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Search Keyword Details."
+      ]
+    },
+    "PAIDCAMPAIGNS": {
+      "ui_tableReport": [
+        "A landing page can be any page that someone lands on after clicking on an online marketing call-to-action.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "Source website through which the user logged in.",
+        "Medium used for engagement like mail or SMS.",
+        "Campaign Details.",
+        "Campaign Date."
+      ]
+    },
+    "ADWORDS": {
+      "ui_tableReport": [
+        "A landing page can be any page that someone lands on after clicking on an online marketing call-to-action.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "Campaign Date."
+      ]
+    },
+    "ADSENSE": {
+      "ui_tableReport": [
+        "A landing page can be any page that someone lands on after clicking on an online marketing call-to-action.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "Campaign Date."
+      ]
+    },
+    "SOCIALSOURCES": {
+      "ui_tableReport": [
+        "Source website through which the user logged in.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser."
+      ]
+    },
+    "SITESEARCHTERMS": {
+      "ui_tableReport": [
+        "The keyword searched in the website page.",
+        "The total unique count of the searched keyword.",
+        "The total count of the searched keyword."
+      ]
+    },
+    "EMAILSOURCES": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "SMSSOURCES": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "POPULARPAGES": {
+      "ui_tblReportData": [
+        "Name of the Page.",
+        "Average time on page is the average duration of time spent viewing your web page.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your page over the course of a specified time period.",
+        "City from where the user accessed your page."
+
+      ]
+    },
+    "TOPENTRYPAGES": {
+      "ui_tableReport": [
+        "Name of the Page.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "City from where the user accessed your page."
+      ]
+    },
+    "TOPEXITPAGES": {
+      "ui_tableReport": [
+        "Name of the Page.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "Bounce rate is single-page sessions divided by all sessions or the percentage of all sessions on your site in which users viewed only a single page.",
+        "City from where the user accessed your page."
+      ]
+    },
+    "PAGEANALYSIS": {
+      "tbl-pageanalysis": [
+        "Day of the visit.",
+        "A pageview (or pageview hit, page tracking hit) is an instance of a page being loaded (or reloaded) in a browser.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website over the course of a specified time period.",
+        "No. of sessions from different sources. The source refers to the traffic that comes to the website by typing the website name.",
+        "No. of sessions from different cities.",
+        "A Single visitor in one who has only come once",
+        "Repeat visitor is the No. of users who have visited your site multiple times.",
+        "Returning Visitor is someone who has visited your website from the same device. ",
+        "Average time on site is the average duration of time spent viewing your site.",
+        "No. of sessions that comes to the website by typing these search keys."
+      ]
+    },
+    "EVENTTRACKING": {
+      "ui_tblReportData": [
+        "HTML Identifier for the tag to be tracked",
+        "Total number of event values for the HTML Control.",
+        "Type of event tracking, CSS class-based or HTML id based.",
+        "Active status of the event tracking.",
+        "Total number of clicks registered for the HTML Control",
+        "Total number of unique clicks registered for the HTML Control",
+        "City from where the user accessed your page."
+      ]
+    },
+    "UNIQUEVISITS": {
+      "ui_tblReportData": [
+        "Visitors Internet Protocol address (IP address) which is a numerical label assigned to each device connected to a computer network.",
+        "City from where the user accessed your page.",
+        "A session is a group of user interactions with your website that take place within a given time frame.",
+        "Last Visited Date",
+        "Average time on site is the average duration of time spent viewing your site."
+      ]
+    },
+    "GOAL": {
+      "ui_tableReport": [
+        "Name of the Conversion Goal.",
+        "Date on which the Conversion goal was created.",
+        "Total percentage of visitors who completed the goal in the selected time period."
+      ]
+    },
+    "ATTRIBUTIONMODEL": {
+      "ui_tableReport": [
+        "Name of the Conversion Attribution.",
+        "Date on which the Attribution was created."
+      ]
+    }
+  },
+  "CAPTUREFORM": {
+    "MANAGEEMBEDDEDFORMS": {
+      "ui_tblReportData": [
+        "Unique Identifier for the Embedded form.",
+        "Form Type for the Embedded form.",
+        "Date when this form was last updated."
+      ]
+    },
+    "MANAGEPOPUPFORMS": {
+      "ui_tblReportData": [
+        "Unique Identifier for the Pop-Up Form.",
+        "Form Type for the Pop-Up Form.",
+        "Date when this form was last updated."
+      ]
+    },
+    "MANAGETAGGEDFORMS": {
+      "ui_tblReportData": [
+        "Unique Identifier for the Embedded form.",
+        "URL Link of the page where this Pop-up form appears.",
+        "Date when this form was last updated."
+      ]
+    },
+    "SETTINGS": {
+      "ui_tableReport": [
+        "Type of External Resource Javascript or CSS.",
+        "Brief description of the external resource.",
+        "URL link for the external resource."
+      ]
+    }
+  },
+  "WEBPUSH": {
+    "TEMPLATE": {
+      "ui_tblReportData": [
+        "Name of the template",
+        "Name of the campaign associated with the template.",
+        "Template creation date."
+      ]
+    },
+    "SCHEDULED": {
+      "ui_tableReport": [
+        "Name of the scheduled campaign.",
+        "Date when the scheduled campaign was last updated.",
+        "scheduled Campaign creation date."
+      ]
+    },
+    "RSS": {
+      "ui_tableReport": [
+        "Name of the RSS based campaign.",
+        "Date when the RSS based campaign was last updated."
+      ]
+    },
+    "DRAFT": {
+      "ui_tblReportData": [
+        "Name of the draft campaign.",
+        "Date when the draft was last updated."
+      ]
+    },
+    "SUBSCRIBERS": {
+      "ui_tableSubscribers": [
+        "Unique Identification for the visitor.",
+        "Current subscription status, Active or in-active.",
+        "Date on which the user subscribed to the Browser notification.",
+        "URL Link of the web page from where the user subscribed to the notification."
+      ]
+    },
+    "WEBPUSHINDIVIDUALRESPONSE": {
+      "ui_tblReportData": [
+        "Name of the template",
+        "WebPush sent date.",
+        "Subscriber MachineID."
+      ]
+    }
+  },
+  "MOBILEANALYTICS": {
+    "VISITS": {
+      "ui_tblReportData": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "A new visitor is one who has never been to your Mobile App before and is initiating their first session on your Mobile App.",
+        "Average time on site is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "VISITORS": {
+      "ui_tableReport": [
+        "Visitors Internet Protocol address (IP address) which is a numerical label assigned to each device connected to a computer network.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Average time on site is the average duration of time spent viewing your Mobile App.",
+        "Last InterAction Date is the last date time the user had visited your Mobile App.",
+        "Brand or Make of the Mobile Device used."
+      ]
+    },
+    "CITIES": {
+      "ui_tblReportData": [
+        "City from where the user accessed your Mobile App.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded."
+      ]
+    },
+    "COUNTRIES": {
+      "geocountries": [
+        "Countries from where the user accessed your Mobile App.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded."
+      ]
+    },
+    "NEWRETURN": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A new visitor is one who has never been to your mobile app before and is initiating their first session on your app.",
+        "A Single visitor in one who has only come once",
+        "Repeat visitor is the No. of users who have visited your Mobile App multiple times.",
+        "Returning Visitor is someone who has visited your Mobile App from the same device. ",
+        "Average time on site is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "TIMEONMOBILE": {
+      "ui_tableReport": [
+        "Day of the visit.",
+        "Average time on site is the average duration of time spent viewing your Mobile App.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "A new visitor is one who has never been to your Mobile App before and is initiating their first session on your Mobile App."
+      ]
+    },
+    "FREQUENCY": {
+      "ui_tblReportData": [
+        "No. of visits",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "RECENCY": {
+      "ui_tblReportData": [
+        "Total no. of days passed since the users last visited your Mobile App.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "TIMESPEND": {
+      "ui_tblReportData": [
+        "Amount of time spent on the Mobile App in Seconds.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "OPERATINGSYSTEM": {
+      "ui_tableReport": [
+        "Name of the operating system used by the mobile device.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "SCREENRESOLUTION": {
+      "ui_tblReportData": [
+        "Dimension of the Mobile Device Screen.",
+        "A Screen View is the number of times the App was used in a certain screen dimension.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "DEVICE": {
+      "ui_tableReport": [
+        "Make or Brand name of the Device used.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "CARRIER": {
+      "ui_tblReportData": [
+        "Day of the Visit.",
+        "Name of the Network operator used.",
+        "A session is a group of user interactions with your Mobile App that take place within a given time frame.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "A Screen View is the number of times the App was used in a certain screen dimension.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App."
+      ]
+    },
+    "POPULARPAGES": {
+      "ui_tblReportData": [
+        "Name of the Page.",
+        "Average time on Mobile App is the average duration of time spent viewing your Mobile App.",
+        "A pageview is an instance of a Mobile App screen being loaded.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your Mobile App over the course of a specified time period.",
+        "City from where Maximum no. of application instances were launched."
+      ]
+    },
+    "EVENTTRACKING": {
+      "ui_tblReportData": [
+        "Type of event.",
+        "Value of the Event",
+        "Total Clicks on the Control.",
+        "Total Unique Clicks on the Control."
+      ]
+    },
+    "UNIQUEVISITS": {
+      "ui_tblReportData": [
+        "Visitors Internet Protocol address (IP address) which is a numerical label assigned to each device connected to a computer network.",
+        "City from where the user accessed your Mobile App..",
+        "A session is a group of user interactions with your Mobile App. that take place within a given time frame.",
+        "Last Visited Date",
+        "Average time on Mobile App. is the average duration of time spent viewing your app."
+      ]
+    }
+
+  },
+  "MOBILEPUSHNOTIFICATION": {
+    "SCHEDULES": {
+      "ui_tableReport": [
+        "Name of the Campaign.",
+        "Date when the campaign was last modified.",
+        "Campaign scheduled date."
+      ]
+    },
+    "MOBILEPUSHTEMPLATE": {
+      "ui_tblReportData": [
+        "Name pf the push notification template.",
+        "Push notification Style and layout.",
+        "Title text of the push notification.",
+        "Date when the template was last modified."
+      ]
+    },
+    "MOBILEDEVICEINFO": {
+      "ui_tblReportData": [
+        "Unique identifier for the Subscriber.",
+        "Current status of the subscriber. Active or Inactive.",
+        "Mobile device Brand Name and Operating System used by the Subscriber.",
+        "Date when the user subscriber to your mobile push notification."
+
+      ]
+    }
+  },
+  "MAIL": {
+    "SCHEDULES": {
+      "ui_tblReportData": [
+        "Name of the Scheduled EMail Campaign.",
+        "Description of the Scheduled EMail Campaign.",
+        "Name of the Group.",
+        "Date when the Scheduled EMail Campaign was last modified.",
+        "EMail Campaign scheduled date."
+      ]
+    },
+    "CAMPAIGN": {
+      "ui_tblReportData": [
+        "Name of the Draft EMail Campaign.",
+        "Date when the Draft EMail Campaign was last modified."
+      ]
+    },
+    "MAILTEMPLATE": {
+      "ui_tableReport": [
+        "Mouse over to see a thumbnail of the template. Click on the thumbnail to view in full screen.",
+        "Name of the template associated with the Campaign.",
+        "Name of the Campaign.",
+        "Spam Score is an indicator to determine the percentage of the potential risk of receiving a penalty or a ban by the mail gateway.",
+        "Date when the template was last modified."
+      ]
+    },
+    "INDIVIDUALRESPONSE": {
+      "ui_tblReportData": [
+        "Sender Name.",
+        "Sender Email Address.",
+        "Mail Subject.",
+        "Template Name.",
+        "Mail sent date.",
+        "Recipient Email Address."
+      ]
+    },
+    "MAILSETTINGS": {
+      "ui_tblReportData": [
+        "Authorized Email ID that would be included in the From Adress.",
+        "Authorization status. Active or in-Active",
+        "Show this Email ID to all users.",
+        "Delete Email Address."
+      ],
+      "ui_tblReportServiceProviderReportData": [
+        "Configuration Name of the Email service provider (ESP).",
+        "An email service provider (ESP) are companies that allow users to send email campaigns to a list of subscribers.",
+        "API Key to be used ONLY for Promotional mail Campaigns",
+        "API Key to be used ONLY for Transactional mail Campaigns"
+      ]
+    },
+    "RESPONSES": {
+      "dvcampaignContacts": [
+        "Unique Identifier for the response."
+      ]
+    }
+  },
+  "SMS": {
+    "SCHEDULES": {
+      "ui_tblReportData": [
+        "Name of the Scheduled SMS Campaign.",
+        "Description of the Scheduled SMS Campaign.",
+        "Name of the Group.",
+        "Date when the Scheduled SMS Campaign was last modified.",
+        "SMS Campaign scheduled date."
+      ]
+    },
+    "CAMPAIGN": {
+      "ui_tblReportData": [
+        "Name of the Draft SMS Campaign.",
+        "Date when the Draft SMS Campaign was last modified."
+      ]
+    },
+    "TEMPLATE": {
+      "ui_tblReportData": [
+        "Name of the template associated with the Campaign.",
+        "Name of the Campaign.",
+        "Template Content Type.",
+        "Date when the template was created."
+      ]
+    },
+    "SMSINDIVIDUALRESPONSE": {
+      "ui_tableReport": [
+        "Name of the template.",
+        "SMS Sent date.",
+        "Recipient Phone number.",
+        "Template Content Type."
+      ]
+    },
+    "SMSSETTINGS": {
+      "ui_tblReportData": [
+        "Configuration Name of the SMS service provider (SSP).",
+        "An SMS service provider (SSP) are companies that allow users to send SMS campaigns to a list of subscribers.",
+        "API Key to be used ONLY for Promotional SMS Campaigns",
+        "API Key to be used ONLY for Transactional SMS Campaigns"
+      ]
+    },
+    "REPORT": {
+      "tblSmsResponses": [
+        "Unique Identifier for the response."
+      ],
+      "tblSmsResponses1": [
+        "Unique Identifier for the response."
+      ]
+    }
+
+  },
+  "CHAT": {
+    "ALLCHAT": {
+      "ui_tblReportData": [
+        "Name of the chat room area.",
+        "Date when the chat room was created."
+      ]
+    },
+    "CONFIGURATION": {
+      "ui_tableReport": [
+        "Type of External Resource Javascript or CSS.",
+        "Brief description of the external resource.",
+        "URL link for the external resource."
+      ]
+    },
+    "CHATROOM": {
+      "ui_tblReportData": [
+        "Banner Title.",
+        "Impressions.",
+        "Clicks."
+      ]
+    },
+    "AGENTREPORT": {
+      "tbl-agentperform": [ "Agent identity", "how many chats were accepted", "How many chats were served", "Completed Chats", "Chats that were abandoned", "how many prospects were missed", "how many Leads", "How many Customers were chatting", "Chat to prospect conversion rate", "Chat to Customer conversion rate" ],
+      "tbl-pingchat": [ "Chat initiation page URL", "Chat pings initiated by the system", "No. of responses", "Conversion rate from impressions to chat" ],
+      "tbl-inschats": [ "Chat initiation page URL", "Chat conversion rate" ],
+      "tbl-complchats": [ "Completion Date", "Chat initiated", "No. of Visitors assigned to Agent", "No. of Visitors not assigned to any agent", "No. of chats Completed", "percentage of total chats taken over Chats completed." ]
+    }
+  },
+  "PROSPECT": {
+    "LEADS": {
+      "ui_tblReportData": [
+        "Color-Coded Lead labels help you visually categorize your leads as you are working through qualifying them",
+        "Full name of the lead, followed by Name of the Agent handling.",
+        "Email Address of the lead.",
+        "Phone Number of the lead."
+      ]
+    },
+    "FOLLOWUPS": {
+      "ui_tblReportData": [
+        "Color-Coded Lead labels help you visually categorize your leads as you are working through qualifying them",
+        "Full name of the lead, followed by Name of the Agent handling.",
+        "Email Address of the lead.",
+        "Phone Number of the lead."
+      ]
+    },
+    "MISSEDFOLLOWUPS": {
+      "ui_tblReportData": [
+        "Color-Coded Lead labels help you visually categorize your leads as you are working through qualifying them",
+        "Full name of the lead, followed by Name of the Agent handling.",
+        "Email Address of the lead.",
+        "Phone Number of the lead."
+      ]
+    },
+    "COMPLETEDFOLLOWUPS": {
+      "ui_tblReportData": [
+        "Color-Coded Lead labels help you visually categorize your leads as you are working through qualifying them",
+        "Full name of the lead, followed by Name of the Agent handling.",
+        "Email Address of the lead.",
+        "Phone Number of the lead."
+      ]
+    },
+    "MYREPORTS": {
+      "ui_tblReportData": [
+        "Color-Coded Lead labels help you visually categorize your leads as you are working through qualifying them",
+        "Full name of the lead, followed by Name of the Agent handling.",
+        "Email Address of the lead.",
+        "Phone Number of the lead."
+      ]
+    },
+    "SCHEDULEDMAILALERTS": {
+      "ui_tblReportData": [
+        "Name of the mail template used.",
+        "Sender Email Address.",
+        "Sender Name.",
+        "Recipient Email Address.",
+        "Mail Scheduled date."
+      ]
+    },
+    "SCHEDULEDSMSALERTS": {
+      "ui_tblReportData": [
+        "Name of the SMS template used.",
+        "Sender Name.",
+        "Sender Phone Number.",
+        "SMS Scheduled date."
+      ]
+    },
+    "CONTACTARCHIVE": {
+      "ui_tableReport": [
+        "Name of the CSV/XLS file used for import Leads for Archival.",
+        "Total number of leads in the Archive File.",
+        "Total number of leads successfully archived.",
+        "Total number of leads that could not be archived.",
+        "Last updated date.",
+        "Last Archive Job progress."
+      ]
+    },
+    "NOTIFICATIONRULES": {
+      "ui_tbl_NotifiReportData": [
+        "Name of the notification rule used.",
+        "Email Address of the Agent handling the lead."
+      ]
+    },
+    "LEADPROPERTIES": {
+      "ui_tableReport": [
+        "Lead column name."
+      ]
+    },
+    "CONTACTIMPORTOVERVIEWS": {
+      "ui_tblReportData": [
+        "Name of the Contact Import CSV file.",
+        "Total No. of Contacts in the uploaded File.",
+        "Total number of Contacts Successfully Passed.",
+        "Total number of contacts Successfully imported into the plumb5 system.",
+        "Total number of contacts merged from the imported contacts.",
+        "Total number of contacts rejected by the system.",
+        "Last Date Time when this import was updated.",
+        "Current Percentage progress status."
+      ]
+    },
+    "CONTACTIMPORTGROUPDISTRIBUTION": {
+      "ui_tblReportData": [
+        "Name of the Group Imported to.",
+        "Total No. of Contacts successfully imported into the Group.",
+        "Total number of Contacts rejected from addition to the group as they are duplicate or invalid.",
+        "Total number of Invalid Contacts that were rejected due to invalid emailID.",
+        "Date Time when this import was created."
+      ]
+    }
+  },
+  "JOURNEY": {
+    "WORKFLOWS": {
+      "ui_tblReportData": [
+        "Name of the Engagement journey.",
+        "Number of visitors who have taken the Engagement journey path at least once.",
+        "Date when the Journey workflow was last updated."
+      ]
+    },
+    "RULES": {
+      "ui_tblReportData": [
+        "Name of the Rule used in the journey.",
+        "Date when the workflow rule was last updated."
+      ]
+    }
+  },
+  "MANAGEUSERS": {
+    "USERS": {
+      "ui_tbUserDetails": [
+        "Name of the Plumb5 user.",
+        "Email Address of the Plumb5 user.",
+        "Current activity status of the user.",
+        "User Roles or permissions assigned to the user that control access to areas and features within the Plumb5 Platform.",
+        "Name of the Supervisor of the user."
+      ]
+    },
+    "ROLES": {
+      "ui_tbRolesDetails": [
+        "Name of the Plumb5 Access Role.",
+        "Email Address of Access role creator."
+      ]
+    },
+    "GROUPS": {
+      "ui_tbGroupDetails": [
+        "Name of the Plumb5 User Group.",
+        "Date when this User group was created."
+      ]
+    }
+  },
+  "PREFERENCE": {
+    "CAMPAIGNIDENTIFIER": {
+      "ui_tblReportData": [
+        "Name of the Campaign.",
+        "Date when this campaign was last modified."
+      ]
+    }
+  },
+  "VIEWS": {
+    "SHARED": {
+      "_EVENTTRACKERDATA": {
+        "ui_tbleventtrackerdata": [
+          "Name of the event",
+          "Active status of the event tracking.",
+          "Last event date"
+        ]
+      }
+    }
+
+  },
+  "WHATSAPP": {
+    "SCHEDULES": {
+      "ui_tblReportData": [
+        "Name of the Scheduled WhatsApp Campaign.",
+        "Description of the Scheduled WhatsApp Campaign.",
+        "Name of the Group.",
+        "Date when the Scheduled WhatsApp Campaign was last modified.",
+        "WhatsApp Campaign scheduled date."
+      ]
+    },
+    "CAMPAIGN": {
+      "ui_tblReportData": [
+        "Name of the Draft WhatsApp Campaign.",
+        "Date when the Draft WhatsApp Campaign was last modified."
+      ]
+    },
+    "WHATSAPPTEMPLATES": {
+      "ui_tableReport": [
+        "Name of the template associated with the Campaign.",
+        "Name of the Campaign.",
+        "Template Content Type.",
+        "Date when the template was created."
+      ]
+    },
+    "WHATSAPPINDIVIDUALRESPONSE": {
+      "ui_tableReport": [
+        "Name of the template.",
+        "WhatsApp Sent date.",
+        "Recipient Phone number.",
+        "Template Type."
+      ]
+    },
+    "WHATSAPPSETTINGS": {
+      "ui_whatsappsercivetblReportData": [
+        "Configuration Name of the Whatsapp service provider (WSP).",
+        "An Whatsapp service provider (WSP) are companies that allow users to send SMS campaigns to a list of subscribers.",
+        "API Key to be used ONLY for Promotional Whatsapp Campaigns"
+      ]
+    },
+    "REPORT": {
+      "tblwhatsappResponses": [
+        "Unique Identifier for the response."
+      ],
+      "tblwhatsappResponses1": [
+        "Unique Identifier for the response."
+      ]
+    }
+  },
+  "CUSTOMEVENTS": {
+    "CUSTOMEVENTSOVERVIEW": {
+      "ui_tblReportData": [
+        "Custom Events Name.",
+        "Get Tracking Status.",
+        "Total Events Added.",
+        "Date when the data was updated."
+      ]
+    },
+    "VIEWAGGREGATEEVENTDATA": {
+      "ui_trheadReportData": [
+        "Last Interaction Date is the last date time the user had done the event.",
+        "Total Event tracking hit.",
+        "Unique Visitors is the number of unduplicated (counted only once) visitors to your website who had done the event.",
+        "Unique Customers is the number of unduplicated (counted only once) Customers to your website who had done the event."
+      ]
+    },
+    "CUSTOMDATA": {
+      "ui_tblReportData": [
+        "Name of the Custom Event Import CSV file.",
+        "Current progress status.",
+        "Total number of Custom Event Data present in the file.",
+        "Total number of Custom Event Data Successfully imported.",
+        "Total number of Custom Event Data rejected by the system.",
+        "Last Date Time when this import was updated."
+      ]
+    }
+  },
+  "REVENUE": {
+    "RevenueChannels": {
+      "ui_tableReport": [ "Campaign Name", "Revenue Generated", "Avg revenue per user" ]
+    },
+    "REVENUEDASHBOARD": {
+      "ui_tableReport": [
+        "Transaction Day.",
+        "Total Revenue Generated",
+        "Avg revenue per user"
+      ]
+    }
+
+  }
+
+}

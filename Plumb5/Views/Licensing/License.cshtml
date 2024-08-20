@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | Plumb5</title>
+    <link rel="stylesheet" href="~/Content/css/plumb5-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="p5new-frmWrapper">
+        <div class="p5new-frmwrappee">
+            <div class="p5new-bgwhiteWrap">
+                <div class="p5new-logoWrp"><a href="http://www.plumb5.com"></a></div>
+                <div class="p5new-frmWrap">
+                  
+                        <div class="p5new-frmFldWrp">
+                            <div class="p5new-frmFld">
+                                Please enter new license key
+                            </div>
+                            <div class="p5new-frmFld">
+                                <input type="text" class="p5new-frm-cont p5new-input-eff"  id="ui_txtLincense" maxlength="34" />
+                            </div>
+                            <div class="p5new-btnwrp">
+                                <button id="ui_btnSubmitReNew" class="btn-active btn-block" type="submit">Renew</button>
+                               
+                            </div>
+                            <div class="p5new-stayWrap">
+                                <div style="text-align:center;">
+                                    <span id="ui_spnLicenseKey" class="field-validation-error" style="padding-left: 0px;color: #C30;"></span>
+                                </div>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+            <p class="p5new-terms">
+                &copy; 2014 onwards. All Rights Reserved. Plumb5 is brought to you by Decisive Analytical Systems PVT.Ltd.
+                <a href="https://plumb5.com/privacy.html">Privacy Policy</a> and <a href="https://plumb5.com/terms.html">Terms of Service</a>.
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#ui_btnSubmitReNew").click(function () {
+                $('#dvLoading').show();
+
+                var licensing = { LicensingKey: "" };
+                licensing.LicensingKey = $.trim($("#ui_txtLincense").val())
+                $.ajax({
+                    type: "POST",
+                    url: "/Licensing/UpdateNewLicense",
+                    data: JSON.stringify({ 'licensing': licensing }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response.Status) {
+                            $("#ui_spnLicenseKey").html("Update successful");
+                        }
+                        else {
+                            $("#ui_spnLicenseKey").html(response.Error);
+                        }
+                        $('#dvLoading').hide();
+                    },
+                    error: function () {
+
+                    }
+                });
+
+            });
+        });
+    </script>
+
+
+    @* @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    } *@
+
+</body>
+</html>

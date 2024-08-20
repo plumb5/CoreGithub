@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Preferences";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem  font-12 m-border-bottom active" data-setttype="tabcontone">IP Restrictions</div>
+        <div class="setttabitem  font-12 m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none;" class="_1KJtL"></grammarly-extension>
+                <div class="box-white">
+                    <div id="tabcontone" class="setttabcontainer">
+                        <div class="prefcontainer">
+                            <div class="df-ac-sbet">
+                                <h6 class="box-title m-pt-20 pl-0">IP Restrictions</h6>
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="prefcontent">
+                                <p class="pcont">Note: Please follow the syntax exactly as shown in the example below. Any error would lead to disruption of service</p>
+                                <p class="pcont wordbreak">Syntax Example: enter data separated by commas like: Delhi,Bangalore</p>
+                                <div class="excludewrp">
+                                    <label class="frmlbltxt" for="">Exclude traffic from</label>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="ipwrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="2.62.64.47" id="txtExcludeIpAddress"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="subdirwrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="Subdirectory" id="txtExcludeSubdirectory"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="citywrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="City" id="txtExcludeCity"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="countrywrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="Country" id="txtExcludeCountry"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="frmlbltxt" for="">Include traffic from the Ip/Subdirectory/City/Country</label>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="ipwrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="2.62.64.47" id="txtIncludeIpAddress"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="subdirwrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="Subdirectory" id="txtIncludeSubdirectory"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="citywrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="City" id="txtIncludeCity"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 m-mb-2">
+                                            <div class="countrywrp">
+                                                <textarea type="text" name="" class="form-control" placeholder="Country" id="txtIncludeCountry"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="frmrepreschktitwrp">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input frmrepresmain" id="IsDeviceTrackingRequired" name="PreferenceDeviceTrackingRequired">
+                                        <label class="custom-control-label" for="IsDeviceTrackingRequired">IsDeviceTrackingRequired</label>
+                                    </div>
+                                </div>
+                                <div class="btnwrp mt-3 mb-3">
+                                    <button class="btn btn-primary mr-2" type="button" onclick="SaveAndUpdare();">Save</button>
+                                </div>
+                                <p id="textchangereflect" class="font-13 text-success ml-2 mb-0 hideDiv">The changes will reflect in about 5 mins.Please check back later.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Preference/IpRestrictions.js"></script>

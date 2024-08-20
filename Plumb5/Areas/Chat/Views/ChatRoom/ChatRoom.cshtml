@@ -1,0 +1,964 @@
+﻿@{
+    ViewBag.Title = "Chat Room";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<style>
+    .ui-autocomplete.ui-widget-content {
+        border-radius: 0px !important;
+        z-index: 1000 !important;
+        top: -400px !important;
+        height: 200px;
+        overflow-y: auto;
+        border: solid 1px #ccc;
+        border-left: none;
+        width: 55% !important;
+        padding: 10px 20px;
+    }
+</style>
+
+<script type="text/javascript">
+    var chatApp = "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["CHATAPPURL"])";
+    //var chatApp = "http://localhost:4412/"; //to test locally
+</script>
+<script src="~/js/Chat/jquery.signalR-2.2.1.js"></script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Chat Room [<span class="chatroomname" id="ui_ChatRoomName"> </span>]</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Live Chat</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Manage Chat</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chat Room</li>
+        </ol>
+    </div>
+    <div class="chatroomwrp mr-tp-15">
+        <div class="row m-gut">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-3">
+                <div class="box-white">
+                    <div class="chatactvistorwrp">
+                        <div data-chatvisitor="chatactvvistab" class="chatactvistor active" id="ui_dvActiveVisitors">
+                            Active
+                            Visitors
+                        </div>
+                        <div data-chatvisitor="chatagnttab" class="chatactvistor" id="ui_dvActiveAgents">Active Agents</div>
+                    </div>
+                    <div id="dvContacts" class="chatactvistcont">
+                        <ul class="chatactvisItemwrp" id="ui_liActiveVisitors">
+                        </ul>
+                    </div>
+                    <div id="ui_divActiveAgents" class="chatactvistcont hideDiv">
+                        <ul class="chatactagntwrp" id="ui_liActiveAgents">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 p-gut addDivId">
+                <div class="box-white h-100">
+                    <div class="chatmesscontwrapp">
+                        <div class="chatmessconttabiewrp">
+                            <div class="chatmesscontrabwrp">
+                                <div data-chattabcont="livechat" class="chatmesscontab m-livmob-show">
+                                    <i class="fa fa-chevron-left"></i> Back
+                                </div>
+                                <div data-chattabcont="livechat" class="chatmesscontab active" id="ui_divlivechat">
+                                    Live Chat
+                                </div>
+                                <div data-chattabcont="pastchat" class="chatmesscontab" id="ui_divpastchat">
+                                    Past Chat
+                                </div>
+                                <div data-chattabcont="chatvisitordetails" class="chatmesscontab" id="ui_divchatvisitordetails">
+                                    Visitor Details
+                                </div>
+                                <div data-chattabcont="chatbanreport" class="chatmesscontab" id="ui_divchatbanreport">
+                                    Banner Report
+                                </div>
+                                <div data-chattabcont="chatrecommendat" class="chatmesscontab" id="ui_divchatrecommendat">
+                                    Recommendations
+                                </div>
+                                <div data-chattabcont="chatagentprofile" class="chatmesscontab" id="ui_divchatagentprofile">
+                                    Agent
+                                    Profile
+                                </div>
+                                <div data-chattabcont="chatnotificat" class="chatmesscontab" id="ui_divchatnotificat">
+                                    Notifications
+                                </div>
+                            </div>
+                            <div class="chatsignoutwrp"><i class="fa fa-power-off hideDiv" id="ui_SignOutOption" onclick="SignOut();"></i></div>
+                        </div>
+                        <div id="livechat" class="chatmesstabcontent overflwnone">
+                            <div class="chatmessboxwrap">
+                                <div class="chatvisidsign hideDiv" id="ui_dvlivechatuser">
+                                    <div class="profphotwrp">
+                                        <div class="chatphotIcn mr-3"><i class="fa fa-user-o"></i></div>
+                                        <div class="chatvisidwrp">
+                                            <h6 id="visitorid"></h6>
+                                            <small class="text-muted" id="visitorip"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chatvismesboxbody">
+                                    <div class="chatmediawrp p-3" id="ulMesg"></div>
+                                    <div class="chatmediawrp p-3 hideDiv" id="dvTypingMesg">
+                                        <div class="media mb-4 d-flex align-items-center ">
+                                            <div class="media-body reverse">
+                                                <div class="msgagent mb-0">
+                                                    <div class="livechatusertype">
+                                                        <div class="lchat-three-bounce">
+                                                            <div class="lchat-child lchat-bounce1 bg-gray-800">
+                                                            </div>
+                                                            <div class="lchat-child lchat-bounce2 bg-gray-800">
+                                                            </div>
+                                                            <div class="lchat-child lchat-bounce3 bg-gray-800">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chatuserimgwrp"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chatmessinputbox">
+                                    <div class="chatareawrp">
+                                        <textarea class="form-control border-left-0 border-right-0"
+                                                  id="P5txtChat" cols="3"
+                                                  placeholder="Type a Message here..." rows="3"></textarea>
+                                        <div class="chatsubbtnwrp" id="ui_btnSend">
+                                            <button type="button" class="btn btn-chat">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                        <div class="chatemojiwrp hideDiv">
+                                            <div class="attachbtn mr-1 position-relative">
+                                                <button type="button" class="btn btn-trans">
+                                                    <i class="icon ion-android-attach font-18"></i>
+                                                </button>
+                                                @*<input type="file"  class="inputfilebtn" >*@
+                                            </div>
+                                            <div class="emojiwrp"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pastchat" class="chatmesstabcontent hideDiv">
+                            <div id="ui_dvpastchat_Nodata" class="no-data">There is no data for this view</div>
+                            <div class="chatmessboxwrap hideDiv" id="ui_dvpastchat">
+                                <div class="chatvisidsign hideDiv" id="ui_dvpasthatuser">
+                                    <div class="profphotwrp">
+                                        <div class="chatphotIcn mr-3"><i class="fa fa-user-o"></i></div>
+                                        <div class="chatvisidwrp">
+                                            <h6 id="pastchatvisitorid"></h6>
+                                            <small class="text-muted" id="pastchatvisitorip"></small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chatvismesboxbody">
+                                    <div class="chatmediawrp p-3" id="ulMesgPastMesg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chatvisitordetails" class="chatmesstabcontent hideDiv">
+                            <div id="ui_dvvisitorDetails_Nodata" class="no-data">There is no data for this view</div>
+                            <div class="chatvisitdetwrp hideDiv">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="tableWrapper">
+                                            <div class="table-responsive td-bg-even">
+                                                <table class="table tbl-td-ta-lft border">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Location
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_Location"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                State
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_State">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Country
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_Country">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Platform
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_Platform"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Browser
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_Browser">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                IP Address
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_IPAddress">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Chat Loaded
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_ChatLoaded"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Chat Initiated
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_ChatInitiated">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Site Visits
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_SiteVisits">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Time on Site
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_TimeonSite">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Time on Chat
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_TimeonChat">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Page Visits
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_PageVisits">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Last Page
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_LastPage">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="td-wid-40 m-p-w-150 font-weight-bold">
+                                                                Source
+                                                            </td>
+                                                            <td class="td-wid-60 m-p-w-150" id="ui_Source">
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="chatupdfrmwrp">
+                                            <h6 class="bg-box-title border-bottom text-center">
+                                                Update
+                                                Visitor Summary
+                                            </h6>
+                                            <div class="chatvistsumwrp mt-4">
+                                                <div class="form-group">
+                                                    <label class="frmlbltxt">
+                                                        Comment on
+                                                        Visitor
+                                                    </label>
+                                                    <textarea id="ui_txtVisitorsNote" class="form-control"
+                                                              cols="3" rows="3"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="frmlbltxt">Name</label>
+                                                    <input type="text" class="form-control"
+                                                           id="ui_txtVisitorName">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="frmlbltxt">Email Id</label>
+                                                    <input type="text" class="form-control"
+                                                           id="ui_txtVisitorContactMailId">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="frmlbltxt">
+                                                        Contact
+                                                        Number
+                                                    </label>
+                                                    <input type="text" class="form-control"
+                                                           id="ui_txtVisitorContactNumber">
+                                                </div>
+                                                <div class="btnwrp">
+                                                    <button type="button" class="btn btn-primary" id="ui_btnUpdateContact">
+                                                        Save
+                                                        Details
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chatbanreport" class="chatmesstabcontent hideDiv">
+                            <h6 class="box-title p-3 mb-0 border-bottom ">Banner Reports</h6>
+                            <div id="ui_dvbannernodata" class="no-data">There is no data for this view</div>
+                            <div class="chatbanrep hideDiv">
+                                <div class="tableWrapper">
+                                    <div class="table-responsive">
+                                        <table class="table" id="ui_tblReportData">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="helpIcon m-p-w-80 td-wid-5 text-center">
+                                                        Preview
+                                                    </th>
+                                                    <th scope="col" class="helpIcon m-p-w-190 td-wid-55">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        Banner Title
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap"></div>
+                                                    </th>
+                                                    <th scope="col" class="helpIcon m-p-w-190 td-wid-20">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        Impressions
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap"></div>
+                                                    </th>
+                                                    <th class="helpIcon m-p-w-150 td-wid-20" scope="col">
+                                                        <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>
+                                                        Clicks
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="ui_tbodyBannerData"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*Chat Recommendation Start*@
+                        <div id="chatrecommendat" class="chatmesstabcontent hideDiv">
+                            <div class="chatgallwrp">
+                                <div class="chatupldbtnwrp df-ac-sbet">
+                                    <p class="m-0 font-12 text-muted">Add recommendation banners to your Chat. You can upload a PDF or an Image.</p>
+                                    <button type="button" class="btn btn-second" id="ui_btnAddRecommendation"><i class="icon ion-plus mr-2"></i>Add Banner</button>
+                                </div>
+                            </div>
+                            <div class="chatimggallwrp p-3">
+                                <div class="gallry-row m-gut" id="ui_DivBannerImages"></div>
+                            </div>
+                        </div>
+                        @*Chat Recommendation End*@
+
+                        <div id="chatagentprofile" class="chatmesstabcontent hideDiv">
+                            <div class="chatprofilewrp">
+                                <div class="card-contact w-300">
+                                    <div class="tx-center">
+                                        <a href="javascript:void(0);">
+                                            <img src="~/Content/images/prof-default.png" class="card-img" alt="" />
+                                        </a>
+                                        <h5 class="mg-t-10 mg-b-5 mt-3">
+                                            <a href="javascript:void(0);" class="contact-name" id="ui_txtAgent"></a>
+                                        </h5>
+                                    </div><!-- tx-center -->
+
+                                    <p class="contact-item">
+                                        <span>Name:</span>
+                                        <span>
+                                            <a id="ui_txtAgentName"></a>
+                                            <i class="fa fa-pencil-square-o ml-2" id="ui_iAgentNameChange"></i>
+                                        </span>
+                                    </p><!-- contact-item -->
+                                    @*<p class="contact-item">
+                                    <span>Profile Picture:</span>
+                                    <span>
+                                    <a href="">myprofile.jpg</a>
+                                    <i class="fa fa-pencil-square-o ml-2"></i>
+                                    </span>
+
+                                    </p>*@<!-- contact-item -->
+                                    <p class="contact-item">
+                                        <span>Agent Code:</span>
+                                        <span class="text-color-blue" id="ui_txtAgentCode"></span>
+                                    </p><!-- contact-item -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chatnotificat" class="chatmesstabcontent hideDiv">
+                            <div class="chatnotifwrp">
+                                <div id="accordion" class="accordion-one" role="tablist"
+                                     aria-multiselectable="true">
+                                    <div class="card">
+
+                                        <div class="card-header" role="tab" id="headingOne">
+
+                                            <a data-toggle="collapse" data-parent="#accordion"
+                                               href="#collapseOne" aria-expanded="true"
+                                               aria-controls="collapseOne"
+                                               class="tx-gray-800 transition collapsed">
+
+                                                Browser Notifications
+
+                                            </a>
+
+                                        </div><!-- card-header -->
+
+                                        <div id="collapseOne" class="collapse show" role="tabpanel"
+                                             aria-labelledby="headingOne" data-parent="#accordion">
+
+                                            <div class="card-body">
+                                                <h6 class="box-title">Send Browser Notification</h6>
+
+                                                <div class="chatnotiftypewrp">
+                                                    <div class="custom-control custom-radio mb-2">
+
+                                                        <input type="radio" class="custom-control-input"
+                                                               id="oneverymess" name="chatsendnotif" value="1">
+
+                                                        <label class="custom-control-label"
+                                                               for="oneverymess">On Every Message</label>
+
+                                                    </div>
+                                                    <div class="custom-control custom-radio mb-2">
+
+                                                        <input type="radio" class="custom-control-input"
+                                                               id="onnewmess" name="chatsendnotif" value="2">
+
+                                                        <label class="custom-control-label"
+                                                               for="onnewmess">On New Message</label>
+
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+
+                                                        <input type="radio" class="custom-control-input"
+                                                               id="removenotif" name="chatsendnotif" value="0">
+
+                                                        <label class="custom-control-label"
+                                                               for="removenotif">
+                                                            Remove
+                                                            Notification
+                                                        </label>
+
+                                                    </div>
+                                                    <div class="btnwrp mt-4">
+                                                        <button type="button"
+                                                                class="btn btn-primary" id="ui_btnbrowserNotifySave">
+                                                            Save
+                                                        </button>
+                                                    </div>
+                                                    <p class="mt-4">
+                                                        <strong>Note:</strong> Based on your
+                                                        selection, a
+                                                        browser
+                                                        notification will appear when a new message is
+                                                        received or when a new visitor is enters a chat
+                                                        room. Web Notification is a browser dependent
+                                                        feature and will work only if supported by the
+                                                        browser.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="card">
+
+                                        <div class="card-header" role="tab" id="headingTwo">
+
+                                            <a class="tx-gray-800 transition collapsed"
+                                               data-toggle="collapse" data-parent="#accordion"
+                                               href="#collapseTwo" aria-expanded="false"
+                                               aria-controls="collapseTwo">
+
+                                                Sound Settings
+
+                                            </a>
+
+                                        </div>
+
+                                        <div id="collapseTwo" class="collapse" role="tabpanel"
+                                             aria-labelledby="headingTwo" data-parent="#accordion">
+
+                                            <div class="card-body">
+
+                                                <div class="chatsoundnotiwrp">
+                                                    <h6 class="box-title">Send Sound Notification</h6>
+                                                    <div class="chatsoundnotitype">
+                                                        <div class="chatsoundnottypitem">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox"
+                                                                       class="custom-control-input"
+                                                                       id="chatsoundoneverymess">
+                                                                <label class="custom-control-label"
+                                                                       for="chatsoundoneverymess">
+                                                                    On Every
+                                                                    Message
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-group hideDiv" id="ui_divchatsoundoneverymess">
+                                                                <select class="form-control"
+                                                                        id="dllSoundNotificationOnEveryMessage" onchange="ListenSound(this.value,this.id);">
+                                                                    <option value="0">Select</option>
+                                                                    <option value="alert.mp3">Alert</option>
+                                                                    <option value="bonk.mp3">Bonk</option>
+                                                                    <option value="Dong.mp3">Dong</option>
+                                                                    <option value="Flipped.mp3">Flipped</option>
+                                                                    <option value="icq.mp3">Fog Horn</option>
+                                                                    <option value="indian.mp3">Indian Brass</option>
+                                                                    <option value="IncomingimIm.mp3">Incoming IM</option>
+                                                                    <option value="ohoh.mp3">Oh oh</option>
+                                                                    <option value="OugoingimIm.mp3">Outgoing IM</option>
+                                                                    <option value="Teaser.mp3">Teaser</option>
+                                                                    <option value="tzer.mp3">Tzer</option>
+                                                                    <option value="whip.mp3">Whip</option>
+                                                                    <option value="whistle.mp3">Whistle</option>
+                                                                    <option value="whizz.mp3">Whizz</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox"
+                                                                       class="custom-control-input"
+                                                                       id="chatsoundonnewmess">
+                                                                <label class="custom-control-label"
+                                                                       for="chatsoundonnewmess">
+                                                                    On New
+                                                                    Message
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-group hideDiv" id="ui_divchatsoundonnewmess">
+                                                                <select class="form-control"
+                                                                        id="dllSoundNotiAgentOnVisitorMesg" onchange="ListenSound(this.value,this.id);">
+                                                                    <option value="0">Select</option>
+                                                                    <option value="alert.mp3">Alert</option>
+                                                                    <option value="bonk.mp3">Bonk</option>
+                                                                    <option value="Dong.mp3">Dong</option>
+                                                                    <option value="Flipped.mp3">Flipped</option>
+                                                                    <option value="icq.mp3">Fog Horn</option>
+                                                                    <option value="indian.mp3">Indian Brass</option>
+                                                                    <option value="IncomingimIm.mp3">Incoming IM</option>
+                                                                    <option value="ohoh.mp3">Oh oh</option>
+                                                                    <option value="OugoingimIm.mp3">Outgoing IM</option>
+                                                                    <option value="Teaser.mp3">Teaser</option>
+                                                                    <option value="tzer.mp3">Tzer</option>
+                                                                    <option value="whip.mp3">Whip</option>
+                                                                    <option value="whistle.mp3">Whistle</option>
+                                                                    <option value="whizz.mp3">Whizz</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox"
+                                                                       class="custom-control-input"
+                                                                       id="chatsoundonvisitmess">
+                                                                <label class="custom-control-label"
+                                                                       for="chatsoundonvisitmess">
+                                                                    On
+                                                                    Visitor
+                                                                    Connected
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-group hideDiv" id="ui_divchatsoundonvisitmess">
+                                                                <select class="form-control"
+                                                                        id="dllSoundNotificationOnVisitorConnect" onchange="ListenSound(this.value,this.id);">
+                                                                    <option value="0">Select</option>
+                                                                    <option value="alert.mp3">Alert</option>
+                                                                    <option value="bonk.mp3">Bonk</option>
+                                                                    <option value="Dong.mp3">Dong</option>
+                                                                    <option value="Flipped.mp3">Flipped</option>
+                                                                    <option value="icq.mp3">Fog Horn</option>
+                                                                    <option value="indian.mp3">Indian Brass</option>
+                                                                    <option value="IncomingimIm.mp3">Incoming IM</option>
+                                                                    <option value="ohoh.mp3">Oh oh</option>
+                                                                    <option value="OugoingimIm.mp3">Outgoing IM</option>
+                                                                    <option value="Teaser.mp3">Teaser</option>
+                                                                    <option value="tzer.mp3">Tzer</option>
+                                                                    <option value="whip.mp3">Whip</option>
+                                                                    <option value="whistle.mp3">Whistle</option>
+                                                                    <option value="whizz.mp3">Whizz</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="btnwrp">
+                                                                <button type="button"
+                                                                        class="btn btn-primary" id="ui_btnsoundNotifySave">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <p class="mt-4">
+                                                            <strong>Note:</strong> When you
+                                                            receive a chat, you are notified audibly
+                                                            with a sound notification. Sound
+                                                            notifications are enabled by default. You
+                                                            can always disable anytime by returning to
+                                                            this screen.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--Mail Transcript Modal-->
+<div class="modal fade bd-example-modal-sm" id="chatmailtrans" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mail Transcript</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email Id</label>
+                        <input type="text" class="form-control" id="txtSendEmailId">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnExportTrans" data-dismiss="modal">Send Mail</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Transfer Chat Modal-->
+<div class="modal fade" id="chattransfer" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Transfer Chat</h5>
+                <button type="button" class="close" aria-label="Close" id="ui_trnsferchatClose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="chattranviswrp">
+                    <ul class="chatrransitemwrp">
+                    </ul>
+                </div>
+                <div class="lvechattransfrm p-3 hideDiv">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Reason for Chat Transfer</label>
+                        <input type="text" class="form-control" id="ui_txtReasonForTransfer">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary hideDiv" id="ui_btnTransfer">Transfer</button>
+                <button type="button" class="btn btn-secondary lvechattransfdef" id="ui_cncelTrnsferchat">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal For Accept Transfer-->
+<div class="modal fade" id="dvAcceptTransferChat" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Accept Transfer Chat of visitor <label id="ui_lblAcceptTransferVisitorName"></label></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="lvechataceptwrp">
+                    <p class="p-tag font-weight-bold pb-2">
+                        Transfer From: <span class="lvechattransfrmnme" id="ui_lblTransferCameFrom">
+                        </span>
+                    </p>
+                    <p class="p-tag font-weight-bold d-flex flex-column">
+                        <span class="w-100 pb-1">
+                            Reason for
+                            Transfer:
+                        </span> <span class="lvechatreason w-100" id="ui_dvReasonSentByChatAgent"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="ui_btnAcceptTransferCall">Accept</button>
+                <button type="button" class="btn btn-secondary" id="ui_btnRejectTransferCall">Reject</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal For Accept Transfer-->
+<!--ban visitor Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="banvistormod" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Ban This Visitor?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Visitor Id: <span class="visid" id="ui_banVisitorId"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button id="banVisitorConfirm" type="button" class="btn btn-danger" data-dismiss="modal">
+                    Ban
+                    Visitor
+                </button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--ban visitor Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="endchatvistormod" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">End This Conversation?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Visitor Id: <span class="visid" id="ui_endVisitorId"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button id="endChatConfirm" type="button" class="btn btn-danger" data-dismiss="modal">
+                    End
+                    Chat
+                </button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--Update Name Modal-->
+<div class="modal fade bd-example-modal-sm" id="ui_divAgentNamePopUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Name</h5>
+                <button type="button" class="close" aria-label="Close" id="ui_btnTopCloseAgentNamePopUp">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" id="txtName" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btn_UpdateName">Update</button>
+                <button type="button" class="btn btn-secondary" id="ui_btnCloseAgentNamePopUp">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Update Name Modal-->
+<!--Modal add recommendation Start-->
+<div class="modal fade" id="ui_divRecommendationPopUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header addrecbanimg">
+                <h5 class="modal-title" id="ui_h5RecommendationPopUpHeading">Add Recommendations Banner</h5>
+                <button type="button" class="close" aria-label="Close" id="ui_btnCloseRecommendationPopUp">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-3">
+                <div class="chatchkbxwrp hideDiv" id="ui_divRecommendationsUploadType">
+                    <div class="custom-control custom-radio custom-control-inline mb-2">
+                        <input type="radio" class="custom-control-input" id="ui_rdbtnRecommendationsTypeOnline" name="RecommendationsUploadType" value="Online" checked />
+                        <label class="custom-control-label" for="ui_rdbtnRecommendationsTypeOnline">Online URL</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline mb-2">
+                        <input type="radio" class="custom-control-input" id="ui_rdbtnRecommendationsTypeUpload" name="RecommendationsUploadType" value="Upload" />
+                        <label class="custom-control-label" for="ui_rdbtnRecommendationsTypeUpload">Upload File</label>
+                    </div>
+                    <div class="form-group mt-2 hideDiv" id="ui_divRecommendationsTypeOnline">
+                        <div class="chatonlineurl">
+                            <input type="text" class="form-control w-90" id="ui_txtRecommendationsOnlineUrl" placeholder="for e.g. https//www.plumb5.com/images/yourimage.jpg" maxlength="590" autocomplete="off" />
+                            <button type="button" class="btn btn-primary" id="ui_btnRecommendationsOnlineUrlOk">Ok</button>
+                        </div>
+                    </div>
+                    <div class="chatimgupldwrp mt-2 hideDiv" id="ui_divRecommendationsTypeUpload">
+                        <div class="chatchoosefilewrp df-ac">
+                            <div class="custom-file mr-3 w-90">
+                                <input type="file" class="custom-file-input" id="ui_fileRecommendationsFileBrowse" aria-describedby="inputGroupFileAddon01" accept="image/*,.pdf" />
+                                <label class="custom-file-label">Choose file</label>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-lg" id="ui_btnRecommendationsFileBrowseOk">Ok</button>
+                        </div>
+                        <div class="chatupldfilenmewrp hideDiv" id="ui_divRecommendationsFileBrowseShow">
+                            <div class="chatfilname mr-3" id="ui_divRecommendationsFileBrowseFileName"></div>
+                            <i class="fa fa-close" id="ui_iconRecommendationsFileBrowseFileClose"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatimgbanprevwrp mt-4 mb-4">
+                    <div class="chatimgbanprevitem hideDiv" id="ui_divRecommendationsFileDefaultPreview">
+                        <p class="m-0 font-12">Preview</p>
+                    </div>
+                    <div class="chatimgbanprevImg hideDiv" id="ui_divRecommendationsFileActualPreview">
+                        <img src="" alt="FilePreview" id="ui_imgRecommendationsFilePreviewUrl" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input id="ui_txtRecommendationsFileTitle" type="text" class="form-control" maxlength="90" autocomplete="off" placeholder="Title" title="Title" />
+                </div>
+                <div class="form-group">
+                    <input type="text" id="ui_txtRecommendationsFileRedirectUrl" class="form-control" maxlength="590" autocomplete="off" placeholder="Redirect URL" title="Redirect URL" />
+                </div>
+            </div>
+            <div class="modal-footer df-ac-sbet">
+                <div class="deltbtnwrp">
+                    <button type="button" class="btn btn-danger" id="ui_btnShowDeleteRecommendationPopUp">Delete Banner</button>
+                </div>
+                <div class="savcanbtnwrp">
+                    <button type="button" class="btn btn-secondary" id="ui_btnCancelRecommendationPopUp">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="ui_btnSaveRecommendationFile">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal add recommendation End-->
+<!--Modal delete recommendation Start-->
+<div class="modal fade" id="ui_divRecommendationDeletePopUp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this banner?</h5>
+                <button type="button" class="close" aria-label="Close" id="ui_btnDeleteRecommendationClose">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="chatbandelwrp">
+                    <img src="" alt="BannerPreview" id="ui_imgDeleteRecommendationsFilePreviewUrl" />
+                </div>
+                This action can't be undone. Are you sure that you want to permanently delete this banner?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="ui_btnDeleteRecommendationCancel">Cancel</button>
+                <button type="button" class="btn btn-danger" id="ui_btnDeleteRecommendationConfirm">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal delete recommendation End-->
+
+<div id="dvSoundPlay" style="display: none;">
+    <audio id="ui_playAudio" src="" preload="auto" controls></audio>
+</div>
+<div id="dummyImagesTest" style="display: none; position: absolute;"></div>
+
+<script src="~/js/jquery-sortable-min.js"></script>
+<script type="text/javascript" src="~/js/Chat/ChatRoom.js"></script>
+<script type="text/javascript" src="~/js/text_linkify.js?ver=1.0"></script>
+<script type="text/javascript">
+    Plumb5StartLoading();
+
+    function Plumb5StartLoading() {
+        //ShowPageLoading();
+        try {
+            if (document.readyState && document.readyState == "complete") {
+                AddingScriptAtEnd();
+
+            } else {
+                window.setTimeout(Plumb5StartLoading, 100);
+            }
+        } catch (error) {
+
+        }
+    }
+
+    function AddingScriptAtEnd() {
+
+        try {
+            var ga = document.createElement('script'); ga.type = 'text/javascript';
+            ga.src = chatApp + 'signalr/hubs';
+            document.body.appendChild(ga);
+
+            if (ga.addEventListener) {
+                ga.addEventListener('load', function changeCB(params) {
+                    ga.removeEventListener("load", changeCB);
+
+                    var ga2 = document.createElement('script'); ga2.type = 'text/javascript';
+                    ga2.src = '/js/Chat/ChatRoomAgents.js?p5ver=1.0';
+                    document.body.appendChild(ga2);
+                    ga2.onload = function () { LoginToChatRoom() };
+                }, false);
+            }
+            else {
+                setTimeout(function () {
+                    var ga2 = document.createElement('script'); ga2.type = 'text/javascript';
+                    ga2.src = '/js/Chat/ChatRoomAgents.js?p5ver=1.0';
+                    document.body.appendChild(ga2);
+                    ga2.onload = function () { LoginToChatRoom() };
+                }, 3000);
+            }
+        }
+        catch (er) {
+            HidePageLoading();
+        }
+    }
+
+    function LoginToChatRoom() {
+        setTimeout(function () {
+            //chatUtil.StopConnection();
+            chatRoomUtil.LogIn();
+            OnlineClicked = true;
+            HidePageLoading();
+        }, 3000);
+    }
+
+</script>
+
+<input type="hidden" id="hdnAgentId" value="@ViewBag.UserId" />
+<input type="hidden" id="hdnAgentUserName" value="@ViewBag.UserName" />
+<input type="hidden" id="hdnAdsId" value="@ViewBag.AdsId" />
+<input type="hidden" id="hdnEmployeeCode" value="@ViewBag.EmployeeCode" />

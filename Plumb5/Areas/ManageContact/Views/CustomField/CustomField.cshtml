@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Custom field";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Custom Fields</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Contscts</a></li>
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Custom Field</a></li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+            </div>
+            <div class="iconsWrap-docu">
+                <div class="dropdown">
+                    <button class="text-dropdown popViewHrefs" id="addLandingpage" onclick="ShowEventEditPopup(0,0);" type="button" aria-haspopup="true" aria-expanded="true"><i class="icon ion-ios-plus-empty"></i> Add Field</button>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white border-top-0">
+                    <div class="tableWrapper">
+                        <div class="table-responsive">
+                            <table id="ui_tblReportData" class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="helpIcon m-p-w-80 td-wid-40">Field Name</th>
+                                        <th scope="col" class="helpIcon m-p-w-190 td-wid-20">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Field Type<i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap"></div>
+                                        </th>
+                                        <th class="helpIcon m-p-w-150 td-wid-20" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Is Mandatory<i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap"></div>
+                                        </th>
+                                        <th class="helpIcon m-p-w-150 td-wid-20" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Date<i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap"></div>
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_tbodyReportData"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deleterow" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Row?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be done. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<!--Edit Confirm Modal-->
+@* add custom field  *@
+@{
+    Html.RenderPartial("_CustomField");
+}
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script>
+    $(".eventfilterbyItem").select2({
+        minimumResultsForSearch: '',
+        dropdownAutoWidth: false
+    });
+</script>
+
+<script src="~/js/ManageContact/CustomField.js"></script>
+

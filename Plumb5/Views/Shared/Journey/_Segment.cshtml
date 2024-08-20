@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Time";
+}
+
+
+@*<script type="text/javascript">
+        function selecttab(tabid, tabid1) {
+            $('#tbl' + tabid).show();
+            $('#tbl' + tabid1).hide();
+            $('#tab' + tabid).removeClass("tabhover");
+            $('#tab' + tabid).addClass("tabdefault");
+            $('#tab' + tabid1).removeClass("tabdefault");
+            $('#tab' + tabid1).addClass("tabhover");
+        }
+    </script>*@
+<style type="text/css">
+    .tabdefault {
+        color: #666666;
+    }
+
+    .tabhover {
+        color: #aba7a7;
+        cursor: pointer;
+    }
+
+        .tabhover:hover {
+            color: #000000;
+        }
+
+         .close {
+        cursor: pointer;        
+    }
+        .close:hover {
+            background: #bbb;
+        }
+</style>
+
+
+ 
+
+<div id="dvcustompopupsegment" class="CustomWorkFlowPopUp" style="top: 15%;width:500px;">
+    <div class="newTitle">
+        <span id="tab1" onclick="selecttab('1','2','3');">Group</span> @*| <span id="tab2" class="tabhover" onclick="selecttab('2','1','3');">Individual </span>| <span id="tab3" class="tabhover" onclick="selecttab('3','2','1');"> All Users</span>*@
+        <input type="text" id="ui_txtSearchgrouporEmailId" class="textBoxSmallSize" placeholder="Search by group name" style="width:124px;height:27px;margin-left:285px;" name="group">
+        <img alt="Close" title="Close" style="cursor: pointer; float: right" class="CustomPopUpClose" src="/images/img_trans.gif" />
+        <input type="button" value="Cancel" class="inputee closepopup" style="width: 100px" onclick="javascript: $('#dvcustompopupsegment').hide()" />
+    </div>
+    <div style="border-bottom: 1px solid #e8e8e8;">
+    </div>
+    <div class="divPadding" style="margin-top: 10px;">
+
+
+        <div id="tbl1" style="display:block;font-weight:500;">
+            <div id="ui_divGroupContact" style="display:none;">
+                <div class="headerstyletr" style="height: 20px;">
+                    <div style="float:left;width:30%">
+                        Group Name
+                    </div>
+                    <div style="float:left;width:20%;text-align:right;">
+                        Contacts
+                    </div>
+                    <div style="float:left;width:50%;text-align:right;">
+                        Created Date
+                    </div>
+                </div>
+                <div>
+                    <div id="ui_DataBindGroup" style="overflow-y:scroll;height:250px;">
+                    </div>
+
+                </div>
+                <div id="div_ViewGroupMore" class="viewmoreTab">
+
+                    <a id="ui_lnkGroupViewMore" class="lnk" onclick="GroupViewMore()" style="float:left;width:20%;line-height:2;font-size: 14px; padding: 4px 0 7px 7px; display: block;">
+                        View More
+                    </a>
+                    <span id="ui_spanlinkGroupdata" style="float:left;width:20%;line-height:2;font-size: 14px; padding: 4px 0 7px 7px; display: none;">&nbsp;</span>
+                    <div id="div_GroupRecords" class="recordsCount" style="float:right;width:80%;text-align:right;margin-top:-7%;position:relative;"></div>
+                </div>
+
+                <div style="display:none;">
+                    <label for="chkgrpbelongs">Is BelongToGroup </label>&nbsp;
+
+                    <input type="radio" id="chkgrpbelongs" class="rad" name="grptype" checked="checked" value="1">
+                    <label for="chkgrpnotbelongs">Yes</label>
+
+                    <input type="radio" id="chkgrpnotbelongs" name="grptype" class="rad" value="0">
+                    <label for="chkgrpnotbelongs">No</label>
+                </div>
+                @*<input type="checkbox" id="chkgrpbelongs" class="chk" name="chkgrpbelongs" value="1">*@
+
+
+                <input type="button" value="Save" id="btngroupdetails" class="inputee" style="width: 100px;margin-top:20px;" />
+                <input type="button" value="Cancel" class="inputee closepopup" style="width: 100px" onclick="javascript: $('#dvcustompopupsegment').hide()" />
+                <div id="dvtotalgrpcontacts" style="display:none;float:right;margin-top:30px;color: rgb(197, 103, 103);font-family: 'Open Sans',Arial,Helvetica,sans-serif;font-size: 12px;"></div>
+            </div>
+            <div id="ui_divGroupNodata" style="display:none;">
+                <label style="font-family: tahoma;color:#CC3300;font-weight:normal;">There is no groups to display.</label>
+            </div>
+        </div>
+
+        <div id="tbl2" style="display:none;font-weight:500;">
+            <div id="ui_divContact" style="display:none;">
+                <div class="headerstyletr" style="height: 15px;">
+                    <div style="float:left;width:30%">
+                        Name
+                    </div>
+                    <div style="float:left;width:50%">
+                        Email Id
+                    </div>
+                    <div style="float:left;width:20%;text-align:right;">
+                        Phone Number
+                    </div>
+                </div>
+                <div>
+                    <div id="ui_DataBind" style="overflow-y:scroll;height:300px;">
+                    </div>
+                </div>
+
+                <div id="div_ViewMore" class="viewmoreTab">
+                    <a id="ui_lnkViewMore" class="lnk" onclick="ViewMore()" style="float:left;width:20%;line-height:2;font-size: 14px; padding: 4px 0 7px 7px; display: block;">
+                        View More
+                    </a>
+                    <span id="ui_spanlinkdata" style="float:left;width:20%;line-height:2;font-size: 14px; padding: 4px 0 7px 7px; display: none;">&nbsp;</span>
+                    <div id="div_Records" class="recordsCount" style="float:right;width:80%;text-align:right;margin-top:-7%;position:relative;"></div>
+                </div>
+                @*<input type="checkbox" id="chkgrpbelongs1" class="chk" name="chkgrpbelongs1" value="1">
+                    <label for="chkgrpbelongs">Is BelongToGroup</label>&nbsp;&nbsp;*@
+                <input type="button" value="Save" id="btnsavecontatcs" class="inputee" style="width: 100px;margin-top:20px;" />
+                <div id="dvtotalindcontacts" style="float:right;margin-top:30px;color: rgb(197, 103, 103);font-family: 'Open Sans',Arial,Helvetica,sans-serif;font-size: 12px;"></div>
+
+
+            </div>
+            <div id="ui_divNodata" style="display:none;">
+                <label style="font-family: tahoma;color:#CC3300;font-weight:normal;">There is no contact to display.</label>
+            </div>
+        </div>
+        <div id="tbl3" style="display:none;font-weight:500;">
+            <input type="checkbox" id="chkallusers" name="grptype" class="chk" value="0">
+            <label for="chkgrpbelongs">Select all users </label>&nbsp;
+            <br />
+            <input type="button" value="Save" id="btnallusers" class="inputee" style="width: 100px;margin-top:20px;" />
+           
+        </div>
+    </div>
+</div>

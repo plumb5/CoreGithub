@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: SMS Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<script src="~/js/d3.v4.js"></script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">SMS Dashbaord</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">SMS</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        @{
+            Html.RenderPartial("_PageHeadingWithDate");
+        }
+       
+    </div>
+    <div class="dashcontainer mt-2">
+        <div class="bubWrap">
+            <div class="row">
+                <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="box-white">
+                        <h6 class="box-title">Campaign Effectiveness</h6>
+                        <div id="my_dataviz" class="bubbwrap bubb-hite m-h-200">
+                        </div>
+
+                        <div class="legendWrap  border-top">
+                            <div class="redcolWrap legendpop" data-toggle="popover" title="Low Delivery, Low Clicks" data-content="Campaigns in this region are not doing very well. You could try a different time  or a new contact list to improve upon the delivery rates.">Low Delivery, Low Clicks</div>
+                            <div class="orgcolWrap legendpop" data-toggle="popover" title="High Delivery, Low Clicks" data-content="The delivery rate for this campaign is good but folks were not compelled to click. These campaigns could have done better with a better Call-to-action or an engaging content">High Delivery, Low Clicks</div>
+                            <div class="blucolWrap legendpop" data-toggle="popover" title="Low Delivery, High Clicks" data-content="Those who received it, clicked it. But not a lot of folks received it. This message could have fared better with a different contact list or if sent at a different time.">Low Delivery, High Clicks</div>
+                            <div class="greencolWrap legendpop" data-toggle="popover" title="High Delivery, High Clicks" data-content="These campaigns have done above average. These campaigns have found the right content & send time.">High Delivery, High Clicks</div>
+                        </div>
+                    </div>
+                    <div class="box-white mt-2">
+                        <h6 class="box-title">SMS Performance over time</h6>
+                        <div class="charteeWrap position-relative h-350">
+                            <canvas id="smsperformanceovertime"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="engageWrap">
+                        <div class="card card-sales">
+                            <h6 class="slim-card-title tx-primary mb-3">Engagement</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="tx-12">Clicked</label>
+                                    <div class="countsWrap">
+                                        <div class="countNumb" id="ClickedCount"></div>
+                                        <div class="countper"><i class="icon ion-android-arrow-dropdown"></i> <span id="ClickedPercentage"></span></div>
+                                    </div>
+                                </div><!-- col -->
+                                <div class="col">
+                                    <label class="tx-12">Opted-out</label>
+                                    <div class="countsWrap">
+                                        <div class="countNumb" id="OptedoutCount"></div>
+                                        <div class="countper"><i class="icon ion-android-arrow-dropdown"></i> <span id="OptedoutPercentage"></span></div>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- row -->
+
+                            <div class="progress mg-b-5 mt-2">
+                                <div class="progress-bar bg-primary wd-50p" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="ClickRatePercentage"></div>
+                            </div>
+                            <p class="tx-12 mg-b-0">Click Rate</p>
+                        </div>
+                    </div>
+                    <div class="delivWrap mt-2">
+                        <div class="card card-sales">
+                            <h6 class="slim-card-title tx-success mb-10">Delivery</h6>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="tx-12">Sent</label>
+                                    <div class="countsWrap">
+                                        <div class="countNumb" id="SendCount"></div>
+                                        <div class="countper"><i class="icon ion-android-arrow-dropdown"></i> <span id="SentPercentage">%</span></div>
+                                    </div>
+                                </div><!-- col -->
+                                <div class="col">
+                                    <label class="tx-12">Delivered</label>
+                                    <div class="countsWrap">
+                                        <div class="countNumb" id="DeliveredCount"></div>
+                                        <div class="countper"><i class="icon ion-android-arrow-dropdown"></i> <span id="DeliveredPercentage">%</span></div>
+                                    </div>
+                                </div><!-- col -->
+                                <div class="col">
+                                    <label class="tx-12">Bounced</label>
+                                    <div class="countsWrap">
+                                        <div class="countNumb" id="BouncedCount"></div>
+                                        <div class="countper"><i class="icon ion-android-arrow-dropdown"></i> <span id="BouncedPercentage">%</span></div>
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- row -->
+
+                            <div class="progress mg-b-5 mt-2">
+                                <div class="progress-bar bg-success wd-50p" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id="DeliverRatePercentage">%</div>
+                            </div>
+                            <p class="tx-12 mg-b-0">Delivery Rate</p>
+                        </div>
+                    </div>
+                    <div class="box-white mt-2">
+                        <h6 class="box-title"><span id="PiechartBounced"></span> Bounced vs<span id="PieChartRejected"></span> Rejected</h6>
+                        <div class="charteeWrap position-relative h-300">
+                            <canvas id="bouncereject"></canvas>
+                            <div class="no-data hideDiv" id="ui_divBounceNoData">There is no data to view</div>
+                        </div>
+                        <div class="legendWrap justify-content-center border-top">
+                            <div class="greycolWrap legendpop" data-toggle="popover" title="Bounced" data-content="Messages could have bounced due to network errors or End-Device Level exceptions. This could also happen due to invalid number or an error at the SMS API gateway.">Bounced</div>
+                            <div class="purpcolWrap legendpop" data-toggle="popover" title="Rejected" data-content="Messages in this category has been rejected by the system prior to send.This could be due to an error in the template or due to a missing User attribute. Please check data & template.">Rejected</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/d3.v4.js"></script>
+<script src="~/js/Sms/SmsDashboard.js"></script>

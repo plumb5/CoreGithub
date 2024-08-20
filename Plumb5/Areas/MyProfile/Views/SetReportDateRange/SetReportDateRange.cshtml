@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Set Report Date Range";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Set Report Date Range</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Set Report Date Range
+            </li>
+        </ol>
+    </div>
+
+    <div class="settcontainer mr-tp-15">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div class="setttabcontainer">
+                        <h6 class="box-title m-pt-20">Set Report by Date Range with is account</h6>
+                        <div class="trackscrtwrp">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="">Date Range</label>
+                                <select name="" class="form-control w-50 m-p-w-250" id="setdaterangedrp">
+                                    <option value="-1">Select</option>
+                                    <option value="1">Today</option>
+                                    <option value="2" selected>This Week</option>
+                                    <option value="3">This Month</option>
+                                    <option value="5">Custom Date Range</option>
+                                </select>
+                            </div>
+                            <div class="customdatewrap">
+                                <div class="dateBoxWrap">
+                                    <div class="dateStart ml-0">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="icon ion-calendar"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Start Date" id="startdate">
+                                        </div>
+                                    </div>
+                                    <i class="icon ion-android-arrow-forward"></i>
+                                    <div class="dateStart mr-0">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1"><i class="icon ion-calendar"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="End Date" id="enddate">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="btnwrp mt-3 mb-3 ml-0">
+                                <button class="btn btn-primary m-mb-10"
+                                        type="button" onclick="UpdateOrSave();">
+                                    Save
+                                </button>
+                                <button class="btn btn-primary m-ml-10" style="margin-left: 10px;"
+                                        type="button" onclick="clearDateRangeCookie('p5pgdaterangeset');">
+                                    Clear
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/MyProfile/SetReportDateRange.js"></script>

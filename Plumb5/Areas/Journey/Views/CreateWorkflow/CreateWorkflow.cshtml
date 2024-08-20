@@ -1,0 +1,418 @@
+﻿@using Plumb5
+@using Plumb5.Models
+@using Newtonsoft.Json
+@using P5GenralML
+@using Plumb5GenralFunction
+@inject P5MemoryCache _P5Chache
+
+@{
+    ViewBag.Title = "Plumb5 :: Create Workflow";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumb5 :: Create Workflow</title>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/GenralJsEngagment.js"></script>
+
+    <link rel="stylesheet" href="/Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/ionicons/css/ionicons.css" />
+
+    <link rel="stylesheet" href="/Content/css/plumb5-style.css" />
+
+    <script type="text/javascript" src="~/js/JSLINQ.js"></script>
+    <script src="~/js/Journey/p5journey.js"></script>
+    <script src="~/js/Journey/p5journeyCreate.js"></script>
+    <link href="~/Content/css/journey_style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Content/select2/css/select2.min.css" />
+    <script src="~/Content/select2/js/select2.full.min.js"></script>
+</head>
+
+<body>
+    @if (Context.Session.GetString("UserInfo") == null || Context.Session.GetString("AccountInfo") == null || Context.Session.GetString("MyAccountsDetails") == null)
+    {
+        Url.ActionLink("SignOut", "Login");
+    }
+    else
+    {
+        LoginInfo? CustomerInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("UserInfo")))
+            CustomerInfo = JsonConvert.DeserializeObject<LoginInfo?>(Context.Session.GetString("UserInfo"));
+
+        DomainInfo? AccountInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("AccountInfo")))
+            AccountInfo = JsonConvert.DeserializeObject<DomainInfo?>(Context.Session.GetString("AccountInfo"));
+
+        PermissionsLevels? PermissionDetails = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MyPermission")))
+            PermissionDetails = JsonConvert.DeserializeObject<PermissionsLevels>(Context.Session.GetString("MyPermission"));
+
+        List<Purchase> PurchaseList = new List<Purchase>();
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MLPurchase")))
+            PurchaseList = JsonConvert.DeserializeObject<List<Purchase>>(Context.Session.GetString("MLPurchase"));
+
+        MyAccountsDetails? MyAccountsDetails = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MyAccountsDetails")))
+            MyAccountsDetails = JsonConvert.DeserializeObject<MyAccountsDetails?>(Context.Session.GetString("MyAccountsDetails"));
+
+        List<Account> AccountList = null;
+        if (MyAccountsDetails != null)
+            AccountList = MyAccountsDetails.accounts;
+
+        string? AccountTimeZoneData = await _P5Chache.GetAccountTimeZoneFromCachedMemory(AccountInfo.AdsId);
+
+        <script>
+            var Plumb5AccountId = @AccountInfo.AdsId;
+            var Plumb5AccountName = "@AccountInfo.AccountName";
+            var Plumb5AccountDomain = "@AccountInfo.DomainName";
+            var Plumb5AccountTimeZone = "@AccountInfo.Timezone";
+            var Plumb5UserId = @CustomerInfo.UserId;
+
+        </script>
+
+        <div class="top-header">
+            <div class="container-fluid">
+                <div class="logo-menu-left">
+                    <div class="logos">
+                        <div class="logoWrap">
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                </div>
+                @Html.Partial("_ApplicationMenuRightTabDetails")
+            </div>
+        </div>
+        <div class="mainpanel">
+            <div class="container">
+                <section class="sheet">
+                    <div class="pageheader">
+                        <div class="journconthead">
+                            <h6 class="pagetitle">Create Workflow</h6>
+                            <div class="frmrepresidentiwrp">
+                                <!-- <p class="totalCountTitle"><span class="frmidentitxt" contenteditable="false">Add Form Identifier </span> <span id="editicn" class="fa fa-pencil ml-2"></span></p> -->
+                                <div class="addidentiwrp">
+                                    <input type="text" name="" class="addidentitxtbx" disabled="" placeholder="Add Workflow Identifieer123" id="ui_txtWorkFlowTitle">
+                                    <i id="editicn" class="fa fa-pencil ml-2"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <ol class="breadcrumb slim-breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/Journey/Workflows"><i class="icon ion-ios-arrow-left mr-1"></i> Go Back</a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="topTabWrap h-40p">
+                        <div class="iconTopNav">
+                            <div class="topIconItem"></div>
+                            <div class="topIconItem"></div>
+                            <div class="topIconItem"></div>
+                        </div>
+                        <div class="tabItemWrap">
+                        </div>
+                        <div class="formeditorsavewrp mr-2">
+                            <div id="btnSavedraft" class="frmactionbtn savebg fa fa-save" title="Save Workflow"></div>
+                            <div id="btnSave" class="frmactionbtn publishbg fa fa-paper-plane" title="Publish"></div>
+                        </div>
+                    </div>
+
+                    <div class="workfloweditwrp">
+                        <div class="workflowhte">
+                            <div class="row m-gut h-100">
+                                <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 p-gut">
+
+                                    <div class="box-white">
+                                        <div class="wrkflwactionwrp">
+                                            <div class="wrkflwacttop">Workflow Elements</div>
+                                            <div class="wrkflwacttab">
+                                                <div data-tabcontent="tab-1" class="wrkflwacttabitem active">
+                                                    Control
+                                                </div>
+                                                <div data-tabcontent="tab-2" class="wrkflwacttabitem">
+                                                    Channels
+                                                </div>
+                                            </div>
+                                            <div id="tab-1" class="wrkflwactcontwrp">
+                                                <ul class="flow_control_icons" id="mr">
+                                                    <li>
+                                                        <div class="item flow_control_element"><i id="segment" class="fa fa-users dragnode ui-draggable" aria-hidden="true" title="Audience" typeof="segment"></i>Audience</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item flow_control_element"><i id="dateandtime" class="fa fa-calendar dragnode" aria-hidden="true" title="Date & Time" typeof="dateandtime"></i>Date & Time</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item flow_control_element"><i id="rule" class="fa fa-check-square-o dragnode" aria-hidden="true" title="Rule" typeof="rule"></i>Rules</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div id="tab-2" class="wrkflwactcontwrp hideDiv">
+                                                <ul class="actions_icons" id="ma">
+                                                    <li>
+                                                        <div class="item actions_element"><i id="mail" class="fa fa-envelope dragnode" aria-hidden="true" title="Send Mail" typeof="mail"></i>Send Email</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item actions_element"><i id="sms" class="fa fa-commenting dragnode" aria-hidden="true" title="Send Sms" typeof="sms"></i>Send Sms</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item actions_element"><i id="webpush" class="fa fa-bell-o dragnode" aria-hidden="true" title="Web Push" typeof="webpush"></i>Web Push</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item actions_element"><i id="apppush" class="fa fa-bell dragnode" aria-hidden="true" title="App Push" typeof="apppush"></i>App Push</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item actions_element"><i id="whatsapp" class="icon ion-social-whatsapp-outline dragnode" aria-hidden="true" title="Whatsapp" typeof="whatsapp"></i>Whatsapp</div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="item actions_element"><i id="webhook" class="icon-webhook font-22 dragnode" aria-hidden="true" title="Web Hook" typeof="webhook"></i>Web Hook</div>
+                                                    </li>
+                                                </ul>
+                                                @*<ul class="actions_icons">
+                                            <li>
+                                            <div class="wrkflwactcontItem item actions_element">
+                                            <div class="wrkflwactroundch dragnode ui-draggable">
+                                            <i class="fa fa-envelope"></i>
+                                            </div>
+                                            <p>Send Mail</p>
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="wrkflwactcontItem item actions_element">
+                                            <div class="wrkflwactroundch dragnode ui-draggable">
+                                            <i class="fa fa-commenting-o"></i>
+                                            </div>
+                                            <p>Send SMS</p>
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="wrkflwactcontItem item actions_element">
+                                            <div class="wrkflwactroundch dragnode ui-draggable">
+                                            <i class="fa fa-bell-o"></i>
+                                            </div>
+                                            <p>Web Push</p>
+                                            </div>
+                                            </li>
+                                            <li>
+                                            <div class="wrkflwactcontItem item actions_element">
+                                            <div class="wrkflwactroundch dragnode ui-draggable">
+                                            <i class="fa fa-mobile font-22"></i>
+                                            </div>
+                                            <p>App Push</p>
+                                            </div>
+                                            </li>
+                                            </ul>*@
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 p-gut">
+                                    <div class="box-white border-0" style="overflow: scroll;">
+                                        @**********Workflow*********@
+
+                                        <div class="scrollbar flowchart" id="flowchart" style="height:5000px;">
+                                        </div>
+
+
+                                        @**********End of Workflow*********@
+
+                                        <div id="dvFocus" style="right: 40px;position: fixed;padding-right: 20px;color: #ccc;padding: 20px;top: 230px;z-index: 1;">
+                                            <div class="zoom">
+                                                <i onclick="Zooming(1)" id="aZoomIn" class="fa fa-search-plus" aria-hidden="true" style="cursor:pointer;" title="Zoom In"></i>
+                                            </div>
+                                            <div class="zoom">
+                                                <i onclick="Zooming(0)" id="aZoomIn" class="fa fa-search-minus" aria-hidden="true" style="cursor:pointer;" title="Zoom Out"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="copyriteWrp">
+                        <span>
+                            © 2014 onwards. All Rights Reserved. Plumb5 is brought to you by Decisive Analytical Systems
+                            PVT.Ltd.
+                        </span>
+                        <span><a href="https://plumb5.com/terms.html" target="_blank">Terms of use</a> / <a href="https://plumb5.com/privacy.html" target="_blank">Privacy Policy</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal-->
+        <div class="modal fade bd-example-modal-sm" id="downloadModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Export Report</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">File Format</label>
+                                <select class="form-control" name="" id="">
+                                    <option value="csv">.csv</option>
+                                    <option value="xls">.xls</option>
+                                    <option value="xlsx">.xlsx</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Export Data by</label>
+                                <select class="form-control" name="" id="exportType">
+                                    <option value="exportcurrentpage">Current Page</option>
+                                    <option value="exportAllrecords">All Records</option>
+                                    <option value="exportrecordwise">Input</option>
+                                </select>
+                            </div>
+                            <div id="exportdatawise" class="form-group hideDiv">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="1" name="" id="">
+                                    </div>
+                                    <div class="col"><input type="text" class="form-control" placeholder="100" name="" id=""></div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Download</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Modal-->
+        <!--Delete Confirm Modal-->
+        <div class="modal fade bd-example-modal-sm" id="deletegroups" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header delete-modal-header">
+                        <h5 class="modal-title">Delete this Row?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="deleteRowConfirmsms" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                        <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Delete Confirm Modal-->
+        <!--Loading DIV Start-->
+        <div id="ui_divPageLoading" class="spinnerWrap">
+            <div class="spinnerItem position-relative">
+                <div class="sk-wave">
+                    <div class="sk-rect sk-rect1"></div>
+                    <div class="sk-rect sk-rect2"></div>
+                    <div class="sk-rect sk-rect3"></div>
+                    <div class="sk-rect sk-rect4"></div>
+                    <div class="sk-rect sk-rect5"></div>
+                </div>
+            </div>
+        </div>
+        <!--Loading DIV End-->
+        <!--Success Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterSuccess">
+            <div class="alert alert-success mt-2">
+                <strong>Well done!</strong>
+                <span id="ui_span_MasterSuccess_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Success Message DIV End-->
+        <!--Error Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterError">
+            <div class="alert alert-danger mt-2">
+                <strong>Oh snap! </strong>
+                <span id="ui_span_MasterError_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Error Message DIV End-->
+
+        <script src="/js/sidebar.js"></script>
+        <script src="/js/custom.js"></script>
+        <script src="/js/AccountMaster.js"></script>
+    }
+
+
+    <!--Journery Confirm Modal-->
+    <div class="modal fade" id="createworkflow" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Journey Publish </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to Start Journey now ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="createConfirm" type="button" class="btn btn-primary" data-dismiss="modal">
+                        Yes,
+                        Start now
+                    </button>
+                    <button id="cancelRowConfirm" type="button" class="btn btn-secondary"
+                            data-dismiss="modal">
+                        No, I will do later
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Journery Confirm Modal-->
+
+
+
+</body>
+</html>
+
+@Html.Partial("Journey/_Mail")
+@Html.Partial("Journey/_Sms")
+@Html.Partial("Journey/_Rule")
+@Html.Partial("Journey/_DateAndTime")
+@Html.Partial("Journey/_WorkFLowGroup")
+@Html.Partial("Journey/_WebPush")
+@Html.Partial("Journey/_MobileAppPush")
+@Html.Partial("Journey/_WebHook")
+@Html.Partial("Journey/_Whatsapp")
+
+<script src="~/js/Journey/CreateWorkFlow.js"></script>
+<script src="~/js/ManageContact/ContactProperties.js"></script>

@@ -1,0 +1,149 @@
+﻿<!--Popup window right-->
+<div class="popupcontainer hideDiv" id="ui_divSpamPopUp">
+    <div class="popupItem w-900 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Check Spam Score -  <label id="lblTemplateName"></label> </h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="dvSpamCheckPopUp" class="popcontWrap hideDiv">
+                    <div class="spamsettwrp">
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4" for="">Type</label>
+                            <div class="spamscoreradi col-sm-8">
+                                <div class="filetypewrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="spamscoretrans" name="MailType" class="custom-control-input" checked="checked">
+                                        <label class="custom-control-label" for="spamscoretrans">Transactional</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="spamscorepromo" name="MailType" class="custom-control-input">
+                                        <label class="custom-control-label" for="spamscorepromo">Promotional</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4" for="">From Email Id</label>
+                            <select name="" class="form-control form-control-sm col-sm-8" id="drpSendMailFromEmailId">
+                                <option value="0">Select From EmailId</option>
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4" for="">From Name</label>
+                            <input type="text" class="form-control form-control-sm col-sm-8" id="uiFromName" placeholder="From Name" autocomplete="off">
+                        </div>
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4" for="">Subject</label>
+                            <input type="text" class="form-control form-control-sm col-sm-8" id="uiSubject" placeholder="Enter Subject" autocomplete="off">
+                        </div>
+                        <div class="btnwrp d-flex justify-content-center">
+                            <button class="btn btn-primary mr-2" type="button" id="btncheckSpamScore">Verify</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spaceresultwrap mt-3">
+                    <div id="divSpamDetail" class="spam-container" style="display:none;">
+
+                        <div class="spamscoretitwrp">
+                            <div class="newslet-head" id="dv_spamTitle"></div>
+                            <div class="spam-num" id="ui_divScore"></div>
+                        </div>
+
+                        <div class="slimscroll">
+                            <div class="accrdwrp-one mt-2">
+                                <div id="ui_Spamassin" class="accord-one" data-accrdId="ui_Spamassin">
+                                    <div class="iconsignwrp h-100 d-flex align-items-center">
+                                        <span id="plus" class="plus">+</span><span id="minus" class="minus">-</span>
+                                        <p class="mb-0">SpamAssassin likes you</p>
+                                    </div>
+                                    <div id="ui_spamassingError"></div>
+                                </div>
+                                <div id="ui_subSpamassin" class="accord-contOne accrd-cont-bgwhite">
+                                    <div id="ui_rules" class="scrollbar" style="width:100%;">
+                                        <div class="tableWrapper">
+                                            <div class="table-responsive">
+                                                <table class="table tbl-td-ta-lft" id="tblspamrules">
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accrdwrp-one mt-2">
+                                <div id="ui_Spamsignature" class="accord-one" data-accrdId="ui_Spamsignature">
+                                    <div class="iconsignwrp h-100 d-flex align-items-center">
+                                        <span id="plus1" class="plus">+</span><span id="minus1" class="minus">-</span>
+                                        <p class="mb-0">You're not fully authenticated</p>
+                                    </div>
+                                    <div id="ui_signaturescore"></div>
+                                </div>
+                                <div id="ui_subsignature" class="accord-contOne">
+                                    <div id="ui_signature" class="scrollbar">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accrdwrp-one mt-2">
+                                <div id="ui_Spamlink" class="accord-one" data-accrdId="ui_Spamlink">
+                                    <div class="iconsignwrp h-100 d-flex align-items-center">
+                                        <span id="plus" class="plus">+</span><span id="minus" class="minus">-</span>
+                                        <p class="mb-0">Broken Links</p>
+                                    </div>
+                                    <div id="ui_linksscore"> </div>
+                                </div>
+                                <div id="ui_sublink" class="accord-contOne p-3 accrd-cont-bgwhite">
+                                    <div id="ui_link" class="scrollbar">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accrdwrp-one mt-2">
+                                <div id="ui_SpamblackList" class="accord-one" data-accrdId="ui_SpamblackList">
+                                    <div class="iconsignwrp h-100 d-flex align-items-center">
+                                        <span id="plus" class="plus">+</span><span id="minus" class="minus">-</span>
+                                        <p class="mb-0" id="ui_blacklisttitle"></p>
+                                    </div>
+                                    <div id="ui_blacklistscore"></div>
+                                </div>
+                                <div id="ui_subblackList" class="accord-contOne accrd-cont-bgwhite">
+                                    <div id="ui_blackList" class="scrollbar">
+                                        <div class="tableWrapper">
+                                            <div class="table-responsive">
+                                                <table class="table tbl-td-ta-lft" id="tblBlackListsDetails">
+                                                    <tbody>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accrdwrp-one mt-2">
+                                <div id="ui_Spammessagebody" class="accord-one" data-accrdId="ui_Spammessagebody">
+                                    <div class="iconsignwrp h-100 d-flex align-items-center">
+                                        <span id="plus" class="plus">+</span><span id="minus" class="minus">-</span>
+                                        <p class="mb-0" id="ui_bodymessage"></p>
+                                    </div>
+                                    <div id="ui_bodymessagescore"></div>
+                                </div>
+                                <div id="ui_submessagebody" class="accord-contOne">
+                                    <div id="ui_messagebody" class="scrollbar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Mail/MailSpamCheck.js"></script>
