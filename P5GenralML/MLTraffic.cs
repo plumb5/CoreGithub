@@ -24,7 +24,7 @@ namespace P5GenralML
         public int Direct { get; set; }
         public int SearchBy { get; set; }
         public int Referrer { get; set; }
-        public List<GetSourceSummary> SourceSummary { get; set; }
+        public List<GetSourceSummary>? SourceSummary { get; set; }
     }
     public class GetSourceSummary
     {
@@ -88,8 +88,8 @@ namespace P5GenralML
         public int Interaction { get; set; }
         public string? FromDate { get; set; }
         public string? ToDate { get; set; }
-        public System.Data.DataTable ListData { get; set; }
-        public System.Data.DataTable ListDataNew { get; set; }
+        public System.Data.DataTable? ListData { get; set; }
+        public System.Data.DataTable? ListDataNew { get; set; }
         public string? Action { get; set; }
         public string? Domain { get; set; }
         public int Duration { get; set; }
@@ -99,7 +99,7 @@ namespace P5GenralML
     {
         public int AccountId { get; set; }
         public int Interaction { get; set; }
-        public System.Data.DataTable ListData { get; set; }
+        public System.Data.DataTable? ListData { get; set; }
         public string? Action { get; set; }
         public string? Domain { get; set; }
         public string? MachineId { get; set; }

@@ -13,7 +13,7 @@ namespace P5GenralML
         public Int16 IsLead { get; set; }
         public bool IsLeadIsTheirData { get; set; }
 
-        public string[] BelongsToGroup { get; set; }
+        public string[]? BelongsToGroup { get; set; }
         public bool BelongIsTheirData { get; set; }
 
         public Int16 BehavioralScore { get; set; }

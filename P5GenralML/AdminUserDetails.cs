@@ -12,7 +12,7 @@ namespace P5GenralML
         public int UserInfoUserId { get; set; }
         public int SeniorUserId { get; set; }
         public int AccountId { get; set; }
-        public List<int> GroupId { get; set; }
+        public List<int>? GroupId { get; set; }
         public int CreatedByUserId { get; set; }
         public int PermissionLevelsId { get; set; }
     }

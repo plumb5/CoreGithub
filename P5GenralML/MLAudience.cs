@@ -93,7 +93,7 @@ namespace P5GenralML
     {
         public int AccountId { get; set; }
         public int GroupId { get; set; }
-        public System.Data.DataTable ListData { get; set; }
+        public System.Data.DataTable? ListData { get; set; }
 
     }
     public class _Plumb5MLRecencyReturn

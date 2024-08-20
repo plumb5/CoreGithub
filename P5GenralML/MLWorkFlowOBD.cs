@@ -40,7 +40,7 @@ namespace P5GenralML
         public int WorkFlowDataId { get; set; }
         public int ConfigId { get; set; }
         public string? Actions { get; set; }
-        public System.Data.DataTable OBDData { get; set; }
+        public System.Data.DataTable? OBDData { get; set; }
 
     }
 }

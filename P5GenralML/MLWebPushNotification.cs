@@ -265,7 +265,7 @@ namespace P5GenralML
         public int AccountId { get; set; }
         public string? Action { get; set; }
         public int GroupId { get; set; }
-        public System.Data.DataTable ListContact { get; set; }
+        public System.Data.DataTable? ListContact { get; set; }
 
     }
     public class BrowserTagging

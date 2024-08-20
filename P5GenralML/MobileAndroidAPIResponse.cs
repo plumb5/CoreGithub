@@ -13,6 +13,6 @@ namespace P5GenralML
         public int success { get; set; }
         public int failure { get; set; }
         public int canonical_ids { get; set; }
-        public object[] results { get; set; }
+        public object[]? results { get; set; }
     }
 }

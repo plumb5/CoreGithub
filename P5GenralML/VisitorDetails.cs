@@ -24,7 +24,7 @@ namespace P5GenralML
         public string? Referrer { get; set; }
         public string? Domain { get; set; }
         public string? RefferDomain { get; set; }
-        public string[] CaptureFormFilledIds { get; set; }
+        public string[]? CaptureFormFilledIds { get; set; }
         public string? ExternalEmailIdIsThere { get; set; }
         public string? Country { get; set; }
         public string? StateName { get; set; }

@@ -14,7 +14,7 @@ namespace P5GenralML
         public string? Body { get; set; }
         public string? Redirect { get; set; }
         public string? Image { get; set; }
-        public string[] ExButtons { get; set; }
+        public string[]? ExButtons { get; set; }
     }
     public class MobileStatus
     {

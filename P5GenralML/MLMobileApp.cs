@@ -70,7 +70,7 @@
         public string? ToDate { get; set; }
         public int Start { get; set; }
         public int End { get; set; }
-        public System.Data.DataTable GeoData { get; set; }
+        public System.Data.DataTable? GeoData { get; set; }
     }
     public class MLBeacon
     {
@@ -79,7 +79,7 @@
         public string? ToDate { get; set; }
         public int Start { get; set; }
         public int End { get; set; }
-        public System.Data.DataTable BeaconData { get; set; }
+        public System.Data.DataTable? BeaconData { get; set; }
     }
     public class MLEventTrackingMobile
     {

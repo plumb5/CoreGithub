@@ -19,8 +19,8 @@
         public int ResponseStatus { get; set; }
         public int CampaignId { get; set; }
         public string? BtnAction { get; set; }
-        public System.Data.DataTable GeoData { get; set; }
-        public System.Data.DataTable BeaconData { get; set; }
+        public System.Data.DataTable? GeoData { get; set; }
+        public System.Data.DataTable? BeaconData { get; set; }
         public int GeoUpdate { get; set; }
         public int BeaconUpdate { get; set; }
         public int SendingType { get; set; }
@@ -195,7 +195,7 @@
         public int AccountId { get; set; }
         public string? Action { get; set; }
         public int GroupId { get; set; }
-        public System.Data.DataTable ListContact { get; set; }
+        public System.Data.DataTable? ListContact { get; set; }
 
     }
     public class CopyGroupData

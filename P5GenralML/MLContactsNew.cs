@@ -12,12 +12,12 @@ namespace P5GenralML
     }
     public class MLContactsInvalidate
     {
-        public System.Data.DataTable ListData { get; set; }
+        public System.Data.DataTable? ListData { get; set; }
     }
     public class MLContactsUnsubscribe
     {
         public int EmailUnsubscribe { get; set; }
         public int SmsUnsubscribe { get; set; }
-        public System.Data.DataTable ListData { get; set; }
+        public System.Data.DataTable? ListData { get; set; }
     }
 }

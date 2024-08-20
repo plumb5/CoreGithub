@@ -29,7 +29,7 @@ namespace P5GenralML
         public int WhatsappSentData { get; set; }
         public int WebPushSentData { get; set; }
 
-        public List<GetAccount> GetAccountData { get; set; }
+        public List<GetAccount>? GetAccountData { get; set; }
         public int AccountDataListCount { get; set; }
     }
 }

@@ -30,14 +30,14 @@ namespace P5GenralML
     {
 
         public string? success { get; set; }
-        public spfdata data { get; set; }
+        public spfdata? data { get; set; }
 
     }
 
     public class spfdata
     {
         public bool isvalid { get; set; }
-        public List<spferrors> errors { get; set; }
+        public List<spferrors>? errors { get; set; }
         public string? log { get; set; }
     }
 
