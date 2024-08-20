@@ -1,10 +1,54 @@
-ªú«
-««*«:«J«Z«j«z«Š«š«ª«º«Ê«Ú«ê«ú¬
-¬¬*¬:¬J¬Z¬j¬z¬Š¬š¬ª¬º¬Ê¬Ú¬ê¬ú­
-­­*­:­J­Z­j­z­Š­š­ª­º­Ê­Ú­ê­ú®
-®®*®:®J®Z®j®z®Š®š®ª®º®Ê®Ú®ê®ú¯
-¯¯*¯:¯J¯Z¯j¯z¯Š¯š¯ª¯º¯Ê¯Ú¯ê¯ú°
-°°*°:°J°Z°j°z°Š°š°ª°º°Ê°Ú°ê°ú±
-±±*±:±J±Z±j±z±Š±š±ª±º±Ê±Ú±ê±ú²
-²²*²:²J²Z²j²z²Š²š²ª²º²Ê²Ú²ê²ú³
-³³*³;³K³[³k³{³‹³›³«³»³Ë³Û³ë³û´´´+´;´K´[´k´{´‹´›´«´»´Ë´Û´ë´ûµµµ+µ;µKµ[µkµ{µ‹µ›µ«µ»µËµÛµëµû¶¶¶+¶;¶K¶[¶k¶{¶‹¶›¶«¶»¶Ë¶Û¶ë¶û···+·;·K·[·k·{·‹·›·«·»·Ë·Û·ë·û¸¸¸+¸;¸K¸[¸k¸{¸‹¸›¸«¸»¸Ë¸Û¸ë¸û¹¹¹+¹;¹K¹[¹k¹{¹‹¹›¹«¹»¹Ë¹Û¹ë¹ûººº+º;ºKº[ºkº{º‹º›º«º»ºËºÛºëºû»»»+»;»K»[»k»{»‹»›»«»»»Ë»Û»ë»û¼¼¼+¼;¼K¼[¼k¼{¼‹¼›¼«¼»¼Ë¼Û¼ë¼û½½½+½;½K½[½k½{½‹½›½«½»½Ë½Û½ë½û¾¾¾+¾;¾K¾[¾k¾{¾‹¾›¾«¾»¾Ë¾Û¾ë¾û¿¿¿+¿;¿K¿[¿k¿{¿‹¿›¿«¿»¿Ë¿Û¿ë¿ûÀÀÀ+À;ÀKÀ[ÀkÀ{À‹À›À«À»ÀËÀÛÀëÀûÁÁÁ+Á;ÁKÁ[ÁkÁ{Á‹Á›Á«Á»ÁËÁÛÁëÁûÂÂÂ+Â;ÂKÂ[ÂkÂ{Â‹Â›Â«Â»ÂËÂÛÂëÂûÃÃÃ+Ã;ÃKÃ[ÃkÃ{Ã‹Ã›Ã«Ã»ÃËÃÛÃëÃûÄÄÄ+Ä;ÄLÄ\ÄlÄ|ÄŒÄœÄ¬Ä¼ÄÌÄÜÄìÄüÅÅÅ,Å<ÅLÅ\ÅlÅ|ÅŒÅœÅ¬Å¼ÅÌÅÜÅìÅüÆÆÆ,Æ<ÆLÆ\ÆlÆ|ÆŒÆœÆ¬Æ¼ÆÌÆÜÆìÆüÇÇÇ,Ç<ÇLÇ\ÇlÇ|ÇŒÇœÇ¬Ç¼ÇÌÇÜÇìÇüÈÈÈ,È<ÈLÈ\ÈlÈ|ÈŒÈœÈ¬È¼ÈÌÈÜÈìÈüÉÉÉ,É<ÉLÉ\ÉlÉ|ÉŒÉœÉ¬É¼ÉÌÉÜÉìÉüÊÊÊ,Ê<ÊLÊ\ÊlÊ|ÊŒÊœÊ¬Ê¼ÊÌÊÜÊìÊüËËË,Ë<ËLË\ËlË|ËŒËœË¬Ë¼ËÌËÜËìËüÌÌÌ,Ì<ÌLÌ\ÌlÌ|ÌŒÌœÌ¬Ì¼ÌÌÌÜÌìÌüÍÍÍ,Í<ÍLÍ\ÍlÍ|ÍŒÍœÍ¬Í¼ÍÌÍÜÍìÍüÎÎÎ,Î<ÎLÎ\ÎlÎ|ÎŒÎœÎ¬Î¼ÎÌÎÜÎìÎüÏÏÏ,Ï<ÏLÏ\ÏlÏ|ÏŒÏœÏ¬Ï¼ÏÌÏÜÏìÏüÐÐÐ,Ð<ÐLÐ\ÐlÐ|ÐŒÐœÐ¬Ð¼ÐÌÐÜÐìÐüÑÑÑ,Ñ<ÑLÑ\ÑlÑ|ÑŒÑœÑ¬Ñ¼ÑÌÑÜÑìÑüÒÒÒ,Ò<ÒLÒ\ÒlÒ|ÒŒÒœÒ¬Ò¼ÒÌÒÜÒìÒüÓÓÓ,Ó<ÓLÓ\ÓlÓ|ÓŒÓœÓ¬Ó¼ÓÌÓÜÓìÓüÔÔÔ,Ô<ÔLÔ\ÔlÔ|ÔŒÔœÔ¬Ô¼ÔÌÔÜÔìÔüÕÕÕ,Õ<ÕLÕ]ÕmÕ}ÕÕÕ­Õ½ÕÍÕÝÕíÕýÖÖÖ-Ö=ÖMÖ]ÖmÖ}ÖÖÖ­Ö½ÖÍÖÝÖíÖý×××-×=×M×]×m×}×××­×½×Í×Ý×í×ýØØØ-Ø=ØMØ]ØmØ}ØØØ­Ø½ØÍØÝØíØýÙÙÙ-Ù=ÙMÙ]ÙmÙ}ÙÙÙ­Ù½ÙÍÙÝÙíÙýÚÚÚ-Ú=ÚMÚ]ÚmÚ}ÚÚÚ­Ú½ÚÍÚÝÚíÚýÛÛÛ-Û=ÛMÛ]Û
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Dapper;
+using System.Data;
+
+namespace P5GenralDL
+{
+    public class DLControlGroupCampaignResponsesSQL : CommonDataBaseInteraction, IDLControlGroupCampaignResponses
+    {
+        CommonInfo connection;
+        public DLControlGroupCampaignResponsesSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public async Task<List<MLControlGroupCampaignResponses>> GetControlGroupCampaignResponses(string CampaignName)
+        {
+            string storeProcCommand = "ControlGroups_CampaignResponse";
+            object? param = new object[] { CampaignName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<MLControlGroupCampaignResponses>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

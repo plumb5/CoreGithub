@@ -1,1 +1,57 @@
-XÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZåZõ[[[%[5[E[U[e[u[…[•[¥[µ[Å[Õ[å[õ\\\%\5\E\U\e\u\…\•\¥\µ\Å\Õ\å\õ]]]%]5]E]U]e]u]…]•]¥]µ]Å]Õ]æ]ö^^^&^6^F^V^f^v^†^–^¦^¶^Æ^Ö^æ^ö___&_6_F_V_f_v_†_–_¦_¶_Æ_Ö_æ_ö```&`6`F`V`f`v`†`–`¦`¶`Æ`Ö`æ`öaaa&a6aFaVafava†a–a¦a¶aÆaÖaæaöbbb&b6bFbVbfbvb†b–b¦b¶bÆbÖbæböccc&c6cFcVcfcvc†c–c¦c¶cÆcÖcæcöddd&d6dFdVdfdvd†d–d¦d¶dÆdÖdædöeee&e6eFeVefeve†e–e¦e¶eÆeÖeæeöfff&f6fFfVfffvf†f–f¦f¶fÆfÖfæföggg&g6gFgVgfgvg†g–g¦g¶gÆgÖgægöhhh&h6hFhVhfhvh†h–h¦h¶hÆhÖhæhöiii&i6iFiVifivi†i–i¦i¶iÆiÖiæiöjjj&j6jFjVjfjvj†j–j¦j¶jÆjÖjæjökkk&k6kFkVkfkvk†k–k¦k¶kÆkÖkækölll&l6lFlVlflvl†l–l¦l¶lÆlÖlælömmm&m6mFmVmfmvm†m–m¦m¶mÆmÖmæmönnn&n6nFnVnfnvn†n–n¦n¶nÆnÖnæn÷ooo'o7oGoWogowo‡o—o§o·oÇo×oço÷ppp'p7pGpWpgpwp‡p—p§p·pÇp×pçp÷qqq'q7qGqWqgqwq‡q—q§q·qÇq×qçq÷rrr'r7rGrWrgrwr‡r—r§r·rÇr×rçr÷sss's7sGsWsgsws‡s—s§s·sÇs×sçs÷ttt't7tGtWtgtwt‡t—t§t·tÇt×tçt÷uuu'u7uGuWuguwu‡u—u§u·uÇu×uçu÷vvv'v7vGvWvgvwv‡v—v§v·vÇv×vçv÷www'w7wGwWwgwww‡w—w§w·wÇw×wçw÷xxx'x7xGxWxgxwx‡x—x§x·xÇx×xçx÷yyy'y7yGyWygywy‡y—y§y·yÇy×yçy÷zzz'z7zGzWzgzwz‡z—z§z·zÇz×zçz÷{{{'{7{G{W{g{w{‡{—{§{·{Ç{×{ç{÷|||'|7|G|W|g|w|‡|—|§|·|Ç|×|ç|÷}}}'}7}G}W}g}w}‡}—}§}·}Ç}×}ç}÷~~~'~7~G~W~g~w~‡~—~§~·~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLContactAPIAssignedUserDetailsSQL : CommonDataBaseInteraction, IDLContactAPIAssignedUserDetails
+    {
+        readonly CommonInfo connection;
+        public DLContactAPIAssignedUserDetailsSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+        public async Task<ContactAPIAssignedUserDetails?> Get()
+        {
+            string storeProcCommand = "ContactAPIAssigned_UserDetails";
+            object? param = new {Action="Get" };
+            using var db = GetDbConnection(connection.Connection); 
+            return await db.QueryFirstOrDefaultAsync<ContactAPIAssignedUserDetails?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+        }
+        public async Task<Int32> Save(ContactAPIAssignedUserDetails assignedUser)
+        {
+            string storeProcCommand = "ContactAPIAssigned_UserDetails";
+            object? param = new { Action = "Save" ,assignedUser.UserInfoUserId, assignedUser.ContactId };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

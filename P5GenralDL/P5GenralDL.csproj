@@ -18,8 +18,8 @@
   <ItemGroup>
     <ProjectReference Include="..\DBInteraction\DBInteraction.csproj" />
     <ProjectReference Include="..\IP5GenralDL\IP5GenralDL.csproj" />
+    <ProjectReference Include="..\P5GenralML\P5GenralML.csproj" />
   </ItemGroup>
-
 
   <ItemGroup>
     <Reference Include="PushSharp.Apple">

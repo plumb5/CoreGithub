@@ -1,1 +1,31 @@
-uss das letzte Element in einer Zeichenklasse sein.�Für den Zugriff auf die erfasste Variable „{0}“, auf die in {1} noch nicht zugegriffen wurde, muss die Anwendung neu gestartet werden.!Aktionen dürfen nicht leer sein.$DebuggerDisplay-Attribut hinzufügenArgumentnamen "{0}" hinzufügenIArgumentnamen "{0}" (einschließlich nachfolgender Argumente) hinzufügenDokument "{0}" hinzufügenNULL-Überprüfung hinzufügen NULL-Überprüfungen hinzufügen4NULL-Überprüfungen für alle Parameter hinzufügen0Optionalen Parameter zum Konstruktor hinzufügen(Optionale Parameter zu "{0}" hinzufügen%Parameter zum Konstruktor hinzufügenParameter zu "{0}" hinzufügen/Fügen Sie zu "{0}"
+﻿using Npgsql;
+using NpgsqlTypes;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static Dapper.SqlMapper;
+
+namespace P5GenralDL
+{
+    public class JsonParameter : ICustomQueryParameter
+    {
+        private readonly string _value;
+
+        public JsonParameter(string value)
+        {
+            _value = value;
+        }
+
+        public void AddParameter(IDbCommand command, string name)
+        {
+            var parameter = new NpgsqlParameter(name, NpgsqlDbType.Json);
+            parameter.Value = _value;
+
+            command.Parameters.Add(parameter);
+        }
+
+    }
+}

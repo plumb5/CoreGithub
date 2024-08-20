@@ -1,18 +1,62 @@
-~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””)”9”I”Y”i”y”‰”™”©”¹”É”Ù”é”ù•	••)•9•I•Y•i•y•‰•™•©•¹•É•Ù•é•ù–	––)–9–I–Y–i–y–‰–™–©–¹–É–Ù–é–ù—	——)—9—I—Y—i—y—‰—™—©—¹—É—Ù—é—ù˜	˜˜)˜9˜I˜Y˜i˜y˜‰˜™˜©˜¹˜É˜Ù˜é˜ù™	™™)™9™I™Y™i™y™‰™™™©™¹™É™Ù™é™ùš	šš)š9šIšYšišyš‰š™š©š¹šÉšÙšéšù›	››)›9›I›Y›i›y›‰›™›©›¹›É›Ù›é›ùœ	œœ)œ9œIœYœiœyœ‰œ™œ©œ¹œÉœÙœéœù	)9IYiy‰™©¹ÉÙéù	)9IYiy‰™©¹ÉÙéùŸ	ŸŸ)Ÿ9ŸIŸYŸiŸyŸ‰Ÿ™Ÿ©Ÿ¹ŸÉŸÙŸéŸù 	  ) 9 I Y i y ‰ ™ © ¹ É Ù é ù¡	¡¡)¡9¡I¡Y¡i¡y¡‰¡™¡©¡¹¡É¡Ù¡é¡ù¢	¢¢*¢:¢J¢Z¢j¢z¢Š¢š¢ª¢º¢Ê¢Ú¢ê¢ú£
-££*£:£J£Z£j£z£Š£š£ª£º£Ê£Ú£ê£ú¤
-¤¤*¤:¤J¤Z¤j¤z¤Š¤š¤ª¤º¤Ê¤Ú¤ê¤ú¥
-¥¥*¥:¥J¥Z¥j¥z¥Š¥š¥ª¥º¥Ê¥Ú¥ê¥ú¦
-¦¦*¦:¦J¦Z¦j¦z¦Š¦š¦ª¦º¦Ê¦Ú¦ê¦ú§
-§§*§:§J§Z§j§z§Š§š§ª§º§Ê§Ú§ê§ú¨
-¨¨*¨:¨J¨Z¨j¨z¨Š¨š¨ª¨º¨Ê¨Ú¨ê¨ú©
-©©*©:©J©Z©j©z©Š©š©ª©º©Ê©Ú©ê©úª
-ªª*ª:ªJªZªjªzªŠªšªªªºªÊªÚªêªú«
-««*«:«J«Z«j«z«Š«š«ª«º«Ê«Ú«ê«ú¬
-¬¬*¬:¬J¬Z¬j¬z¬Š¬š¬ª¬º¬Ê¬Ú¬ê¬ú­
-­­*­:­J­Z­j­z­Š­š­ª­º­Ê­Ú­ê­ú®
-®®*®:®J®Z®j®z®Š®š®ª®º®Ê®Ú®ê®ú¯
-¯¯*¯:¯J¯Z¯j¯z¯Š¯š¯ª¯º¯Ê¯Ú¯ê¯ú°
-°°*°:°J°Z°j°z°Š°š°ª°º°Ê°Ú°ê°ú±
-±±*±:±J±Z±j±z±Š±š±ª±º±Ê±Ú±ê±ú²
-²²*²:²J²Z²j²z²Š²š²ª²º²Ê²Ú²ê²ú³
-³³*³;³K³[³k³{³‹³›³«³»³
+ï»¿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLEventSettingSQL : CommonDataBaseInteraction, IDLEventSetting
+    {
+        CommonInfo connection;
+        public DLEventSettingSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLEventSettingSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+        public async Task<List<EventSetting>> GET(string EventName)
+        {
+            string storeProcCommand = "Event_Setting";
+            object? param = new { Action = "GET", EventName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<EventSetting>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+
+        }
+
+        public Task<List<EventSetting>> GetEventTrackingDetails()
+        {
+            throw new NotImplementedException();
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

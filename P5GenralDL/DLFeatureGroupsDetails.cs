@@ -1,2 +1,25 @@
-ıı/ı?ıOı_ıoıııŸı¯ı¿ıÏıßıïıÿşşş/ş?şOş_şoşşşŸş¯ş¿şÏşßşïşÿÿÿÿ/ÿ?ÿOÿ_ÿoÿÿÿŸÿ¯ÿ¿ÿÏÿßÿïÿÿÿÿ~gAGÔÒÿÿ~f@ùÕĞÿÿ}sB2×ÿÿ{ğF_ØSÿÿuÃX[ÙÿÿqÁdCÙqÿÿpVg"ÙHÿÿoÈiØ÷ÿÿj„ƒ~Ù#ÿÿaÁ²^Ù¥ÿÿ`#¹8ÙÌÿÿ`PºhÙÌúæmÇ½‰ÙÇõicÆëÚ«é6bö×8Ü™ä]1ßğŞÂâc[—âßîâ [eâDß´ââ[eâŒß*ã[qâ­ŞÜâı[³âªŞ£ã[ºâ¹Ş~âî[óâœŞ€ã\â¿Ş'ã*\}âÜİyâƒ^oâKÜÀâƒ_â_ÛûáŞ`îâ!Ûâa
-â©Ú:àèc¯â1Ù4àçcÖã>Øà•dÔã‰×àweˆäÕûÿÿ~f@\Õéÿÿ~´@Öàÿÿ~@¿Øÿÿ|ŠD]Ù`ÿÿw¡R¦ÚYÿÿsR_NÚ¾ÿÿqKdÚ­ÿÿpÉeíÚeÿÿmUy6Úƒÿÿdˆª&Ûÿÿa»¸XÛpÿÿaä¸~ÛŒúğoºˆÛ~ô}i›ÅœÜJè€ctÕáŞ(áx]<áàGá¿[YáZáŒáÏ[Zásáaâ[YáºàÛâ.[eáÛàâC[máğà]âL[ráúàEâ5[¯áãà6â?\áğß¼áÙ]ráŸßáÒ^4á ŞXá²^äáİİ‹à¥`ØáÂÜ¾ßşaçâ=ÛÛß6c âkÚ»Ş‚e>âvÙÆŞØeâñØ—ŞÉfWã;×¢ÿÿ~f@Öºÿÿ~¶?Øÿÿ~>ĞÙYÿÿ|éAmÚ™ÿÿyàJ\ÛÑÿÿt]Y[ÜNÿÿqöa…Üeÿÿqxb™Üÿÿo˜mÜÿÿg›‚ÜÁÿÿbÇµÚİJÿÿbÜ¶0İ†ÿl«¶Èİ†òßhìÅøŞ:ç–bæÕ†ßûà‰]Nà
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLFeatureGroupsDetails
+    {
+        public static IDLFeatureGroupsDetails GetDLFeatureGroupsDetails( string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFeatureGroupsDetailsSQL();
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFeatureGroupsDetailsPG();
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

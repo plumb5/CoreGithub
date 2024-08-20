@@ -1,9 +1,60 @@
-Ó¨ÍFŸäÊß2:ı˚Ø∆¨÷ÄÓu?5¢‹ÌöAMh‚ä‰Q3ö©õ’Ç*Dµ¢ï∑Æ?µ°ç
-EÌ®€ŒU:…Vu°ã£ı´n‘7ùö 8¥NÖé∂ÅﬁLÍD©P≤z–Cﬂäz—˚OO_S}Ë#õ–ŒöÔZ’Ä&ñ÷‘å2˜œjAπ'˝¢Z—EÖ©nt≥¥¶Ù†YΩ(o:≠°“ã¡∂S?t4P°´çÃFﬁ‘Ñ^*Dï∫”qËh {’à∆zÓ\jB3Ÿß¥ÙOR+ZŸ‘Ü∂∫€ÆjG;Ÿ®îπ_Q':9÷ÍBí∫—ÕlQ=Ë#õ—≈V≤ù•4ímjB”?›g.5£ôÏPZ®ª’äN≤S]®ﬂÂ˘‘çÚªËz–C›£^ÙíÍCﬂ?}ugt”„m›®ÙAS©{*ŸáûÜ6Ó&µ£Ùmtu°æ∏’çnŒ‰™Jn†¬BoD€˙\]Mh‚éfR3 ∫òüZPŒŒÊT+˙Î[ ŸÜ∂zﬂãjG;Ÿ†‘∑πª:—I6™eÔπì∫—Õ“˛Ù†á˝‰V/ 9€\*Î¯Eññ–ó–ƒ1ÔS3Z»6µ¢~Mø˛«-ØÒøµÜµ:⁄©’‘Ån≤S=ËaVå°^ÙÚº»S˙˛´„‘9ﬁˇ˜KÎj@Ôî-5¢ë7|>5°Æ◊´tPw®]øl…ÍF˜?›ıUı†á#˚§ﬁüÜè
-fC@K€jD#œÍw5°â
-CÕ®_ÿ¯‘Ç≤S≠(3GÃ°6‘ı6’Å*,u¢ì9≥¢∫–Ev´=‘}ÍE/Ÿ£>Ù˝≤;£ëu#Ÿ´&4ëÌjFÛ/[ÉZ–B∂™≠ËU⁄8ÔÈjG;u£:–AÖ°NtëMÍF7Ÿ¶‘—πÍE
-öûJ,w®Mdõö—¸€&wUZ…Nµ°Ã∆zá⁄—Œ¨’QË¢A›ËFãz–√“∂z—˚O˜˜Ü˙P{|–LèÛ«_ô†4ìΩjA◊ŒªZQz‹¢⁄PŒŒßvtëMÍF7Ÿ†ÙêmÍE/„0’á>≤-Ù≠|dü–@v®çÏ'ªö–Lv™-˘Tµ¢Ùxoµ£ì
-∫–˝”˛©eæéWTz\Ÿà÷âN∆ÏO∫∏K˘ßıª„z–C{óz—À}∏¶2æ≠“Üã∂Ü6ÆN>µ£¨„Q’çnˆ¥üJz";—û—ﬂ“r˛‘Ü∫EUµ£ùlRÍŸOùË"õ’çnæS‘Ér%~ı¢˜∑ÊÔPùÒQ∑¢#†\±ôWçh$€’Ñ&˙ñ’åV≤Cm®≥/µ£ùGu†É
-[ù®€NQ∫–§nt£ˇﬂºs}˛◊eπ«Z}ÃÆ7—˘˝t:zOh`π]ç(£W>5°âÏP3ö…µ†ÖÏV+Z…Fµ°\€[ÌË#õ–E/÷«ˆ]’Äz˝˛™ç¥a™	M‹›ﬂjF9÷æS-hßKË†ÓüNÙê}ÍEπ~ó ⁄¨ãö––”]‘àf≤ZPÓ≠Ω?≠h'€’Å⁄ﬁßNt2ˇ˙T o˜vu£è∫=¨ã√∫ÿGh"˚‘åf⁄p‘ÇÚmÑù’ä“ã’Å⁄ã´“ãõ»Ùf¥˝¥jG;_^+Í@Ÿ¨nîﬂ„˝‘Û”»6ÙE4íjBŸ≠f4ìMjA+Ÿ£6¥Ò6lS;:»>u¢ì˚ÃM](Îm–≤¡ô∆ø–™40?xW#ö…6µ†Ö^Dµ¢õÏTœOC¸Øñ¸°!°â
-YÕË![’ã^≤˙~”/[¨3ö…ïˆ&≥j ®Ÿ¶öølÕÍD'ÁÌW](ﬂ}∏S›ËÊ∏0®=‘ÍE/G¨M}Ë#;—ÃzÀK[j@Ô/\5¢Ö
-K≠h•¬V⁄»>µ£ù∫GË†¬ü2:Öu‹>¥$4˝≤ÔO3Z»µ¢ú…›™6¥Q!©TXÍD'Ÿ†.t”ﬁ´Ùpﬁò‘ã≤.^P˙8πhe]‘è•e5†Åñ5¢ëlTö»^5£˘ß˝SZ∏K9‘äV≤Am®cV’é≤6WP∫©’ÉûˇÍﬁüz—K∂™},≠¸_«-£1zÕñ7jµÜ∂üÆ•v‘˜]™:–AÖ´N‘m†©}d⁄iCˇ˛ÈØ©e/¯ñQ÷’»jF3G¥K-h°]≠Ë†BU':…u°óÏT˙xo0°É^åHˆ™	ÂﬁD˛‘â∫¥©≤¥Y…6t6¥ë]*Îb≈_∂$t%4ë›jF;Ÿ´î˘üÓQ':ˇ´}^u°ãôDñ∫—˝´[ìz–√GΩËo$ÁﬁÍC2∫…˝€æõ‘Ä˙≠ù£F4R°®	Âä˙öjFŸ™V¥Ú‘VP⁄…vu†‹ﬂ{[ùË$;’Ö.Ê¥xÍF7Ÿ•ÙúOU≥Ûë›Ë	h‡H≠™ç‹iZjB3ûZ–¬’·¢V¥˝≤-®Ì‹ìÓÍ@/Ÿ§>ÙÒó#¢óµy#Ÿ°&4—Ü¶f‘ÁÎìZ–BÖ≠V¥≤ùuµ°ç´àGÌhß¬ü‘Øyuu¢ìÏU∫hoW7 ⁄Ïüz–C∂™ΩdÉ˙–«>ı†è1{\—›Uh£BT;⁄πZ‘ÅN≤C](ÔkÌ™ntì]ÍAœØe˜S/˙»ÓüNécÁÁ<“Ah {’àFFg´	MËR3Z®‘äV≤Cm(=A]Ëb$∑∫—M∂®=|A*´ΩÏw>ı˝4$*T4d4”≤´¥í]jCyZ˜\µ£ÉÏQ':ŸRá∫–Mˆ©ÂõN˘S/ziŸQ˙»4≤6#[ﬂ=j@#Ÿ®&4˝”WOQád6£)°â˜∫j∂˛≤Âˇõøe¶∆ˇ‚}å≠’—N≠™têÍD'Ÿ¶.î'†◊U7∫y™=¸v∑z—K›Æ>îcÜ[–ÃHÁBv®ıIã®“„Úë}h	h†oIç(cZá⁄–∆ÒÛR≥⁄…^¥Ù˝¥h£ΩÌciUh"€‘år˜hvµ†ÖÏT+ZyC©ÂÓ˛ΩjGœæWu¢øµ˘NQzY⁄R π¯hßo˝£nW8íXjD#uüö–ƒ_§¨fî7EÊQ 8åO≠h•Cmh#‘év≤SË&’ÉrL∂üz:>≤ÂÌô’àFˆ@OMh¶¬PZhŸR+ÍS˘Am(◊á÷ßv¥≥=u†ã•-u£\Î8[=
+Ôªøusing Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminAccountDetailsPG : CommonDataBaseInteraction, IDLAdminAccountDetails
+    {
+        CommonInfo connection;
+        public DLAdminAccountDetailsPG()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<List<Account>> GetAllAccountDetails(int? Offset = 0, int? fetchnext = 0, short? AccountType = null, string AccountName = null, DateTime? CreatedFromDateTime = null, DateTime? CreatedTodateTime = null, DateTime? ExpiryFromDateTime = null, DateTime? ExpiryTodateTime = null, short? Status = null)
+        {
+            string storeProcCommand = "select * from account_details_getallaccountdetailsforadmin(@Offset, @fetchnext, @AccountType, @AccountName, @CreatedFromDateTime, @CreatedTodateTime, @ExpiryFromDateTime, @ExpiryTodateTime, @Status)";
+            object? param = new { Offset, fetchnext, AccountType, AccountName, CreatedFromDateTime, CreatedTodateTime, ExpiryFromDateTime, ExpiryTodateTime, Status };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<Account>(storeProcCommand, param)).ToList();
+        }
+
+        public async Task<List<Account>> GetAccountDetailsByAccountType(short FeatureGroupId)
+        {
+            string storeProcCommand = "select * from account_details_getdetailsbyaccounttype(@FeatureGroupId)";
+            object? param = new { FeatureGroupId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<Account>(storeProcCommand, param)).ToList();
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

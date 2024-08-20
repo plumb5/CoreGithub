@@ -1,4 +1,25 @@
-IP;_Âv%¦)¬ª|‰sn`Ÿ1Âk@¶¸„İû5Ãøú<ØÆ¶ê
-sÌUXŒ{­%–ZÛØÁê+¬d†5Ö:Gb»ª[ØÏ±Ã›))diXŠÊkØ3FìØûŒ•Ø‹½Z»d¶ÆˆÖ˜a¦µmlË.æ˜Ë
-,t¼¯%–²‹ìhíÁ
-+Õm¬±V]b»ê×±œB¶°œBØN!3ìÁccŒùöb¯¬e{É6óKÌ0“¶±-;XvÖ°‰¶jìbWf˜šS¸GaÓ•BuS#Š}×Æ^ì•]™¯1bì`†ÙfÛØ–æ˜kma9F´Àvd…5Ö²ƒ]ìêxı`?ªklš'Æª°i^¡µ=Ø£µ‰}°Wk©‹%f˜a¦ºmŒ,Ì1fğµÀBÖXbÌåÿí£'49Åî{±ÂJWæØŒG!;Øƒ=|Å^Pí+ºí`3bl•,×áfZûµm™a¹çX`¡º%–:ÇÁv´6°ÆZ¶05¬°³ì‚¿ƒ„Waì¾'´Óæ›°°Nğ3H¸‡c/¦ÉuÇÆ÷\ØÆ¶lc1…¯ì¨Î°ÂJu‰5Öº–¯]ìêZ›öZ{°é^¡º…=Ø£ºÆ>ı~íÅx%˜¬Öáfz¶1Í .æ˜km`wŒğªÄÔ‡âF6(dûSŒµaöÈ{16:X¯1bÌ1ÃØüæ˜ëx,d%–:ŞÁvdk¬e†]Œ½BøÒÜÆLÍU`ì#kL+¼¾vmŒ;ØÆ¶Îñ5Ç\uFÃ1Â–íXƒi] :Q„õÅìÑjkP­("«°{9…úÑ—»3ÌTè_ÜàVac9§v0Àlóømñ‚ËØ`fÚ/x¹"À–ø;HXX7¨±)b¯Äì‘mìƒ}8Í_ğ;¶ş®ABg‘fšĞÁ6¶e‰ùaƒ0TXb©K\XaEÓ6Ø*ü
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLApiImportRequest
+    {
+        public static IDLApiImportRequest GetDLApiImportRequest(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLApiImportRequestSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLApiImportRequestPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

@@ -1,4 +1,59 @@
-ª__UÎôÛk©qcôÊeÛm§¢fûÇµÛm¤åj-ÅÛm¡³mÂ‡ÛmQoÀ½Ûmš¤pm¿‰Ûm–†q_¾­Ûm‘Ìr€¾Ûm‹ƒq½0Ûm…+p1¼–Ûm~^mÎ¼.Ûmx0Ûm§)\2Ûm«W*‡`MÛl­F(eìÛ6°	&djÛl³S&´muÛl¹š%SpÀÛfÂ®$½tÛ\Ò$§xÛRØÌ$˜{ü×öÛ$’€­ÊäÛN$’‰½]ÛG$—’å£ÖÛj$µ…„‡Ûm'€§”h.Ûm4¿®yQÛmH¢¯ÒNÛmx®ˆMõÛj­&¬)PÛJÓÍ©jR‰ÛcÛa§xSºÙ§Ûb¥¾YbÔ(Ûl¤/]æÏéÛm¢aUÌLÛmŸ1c•ÉîÛm›êe¥ÈNÛm˜gfĞÇ
-Ûm”Xh…ÅĞÛmÕivÄíÛmŠ¬j×ÄÛm„i…Ã#Ûm}hªÂÛmuŞeÁóÛmorÛm©.'úXŒÛm­%(ç[RÛ5°&¬_‰Ûl³Ú%ıaàÛl¼O%,cÑÛiÅ©$¯fÛaÓ’$¡gÀÛaÚì$”kí×6Úô$’pÜÍLÛM$’yÁ%ÛC$”…E±(Ûi$´ˆ’ÆÛl%ZœÄvSÛm*%¦MaëÛm<à«OöÛmPt«{PsÛm€RªP&ÛmµE§•Q‚ÛiÕÆ¤ÑSÛSÛe¢pRpÛ?Ûh ^UØÕÛmDYÛÔÛmœ"\ŞÑÛm™h_Î•Ûm–a`ÌÇÛm’Eb¢Ë~ÛmŞcÍÊ~ÛmˆübàÉ–ÛmƒDcŠÉ8Ûm{çb\ÈÂÛmt¤`ÇÿÛmm=[ÔÇFÛmf¿Ûmªù%İS¼Ûm¯É'`U;Ûl³Ğ&jW£Ûmº®%X¿ÛkÁø$¤ZïÛ\Ï[$Ÿ[ùÛ\Ø&$”]¿×˜Úö$’c“ÍğÛ2$’l…ÂóÛF$“w:·ÒÛi$¡‚rüÚü$Ï‚ÂÛl'e›käÛm0İ¢´ZÛm=¥|OGÛmX¥ŒOşÛm’¦¤P°Ûm¾Ç¡QYÛmÕ¦ŸGSjÛjÛU	R—ÛUÛkšÛRÄÛÛm˜JU¼Ø)Ûm•áYÌÔÊÛm“B[¬Ò¬Ûmá]¤ĞåÛm‹ğ^¿ÏÛm‡L_rÎ6Ûmğ^·Í<Ûm{Ş^ÓÌ Ûmt]!ËÄÛmläZ7Ë8Ûme›V^ÊaÛm_°Ûm­¥%}M’Ûm³-&ANÃÛm·­%xOòÛlÀ™$÷P©ÛeÊü$•RÛd×‡$“R´Û×Ü$’V!ĞwÛ $’]–ÄWÛ=$’i»³Ûi$—tS¨(Ûl$Ô€ßãÛl&),twÛm+K˜˜bşÛm<€UcÛmG¦PÛm]÷êP Ûm¡#tPìÛmÂ_›eQ–ÛmÖ/™“T‡ÛmÛY—\RJÛjÛk•R¡ÛSÛm’yS¼Ú Ûm§VØ›ÛmŒ¬YsÖ_Ûm‰NZ°Ô3Ûm…<[ˆÒÍÛm€VZ@Ñ¬ÛmzªZ&Ğ`ÛmtTY1ÏÈÛml`W¹ÎñÛme T3Î>Ûm^ŸPxÍYÛmY¦Ûl°Ê$òGvÛm¶V%IH`Ûm¾g$èHÛÛhÄ«$•HğÛcÓ]$“HÛUÙ$’H°ÓÛ&$’MúÉÕÛ3$’X¾€Ûd$“dğ±EÛl$¬qV•ŸÛm&½`Ûm(;‹àjjÛm6P“D[·Ûm>Ø–&RCÛmR"—QÛmi»˜‡P¾Ûm¨æ—7QšÛmÂ8•’RFÛmÔÓ“ÑT†ÛmÛY‘wS ÛmÛkùR»ÛkÛmŒnSBÛWÛm‰cTÚsÛm…ñT9Ø“Ûm‚
-Uš×Ûm}¬V÷Õ:Ûmx®VçÓ¾ÛmrøUÃÒğÛmlÂT°ÒpÛmeQíÑŸÛm^¶NZÑÛmX¡JĞ*ÛmTCÛm·V$»AjÛm½Û$¿AüÛmÄ$•A÷ÛcÏ$“@›Û`Ø«$’>kÖdÚù$’@¨ÍƒÛb$’G“ÂBÛV$“S¶‘Ûl$˜aRŸÛm$èo³‡$Ûm%ú~±pöÛm.ºˆ `àÛm7SŒßXÛmE.ùQ‘ÛmUìRêÛm€ã’fQÚÛm«ì‘#RLÛmÂElRùÛmÒiSgÛmÚä‹BTÛmÛiˆR¹ÛmÛm…ÉR®ÛjÛm‚„QÚÛÛm~ÅR&ÚÛmz\R¤ØÊÛmuROØ	ÛmpPQ¶ÖÚÛmj¯P¤Õ¢ÛmdÚO£ÔÇÛm^
-L§ÓÜÛmX€I(Ó2ÛmS€DùÒÛmO”ÛmºV$“:ºÛmÃ$“; ÛkËk$’:ÄÛhÒm$’6ÖÛ×Ò$’5|Ğ?ÛT$’9©Å’Û<$“C,»ÅÛj$šP?©tÛm$Å^µ[Ûm&?nÅxbÛm+|ÎfÛm0‚ƒR\«Ûm=…÷U!ÛmLfˆ&RIÛmZ‹ISLÛm‡JŒRÇÛm¬ŠÿS¨Ûm¿È‰)SæÛmÍè‡TSÛmØ›„ÄTˆÛmÛe»S#ÛmÛl~]Q]ÛmÛkzÈPŸÛjÛmvÓP™Û`ÛmrQOÂÛÛ
+ï»¿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLGcmFcmSettingsSQL : CommonDataBaseInteraction, IDLGcmFcmSettings
+    {
+        CommonInfo connection = null;
+        public DLGcmFcmSettingsSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLGcmFcmSettingsSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+        public async Task<object> GetNotification(MLGcmFcmSettings mlObj)
+        {
+            try
+            {
+                string storeProcCommand = "SelectGcmFcmSettings";
+                object? param = new { mlObj.Action, mlObj.SenderId, mlObj.ApiKey, mlObj.PackageName, mlObj.Type, mlObj.IsDefault };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.QueryAsync<DataSet>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public async Task<object> GettingIOSSettings(APNsettings mlObj)
+        {
+            try
+            {
+                string storeProcCommand = "SelectIOS_PushSettings";
+                object? param = new { mlObj.Action, mlObj.CertificateName, mlObj.PassPhrase, mlObj.PushMode, mlObj.IOSPackageName };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.QueryAsync<DataSet>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+    }
+}

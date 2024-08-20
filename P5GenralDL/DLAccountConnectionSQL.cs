@@ -1,2 +1,65 @@
-ÚXy–v´£M:Ñ‰VéB}?©¡Fm—:êè•tHÒnj‹ô ´r:U§“¥	MÔš4£:!-(§[ZÑJm“6Tg6¤íté@µ.5ÔĞ#=èyj×¥½hF™ÿoşÓ„&j—4£íÒ‚–?=GZÑJí6´qµ*íh§Ã•Nt¢.õ§„ÏÒ@ƒ«UéAWKÒ‹êíé)áÍ§4£5iAµã-íh§vI:¸Ú'è¤¶Hº¨RCMRGmÒn´HªsèÒ‹^vèøŞÜ¥	M¼'4£:!-hACºĞÅë6¥ö”Ø·m©£^i ñ§=I7ºÑ&½è¥ƒ£ómêº¤	ÕüaÒ‚ú~ÒŠV´JÚèÒvtJ':Ñ!T{ËÒnjMzĞƒéE/»pt½M½@—4£™«uiAµCZQí¸HûSâ”‘¥3Ğ‘nt3/™ô<%|)½è¥oEí{J¸İ$Mh¢vJ3š©Ò‚ÖĞ¤Õ.~:ĞAm–.tQ;¤†µ]h°†#İèF]zĞCß.½èE?Ô9çÎ–&4Ñ·I3šÑ*­hE‹´¡]ÒêŠt¢“Z“.T§“¤†µ]ê¨³‹ø¿ççL=¸Âo5=ôºÒ‹^®;ÑxÇö‚ıü4¡	ÒŒf´J+ZÑ6´¡KÚÑné@+ûéBuzKj¨N/KúéAê(Ó<ávC:§Ÿ!èä~ü¤]è’jh“:êô­Ònj³ô íÒû”8ı~(Ó<á»‡4¡‰«MiA}«´£Z—t ]:QC‘.t¡Cj¨Ñ¡Ij“ô ‡Ú+½èeo½o«/¨ıiBº¥Í\Í¤å)qÚÈÒŠV®¶¥Õé„t -Ò…ê\j¨ÎÁ¤:WcÇç÷ŠW»¤ó)á×²t¡RCíOÇ‘úSâØÒ@ãOãJ7º©uéAZ¤½èB™Å	¿6¥	Mh’f4³†´Ğ7K+ZÑ6´¡MÚÑšt ƒ«©¡Fm—:ê¬·Hj«t£›Ú.=èA›”3Ë>4'4±²-Íh¦vHZè[¥ÕéiCº¥]O÷6©¡†v©?%"µ+İè¦ö“ôP»¤½Ú¥ÌÚÄÙ;¤	MÔ&iF3}·´ …EZÑJ‡*mhC‡´£G:ĞÁÕB:ÑIm“.tÑ÷§†r’ç“:êtØÒ@MÒnú~Òƒê|MzQïD+ç[u¾?M¨Î·H3š©ÍÒ‚®v¤­Ô^iCu¾ÿ÷ÿßr˜æ‰HÍÕk ƒ+,éD'WèÒ….j‡4Ğ@eš'î×4¡éOG•æ§Dd_Ò‚j‡´¢Ú*íhçjW:ĞA‡.èD“t¡‹¾&5ÔĞ!4¸Ú–ôPÛ¥½\­ ıË´Išè0¥ÍÔfiAúI':Ÿ¾èBíõ->¤:Z¥İh“^ôÒWµã-ÿš¥Íh—´Ğ×¤­ÔiCúI;ÚÿÔ®t ƒÚ"èD“t¡‹5t©¡Fm“:êO«…4QÇ‘nt£[zĞCé|‡õ½Ò„&ôHóS"ª%iJÜv\:Ğ‰N©¡†©£š4Pöv³t£›Ú^ôR›Pf|âš¥å)m7iE+:¤í)qÇ9Òvj»t<%îô%è|ºê']èB³ÔP{:ï‘:êÔ&i<%¢wÎá–ş”°G:Ñù4®K×Sbç~¥†êï&İO	Ïû§Õï…Öò”8¶¯´¢úf6i{Jœ}’t>%"»KÕ}aRG]Ò@ƒwj–nTï-½èå]RP¾/ˆhwJÓS"¬.i}J˜ÅOÚÎÑ¤ÕßÖ¶ÔQZú'4ş´¹t£½ÒƒtK/zy5íoS/¨=Ò„&4¤-OûMÒ†6^ù#íhêõ“t>½}Ijü¦v¤:µSh .İèF‡ô ‡¾å›ğ·24?%|ÿû÷A_¾9ˆS†©WCó_H;Ú™Û“t ƒÚ-]¨fº%5”ùäd©£~Ònî¦*=èA‹ô¢Íè,O‰›İ¥í)Å—´£Útp7UéD'wÓ’®§ÄnR{JX+uÔ¹Ç\h &İèæ»Òó”°¸¾/Å«=ÒŒfîÇ,­hån
-iCwH–v´Ó!Ií)áy‡ÔQ§C“ºÑ"=è¡ƒ£ÆûÛw^–f4£IZÑÊ»¾HÚ¸›¶´£é@z¤ôÍÒ….4Iî‹,İèF«ô¢—»å şvü‚Ú"Mhâ¾øiF3w–Iª'Ö%mhC§´£;À¥Õ³Ş–NtRûÓ….4¤ö”¸Õ?©£z:Ò@õ<T¤û)a}Òó”Ø_ûéE/wÀFã{JìÒ›4¡‰÷ú‘f4S[¥-h‘6´ÑaK:xW»t¡İRCíÒ@ƒ;`K7º©Òƒjô¢—Ú@7ç°º¤Ít¸ÒŠê¯µG:ĞÁıV¥êÛëJª¿né}J¸×‚Vvš¤-tpiCº¥Õ÷Ğ’Nt¢&]O	ß–¤†µCê¨£]h SºÑ6éA÷æ–^ôrWôr7QëÒü”8ûtiyJDê.­h¥¶IÚ^›Òj.7éB5—‡ÔQG·4Ğ`!İèá
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Identity.Client;
+
+namespace P5GenralDL
+{
+    public class DLAccountConnectionSQL : CommonDataBaseInteraction, IDLAccountConnection
+    {
+        CommonInfo connection;
+        public DLAccountConnectionSQL()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<CommonInfo?> GetAccountConnection(int AccountId)
+        {
+            string storeProcCommand = "Account_Connections";
+            object? param = new { Action = "GetConnectionSting", AccountId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<CommonInfo?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        public async Task<DataSet> GetAllAccountConnection()
+        {
+            string storeProcCommand = "Account_Connections";
+            object? param = new { Action = "AllConnections" };
+
+            using var db = GetDbConnection(connection.Connection);
+            var list = await db.ExecuteReaderAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            var dataset = ConvertDataReaderToDataSet(list);
+            return dataset;
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

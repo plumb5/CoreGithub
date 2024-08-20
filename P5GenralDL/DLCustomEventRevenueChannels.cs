@@ -1,2 +1,25 @@
-ƒÈ‡Ú(Ù‚Ã…Ù ¸ƒÎ‘`¼¢ûŠâ¿¡„bÄŸ5}àÊbw^ŒÔ›£pŞ‹Ş™õjPŠí˜Fc­‰ÿ–‰]‰”ÈV3ˆ0’ûO&‡K‘GÛ†n#@]…8²„¡‹0Ñƒ£ˆÕ(Ã‚™†– œŠ„Nì—¦…Šh›¤†ƒå¡¢‹}a¨ —váŒ±±pd‹¼œÖiÚŠÊš÷c=‰Ü™\—ˆô—UÏˆ•NÊ‡*“G††NĞ@…oˆ8s„‚Œ20¤ƒ€‰É(ª‚q‡O œ\„Í{u©í‰ñz§ßƒh€¥Ñ|á‡£ÄvaŒ¡ºoè‹›Ÿ²idŠ¨¤bÌ‰»›‰\+ˆÓ™iUj‡í—7Nl‡
-”éG/†0’y?Â…Rò81„c^0tƒ^Šº(‘‚Jˆ ›.…K}dio‰2œjG‚åšĞk!|‘™„kÿv:˜6lâoã–æmÉit•“n·bä”<o®\=’àp­Ug‘€q¹NGrÕFÒÂt? ]uD7L‹âv/KŠIwä'!ˆ›yGã†âz°Pœ¡m‰›ZmÆ‚»šnq|i˜Éo"v—~oÚo»–1p™iM”âq`b¿“r.\’9sUMàsãN4ƒtÓFÉ(u×?"ŒÅvê7Y‹Lx/c‰·y.'Eˆzb†Z{›"›İpÑˆÙš™qM‚Œ™TqÌ|:˜rQuå–ÅrŞo•|sti$”1tbš’âtµ[ı‘’u^U3>vN!ævÖF¿w¬?#Œ/x‘7dŠºy~/x‰*zv'd‡†{z;…Ø|‚õ›tŠˆ¦™Ötİ‚V˜•u4|—Quu°–uóo^”Çv^hù“vĞbt’5wH[ÜêwÆU›xMNHxâFµŒöyˆ?"‹œz;7mŠ,zö/Šˆ¢{¼'‡|Œ`…\}a¸šZx`ˆl™xŠ‚—Öx¶{Í–“xçu}•Pyo/”y^hÎ’Çy£bN‘€yí[»8z?Tÿîz™Mû£züFªŒ[{m?!‹{è7t
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLCustomEventRevenueChannels
+    {
+        public static IDLCustomEventRevenueChannels GetDLCustomEventRevenueChannels(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLCustomEventRevenueChannelsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLCustomEventRevenueChannelsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

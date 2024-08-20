@@ -2,7 +2,7 @@
 
 namespace P5GenralDL
 {
-    public interface IDLSmsUserReply
+    public interface IDLSmsUserReply : IDisposable
     {
         Task<int> Save(SmsUserReply UserReply);
     }

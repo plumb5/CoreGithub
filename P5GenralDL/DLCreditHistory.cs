@@ -1,1 +1,25 @@
-•§SÓ’mG9÷‹€,¯~ı‡çàB€º¾Õî€oºÖËš€(·—ÁFê´d¶ùµ±E¬´…®8¢Z\«+—Ú:¨I¤ù‚}¡ÒwK~ø’k´~ó›>_Â~ğ—ĞS{~ë”;FÇ~åw9»~àŒ,‚~Úˆ‘ß„€©ÃÄÕ8€^À!Êë€¼ˆÀÛ¹¶V¦µ¬w²Q¡¾N¯—D+«ªŒ»¨Jù~ñ¤ÛvÑ~ã¡MkE~Ú¦_a~Ó™áS'~Ì•õF€~Å‘Ö9~¾,U~¸‰7Ş×€¢ÉÔ€UÅ"ÊD€ÁJ¿úÏ½…µ¶š¹à«xk¶U¡&C²Ê–²¯,Œ0~ş«ˆw~ã§ĞvY~Ñ£öjÚ~ÅŸı_~»›âRÖ~±—ŸF<~¨“*9I~ŸŒ,)~—‰ÚŞ;€ŸÍãÓï€OÉàÉ£€Åã¿XÅÁòµ¾ªİbºN 9¶–#² ‹¨~ó®¸€÷~×ªºuã~Â¦”jq~²¢H^¨~¥ØR‡~˜™@Eù~”v9~‚ƒ+ı~wŠ|İ¦€œÒ‘ÓT€JÎ|ÉıÊi¾¸¼ÆV´w‡ÂIªBY¾BŸû0º0•”¶‹ ~é±ã€x~Ë­uo~³©,j	~ ¤^M~ŸÉR9~€šÜE·~r•¾8Û~dx+Ñ~W‹àİŠ¢znÖ²Šz>Ìˆ‰kz Â\ˆØz¸9ˆLz®‡Çz#£ç‡Gz5™|†ÊzPò†Qz…„%…ÛzÊxì…i{mC„ü{la:„{ÔTØ„!|PHƒ­|ñ:Ôƒ7}´-u‚À~Šà9‰ômÖ‰[ËìˆÆ~²ÁÅˆ8~f·¥‡³~$­‡5}ç£X†»}¿˜ò†D}·o…Ò}´ƒª…b}³xz„õ}µlÜ„}Ğ
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLCreditHistory
+    {
+        public static IDLCreditHistory GetDLCreditHistory(string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLCreditHistorySQL();
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLCreditHistoryPG();
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

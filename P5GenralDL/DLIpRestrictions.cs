@@ -1,1 +1,25 @@
-θϊιι'ι>ιTιjιι—ι®ιΔιΫιρκκκ4κKκaκwκκ¤κ»κΡκηκώλλ+λAλWλnλ„λ›λ±λΗλήλτμμ!μ7μNμdμ{μ‘μ§μΎμΤμλννν.νDν[νqννν΄νΛνανψξξ$ξ;ξQξhξ~ξ”ξ«ξΑξΨξξοοο1οHο^οtο‹ο΅οΈοΞοδοϋππ(π>πTπkπππ®πΕπΫπρρρρ5ρKρaρxρρ¥ρ»ρΡρθρώςς+ςAςXςnς…ς›ς±ςΘςήςυσσ!σ8σNσeσ{σ‘σ¨σΎσΥσλτττ.τEτ[τrτττµτΛτβτψυυ%υ;υRυhυ~υ•υ«υΒυΨυξφφφ2φHφ^φuφ‹φΆφΈφΞφεφϋχχ(χ>χUχkχ‚χχ―χΕχΫχςψψψ5ψKψbψxψψ¥ψ»ψÒψθψÿωω+ωBωXωoω…ω›ω²ωΘωίωυϊϊ"ϊ8ϊOϊeϊ{ϊ’ϊ¨ϊΏϊΥϊμϋϋϋ/ϋEϋ\ϋrϋϋϋµϋΜϋβϋψόό%ό<όRόhόό•ό¬όΒόΨόούύύ2ύHύ_ύuύύΆύΈύΟύεύόώώ(ώ?ώUώlώ‚ώ™ώ―ώΕώάώςÿ	ÿÿ5ÿLÿbÿyÿÿ¥ÿΌÿÒÿιÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+ο»Ώusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLIpRestrictions
+    {
+        public static IDLIpRestrictions GetDLIpRestrictions(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpRestrictionsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpRestrictionsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

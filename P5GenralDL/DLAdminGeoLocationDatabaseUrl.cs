@@ -1,4 +1,25 @@
-üΩœ·?òÛ·oø¯ÂO~Ò·∑ï_•¯cUA•˘cÒ_˛ÓüÚ¯…G¸Ûè~˘ªø˙À˘ßü˛Ú'.GˇÈsˇ_Îæ˚ã_˛ÈC˝˜wøØÇ—~ˆÀﬂ|Ù9ˇˇﬂ˙ßeﬂü?˙›OÀ–?ˇ^ñˇÂOı¸˜ît˘…ˇ„˝˘√ÔˇËÛÀü|Ùª?}ÙQ9Ê√üÒQ}k??|Ìó?˛„è˛¯w„¯›O∑ﬂˇV≠˙Oü¯¯'>˛˘¥ÕüOk≠GˇÓßL˚¨gVkU∫ÀıÉºÒ
-¸~Ú€˝°s¡Ô_˘›œ~ˇ·F⁄ü˛Âù˛√áœ€^ˇ„ﬂ?|⁄Ü}Ê√O?˙ôˇ¡7ˇ¯”è˛¯Àﬂ˝ú∂˛√Ønﬂ˘Ìü~Xm˝5≈w˛Úá?¸Ê#Ÿ¸·,ßËˇ¯ŸÚ›7~Ù€è>|˛}_QÇ¸„Ù:Ã˛›øˇ·£ŒÚÛ?¯˙Ô˙—áóŒ˜ÚÅ"¸”~TÌ‚Gø˚˘Gü¯¯_Í?_˙≈≥˛Û%Ú>Öˇ’ó˛ÂˇÏ˝øU2Ω|Èc%_2[.≈$≈ñÎrÑ^°7—À∂Üﬁ°wß]Ô°t Ì˙Ä>äé[ÿùrC'Ëd∫4ù°≥Ë¥ù°t1]n°+tuG?mÉn¶góláÓ<m=†G—·
-[À[ ı-YL◊#Ù
-µøÊs-YÌ:@ÌØ°≠]À_ß›€ÜÚòkÔ°Â1˘vÂ16¥Ωè=”Æ–xl-èYúˆúCÀc”gæÂ1t	=°'ñ•÷∂Ú§•Ë˝V~¥ºeÂEÀ[vÉ›ﬁ≤Ú´Â-+ØZﬁ≤Ú©Ö≤7-üZîÚVµàaÂOÀ[Vﬁ¥ºeÂKÀ[Vû¥àÕaÂGÀ[V^¥ºeÂC‰ïÌÂA%πÜ^†ˆ◊vÉŸ_gX˘ÀÚñïø,oY˘ÀÚñï∑,¥˜¶Â/ˆ,°Â1ãz—V≥ºeÂ1À[V≥ºeÂ1ãX{¢<f·…{h˘Ã‚∂ﬂ≠¸(ØYä>.aÂ3À[VÌŒÚñï-oY˘—
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminGeoLocationDatabaseUrl
+    {
+        public static IDLAdminGeoLocationDatabaseUrl SaveLog(string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLAdminGeoLocationDatabaseUrlSQL();
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLAdminGeoLocationDatabaseUrlPG();
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

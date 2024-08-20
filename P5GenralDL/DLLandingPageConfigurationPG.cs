@@ -1,6 +1,76 @@
-ITIdItI„I”I¤I´IÄIÔIäIôJJJ$J4JDJTJdJtJ„J”J¤J´JÄJÔJäJôKKK$K4KDKTKdKtK„K”K¤K´KÄKÔKäKôLLL$L4LDLTLdLtL„L”L¤L´LÄLÕLåLõMMM%M5MEMUMeMuM…M•M¥MµMÅMÕMåMõNNN%N5NENUNeNuN…N•N¥NµNÅNÕNåNõOOO%O5OEOUOeOuO…O•O¥OµOÅOÕOåOõPPP%P5PEPUPePuP…P•P¥PµPÅPÕPåPõQQQ%Q5QEQUQeQuQ…Q•Q¥QµQÅQÕQåQõRRR%R5RERUReRuR…R•R¥RµRÅRÕRåRõSSS%S5SESUSeSuS…S•S¥SµSÅSÕSåSõTTT%T5TETUTeTuT…T•T¥TµTÅTÕTåTõUUU%U5UEUUUeUuU…U•U¥UµUÅUÕUåUõVVV%V5VEVUVeVuV…V•V¥VµVÅVÕVåVõWWW%W5WEWUWeWuW…W•W¥WµWÅWÕWåWõXXX%X5XEXUXeXuX…X•X¥XµXÅXÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZåZõ[[[%[5[E[U[e[u[…[•[¥[µ[Å[Õ[å[õ\\\%\5\E\U\e\u\…\•\¥\µ\Å\Õ\å\õ]]]%]5]E]U]e]u]…]•]¥]µ]Å]Õ]æ]ö^^^&^6^F^V^f^v^†^–^¦^¶^Æ^Ö^æ^ö___&_6_F_V_f_v_†_–_¦_¶_Æ_Ö_æ_ö```&`6`F`V`f`v`†`–`¦`¶`Æ`Ö`æ`öaaa&a6aFaVafava†a–a¦a¶aÆaÖaæaöbbb&b6bFbVbfbvb†b–b¦b¶bÆbÖbæböccc&c6cFcVcfcvc†c–c¦c¶cÆcÖcæcöddd&d6dFdVdfdvd†d–d¦d¶dÆdÖdædöeee&e6eFeVefeve†e–e¦e¶eÆeÖeæeöfff&f6fFfVfffvf†f–f¦f¶fÆfÖfæföggg&g6gFgVgfgvg†g–g¦g¶gÆgÖgægöhhh&h6hFhVhfhvh†h–h¦h¶hÆhÖhæhöiii&i6iFiVifivi†i–i¦i¶iÆiÖiæiöjjj&j6jFjVjfjvj†j–j¦j¶jÆjÖjæjökkk&k6kFkVkfkvk†k–k¦k¶kÆkÖkækölll&l6lFlVlflvl†l–l¦l¶lÆlÖlælömmm&m6mFmVmfmvm†m–m¦m¶mÆmÖmæmönnn&n6nFnVnfnvn†n–n¦n¶nÆnÖnæn÷ooo'o7oGoWogowo‡o—o§o·oÇo×oço÷ppp'p7pGpWpgpwp‡p—p§p·pÇp×pçp÷qqq'q7qGqWqgqwq‡q—q§q·qÇq×qçq÷rrr'r7rGrWrgrwr‡r—r§r·rÇr×rçr÷sss's7sGsWsgsws‡s—s§s·sÇs×sçs÷ttt't7tGtWtgtwt‡t—t§t·tÇt×tçt÷uuu'u7uGuWuguwu‡u—u§u·uÇu×uçu÷vvv'v7vGvWvgvwv‡v—v§v·vÇv×vçv÷www'w7wGwWwgwww‡w—w§w·wÇw×wçw÷xxx'x7xGxWxgxwx‡x—x§x·xÇx×xçx÷yyy'y7yGyWygywy‡y—y§y·yÇy×yçy÷zzz'z7zGzWzgzwz‡z—z§z·zÇz×zçz÷{{{'{7{G{W{g{w{‡{—{§{·{Ç{×{ç{÷|||'|7|G|W|g|w|‡|—|§|·|Ç|×|ç|÷}}}'}7}G}W}g}w}‡}—}§}·}Ç}×}ç}÷~~~'~7~G~W~g~w~‡~—~§~·~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””)”9”I”Y”i”y”‰”™”©”¹”É”Ù”é”ù•	••)•9•I•Y•i•y•‰•™•©•¹•É•Ù•é•ù–	––)–9–I–Y–i–y–‰–™–©–¹–É–Ù–é–ù—	——)—9—I—Y—i—y—‰—™—©—¹—É—Ù—é—ù˜	˜˜)˜9˜I˜Y˜i˜y˜‰˜™˜©˜¹˜É˜Ù˜é˜ù™	™™)™9™I™Y™i™y™‰™™™©™¹™É™Ù™é™ùš	šš)š9šIšYšišyš‰š™š©š¹šÉšÙšéšù›	››)›9›I›Y›i›y›‰›™›©›¹›É›Ù›é›ùœ	œœ)œ9œIœYœiœyœ‰œ™œ©œ¹œÉœÙœéœù	)9IYiy‰™©¹ÉÙéù	)9IYiy‰™©¹ÉÙéùŸ	ŸŸ)Ÿ9ŸIŸYŸiŸyŸ‰Ÿ™Ÿ©Ÿ¹ŸÉŸÙŸéŸù 	  ) 9 I Y i y ‰ ™ © ¹ É Ù é ù¡	¡¡)¡9¡I¡Y¡i¡y¡‰¡™¡©¡¹¡É¡Ù¡é¡ù¢	¢¢*¢:¢J¢Z¢j¢z¢Š¢š¢ª¢º¢Ê¢Ú¢ê¢ú£
-££*£:£J£Z£j£z£Š£š£ª£º£Ê£Ú£ê£ú¤
-¤¤*¤:¤J¤Z¤j¤z¤Š¤š¤ª¤º¤Ê¤Ú¤ê¤ú¥
-¥¥*¥:¥J¥Z¥j¥z¥Š¥š¥ª¥º¥Ê¥Ú¥ê¥ú¦
-¦¦*¦:¦J¦Z¦j¦z¦Š¦š¦ª¦º¦Ê¦Ú¦ê¦ú§
-§§*§:§J§Z§j§
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using Dapper;
+
+namespace P5GenralDL
+{
+    public class DLLandingPageConfigurationPG : CommonDataBaseInteraction, IDLLandingPageConfiguration
+    {
+        CommonInfo connection;
+        public DLLandingPageConfigurationPG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLLandingPageConfigurationPG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+        public async Task<Int32> Save(LandingPageConfiguration landingPageConfiguration)
+        {
+            string storeProcCommand = "select landingpage_configuration_save(@IsLandingPageConfigEnabled, @LandingPageName, @BucketUrl, @CloudFrontUrl)";
+            object? param = new { landingPageConfiguration.IsLandingPageConfigEnabled, landingPageConfiguration.LandingPageName, landingPageConfiguration.BucketUrl, landingPageConfiguration.CloudFrontUrl };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int32>(storeProcCommand, param);
+        }
+
+        public async Task<LandingPageConfiguration> GetLandingPageConfiguration()
+        {
+            string storeProcCommand = "select * from landingpage_configuration_get()";
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<LandingPageConfiguration>(storeProcCommand);
+        }
+        public async Task<LandingPageConfiguration?> GetConfigByLandingPage(string LandingPageName)
+        {
+            string storeProcCommand = "select * from landingpage_configuration_getbylandingpage(@LandingPageName)";
+            object? param = new { LandingPageName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<LandingPageConfiguration?>(storeProcCommand, param);
+        }
+        public async Task<bool> UpdateStatus(bool IsLandingPageConfigEnabled, string LandingPageName)
+        {
+            string storeProcCommand = "select landingpage_configuration_update(@LandingPageName, @IsLandingPageConfigEnabled)";
+            object? param = new { LandingPageName, IsLandingPageConfigEnabled };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<bool>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}
+
+

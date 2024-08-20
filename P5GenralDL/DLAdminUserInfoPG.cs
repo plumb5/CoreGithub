@@ -1,2 +1,70 @@
-®Ò}ø^_é‡~œEÚÑz«t #tî+]¨ÖY´À/]DğIné‡êêøO;Ú­JÛz“¾¨®L»ôC?úØ–tp%r¤:O0ºô ‡ûOÊlO¿~h<s•A=Ñ¥ú„~{J:˜¯«t£ª³b„F˜ÒŠVÆ¥.5ÔøŞ*kÓqé‡êS?RGõ?éAõËûı¢İˆĞ¹\ú O¨İ?(µ™]¥Õ{kí[g•?MÚÑÎ¶Ÿt¢z‹y¡1GdPßÒnF¶WzÑËägĞ3Bï~¥†kŞ)]èbÛ*İ¨îsn4ÆÆV_]ºPıFÄE÷‘+”%uÔ™™;zcÛfü&ıP=çúHªû²UzÑË,Ã¶=6ƒëÊ"-h¡Ò¶¥úpî<Ò}¹ê+Ò†r'd¾Òe¤½]j¨fÅ#(µĞÛ¤êníB£b“Áø`Ò‚V·]ú Ï¬˜ôE¹»ìKÚÑNİô“ª^ØĞg§>ªÇ4Fª\Sj¨ñ™=ÒxØÒ….WŸhıB#²†bRGfH7ºKô 'Õõ"tW©¡Æ:ö•Nt2TéA+÷ƒFİ4ƒóì‘vTk†WºPÍ-MzÑË99Ğè±\S|Ò‹ê—É7+ªîhv4V>¡v·´£ı§÷‰†Åê ƒqtı‡:ê\Ûšô¢—ç%7zØÇ£ç‹éƒ>Tø>éFu¿á'=èa¤ø¤½œõ½qìÜïRGõÖƒI7Êxw†ô ‡£8©ƒ1aü=õÙ¤Œ@¯t¢“ëˆ.uÔÙ3C£ŸgPYÒ}Y¥.©¡úÍ#=èáÜúĞ¨Áfğæ•j\¡o4îMd0#½ÒêŠáJÊÌq§ÔQç(şt£›zVGcnÏà›ÿÓåy¾y¤­¬„·´£O½¢ãKı»[p¥Õ7Ô¤İ¡c">³ó“jÌÌê(×ísH7ª+È+=è¡Gw4ún…#}Ñ7Õ]ZQ½umÒªuÚuÖ8G÷3¨>Ò‚æ¶»ôAõëLKÚĞ:×–T¿Í}¥İÛŸ^ôÒzØ–>?WEoìY÷Ğ·ô¢—«¨:cnÏ`>9RC-Ôı'=¨Ş{54VØ¬|•×êìó_O9é‡~\E=ÒêÒ‹F-)ƒšÏ¾èËø|¤m|.İèæ©Š¶Ø6‚1ê“v”Ş²Ò‰NæëWºPî1®#½èåYé÷¤ş=sü“6´ñùNé@O+éD'-tZ*+Ö}ºB#8KëM"úÅşI+Zy¦­K¥İ]ÑûA5õ•ôpÿ”wÇ#ø×
-×VÜx¤TH_4Ì`ûIuŞ¶*hm#xÒ{JôaÕ±¤/ú²¿Ÿ´¢5uiCíO“^ôæão£Ü”N”ùMÛò6w×zVW¿õùfŞ)½èe¥ÖĞ¸VÉà¬îÿ´nY1æf0÷mEí&ƒúÅE£Z’ÁÕæFã.Oçá'5TëÜšêñäB½ÿEcnÏ`=:¥ú0ËiC×í†>è“êë¢q…ÁÓ]ºĞÅ,^ÑÚC#²’|¤ÕÕ¼4FŠª=ìÃQ…É¤Ím·ÿ¤ŒV½o*ïŸE ­¡cı¤ÊSãêı;ÖY¬‡-+4"×ğ»ÄDl{\j¨¡ÏŒˆŞtJÕÖ%İèf6OÊf0ª¸´ …zK—:êÔ³.ÚŸĞˆ¬tĞˆhaÿ¤½<)ô¢±:ÈàÜÙ¨‡FPI>èî¡ùI£¦–Á¥†ZèŞ¯t ƒÕø–N”ûâúN	`«ô <¹>4ªú´°¥Ôï‡t£›Q»J/Êt^t<©CWKú¢/ÛViG;3Ò#İ¨Şl™Ò‹^z‹¡“£˜]'ßPõ–&m(ÛŞ-]èJKzĞÃûZÒ¸ÃêÛ¥Õ&=èáØ^4V€|ÇCZQî7ÌWj¨qVéBõË–Sê(ÏŞ&=¨fƒÆ˜JD{¢1>d„ş­7oÔX3ûLj¨ŞHºÒƒª;/×VôØ†ÆõRŸÙ@ß•ªJÅt´ÎĞˆ¬ILéBÏÍéAú qµ“Á*K/z©ğ?hŒ%Ôf>iG;uô&¨Ş»\RGùº QÌ`vZhT3XÍ¼èˆO'"tù#m(W÷HÕûö7tzTå"â(V¬qĞŠVô•vt¢Ù4¢£&èN]?4¾Í´I+ZÑOêèF»ô¦¾èkè@]ê¨£U~úOïM³ˆˆ¿Šy5u£-h¬Î2ĞGj¨¡¯ÔQG+ÚÙÇ^Ğ&­hE»´£†št¢¨Ñ®tI_ôC·t ìÙ.hœqh“V´¢ŸÔÑvéMè4t¢.uÔÑ+¥…Å>œºè#]èF+×âh—V´¢&5ÔĞ!uÔÑ‰Æµxº¤í¨£‡OòtK+ZÑ+í(ûpÒ‰Nô‘:êè+½©· ½/ú¢]ÚĞ5©£©;ÆÔ¥­è–~è‡©£;´Ì"½èE_4êìh•jh“:êè‡Æ”vé@jRG7:Ğ—c{º¤†º¥:zĞJµ¡WÚÑºŠt }Ğxâ$}¥­h•jhCcöÊ@?é‹¾h—:ºQCcŒÊ@§ôE?tIºÑ+½èMõ5öÌô•:Ğ&uÔÑÆ•šÔÑtÖĞˆÔ…®‘ê¨Ó®tK+ZÑ+5ÔR÷İ´°Z¤/ú¢¯ÔQG+£FÚ¤­è‡^öá´KutH/zÑ™z¢wGtIè–.t¡WºÑz~h‰ı@¼ˆ‚>ÒŠV´J;jh“Nt¢?¢ &}ÑÒ†~è’Nt¢[êèA}“½EZÑŠ>ÒıĞWêèF«ô¦~ışiİr¢î—Á_ÿPC:¥:êhôótK5ôH:BŸY¤İèƒZMµ†6©£vt¡ë †FÌ@—´¢u©£İÒ›ºzÑmèH]ÔQG+zbÛ´IºĞOºÑv4®§2P“jè:êèLÍk¯C—t£İh¬Ö3ĞƒÆL±Ñ‹F$B½HôAiE+úJİh•^ô¢uÕˆíRC:Ñèc¨KİèF?öìkèEãL%BwAc}œ>ÒŠVô•jhE-Œ‚6iCÚ¥:jè¢İ5Ğ!uÔÑ…FÈ@]ÚÑné
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminUserInfoPG : CommonDataBaseInteraction, IDLAdminUserInfo
+    {
+        CommonInfo connection;
+        public DLAdminUserInfoPG()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<MLAdminUserInfo?> GetDetails(string EmailId)
+        {
+            string storeProcCommand = "select * from admin_getuserdetails_get(@EmailId)";
+            object? param = new { EmailId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<MLAdminUserInfo?>(storeProcCommand, param);
+        }
+
+        public async Task<long> UpdateLastSignedIn(int UserId)
+        {
+            string storeProcCommand = "select admin_getuserdetails_lastsignedinupdate(@UserId)";
+            object? param = new { UserId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param);
+        }
+
+        public async Task<long> InsertEventLog(int UserId, int AccountId, string AccountName, string Description, string MailTo, string MailFrom, string Subject, string BodyMessage, string UserName)
+        {
+            string storeProcCommand = "select admin_getuserdetails_inserteventlog(@UserId, @AccountId, @AccountName, @Description, @MailTo, @MailFrom, @Subject, @BodyMessage, @UserName)";
+            object? param = new { UserId, AccountId, AccountName, Description, MailTo, MailFrom, Subject, BodyMessage, UserName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}
+

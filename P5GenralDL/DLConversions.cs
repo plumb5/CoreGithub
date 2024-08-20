@@ -1,2 +1,25 @@
-'„jˆ›½ƒœ:Áä´»š­¾ˆ«ó™%»0£+—¥·ßšh–0´š‘©”Å±_ˆÝ“^® ý‘öªÓw”§€n	-¤d­² ™[ŒœùQŠƒ™>Fóˆí•e<|‡_‘e1Ä…ÓH&ë„H‰½œ+Åí´9šŸÂ~«m™¿¢£—–»ž™á–"¸-‘%”¶´¼ˆ_“N±C„‘å­½v¥‚ª0mŸ¦dKœ¢ÌZ­ŒžåPÎŠišàF±ˆÑ–½<G‡A’u1…³Ž&Ô„'‰™½[¦7{G´Á¤X{4¬&¢}{(£† ª{#šçžã{%’I&{.‰—›l{;€È™²{Pwë—ý{|nÞ–A{·e€”r{û[Ô’‘|TQÝ¡|ÀGžŽ¦};=Œ›}Ï2Šƒ~}'ˆe8¼ö¥²z´]£Ñ.«Ã¡õ~é£& #~®š‹ž`~}‘òœ©~O‰Fšõ~2€|™@~.w¤—~-nœ•×~-eB”
-~0[š’)~SQ©:~ŽGqŽ@~Ñ<ÜŒ8(1þŠ%™&úˆ€¼Œ¥.ƒ±³÷£Nƒ2«a¡t‚¸¢ÈŸ¤‚Jš1ãè‘œœ/ˆõš>€/˜Í€üw[— €½nX•l€e“¢€z[a‘Â€oQuÓ€hGCÜ€f<·‹Ø€z1â‰Ê€©&é‡·€õ¼¤¬‡ï³Ž¢Ð‡Aªþ ù†˜¢jŸ,…ù™Øm…e‘F›¹„Ùˆ¢š	„Wà˜Yƒâw–¯ƒtn”ÿƒdÄ“8‚¾[%‘\‚nQ?p‚,G{‚<‹|ë1Æ‰sÚ&×‡eÊ»ª¤+ŒV³!¢O‹rª— wŠ“¢	žª‰¿™{œëˆ÷í›9ˆ9ˆM™‹‡…‘—Ý†ÛvÆ–7†<mÍ”Š…¥dƒ’È…Zêò„ŠQ	„Fä ƒ™<i‹'ƒ:1©‰#‚æ&Å‡‚–»4£¯Í²²¡Ì±ª.Ÿ
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLConversions
+    {
+        public static IDLConversions GetDLConversions(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLConversionsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLConversionsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

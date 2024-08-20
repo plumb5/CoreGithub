@@ -1,1 +1,54 @@
-*ó+++#+3+C+S+c+s+ƒ+“+£+³+Ã+Ó+ã+ó,,,#,3,C,S,c,s,ƒ,“,£,³,Ã,Ó,ã,ó---#-3-C-S-c-s-ƒ-“-£-³-Ã-Ó-ã-ó...#.3.C.S.c.s.ƒ.“.£.³.Ã.Ó.ã.ó///#/3/C/S/c/s/ƒ/“/£/³/Ã/Ó/ã/ó000#030C0S0c0s0ƒ0“0£0³0Ã0Ó0ã0ó111#131C1S1c1s1ƒ1“1£1³1Ã1Ó1ã1ó222#232C2S2c2s2ƒ2“2£2³2Ã2Ó2ã2ó333#333C3S3c3s3ƒ3“3£3³3Ã3Ó3ã3ó444#434C4S4c4s4ƒ4“4£4³4Ã4Ó4ã4ó555#535C5S5c5s5ƒ5“5£5³5Ã5Ó5ã5ó666#636C6S6c6s6ƒ6“6£6³6Ã6Ó6ã6ó777#737C7S7c7s7ƒ7“7£7³7Ã7Ó7ã7ó888#838C8S8c8s8ƒ8“8£8³8Ã8Ó8ã8ó999#939C9S9c9s9ƒ9“9£9³9Ã9Ó9ã9ó:::#:3:C:S:c:s:ƒ:“:£:³:Ã:Ó:ã:ó;;;#;3;C;S;c;s;ƒ;“;£;³;Ä;Ô;ä;ô<<<$<4<D<T<d<t<„<”<¤<´<Ä<Ô<ä<ô===$=4=D=T=d=t=„=”=¤=´=Ä=Ô=ä=ô>>>$>4>D>T>d>t>„>”>¤>´>Ä>Ô>ä>ô???$?4?D?T?d?t?„?”?¤?´?Ä?Ô?ä?ô@@@$@4@D@T@d@t@„@”@¤@´@Ä@Ô@ä@ôAAA$A4ADATAdAtA„A”A¤A´AÄAÔAäAôBBB$B4BDBTBdBtB„B”B¤B´BÄBÔBäBôCCC$C4CDCTCdCtC„C”C¤C´CÄCÔCäCôDDD$D4DDDTDdDtD„D”D¤D´DÄDÔDäDôEEE$E4EDETEdEtE„E”E¤E´EÄEÔEäEôFFF$F4FDFTFdFtF„F”F¤F´FÄFÔFäFôGGG$G4GDGTGdGtG„G”G¤G´GÄGÔGäGôHHH$H4HDHTHdHtH„H”H¤H´HÄHÔHäHôIII$I4IDITIdItI„I”I¤I´IÄIÔIäIôJJJ$J4JDJTJdJtJ„J”J¤J´JÄJÔJäJôKKK$K4KDKTKdKtK„K”K¤K´KÄKÔKäKôLLL$L4LDLTLdLtL„L”L¤L´LÄLÕLåLõMMM%M5MEMUMeMuM…M•M¥MµMÅMÕMåMõNNN%N5NENUNeNuN…N•N¥NµNÅNÕNåNõOOO%O5OEOUOeOuO…O•O¥OµOÅOÕOåOõPPP%P5PEPUPePuP…P•P¥PµPÅPÕPåPõQQQ%Q5QEQUQeQuQ…Q•Q¥QµQÅQÕQåQõRRR%R5RERUReRuR…R•R¥RµRÅRÕRåRõSSS%S5SESUSeSuS…S•S¥SµSÅSÕSåSõTTT%T5TETUTeTuT…T•T¥TµTÅTÕTåTõUUU%U5UEUUUeUuU…U•U¥UµUÅUÕUåUõVVV%V5VEVUVeVuV…V•V¥VµVÅVÕVåVõWWW%W5WEWUWeWuW…W•W¥WµWÅWÕWåWõXXX%X5XEXUXeXuX…X•X¥XµXÅXÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZå
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLControlGroupCampaignResponsesPG : CommonDataBaseInteraction, IDLControlGroupCampaignResponses
+    {
+        CommonInfo connection;
+        public DLControlGroupCampaignResponsesPG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public async Task<List<MLControlGroupCampaignResponses>> GetControlGroupCampaignResponses(string CampaignName)
+        {
+            string storeProcCommand = "select * from controlgroups_campaignresponse(@CampaignName)";
+            object? param = new object[] { CampaignName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<MLControlGroupCampaignResponses>(storeProcCommand, param)).ToList();
+        }
+
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

@@ -1,3 +1,25 @@
-|Ï$œt‹|Ü_v}çw«|¿–gr€Í hm€©‰ im€b‚zjf€1{êk[€uylFúnëm'Ëh%n	²anè”Yo½wQ2pžaGHqh0<Sr71?s
-$œsá~Þ`uh~¯çv~@•›fh…Ç7gi…vˆ·hk„ù‚ik„™{‡ji„Muk]ƒónˆl?ƒ“gÃm,ƒ>`±n‚ôY nï‚¡PÔoÕ‚BGPp«õ<Xqw¢0qr;^$žs<€ô{tÓ€{çtÔ•?euŠ¶ŽÝfyŠ'ˆ]g†‰ƒµhŠˆò{/i‚ˆYt½j‰‡æn-ko‡Kggl[†²`RmL†LXÀn5…¾Po…(F§oè„˜;›p±„10tq–ƒÀ$¡r–‚þ|tE‚/çs³"”îd¢Že®Ž¾ˆf¹äggÅzãhÍŒQtniÐ‹­mÜj¸Š×gk²Š_ûl‰|Xgmˆ·O‚na‡îEÿo=‡);¢p†x0zq…î#Æqå„é}sÅƒÀès‚c”¤cõ”XŽJe“L‡Ëf’!g2‘z¡h-t(i4<m‘j0ŽFfÆk^_¨lŒ‹Xm‹£O’mÔŠ•F	n¸‰¶;ªosˆ±/¬pf‡æ#Éqq†¶sM…0èr\ƒš”gc]™Žds—´‡es–+€ãf¯”üzcg°“Ìsçh°’²mLi´‘¢f}j¦‡_\kwWÅlŽuNýmS-EbnEŒ0:înþŠß/±o÷‰Î#ÌpèˆM€rÑ†èq„˜”4bÓlÛcû›Õ‡[dÿš(€ªf*˜Ìz'gE—fs¨h=–&m	i-”ëf6j9“¢_k!’vWul(‘:OmÅEnmèŽ:ön¹!/·o‹‹Ê#Ïp}‰ú›rUˆ
-èpÔ…â”	bt¡x­c‘ŸÃ‡(dšž€qe
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLChatInteraction
+    {
+        public static IDLChatInteraction GetDLChatInteraction(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLChatInteractionSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLChatInteractionPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

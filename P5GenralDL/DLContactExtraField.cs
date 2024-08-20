@@ -1,3 +1,25 @@
-ò…8(â‹„9 Öˆƒ9’Ã¯è—;Œ­j•ô…hªò”±~¸¨†“sx
-¦+’?q]£à‘j¦¡•ècâŸ@¾]œç–V9š‡ŒmO˜‹>GÂ•ŸŠ@=“ˆÓ8˜o‡•0Í¥†O(ßŠ¿… à‡Ìƒ³’]¯™›5‹±­™Å…ª ˜V~V¨2–ìwª¥Ø•ˆpÿ£”*jL¡D’Ìcğ‘n\Ìœ›Uïš<±NÙ—ÍJGŠ•S‹Ş@’ÈŠj8x#ˆë0¹^‡](ÙŠ…Ä é‡–„&‘ğ¯VŸ!‹G¬Ö„ª]›à}ò§ğšEwI¥•˜±p¡£K—#iñ¡•–c6¯”\{œ[’uU¤™ıàN–—AGQ•œ?ã’‡‹ì8VãŠ-0¥!ˆ[(ÓŠH†z ñ‡d„“‘‚¯£ŠÜ¬ ¡#„6ª)ŸH}§½uvè¥c›°pC£™õi– Ï˜<bà|–|\*œ(”»UZ™Ë’ôNU—]‘G”à@?µ’RT84®‹W0Œí‰F(ÌŠ‡% ø‡3„û‘®í¦ÑŠm¬r¤±ƒÊ©ı¢—}&§“ ‹v‚¥9”oà¢îœ¯i7 ¤šËb†Q˜Ş[Õ›ı–îU™ ”õN—1’ëFÛ”´Ò?’%ª8€Œq0uŒ¿Š$(Â‰è‡Æ ÿ‡…`¡®ÈªU‰ÿ¬N¨ƒ\©Ù¥Ã|º§n£‹v¥¡ioy¢ÊŸZhÔ Kb(,›0[~›Ø™T¼™z–èMÆ—”ªFš”’X?H‘şó7ßX€0XŒ•Šù(¶‰¼ˆb!†Ø…Â3®«­‰¬/«.‚í©¹¨Ñ|K§N¦}u¬¤ô¤6o¢¨¡ühn ]Ÿ¿aÇ
-x[$›µ›,Ti™X˜ÓMz–è–aFV”i“Ô?‘Ù‘47¯2‡08Œm‹È(¨‰’ˆù!†¬†%Ç®‘°¦‰!¬®;‚}©œ«Ñ{Û§/©gu>¤Ô¦ÿn¤¢ˆ¤
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLContactExtraField
+    {
+        public static IDLContactExtraField GetDLContactExtraField(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactExtraFieldSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactExtraFieldPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

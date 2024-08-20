@@ -1,29 +1,166 @@
-ten konsistent in aufsteigender oder absteigender Reihenfolge sortiert werden. Obwohl der Standardformatbezeichner "s" einen Datums- und Uhrzeitwert in einem konsistenten Format repräsentiert, wird der Wert des zu formatierenden Objekts für Datum und Uhrzeit bei der Formatierung nicht geändert, um die zugehörige DateTime.Kind-Eigenschaft oder den zugehörigen DateTimeOffset.Offset-Wert widerzuspiegeln. Beispielsweise sind die Ergebniszeichenfolgen, die bei Formatierung der Datums- und Uhrzeitwerte 2014-11-15T18:32:17+00:00 und 2014-11-15T18:32:17+08:00 generiert werden, identisch.
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-Bei Verwendung dieses Standardformatbezeichners wird zur Formatierung oder Analyse immer die invariante Kultur verwendet.statischer KonstruktorStruktur#'"symbol" kann kein Namespace sein.{0} "{1}" von {2} "{3}"Zeittrennzeichen�
-Der benutzerdefinierte Formatbezeichner ":" repräsentiert das Zeittrennzeichen, das zur Unterscheidung von Stunden, Minuten und Sekunden verwendet wird. Das geeignete lokalisierte Zeittrennzeichen wird aus der DateTimeFormatInfo.TimeSeparator-Eigenschaft der aktuellen oder angegebenen Kultur abgerufen.
+namespace P5GenralDL
+{
+    public class VisitorSaveRulesDetails
+    {
+        #region Members declaration
 
-Hinweis: Um das Zeittrennzeichen für eine bestimmte Datums- und Uhrzeitzeichenfolge zu ändern, geben Sie das Trennzeichen innerhalb eines Trennzeichens einer Literalzeichenfolge an. Beispielsweise erzeugt die benutzerdefinierte Formatzeichenfolge "hh'_'dd'_'ss" eine Ergebniszeichenfolge, in der stets "_" (ein Unterstrich) als Zeittrennzeichen verwendet wird. Um das Zeittrennzeichen für alle Datumswerte für eine Kultur zu ändern, ändern Sie entweder den Wert der DateTimeFormatInfo.TimeSeparator-Eigenschaft der aktuellen Kultur, oder instanziieren Sie ein DateTimeFormatInfo-Objekt, weisen Sie das Zeichen der zugehörigen TimeSeparator-Eigenschaft zu, und rufen Sie eine Überladung der Formatierungsmethode auf, die einen IFormatProvider-Parameter umfasst.
+        public Int16 IsLead { get; set; }
+        public bool IsLeadIsTheirData { get; set; }
 
-Bei Verwendung des Formatbezeichners ":" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner für Datums- und Uhrzeitwerte interpretiert und löst eine FormatException aus.Zeitzone�
-Der benutzerdefinierte Formatbezeichner "K" repräsentiert die Zeitzoneninformation eines Datums- und Uhrzeitwerts. Bei Verwendung dieses Formatbezeichners mit DateTime-Werten wird die Ergebniszeichenfolge durch den Wert der DateTime.Kind-Eigenschaft definiert:
+        public string[] BelongsToGroup { get; set; }
+        public bool BelongIsTheirData { get; set; }
 
-    Für die lokale Zeitzone (ein DateTime.Kind-Eigenschaftswert von DateTimeKind.Local) entspricht dieser Bezeichner dem Bezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die die lokale Abweichung von der koordinierten Weltzeit (UTC) enthält, z. B. "-07:00".
+        public Int16 BehavioralScore { get; set; }
+        public bool BehavioralScoreIsTheirData { get; set; }
 
-    Für eine UTC-Zeit (ein DateTime.Kind-Eigenschaftswert von DateTimeKind.Utc) enthält die Ergebniszeichenfolge ein Zeichen "Z" zur Darstellung eines UTC-Datums.
+        public Int16 SessionIs { get; set; }
+        public bool SessionIsTheirData { get; set; }
 
-    Für einen Zeitwert einer nicht angegebenen Zeitzone (ein Zeitwert, dessen DateTime.Kind-Eigenschaft "DateTimeKind.Unspecified" lautet) ist das Ergebnis äquivalent zu "String.Empty".
+        public Int16 PageDepthIs { get; set; }
+        public bool PageDepthIsTheirData { get; set; }
 
-Für DateTimeOffset-Werte ist der Formatbezeichner "K" äquivalent zum Formatbezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die das Offset des DateTimeOffset-Werts von UTC enthält.
+        public Int32 NPageVisited { get; set; }
+        public bool NPageVisitedIsTheirData { get; set; }
 
-Bei Verwendung des Formatbezeichners "K" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner für Datums- und Uhrzeitwerte interpretiert und löst eine FormatException aus.TypTypeinschränkungTypparameter-Universelle(s) vollständige(s) Datum/Uhrzeit�Der Standardformatbezeichner "U" repräsentiert eine benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge, die durch die DateTimeFormatInfo.FullDateTimePattern-Eigenschaft einer angegebenen Kultur definiert ist. Das Muster ist mit dem F-Muster identisch. Der DateTime-Wert wird jedoch automatisch in UTC konvertiert, bevor er formatiert wird.+Universelle(s) sortierbare(s) Datum/Uhrzeit�Der Standardformatbezeichner "u" repräsentiert eine benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge, die durch die DateTimeFormatInfo.UniversalSortableDateTimePattern-Eigenschaft definiert ist. Das Muster folgt einem definierten Standard, und die Eigenschaft ist schreibgeschützt. Daher ist sie immer gleich, unabhängig von der verwendeten Kultur oder dem angegebenen Formatanbieter. Die benutzerdefinierte Formatzeichenfolge lautet "yyyy'-'MM'-'dd HH':'mm':'ss'Z'". Bei Verwendung dieses Standardformatbezeichners wird bei Formatierung oder Analyse immer die invariante Kultur verwendet.
+        public Int16 FrequencyIs { get; set; }
+        public bool FrequencyIsTheirData { get; set; }
 
-Obwohl die Ergebniszeichenfolge einen Zeitwert als koordinierte Weltzeit (UTC) ausdrücken sollte, findet während der Formatierung keine Konvertierung des ursprünglichen DateTime-Werts statt. Deshalb müssen Sie einen DateTime-Wert vor der Formatierung durch Aufruf der DateTime.ToUniversalTime-Methode in UTC konvertieren.7Verwendungen in enthaltenden Members wird aktualisiert.9Verwendungen im enthaltenden Projekt werden aktualisiert..Verwendungen im enthaltenden Typ aktualisieren:Verwendungen in abhängigen Projekten werden aktualisiert.%UTC-Abweichung in Stunden und Minuten�Bei DateTime-Werten repräsentiert der benutzerdefinierte Formatbezeichner "zzz" die Abweichung (einschließlich Vorzeichen) der Zeitzone des lokalen Betriebssystems von der koordinierten Weltzeit (UTC), gemessen in Stunden und Minuten. Er spiegelt nicht den Wert einer Instanz der DateTime.Kind-Eigenschaft wider. Aus diesem Grund wird der Formatbezeichner "zzz" nicht zur Verwendung mit DateTime-Werten empfohlen.
+        public string ReferrerUrl { get; set; }
+        public bool ReferrerUrlIsTheirData { get; set; }
 
-Bei DateTimeOffset-Werten stellt dieser Formatbezeichner die Abweichung des DateTimeOffset-Wertes von UTC in Stunden und Minuten dar.
+        public string SearchString { get; set; }
+        public bool SearchStringIsTheirData { get; set; }
 
-Die Abweichung wird immer mit einem Vorzeichen angezeigt. Ein Pluszeichen (+) steht für Stunden vor UTC, ein Minuszeichen (-) für Stunden nach UTC. Eine einstellige Abweichung wird mit einer führenden Null formatiert.*UTC-Abweichung in Stunden (1–2 Stellen)�Bei DateTime-Werten repräsentiert der benutzerdefinierte Formatbezeichner "z" die Abweichung (einschließlich Vorzeichen) der Zeitzone des lokalen Betriebssystems von der koordinierten Weltzeit (UTC), gemessen in Stunden. Er spiegelt nicht den Wert einer Instanz der DateTime.Kind-Eigenschaft wider. Aus diesem Grund wird der Formatbezeichner "z" nicht zur Verwendung mit DateTime-Werten empfohlen.
+        public bool IsMailIsRespondent { get; set; }
 
-Bei DateTimeOffset-Werten stellt dieser Formatbezeichner die Abweichung des DateTimeOffset-Wertes von UTC in Stunden dar.
+        public bool IsSmsIsRespondent { get; set; }
 
-Die Abweichung wird immer mit eine
+        public string Country { get; set; }
+        public string City { get; set; }
+        public bool CountryCityIsTheirData { get; set; }
+
+        public string IsClickedSpecificButtons { get; set; }
+        public bool IsClickedSpecificButtonsIsTheirData { get; set; }
+
+        public string IsClickedRecentButtons { get; set; }
+        public bool IsClickedRecentButtonsIsTheirData { get; set; }
+
+        public string ClickedPriceRangeProduct { get; set; }
+        public bool ClickedPriceRangeProductIsTheirData { get; set; }
+
+        public bool IsVisitorRespondedChat { get; set; }
+        public bool IsVisitorRespondedChatIsTheirData { get; set; }
+
+        public byte MailCampignResponsiveStage { get; set; }
+        public byte MailCampignResponsiveStageScore { get; set; }
+        public bool MailCampignResponsiveStageIsTheirData { get; set; }
+
+        public bool FormRespondedListIsTheirData { get; set; }
+        public List<Int32> FormRespondedList { get; set; }
+
+        public Int16 CloseCount { get; set; }
+        public bool CloseCountSessionWise { get; set; }
+        public bool CloseCountIsTheirData { get; set; }
+
+        public string AddedProductsToCart { get; set; }
+        public bool AddedProductsToCartIsTheirData { get; set; }
+
+        public string ViewedButNotAddedProductsToCart { get; set; }
+        public bool ViewedButNotAddedProductsToCartIsTheirData { get; set; }
+
+        public string AddedProductsCategoriesToCart { get; set; }
+        public bool AddedProductsCategoriesToCartIsTheirData { get; set; }
+
+        public string NotAddedProductsCategoriesToCart { get; set; }
+        public bool NotAddedProductsCategoriesToCartIsTheirData { get; set; }
+
+        public string AddedProductsSubCategoriesToCart { get; set; }
+        public bool AddedProductsSubCategoriesToCartIsTheirData { get; set; }
+
+        public string NotAddedProductsSubCategoriesToCart { get; set; }
+        public bool NotAddedProductsSubCategoriesToCartIsTheirData { get; set; }
+
+        public string DroppedProductsFromCart { get; set; }
+        public bool DroppedProductsFromCartIsTheirData { get; set; }
+
+        public string PurchasedProducts { get; set; }
+        public bool PurchasedProductsIsTheirData { get; set; }
+
+        public Int16 CustomerTotalPurchase { get; set; }
+        public bool CustomerTotalPurchaseIsTheirData { get; set; }
+
+        public Int16 CustomerCurrentValue { get; set; }
+        public bool CustomerCurrentValueIsTheirData { get; set; }
+
+        public Int16 ImpressionEventCountCondition { get; set; }
+        public bool ImpressionEventCountConditionIsTheirData { get; set; }
+
+        public Int16 CloseEventCountCondition { get; set; }
+        public bool CloseEventCountConditionIsTheirData { get; set; }
+
+        public Int16 ResponsesEventCountCondition { get; set; }
+        public bool ResponsesEventCountConditionIsTheirData { get; set; }
+
+        public byte OnlineSentimentIs { get; set; }
+        public bool OnlineSentimentIsTheirData { get; set; }
+
+        public Int16 SocialStatusIs { get; set; }
+        public bool SocialStatusIsTheirData { get; set; }
+
+        public Int16 InfluentialScore { get; set; }
+        public bool InfluentialScoreIsTheirData { get; set; }
+
+        public byte OfflineSentimentIs { get; set; }
+        public bool OfflineSentimentIsTheirData { get; set; }
+
+        public byte ProductRatingIs { get; set; }
+        public bool ProductRatingIsTheirData { get; set; }
+
+        public string GenderIs { get; set; }
+        public bool GenderIsTheirData { get; set; }
+
+        public byte MaritalStatusIs { get; set; }
+        public bool MaritalStatusIsTheirData { get; set; }
+
+        public string ProfessionIs { get; set; }
+        public bool ProfessionIsTheirData { get; set; }
+
+        public byte NotConnectedSocially { get; set; }
+        public bool NotConnectedSociallyIsTheirData { get; set; }
+
+        public Int16 LoyaltyPoints { get; set; }
+        public bool LoyaltyPointsConditionIsTheirData { get; set; }
+
+        public Int16 RFMSScoreRange { get; set; }
+        public bool RFMSScoreRangeIsTheirData { get; set; }
+
+        public Int32 ShowFormOnlyNthTime { get; set; }
+        public bool ShowFormOnlyNthTimeIsTheirData { get; set; }
+
+        public Int32 OverAllTimeSpentInSite { get; set; }
+        public bool OverAllTimeSpentInSiteIsTheirData { get; set; }
+
+        public Int16 NurtureStatusIs { get; set; }
+        public bool NurtureStatusIsTheirData { get; set; }
+
+        public bool IsBusinessOrIndividualMember { get; set; }
+        public bool IsBusinessOrIndividualMemberIsTheirData { get; set; }
+
+        public bool IsOfflineOrOnlinePurchase { get; set; }
+        public bool IsOfflineOrOnlinePurchaseIsTheirData { get; set; }
+
+        public Int16 LastPurchaseInterval { get; set; }
+        public bool LastPurchaseIntervalIsTheirData { get; set; }
+
+        public Int16 CustomerExpirdayInterval { get; set; }
+        public bool CustomerExpirdayIntervalIsTheirData { get; set; }
+
+        #endregion
+    }
+}

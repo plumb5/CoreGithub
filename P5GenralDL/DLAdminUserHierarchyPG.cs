@@ -1,5 +1,59 @@
-eİèfÄp¡ÊşDà.z­­d³u¢´¶;Y7ºécºdª#p¿,kE+-óm(}×˜—ÖÍt=Y+Jfe5ë@©µ×U¶$#éamhcşoZê7FªHfá§5¡‰;ùCµª6w}·j[ÎÎ‹jÕK®P±V´r5/kCça[:è>Ö…R=¨^Š@}7¬	õÄËZÑJy?ë@}§ÛºP¯‘öYW/4sóG?ÔoŸ7kB™-hÛšQ¯
-_ÖŠr5×eè ]­Ö….êŸuÕlÈ=¨ú›ÈjkE+GÜ­å}¢v¶İèæ
-eTõ]jŠ£/Jş~ÜÖŠúãgÛnFUî OË°tğt{¿êCFàüY+Úøµb]è"Ó¶Qõ#ğÎt¶>èÃ]r´ d’÷c­hıĞ…úèª¸'ÜÖemÔøYu&¸Î¶êÜm±nÔ-şD—¶Uà>ÛÖ„&zãËšÑÌxuX':yŸ3[ÊŒÎYW7wI±Ôÿ®pt¡ÔF-[7J¾)_W M»­	Môõ6zi[zuµ£î	¿¨æ	:;óg(ë©÷Ñ‰ÒgèŞ¯jÄäÔšõFïĞSÍ&F U¬Ö„ú;ÒİÚĞÆ:Ëaí(ç·]Ö‰ò¯ù³.”Üâ)¯VôD`ÛËšP¿‡;­Í´dÅZĞÂÙiÖØö…VG`æàg-(ÏPoÖŠò½ÜS^å"Hë<ÛNtÒŸOÖ’‡ìÕzH‚tü¬*™½æ³mF3Ûş§|Ë¿ÍUrÖ‹¸ŒÊ×t¦×gÕ¶
-qöşt¢“,Ìj4A{ØÕz¡Ìüsª3ç´[3š©›u ƒ_{¬İ¬r°Ê0|¿ÜVıš½Ôf}Qç.t±óEUF`°­Íôá³µ¢•¹—L£c‚Ê°šµ¢^a0Qå4#pÎ.kE=KüY:˜¿®Ö‰Nîïúh…sòÕªådøv´Óg˜ÖR7×:ÑÉÌã…j¦)«j?kE+5q³6Ôóe¯µ£ùœ…ªRÈänëBYç£İÔwÕÌMZæ£*¯£yïA=µÔ5Ûz£7{x¬å~8çA«ñ"p¯kCıÕX1­â²Ş(¹Å}[U^2A¯µ …;êì¡¡şO‘lí(c¯á’©÷EÎ£	¥ÎíŸ5£™‘ôc­håìœ=t´‡Îi]¨óUŸ,ó²ÓšP¯Ë-ÖŒfêÜn-han~X7êµFU½,mµV”£Ã:Q×åŞƒÖ(DàZëƒúŸÊ>kEyÏyPÍEPÉf²j¿
-¬º¿¬­E±6Ôk¤ÏêUfu¢“ù§ÛºQŞ6>O¡ÖG öìÖŠV©&æÑ‰NzT?ëBcW—WYÄŒÅ/ëƒzş¿Z_ô%‡İ¬úÑgx­	õ› ?+åuÆñ¯söûÓ‰NfªÕy.kE]ŸuëD'wu³.tqåÙÃ«<dÆ@¯õAîõjÕ+PÛ7kBíÅmÍ¨ûÇÛZÑJ² Z½{}Z;Ú™íj¨f¥"0¢½­ê•,gÛõ‚‡õCÉ±ş·ÿ'ú·¹R'zz_õZç×ÚĞÆ¶ËÚÑÎ8íìa ƒc?Û.tÑ¦UëF7YÆ}8#'Ï0¬ú0rêÖ}yŸ+Y?”yæ}ö›ĞDßõ²´pN§µ¡şP¶nÔ_Pl¨zÕ¨1‡õBİó¼¬ú°ø¶ê(¸g?kG;ãˆÕ:ù¬¾­Í´ÌÃZQÿßögmhã~¹¬%Ç=~Özg]ôM›u£şG—Lkê#ğ„TëŞd	ë‹Ò“8×B™‚´mkAuîÙCE]/UkC3¿Ÿu£›§¿£šÉ‹À[«-”÷¬“ßÖå\5£™«™¬uîë¶v”™Òí³®Ö6÷úc¨3b¯u¡‹–.[7ê/º¼Ê$Gàœ½ÖeIÿY?”|ø:šQ¿)9­-d¶µ¡__¨¾<Y·Ş(_j9eèJ®ã\7µø¨Ï&êqğ²nts-2ªõ‡‡µ­mñeİèf¬ØPåf"ğ´ÜÖ‚ê³dmhœuIĞúH.¯Zñ<›·õF½z¢Xô¡>ëÖ„zíÙ¶.t¡UAz2ĞŸZĞäú›õE½VàE5ãŒy¶~èÇ¯kAëõ’µ¡ù½³ßzÍàÙv£›QµUóeiËV•Am&4‘i»¬-ÔF¯•2¸}İ:ĞÁ¶ª6+­øc½PÏá&ëòñß¶ú'«ÖŒfVxukA¿öZÚB—·U'ïm¿Ör÷µÇºQòoçüj~/¿öYÔïÔë‹¾ôõ¦µ¢î%5kG;µÑ÷Ÿú-ŸZ$‚ZĞuJ3ÑIor£je"Ğ[­J¯oM(™úq
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminUserHierarchyPG : CommonDataBaseInteraction, IDLAdminUserHierarchy
+    {
+        CommonInfo connection;
+        public DLAdminUserHierarchyPG()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<IEnumerable<MLAdminUserHierarchy>> GetHisUsers(int UserId)
+        {
+            string storeProcCommand = "select * from admin_user_hierarchy_gethisusers(@UserId)";
+            object? param = new { UserId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryAsync<MLAdminUserHierarchy>(storeProcCommand, param);
+        }
+        public async Task<MLAdminUserHierarchy?> GetHisDetails(int UserInfoUserId)
+        {
+            string storeProcCommand = "select * from admin_user_hierarchy_gethisdetails(@UserInfoUserId)";
+            object? param = new { UserInfoUserId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<MLAdminUserHierarchy?>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

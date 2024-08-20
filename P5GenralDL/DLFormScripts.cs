@@ -1,1 +1,25 @@
-ã=ãMã]ãmã}ããã­ã½ãÍãİãíãıäää-ä=äMä]ämä}äää­ä½äÍäİäíäıååå-å=åMå]åmå}ååå­å½åÍåİåíåıæææ-æ=æMæ]ænæ~æææ®æ¾æÎæŞæîæşççç.ç>çNç^çnç~ççç®ç¾çÎçŞçîçşèèè.è>èNè^ènè~èèè®è¾èÎèŞèîèşééé.é>éNé^éné~ééé®é¾éÎéŞéîéşêêê.ê>êNê^ênê~êêê®ê¾êÎêŞêîêşëëë.ë>ëNë^ënë~ëëë®ë¾ëÎëŞëîëşììì.ì>ìNì^ìnì~ììì®ì¾ìÎìŞìîìşííí.í>íNí^íní~ííí®í¾íÎíŞíîíşîîî.î>îNî^înî~îîî®î¾îÎîŞîîîşïïï.ï>ïNï^ïnï~ïïï®ï¾ïÎïŞïîïşğğğ.ğ>ğNğ^ğnğ~ğğğ®ğ¾ğÎğŞğîğşñññ.ñ>ñNñ^ñnñ~ñññ®ñ¾ñÎñŞñîñşòòò.ò>òNò^ònò~òòò®ò¾òÎòŞòîòşóóó.ó>óNó^ónó~óóó®ó¾óÎóŞóîóşôôô.ô>ôNô^ônô~ôôô®ô¾ôÎôŞôîôşõõõ.õ>õNõ^õnõ~õõõ®õ¾õÎõŞõîõşööö.ö>öNö^önö~ööö®ö¾öÎöŞöîöş÷÷÷.÷>÷N÷^÷n÷÷÷Ÿ÷¯÷¿÷Ï÷ß÷ï÷ÿøøø/ø?øOø_øoøøøŸø¯ø¿øÏøßøïøÿùùù/ù?ùOù_ùoùùùŸù¯ù¿ùÏùßùïùÿúúú
+ï»¿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using IP5GenralDL;
+
+namespace P5GenralDL
+{
+    public class DLFormScripts
+    {
+        public static IDLFormScripts GetDLFormScripts(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFormScriptsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFormScriptsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

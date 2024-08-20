@@ -1,2 +1,63 @@
-”ØÍGCEÔviEŸ}EºC	·Ş¥=h–>ô¡	åtFì½]šĞDm“fTŸ“CZĞBm‘V´RÛ¥mÔiG;úOÿhdNo„ÇwÕèFõµòJ5jÔQÿÓ^¥½LDµql#Bí'Mh¢C“f4£IZÑŠfiG;+sé@kxÒ‰Nj¯t¡‹ÚO7º¹Z‘:êèOúB	ÑËoâkÄ‘´PÛ¤­LıI;Ú©­Ò‰Nô']èâj.İè¦¶H54¡¯„'ï)­hE›´£Ò¾zMéD':¤]h“ntÓ·J5tIu:|µ=h—^ôÒáÓJœïgu%~©¦ˆÚ"MhB·t ƒY:Ñ‰véF7Ú¤†êëß•:ê:–ô¡ZïDS,)-ÒŒfúiA_Û«´£-ÒjoI:Ñ‰VéBšÔPC³ÔQG“ô ‡¾?éE/ºPÎÄÙã'-hA‡´…ÖZ•v´SÛ¥h‘.tÑ¡Kz¨mháˆĞş¤	MÔ&iF3Z¥-h–V´²†&mh£vJ;Ú©-ÒêwOºQıFèH5Ô¥:º¥7”°q³ô¡Mh±DĞáJ3šQ“Tß}miEõóy“6´qµŸt…çÚ§ÕŸÔQçjGzĞƒšô†æo£-6ÁÊ\šĞD‡Os(qûèÒúšt¢“Ú&]èB¯t£=RC5éAº¥ì­ÿĞö„&Ô¥e;IÚBw{ÒÔ¥3”°×Æ?}ßRzl:‚^¦^İÚ“ÔPCRGWzÑzzE9+ş{IšÑŒfiAŠ´…Ç’vT“|¥ÔNéDõS‚+İèşÓÿ1v/É®¬8†§”¼¡)	˜ÿN°ÿåşi­ˆ¯TJÀN;å}«®%©£ş´ö-§Ä­ıH7ºÑ-=èyÚöO/ª_â.ÊID&MO‰;Î”f4£CZĞ‚.i}JX‹)mO‰¸Ñ¥ı)a·-éxJx]:Q}{™t¡‹«-©=%bÙ:êÌ'[zPı²ÒPæJ"¼‡´ 5iC:¥íL?è vI÷S"vßÒû”0ó‚Ú{Á^PëÒ„&tH3šQ“V´¢]ÚĞÆÕš´£Ú%è¤6KºĞ$uÔÑ*4èÒnt¢Ÿ‘¥-h“V´ò>;Ò†6tK;ÚÑ§„…_é|JÄİMºĞE—:ê¬,Iã)±³]éA}³ô¢ıPæUÂ"ª4£™5LiAŠ´¡:“v´S[¥h’NtÒaI5VöIu:ti A‡!İè¦CA™&‰½JªiÇ¥­ÔviG;µG:ĞIí’.tQRCÚ)uÔÑ&4Ğ"İèF‡ô ‡Ï¾‹¾ÉSñtKZè¤m¬wK:¨ı¤¨KºĞ,5ÔXÃ‘:ªÉóJ7º©5éA(ó(±û˜Ò†¶?í[ÚÑºt¢©¡Fß"4Ğ*İèF¿ÿ{na%<W¯‹^zñ¨oøT<ÍÒ„jÒ»Ò‚ú.iE+µGÚĞFív´£&è`I:Ñ‰.éB5Í»ÔP£ï”:êtÒ@íÒn:Ê¼JlGj¨ı©%©?%¼õOºÑMí@ó;îè’&4¡YšÑÌ”eÒ‚j»´¢mÒ†6:¸´£õ&éD'š¥]ôRC¾?uÔ9³-4P—nT§S¤=Ôšô¢—«]´¼#|AmHª“¬ÒŒfÔ¤-ô]ÒŠVôHÚÑjè^T“éB™L‰}|Hš¨ÒŒfj]ZÑŠ&iG;RCÍÒntKzP“²‹ö¡m	Mh“f4£UZÑŠiC5I7é@µ]ºĞE­I5´JÔ¥=è^ô¢eÚ$N#-O	7ÿiE+º¥ã)qò.Òõ”ğ¸!5Ôèp¥İIzĞCß*½¨vQP¦IÂ->iB~šÑŒfiAçp¥mÔ&éBºKÔ¤İè§„ïúI/z™ª3Ê,Hø®IšĞDß.-háÔ´¡Ú)íhG›t ÍÒ‰NtIjh‘:ê¬a£ë{Jœİ—4£™wiE+Ú¤mètĞ·K'ª_@Lj¨Ñ¡Hj§ô éE/ê(Sqì?ÿNT™
-‰c}ªWAWXÒ†6v¹¥Õ?ÁÑ¤Õo&è¤¶KºĞ"5Ô¸šIutJ7ºQ—^ô¢õw@/¸Z•&4QÒŒftHÛSâ~5K;ÚÑ&èxšÇO':©ı¤†ÚÓÚ¯ÔQ§¶K÷S"ŠeéAµUzÑËkáh¼xAm’&4¡EšÑŒiA{ëÒ†6´J5Ö[¤:µ?½O‰¨ı LoDÔ³¥í)qûMÒvjC:ĞAm‘Nt¢Ÿt¡ÍR{JDÛ¿ZJÜéYO	kaÒê÷‹#=(ÿş”Iğ<¶4¡z¸ÒŒfîØ--háÔ«´>%¢
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAccountConnectionPG : CommonDataBaseInteraction, IDLAccountConnection
+    {
+        CommonInfo connection;
+        public DLAccountConnectionPG()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<CommonInfo?> GetAccountConnection(int AccountId)
+        {
+            string storeProcCommand = "select * from getaccount_getconnectionsting(@AccountId)";            
+            object? param = new { AccountId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<CommonInfo?>(storeProcCommand, param);
+        }
+
+        public async Task<DataSet> GetAllAccountConnection()
+        {
+            string storeProcCommand = "select * from account_connections_allconnections()";
+
+            using var db = GetDbConnection(connection.Connection);
+            var list = await db.ExecuteReaderAsync(storeProcCommand);
+            var dataset = ConvertDataReaderToDataSet(list);
+            return dataset;
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

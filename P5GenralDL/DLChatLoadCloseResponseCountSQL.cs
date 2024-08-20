@@ -1,4 +1,35 @@
-pGqaéq‚s2	­tÆtİ Œ[×dÑ™ë]ƒeå“4_.fşŒP`Îh(…1bci)}òcéjSvÓeMk<o‹f²l1hhmJ`%iXn(Wƒj¤oEMÊkép-B’mq36EmòrP)İosoèpstİ	­s`vŸÍYıi¨™4[Àjˆ’„]|kr‹§_.lT„‘`Öm'}eblnvTc×nÒoeOo–g«f¹pb_Ähq3W*ierMj®rÒBkés±6ClÍt)mÕutço[v·	¬rwuŸX4n‘˜ˆZ
-o=‘à[Òoö‹]™p™ƒş_Lq<|ä`åqèußbcr€n®cãsgJeXs´_if»t[VÖhuMiu“AĞj²v66AkÊvã)lÂw†çnfx—	¬pğxÌqVƒsŒ—èXit‘GZ?tˆŠx\tóƒq]Ùuc|g_xuÚumav?nEb‘vŸféd
-w_e}w†VfíwøLlhRxGAĞi¥xÂ5ujÎy#)kÛytmz»o¼yÀÈTäxª—IVÜxæ°XÈy3‰çZ±y]‚å\…y—{é^-yÖt÷_Äz	mÖa^z4f€bâzr^ªdez¯V"eázğLmgWzûAh™{;5viô{Y)k"{wlë{Ğ¼nš{f!SI}ü–­UT}üWZ~‰YYS}ö‚\[4}ò{l\ì}õt^}ïmc`0}İfaÅ}ç^>cX}ìU»dß}öKÇfT}ÊAg¬}Ô5xi}º()jJ}‘lL}«¼mr}"œQÙƒA–"Síƒ•Uÿ‚ÛˆÕX‚•ÙYñ‚Tzò[º‚ t]jÚlğ_“e¢`´^]Ïb[3UOcè€ÿK!eg€¢@`f´€k4®h€(+i Åk¼˜¼li~ÛœPˆo•¬R©ˆTÂ‡›ˆ[VÓ‡#^XÉ†®zZ†;s—\[…Àl^
-…@e3_¸„Î]bad„jTåc„K*d›ƒˆ@feäƒ4²gW‚w(-híçk+X¼kš€n›°Od}•DQŒŒà´S¯Œ8‡îUË‹Š€îWÈŠ×zY£Š!s0[i‰l]ˆÄdË^Ùˆ$\û`„‡|T€b2†ïJ‡cÉ†A?®e…3èf„Ä(0hRƒåjªƒ	¼k.Ï›PNQ’i”ãP‘›RRÌ¨‡‹Të±€ŠVøÅy·XÊÕrÑZk¼\]Œdj^‹S\›_¿ŠkT"aq‰šJ‘c0ˆÔ?µd„‡ò3íf†ú'Wgœ…¾$j%„—½jÉƒ%š÷Mu—[”ŒOÊ–8ûQø”ì‡1T“€-V2’‡y^X‘vrxYé}kb[¤[d]jY\@_OSÆ`ØŒKIíb‚‹@>üc÷Š83ñe‰'Zg‡%i¯†½jd„lš«L¿›ï”@Nûšƒ«QE™†İSl—ŠÕU‰–Ey	Wh”ür#Y5“Òk[’‘c·\Í‘W[å^.Sk`QğIGaµŠ?c„Œa3&dæ‹'\f«‰@'iU‡œ½j…§šfL& *“üN
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System.Data;
+
+
+namespace P5GenralDL
+{
+    public class DLChatLoadCloseResponseCountSQL : CommonDataBaseInteraction, IDLChatLoadCloseResponseCount
+    {
+        CommonInfo connection;
+        public DLChatLoadCloseResponseCountSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+        public async Task<int> SaveUpdateForImpression(int ChatId)
+        {
+            string storeProcCommand = "Chat_LoadCloseResponseCount";
+            object? param = new { @Action = "SaveUpdateForImpression", ChatId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int16>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+        public void UpdateFormClose(int ChatId)
+        {
+            string storeProcCommand = "Chat_LoadCloseResponseCount";
+            object? param = new { @Action = "UpdateFormClose", ChatId };
+
+            using var db = GetDbConnection(connection.Connection);
+            db.ExecuteScalarAsync<Int16>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+    }
+}
+

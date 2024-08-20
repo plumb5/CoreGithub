@@ -1,5 +1,25 @@
-$ì·êÍJ$’$ë¯aÍá$’$æ¢¦Ïe$’$Ş—@Ğ_$’$Ô‹®ĞÖ$’$Ù}ÊÒY$’$Şr‰Ó*$’$ãfïÔ½$’%	[QÕ°$’%PÖ¶$’%#E4×Z$’%“9ÍØá$—&V/íÙë$¼&ß%ÚÚ÷%7'Ë$°Û5-Ã( &	Û7GĞ)÷$ÛHdJ)A$˜ÛX>(L$–Û`—ä([%ÛX­»(‹$•ÛL½æ(–$™ÚîÏÅ(a%zÛ0×	'™%}Ø&Û&g%ÖOÛF%Õ%ÔWÛY%z%ÒØÛa%d%~Ñ>Ú÷%:%}Ï¹Ûh$é%{ÎyÛ]$ø%ÍhÛm%ÃÌÁ$’$í»ÿĞ©$’$ç²ÍÑˆ$’$æ¦©Ó$’$á›¹ÓZ$’$ÛšÔ-$’$Ö…ZÔã$’$×y&ÔÜ$’$Úk´ÖK$’$ù`¯×d$’%!Uº×ï$’%JJØ­$’%|?×Ù˜$“%Ç3šÚà$›&m+àÚô$ï'2'EÛL'6(<&¬Û`-(Â%†Û_Dã)-$™Ûd`Œ)$”Ûi{?(q$“Ûj’½'å$“Ûi©Á'Š$“Û_»'P$“ÛEÈã&î$•Û
-ÒÛ&µ%ÚşØ¹&+%
-ÙcÛ%X%
-×ñÛ]$ñ%
-ÖSÛg$ß%	Ô\Úû$å%	Ó[Ûk$È$—ÒcÚù$Ù$•ÑÊÛl$ñ¼ÏÒø$’$ã´õÔ®$’$á«¶Öu$’$àŸæÖÚ$”$Ú”>Ö¼$“$Ù‰áÖˆ$’$Ú}×1$“$Úq×$“$ßf¥ØF$’%[}Ù*$’%*OÈÙ¤$’%ZEQÚ$’%”:zÚ‡$“%Ï/RÛV$&$(KÛS$×'F%ñÛe&™'ß&yÛk+ë'±%ÛkA 'Ú$˜Ûl\o'Æ$”Ûlwƒ'4$’Ûm£&ñ$’Ûm¤/&¤$’Ûl·m&ƒ$’ÛjÅJ&]$“ÛdĞ%à$”ÛWÖB%“$–Ú[ÙV%	$—ÚÚÌ$Ö%Ù¢Ûg$À$—ØnÛl$Ù%×CÛm$»$”Õ—Ûk$À$’ÔYÛ
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLGroupImportOverview
+    {
+        public static IDLGroupImportOverview GetDLGroupImportOverview(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLGroupImportOverviewSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLGroupImportOverviewPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

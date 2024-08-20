@@ -1,2 +1,25 @@
-l∂Ä¸|≠eÑÄ·|∫]ÕÄ¡|–UWÄÈ|ÎK©Ä¥}@†Ä™}+4ÅÄU}W'vÄo}§øÄÈ~"ÛÄŸ~húsÅóÅ4ïñÅRÄˆéµÅÄªá¡Ä›ÄÑÄµÄ≥ÄSyÏÄëÄ&s!Är˝l.ÄRŸe	Ä-∏]wÄõU.ÄÖK8Ä
-o@AÄ	\4ˆÙS'˚˜SDÄ^tÄkúPÄÿÜïzÄ¢ÖãéüÄpÖáÆÄ5Ñ™ÄüÄÑFy’ÉÊs◊ÉãlπÉ9d„úÇ‰];ÑÇõTﬂ|ÇIK{Ç@zÅ≈4xÅs'ÿ|Å50vÄÂvÅÄéú:Ä/äˇïj˚äPéêÀâ§áûìà¯Äåuà_yæZá«rÈCá?kÏ*Ü∂dªÜ.]~ˇÖ¥Tô~˙Ö+K~ˆÑ∫?’~ÒÑT3Ü~ÚÉ∫'S~¯É?–~ˆÇùÅËú"ìèˆïVaèé}3é5áäç[Ät~Êåáy£~Œãªr»~ªäˇk√~®ä=då~ôââ\Œ~âà‘T[~Éà!Jv~|át?)~sÜÁ3è~yÜ!&B~ÖJP~ÑLú~∞É3úîÊï>~ﬁì“ég~∞íƒáq~Éë≤ÄW~jê£yÉ~Tè®r¢~Eé≥kñ~8ç¿dV~2åŸ\è~#ãËT~ãI‚~ä#?:~âi2À~àä&H~áN>~ÖÌ3~OÑfõÊ~≤ô¬ï"~|òxéL~Jó2áU~#ï‰Ä6~î®y_}˘ìury}ÈíIkf}‡ë,d}‹ê\N}–éSÕ}Àç›I˘}æå»>ä}≥ã‘2’}æäƒ&N}¿âGA}¿ávÊ}ÚÖ’õƒ~Wûèï~.úˇé/~õqá5}ﬂôËÄ}Õòuy8}πórL}®ïƒk3}†îtc‚}òì\}íëﬂSÖ}èêçI`}ÅèW>ò}vé2ﬁ}Ååÿ&S}ãC}zà˚Ê}†á{õü~
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLChatAutoPingOverView
+    {
+        public static IDLChatAutoPingOverView GetDLCacheReportDetails(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLChatAutoPingOverViewSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLChatAutoPingOverViewPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

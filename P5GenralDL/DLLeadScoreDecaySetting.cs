@@ -1,1 +1,25 @@
-$’Ûm$»Ù2$’Ûm$»×\$’Ûm$µÔ $’Ûm$°Ñ„$’Ûm$¨Îâ$’Ûm$ŸÉ½$’Ûm$¢Ä$’Ûm$ÁÛm$’$’$’Ûm$’$’$’Ûm$’$”$’Ûl$’%$”Ûm$’&]$–Ûm$“)y$—Ûm$•0j$˜Ûm%8a$™Ûk%E$›Úû$”R”$œÛl$“a$$Ûm$”qÁ$ŸÛm%‚ï$ Ûm$“–~$ Ûm$’©	$ Ûm$’¸$ Ûm$’ÆÒ$ŸÛm$’ÓB$Ûm$’Ù¡$˜Ûm$’ÛW$—Ûm$’Ûk$¢Ûl$’Ûm$¯Û3$’Ûm$¸Úø%Ûm$¼Úì$—Ûm$¹ØÖ$’Ûm$¸Öû$’Ûm$³ÒÄ$’Ûm$¬Ïf$’Ûm$¦Ëk$’Ûm$ Æy$’Ûm$Áı$’Ûm$œ½ÿ$’Ûm$©Ûm$’$’$”Ûm$’$’$”Ûm$’$’$”Ûm$’%	$•Ûm$’%à$–Ûm$“(+$—Ûm%.Ë$˜Ûm%6~$™Ûm%BG$›Ûl%OÔ$Ûm%^š$ Ûm$•n4$£Ûm%I$§Ûm$“‘ã$ªÛm$’¤6$­Ûm$’´t$¯Ûm$’ÃÀ$«Ûm$’Ğ„$£Ûm$’Ø“$™Ûm$’Û$›Ûl$’Ûj$®Û3$’Ûm$ÅÚó$’Ûm$ÊÚÌ)LÛm$ÃØğ&"Ûm$ÄÖ$¬Ûm$¾Ñœ$•Ûm$³Íâ$’Ûm$§ÈE$’Ûm$¡Â„$’Ûm$›¾Ù$’Ûm$š¸²$’Ûm$–°V$’Ûm$—Ûm$’$’$•Ûm$’$’$•Ûm$’$’$”Ûm$’$Î$•Ûm$’%>$–Ûm$’'$˜Ûl$“+q$šÚû$“3³$Úû$”>	$¡Û2$”K£$§Úû$“ZÑ$¯Ûl$“j¥$¸Ûm$“{J$ÀÛm$’r$¿Ûm$’Ÿq$¬Ûm$’°'$±Ûm$’¿š$¸Ûm$’Íu$¡Ûm$“×º$—Ûm$“Û)$˜Ûi$’Ûg$³ÚÕ$’Ûm$õÚÊ$’Ûm$ö×$’Ûm$ëÕU$
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLeadScoreDecaySetting
+    {
+        public static IDLLeadScoreDecaySetting GetDLLeadScoreDecaySetting(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLeadScoreDecaySettingSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLeadScoreDecaySettingPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

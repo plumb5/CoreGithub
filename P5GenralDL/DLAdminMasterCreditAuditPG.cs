@@ -1,5 +1,59 @@
-ñI·¡|‰áO7º9öF5®ŒÀ±G3êu¸£e·î9µH(³d]èâ¹y¬İ¨ÓÕÎõRõĞ‰NÒ‚ª•!(¿£Y;ÚùÎtE;éŠ[Öå·f}Ğ‡º&[š¨ï´Äµø_@+Z¹û>ë@½'èäl¢“ù–d]èbÕä÷ŒAo+9;ß*êÖŒrİv±NtrŸeTkX'jÖe×ıøYêosOkA£Ô¬ ­´Š·µ£|Íä<Cj§"ĞJ¨Ş=Š@MğXu¬}²Ïú¢Îïemh£?(u”ÏíÓjAöëD'¥ÓQ­ŸFàş}­İ´^NWã0‚–?½Ğ‹Ù¾fÕ¹)PË-ë‹ú»0İú¡=ŸÕ\?AÇú®æ›Ş
-¬)uë@_aÛÖ….vx}¨fÚ"Ğ"«ò @¯ÎùÕÜx®ÅmÕY(ğ–Q·VÔß™Öz_U=ò­VåLVä³Ôß®z­íüÚÑ8‹vY'ºBÏı Y9‚Ø?¥\{nÍh¦ß¬õ¿¤øXíÁ‹À=yYô¡W÷ M)(Ps9íO Õƒ‹nÔ»¬+ªº$#Ïi}Pï¯?ú¡¬4e-h¡ûXÚØ)4PÕ0åwıP—ÙÑvæq”Ú³ëBYËÿôôÿW‰(0£î»^ë¨µ³õAİë‹º/rRÈ(û¬Nù«ÿLPùŸ2U<,ë‹ú+—µ …ñÉcè`_îÏºĞ(‘ÛµJV¿<e:­/ê·˜‹µ Ş}µ­e¦³ÖvjŠŒj¿HJÒéªŒÀ¯UkE=»Qõ]#ğØÑ‚Jò¶6ÔcÅ£uÍv¡šo‰Àh3[':#ë‡ª>ñ@U³E Î½­ú°²0­ú‘ßeíh§ïä´¾û»Zº¨Î±İ¬5T½¯”ºSP*O³.t±kÎ9S*‚ô—Ó:ĞÁÕ­´'Õ=OKµ>(¥3›µ£§eë@ımÒËºÑÍ¬SĞª_vkG;¥şX:øb‚U¯#«hÉªü*Ğ=Ç&4±ÿ²V´’³n¨ß2šÖ….Æ@'…2“yî³MväáŒ­ŠŞ…ˆÀÊØƒ^Rú8Õ(6ù½­Êãş¬ÍÌwë@sIÕ4}ém}Ñ—ÿšVò"0«_­õ®¸†jcÎ™–ô|†u Ü%ë±nÔév4s,mûé±òåVÆ@5£™gş;ĞA½¾¬¼ûZê÷97ª§0W¨X3š™ïö±šS‹ÀÛwÉªcx6/kE+w‰U?@ÁÿQ7¬³ø_BèPÎ×kBï4}Ö†6ùŸµ£w¶u¡‹Ş—s¦Õû´Yœ_U gÅ:P_ã×ºQ]­[ùU *Öv~{²ª-ŒÀ}–­]hAµ"YÄÕšFv±kG{è.Öº•~PµY¨w¾ê·T­¬GàéIKmZ4Y/Ô÷÷ÑŒô³V´RS8Zo@qYU"
-´¶çØŒfRx­uË|´£ÃG:èç(uÂú¬]Ìw5T«(‡ÏšĞDßéµ´0+Z­e÷D[¨æP"PfÅºÑM°QÕ*XSÊÖ‰NÇËºP¯·/ëF#İ1ªú#×b£M×Bñê´fÔ{wºµ¡ñTµ.”†G5[¾H³>¨¿[9¬e/èúY':)‡b]è¢nëF7}§…j>ı¬Çªœ)p³µ¢•am¨ÿ÷ö³vÔïÓ&t*]¾czYoÔ»ò«5¡^!<ZĞ‚6ëF7O@B5zˆ@k»­úÑkÖŒfvAukEyb·ó«ú.³;ä¬iV#÷Ã°&4ñ•f-h¡=)tÔ=ám(ÏæIAoU”‡]­õÿwNkE9‹q[Ú˜;x¬õw@Î±İŒƒ­iD Ô?ëB½ìüj _[?ë‡~ìp~¬Íä÷hG;OK·Ô_i<ÇNtÒ*~ÖîĞ“®êu‚t6ë‡zL±­­”Ùkèd¦bZº¤ù«<Ï›U£¬„ÜÖ½tkE+s3—µ£î‹,Tó8¨K¦õE_Æaİú¡Şk4¬­¡'gª«#°2öY'Êı³nt3+çœ©ÀìiUÎ7kAYûi>címÀ³y[ôa¶¯[š¸S³µ ¼‘ô§İèFÕThô!Ö….Jç±nt“_çL½ÅôÑ:8ãÁËšP÷çÿm¨i.:³Ã¯Ójhä\×í(»O™j¤Aªê­h<Îlè¤5˜Önz“	ÕšiÖĞ/ëƒ>¬ÑÜÖ„&F±İÚĞÆssÒè¤ÿY7º.TßË@Î>kEı¯ˆµ¡şP¶n”İb®)úOªÀ“…jÕ5óÖÉZÑÊs^­íÔ'…….Şé½QÕ¹¸nG?Ô{Ô‡u ƒ~Ö¶N”…>ÑG9S ê¨jÁ¬4}ÖŠz&9Y;Ú¥êù ÌgëD'sÃºÑÍJ^CÕ?Àn¼aUù*p…ŠõFoÖ<’õE_V7¦õC=B_¨z·XkMÖ2KşwìB½Ç¦£ZMŒÀèxZ':Ù!ó¢G`fvZ;Ú)³bİèæı§ }£Ø[R¬	Mô¥«5£™õ½£mÔ¹?ëDÙñ>ükÚİÙ:Qêı“®z·$«ò«ÀLr¶´°:÷¡ê›F æšV¥«À\ÿ9Vé*°>òZ?ô#gÍšQ¿7Q­­ÜQVõM#ğf–UõYîÏª<(ĞÃŞÖŠúi®ĞĞ^D‚ÍÕPÍ0E 5¸­]ÔgÕºVj£nÍ¨WB²µ¡R/ÖvÎÂÇªïùÂb]¨¿~üX7º©w&ªtx—gY:Xá~¬ußi£z
-#°£§[U¾
-ä¬ZJu}hV˜GÏ
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminMasterCreditAuditPG : CommonDataBaseInteraction, IDLAdminMasterCreditAudit
+    {
+        CommonInfo connection;
+        public DLAdminMasterCreditAuditPG()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<int> GetMaxcount(AdminMasterCreditAudit masterCreditAudit, DateTime? FromDateTime = null, DateTime? ToDateTime = null)
+        {
+            string storeProcCommand = "select * from mastercredit_audit_maxcount(@ConsumableType, @ProviderName, @FromDateTime, @ToDateTime)";
+            object? param = new { masterCreditAudit.ConsumableType, masterCreditAudit.ProviderName, FromDateTime, ToDateTime };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
+        }
+
+        public async Task<IEnumerable<AdminMasterCreditAudit>> GetDetails(AdminMasterCreditAudit masterCreditAudit, DateTime? FromDateTime = null, DateTime? ToDateTime = null, int FetchNext = 0, int offset = 0)
+        {
+            string storeProcCommand = "select * from mastercredit_audit_getdetails(@ConsumableType, @ProviderName, @FromDateTime, @ToDateTime, @FetchNext, @offset)";
+            object? param = new { masterCreditAudit.ConsumableType, masterCreditAudit.ProviderName, FromDateTime, ToDateTime, FetchNext, offset };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryAsync<AdminMasterCreditAudit>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

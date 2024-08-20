@@ -1,1 +1,25 @@
-w‰€"ŽÞÿÿn³¢ŽüÿÿnƒÏ"ÉÿÿkñésŒ„ÿÿj¿ÿ5‹.ÿÿfßÿÇ‰èÿÿf ÿÕˆëÿÿfWÿæˆ*ÿÿfUÿæ‡ŠÿÿfVÿæ‡	ÿÿf<ÿæ†·ÿýgªÿæ†›ÿîhVÿé†•ÿÚk\ÿú†—ÿmˆÿÔ††ýen…ÿï†OúöpOÿð†ù«p~ÿÛ…|ølpÁÿ¹„Çöôr&ÿê„Xö­r6ÿèƒXõor®ÿæ‚Xÿÿ6Øt”ÿÿŠõu¡ÿÿäßxWÿÿ‹à!|Åÿÿ‡],Lkÿÿ„#3:„’ÿÿ„J3B†zÿÿ„54‡‡ìÿÿƒj9…‰ÁÿÿûOµŒ-ÿÿ{½e±Ž=ÿÿx€z¤ÿÿmŒ°ÿÿnŒÊòÿÿk×è¦ÚÿÿkcÿBŒ¼ÿÿgTÿ«‹¦ÿÿf¤ÿÉŠ´ÿÿfVÿå‰åÿÿfUÿæ‰5ÿÿf ÿæˆµÿýfÐÿæˆpÿïgÉÿçˆhÿâj…ÿïˆtÿZm4ÿ»ˆjüÒnûÿÝˆQú³p€ÿãˆù}q=ÿÕ‡¼÷Xrÿ¸‡2öirŸÿï†hõ¦r½ÿç…²ôusÿÿæ…óÒtÿæ„@ÿÿqØuãÿÿŽâvüÿÿŽÖ»zgÿÿŒ­Ý}¬ÿÿˆÄ"èºÿÿ„¸3…)ÿÿ„e3‡8ÿÿ„;3Äˆ£ÿÿƒÃ9:Šcÿÿ€eMtŒÛÿÿ{ˆgíÿÿx{‰pÿÿs¬—ò‘"ÿÿoXÂÌÿÿlæ„ÿÿlú+Žnÿÿgwÿ¸[ÿÿfèÿòŒtÿþf¢ÿÝ‹¸ÿþf­ÿä‹ÿýfYÿåŠ_ÿògIÿæŠ ÿèh±ÿíŠÿžlzÿ´Š/ýPoÿÏŠ0ú¯p®ÿÑŠ	øËq†ÿ¼‰¼÷røÿû‰jösÌÿîˆöô£tEÿèˆ#ó$tgÿè‡bò~t¾ÿè†¥ñÛu_ÿè…àÿÿø"vþÿÿŽJ4xHÿÿEF{ZÿÿŽü~2ÿÿ‰÷&e‚%ÿÿ…õ/…{ÿÿ„©2ð‡Þÿÿ„X2È‰wÿÿ„8‹$ÿ
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLFormBannerLoadClick
+    {
+        public static IDLFormBannerLoadClick GetDLFormBannerLoadClick(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFormBannerLoadClickSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFormBannerLoadClickPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

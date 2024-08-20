@@ -1,7 +1,56 @@
-t3eåütÇ_™ßubY:ÀvR°Ÿv¬KàŒ{weDÂ‹Yx-=lŠ0y5öˆôyå.W‡ŸzÕ&’†8{Óº„É|×Š9–Ãus„-•¬uÄ~””vx“|vnqö’evÊkâ‘Nw,eº7w”_sxYxwR—ŒçxôKÏ‹Ëy{DºŠ´z=n‰—z°6ˆe{[.i‡|&¬…º|İÚ„Q}¬‰ö•ıyRƒï”áyx}å“ÆyŸwÖ’¬yËqÅ‘•yük³€z4elzq_MUz³Xû=zûR€Œ&{JK¿‹{D²Š{ú=m‰|_6‡à|Ğ.w†Ÿ}P&À…H}Şõƒæ~t‰Â•6}6ƒ·”}6}«“}6w›‘ì}6q‹Ø}:k|Å}Ge\³}Y_!Ÿ}mXÖŒŠ}‡Rb‹w}¥KªŠn}ÆD¥‰u}é=jˆz~6‡e~C.†/~„&Î„â~Ôƒ‰,‰z”ƒHƒn“o}a’\€áwQ‘J€´qC9€k8)€ke€L^æ
-€1X£‹ú€R8Šì€Kˆ‰éïDˆöÖ=_ˆÁ6
-†õ».……É¾&×„ˆÅƒ;Ñ‰“Ü…ƒ’Ì…}‘¼„±vø®„Qpì ƒøjã”ƒ¥dË‰ƒU^šŒƒX]‹t‚»QúŠm‚pKS‰n‚"DfˆÒ=C‡‚5ù†ˆ7.~…g€ñ&Ù„2€¯‚ô€mˆ¸“L‰¯‚¬’;‰| ‘+ˆ†v“‡÷pŠ‡mjƒ
-†èdo†e^B‹ÿ…âX
-Šú…`Q­‰ø„ŞKˆş„WD/ˆƒÎ=‡$ƒA5Ü†$‚´.n…‚$&Õƒã“'‚²ˆN’ĞÉ‚B‘¾
-|5­ŒLv(Ÿ‹p —Š×j’Š!dŒ‰j]ã‹ˆ²W°Š‡ûQZ‰“‡AJÅˆ†‚Cğ‡³…¿<è†È„ö5¹…Ì„&.X„»ƒO&Îƒœ‚p.‚u‡Ş’i‘ÔÒ‘Xä{ÆHõu»=	oµ6i´39c¦Œ3ŒR]ƒ‹5‹hWUŠ9Š~Q‰A‰JzˆNˆ˜C°‡g‡š<µ†~†”5“………….A„x„h&Æƒ^ƒB5‚<‚‡g’•×^‘
-”§{Uş“{uLõ’UoIğ‘:iKŒî'cA‹î]"ŠòüVú‰øŒàP²‰‹¿J/ˆŠ’Cp‡-‰Z<†Gˆ5m…Q†Ê.)„D…n&¼ƒ)„<‚‚™†é‘Õ™Ç€ãË˜SzİÁ–åtØº•…nØ¶”8hÜŒ´’ûbÖ‹µ‘¿\¼Š¹xVš‰Á.PYˆÌÛIŞ‡ŞŒyC)†ı‹<E†‰‰5=…$‡ÿ.	„†g&¯‚ù„ÃAÓƒ†m‘Ÿi€h–›Çzcš,t_‰˜nb…—&hiŒƒ•¿bg‹„”X\RŠ‰’äV6‰‘‘lOüˆéI‰‡²SBÜ†ÓŒ¨<…óŠí5„ş‰(-äƒî‡V&‚Ì…yG¡ƒ•…ô‘t ÀíjŸyçbTsä\›¨mèXšgóŒV˜yaõ‹X–æ[åŠ]•FUĞ‰g“¡Oˆu‘îI1‡Š$B‹†®?;¹…ĞŒH4Ì„ÜŠI-»ƒÉˆ?&Œ‚¢†*Lp„…|‘M£òrB¢/yk8 msg1ªmm-œìg{Œ+›0a‹-™n[vŠ3—¢Ug‰>•ĞO<ˆM“ïHØ‡d‘ñB8†ŠÒ;n…¯Ÿ4„º‹f-ƒ¥‰%&w‚x†ÚQ?„‹„oçf¤~²‰g xğœ,hs%šÏi mQ™sj¦gw˜k¯a‡–»l¿[{•UmÚU\“ènÿO’wp0H„‘qqA¥–rÄ:t&3cŒu”,ŠŞw$ª‰x™.‡?z)„Ij%~ŠœÂjøxÇ›hkÎrüšl§m)˜´m…gQ—[ngae•ÿoP[\”pCUB“7q>Nÿ‘ÌrEHy^
+ï»¿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLContactImportMergePG : CommonDataBaseInteraction, IDLContactImportMerge
+    {
+        CommonInfo connection;
+        public DLContactImportMergePG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLContactImportMergePG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<List<ContactImportMerge>> GetList(int ContactImportOverviewId)
+        {
+            string storeProcCommand = "ContactImport_Merge";
+            object? param = new { Action= "GetList", ContactImportOverviewId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<ContactImportMerge>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+
+        }
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}
+

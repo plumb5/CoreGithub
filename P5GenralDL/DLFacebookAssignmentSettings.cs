@@ -1,1 +1,25 @@
-~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””)”9”I”Y”i”y”‰”™”©”¹”É”Ù”é”ù•	••)•9•I•Y•i•y•‰•™•©•¹•É•Ù•é•ù–	––)–9–I–Y–i–y–‰–™–©–¹–É–Ù–é–ù—	——)—9—I—Y—i—y—‰—™—©—¹—É—Ù—é—ù˜	
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLFacebookAssignmentSettings
+    {
+        public static IDLFacebookAssignmentSettings GetDLFacebookAssignmentSettings(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFacebookAssignmentSettingsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLFacebookAssignmentSettingsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

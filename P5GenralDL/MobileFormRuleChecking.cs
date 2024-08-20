@@ -1,154 +1,1275 @@
-on!Tupelnamenseinstellungen anwenden+Nicht verwendete Werteinstellungen anwenden>Platzierungseinstellungen für Verwendungsrichtlinien anwendenrDas Anwenden von Quelländerungen während der Ausführung der Anwendung wird von der Laufzeit nicht unterstützt.AssemblyVDas Zuweisen zu schreibgeschützten Feldern muss in einem Konstruktor erfolgen: [{0}].AAsynchrone Methode darf keine ref/out-Parameter aufweisen : [{0}]5Wartet asynchron darauf, dass die Aufgabe fertig ist.�Das Attribut „{0}“ fehlt. Das Aktualisieren eine asynchronen Methode oder eine Iterators erfordert einen Neustart der Anwendung.
-Verfügbar&Auf den vorhergehenden Ausdruck warten\Warten Sie auf den vorhergehenden Ausdruck, und fügen Sie „ConfigureAwait ({0})“ hinzu.$Erwartete Aufgabe gibt "{0}" zurück*Erwartete Aufgabe gibt keinen Wert zurückZBasisklassen enthalten nicht implementierte Member, auf die nicht zugegriffen werden kann.!Referenzen zu C# und Visual BasicIÄnderungen können nicht angewendet werden -- unerwarteter Fehler: "{0}"DDie Klasse \{0} kann nicht in den Zeichenbereich aufgenommen werden.8Navigieren zu dem Symbol unter dem Caret nicht möglich.IErfassungsgruppennummern müssen kleiner oder gleich Int32.MaxValue sein.-Aufzeichnungsnummer darf nicht 0 (null) sein.rCapturing primary constructor parameter '{0}' that hasn't been capture before requires restarting the application.gDas Erfassen der zuvor noch nicht erfassten Variablen „{0}“ erfordert einen Neustart der Anwendung.kDas Beenden des Zugriffs auf die erfasste Variable „{0}“ in {1} erfordert einen Neustart der Anwendung.hDas Erfassen des primären Konstruktorparameters '{0}' von '{1}' erfordert einen Neustart der Anwendung.YDas Beenden der Erfassung der Variablen „{0}“ erfordert einen Neustart der Anwendung.
-<ableiten>TODO<Auslassen>Ändern Sie "{0}" in "{1}".Namespace in "{0}" ändernSignatur ändern...In globalen Namespace ändernXÄnderungen sind nicht zulässig, solange der Vorgang bei einer Ausnahme angehalten ist.�Eine oder mehrere Änderungen führen dazu, dass ein neuer Typ vom Compiler erstellt wird, der einen Neustart der Anwendung erfordert, da er von der Laufzeit nicht unterstützt wird.UDas Ändern von {0} von asynchron zu synchron erfordert einen Neustart der Anwendung.�Das Ändern von „{0}“ zu „{1}“ erfordert einen Neustart der Anwendung, da dadurch die Form des Zustandsautomaten geändert wird.^Das Ändern eines Felds in ein Ereignis oder umgekehrt erfordert einen Neustart der Anwendung.=Changing attribute '{0}' requires restarting the application.PDas Ändern der Einschränkungen von {0} erfordert einen Neustart der Anwendung.HZum Ändern des Attributs "{0}" muss die Anwendung neu gestartet werden.NDas Ändern von Parametertypen von {0} erfordert einen Neustart der Anwendung.mDas Ändern des pseudobenutzerdefinierten Attributs „{0}“ von {1} erfordert einen Neustart der Anwendung.nUm den enthaltenden Namespace von "{0}" von "{1}" in "{2}" zu ändern, muss die Anwendung neu gestartet werdenpDas Ändern des Deklarationsbereichs einer erfassten Variablen „{0}“ erfordert einen Neustart der Anwendung.JDas Ändern von Parametern von {0} erfordert einen Neustart der Anwendung.MDas Ändern des Rückgabetyps von {0} erfordert einen Neustart der Anwendung.wDas Ändern der Signatur von {0} erfordert einen Neustart der Anwendung, da es von der Runtime nicht unterstützt wird.�Das Ändern des Typs einer erfassten Variablen „{0}“, die zuvor vom Typ „{1}“ war, erfordert einen Neustart der Anwendung.MDas Ändern von Typparametern von {0} erfordert einen Neustart der Anwendung.LDas Ändern der Sichtbarkeit von {0} erfordert einen Neustart der Anwendung.Ausgewählte Version: {0}KlassenCodeschnipsel für „{0}“Nicht zulässige KommentareCompiler7Berechnen der Codefehlerbehebung für alle Vorkommen...Codeformat "{0}" konfigurierenSchweregrad "{0}" konfigurieren;Schweregrad für alle Analysetools für "{0}" konfigurieren0Schweregrad für alle Analysetools konfigurieren
-Konstanten"Konstruktoren sind nicht zulässigEnthaltender MemberEnthaltender TypZahl konvertierenIn Binärformat konvertierenIn Klasse konvertierenIn Dezimalformat konvertieren)In vollständige Eigenschaft konvertierenIn 'hex' konvertieren*In interpolierte Zeichenfolge konvertierenIn LINQ konvertieren%In LINQ konvertieren (Aufrufformular)In Datensatz konvertieren!In Datensatzstruktur konvertierenIn Struktur konvertierenIn Tupel konvertierenuSchnittstelle konnte nicht extrahiert werden: Die Auswahl befindet sich nicht in einer Klasse/Schnittstelle/Struktur.~Schnittstelle konnte nicht extrahiert werden: Der Typ enthält kein Element, das in eine Schnittstelle extrahiert werden kann.UDie portierbare PDB-Datei wurde nicht auf dem Datenträger oder eingebettet gefunden.aDie PDB-Datei wurde nicht auf dem Datenträger, eingebettet oder auf einem Symbolserver gefunden.$Der Name "{0}" wurde nicht gefunden.>Implementierung des Symbols '{0}' konnte nicht gefunden werden!Feld "{0}" erstellen und zuweisen(Eigenschaft "{0}" erstellen und zuweisen7Verbleibende Elemente als Felder erstellen und zuweisen>Verbleibende Elemente als Eigenschaften erstellen und zuweisenDebug All Tests
-Debug TestDekompilierungsprotokollDekompiliert-Lokale Elemente für „{0}“ dekonstruieren	DelegatenUDas Löschen von {0} um eine aktive Anweisung erfordert einen Neustart der Anwendung.<Das Löschen von {0} erfordert einen Neustart der Anwendung.lDas Löschen von {0} erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.UDas Löschen der erfassten Variable „{0}“ erfordert einen Neustart der Anwendung.Richtlinien von '{0}'TÄndern Sie diesen Code nicht. Fügen Sie Bereinigungscode in der Methode "{0}" ein.Dokument�Der aktuelle Inhalt der Quelldatei "{0}" stimmt nicht mit dem kompilierten Quellcode überein. Alle Änderungen, die während des Debuggens an dieser Datei vorgenommen wurden, werden erst angewendet, wenn der Inhalt dem kompilierten Quellcode entspricht.RDokument muss in dem Arbeitsbereich enthalten sein, der diesen Dienst erstellt hatBearbeiten und FortfahrenaÄnderungen, die im Projekt "{0}" vorgenommen wurden, erfordern einen Neustart der Anwendung: {1}&Alle JSON-Editor-Funktionen aktivieren/Feld kapseln: "{0}" (und Eigenschaft verwenden)5Feld kapseln: "{0}" (Feld jedoch weiterhin verwenden)*Felder kapseln (und Eigenschaft verwenden)0Felder kapseln (Feld jedoch weiterhin verwenden)EnumerationsmemberEnumerationen&Fehler beim Lesen der Datei "{0}": {1}1Fehler beim Erstellen der CodeFixProvider-Instanz8Fehler beim Erstellen der CodeFixProvider-Instanz "{0}".&Fehler beim Analysieren des Kommentars,Fehler beim Lesen von PDB-Dateien: „{0}“
-Ereignisse	Beispiel:
-Beispiele:
-Ausnahmen:ErweiterungsmethodenBasisklasse extrahieren...Base record extrahieren...Schnittstelle extrahieren...Lokale Funktion extrahierenMethode extrahieren2Fehler beim Analysieren des Datenflusses für: {0}FelderM„Alle Verweise suchen“ wurde für das anwendbare Symbol nicht aufgerufen.4Nach aktueller Version suchen und diese installieren>Nach aktueller Version von "{0}" suchen und diese installierenAlle Vorkommen korrigierenTippfehler "{0}" korrigierenBefestigung '{0}'Dokument wird formatiert"{0} Assemblys für "{1}" gefunden:,Die PDB-Datei wurde unter „{0}“ gefunden2Die PDB-Datei wurde auf dem Symbolserver gefunden.eDie PDB-Datei wurde auf dem Symbolserver gefunden, aber die Datei konnte jedoch nicht gelesen werden.*Die eingebettete PDB-Datei wurde gefunden.%Exakte Übereinstimmung gefunden: {0}.Höhere Versionsübereinstimmung gefunden: {0}Einzelne Assembly gefunden: {0}"{0}" voll qualifizieren{0}-Objekt "{1}" generieren*{0}-Objekt "{1}" in neuer Datei generieren%"Equals" und "GetHashCode" generieren"Equals(object)" generieren"GetHashCode()" generieren&Abstrakte Methode „{0}“ generieren(Abstrakte Eigenschaft „{0}X generierenAlle generierenVergleichsoperatoren generierenKonstante „{0}“ generierenKonstruktor generieren…!Konstruktor "{0}({1})" generierenKonstruktor in "{0}" generieren-Konstruktor in "{0}" (mit Feldern) generieren3Konstruktor in "{0}" (mit Eigenschaften) generieren/Delegierenden Konstruktor "{0}({1})" generieren(Aufzählungselement „{0}“ generierenFeld „{0}“ generieren/Feldzuweisungskonstruktor "{0}({1})" generierenFür "{0}" generierenLokales "{0}" generierenMethode „{0}“ generieren*Geschachteltes {0}-Objekt "{1}" generierenNeuen Typ generieren...Operatoren generierenÜberschreibungen generieren…Parameter "{0}" generierenGParameter "{0}" (und Außerkraftsetzungen/Implementierungen) generieren Eigenschaft „{0}“ generieren-Schreibgeschütztes Feld „{0}“ generieren3Schreibgeschützte Eigenschaft „{0}“ generierenTyp "{0}" generierenVariable "{0}" generieren0Nicht zulässiges \-Zeichen am Ende des Musters. Ungültiges ZeichenfolgenzeichenUnzulässiges LeerzeichenIllegaler {x,y}-Wert mit x > y.{0} implementieren"{0}" explizit implementieren"{0}" implizit implementierenAbstrakte Klasse implementieren+Alle Schnittstellen explizit implementieren+Alle Schnittstellen implizit implementieren#Alle Member explizit implementierenExplizit implementierenImplizit implementierenSchnittstelle implementieren%Schnittstelle abstrakt implementieren8Schnittstelle explizit mit Dispose-Muster implementieren(Schnittstelle über "{0}" implementieren/Schnittstelle mit Dispose-Muster implementieren+Verbleibende Member explizit implementierenÜber "{0}" implementieren%Unvollständiges \p{X}-Escapezeichen.Alle Argumente einrückenAlle Elemente einziehenAlle Parameter einrücken!Umschlossene Argumente einrücken"Einzug für umschlossene ParameterFeld "{0}" initialisieren Eigenschaft "{0}" initialisieren"{0}" inline einbinden&"{0}" inline einbinden und beibehaltenInline temporär variabel"{0} {1}" installierenPaket "{0}" installierenVersion "{0}" installieren!Mit Paket-Manager installieren...#Nicht genügend Hexadezimalziffern.SchnittstellenKonstante einfügen"Konstante für "{0}" bereitstellen5Konstante für alle Vorkommen von "{0}" bereitstellenFeld einführenFeld für "{0}" bereitstellen0Feld für alle Vorkommen von "{0}" bereitstellenLokale Variable einführen)Lokale Konstante für "{0}" bereitstellen<Lokale Konstante für alle Vorkommen von "{0}" bereitstellen(Lokales Element für "{0}" bereitstellen;Lokales Element für alle Vorkommen von "{0}" bereitstellenParameter für "{0}" einführen2Parameter für alle Vorkommen von "{0}" einführenAbfragevariable bereitstellen(Abfragevariable für "{0}" bereitstellen;Abfragevariable für alle Vorkommen von "{0}" bereitstellenUngültiges JSON-MusterUngültiger KonstruktornameUngültige EscapesequenzMUngültiger Gruppenname: Gruppennamen müssen mit einem Wortzeichen beginnen.Ungültige ZahlUngültiger EigenschaftennameUngültiges Regex-MusterUngültige Auswahl.Bedingten Operator umkehrenJSON-Problem: {0}SchlüsselwörterLiveLaden von: {0}Lokale Variablen und Parameter�Das Festlegen einer Methode als Iterator erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.�Das Festlegen einer Methode als asynchron erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.
-fehlerhaft(Falsch formatiertes \p{X}-Escapezeichen.2Falsch formatierter mit \k<...> benannter Verweis.0Mit geschachtelter {0}-Anweisung zusammenführen+Mit nächster {0}-Anweisung zusammenführen+Mit äußerer {0}-Anweisung zusammenführen,Mit vorheriger {0}-Anweisung zusammenführenS"{0}" muss einen Datenstrom zurückgeben, der Lese- und Suchvorgänge unterstützt.(Methode, auf die implizit verwiesen wirdMethodenSonstige DateienFehlendes SteuerzeichenFehlender EigenschaftswertdDas Ändern von {0}, welche eine statische Variable enthält erfordert einen Neustart der Anwendung.}Das Ändern von {0}, die eine Aggregate, Group By, oder Join Abfrageklausel enthält, erfordert einen Neustart der Anwendung.bDas Ändern von {0}, die den stackalloc-Operator enthält, erfordert einen Neustart der Anwendung.yDas Ändern eines Catch/Finally-Handlers mit einer aktiven Anweisung im Try-Block erfordert einen Neustart der Anwendung.aDas Ändern eines Catch-Handlers um eine aktive Anweisung erfordert einen Neustart der Anwendung.MDas Ändern einer generischen Methode erfordert einen Neustart der Anwendung.bDas Ändern einer Methode im Kontext des generischen Typs erfordert einene Neustart der Anwendung.zDas Ändern einer Try-/Catch-/Finally-Anweisung bei aktiviertem endgültigen Block erfordert einen Neustart der Anwendung.pDas Ändern des Texts von {0} erfordert einen Neustart der Anwendung, da der Text zu viele Anweisungen enthält.gDas Ändern des Texts von {0} erfordert einen Neustart der Anwendung aufgrund des internen Fehlers: {1}gDas Ändern der Quelldatei „{0}“ erfordert einen Neustart der Anwendung, da die Datei zu groß ist.nDas Ändern der Quelldatei „{0}“ erfordert einen Neustart der Anwendung aufgrund des internen Fehlers: {1}mDas Ändern der Quelle mit aktivierten experimentellen Sprachfeatures erfordert einen Neustart der Anwendung.Das Modul wurde nicht gefunden.Module"Inhalt in Namespace verschieben...%Deklaration nahe Referenz verschiebenDatei in "{0}" verschieben1Datei in den Stammordner des Projekts verschieben>Statische Mitglieder werden in einen anderen Typ verschoben...In Namespace verschieben...Typ in {0} verschieben?Das Verschieben von {0} erfordert einen Neustart der Anwendung.Name erwartet
-NamespacesEDie Navigation von „{1}“ zum Symbol „{0}“ wird durchgeführt.,Nicht zulässige geschachtelte Eigenschaften"Geschachtelter Quantifizierer {0}.-Kein gemeinsamer Stammknoten für Extraktion.BIn der PDB-Datei wurden keine Quelldokumentinformationen gefunden.<Keine gültige Position zum Einfügen eines Methodenaufrufs.7Keine gültige Auswahl zum Durchführen der Extraktion.PEine nicht aufgerufene Methode kann nicht durch eine Eigenschaft ersetzt werden.Nicht verfügbar ⚠Zu wenige )-ZeichenPHinweis: Drücken Sie zweimal die TAB-TASTE, um den Schnipsel "{0}" einzufügen.�Nur Methoden mit einem einzelnen Argument, das keine out-Variablendeklaration ist, können durch eine Eigenschaft ersetzt werden.,Nur in einem Objekt zulässige Eigenschaften
-Operatoren
-Parameter:EParametertyp oder Rückgabetyp können kein anonymer Typ sein : [{0}]<Ausstehend>GMember auswählen, die als Konstruktorparameter verwendet werden sollenHMember auswählen, die in "Equals"/"GetHashCode" verwendet werden sollen%Zu überschreibende Member auswählenJBeheben Sie die Fehler in Ihrem Code, bevor Sie dieses Element umbenennen.)Wahrscheinliche JSON-Zeichenfolge erkanntProjekt Eigenschaften-Nicht zulässige Eigenschaften in einem ArrayLDie Eigenschaft kann nicht sicher durch einen Methodenaufruf ersetzt werden.0Der Eigenschaftsname muss eine Zeichenfolge sein2Auf den Eigenschaftennamen muss ein „:“ folgen8Der Eigenschaftenverweis kann nicht aktualisiert werden.,Auf die Eigenschaft wird implizit verwiesen."{0}" nach oben ziehen"{0}" zu "{1}" ziehenMember zum Basistyp ziehen...&Ausgewählte Elemente nach oben ziehen$Ausgewählte Elemente bis {0} ziehen!Quantifizierer {x,y} nach nichts.#Verweis auf nicht definierte Gruppe.Verweis auf nicht definierten Gruppennamen {0}.Verweis auf nicht definierte Gruppennummer {0}SAlle Steuerzeichen. Hierzu gehören die Kategorien "Cc", "Cf", "Cs", "Co" und "Cn".Alle SteuerzeichenOAlle diakritischen Zeichen. Hierzu gehören die Kategorien "Mn", "Mc" und "Me".Alle diakritischen ZeichenMAlle Buchstaben. Hierzu gehören die Zeichen "Lu", "Ll", "Lt", "Lm" und "Lo".Alle Buchstaben@Alle Zahlen. Hierzu gehören die Kategorien "Nd", "Nl" und "No".Alle Zahlen]Alle Satzzeichen. Hierzu gehören die Kategorien "Pc", "Pd", "Ps", "Pe", "Pi", "Pf" und "Po".Alle SatzzeichenFAlle Trennzeichen. Hierzu gehören die Kategorien "Zs", "Zl" und "Zp".Alle TrennzeichenGAlle Symbole. Hierzu gehören die Kategorien "Sm", "Sc", "Sk" und "So".Alle Symbole�Mit dem senkrechten Strich (|) können Sie eine beliebige Reihe von Mustern abgleichen, wobei das |-Zeichen die einzelnen Muster voneinander trennt.Alternierung�Der Punkt (.) stimmt mit einem beliebigen Zeichen außer "\n" überein (das Zeilenvorschubzeichen, \u000A). Wenn ein Muster für einen regulären Ausdruck durch die Option "RegexOptions.Singleline" geändert wird oder wenn der Teil des Musters, der die Zeichenklasse "." enthält, durch die Option "s" verändert wird, stimmt "." mit jedem beliebigen Zeichen überein.Jedes Zeichen�Die Rückverfolgung wird durch atomische Gruppen deaktiviert (in anderen Engines für reguläre Ausdrücke als Teilausdruck ohne Rückverfolgung, atomischer Teilausdruck oder Teilausdruck mit einmaligem Abgleich bezeichnet). Die Engine für reguläre Ausdrücke gleicht so viele Zeichen in der Eingabezeichenfolge wie möglich ab. Wenn kein weiterer Abgleich möglich ist, wird keine Rückverfolgung durchgeführt, um alternative Musterabgleiche zu versuchen. (Das heißt, der Teilausdruck stimmt nur mit Zeichenfolgen überein, die dem Teilausdruck allein entsprechen; es wird nicht versucht, eine Zeichenfolge basierend auf dem Teilausdruck und allen nachfolgenden Teilausdrücken abzugleichen.)
+﻿using Microsoft.Extensions.Configuration;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
-Diese Option empfiehlt sich, wenn Sie wissen, dass die Rückverfolgung nicht zum Erfolg führt. Indem Sie die Ausführung unnötiger Suchvorgänge durch die Engine für reguläre Ausdrücke verhindern, erzielen Sie eine verbesserte Leistung.atomische Gruppe-Entspricht einem Rückschrittzeichen, \u0008.Rückschrittzeichen�Eine Ausgleichsgruppendefinition löscht die Definition einer zuvor definierten Gruppe und speichert in der aktuellen Gruppe das Intervall zwischen der zuvor definierten Gruppe und der aktuellen Gruppe.
+namespace P5GenralDL
+{
+    public class MobileFormRuleChecking
+    {
+        private readonly string? SQLProvider;
+        IDLMobileVisitorPreInformation getDetails = null;
 
-„name1“ ist die aktuelle Gruppe (optional), „name2“ ist eine zuvor definierte Gruppe, und „Teilausdruck“ ist ein beliebiges gültiges Muster für reguläre Ausdrücke. Die Ausgleichsgruppendefinition löscht die Definition von „name2“ und speichert das Intervall zwischen „name2“ und „name1“ in „name1“. Wenn keine Gruppe namens „name2“ definiert ist, wird für die Übereinstimmung eine Rückverfolgung durchgeführt. Weil durch das Löschen der letzten Definition von „name2“ die vorherige Definition von „name2“ angezeigt wird, können Sie mithilfe dieses Konstrukts den Stapel von Erfassungen für die Gruppe „name2“ als Zähler für die Nachverfolgung geschachtelter Konstrukte wie z. B. öffnende und schließende Klammern verwenden.
+        public MobileFormRuleChecking(IConfiguration _configuration)
+        {
+            SQLProvider = _configuration["SqlProvider"];
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        public bool CheckFormRules(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            bool behaviorRule = false, interactionRule = false, interactionEvent = false, profileRule = false;
+            try
+            {
+                getDetails = DLMobileVisitorPreInformation.GetDLMobileVisitorPreInformation(visitorDetails.AdsId, SQLProvider);
 
-Die Ausgleichsgruppendefinition verwendet „name2“ als Stapel. Das Anfangszeichen der einzelnen geschachtelten Konstrukte wird in der Gruppe und in der zugehörigen Sammlung „Group.Captures“ platziert. Wenn das schließende Zeichen gefunden wurde, wird das entsprechende öffnende Zeichen aus der Gruppe entfernt, und die „Captures“-Sammlung wird um eins verringert. Nachdem die öffnenden und schließenden Zeichen aller geschachtelten Konstrukte abgeglichen wurden, ist „name1“ leer.AusgleichsgruppeBasisgruppe0Entspricht einem Glockenzeichen (Alarm), \u0007.GlockenzeichenxEntspricht einem Wagenrücklaufzeichen, \u000D. Beachten Sie, dass "\r" nicht dem Zeilenvorschubzeichen "\n" entspricht.Wagenrücklaufzeichen�Die Zeichenklassensubtraktion ergibt einen Satz von Zeichen, der auf dem Ausschließen der Zeichen einer Zeichenklasse von einer anderen Zeichenklasse beruht.
+               // getDetails = new MobileVisitorPreInformation(visitorDetails.AdsId);
 
-"base_group" ist eine positive oder negative Zeichengruppe bzw. ein positiver oder negativer Bereich. Die Komponente "excluded_group" ist eine andere positive oder negative Zeichengruppe oder ein anderer Ausdruck zur Zeichenklassensubtraktion (das heißt, Ausdrücke zur Zeichenklassensubtraktion können geschachtelt werden).ZeichenklassensubtraktionZeichengruppe	Kommentar�Dieses Sprachelement unternimmt den Abgleich mit einem von zwei Mustern abhängig davon, ob der Abgleich mit einem Anfangsmuster möglich ist.
+                bool audienceRule = ByAudience(savedRulesDetails, visitorDetails, formRules);
+                if (audienceRule)
+                    behaviorRule = ByBehavior(savedRulesDetails, visitorDetails, formRules);
+                if (behaviorRule)
+                    interactionRule = ByInteraction(savedRulesDetails, visitorDetails, formRules);
+                if (interactionRule)
+                    interactionEvent = ByInteractionEvent(savedRulesDetails, visitorDetails, formRules);
+                if (interactionEvent)
+                    profileRule = ByProfile(savedRulesDetails, visitorDetails, formRules);
 
-"expression" ist das anfängliche Muster für den Abgleich, "yes" ist das Muster, das bei Übereinstimmung des Ausdrucks abgeglichen werden soll, und "No" ist das optionale Muster, das abgeglichen werden soll, wenn der Ausdruck nicht übereinstimmt.Abgleich mit bedingtem Ausdruck�Dieses Sprachelement unternimmt den Abgleich mit einem von zwei Mustern abhängig davon, ob eine Übereinstimmung mit einer angegebenen Erfassungsgruppe vorliegt.
+                return audienceRule && behaviorRule && interactionRule && profileRule;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
-"name" ist der Name (oder die Zahl) einer Erfassungsgruppe, "yes" ist der Ausdruck, der bei einer Übereinstimmung für "name" (oder "number") abgeglichen werden soll, und "no" ist der optionale Ausdruck, der andernfalls abgeglichen wird.Abgleich mit bedingter Gruppe�Der \G-Anker gibt an, dass eine Übereinstimmung an dem Punkt erfolgen muss, an dem die vorherige Übereinstimmung endete. Wenn Sie diesen Anker mit der Regex.Matches- oder der Match.NextMatch-Methode verwenden, wird sichergestellt, dass alle Übereinstimmungen zusammenhängen.$Zusammenhängende ÜbereinstimmungenxEntspricht einem ASCII-Steuerzeichen, wobei "X" der Buchstabe des Steuerzeichens ist. Beispiel: "\cC" steht für STRG-C.Steuerzeichen�"\d" entspricht einer beliebigen Dezimalzahl. Identisch mit dem Muster für reguläre Ausdrücke "\p{Nd}", welches die Standarddezimalzahlen 0–9 sowie die Dezimalzahlen einer Reihe anderer Zeichensätze enthält.
+        #region Audience Condition Here
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\d" gleichbedeutend mit "[0-9]".Dezimalzahl�Ein Nummernzeichen (#) markiert einen Kommentar im x-Modus, der am Ende des Musters für reguläre Ausdrücke bei dem #-Zeichen ohne Escapezeichen beginnt und bis zum Zeilenende fortgesetzt wird. Um dieses Konstrukt zu verwenden, müssen Sie entweder die x-Option (über Inlineoptionen) aktivieren oder den RegexOptions.IgnorePatternWhitespace-Wert beim Instanziieren des Regex-Objekts oder beim Aufrufen einer statischen Regex-Methode an den Optionsparameter übergeben.Kommentar am Zeilenende�Der \z-Anker gibt an, dass eine Übereinstimmung am Ende der Eingabezeichenfolge erfolgen muss. Wie das $-Sprachelement ignoriert \z die Option "RegexOptions.Multiline". Im Gegensatz zum \Z-Sprachelement stimmt \z nicht mit einem \n-Zeichen am Ende einer Zeichenfolge überein. Daher ist nur eine Übereinstimmung mit der letzten Zeile der Eingabezeichenfolge möglich.Nur Ende der Zeichenfolge�Der \Z-Anker gibt an, dass eine Übereinstimmung am Ende der Eingabezeichenfolge oder vor "\n" am Ende der Eingabezeichenfolge erfolgen muss. \Z ist mit dem $-Anker identisch, außer dass \Z die Option "RegexOptions.Multiline" ignoriert. Daher ist in einer mehrzeiligen Zeichenfolge nur eine Übereinstimmung mit dem Ende der letzten Zeile oder der letzten Zeile vor "\n" möglich.
+        private bool ByAudience(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            bool isLead = formRules.IsLead > -1 ? IsLeadType(savedRulesDetails, visitorDetails, formRules.IsLead) : true;
+            if (!isLead) return false;
 
-Der \Z-Anker entspricht "\n", stimmt jedoch nicht mit "\r\n" überein (CR/LF-Zeichenkombination). Schließen Sie "\r?\Z" in das Muster für reguläre Ausdrücke ein, um die Übereinstimmung mit CR/LF zu erreichen.9Ende der Zeichenfolge oder vor dem endenden Zeilenumbruch�Der $-Anker gibt an, dass das vorangehende Muster am Ende der Eingabezeichenfolge oder vor "\n" am Ende der Eingabezeichenfolge vorliegen muss. Wenn Sie $ mit der Option "RegexOptions.Multiline" verwenden, kann die Übereinstimmung auch am Ende einer Zeile erfolgen.
+            bool isBelongOrNotSegment = formRules.IsBelong > 0 ? IsBelongNotBelongsToSegment(savedRulesDetails, formRules, visitorDetails) : true;
 
-Der $-Anker stimmt mit "\n", aber nicht mit "\r\n" überein (Kombination aus Wagenrücklauf- und Zeilenvorschubzeichen, auch CR/LF). Um der Kombination aus CR/LF-Zeichen zu entsprechen, schließen Sie "\r?$" in das Muster für reguläre Ausdrücke ein. Ende der Zeichenfolge oder Zeile'Entspricht einem Escapezeichen, \u001B.EscapezeichenAusschlussgruppe
-expression/Entspricht einem Seitenvorschubzeichen, \u000C.Seitenvorschubzeichen�Dieses Gruppierungskonstrukt wendet die angegebenen Optionen innerhalb eines Unterausdrucks an oder deaktiviert sie. Die zu aktivierenden Optionen werden nach dem Fragezeichen und die zu deaktivierenden Optionen nach dem Minuszeichen angegeben. Zulässige Optionen:
+            return isLead && isBelongOrNotSegment;
+        }
 
-    i	Führt den Abgleich ohne Unterscheidung nach Groß-/Kleinschreibung durch.
-    m	Verwendet den mehrzeiligen Modus, wobei "^" und "$" mit Anfang und Ende jeder einzelnen Zeile übereinstimmen
-	(anstelle von Anfang und Ende der Eingabezeichenfolge).
-    s	Verwendet den einzeiligen Modus, wobei der Punkt (.) mit jedem Zeichen übereinstimmt
-	(anstelle von jedem Zeichen außer "\n").
-    n	Erfasst keine unbenannten Gruppen. Die einzigen gültigen Erfassungen sind explizit
-	benannte oder nummerierte Gruppen im Format (?<name> Teilausdruck).
-    x	Schließt Leerraum ohne Escapezeichen aus dem Muster aus und aktiviert Kommentare
-	nach einem Nummernzeichen (#).GruppenoptionenYEntspricht einem ASCII-Zeichen, wobei ## ein zweistelliger hexadezimaler Zeichencode ist.Hexadezimale Escapezeichen�Mit dem Konstrukt (?# Kommentar) können Sie einen Inlinekommentar in einen regulären Ausdruck einbeziehen. Die Engine für reguläre Ausdrücke verwendet keinen Teil des Kommentars beim Musterabgleich, auch wenn der Kommentar in der Zeichenfolge enthalten ist, die von der Regex.ToString-Methode zurückgegeben wird. Der Kommentar endet bei der ersten schließenden Klammer.Inlinekommentar�Aktiviert oder deaktiviert bestimmte Optionen zum Musterabgleich für den Rest eines regulären Ausdrucks. Die zu aktivierenden Optionen werden nach dem Fragezeichen und die zu deaktivierenden Optionen nach dem Minuszeichen angegeben. Zulässige Optionen:
+        private bool IsLeadType(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, short leadType)
+        {
+            if (!savedRulesDetails.IsLeadIsTheirData)
+            {
+                savedRulesDetails.IsLead = Convert.ToInt16(getDetails.GetLeadType(visitorDetails.DeviceId));
+            }
+            return leadType == savedRulesDetails.IsLead; //visitorDetails.LeadType;
+        }
 
-    i	Führt den Abgleich ohne Unterscheidung nach Groß-/Kleinschreibung durch.
-    m	Verwendet den mehrzeiligen Modus, wobei "^" und "$" mit Anfang und Ende jeder einzelnen Zeile übereinstimmen
-	(anstelle von Anfang und Ende der Eingabezeichenfolge).
-    s	Verwendet den einzeiligen Modus, wobei der Punkt (.) mit jedem Zeichen übereinstimmt
-	(anstelle von jedem Zeichen außer "\n").
-    n	Erfasst keine unbenannten Gruppen. Die einzigen gültigen Erfassungen sind explizit
-	benannte oder nummerierte Gruppen im Format (?<name> Teilausdruck).
-    x	Schließt Leerraum ohne Escapezeichen aus dem Muster aus und aktiviert Kommentare
-	nach einem Nummernzeichen (#).InlineoptionenRegEx-Fehler: {0}Buchstabe, KleinbuchstabeBuchstabe, ModifiziererBuchstabe, sonstiger!Buchstabe, erster Buchstabe großBuchstabe, Großbuchstabe!Zeichen, einschließendes Zeichen#Zeichen, Zeichen ohne eigene Breite/Zeichen, Zeichen mit eigener Breite, Verbindung�Der Quantifizierer "{n,}?" stimmt mit dem vorhergehenden Element mindestens n-mal, jedoch möglichst wenige Male überein. "n" steht hierbei für eine beliebige ganze Zahl. Dies ist das träge Äquivalent zum gierigen Quantifizierer "{n,}".-Mindestens n-malige Übereinstimmung (träge)�Der Quantifizierer "{n,}" stimmt mit dem vorhergehenden Element mindestens n-mal überein. "n" steht hierbei für eine beliebige ganze Zahl. "{n,}" ist ein gieriger Quantifizierer, dessen träges Äquivalent "{n,}?" lautet.$Mindestens n-malige Übereinstimmung�Der Quantifizierer "{n,m}?" stimmt mit dem vorhergehenden Element zwischen n- und m-mal, jedoch möglichst wenige Male überein. "n" und "m" stehen hierbei für ganze Zahlen. Dies ist das träge Äquivalent zum gierigen Quantifizierer "{n,m}".-Mindestens n-malige Übereinstimmung (träge)�Der Quantifizierer "{n,m}" stimmt mit dem vorhergehenden Element mindestens n-mal, aber nicht häufiger als m-mal überein. "n" und "m" stehen hierbei für ganze Zahlen. "{n,m}" ist ein gieriger Quantifizierer, dessen träges Äquivalent "{n,m}?" lautet.)Zwischen m- und n-malige Übereinstimmung�Der Quantifizierer {n}? stimmt mit dem vorhergehenden Element genau n-mal überein. "n" steht hierbei für eine beliebige ganze Zahl. Dies ist das träge Äquivalent zum gierigen Quantifizierer "{n}+".(Genau n-malige Übereinstimmung (träge)�Der Quantifizierer "{n}" stimmt mit dem vorhergehenden Element genau n-mal überein. "n" steht hierbei für eine beliebige ganze Zahl. "{n}" ist ein gieriger Quantifizierer, dessen träges Äquivalent "{n}?" lautet.Genau n-malige Übereinstimmung�Der Quantifizierer "+?" stimmt mit dem vorhergehenden Element mindestens einmal, jedoch möglichst wenige Male überein. Dies ist das träge Äquivalent zum gierigen Quantifizierer "+"..Mindestens einmalige Übereinstimmung (träge)�Der Quantifizierer "+" stimmt mit dem vorhergehenden Element mindestens einmal überein. Dieser Quantifizierer ist identisch mit "{1,}". "+" ist ein gieriger Quantifizierer, dessen träges Äquivalent "+?" lautet.%Mindestens einmalige Übereinstimmung�Der Quantifizierer "*?" stimmt mit dem vorhergehenden Element mindestens nullmal, jedoch möglichst wenige Male überein. Dies ist das träge Äquivalent zum gierigen Quantifizierer "*"./Mindestens nullmalige Übereinstimmung (träge)�Der Quantifizierer "*" stimmt mit dem vorhergehenden Element mindestens nullmal überein. Dieser Quantifizierer ist identisch mit "{0,}". "*" ist ein gieriger Quantifizierer, dessen träges Äquivalent "*?" lautet.&Mindestens nullmalige Übereinstimmung�Der Quantifizierer "??" stimmt mit dem vorhergehenden Element null- oder einmal, jedoch möglichst wenige Male überein. Dies ist das träge Äquivalent zum gierigen Quantifizierer "?"..Null- oder einmalige Übereinstimmung (träge)�Der Quantifizierer "?" stimmt mit dem vorhergehenden Element null- oder einmal überein. Dieser Quantifizierer ist identisch mit "{0,1}". "?" ist ein gieriger Quantifizierer, dessen träges Äquivalent "??" lautet.%Null- oder einmalige Übereinstimmung�Dieses Gruppierungskonstrukt erfasst einen übereinstimmenden "Teilausdruck", wobei "Teilausdruck" für ein beliebiges gültiges Muster für reguläre Ausdrücke steht. Erfassungen, die Klammern verwenden, werden basierend auf der Reihenfolge der öffnenden Klammern im regulären Ausdruck beginnend bei 1 automatisch von links nach rechts nummeriert. Bei der Erfassung mit der Nummerierung 0 handelt es sich um den Text, der mit dem gesamten Muster für reguläre Ausdrücke übereinstimmt.Übereinstimmender TeilausdruckNamename1name2name-or-number�Ein benannter oder nummerierter Rückverweis.
+        private bool IsBelongNotBelongsToSegment(MobileVisitorSaveRulesDetails savedRulesDetails, MobileFormRules formRules, MobileVisitorDetails visitorDetails)
+        {
+            if (!savedRulesDetails.BelongIsTheirData)
+            {
+                savedRulesDetails.BelongsToGroup = getDetails.GetGroupList(visitorDetails.DeviceId).Split(',');
+                savedRulesDetails.BelongIsTheirData = true;
+            }
 
-"Name" ist der Name einer Erfassungsgruppe, die im Muster für reguläre Ausdrücke definiert ist.Benannter Rückverweis�Erfasst einen übereinstimmenden Teilausdruck und ermöglicht Ihnen den Zugriff darauf anhand des Namens oder der Nummer.
+            if (formRules.IsBelong == 1)
+            {
+                foreach (var group in formRules.BelongsToGroup.ToString().Split(','))
+                {
+                    if (savedRulesDetails.BelongsToGroup.Any(x => x == group))
+                        return true;
+                }
+            }
+            else if (formRules.IsBelong == 2)
+            {
+                foreach (var group in formRules.BelongsToGroup.ToString().Split(','))
+                {
+                    if (savedRulesDetails.BelongsToGroup.Any(x => x == group))
+                        return false;
+                }
+                return true;
+            }
 
-"Name" ist ein gültiger Gruppenname, und "Teilausdruck" ist ein gültiges Muster für reguläre Ausdrücke. "Name" darf keine Satzzeichen enthalten und nicht mit einer Zahl beginnen.
+            return false;
+        }
 
-Wenn der RegexOptions-Parameter einer Methode zum Abgleich von Mustern für reguläre Ausdrücke das Flag "RegexOptions.ExplicitCapture" enthält oder wenn die Option "n" auf diesen Teilausdruck angewendet wird, besteht die einzige Möglichkeit zum Erfassen eines Unterausdrucks darin, die Erfassungsgruppen explizit zu benennen.)Benannter übereinstimmender Teilausdruck�Eine negative Zeichengruppe gibt eine Liste von Zeichen an, die nicht in einer Eingabezeichenfolge vorkommen dürfen, damit eine Übereinstimmung vorliegt. Die Zeichen in der Liste werden einzeln angegeben.
+        #endregion Audience Condition Here
 
-Mehrere Zeichenbereiche können verkettet werden. Um beispielsweise den Bereich der Dezimalstellen von "0" bis "9", den Bereich der Kleinbuchstaben von "a" bis "f" und den Bereich der Großbuchstaben von "A" bis "F" anzugeben, verwenden Sie "[0-9a-fA-F]".Negative Zeichengruppe�Ein negativer Zeichenbereich gibt eine Liste von Zeichen an, die nicht in einer Eingabezeichenfolge vorkommen dürfen, damit eine Übereinstimmung vorliegt. "firstCharacter" entspricht dem ersten Zeichen und "lastCharacter" dem letzten Zeichen im Bereich.
+        #region Behavior Conditions
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ByBehavior(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            bool behavioralScore = formRules.BehavioralScoreCondition > 0 ? BehavioralScore(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!behavioralScore) return false;
 
-Mehrere Zeichenbereiche können verkettet werden. Um beispielsweise den Bereich der Dezimalstellen von "0" bis "9", den Bereich der Kleinbuchstaben von "a" bis "f" und den Bereich der Großbuchstaben von "A" bis "F" anzugeben, verwenden Sie "[0-9a-fA-F]".�Das Konstrukt des regulären Ausdrucks "\P{ name }" entspricht einem beliebigen Zeichen, das zu keiner allgemeinen Unicode-Kategorie bzw. keinem benannten Block gehört, wobei "name" der Kategorieabkürzung oder dem Namen des benannten Blocks entspricht.Negative Unicode-Kategorie,Entspricht einem Neue-Zeile-Zeichen, \u000A.Neue-Zeile-ZeichenNein�"\D" entspricht einem beliebigen Zeichen, das keine Ziffer darstellt. Entspricht dem Muster für reguläre Ausdrücke "\P{Nd}".
+            bool sessionIs = formRules.SessionIs > 0 ? CheckSessionIs(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!sessionIs) return false;
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\D" gleichbedeutend mit "[^0-9]".Nicht-Ziffernzeichen�"\S" entspricht einem beliebigen Nicht-Leerraumzeichen. Dies ist identisch mit dem Muster für reguläre Ausdrücke "[^\f\n\r\t\v\x85\p{Z}]" oder mit dem Gegenteil des Musters für reguläre Ausdrücke "\s", welches mit Leerraumzeichen übereinstimmt.
+            bool pageDepth = formRules.PageDepthIs > 0 ? CheckPageDepth(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!pageDepth) return false;
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\S" gleichbedeutend mit "[^ \f\n\r\t\v]".Nicht-Leerraumzeichen~Der \B-Anker gibt an, dass die Übereinstimmung nicht an einer Wortgrenze auftreten darf. Dies ist das Gegenteil vom \b-Anker.Nicht-Wortgrenze�"\W" entspricht einem beliebigen Nicht-Wortzeichen. Stimmt mit einem beliebigen Zeichen überein, das nicht in den folgenden Unicode-Kategorien enthalten ist:
+            bool pageViews = formRules.NPageVisited > 0 ? CheckPageviews(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!pageViews) return false;
 
-    Ll	Buchstabe, Kleinbuchstabe
-    Lu	Buchstabe, Großbuchstabe
-    Lt	Buchstabe, erster Buchstabe groß
-    Lo	Buchstabe, sonstige
-    Lm	Buchstabe, Modifizierer
-    Mn	Zeichen, Zeichen ohne eigene Breite
-    Nd	Zahl, Dezimalzahl
-    Pc	Interpunktion, Verbindung
+            bool frequency = formRules.FrequencyIs > 0 ? CheckFrequency(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!frequency) return false;
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\W" gleichbedeutend mit "[^a-zA-Z_0-9]".Nicht-Wortzeichen�Dieses Konstrukt erfasst nicht die Teilzeichenfolge, die mit einem Teilausdruck übereinstimmt:
+            bool pageUrl = formRules.PageUrl != null && formRules.PageUrl.Length > 0 ? CheckPageurl(visitorDetails, formRules) : true;
+            if (!pageUrl) return false;
 
-Das Konstrukt der Nicht-Erfassungsgruppe wird normalerweise verwendet, wenn ein Quantifizierer auf eine Gruppe angewendet wird, die von der Gruppe erfassten Teilzeichenfolgen jedoch nicht relevant sind.
+            bool pageParameter = formRules.PageParameters != null && formRules.PageParameters != "0" && formRules.PageParameters.Length > 0 ? CheckPageParameters(visitorDetails, formRules) : true;
+            if (!pageParameter) return false;
 
-Wenn ein regulärer Ausdruck geschachtelte Gruppierungskonstrukte enthält, gilt ein äußeres Konstrukt von Nicht-Erfassungsgruppen nicht für die inneren geschachtelten Gruppenkonstrukte.Nicht-ErfassungsgruppeZahl, DezimalzahlZahl, BuchstabeZahl, sonstige�Ein nummerierter Rückverweis, wobei "zahl" für die Ordnungsposition der Erfassungsgruppe im regulären Ausdruck steht. Beispiel: \4 entspricht dem Inhalt der vierten Erfassungsgruppe.
+            //bool referrerUrl = formRules.IsReferrer > 0 ? CheckReferrer(savedRulesDetails, visitorDetails, formRules) : true;
+            //if (!referrerUrl) return false;
 
-Es besteht eine Mehrdeutigkeit zwischen den Escapecodes für Oktalzahlen (z. B. \16) und den \zahl-Rückverweisen, die dieselbe Notation verwenden. Wenn die Mehrdeutigkeit ein Problem darstellt, können Sie die \k<name>-Notation verwenden, die eindeutig ist und nicht mit Oktalzeichencodes verwechselt werden kann. Ebenso eindeutig sind hexadezimale Codes wie \xdd, die nicht mit Rückverweisen verwechselt werden können.Nummerierter RückverweisSonstige, SteuerelementSonstige, FormatSonstige, nicht zugewiesenSonstige, private NutzungSonstige, Ersatzzeichen�Eine positive Zeichengruppe gibt eine Liste von Zeichen an, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung auftritt.Positive Zeichengruppe�Ein positiver Zeichenbereich gibt einen Bereich von Zeichen an, von denen jedes in einer Eingabezeichenfolge enthalten sein kann, damit eine Übereinstimmung auftritt. "firstCharacter" ist das erste Zeichen und "lastCharacter" das letzte Zeichen des Bereichs. Positiver ZeichenbereichInterpunktion, schließenInterpunktion, VerbindungInterpunktion, Bindestrich/Interpunktion, schließendes Anführungszeichen,Interpunktion, öffnendes AnführungszeichenInterpunktion, öffnenInterpunktion, sonstigeTrennzeichen, ZeileTrennzeichen, AbsatzTrennzeichen, Leerzeichen�Der \A-Anker gibt an, dass eine Übereinstimmung am Anfang der Eingabezeichenfolge erfolgen muss. Er ist identisch mit dem ^-Anker, mit der Ausnahme, dass \A die Option "RegexOptions.Multiline" ignoriert. Daher ist nur eine Übereinstimmung mit dem Anfang der ersten Zeile in einer mehrzeiligen Eingabezeichenfolge möglich.Nur Anfang der Zeichenfolge�Der ^-Anker gibt an, dass das folgende Muster an der ersten Zeichenposition der Zeichenfolge beginnen muss. Wenn Sie "^" mit der Option "RegexOptions.Multiline" verwenden, muss die Übereinstimmung am Anfang jeder Zeile erfolgen."Anfang der Zeichenfolge oder ZeileTeilausdruckSymbol, WährungSymbol, MathematikSymbol, ModifiziererSymbol, sonstige)Entspricht einem Tabstoppzeichen, \u0009.Tabstoppzeichen�Das Konstrukt des regulären Ausdrucks "\p{ name }" entspricht einem beliebigen Zeichen, das zu einer allgemeinen Unicode-Kategorie oder einem benannten Block gehört, wobei "name" der Kategorieabkürzung oder dem Namen des benannten Blocks entspricht.Unicode-KategorieGEntspricht einer UTF-16-Codeeinheit, deren Wert hexadezimal (####) ist.Unicode-Escapezeichen!Allgemeine Unicode-Kategorie: {0}4Entspricht einem vertikalen Tabstoppzeichen, \u000B.Vertikales Tabstoppzeichen�"\s" stimmt mit einem beliebigen Leerraumzeichen überein. Entspricht den folgenden Escapesequenzen und Unicode-Kategorien:
+            bool isMailIsRespondent = formRules.IsMailIsRespondent ? CheckIsMailRespondent(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isMailIsRespondent) return false;
 
-    \f	Das Seitenvorschubzeichen, \u000C
-    \n	Das Zeilenvorschubzeichen, \u000A
-    \r	Das Wagenrücklaufzeichen, \u000D
-    \t	Das Tabstoppzeichen, \u0009
-    \v	Das vertikale Tabstoppzeichen, \u000B
-    \x85	Das Auslassungszeichen oder NEL-Zeichen für die nächste Zeile (...), \u0085
-    \p{Z}	Entspricht einem beliebigen Trennzeichen
+            //bool isSearchString = formRules.SearchString != null && formRules.SearchString.Length > 0 ? CheckSearchKeyword(savedRulesDetails, visitorDetails, formRules) : true;
+            //if (!isSearchString) return false;
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\s" gleichbedeutend mit "[\f\n\r\t\v]".Leerraumzeichen�Der \b-Anker gibt an, dass die Übereinstimmung an einer Grenze zwischen einem Wortzeichen (dem \w-Sprachelement) und einem Nicht-Wortzeichen (dem \W-Sprachelement) erfolgen muss. Wortzeichen bestehen aus alphanumerischen Zeichen und Unterstrichen; ein Nicht-Wortzeichen ist ein beliebiges Zeichen, das nicht alphanumerisch oder ein Unterstrich ist. Die Übereinstimmung kann auch an einer Wortgrenze am Anfang oder Ende der Zeichenfolge auftreten.
+            bool countryRule = formRules.Country != null && formRules.Country.Length > 0 ? CheckCountry(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!countryRule) return false;
 
-Der \b-Anker wird häufig verwendet, um sicherzustellen, dass ein Teilausdruck mit einem ganzen Wort statt nur mit dem Anfang oder Ende eines Worts übereinstimmt.
-Wortgrenze�"\w" entspricht einem beliebigen Wortzeichen. Ein Wortzeichen gehört zu einer der folgenden Unicode-Kategorien:
+            bool cityRule = formRules.City != null && formRules.City.Length > 0 ? CheckCity(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!cityRule) return false;
 
-    Ll	Buchstabe, Kleinbuchstabe
-    Lu	Buchstabe, Großbuchstabe
-    Lt	Buchstabe, erster Buchstabe groß
-    Lo	Buchstabe, sonstige
-    Lm	Buchstabe, Modifizierer
-    Mn	Zeichen, Zeichen ohne eigene Breite
-    Nd	Zahl, Dezimalzahl
-    Pc	Interpunktion, Verbindung
+            bool alreadyVisitedPageRule = formRules.AlreadyVisitedPages != null && formRules.AlreadyVisitedPages.Length > 0 ? CheckAlreadyVisitedPages(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!alreadyVisitedPageRule) return false;
 
-Wenn das ECMAScript-konforme Verhalten angegeben wird, ist "\w" gleichbedeutend mit "[a-zA-Z_0-9]".WortzeichenJa�Eine negative Lookaheadassertion mit Nullbreite, bei der eine Übereinstimmung erfolgreich ist, wenn die Eingabezeichenfolge nicht dem Muster für reguläre Ausdrücke im Teilausdruck entspricht. Die übereinstimmende Zeichenfolge ist im Übereinstimmungsergebnis nicht enthalten.
+            bool overAllTimeSpentInSite = formRules.OverAllTimeSpentInSite > 0 ? CheckOverAllTimeSpentInSite(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!overAllTimeSpentInSite) return false;
 
-Eine negative Lookaheadassertion mit Nullbreite wird in der Regel entweder am Anfang oder am Ende eines regulären Ausdrucks verwendet. Am Anfang eines regulären Ausdrucks kann ein bestimmtes Muster definiert werden, das nicht übereinstimmen darf, wenn der Anfang des regulären Ausdrucks ein ähnliches, aber allgemeineres Muster für den Abgleich definiert. In diesem Fall wird sie häufig verwendet, um die Rückverfolgung einzuschränken. Am Ende eines regulären Ausdrucks kann ein Teilausdruck definiert werden, der nicht am Ende einer Übereinstimmung vorliegen darf.*Negative Lookaheadassertion mit Nullbreite�Eine negative Lookbehindassertion mit Nullbreite, bei der eine Übereinstimmung erfolgreich ist, wenn "Teilausdruck" nicht in der Eingabezeichenfolge links von der aktuellen Position vorliegt. Teilzeichenfolgen, die nicht mit "Teilausdruck" übereinstimmen, sind im Übereinstimmungsergebnis nicht enthalten.
+            //bool AndroidBrowser = formRules.IsMobileDevice > 0 ? IsAndriodMobileBrowser(savedRulesDetails, visitorDetails, formRules) : true;
 
-Negative Lookbehindassertionen mit Nullbreite werden normalerweise am Anfang regulärer Ausdrücke verwendet. Das von ihnen definierte Muster verhindert eine Übereinstimmung in der nachfolgenden Zeichenfolge. Sie werden zudem zum Begrenzen der Rückverfolgung verwendet, wenn das letzte Zeichen oder die Zeichen in einer erfassten Gruppe nicht mit einem oder mehreren Zeichen übereinstimmen dürfen, die dem Muster für reguläre Ausdrücke der Gruppe entsprechen.+Negative Lookbehindassertion mit Nullbreite�Eine positive Lookaheadassertion mit Nullbreite, bei der eine Übereinstimmung erfolgreich ist, wenn die Eingabezeichenfolge dem Muster für reguläre Ausdrücke im Teilausdruck entspricht. Die abgeglichene Zeichenfolge ist im Übereinstimmungsergebnis nicht enthalten. Für eine positive Lookaheadassertion wird keine Rückverfolgung durchgeführt.
+            return behavioralScore && sessionIs && pageDepth && pageViews && frequency && isMailIsRespondent && countryRule && cityRule && overAllTimeSpentInSite;
+        }
 
-Eine positive Lookaheadassertion mit Nullbreite wird in der Regel am Ende eines Musters für reguläre Ausdrücke verwendet. Sie definiert eine Teilzeichenfolge, die sich am Ende einer Zeichenfolge befinden muss, damit eine Übereinstimmung vorliegt, die aber nicht in der Übereinstimmung enthalten sein darf. Sie eignet sich auch zum Verhindern einer übermäßigen Rückverfolgung. Mit einer positiven Lookaheadassertion mit Nullbreite können Sie sicherstellen, dass eine bestimmte erfasste Gruppe mit einem Text beginnt, der einer Teilmenge des für die erfasste Gruppe definierten Musters entspricht.*Positive Lookaheadassertion mit Nullbreite�Eine positive Lookbehindassertion mit Nullbreite, bei der eine Übereinstimmung erfolgreich ist, wenn "Teilausdruck" in der Eingabezeichenfolge links von der aktuellen Position vorliegt. "Teilausdruck" ist im Übereinstimmungsergebnis nicht enthalten. Bei einer positiven Lookbehindassertion mit Nullbreite wird keine Rückverfolgung durchgeführt.
 
-Positive Lookbehindassertionen mit Nullbreite werden normalerweise am Anfang regulärer Ausdrücke verwendet. Das von ihnen definierte Muster ist eine Vorbedingung für eine Übereinstimmung, auch wenn es nicht zum Übereinstimmungsergebnis gehört.+Positive Lookbehindassertion mit Nullbreite	Hinweise:4Das Entfernen des Dokuments wird nicht unterstützt.Unterdrückung entfernenUnterdrückung "{0}" entfernenDokument "{0}" entfernenQualifizierung entfernenVerweis auf "{0}" entfernen.Trennzeichen entfernen.Entfernen unnötiger Importe oder Verwendungen*Nicht erforderliche Umwandlungen entfernen$Nicht verwendete Parameter entfernen+Nicht verwendete Unterdrückungen entfernen#Nicht verwendete Variable entfernen$Nicht verwendete Variablen entfernen�Das Entfernen von {0}, welche auf die erfassten Variablen „{1}“ und „{2}“ zugegriffen hat, die in unterschiedlichen Bereichen deklariert sind, erfordert einen Neustart der Anwendung.bDas Entfernen von {0}, die eine aktive Anweisung enthält, erfordert einen Neustart der Anwendung.Datei umbenennen in {0}Typ umbenennen in {0}>Das Umbenennen von {0} erfordert einen Neustart der Anwendung.nDas Umbenennen von {0} erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.kDas Umbenennen einer erfassten Variablen von „{0}“ in „{1}“ erfordert einen Neustart der Anwendung.JDas Umbenennen von Elementen des Typs anonym wird noch nicht unterstützt.*"{0}" und "{1}" durch Eigenschaft ersetzen"{0}" durch "{1}" ersetzen"{0}" durch Methode ersetzen"{0}" durch Methoden ersetzen "{0}" durch Eigenschaft ersetzen-Bedingter Ausdruck durch Anweisungen ersetzen�Die gemeldete Diagnose "{0}" enthält einen Quellspeicherort "{1}" in der Datei "{2}", der sich außerhalb der angegebenen Datei befindet.�Die gemeldete Diagnose "{0}" weist einen Quellspeicherort in der Datei "{1}" auf, die nicht Teil der Kompilierung ist, die analysiert wird.GStellt ein Objekt dar, dessen Vorgänge zur Laufzeit aufgelöst werden.erforderlichAuflösen: {0}Konfliktmarkierungen auflösenModul auflösen: {0} von {1}Rückgabewerte:Roslyn.HostErrorGrobe BearbeitungRun All TestsRun Test&Auswahl enthält kein gültiges Token..Die Auswahl ist nicht in keinem Typ enthalten.Halbbytes trennenTausender trennenWörter trennenStillCodeschnipselProjektmappe#Importe oder Verwendungen sortierenZugriffsmodifizierer sortierenNDie Informationen zur Quellcodesprache wurden in der PDB-Datei nicht gefunden.rDie Quelle ist eine Referenzassembly. Es sind nicht genügend Informationen vorhanden, um die PDB-Datei zu finden.-In aufeinanderfolgende {0}-Anweisungen teilen'In geschachtelte {0}-Anweisungen teilen2Stream muss Lese- und Suchvorgänge unterstützen.,Zeichenfolgen müssen mit " nicht ' beginnen
-StrukturenZusammenfassung:{0} unterdrückeneDer Wechsel zwischen einer Lambda- und einer lokalen Funktion erfordert einen Neustart der Anwendung.:Das Symbol wurde unter dem Assemblypfad „{0}“ gefundenSyntaxfehler9TODO: Verwalteten Zustand (verwaltete Objekte) bereinigencTODO: Nicht verwaltete Ressourcen (nicht verwaltete Objekte) freigeben und Finalizer überschreibenkTODO: Finalizer nur überschreiben, wenn "{0}" Code für die Freigabe nicht verwalteter Ressourcen enthält#TODO: Große Felder auf NULL setzenÜbereinstimmungen mit ZieltypCDie Adress einer Variable wird in dem ausgewählten Code verwendet.cDie Assembly "{0}" mit dem Typ "{1}" verweist auf das .NET Framework. Dies wird nicht unterstützt./Die Assembly "{0}" enthält keine Analysetools.�Die Analyzerassembly „{0}“ verweist auf Version „{1}“ des Compilers, die neuer ist als die aktuell ausgeführte Version „{2}“.,Das Element wird in den Metadaten definiert.DDie Auswahl enthält einen lokalen Funktionsaufruf ohne Deklaration.?Die Auswahl enthält einen Fehler oder einen unbekannten Typen.,Die Auswahl enthält keine aktive Anweisung.Das Symbol hat kein Symbolbild.&Das Symbol verfügt über keine Basis.2Das Symbol verfügt über keine Implementierungen.{0} hat {1} Verweise.�Definitionen oder Verweise im Zusammenhang mit diesem Symbol befinden sich in den Metadaten. Durch Ändern der Signatur können Fehler beim Erstellen auftreten.
+        private bool BehavioralScore(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.BehavioralScoreIsTheirData)
+            {
+                savedRulesDetails.BehavioralScore = getDetails.GetBehavioralScore(visitorDetails.DeviceId);
+                savedRulesDetails.BehavioralScoreIsTheirData = true;
+            }
 
-Möchten Sie fortfahren?uTimeout beim Herunterladen von Quellcode aus SourceLink. Nachfolgende Anforderungen sind möglicherweise erfolgreich.wTimeout beim Herunterladen der PDB-Datei vom Symbolserver. Nachfolgende Anforderungen sind möglicherweise erfolgreich.Zu viele |-Zeichen in (?()|).Zu viele )-Zeichen.(Ein nachgestelltes Komma ist unzulässigITypparameter "{0}" wird durch einen anderen Typparameter "{1}" verborgen.Typparameter:Typen:�Die Quelldatei "{0}" oder die für das enthaltende Projekt kompilierte PDB-Datei kann nicht gelesen werden. Alle Änderungen, die während des Debuggens an dieser Datei vorgenommen wurden, werden erst angewendet, wenn der Inhalt dem kompilierten Quellcode entspricht.:Fehler beim Laden der Assembly "{0}" des Analysetools: {1})Unerwartete Schnittstellenelementart: {0}Unbekannter Fehler aufgetretenUnbekannte EigenschaftUnbekannte Eigenschaft "{0}"Unbekanntes SteuerzeichenUnbekannte Escapesequenz \{0}."Unbekanntes Gruppierungskonstrukt.Nicht abgeschlossener []-SatzNicht beendeter Kommentar(Nicht abgeschlossener (?#...)-Kommentar.!Nicht abgeschlossene Zeichenfolge$Umbruch für alle Argumente aufhebenEntpacken aller Elemente$Umbruch für alle Parameter aufheben3Umbruch für alle Argumente aufheben und einrücken3Umbruch für alle Parameter aufheben und einrücken#Umbruch für Argumentliste aufheben&Umbruch für alle Aufrufkette aufhebenUmbruch für Ausdruck aufhebenInitialisierer entpacken$Umbruch für Parameterliste aufhebenGDas Aktualisieren von „{0}“ erfordert einen Neustart der Anwendung.�Das Aktualisieren {0} innerhalb des generischen Typs oder der generischen Methode erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.\Das Aktualisieren einer {0} um eine aktive Anweisung erfordert einen Neustart der Anwendung.wDas Aktualisieren einer komplexen Anweisung, die einen await-Ausdruck enthält, erfordert einen Neustart der Anwendung.QDas Aktualisieren einer aktiven Anweisung erfordert einen Neustart der Anwendung.Das Aktualisieren eines asynchronen oder iteratormodifizierers um eine aktive Anweisung erfordert einen Neustart der Anwendung.�Das Aktualisieren asynchron oder als Iterator erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.�Das Aktualisieren eines aufladbaren Typs (gekennzeichnet durch {0}) oder seines Elements erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.UDas Aktualisieren der Handles-Klausel von {0} erfordert einen Neustart der Anwendung.ZDas Aktualisieren der Implements-Klausel einer {0} erfordert einen Neustart der Anwendung.YDas Aktualisieren des Alias der Declare-Anweisung erfordert einen Neustart der Anwendung.Das Aktualisieren der Attribute von {0} erfordert einen Neustart der Anwendung, da es von der Laufzeit nicht unterstützt wird.sDas Aktualisieren der Basisklasse und/oder der Basisschnittstelle(n) von {0} erfordert eine Neustart der Anwendung.UDas Aktualisieren des Initialisierers von {0} erfordert einen Neustart der Anwendung.mDas Aktualisieren der Art einer Eigenschafts-/Ereigniszugriffsmethode erfordert einen Neustart der Anwendung.LDas Aktualisieren der Art eines Typs erfordert einen Neustart der Anwendung.eDas Aktualisieren des Bibliotheksnamens der Declare-Anweisung erfordert einen Neustart der Anwendung.RDas Aktualisieren der Modifizierer von {0} erfordert einen Neustart der Anwendung.ODas Aktualisieren der Größe einer {0} erfordert einen Neustart der Anwendung.JDas Aktualisieren des Typs von {0} erfordert einen Neustart der Anwendung.\Das Aktualisieren des zugrundeliegenden Typs von {0} erfordert einen Neustart der Anwendung.PDas Aktualisieren der Abweichung von {0} erfordert einen Neustart der Anwendung.{0} verwendenFrameworktyp verwendenLokale Version "{0}" verwenden[Lokal installierte Version "{1}" von "{0}" verwenden.
-Diese Version wird verwendet in: {2}'Benutzerfehler bei Diagnoseanalysetool.Wert:Wert erforderlichCVariadic-SignatureHelpItem muss mindestens ein Parameter aufweisen.;WARNUNG: Versionskonflikt. Erwartet: "{0}", erhalten: "{1}"EWarnung: Die Methode setzt das Symbol aus den Metadaten außer Kraft.8Warnung: Die Sammlung wurde bei der Iteration geändert.GWarnung: Die Iterationsvariable hat die Funktionsgrenze überschritten.kWarnung: Durch die Änderung des Namespaces kann der Code ungültig werden oder seine Bedeutung verändern.HWarnung: Die Semantik kann sich beim Konvertieren der Anweisung ändern.$Aufrufkette umbrechen und ausrichten!Ausdruck umbrechen und ausrichten*Lange Aufrufkette umbrechen und ausrichtenAufrufkette umbrechenJedes Argument umbrechenAlle Parameter umbrechenAusdruck umbrechenInitialisierer umschließenLange Argumentliste umbrechenLange Aufrufkette umbrechen"Langen Initialisierer umschließenLange Parameterliste umbrechenUmbruchlSie können nur die Signatur eines Konstruktors, eines Indexers, einer Methode oder eines Delegaten ändern.HSie können die Navigationsleiste verwenden, um den Kontext zu wechseln.?Sie können Elemente aus vorherigen Übermittlungen umbenennen.>Sie können in Metadaten definierte Elemente nicht umbenennen.(Sie können Operatoren nicht umbenennen.,Sie können dieses Element nicht umbenennen.(Sie müssen einen Bezeichner umbenennen.    {0} - {1}{0}-SchlüsselwortBasiswerte: “{0}”%"{0}" kann nicht NULL oder leer sein.4"{0}" darf nicht NULL oder ein Leerraumzeichen sein.	{0} - {1}'{0}' erwartet:„{0}“ wurde in einer eingebetteten PDB-Datei gefunden.�„{0}“ wurde in einer eingebetteten PDB-Datei gefunden, aber die Prüfsumme war falsch oder die temporäre Datei konnte nicht gelesen werden.y„{0}“ wurde in einer eingebetteten PDB-Datei gefunden, konnte aber nicht in die temporäre Datei schreiben: „{1}“d„{0}“ wurde in der eingebetteten PDB-Datei und in der zwischengespeicherten Quelldatei gefunden.8„{0}“ wurde am ursprünglichen Speicherort gefunden.�„{0}“ wurde am ursprünglichen Speicherort gefunden, aber die Prüfsumme war falsch oder die temporäre Datei konnte nicht gelesen werden.*„{0}“ wurde über SourceLink gefunden.a„{0}“ wurde über SourceLink gefunden, aber die temporäre Datei konnte nicht gelesen werden.“{0}”-Implementierungen"{0}" ist hier nicht NULL.{0} Elemente im Cache'{0}' Literal nicht zulässig"{0}" darf hier NULL sein.{0} Verweis“{0}”-Verweise{0} Verweise'{0}' unerwartet10.000.000stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "fffffff" repräsentiert die sieben signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Zehnmillionstel einer Sekunde in einem Datums- und Uhrzeitwert dar.
+            if (formRules.BehavioralScoreCondition == 1)
+            {
+                return savedRulesDetails.BehavioralScore > formRules.BehavioralScore1;
+            }
+            else if (formRules.BehavioralScoreCondition == 2)
+            {
+                return savedRulesDetails.BehavioralScore < formRules.BehavioralScore1;
+            }
+            else if (formRules.BehavioralScoreCondition == 3)
+            {
+                return savedRulesDetails.BehavioralScore >= formRules.BehavioralScore1 && savedRulesDetails.BehavioralScore <= formRules.BehavioralScore2;
+            }
+            else if (formRules.BehavioralScoreCondition == 4)
+            {
+                return savedRulesDetails.BehavioralScore == formRules.BehavioralScore1;
+            }
+            return false;
+        }
 
-Obwohl die Zehnmillionstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.*10.000.000stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FFFFFFF" repräsentiert die sieben signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Zehnmillionstel einer Sekunde in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder sieben Nullstellen werden jedoch nicht angezeigt.
+        private bool CheckSessionIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.SessionIsTheirData)
+            {
+                savedRulesDetails.SessionIs = getDetails.GetSession(visitorDetails.DeviceId);
+                savedRulesDetails.SessionIsTheirData = true;
+            }
+            if (formRules.SessionConditionIsTrueOrIsFalse)
+                return savedRulesDetails.SessionIs >= formRules.SessionIs;
+            else if (!formRules.SessionConditionIsTrueOrIsFalse)
+                return savedRulesDetails.SessionIs < formRules.SessionIs;
+            else
+                return false;
+        }
 
-Obwohl die Zehnmillionstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.1.000.000stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "ffffff" repräsentiert die sechs signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Millionstel einer Sekunde in einem Datums- und Uhrzeitwert dar.
+        private bool CheckPageDepth(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.PageDepthIsTheirData)
+            {
+                savedRulesDetails.PageDepthIs = getDetails.GetPageDepeth(visitorDetails.DeviceId);
+                savedRulesDetails.PageDepthIsTheirData = true;
+            }
+            if (formRules.PageDepthConditionIsTrueOrIsFalse)
+                return savedRulesDetails.PageDepthIs >= formRules.PageDepthIs;
+            else if (!formRules.PageDepthConditionIsTrueOrIsFalse)
+                return savedRulesDetails.PageDepthIs < formRules.PageDepthIs;
+            else
+                return false;
+        }
 
-Obwohl die Millionstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.)1.000.000stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FFFFFF" repräsentiert die sechs signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Millionstel einer Sekunde in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder sechs Nullstellen werden jedoch nicht angezeigt.
+        private bool CheckPageviews(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.NPageVisitedIsTheirData)
+            {
+                savedRulesDetails.NPageVisited = getDetails.GetPageviews(visitorDetails.DeviceId);
+                savedRulesDetails.NPageVisitedIsTheirData = true;
+            }
+            if (formRules.PageViewConditionIsTrueOrIsFalse)
+                return savedRulesDetails.NPageVisited >= formRules.NPageVisited;
+            else if (!formRules.PageViewConditionIsTrueOrIsFalse)
+                return savedRulesDetails.NPageVisited < formRules.NPageVisited;
+            else
+                return false;
+        }
 
-Obwohl die Millionstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.100.000stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "fffff" repräsentiert die fünf signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Hunderttausendstel einer Sekunde in einem Datums- und Uhrzeitwert dar.
+        private bool CheckFrequency(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.FrequencyIsTheirData)
+            {
+                savedRulesDetails.FrequencyIs = getDetails.GetFrequency(visitorDetails.DeviceId);
+                savedRulesDetails.FrequencyIsTheirData = true;
+            }
+            if (formRules.FrequencyConditionIsTrueOrIsFalse)
+                return savedRulesDetails.FrequencyIs >= formRules.FrequencyIs;
+            else if (!formRules.FrequencyConditionIsTrueOrIsFalse)
+                return savedRulesDetails.FrequencyIs < formRules.FrequencyIs;
+            else
+                return false;
+        }
 
-Obwohl die Hunderttausendstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.'100.000stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FFFFF" repräsentiert die fünf signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Hunderttausendstel einer Sekunde in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder fünf Nullstellen werden jedoch nicht angezeigt.
+        private bool CheckPageurl(MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (formRules.IsPageUrlContainsCondition)
+            {
+                string[] conditionPageUrl = formRules.PageUrl.ToString().Split(',');
+                if (conditionPageUrl.Select(desUrl => desUrl.Trim().ToLower()).Any(temp1 => visitorDetails.PageUrl.ToLower().Contains(temp1)))
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                string[] conditionPageUrl = formRules.PageUrl.ToString().Split(',');
+                if (conditionPageUrl.Select(desUrl => desUrl.Trim().ToLower()).Any(temp1 => temp1 == visitorDetails.PageUrl.ToLower()))
+                {
+                    return true;
+                }
+            }
+            return false;
 
-Obwohl die Hunderttausendstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.10.000stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "ffff" repräsentiert die vier signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Zehntausendstel einer Sekunde in einem Datums- und Uhrzeitwert dar.
+        }
+        private bool CheckPageParameters(MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            string[] conditionPageParameters = formRules.PageParameters.ToString().Split(',');
+            if (conditionPageParameters.Select(desUrl => desUrl.Trim().ToLower()).Any(temp1 => temp1 == visitorDetails.PageParameters.ToLower()))
+            {
+                return true;
+            }
+            return false;
+        }
+        private bool CheckIsMailRespondent(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.IsMailIsRespondentlIsTheirData)
+            {
+                savedRulesDetails.IsMailIsRespondent = getDetails.IsMailRespondent(visitorDetails.EmailId);
+                savedRulesDetails.IsMailIsRespondentlIsTheirData = true;
+            }
+            if (formRules.MailRespondentConditionIsTrueOrIsFalse)
+                return savedRulesDetails.IsMailIsRespondent == true;
+            else if (!formRules.MailRespondentConditionIsTrueOrIsFalse)
+                return savedRulesDetails.IsMailIsRespondent == false;
+            else
+                return false;
+        }
 
-Obwohl die Zehntausendstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.&10.000stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FFFF" repräsentiert die vier signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Zehntausendstel einer Sekunde in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder vier Nullstellen werden jedoch nicht angezeigt.
+        private bool CheckCountry(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.CountryCityIsTheirData)
+            {
+                string[] CountryCity = getDetails.GetCityCountry(visitorDetails.DeviceId);
+                if (CountryCity.Length > 0)
+                    savedRulesDetails.Country = CountryCity[0];
+                if (CountryCity.Length > 1)
+                    savedRulesDetails.City = CountryCity[1];
+                savedRulesDetails.CountryCityIsTheirData = true;
+            }
 
-Obwohl die Zehntausendstel der Sekundenkomponente eines Uhrzeitwerts angezeigt werden können, ist dieser Wert möglicherweise nicht aussagekräftig. Die Genauigkeit von Datums- und Uhrzeitwerten hängt von der Auflösung der Systemuhr ab. Bei den Betriebssystemen Windows NT 3.5 (und höher) und Windows Vista beträgt die Auflösung der Systemuhr ca. 10–15 Millisekunden.1.000stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "fff" repräsentiert die drei signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Millisekunden in einem Datums- und Uhrzeitwert dar. %1.000stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FFF" repräsentiert die drei signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Millisekunden in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder drei Nullstellen werden jedoch nicht angezeigt.100stel einer Sekunde�Der benutzerdefinierte Formatbezeichner "ff" repräsentiert die zwei signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Hundertstelsekunden in einem Datums- und Uhrzeitwert dar.#100stel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "FF" repräsentiert die zwei signifikantesten Stellen des Sekundenbruchteils, d. h., er stellt die Hundertstelsekunden in einem Datums- und Uhrzeitwert dar. Nachgestellte Nullen oder zwei Nullstellen werden jedoch nicht angezeigt.Zehntel einer Sekunde�Der benutzerdefinierte Formatbezeichner "f" repräsentiert die signifikanteste Stelle des Sekundenbruchteils, d.h., er stellt die Zehntelsekunden in einem Datums- und Uhrzeitwert dar.
+            if (!String.IsNullOrEmpty(savedRulesDetails.Country))
+            {
 
-Bei Verwendung des Formatbezeichners "f" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner "f" für Datum und Uhrzeit interpretiert.
+                string[] countryCondition = formRules.Country.Split(new string[] { "@$" }, StringSplitOptions.RemoveEmptyEntries);
 
-Bei Verwendung des Formatbezeichners "f" als Teil einer Formatzeichenfolge zur Übergabe an die ParseExact- oder TryParseExact-Methode gibt die "f"-Formatbezeichneranzahl die Anzahl der signifikantesten Stellen des Sekundenbruchteils an, die vorhanden sein müssen, um die Zeichenfolge erfolgreich zu analysieren.#Zehntel einer Sekunde (ungleich 0)�Der benutzerdefinierte Formatbezeichner "F" repräsentiert die signifikanteste Stelle des Sekundenbruchteils, d. h., er stellt die Zehntelsekunden in einem Datums- und Uhrzeitwert dar. Wenn die Stelle 0 lautet, wird nichts angezeigt.
+                if (formRules.CountryConditionIsTrueOrIsFalse)
+                {
+                    if (countryCondition.Any(loca => loca.ToLower().Trim() == savedRulesDetails.Country.ToLower().Trim()))
+                    {
+                        return true;
+                    }
+                }
+                else if (!formRules.CountryConditionIsTrueOrIsFalse)
+                {
+                    if (countryCondition.All(loca => loca.ToLower().Trim() != savedRulesDetails.Country.ToLower().Trim()))
+                    {
+                        return true;
+                    }
+                }
 
-Bei Verwendung des Formatbezeichners "f" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner "f" für Datum und Uhrzeit interpretiert.
+            }
+            return false;
+        }
 
-Bei Verwendung des Formatbezeichners "f" als Teil einer Formatzeichenfolge zur Übergabe an die ParseExact-, TryParseExact-, ParseExact- oder TryParseExact-Methode gibt die f-Formatbezeichneranzahl die Anzahl der signifikantesten Stellen des Sekundenbruchteils an, die vorhanden sein müssen, um die Zeichenfolge erfolgreich zu analysieren."12-Stunden-Format (1–2 Stellen)�Der benutzerdefinierte Formatbezeichner "h" repräsentiert die Stunde als eine Zahl zwischen 1 und 12, d. h., die Stunde wird in einem 12-Stunden-Format dargestellt, bei dem die ganzen Stunden seit Mitternacht oder Mittag gezählt werden. Eine bestimmte Stunde nach Mitternacht ist nicht von der gleichen Stunde nach Mittag unterscheidbar. Der Stundenwert wird nicht gerundet, und ein einstelliger Stundenwert wird ohne führende Null formatiert. Beispielsweise zeigt dieser benutzerdefinierte Formatbezeichner bei der Uhrzeit 5:43 morgens oder nachmittags den Wert "5" an.
+        private bool CheckCity(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.CountryCityIsTheirData)
+            {
+                string[] CountryCity = getDetails.GetCityCountry(visitorDetails.DeviceId);
+                savedRulesDetails.Country = CountryCity[0];
+                savedRulesDetails.City = CountryCity[1];
+                savedRulesDetails.CountryCityIsTheirData = true;
+            }
 
-Bei Verwendung des Formatbezeichners "h" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner für Datum und Uhrzeit interpretiert und löst eine FormatException aus.12-Stunden-Format (2 Stellen)�Der benutzerdefinierte Formatbezeichner "hh" (plus beliebig viele zusätzliche h-Bezeichner) repräsentiert die Stunde als eine Zahl zwischen 01 und 12, d. h., die Stunde wird in einem 12-Stunden-Format dargestellt, bei dem die ganzen Stunden seit Mitternacht oder Mittag gezählt werden. Eine bestimmte Stunde nach Mitternacht ist nicht von der gleichen Stunde nach Mittag unterscheidbar. Der Stundenwert wird nicht gerundet, und ein einstelliger Stundenwert wird mit einer führenden Null formatiert. Beispielsweise zeigt dieser benutzerdefinierte Formatbezeichner bei der Uhrzeit 5:43 morgens oder nachmittags den Wert "05" an."24-Stunden-Format (1–2 Stellen)�Der benutzerdefinierte Formatbezeichner "H" repräsentiert die Stunde als eine Zahl zwischen 0 und 23, d. h., die Stunde wird in einem nullbasierten 24-Stunden-Format dargestellt, bei dem die Stunden seit Mitternacht gezählt werden. Ein einstelliger Stundenwert wird ohne führende Null formatiert.
 
-Bei Verwendung des Formatbezeichners "H" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner für Datum und Uhrzeit interpretiert und löst eine FormatException aus.24-Stunden-Format (2 Stellen)�Der benutzerdefinierte Formatbezeichner "HH" (plus beliebig viele zusätzliche H-Bezeichner) repräsentiert die Stunde als eine Zahl zwischen 00 und 23, d. h., die Stunde wird in einem nullbasierten 24-Stunden-Format dargestellt, bei dem die Stunden seit Mitternacht gezählt werden. Ein einstelliger Stundenwert wird mit einer führenden Null formatiert. Alle anonymen Typen im Container$und Aufrufsites direkt aktualisierenAttributAuto-Eigenschaft.Endgültiger Baum konnte nicht erstellt werdenclass(class with explicit or sequential layoutCodeConsole.WriteLineconst – Feld	KonstanteKonstruktorDatumstrennzeichen�	Der benutzerdefinierte Formatbezeichner "/" repräsentiert das Datumstrennzeichen, das zur Unterscheidung von Jahren, Monaten und Tagen verwendet wird. Das geeignete lokalisierte Datumstrennzeichen wird aus der DateTimeFormatInfo.DateSeparator-Eigenschaft der aktuellen oder angegebenen Kultur abgerufen.
+            if (!String.IsNullOrEmpty(savedRulesDetails.City))
+            {
+                string[] cityCondition = formRules.City.Split(new string[] { "@$" }, StringSplitOptions.RemoveEmptyEntries);
 
-Hinweis: Um das Datumstrennzeichen für eine bestimmte Datums- und Uhrzeitzeichenfolge zu ändern, geben Sie das Trennzeichen innerhalb eines Trennzeichens einer Literalzeichenfolge an. Beispielsweise erzeugt die benutzerdefinierte Formatzeichenfolge "mm'/'dd'/'yyyy" eine Ergebniszeichenfolge, in der stets "/" als Datumstrennzeichen verwendet wird. Um das Datumstrennzeichen für alle Datumswerte für eine Kultur zu ändern, ändern Sie entweder den Wert der DateTimeFormatInfo.DateSeparator-Eigenschaft der aktuellen Kultur, oder instanziieren Sie ein DateTimeFormatInfo-Objekt, weisen Sie das Zeichen der zugehörigen DateSeparator-Eigenschaft zu, und rufen Sie eine Überladung der Formatierungsmethode auf, die einen IFormatProvider-Parameter umfasst.
+                if (formRules.CityConditionIsTrueOrIsFalse)
+                {
+                    if (cityCondition.Any(loca => loca.ToLower().Trim() == savedRulesDetails.City.ToLower().Trim()))
+                    {
+                        return true;
+                    }
+                }
+                else if (!formRules.CityConditionIsTrueOrIsFalse)
+                {
+                    if (cityCondition.All(loca => loca.ToLower().Trim() != savedRulesDetails.City.ToLower().Trim()))
+                    {
+                        return true;
+                    }
+                }
+            }
 
-Bei Verwendung des Formatbezeichners "/" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner für Datums- und Uhrzeitwerte interpretiert und löst eine FormatException aus.Tag des Monats (1–2 Stellen)�Der benutzerdefinierte Formatbezeichner "d" repräsentiert den Tag des Monats als eine Zahl zwischen 1 und 31. Ein einstelliger Tageswert wird ohne führende Null formatiert.
+            return false;
+        }
+        private bool CheckAlreadyVisitedPages(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            return getDetails.AlreadyVisitedPages(visitorDetails.DeviceId, formRules.FormId, 0, visitorDetails.FormType);
+        }
 
-Bei Verwendung des Formatbezeichners "d" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner "d" für Datum und Uhrzeit interpretiert.Tag des Monats (2 Stellen)�Der benutzerdefinierte Formatbezeichner "dd" repräsentiert den Tag des Monats als eine Zahl zwischen 01 und 31. Ein einstelliger Tageswert wird mit einer führenden Null formatiert.Tag der Woche (abgekürzt)�Der benutzerdefinierte Formatbezeichner "ddd" repräsentiert den abgekürzten Namen des Wochentags. Der lokalisierte abgekürzte Name des Wochentags wird aus der DateTimeFormatInfo.AbbreviatedDayNames-Eigenschaft der aktuellen oder angegebenen Kultur abgerufen.Tag der Woche (vollständig)�Der benutzerdefinierte Formatbezeichner "dddd" (plus beliebig viele zusätzliche d-Bezeichner) repräsentiert den vollständigen Namen des Wochentags. Der lokalisierte Name des Wochentags wird aus der DateTimeFormatInfo.DayNames-Eigenschaft der aktuellen oder angegebenen Kultur abgerufen.delegateAusschussvariable„else“-AnweisungEingebettetenumenum – WerteventEreignisaccessorExternFeldforeach-Schleifeaus {0}aus Metadaten%Vollständige(s) Datum/Uhrzeit (lang)�Der Standardformatbezeichner "F" repräsentiert eine benutzerdefinierte Datums- und Uhrzeitzeichenfolge, die durch die aktuelle DateTimeFormatInfo.FullDateTimePattern-Eigenschaft definiert ist. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur lautet beispielsweise "dddd, dd MMMM yyyy HH:mm:ss".%Vollständige(s) Datum/Uhrzeit (kurz)�Formatbezeichner für das Datum in Langform und die Uhrzeit in Kurzform ("f")
+        private bool CheckOverAllTimeSpentInSite(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.OverAllTimeSpentInSiteIsTheirData)
+            {
+                savedRulesDetails.OverAllTimeSpentInSite = getDetails.OverAllTimeSpentInSite(visitorDetails.DeviceId);
+                savedRulesDetails.OverAllTimeSpentInSiteIsTheirData = true;
+            }
+            return savedRulesDetails.OverAllTimeSpentInSite >= formRules.OverAllTimeSpentInSite;
+        }
 
-Der Standardformatbezeichner "f" repräsentiert eine Kombination aus den Mustern für das lange Datumsformat ("D") und das kurze Uhrzeitformat ("t"), getrennt durch ein Leerzeichen."Allgemeine(s) Datum/Uhrzeit (lang)�Der Standardformatbezeichner "G" repräsentiert eine Kombination aus den Mustern für das kurze Datumsformat ("d") und das lange Uhrzeitformat ("T"), getrennt durch ein Leerzeichen."Allgemeine(s) Datum/Uhrzeit (kurz)�Der Standardformatbezeichner "g" repräsentiert eine Kombination aus den Mustern für das kurze Datumsformat ("d") und das kurze Uhrzeitformat ("t"), getrennt durch ein Leerzeichen.Jgenerierter Code überschneidet sich mit dem ausgeblendeten Teil des CodesCDas Generieren der Symbolquelle dieses Typs wird nicht unterstütztgenerische Überladunggenerische Überladungen„get-only“-EigenschaftWenn-AnweisungEinin {0} ({1}–{2})in "{0}" (Projekt "{1}")	In Quellein Quelle (Attribut)In Unt
+        //private bool IsAndriodMobileBrowser(VisitorSaveRulesDetails savedRulesDetails, VisitorDetails visitorDetails, FormRules formRules)
+        //{
+        //    if (formRules.IsMobileDevice == 1)
+        //    {
+        //        return getDetails.iAndriodBrowser();
+        //    }
+        //    else if (formRules.IsMobileDevice == 2)
+        //    {
+        //        return getDetails.isMobileBrowser(visitorDetails.DeviceId);
+        //    }
+        //    return false;
+        //}
+
+        #endregion Behavior Conditions
+
+        #region Interaction Rule
+
+        private bool ByInteraction(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            bool clickedRecentButton = formRules.IsClickedRecentButtons != null && formRules.IsClickedRecentButtons.Length > 0 ? CheckRecentClickedButton(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!clickedRecentButton) return false;
+
+            bool clickedButton = formRules.IsClickedSpecificButtons != null && formRules.IsClickedSpecificButtons.Length > 0 ? CheckClickedButton(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!clickedButton) return false;
+
+            bool clickedPriceRangeProduct = formRules.ClickedPriceRangeProduct != null && formRules.ClickedPriceRangeProduct.Length > 0 ? CheckClickedSpecificPriceRange(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!clickedPriceRangeProduct) return false;
+
+            bool isVisitorRespondedChat = formRules.IsVisitorRespondedChat ? CheckRespondedChatAgent(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isVisitorRespondedChat) return false;
+
+            bool mailCampignResponsiveStage = formRules.MailCampignResponsiveStage > 0 ? CheckMailCampaignsStage(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!mailCampignResponsiveStage) return false;
+
+            bool isRespondedForm = formRules.IsRespondedForm > 0 ? CheckResponseFormList(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isRespondedForm) return false;
+
+            bool isNotRespondedForm = formRules.IsNotRespondedForm > 0 ? CheckNotResponseFormList(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isNotRespondedForm) return false;
+
+            //bool answerDependency = formRules.DependencyFormId > 0 ? CheckAnswerDependency(savedRulesDetails, visitorDetails, formRules) : true;
+            //if (!answerDependency) return false;
+
+            bool closeCount = formRules.CloseCount > 0 ? CheckClosedFormNthTime(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!closeCount) return false;
+
+            bool isaddedProductsToCart = formRules.AddedProductsToCart != null && formRules.AddedProductsToCart.Length > 0 ? CheckVisitorAddProductToCart(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isaddedProductsToCart) return false;
+
+            bool isViewedButNotAddedProductsToCart = formRules.ViewedButNotAddedProductsToCart != null && formRules.ViewedButNotAddedProductsToCart.Length > 0 ? VisitorViewedButNotAdded(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isViewedButNotAddedProductsToCart) return false;
+
+            bool isDroppedProductsFromCart = formRules.DroppedProductsFromCart != null && formRules.DroppedProductsFromCart.Length > 0 ? VisitorDroppedFromCart(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isDroppedProductsFromCart) return false;
+
+            bool isPurchasedProducts = formRules.PurchasedProducts != null && formRules.PurchasedProducts.Length > 0 ? CustomerPurchasedProducts(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isPurchasedProducts) return false;
+
+            bool isNotPurchasedProducts = formRules.NotPurchasedProducts != null && formRules.NotPurchasedProducts.Length > 0 ? CustomerNotPurchasedProducts(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isNotPurchasedProducts) return false;
+
+            bool isCustomerTotalPurchase = formRules.CustomerTotalPurchase > 0 ? CustomerTotalPurchase(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isCustomerTotalPurchase) return false;
+
+            bool isCustomerCurrentValue = formRules.CustomerCurrentValue > 0 ? CustomerCurrentValue(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isCustomerCurrentValue) return false;
+
+            bool IsBusinessOrIndividualMember = formRules.IsBusinessOrIndividualMember ? BusinessOrIndividualMember(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!IsBusinessOrIndividualMember) return false;
+
+            bool IsOfflineOrOnlinePurchase = formRules.IsOfflineOrOnlinePurchase ? OfflineOrOnlinePurchase(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!IsOfflineOrOnlinePurchase) return false;
+
+            bool lastPurchaseInterval = formRules.LastPurchaseIntervalCondition > 0 ? LastPurchaseInterval(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!lastPurchaseInterval) return false;
+
+            bool customerExpirdayInterval = formRules.CustomerExpirdayIntervalCondition > 0 ? CustomerExpirdayInterval(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!customerExpirdayInterval) return false;
+
+
+            bool isOnlineSentimentIs = formRules.OnlineSentimentIs > 0 ? SentimentIs(savedRulesDetails, visitorDetails, formRules) : true;
+
+            return clickedRecentButton && clickedButton && clickedPriceRangeProduct && isVisitorRespondedChat && mailCampignResponsiveStage && isRespondedForm && isNotRespondedForm && closeCount &&
+                   isaddedProductsToCart && isViewedButNotAddedProductsToCart && isDroppedProductsFromCart && isPurchasedProducts && isNotPurchasedProducts && isCustomerTotalPurchase &&
+                   isCustomerCurrentValue && isOnlineSentimentIs && IsBusinessOrIndividualMember && IsOfflineOrOnlinePurchase &&
+                    lastPurchaseInterval && customerExpirdayInterval;
+        }
+        private bool CheckRecentClickedButton(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.IsClickedRecentButtonsIsTheirData)
+            {
+                savedRulesDetails.IsClickedRecentButtons = getDetails.GetRecentEvent(visitorDetails.DeviceId);
+                savedRulesDetails.IsClickedRecentButtonsIsTheirData = true;
+            }
+
+            formRules.IsClickedRecentButtons = System.Text.RegularExpressions.Regex.Replace(formRules.IsClickedRecentButtons, @"\s+", "");
+            savedRulesDetails.IsClickedRecentButtons = System.Text.RegularExpressions.Regex.Replace(savedRulesDetails.IsClickedRecentButtons, @"\s+", "");
+
+            string[] formConditionClicks = formRules.IsClickedRecentButtons.Split(',');
+            string[] userClickedData = savedRulesDetails.IsClickedRecentButtons.Split(',');
+
+            var result = formConditionClicks.Intersect(userClickedData);
+
+            return result != null && result.Count() > 0;
+        }
+        private bool CheckClickedButton(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.IsClickedSpecificButtonsIsTheirData)
+            {
+                savedRulesDetails.IsClickedSpecificButtons = getDetails.GetClickedButton(visitorDetails.DeviceId);
+                savedRulesDetails.IsClickedSpecificButtonsIsTheirData = true;
+            }
+
+            formRules.IsClickedSpecificButtons = System.Text.RegularExpressions.Regex.Replace(formRules.IsClickedRecentButtons, @"\s+", "");
+            savedRulesDetails.IsClickedSpecificButtons = System.Text.RegularExpressions.Regex.Replace(savedRulesDetails.IsClickedRecentButtons, @"\s+", "");
+
+            string[] formConditionClicks = formRules.IsClickedSpecificButtons.Split(',');
+            string[] userClickedData = savedRulesDetails.IsClickedSpecificButtons.Split(',');
+
+            var result = formConditionClicks.Intersect(userClickedData);
+
+            return result != null && result.Count() > 0;
+        }
+
+        private bool CheckClickedSpecificPriceRange(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ClickedPriceRangeProductIsTheirData)
+            {
+                savedRulesDetails.ClickedPriceRangeProduct = getDetails.GetClickedButton(visitorDetails.DeviceId);
+                savedRulesDetails.ClickedPriceRangeProductIsTheirData = true;
+            }
+
+            formRules.ClickedPriceRangeProduct = System.Text.RegularExpressions.Regex.Replace(formRules.ClickedPriceRangeProduct, @"\s+", "");
+            savedRulesDetails.ClickedPriceRangeProduct = System.Text.RegularExpressions.Regex.Replace(savedRulesDetails.ClickedPriceRangeProduct, @"\s+", "");
+
+            string[] formConditionClicks = formRules.ClickedPriceRangeProduct.Split(',');
+            string[] userClickedData = savedRulesDetails.ClickedPriceRangeProduct.Split(',');
+
+            var result = formConditionClicks.Intersect(userClickedData);
+
+            return result != null && result.Count() > 0;
+        }
+
+        private bool CheckRespondedChatAgent(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.IsVisitorRespondedChatIsTheirData)
+            {
+                savedRulesDetails.IsVisitorRespondedChat = getDetails.RespondedChatAgent(visitorDetails.EmailId);
+                savedRulesDetails.IsVisitorRespondedChatIsTheirData = true;
+            }
+            return savedRulesDetails.IsVisitorRespondedChat;
+        }
+
+        private bool CheckMailCampaignsStage(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.MailCampignResponsiveStageIsTheirData)
+            {
+                byte[] MailStageScore = getDetails.MailCampignResponsiveStage(visitorDetails.EmailId);
+                savedRulesDetails.MailCampignResponsiveStage = MailStageScore[0];
+                savedRulesDetails.MailCampignResponsiveStageScore = MailStageScore[1];
+
+                savedRulesDetails.MailCampignResponsiveStageIsTheirData = true;
+            }
+
+            if (savedRulesDetails.MailCampignResponsiveStage > 0)
+            {
+                byte visitorResponseStage = savedRulesDetails.MailCampignResponsiveStage;
+                byte scoreType = savedRulesDetails.MailCampignResponsiveStageScore;
+
+                if (formRules.MailCampignResponsiveStage == 1 && scoreType == 1)
+                    return visitorResponseStage >= 10 && visitorResponseStage <= 10;
+                else if (formRules.MailCampignResponsiveStage == 2 && scoreType == 1)
+                    return visitorResponseStage >= 4 && visitorResponseStage <= 9;
+                else if (formRules.MailCampignResponsiveStage == 3 && scoreType == 1)
+                    return visitorResponseStage >= 0 && visitorResponseStage <= 3;
+                else if (formRules.MailCampignResponsiveStage == 6 && scoreType == 2)
+                    return visitorResponseStage >= 1 && visitorResponseStage <= 3;
+                else if (formRules.MailCampignResponsiveStage == 7 && scoreType == 2)
+                    return visitorResponseStage >= 4 && visitorResponseStage <= 10;
+                else if (formRules.MailCampignResponsiveStage == 4 && scoreType == 0)
+                    return visitorResponseStage >= 0 && visitorResponseStage <= 10;
+                else if (formRules.MailCampignResponsiveStage == 5 && scoreType == 0)
+                    return visitorResponseStage >= 0 && visitorResponseStage <= 0;
+                else if (formRules.MailCampignResponsiveStage == 8 && scoreType == 0)
+                    return visitorResponseStage >= 255 && visitorResponseStage <= 0;
+            }
+
+            return false;
+        }
+
+        private bool CheckResponseFormList(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.FormRespondedListIsTheirData)
+            {
+                savedRulesDetails.FormRespondedList = getDetails.ResponseFormList(visitorDetails.DeviceId, visitorDetails.FormType);
+                savedRulesDetails.FormRespondedListIsTheirData = true;
+            }
+
+            foreach (var eachItem in savedRulesDetails.FormRespondedList)
+            {
+                if (eachItem == formRules.IsRespondedForm)
+                    return true;
+            }
+            return false;
+        }
+
+        private bool CheckNotResponseFormList(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.FormRespondedListIsTheirData)
+            {
+                savedRulesDetails.FormRespondedList = getDetails.ResponseFormList(visitorDetails.DeviceId, visitorDetails.FormType);
+                savedRulesDetails.FormRespondedListIsTheirData = true;
+            }
+
+            foreach (var eachItem in savedRulesDetails.FormRespondedList)
+            {
+                if (eachItem == formRules.IsNotRespondedForm)
+                    return false;
+            }
+            return true;
+        }
+
+
+        //pending.............................
+
+
+        //private bool CheckAnswerDependency(VisitorSaveRulesDetails savedRulesDetails, VisitorDetails visitorDetails, FormRules formRules)
+        //{
+        //    using (DataSet dsLead = getDetails.FormLeadDetailsAnswerDependency(visitorDetails.DeviceId, formRules.DependencyFormId))
+        //    {
+        //        GenralInteractionWithBL fields = new GenralInteractionWithBL(visitorDetails.AdsId);
+        //        List<FormFields> fieldList = fields.GetFields(formRules.DependencyFormId);
+
+        //        int FieldIndex = fieldList.FindIndex(c => c.Id == formRules.DependencyFormField);
+
+        //        if (dsLead.Tables.Count > 0 && dsLead.Tables[0].Rows.Count > 0)
+        //        {
+        //            if (!String.IsNullOrEmpty(dsLead.Tables[0].Rows[0][FieldIndex].ToString()) && FieldIndex > -1)
+        //            {
+        //                long dependencyFormAnswer1 = 0;
+        //                bool dependencyFormAnswer1IsInteger = long.TryParse(formRules.DependencyFormAnswer1, out dependencyFormAnswer1);
+
+        //                long dependencyFormAnswer2 = 0;
+        //                bool dependencyFormAnswer2IsInteger = long.TryParse(formRules.DependencyFormAnswer2, out dependencyFormAnswer2);
+
+        //                long conditionValue = 0;
+        //                bool conditionValueIsInteger = long.TryParse(dsLead.Tables[0].Rows[0][FieldIndex].ToString(), out conditionValue);
+
+        //                if (formRules.DependencyFormCondition == 1 && conditionValueIsInteger && dependencyFormAnswer1IsInteger)
+        //                    return dependencyFormAnswer1 > conditionValue;
+        //                else if (formRules.DependencyFormCondition == 2 && conditionValueIsInteger && dependencyFormAnswer1IsInteger)
+        //                    return dependencyFormAnswer1 < conditionValue;
+        //                else if (formRules.DependencyFormCondition == 3 && conditionValueIsInteger && dependencyFormAnswer1IsInteger && dependencyFormAnswer2IsInteger)
+        //                    return conditionValue >= dependencyFormAnswer1 && conditionValue <= dependencyFormAnswer2;
+        //                else if (formRules.DependencyFormCondition == 4)
+        //                    if (conditionValueIsInteger)
+        //                        return conditionValue == dependencyFormAnswer1;
+        //                    else
+        //                        return dsLead.Tables[0].Rows[0][FieldIndex].ToString() == formRules.DependencyFormAnswer1;
+        //            }
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        private bool CheckClosedFormNthTime(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (formRules.CloseCountSessionWiseOrOverAll)
+            {
+                if (!savedRulesDetails.CloseCountIsTheirData)
+                {
+                    savedRulesDetails.CloseCount = getDetails.ClosedFormNthTime(visitorDetails.DeviceId, formRules.FormId, visitorDetails.FormType);
+                    savedRulesDetails.CloseCountIsTheirData = true;
+                }
+            }
+            else if (!formRules.CloseCountSessionWiseOrOverAll)
+            {
+                if (!savedRulesDetails.CloseCountSessionWise)
+                {
+                    savedRulesDetails.CloseCount = getDetails.ClosedFormSessionWise(visitorDetails.DeviceId, visitorDetails.Session, formRules.FormId, visitorDetails.FormType);
+                    savedRulesDetails.CloseCountSessionWise = true;
+                }
+            }
+            if (savedRulesDetails.CloseCount >= formRules.CloseCount)
+                return false;
+            return true;
+        }
+
+        private bool CheckVisitorAddProductToCart(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.AddedProductsToCartIsTheirData)
+            {
+                savedRulesDetails.AddedProductsToCart = getDetails.AddProductToCart(visitorDetails.DeviceId);
+                savedRulesDetails.AddedProductsToCartIsTheirData = true;
+            }
+            foreach (string conditionProducts in formRules.AddedProductsToCart.Split(','))
+                foreach (string userProduct in savedRulesDetails.AddedProductsToCart.Split(','))
+                {
+                    if (userProduct.ToString().ToLower() == conditionProducts.Trim().ToLower())
+                    {
+                        return true;
+                    }
+                }
+            return false;
+        }
+
+        private bool VisitorViewedButNotAdded(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ViewedButNotAddedProductsToCartIsTheirData)
+            {
+                savedRulesDetails.ViewedButNotAddedProductsToCart = getDetails.ViewedButNotAddedProductsToCart(visitorDetails.DeviceId, visitorDetails.ContactId, formRules.FormId);
+                savedRulesDetails.ViewedButNotAddedProductsToCartIsTheirData = true;
+            }
+            //foreach (string conditionProducts in browserRules.ViewedButNotAddedProductsToCart.Split(','))
+            //    foreach (string userProduct in savedRulesDetails.ViewedButNotAddedProductsToCart.Split(','))
+            //    {
+            //        if (userProduct.Trim().ToLower() == conditionProducts.Trim().ToLower())
+            //        {
+            //            return true;
+            //        }
+            //    }
+            if (savedRulesDetails.ViewedButNotAddedProductsToCart.Length > 0)
+                return true;
+            return false;
+        }
+
+        private bool VisitorDroppedFromCart(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.DroppedProductsFromCartIsTheirData)
+            {
+                savedRulesDetails.DroppedProductsFromCart = getDetails.DroppedProductsFromCart(visitorDetails.DeviceId, visitorDetails.ContactId, formRules.FormId);
+                savedRulesDetails.DroppedProductsFromCartIsTheirData = true;
+            }
+            //foreach (string conditionProducts in browserRules.DroppedProductsFromCart.Split(','))
+            //    foreach (string userProduct in savedRulesDetails.DroppedProductsFromCart.Split(','))
+            //    {
+            //        if (userProduct.Trim().ToLower() == conditionProducts.Trim().ToLower())
+            //        {
+            //            return true;
+            //        }
+            //    }
+            if (savedRulesDetails.DroppedProductsFromCart.Length > 0)
+                return true;
+            return false;
+        }
+
+        private bool CustomerPurchasedProducts(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.PurchasedProductsIsTheirData)
+            {
+                savedRulesDetails.PurchasedProducts = getDetails.PurchasedProducts(visitorDetails.DeviceId);
+                savedRulesDetails.PurchasedProductsIsTheirData = true;
+            }
+            foreach (string conditionProducts in formRules.PurchasedProducts.Split(','))
+                foreach (string userProduct in savedRulesDetails.PurchasedProducts.Split(','))
+                {
+                    if (userProduct.Trim().ToLower() == conditionProducts.Trim().ToLower())
+                    {
+                        return true;
+                    }
+                }
+            return false;
+        }
+
+        private bool CustomerNotPurchasedProducts(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.PurchasedProductsIsTheirData)
+            {
+                savedRulesDetails.PurchasedProducts = getDetails.PurchasedProducts(visitorDetails.DeviceId);
+                savedRulesDetails.PurchasedProductsIsTheirData = true;
+            }
+            foreach (string conditionProducts in formRules.PurchasedProducts.Split(','))
+                foreach (string userProduct in savedRulesDetails.PurchasedProducts.Split(','))
+                {
+                    if (userProduct.Trim().ToLower() == conditionProducts.Trim().ToLower())
+                    {
+                        return false;
+                    }
+                }
+            return true;
+        }
+
+        private bool CustomerTotalPurchase(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.CustomerTotalPurchaseIsTheirData)
+            {
+                savedRulesDetails.CustomerTotalPurchase = getDetails.CustomerTotalPurchase(visitorDetails.DeviceId);
+                savedRulesDetails.CustomerTotalPurchaseIsTheirData = true;
+            }
+
+            if (formRules.CustomerTotalPurchase >= savedRulesDetails.CustomerTotalPurchase)
+                return true;
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool CustomerCurrentValue(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.CustomerCurrentValueIsTheirData)
+            {
+                savedRulesDetails.CustomerCurrentValue = getDetails.CustomerCurrentValue(visitorDetails.DeviceId);
+                savedRulesDetails.CustomerCurrentValueIsTheirData = true;
+            }
+
+            if (formRules.CustomerCurrentValue >= savedRulesDetails.CustomerCurrentValue)
+                return true;
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="browserRules"></param>
+        /// <returns></returns>
+        private bool BusinessOrIndividualMember(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules browserRules)
+        {
+            if (!savedRulesDetails.IsBusinessOrIndividualMemberIsTheirData)
+            {
+                savedRulesDetails.IsBusinessOrIndividualMember = getDetails.IsBusinessOrIndividualMember(visitorDetails.DeviceId, visitorDetails.ContactId);
+                savedRulesDetails.IsBusinessOrIndividualMemberIsTheirData = true;
+            }
+            if (browserRules.IsBusinessOrIndividualMember)
+                return savedRulesDetails.IsBusinessOrIndividualMember == true;
+            else if (!browserRules.IsBusinessOrIndividualMember)
+                return savedRulesDetails.IsBusinessOrIndividualMember == false;
+            else
+                return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="browserRules"></param>
+        /// <returns></returns>
+        private bool OfflineOrOnlinePurchase(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules browserRules)
+        {
+            if (!savedRulesDetails.IsOfflineOrOnlinePurchaseIsTheirData)
+            {
+                savedRulesDetails.IsOfflineOrOnlinePurchase = getDetails.IsOfflineOrOnlinePurchase(visitorDetails.DeviceId, visitorDetails.ContactId);
+                savedRulesDetails.IsOfflineOrOnlinePurchaseIsTheirData = true;
+            }
+            if (browserRules.IsOfflineOrOnlinePurchase)
+                return savedRulesDetails.IsOfflineOrOnlinePurchase == true;
+            else if (!browserRules.IsOfflineOrOnlinePurchase)
+                return savedRulesDetails.IsOfflineOrOnlinePurchase == false;
+            else
+                return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="browserRules"></param>
+        /// <returns></returns>
+        private bool LastPurchaseInterval(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules browserRules)
+        {
+            if (!savedRulesDetails.LastPurchaseIntervalIsTheirData)
+            {
+                savedRulesDetails.LastPurchaseInterval = getDetails.GetLastPurchaseInterval(visitorDetails.DeviceId, visitorDetails.ContactId);
+                savedRulesDetails.LastPurchaseIntervalIsTheirData = true;
+            }
+            if (browserRules.LastPurchaseIntervalCondition == 1)
+            {
+                return savedRulesDetails.LastPurchaseInterval > browserRules.LastPurchaseIntervalRange1;
+            }
+            else if (browserRules.LastPurchaseIntervalCondition == 2)
+            {
+                return savedRulesDetails.LastPurchaseInterval < browserRules.LastPurchaseIntervalRange1;
+            }
+            else if (browserRules.LastPurchaseIntervalCondition == 3)
+            {
+                return savedRulesDetails.LastPurchaseInterval >= browserRules.LastPurchaseIntervalRange1 && savedRulesDetails.LastPurchaseInterval <= browserRules.LastPurchaseIntervalRange2;
+            }
+            else if (browserRules.LastPurchaseIntervalCondition == 4)
+            {
+                return savedRulesDetails.LastPurchaseInterval == browserRules.LastPurchaseIntervalRange1;
+            }
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="browserRules"></param>
+        /// <returns></returns>
+        private bool CustomerExpirdayInterval(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules browserRules)
+        {
+            if (!savedRulesDetails.CustomerExpirdayIntervalIsTheirData)
+            {
+                savedRulesDetails.CustomerExpirdayInterval = getDetails.GetCustomerExpirdayInterval(visitorDetails.DeviceId, visitorDetails.ContactId);
+                savedRulesDetails.CustomerExpirdayIntervalIsTheirData = true;
+            }
+            if (browserRules.CustomerExpirdayIntervalCondition == 1)
+            {
+                return savedRulesDetails.CustomerExpirdayInterval > browserRules.CustomerExpirdayIntervalRange1;
+            }
+            else if (browserRules.CustomerExpirdayIntervalCondition == 2)
+            {
+                return savedRulesDetails.CustomerExpirdayInterval < browserRules.CustomerExpirdayIntervalRange1;
+            }
+            else if (browserRules.CustomerExpirdayIntervalCondition == 3)
+            {
+                return savedRulesDetails.CustomerExpirdayInterval >= browserRules.CustomerExpirdayIntervalRange1 && savedRulesDetails.CustomerExpirdayInterval <= browserRules.CustomerExpirdayIntervalRange2;
+            }
+            else if (browserRules.CustomerExpirdayIntervalCondition == 4)
+            {
+                return savedRulesDetails.CustomerExpirdayInterval == browserRules.CustomerExpirdayIntervalRange1;
+            }
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool SentimentIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.OnlineSentimentIsTheirData)
+            {
+                savedRulesDetails.OnlineSentimentIs = getDetails.OnlineSentimentIs(visitorDetails.EmailId);
+                savedRulesDetails.OnlineSentimentIsTheirData = true;
+            }
+            if (formRules.OnlineSentimentIs >= savedRulesDetails.OnlineSentimentIs)
+                return true;
+            return false;
+        }
+
+        #endregion Interaction Rule
+
+        #region Interaction Event
+
+        private bool ByInteractionEvent(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            bool formImpression = formRules.ImpressionEventForFormId > -1 && formRules.ImpressionEventCountCondition > 0 ? CheckFormImpression(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!formImpression) return false;
+
+            bool formCloseCount = formRules.CloseEventForFormId > -1 && formRules.CloseEventCountCondition > 0 ? CheckFormCloseCount(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!formCloseCount) return false;
+
+            bool formResponseCount = formRules.ResponsesEventForFormId > -1 && formRules.ResponsesEventCountCondition > 0 ? CheckFormResponseCount(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!formResponseCount) return false;
+
+            bool ShowThisFormOnlyNthTime = formRules.ShowFormOnlyNthTime > 0 ? CheckShowThisFormOnlyNthTime(savedRulesDetails, visitorDetails, formRules) : true;
+
+            return formImpression && formCloseCount && formResponseCount && ShowThisFormOnlyNthTime;
+        }
+
+        private bool CheckFormImpression(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ImpressionEventCountConditionIsTheirData)
+            {
+                savedRulesDetails.ImpressionEventCountCondition = getDetails.GetFormImpression(visitorDetails.DeviceId, formRules.ImpressionEventForFormId, visitorDetails.FormType);
+                savedRulesDetails.ImpressionEventCountConditionIsTheirData = true;
+            }
+
+            return savedRulesDetails.ImpressionEventCountCondition >= formRules.ImpressionEventCountCondition;
+        }
+
+        private bool CheckFormCloseCount(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.CloseEventCountConditionIsTheirData)
+            {
+                savedRulesDetails.CloseEventCountCondition = getDetails.GetFormCloseCount(visitorDetails.DeviceId, formRules.CloseEventForFormId, visitorDetails.FormType);
+                savedRulesDetails.CloseEventCountConditionIsTheirData = true;
+            }
+
+            return savedRulesDetails.CloseEventCountCondition >= formRules.CloseEventCountCondition;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool CheckFormResponseCount(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ResponsesEventCountConditionIsTheirData)
+            {
+                savedRulesDetails.ResponsesEventCountCondition = getDetails.GetFormResponseCount(visitorDetails.DeviceId, formRules.ResponsesEventForFormId, visitorDetails.FormType);
+                savedRulesDetails.ResponsesEventCountConditionIsTheirData = true;
+            }
+
+            return savedRulesDetails.ResponsesEventCountCondition >= formRules.ResponsesEventCountCondition;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool CheckShowThisFormOnlyNthTime(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ShowFormOnlyNthTimeIsTheirData)
+            {
+                savedRulesDetails.ShowFormOnlyNthTime = getDetails.GetCountShowThisFormOnlyNthTime(visitorDetails.DeviceId, formRules.FormId, visitorDetails.FormType);
+                savedRulesDetails.ShowFormOnlyNthTimeIsTheirData = true;
+
+            }
+            // Here condition is less means, then only show form other wise don't show.
+            return savedRulesDetails.ShowFormOnlyNthTime < formRules.ShowFormOnlyNthTime;
+        }
+        #endregion Interaction Event
+
+        #region Profile Rule
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ByProfile(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            //bool isOnlinSentimentIs = formRules.OnlineSentimentIs > 0 ? ChekOnlineSentiment(savedRulesDetails, visitorDetails, formRules) : true;
+            //if (!isOnlinSentimentIs) return false;
+
+            bool isSocialStatusIsActive = formRules.SocialStatusIs > 0 ? ChekFacebookRecentStatus(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isSocialStatusIsActive) return false;
+
+            bool isInfluentialScore = formRules.InfluentialScoreCondition > 0 ? InfluentialScore(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isInfluentialScore) return false;
+
+            //bool isOfflineSentimentIs = formRules.OfflineSentimentIs > 0 ? savedRulesDetails.OfflineSentimentIs == 1 ? true : false : true;
+            //if (!isOfflineSentimentIs) return false;
+
+            bool isProductRating = formRules.ProductRatingIs > 0 ? ProductRatingIs(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isProductRating) return false;
+
+            //bool isNurtureStatusIs = formRules.NurtureStatusIs >= -1 ? NurtureStatusIs(savedRulesDetails, visitorDetails, formRules) : true;
+            //if (!isNurtureStatusIs) return false;
+
+            bool isGenderIs = formRules.GenderIs != null && formRules.GenderIs.Length > 1 ? GetGenderValue(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isGenderIs) return false;
+
+            bool isMaritalStatus = formRules.MaritalStatusIs > 0 ? GetMaritalStatus(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isMaritalStatus) return false;
+
+            bool isProfessionIs = formRules.ProfessionIs != null && formRules.ProfessionIs.Length > 1 ? CheckProfessionIs(savedRulesDetails, visitorDetails, formRules) ? true : false : true;
+            if (!isProfessionIs) return false;
+
+            bool isConnectedSocially = formRules.NotConnectedSocially > 0 ? ConnectedSocially(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isConnectedSocially) return false;
+
+            bool isLoyaltyPointsCondition = formRules.LoyaltyPointsCondition > 0 ? LoyaltyPoints(savedRulesDetails, visitorDetails, formRules) : true;
+            if (!isLoyaltyPointsCondition) return false;
+
+            bool isRFMSScoreRangeCondition = formRules.RFMSScoreRangeCondition > 0 ? RFMSScoreIs(savedRulesDetails, visitorDetails, formRules) : true;
+
+            return isSocialStatusIsActive && isInfluentialScore && isGenderIs && isMaritalStatus && isProfessionIs && isProfessionIs
+                   && isConnectedSocially && isProductRating && isLoyaltyPointsCondition && isRFMSScoreRangeCondition;
+
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ChekOnlineSentiment(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.OnlineSentimentIsTheirData)
+            {
+                savedRulesDetails.OnlineSentimentIs = getDetails.OnlineSentimentIs(visitorDetails.EmailId);
+                savedRulesDetails.OnlineSentimentIsTheirData = true;
+            }
+            return savedRulesDetails.OnlineSentimentIs == formRules.OnlineSentimentIs;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ChekFacebookRecentStatus(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.SocialStatusIsTheirData)
+            {
+                savedRulesDetails.SocialStatusIs = getDetails.SocialStatusIs(visitorDetails.ContactId);
+                savedRulesDetails.SocialStatusIsTheirData = true;
+            }
+            return savedRulesDetails.SocialStatusIs == formRules.SocialStatusIs;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool InfluentialScore(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ImpressionEventCountConditionIsTheirData)
+            {
+                savedRulesDetails.InfluentialScore = getDetails.InfluentialScore(visitorDetails.ContactId);
+                savedRulesDetails.ImpressionEventCountConditionIsTheirData = false;
+            }
+            if (formRules.InfluentialScoreCondition == 1)
+                return savedRulesDetails.InfluentialScore > formRules.InfluentialScore1;
+            else if (formRules.InfluentialScoreCondition == 2)
+                return savedRulesDetails.InfluentialScore < formRules.InfluentialScore1;
+            else if (formRules.InfluentialScoreCondition == 3)
+                return savedRulesDetails.InfluentialScore >= formRules.InfluentialScore1 && savedRulesDetails.InfluentialScore <= formRules.InfluentialScore2;
+            else if (formRules.InfluentialScoreCondition == 4)
+                return formRules.InfluentialScore1 == savedRulesDetails.InfluentialScore;
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ProductRatingIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ProductRatingIsTheirData)
+            {
+                savedRulesDetails.ProductRatingIs = getDetails.ProductRatingIs(visitorDetails.DeviceId);
+                savedRulesDetails.ProductRatingIsTheirData = true;
+            }
+            return savedRulesDetails.ProductRatingIs == formRules.ProductRatingIs;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool NurtureStatusIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.NurtureStatusIsTheirData)
+            {
+                savedRulesDetails.NurtureStatusIs = getDetails.NurtureStatusIs(visitorDetails.ContactId);
+                savedRulesDetails.NurtureStatusIsTheirData = true;
+            }
+            return savedRulesDetails.NurtureStatusIs == formRules.NurtureStatusIs;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool GetGenderValue(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.GenderIsTheirData)
+            {
+                savedRulesDetails.GenderIs = getDetails.GetGenderValue(visitorDetails.ContactId);
+                savedRulesDetails.GenderIsTheirData = true;
+            }
+            if (!String.IsNullOrEmpty(savedRulesDetails.GenderIs))
+            {
+                if (savedRulesDetails.GenderIs.ToLower().Trim() == formRules.GenderIs.ToLower().Trim())
+                    return true;
+            }
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool GetMaritalStatus(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.MaritalStatusIsTheirData)
+            {
+                savedRulesDetails.MaritalStatusIs = getDetails.GetMaritalStatus(visitorDetails.ContactId);
+                savedRulesDetails.MaritalStatusIsTheirData = true;
+            }
+            return savedRulesDetails.MaritalStatusIs == formRules.MaritalStatusIs;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool CheckProfessionIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.ProfessionIsTheirData)
+            {
+                savedRulesDetails.ProfessionIs = getDetails.ProfessionIs(visitorDetails.ContactId);
+                savedRulesDetails.ProfessionIsTheirData = true;
+            }
+            if (!String.IsNullOrEmpty(savedRulesDetails.ProfessionIs))
+            {
+                string[] formprofessionList = formRules.ProfessionIs.ToLower().Trim().Split(',');
+                string[] savedprofessionList = savedRulesDetails.ProfessionIs.ToLower().Trim().Split(',');
+
+                var result = formprofessionList.Intersect(savedprofessionList);
+
+                return result != null && result.Count() > 0;
+            }
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool ConnectedSocially(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.NotConnectedSociallyIsTheirData)
+            {
+                savedRulesDetails.NotConnectedSocially = getDetails.ConnectedSocially(visitorDetails.ContactId);
+                savedRulesDetails.NotConnectedSociallyIsTheirData = true;
+            }
+            return savedRulesDetails.NotConnectedSocially == formRules.NotConnectedSocially;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool LoyaltyPoints(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.LoyaltyPointsConditionIsTheirData)
+            {
+                savedRulesDetails.LoyaltyPoints = getDetails.LoyaltyPoints(visitorDetails.ContactId);
+                savedRulesDetails.LoyaltyPointsConditionIsTheirData = true;
+            }
+            if (formRules.LoyaltyPointsCondition == 1)
+                return formRules.LoyaltyPointsRange1 > savedRulesDetails.LoyaltyPoints;
+            else if (formRules.LoyaltyPointsCondition == 2)
+                return formRules.LoyaltyPointsRange1 < savedRulesDetails.LoyaltyPoints;
+            else if (formRules.LoyaltyPointsCondition == 3)
+                return savedRulesDetails.LoyaltyPoints >= formRules.LoyaltyPointsRange1 && savedRulesDetails.LoyaltyPoints <= formRules.LoyaltyPointsRange2;
+            else if (formRules.LoyaltyPointsCondition == 4)
+                return formRules.LoyaltyPointsRange1 == savedRulesDetails.LoyaltyPoints;
+            return false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="savedRulesDetails"></param>
+        /// <param name="visitorDetails"></param>
+        /// <param name="formRules"></param>
+        /// <returns></returns>
+        private bool RFMSScoreIs(MobileVisitorSaveRulesDetails savedRulesDetails, MobileVisitorDetails visitorDetails, MobileFormRules formRules)
+        {
+            if (!savedRulesDetails.RFMSScoreRangeIsTheirData)
+            {
+                savedRulesDetails.RFMSScoreRange = getDetails.RFMSScoreIs(visitorDetails.EmailId);
+                savedRulesDetails.RFMSScoreRangeIsTheirData = true;
+            }
+            if (formRules.RFMSScoreRangeCondition == 1)
+                return formRules.RFMSScoreRange1 > savedRulesDetails.RFMSScoreRange;
+            else if (formRules.RFMSScoreRangeCondition == 2)
+                return formRules.RFMSScoreRange1 < savedRulesDetails.RFMSScoreRange;
+            else if (formRules.RFMSScoreRangeCondition == 3)
+                return savedRulesDetails.RFMSScoreRange >= formRules.RFMSScoreRange1 && savedRulesDetails.RFMSScoreRange <= formRules.RFMSScoreRange2;
+            else if (formRules.RFMSScoreRangeCondition == 4)
+                return formRules.RFMSScoreRange1 == savedRulesDetails.RFMSScoreRange;
+            return false;
+        }
+        #endregion Profile Rule
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="urlString"></param>
+        /// <returns></returns>
+        private string CustomizeUrl(string urlString)
+        {
+            urlString = urlString.Contains("https://") ? urlString.Replace("https://", "") : urlString;
+            urlString = urlString.Contains("http://") ? urlString : "http://" + urlString;
+            urlString = urlString.Contains("www.") ? urlString.Replace("www.", "") : urlString;
+            urlString = urlString.Trim().ToLower().TrimEnd('/');
+            return urlString;
+        }
+    }
+}

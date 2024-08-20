@@ -1,2 +1,24 @@
-e~Àº$>cØÐ$ŽÞ_|ÚÔ$Ž$½YÕÚÓ$’$œRÛU$’$”K`Ûl$’$•B°Ûm$’%;£Ûm$’%w5ÝÛm$’Û9¨á$’%?× ¨ð$”%Ï€¦%$øÅ+£“%$ê·Ä¤ã$”$Ôªx¢é$”$Íœýœ#$“$Ãö–Ü$’$ºz˜’Ê$“$²g9{$•$©V‡æ%$žIüñ$•$—@|“%$“7­w[$–$’/”rÅ$ã$’&Ôo‹0$’ õo;.$’"8pFA»$’ xq’V$’$­rèiá$’$¬s|´$’$¬s²©$’$¬sM¢c$’$¬s µ^$’$ªr‰ÆM$’$¥pßÔ…$’$›kÄÚƒ$’$•f:ÛK$’$“_gÛf$’$’XÛm$’$’PaÛm$’$”I²Ûm$’$•BÉÛm$’ÙÆ·$’%/ÔÓ¸g%s%Ê:»$”$ó¼@¼¬$”$é«à¿$“$ÙžE¸á$’$Íƒ°!$’$Å7¨à$“$¼lwŸÿ$”$³\	˜Û%$§N‘s%v$šB‹;$•$”9]…Æ$“$“1N$•$’)}Û$á$’$Ù|&$’$Ç|™.e$’$—~0@–$’$”KU¾$’$“€`ks$’$”€à“$’$“î’¬$’$“‚]¦ð$’$“€-»$’$“èÍ²$’$“|»Öc$’$’xÇÚ×$’$’sÒÛT$’$’nzÛl$’$’gÔÛm$’$’`ÑÛm$’$’Y{Ûm$’$’SçÛm$’ÔÿÆ$’%Í·Ìà$”%	¾ïËû$’$ð®ôÏ
-$“$æ¡5Í>$’$Ö“”É‡$’$É†”¿”$“$Åu˜´¨%$¾cyª´$•$²T]¢T%$¨G¾šë%u$›<î”"$”$–3rG$“$”+¾‹$$•$“&[‰X$Ô$’$Íˆå&$’$›‰b,‹$’$“Šú?ø$’$’ŒU$’$’Ž2k«$’$’ŽÚ$’$’w–f$’$’ªå
+ï»¿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLmsContactImportOverview
+    {
+        public static IDLLmsContactImportOverview GetDLLmsContactImportOverview(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactImportOverviewSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactImportOverviewPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

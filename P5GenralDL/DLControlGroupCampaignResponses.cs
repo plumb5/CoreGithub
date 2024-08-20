@@ -1,10 +1,26 @@
-ªú«
-««*«:«J«Z«j«z«Š«š«ª«º«Ê«Ú«ê«ú¬
-¬¬*¬:¬J¬Z¬j¬z¬Š¬š¬ª¬º¬Ê¬Ú¬ê¬ú­
-­­*­:­J­Z­j­z­Š­š­ª­º­Ê­Ú­ê­ú®
-®®*®:®J®Z®j®z®Š®š®ª®º®Ê®Ú®ê®ú¯
-¯¯*¯:¯J¯Z¯j¯z¯Š¯š¯ª¯º¯Ê¯Ú¯ê¯ú°
-°°*°:°J°Z°j°z°Š°š°ª°º°Ê°Ú°ê°ú±
-±±*±:±J±Z±j±z±Š±š±ª±º±Ê±Ú±ê±ú²
-²²*²:²J²Z²j²z²Š²š²ª²º²Ê²Ú²ê²ú³
-³³*³;³K³[³k³{³‹³›³«³»³Ë³Û³ë³û´´´+´;´K´[´k´{´‹´›´«´»´Ë´Û´ë´ûµµµ+µ;µKµ[µkµ{µ‹µ›µ«µ»µËµÛµëµû¶¶¶+¶;¶K¶[¶k¶{¶‹¶›¶«¶»¶Ë¶Û¶ë¶û···+·;·K·[·k·{·‹·›·«·»·Ë·Û·ë·û¸¸¸+¸;¸K¸[¸k¸{¸‹¸›¸«¸»¸Ë¸Û¸ë¸û¹¹¹+¹;¹K¹[¹k¹{¹‹¹›¹«¹»¹Ë¹Û¹ë¹ûººº+º;ºKº[ºkº{º‹º›º«º»ºËºÛºëºû»»»+»;»K»[»k»{»‹»›»«»»»Ë»Û»ë»û¼¼¼+¼;¼K¼[¼k¼{¼‹¼›¼«¼»¼Ë¼Û¼ë¼û½½½+½;½K½[½k½{½‹½›½«½»½Ë½Û½ë½û¾¾¾+¾;¾K¾[¾k¾{¾‹¾›¾«¾»¾Ë¾Û¾ë¾û¿¿¿+¿;¿K¿[¿k¿{¿‹¿›¿«¿»¿Ë¿Û¿ë¿ûÀÀÀ+À;ÀKÀ[ÀkÀ{À‹À›À«À»ÀËÀÛÀëÀûÁÁÁ+Á;ÁKÁ[ÁkÁ{Á‹Á›Á«Á»ÁËÁÛÁëÁûÂÂÂ+Â;ÂKÂ[ÂkÂ{Â‹Â›Â«Â»ÂËÂÛÂëÂûÃÃÃ+Ã;ÃKÃ[ÃkÃ{Ã‹Ã›Ã«Ã»ÃËÃÛÃëÃûÄÄÄ+Ä;ÄLÄ\ÄlÄ|ÄŒÄœÄ¬Ä¼ÄÌÄÜÄìÄüÅÅÅ,Å<ÅL
+ï»¿using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLControlGroupCampaignResponses
+    {
+        public static IDLControlGroupCampaignResponses GetDLControlGroupCampaignResponses(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLControlGroupCampaignResponsesSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLControlGroupCampaignResponsesPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

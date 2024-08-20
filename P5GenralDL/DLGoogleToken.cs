@@ -1,2 +1,25 @@
-$£%⁄É€h$°€m+≤%'9€k,#%y'∏€m+∫'(‡€m-k*≠*S€m--—,€m-·2ı-é€m-\9».Õ€m-øB&0€m-DL»1&€m,§YÖ1Í€m+•gŒ2^€m+(w‹2£€m*©ÜQ2¬€m*dï‡2∂€m)Â£œ2Ñ€m)ø±27€m)cΩö1ƒ€m)î E1"€m(±”|0h€m(tÿ_/»€d(ﬂ€]/@Ÿâ('€j.ø◊ì(H€m.F’:(M€m-¬“ë(ß€m-*œy)3€m,xÃ$)u€m+Æ»®*r€m*Í≈à*°€m*#¬Y*ª€m)2ø›*¡€m(wΩÆ*	€m'¯ª£)Œ€m'¨€k/ÿ$ì'1€k.˘%z([€m.Ú&)˘€m/)?+ø€m0,ê-´€m0C0Ú/@€m0A8T0ø€m/†?˘1˛€m/¥J¿2Ê€m/0W?3ô€m.Feî4€m-¿uT4y€m,˙Ö4´€m,Üî±4´€m,X£4~€m,∞Ö4.€m+≤Ωô3ø€m+ö ≥3,€m*µ‘,2é€m*LÿÔ2€e*€a1ãŸ¿)b€k0ı◊Y)Ò€m0W‘˚)Û€l/ß—S*©€_.ÎÕä+q€b. .,"€M-)∆±,’€b,'¬,˙€_+¿-`€m)˘ΩÄ,‹€m)ª2+ˇ€m(Aπ)+Q€m'¡€m3—$í'4€m3L%(⁄€m3%˜+3€m2q'¯-D€m32+´/r€m2ª/º1@€m2Ï682¿€m2˜>%3Ì€m2~HN4Ë€m1–T45ù€m1bƒ65€m0-rì6∞€m/mÇÌ6—€m/í∞6—€m.Â°¢6™€m.—∞6_€m.%Ω≤5Ù€m-ú 5d€m,–”Ó4∆€m,"ÿ⁄47€e+÷€93ΩŸΩ+°€k3C◊+Æ€m2™”’,€m2
-œ«,Ê€
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLGoogleToken
+    {
+        public static IDLGoogleToken GetDLGoogleToken(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLGoogleTokenSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLGoogleTokenPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

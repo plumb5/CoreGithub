@@ -1,1 +1,25 @@
-$˜$’¬ç%$˜$’®K%Z$™$’°[%ñ$š$’±ç0ô$›$’´A?$›$’¶:P¯$œ$’·ådÑ$$’º(wœ$$’¼›ˆŸ$$’½ušE$$’¾à¬$$’½±ºD$$’½Ã´$$’¼qÌ½$œ$“¼cÓy$œ$—»	ÖÁ$œ%º;Úr$œÕ«'Ë$’$’ØÄ%‹$’$”Ú9%}$’$”Ù‚$˜%u$”Øœ$’%ú$”Õ©$’'ª$”Ó`$’)|$•Ñ)$’,ç$•Ï	$’1:$•Íâ$’7±$•ÌÛ$”?-$•ÌË%J$•Ì#$”X3$•Ëà$’h:$”É‡$’x$”ÈÃ$’ˆÎ$”Ç’$’š9$“Æ	$’¨»$“Ãê$’²–$“Á·$’¼$“¾Ï$’ÆÄ$’½3$’Í*$’»Œ$’Òã$’¹L$’ÖI$“¶ü$’Ùm$“²9$’Ú´$“¬ú$’ÛX$“§@$’Ûj$“¥E$’Ûm$“¡€$’Ûl$“$’Ûh$’šŸ$’Úû$’˜¤$’Ûm$’Ô-)#$’$”Õ”'R$’$”×u%$’$”ÖÎ$•%$”Ô $’%„$”Ò^$’''$”ÏA$’(r$”Ì×$’,$”È·$’/ˆ$”Æ€$’5$”Ä$’<4$”Ãf$“Eû$”Ã>$’Qó$”ÃG$’aƒ$”Á‹$’r'$“Àj$’?$“¾¬$’’ $’¼$’ î$“¹Ò$“«Ø$“¹%¶§$’¸0$“À$’·M$’ÆÀ$’¶”$’Ì÷$“´h$’ÑÑ$“²,$’ÕÂ$“­^$’Ùå$“ªc$“Û($“¥|$“Ûj$“ŸÛ$’Ûl$“›Ö$’Ûj$“™™$’Úü$’•ş$’Ûk$’“Á$’Ûm$’ÑU,+$’$•Òs(¾$’$•Òæ&2$’$”Ò¨%$”$”Ğ1$”%$”ÍØ$’&$”É´$’'O$”Å„$’)±$”ÁÒ$’-‰$“¾ƒ$’1ı$“»L$’8ö$“º$’@Ş
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLIpAddressDetails
+    {
+        public static IDLIpAddressDetails GetDLIpAddressDetails(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpAddressDetailsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpAddressDetailsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

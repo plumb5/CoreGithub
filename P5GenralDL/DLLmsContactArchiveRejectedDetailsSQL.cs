@@ -1,6 +1,78 @@
-¤t³¨$–$’£íÆ®$•$’¢(Õp$”$’®Úb$“$’šıÛJ$“$’–ÏÛk$“$’“åÛm$“$’Ûm$“$’¶Ûm$“$’ŠÊÛm$“$’‡Ûm$“ÉÕØ¤$’%¾>Ùù$’%°Û6$’%¢şÛH$“$ÿ–PÛ$“$éŒÚ6$’$×€Ê×Ğ$’$Ğv¬Ô˜$’$Êj´Ì]$’$¿]Ãë$’$·Oàºe$’$±B4²u$’$¬5*¬0$“$¢*Á¨„$”$¡%¿§F$Ê$$»¨˜%´$œ$™ªL+r$š$“¬„?z$™$“®bUº$—$’°¦n$”$’²˜† $•$’³qŸM$—$’³«¶Ê$•$’³Ëè$•$’°"×@$•$’­fÛ$”$’ªÛ^$”$’¦OÛl$•$’£ÍÛm$•$’¡FÛm$•$’±Ûm$•$’Ûm$•$’›\Ûm$•½‚Ú¨$’%°³ÛH$’%¤ÛH$’%
-—„Ûa$’%ŒïÚô$’$î\Úü$’$áx_Ú™$’$ØnÇØ,$“$Ëf>ÕV$’$½Z]Í8$’$±MÄÖ$’$±=ù¼g$“$¯0ş¶z%$«(£³®$•$©$æ³Û$±$¥$²µ°%%$¢$”·k)g$$“ºº;$š%½|Q$—$“À7kÕ$–$’Áâ…L$š$’ÃAŸå$›$’ÃÅ¸#$˜$’Á–Ì_$˜$’¾ÇØ$˜$’¼FÛW$˜$’¹8Ûf$—$’·Ûm$—$’µhÛm$–$’²ËÛm$–$’±@Ûm$—$’¯êÛm$—$’®~Ûm$˜°Ûh$’%£ıÛk$’%˜YÛl$’%AÛl$’%ƒiÚû$’$òy:Úò$“$ænèÛ$“$ÛgÊÚÊ$’$É`MØú$’$±V<Õ,$’$¶I:Î$’$®;ÆŸ$“$³-À‘$”$¯'M¾»$•$±$£Àe%$¬$œÂ¾%G$§$“ÅV(†$$“ÈI6$—$”ËÈJî$˜$“ÎfB$™$’Ğ¡¿$œ$’Ñ%­$Ÿ$’Ò#·`$$’ĞkÌ $œ$’Í¶ÖÒ$˜$’ÊeÚï$š$’Ç¼Ûf$™$’Å²Ûm$—$’Å*Ûm$—$’ÃRÛm$—$’Ã¬Ûm$˜$’Ã$Ûm$™$’Ã_Ûm$™£Ûm$’%™~Ûm$’%sÛm$’%…Û4$’$ûzúÛl$“$ïpnÛk%$äg¤Ûa$“$Ø^òÛ3$’$ÃX‹Û$’$¹O*Ù#$’$ÃBèÔ®$’$·6¼Ğ#$“$À,AÌY%$Â%ïÊï%$¼$ĞÌ£%
-$°$•Ï#%h$«$“Ñ't$¥$”Ô1m$™%ÖE$œ$”×²^$Ÿ$“Øİy·$$’Ùà•Ÿ$¢$’Ùâ²û$£$’ØËÉ$$’×Õ
-$š$’ÔÎÙÆ$›$’ÓqÛP$š$’Ğ°Ûk$˜$’ĞCÛm$˜$’ÏîÛm$˜$’ÑÛm$™$’ĞÛm$š$’ĞÛm$š˜ÀÛm$’%uÛm$’%
-†JÛm$’$ı{èÛl$“$òr Ûm%$ëh@Ûm$“$å_nÛl$’$İWóÛc$’$ÖOYÛY$’$ÍF3Úã$’$Õ<4Ù€$’$Õ1{×6$“$×*ÔG$“$Ø%^ÓÜ$”$Ó$¯ÖQ%$Í$“×Ğ$Ô$Å$“Ø»&Ä$»%Úk+Â$¢%Úÿ?$™%ÛAUñ$œ$“ÛHrT$£$’ÛT-$¨$’ÛS©æ$¨$’Û>Ã $¥$’ÚïĞë$¢$’ÙÈØÿ$œ$’ØèÚ¤$š$’ØŠÛg$š$’×îÛl$š$’ÖçÛm$™$’×{Ûm$™$’×{Ûm$š$’×zÛm$›#Ûj$’%…§Ûk$“$ü|4Ûl$’$ìrêÛj%$èi[Ûl$“$åa5Ûm$’$ãXùÛm$’$æONÛl$’$èF_Ûc$’$é<¾ÛI$’$ê42Û1$’$ì+ÿÚœ$“$î'ÖÙ]$“$ğ%xÙÔ$’$î$›Ú¢$“$é$’ÛM$ª$â$’Û%R$Ø$’Û8'¹$Â$’ÛR8è$¤$’ÛdNh$ $’Ûjiİ$ª$’Ûk„p$®$’Ûk [$®$’Ûi¼$®$’Û[Í$«$’Û<Ö3$§$’ÚµÚW$Ÿ$’Ú¥Úã$›$’Ú´Ûk$™$’ÚÁÛm$˜$’Ú•Ûm$˜$’Ú'Ûm$™$’Ú–Ûm$šƒhÚ†$’$Ñ{nÚø$“$Úq›Úø$’$Úh·Úù$’$ÕaTÛl$’$ÛX¥Ûm$’$âOÜÛm$’$çFÀÛm$’$ì<lÛm$’$ğ4üÛl$’$ó.Ûj$’$ö(yÚö$’$ú%XÚõ$’$ÿ$˜Ûg$’%$’Ûj$’%$’Ûl$•$ş$’Ûm$½$ğ$’Ûm&$Û$’Ûm3ø$º$’ÛmFÎ$©$’Ûm`J$¬$’Ûm|ƒ$³$’Ûm˜m$³$’Ûm°u$³$’ÛmÊ $²$’ÛmÓ¤$®$’ÛmØË$©$’ÛlÛN$£$’Û3Û1$›$’Û1Ûl$’$’Û3Ûm$’$’Û2Ûm$’$’ÚùÛm$“zHÚù$“$Áq3Ûh%$ËheÚü$“$Î`™Ûk$’$ÏX¨Ûm$’$ÜP‹Ûm$’$åG±Ûm$’$ì=£Ûm$’$ò3³Ûm$’$÷.wÛl$’$ı'éÚû$’%&7Úú$’%	$™Ûl$’%$’Ûm$’%$’Ûm$’% $’Ûm$”%$’Ûm$§%$’Ûm%®$ğ$’Ûm0ª$Ò$’Ûm@J$¶$’ÛmW$¸$’Ûms@$¹$’Ûm<$¸$’Ûm«¹$¸$’ÛmÀ&$·$’ÛmÒ$µ$’Ûm×&$¯$’ÛmÚy$©$“ÛmÛ*$¢$’ÛmÛl$”$’ÛmÛm$’$’ÛmÛm$“$’ÛmÛm$–p²Ûh%$§gÉÚù$“$Ë_ĞÛk$’$¼YÎÛm$’$¾Q˜Ûm$’$ÕGyÛm$’$ã?/Ûm$’$ì5ÿÛm$’$õ.œÛm$’$ş+ZÛl$’%&nÛm$’%
-%BÛm$’%$–Ûm$’%'$’Ûm$’%4$’Ûm$’%4$’Ûm$”%*$’Ûm$Î%$’Ûm%r$ú$’Ûm-|$Ù$’Ûm<U$»$’ÛmP¹$»$’Ûmk2$º$’Ûm…@$¸$’Ûm ğ$¹$’Ûm·¤$¹$’ÛmÊ•$·$“ÛmÖ$³$”ÛmØù$­%ÛmÚÜ$¥$’ÛmÚú$–$’ÛmÛm$“$’ÛmÛm$•$’ÛmÛm$šÛm$’$“$–Ûm$’$’$–Ûm$’$’$•Ûm$’$Ì$•Ûm$’%$–Ûm$’&$–Ûm$”)»$—Ûm%0$˜Ûm%8($™Ûl%Dd$šÚü$•R#$œÛk$“a^$Ûl$’s%$Ûm$’…G$ŸÛm$’—$ Ûm$’©v$ Ûm$’¹k$ŸÛm$’ÆË$ Ûm$’Ñå$¢Ûm$’Ø$¥Ûm$’Ú¥$¨Ûl$’Ûh$²Û3$’Ûm$½Úù$’Ûm$ÅÚğ$’Ûm$ÅÙR$’Ûm$ÀØ$’Ûm$¿Ô{$’Û
+ï»¿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    internal class DLLmsContactArchiveRejectedDetailsSQL : CommonDataBaseInteraction, IDLLmsContactArchiveRejectedDetails
+    {
+        CommonInfo connection;
+        public DLLmsContactArchiveRejectedDetailsSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLLmsContactArchiveRejectedDetailsSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+        public async Task<bool> SaveBulkLmsContactRejectedDetails(DataTable lmsreportdetails)
+        {
+            string storeProcCommand = "LmsContactArchive_RejectedDetails";
+            object? param = new { Action = "Save", lmsreportdetails };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure)>0;
+
+        }
+
+        public async Task<int> GetMaxCount(int LmsContactRemoveOverViewId)
+        {
+            string storeProcCommand = "LmsContactArchive_RejectedDetails";
+            object? param = new { Action = "GetMaxCount", LmsContactRemoveOverViewId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+        }
+
+        public async Task<List<LmsContactArchiveRejectedDetails>> GetList(int LmsContactRemoveOverViewId, int OffSet, int FetchNext)
+        {
+            string storeProcCommand = "LmsContactArchive_RejectedDetails";
+            object? param = new { Action = "GetList", OffSet, FetchNext, LmsContactRemoveOverViewId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<LmsContactArchiveRejectedDetails>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+
+    }
+}

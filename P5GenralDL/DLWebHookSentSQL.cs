@@ -1,7 +1,98 @@
-a.parentNode.nodeType?Aa(a.parentNode,b):null};function Ca(a,b){if(m(a))return m(b)&&1==b.length?a.indexOf(b,0):-1;for(var c=0;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1}function A(a,b){for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)e in d&&b.call(void 0,d[e],e,a)}function Da(a,b){for(var c=a.length,d=[],e=0,f=m(a)?a.split(""):a,g=0;g<c;g++)if(g in f){var h=f[g];b.call(void 0,h,g,a)&&(d[e++]=h)}return d}function Ea(a,b,c){var d=c;A(a,function(c,f){d=b.call(void 0,d,c,f,a)});return d}
-function Fa(a,b){for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a))return!0;return!1}function Ga(a,b){for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)if(e in d&&!b.call(void 0,d[e],e,a))return!1;return!0}function Ha(a,b){a:{for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:m(a)?a.charAt(b):a[b]}function Ia(a){return Array.prototype.concat.apply([],arguments)}
-function Ja(a,b,c){return 2>=arguments.length?Array.prototype.slice.call(a,b):Array.prototype.slice.call(a,b,c)};function Ka(){return x("iPhone")&&!x("iPod")&&!x("iPad")};var La="backgroundColor borderTopColor borderRightColor borderBottomColor borderLeftColor color outlineColor".split(" "),Ma=/#([0-9a-fA-F])([0-9a-fA-F])([0-9a-fA-F])/,Na=/^#(?:[0-9a-f]{3}){1,2}$/i,Oa=/^(?:rgba)?\((\d{1,3}),\s?(\d{1,3}),\s?(\d{1,3}),\s?(0|1|0\.\d*)\)$/i,Pa=/^(?:rgb)?\((0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2}),\s?(0|[1-9]\d{0,2})\)$/i;function Qa(){return(x("Chrome")||x("CriOS"))&&!x("Edge")};function Ra(a,b){this.x=l(a)?a:0;this.y=l(b)?b:0}Ra.prototype.toString=function(){return"("+this.x+", "+this.y+")"};Ra.prototype.ceil=function(){this.x=Math.ceil(this.x);this.y=Math.ceil(this.y);return this};Ra.prototype.floor=function(){this.x=Math.floor(this.x);this.y=Math.floor(this.y);return this};Ra.prototype.round=function(){this.x=Math.round(this.x);this.y=Math.round(this.y);return this};var Sa=x("Opera"),B=x("Trident")||x("MSIE"),Ta=x("Edge"),Ua=x("Gecko")&&!(-1!=v.toLowerCase().indexOf("webkit")&&!x("Edge"))&&!(x("Trident")||x("MSIE"))&&!x("Edge"),Va=-1!=v.toLowerCase().indexOf("webkit")&&!x("Edge");function Wa(){var a=k.document;return a?a.documentMode:void 0}var Xa;
-a:{var Ya="",Za=function(){var a=v;if(Ua)return/rv\:([^\);]+)(\)|;)/.exec(a);if(Ta)return/Edge\/([\d\.]+)/.exec(a);if(B)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(Va)return/WebKit\/(\S+)/.exec(a);if(Sa)return/(?:Version)[ \/]?(\S+)/.exec(a)}();Za&&(Ya=Za?Za[1]:"");if(B){var $a=Wa();if(null!=$a&&$a>parseFloat(Ya)){Xa=String($a);break a}}Xa=Ya}var la={};
-function ab(a){return ka(a,function(){for(var b=0,c=ma(String(Xa)).split("."),d=ma(String(a)).split("."),e=Math.max(c.length,d.length),f=0;!b&&f<e;f++){var g=c[f]||"",h=d[f]||"";do{g=/(\d*)(\D*)(.*)/.exec(g)||["","","",""];h=/(\d*)(\D*)(.*)/.exec(h)||["","","",""];if(0==g[0].length&&0==h[0].length)break;b=na(0==g[1].length?0:parseInt(g[1],10),0==h[1].length?0:parseInt(h[1],10))||na(0==g[2].length,0==h[2].length)||na(g[2],h[2]);g=g[3];h=h[3]}while(!b)}return 0<=b})}var bb;var cb=k.document;
-bb=cb&&B?Wa()||("CSS1Compat"==cb.compatMode?parseInt(Xa,10):5):void 0;function db(a,b,c,d){this.c=a;this.a=b;this.b=c;this.f=d}db.prototype.toString=function(){return"("+this.c+"t, "+this.a+"r, "+this.b+"b, "+this.f+"l)"};db.prototype.ceil=function(){this.c=Math.ceil(this.c);this.a=Math.ceil(this.a);this.b=Math.ceil(this.b);this.f=Math.ceil(this.f);return this};db.prototype.floor=function(){this.c=Math.floor(this.c);this.a=Math.floor(this.a);this.b=Math.floor(this.b);this.f=Math.floor(this.f);return this};
-db.prototype.round=function(){this.c=Math.round(this.c);
+﻿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWebHookSentSQL : CommonDataBaseInteraction, IDLWebHookSent
+    {
+        CommonInfo connection;
+        public DLWebHookSentSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLWebHookSentSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<bool> SaveBulkWebHookResponses(DataTable WebHookSentBulk)
+        {
+            string storeProcCommand = "WebHook_Sent";
+            object? param = new { Action = "SaveResponsesForWebHookResponses", WebHookSentBulk };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure)>0;
+
+        }
+
+        public async Task<bool> DeleteResponsesFromWebHookBulk(DataTable WebHookSentBulk)
+        {
+            string storeProcCommand = "WebHook_Sent";
+            object? param = new { Action = "DeleteResponsesFromWebHookBulk", WebHookSentBulk };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure)>0;
+
+        }
+
+        public async Task<bool> UpdateTotalCounts(DataTable WebHookSentBulk, int ConfigureWebHookId)
+        {
+            string storeProcCommand = "WebHook_Sent";
+            object? param = new { Action = "UpdateTotalCounts", WebHookSentBulk, ConfigureWebHookId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
+
+        }
+
+
+        public async Task<int> MaxCount(int WebHookSendingSettingId, int Sucess, DateTime? FromDateTime, DateTime? ToDateTime)
+        {
+            string storeProcCommand = "WebHook_Sent";
+            object? param = new { Action = "GetWebHookMaxSentDetailsCount", WebHookSendingSettingId, Sucess, FromDateTime, ToDateTime };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+        }
+        public async Task<List<MLWebHookSentDetails>> GetWebHookSentDetails(int WebHookSendingSettingId, int Sucess, int OffSet, int FetchNext, DateTime? FromDate = null, DateTime? ToDate = null)
+        {
+            string storeProcCommand = "WebHook_Sent";
+            object? param = new { Action = "GetWebHookSentDetails", @WebHookSendingSettingId, @Sucess, @OffSet, @FetchNext, @FromDate, @ToDate };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<MLWebHookSentDetails>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

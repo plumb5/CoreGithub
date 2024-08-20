@@ -1,1 +1,25 @@
-MIÛl$’Ûm¨ú%%éÛm­1$’%áÛk²$’%¸Û"¸á$’%ŒÚ¯Âø$’%JÖ5È–$’%Î0Ë½$’$ôÀZÅ1$’$â²ÅÀ;$’$Í£)¹½$’$ğ“G²$’%ƒÓ©Ë$•%JtX¡‰9<e€™-­#T†P%Î'¿Xï˜ÖCğ+\To™'XŞ-vQ™£nT.zN´š)‚Ù.Lÿš*˜"-ïK‚šx®-ÓI#™GÄ>.ŒG¹™­ÚÓ0m=ş’WŞ’,6oŒ;Û5(`/©‡ÊÛH&)‚µÛ[%'%Ò~3Ûg$È$Íy—Û[$œ$¨tÅÛc$’$“o¹Ûl$’$’iÛm$’$’bÛm$’Ûm¹ú$’%ÔÛmºr$’%ÅÛaÂb$’%ŸÚyÌ$’%mÖÒc$’%%Í)Ô…$’$ì¿¶Õ)$’$Ú³Ó,$’$İ¥ŸÏª$’$É—ãÇ]$’$ÊŠ&¾Õ$’$ö{Í¶2$“%*m2­e$£%Q^ã¥öc NËÕ%,&1ND¢1<Ø)mJˆ£eRe+KG•¤hà,EY¤Ç~v,	C#¤­“%+AAæ¤×©+*¥>ä£å¿$+×?:¦_ÚT.‡5c„áÃ+ˆ.Õ˜Ûj'*“ÛO%¨%äÛ$×$èŠÄÛg$ $‡Û`$•$“ƒâÛl$’$’÷Ûm$’$’|&Ûm$’$’x'Ûm$’ÛlÅ“$’%¥ÛfÌÁ$’%‘ÚgÒ‡$’%vÖÓÕ3$’%HÍ¼Ø0$’%¿”Ú$’$å²ÚÚ $’$ä¤”Ùd$’$Ü™@Õ÷$’$Ç…Ğİ$’$¼ƒË$’$İtÂÁ¿$’%f¹…$–%=XT±İ"[’HEª0#½C´«û5'É?ß­K)G=I®laÛ)Ø;[®şx‹)µ9­¯)7Ø®Æ£œ(165®{ºY(I1À¬aÎ)T/ıª æ‰(J*'¢ÖÛ7&\%ã=Û%$Ä›Û_$¢$¤—ĞÛA$”$“•™Ûh$“$’’ŒÛm$
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLmsAdvancedSettings
+    {
+        public static IDLLmsAdvancedSettings GetLmsAdvancedSettings(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsAdvancedSettingsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsAdvancedSettingsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

@@ -1,1 +1,136 @@
-.YÒŠê•ÿiG;:¥Õ÷ì?İèF‡ÔQç~ØÒƒtI/zybº¾§D˜iB3š¤ÕwWZÑÊ+?¤mh—”=ïÍÒ‰N4IºĞOºÑÍı0¤úÓµ·ô<%öÜKO‰}FA7ë°?´Jš¹w´ …{'K+ZÑ$mhãÊÒñ”°Ò§t¢íÒ….´H7ºÑ!5ÔĞ&uÔÑ*½èåNİ¨±¦{ı§Õ»Ü‘´ĞÁ¥­Ú’´¡¾.íh§¶H:Ğ,èD›t¡‹¾&İèF§ÔPc¼Wê¨£&=èA4Ğ ï’^ô2²Š:+éúIšèÒŒj}¯´ iE+êÒ†¶?½Ÿt “Ú-İèşÓüwçÜ¿ÒŞÊÔë¢—Ï©ŠfÉ7ß¶]ZĞ‚š´¡E:Ğ6éBõmö–nt£.õ§„Òƒj4Ğ ö“^ôR»P¾Í&ìœ+Mh¢Ã’f´ MZÑŠfiCW›Òvj“t ƒÚNt¢&İè¦Ã”:zĞ"§D˜5ô2ãû¡CšĞ„viA:¥õ)a7>iCµU:ŸÜ¤ë)aSºÑMíO5Ô¥:º¥=è’|ö°:ç{ğíÒŒf´I+ZÑ*mhcÏ;¥Õç§Õw?]è¢vK7º©]ÒƒÎí[zÑ‹ª–ï¢‰Û[–´pêşiE+µEÚP]ÚÑÁ©Û¤]œvšÔPãšQöÒÄ{KûSÂJÿé@º¤]¼s¹Ôf;¤:÷ä’TOË–Ôşô¢ÚK/”½4±ç6i~JœÏ²´ …½H—V´¢MÚÑÎ®£H:Ø·\éD'µUºPÎ×§I5´JzĞ‚²?&EHÓSÂz›ÒŠVj´¡Ú!]è¢öJ7º©íRGõét¥=Ú³4Ğ‹~èbëC›4¡‰¾!Íh¦¶KZÑ"mO	3û¤í|¾uéB÷ä•ÚS"ÆÍRGı¤½Ü©†²»%bÄ•&4Ñ!IZèàÒ†ê½Ú¤¨K'ªwğ#İ¨vî.5ÔĞ:ê¨IzĞûÿ*ı^mÅ­§«×E/ïaeŸKÜÕ¯´ …g×¥Õó8¤m<cMÚÑé@Ú¥Õó8¥Õ~ß¥:µ]hPkÒ‹^jêÜĞ-ÍhF‡´¡ìá¯I;Ê¾Òj‹t¢]RC'Ú¤:Òƒ:di Aí’^ôRÛÑó=%âë.Mh¢Ã‘´Ğ!IÚĞ!íhG«t İÒ‰Nô“.t¡SºÑÍÈ\j¨¡Wê¨Ó¡Iz¨İÒ‹^NV'´:SšĞDm’f4S{¥-hH+Zé0¥íè’§D|ã“NtR[¤]\íH7º©RC¾Yê¨ÓaIÔ¤ÕšUô²fWk6¤	Mè–f43†$-h¡o“V´R[¤ÕÜºÔQj–¤Õ7ß&4ş´'éE/µ¬C°ç%¢ö,Íh¦vJZĞ#­h¥C‘6´¡Ÿ´£W:Ğ†t¡ÒnÔ¥=è–Ş§„›PvÂ„iBõYiÒŒæ§³&iAZ¤­è'mh£ï”v´£[:ĞA‡&èD³t¡‹.İè¦¶K5j—ÔQ§¶JzX+4XÉ&½èEš¿§DŒÿ5¡‰Ú*ÍhF?iAª´¢íÒ†6´I;:Ğ#]èâjYj¨1ã#4è0Ğò=%Â¼Kš8ıæÚ·D)ü•NÒG½*ZéU¤mh—v´3š,è¤ï•.tÑ¡I=t(Ò@ƒ!½è¥v •©úIšĞ&ÍhfUZÑŠ&iC~:ĞÁÙëJ'Ê~ô|Ò…®?õntS›¤†µWê¨sµô &4Ğ6V§}è‘´ .­O‰›j“6Tß(„´£oL:ĞnéB–t£›«%©¡†~RG¾CzĞCm‘Ôºô¢—1´³:ı£vIšè›¥ÍÔNiA}·´¢uiC´£Z“T+Ò….FV¥åÜÓ²ÔŸ^NHªÎ•^ôÒ¡ ƒL“´P›¤õ)á%>iG;t¢“Ÿt£›Ú+5Ô¨­RG5·Îô”ğj.ÍhFCZÑÊ™mIÚ¨=Òvj‡t ƒ1¸t¢“Ú)]è¢¯I7ºŸ¶Z¤†Ú¤:§É.=è¡¶JjÊ·Ä=IÓSÂÛ>ÒŒfj?iAµ!­O‰;ÚOÚĞ#íè o–Nt>µK7ºép¥=O§w)3ŞZĞŞ›KËSâ®–¤­è'mhûÓz¥í:>éDçŸZHºşt›t?%¼÷ÚSbÏ}¤ş”°¯¨å§„Í»¥İì/ºô úŒ¨O	ÏçJ3šyŞšt¡š…K7ºoHµ§;~ê¨?=cIzĞûÿA§nÂ¾^èÅùš8%¦4£™Ú$-h¡vI+Z©ÍÒñ”8ã\éD'jRCõëè‘:êÔ†ô =Ò@uéE/}^Áà›•ø¤mO½iG;š¤h“.t¡.5ÔĞ)uÔÑ-4Ğ,½¨¾-q”S,q¼.iE+jÒ†6´J;ÚÑ!èàjG:ŸÖ{–.T3ş¤İt©¡F‡$uÔÑ"4xJô¢—S7«~ßXñtHšĞ.ÍhFMZPñÚĞFí”v´£U:Ğ‰.éB}]ºÑ†ÔP£ƒKz8‹i v4±)¡UšŸfV¤-h“V´¢YÚĞ†ViGuâ=Ò‰NtI7ºÑ-5”ÓÛRG=ÒƒtH4¤½èB9Û1«IZP—V´¢SÚõ“v´s5“.t¡[ºÑºÔQçjC('9ßÒ‹^N\-ù)æ.-h¡vK+Z©½Ò†6Ô¤íè’t !èäjKºĞEí‘jÔi Áù®H/zÑrv%"<I3š©­Ò‚j?iE+µYÚĞ†6iG'§‡.](§³ø¤†µKzĞCm’ìı³”·ÄD[B:¤Íh—´ [ZQ4’´¡}÷‘vt &èDCºĞ…néF7z¥†;ìÛ·\Î«Äím©W éE/;ûr^%îèUšPíá¯4£™Ú&-ha¯=¥­è@—=%öÜWê¨>éªô>%lÕe¯M˜Y—v´óÜ¸t¢5éA¯v‘ÆSÂëpéEµfµï)±§}Ò„&özUšÑÌ,’´¢•ûĞ¤í)áıté}J¸m©Ó×3cHÒŠV´JÚĞ"íhG³t¡‹«5©¡öôø‘ô WO‰½CÊ^šØû&iF3\ZĞ‚†´¢•Ÿ´=%üœ$íhG?é@šQö¼Äù¬KšĞ*ÍhætáÒ‚j‹´>%öÙ?mh£CH;ÚQ“NtÒ¡J7º©=RCÚ,=èA“4Ğ`¼½¬Ãıè»¥Õ	æ§Õ/Æ&íhÿÓ›¤tÒ‰N4¤İè’j\-¤:Wû¤=tpi A‡-½èEÏÓõ}o^ĞaJšĞ&Íh¦ƒKZ¨5iE+µWÚĞFí‘v´£]j¨q:+RGíÒó”°2>éE/ºÑÄŒÓ‡viB}«´¢•Ú6´¡CÚÑºt ÍÒ….Î£WºÑMm’jè‘:ªuhÒƒj~h SzÑ‹V4³:ùC—4¡Z!Íh¦Ö¤-h‘V´Ò!Kz87i<%¬÷&½è¥ö¢…‘•Díf4£KZÑJ‡6´QÛ¥íè–Nt¢ÿ´oY_qşÊùTêuñí"4¨½Ò‹êÄhMO	[í“f4Ó¡I+Z¹Z’tP»¥]ÔféF7µEj¨¡YzĞƒi ºô¢5ôm{O—4¡	iFuš?Ò‚j«´¢íÒ†6tJçSÂÌ~ºĞ…šÔPC¯ÔQG—ô i :ÚY‡ş¡CšÑŒiAº¥å„Ş²t¢“Sl‘.t¡Ij¨Ñ¡Hz¨­Ò@ÍÒ‹^:$t0·ñ¡Ÿ4?%ìŞŸT'ô+­¨~yiCz¤å{>é@ãmÒ‰N:\éB’t£›ñf©¡FíOuj“ô ‡Óæ”œW‹ô¢—ÚNVr~¨KšÑ--háZ¤­Ô.iCcÈÒj%‹t ƒ¾Y:Ñ‰VéFíiù_ÏSâÖø¤åTr]Ìx}è‘¦§ÄÖ¥õ)á»5iCµ¹ÒNj³t¡MRC­ÒxJ¸í-½èEº™ÅşP—&4¡SšQ†´ İÒ†6:,iG;µ?è Ö¤İÔNéE/gŠ†³°Ò„êT¥ÍÔiAÚ¥­h•6´Ñ7K;ÚÑ&èD‹ô ‡Á”¨K/zÑ…zzJì³‡´ Ò†6:˜t =Ò‰NôJ7ºéÛ¤†µ!4¨íè©O‰3şí¿ƒ^ßiü•F¾Õ«£:÷dé@jÒ‰NtIºÑ*5ÔĞ-uÔQ—”sÏHÒ‹^júºŠ§EšĞD‡OšÑŒfiAº´¢=Ò†6tJçSÂÊNÒõ”8ãşt£›×jIuôJzè›¥½ÔNô²÷C·4¡:ùiFµ.­hEMÚPíŸ]ºÇ[—ntóÉQ¥†µCê¨£UzPÍ¸HÕ‰!¤½t 6½£®âé’&4¡SšÑL_“´PëÒŠV4KÚP“v´£Ÿt İÒ‰N´IºÙ‘jìÜ·ô mÒ@5éE/ÚÑÄš¥­Ò„&tH3Êù£%iE+µKÚÑNé@²t>%Ì<IºĞOºŸQ{Hµ?Iê¨S»¤=è‘\-K/z©u4³fùC·4¡‰1|ÒŒfjMZĞ‚NiE+z¥íì¥—t ÚİNéDõ;Æ–.tÓ¡K5´IÕ³™¤Õ‰`H:léE/ZÑÂš•]šĞ„.iF3¦´ å©&­(ç„[¤íÔvéD'{Ş*]èb|¤5VÒ¤z¤½OK“Vf\?Ô¥	Mì„³´ MÒŠ¶§½™´£İÒ§£wé|Jx³Oº{šI7ª½È–jè’:ê|š6éAZ¥¾Õ9µ~(ß§ÜÛ·$¾ ìÑ‚>m›´¡íÒv4KÇSÂÊ®Ò‰Nj‹t£­Ò‹êé¢œñ‰ã=Iš¨=ÒŒfj?iyJXïWZÑJ‡¶§„õñIçSâœQ¤ë)a«5éF7Z¥:Z¤êóÄQÎøDÔQ¤-h“Ö§„™wiCZ¤h“Nt¢UºĞÅÕ~ºÑf”ó5³'iBõÒò”°¨GZÑJ‡OÚĞN“tĞaKºP“ntÓáH5j]zaÇ¤½¨£‹¯„.iFõİL•´P;¥]OÃºÑ6©¡†©?%<Å'=è¡Ö¤ñ”ğt®ô¢—Ú…næ¶?Ô¥	Mè–f4£]ZĞÂÕBÚĞÆûş•tüiû¤Ô†t£›Ú,5Ôù¥Izøä¸ÒxJx‰!½è¥oBu°!Mh¢C—fTŸ=MZŸ^íJÚ¨­Ò´Hºøœ:Òı”ğV§ÔŸwÖ%=èùSŸÒ@¨O	ïµHšş´iF3–´ åéIÚŞû•vTß·¸t<%ö¾]ºP½ÓJ9ã^ı“:êô=Òƒê×O“ÆSÂÊnÒû”°>z¾§„çÒ„&ÆûÓò”8Ÿ'iE+úIÚølÏÒ>¥§t¢íÒ….tK7ºé[¥:µKzĞƒ”ó>qj-Ò‚ÖlJ+Êé÷º´£Ú!è@ÿéßoY‰o	ˆ3kV¯….z™t£›Ñ„ÔP£Ã'uÔ©Òƒúni A‡‚Şô”8ã.iAº¥­è”6´qµ.èàjI:ÑI“.t¡GzĞÃ~è§½(¯U~G~ÅÓ-MhB³4£ùOG’´PÛ¤­è•6´Ñ¡K;Ú©é@Ïã’.t¡MºÑM‡"uÔÑ%=è¡Ã^T«3QÎø„õñÓ„&tK3šé`ÒŠ6j³´£uÒ´IºĞ*İ¨fÜ¥:µYh0Õ¾#´âi•V´Ò¡HÚ¸Z•v´£C:PÍâ“§DTÛÒ@ù¾ÅZXõò¡Ÿ4¡é
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Dapper;
+
+namespace P5GenralDL
+{
+    public class DLAccountNewSQL : CommonDataBaseInteraction, IDLAccountNew
+    {
+        CommonInfo connection;
+        public DLAccountNewSQL()
+        {
+            connection = GetDBConnection();
+        }
+
+        public DLAccountNewSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<int> GetConnectionstrng(int UserId, string connectionForLeadsCnt)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(connectionForLeadsCnt))
+                    connection.Connection = connectionForLeadsCnt;
+
+                var storeProcCommand = "GetLeadsCountForNotification";
+                object? param = new { UserId };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public async Task<object?> GetIncludeExcludedInfo(_Plumb5IncludeExclude mLAccount)
+        {
+            try
+            {
+                var storeProcCommand = "InsertIncludeExclude";
+                object? param = new { Key = "Get", mLAccount.AccountId };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.QueryFirstOrDefaultAsync<object?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public async Task<object?> GetNotification(int UserId)
+        {
+            try
+            {
+                var storeProcCommand = "SelectAccountDetails";
+                object? param = new { UserId, Key = "GetNotifications" };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.QueryFirstOrDefaultAsync<object?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public async Task<int> SaveIncludeExclude(_Plumb5IncludeExclude mLAccount)
+        {
+            try
+            {
+                var storeProcCommand = "InsertIncludeExclude";
+                object? param = new { mLAccount.AccountId, mLAccount.AllowSubDomain, mLAccount.IncludeKey, mLAccount.ExcludeKey };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public async Task<DataSet> SelectApikey(int UserId)
+        {
+            string storeProcCommand = "GetApiKey";
+            object? param = new { Action = "SelectApikey", UserId };
+
+            using var db = GetDbConnection(connection.Connection);
+            var list = await db.ExecuteReaderAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+            var dataset = ConvertDataReaderToDataSet(list);
+            return dataset;
+        }
+
+        public async Task<long> UpdateApikey(int UserId, string Apikey)
+        {
+            string storeProcCommand = "GetApiKey";
+            object? param = new { Action = "UpdateApiKey", UserId, Apikey };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

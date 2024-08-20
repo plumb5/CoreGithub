@@ -1,4 +1,67 @@
-«”®Õ85iA™á¬!­h'vJ:ø´-¨zázPzq³ô¢üzmõ‚Ùü×ğÜüOĞÀœ¹H#É¥	MTv¥ÍÄ&iAy³´¢õe¸^CC7<ö ‡Ø.½è¥e†ş5dXÒ€r„_ÑN¬IÊww)£ÎÕ‚0»t¡üöœ$½èefª¼Ì¤¿†Ø&è«ìûJK#¹-HÚÈĞ¥íTfÒ.b·ÔP#ÖkØèF‡ô ì;¾…˜Å~±SĞ€^iD¢4£™£Ê–´›¥­ä]Ò†rÔö::ˆõ¼e»-ïÅBçNÁP#6H¨¬ Ì6¿†Ø$MhB»4£S:ĞÁİ™Q:Ñù»óOºĞEŞ*5ÔP¯Lõnşzá’²5×¼êóÊ¯!C“F4›¥	eö`?iF3±EZĞBŞ(­h%¶JÚˆÒvVl<v F¯w£›^¯z|ˆ]Ò‹^î1(óÆ¯!Ö¤ÕèxlD±[šÑLì’T[óJª­y¤öt‡[
-º#ªıÌ¤	íÄ.é@YÇ1Ï0ŸúVÊ<ìk¸¾w¥MÄviFÕ·--hA=CE+G{mh#ï”v´sçô’tëª^LõÊjÄšt£Ì]ÿÕpĞKìA™É}³"(Û­ı¤Õßêó†^béÛfnõ5è‘”mÜÿÛu¢ıæ^_ÃQÅ~Ê•ÑB® ­h%¶IÚXGsíè&C’ôp'øŞ§!+å©’}¤Ue®eUß¢´¡“Ø+]è¢]j(õ$=è!¶J©7&bÊüäkˆu-h!vJ+ª‘LÒ†64J;ÚÉ°¤}sü¿í†NÔˆ5éF7ç…]zPõ-Ké[Rß.š2ª¾-iAù´™¥İÄšô R>-W2(67ôÃ½SÚQ¾»+K'ÊoğNÒ….4J5ú«Rê-¼ÒÒÑN½C:Pö(Ò…j:RCØ$İè¦²Ÿ”Ñ©Xõ­të:QÕp¥UƒÔP£²-İ(¿^^ç¼_C¬ò¾sŞ¯IÄFiF3ŸV¤åiÄV”óÍ¯!Ö5=ôø$tT=nÒ‰2’wH7ª‘ìRFrşˆ5t†§œœ¬svğ5d˜R¶¼å[T¯´»¤µ[“t£›»jƒ”Êö$v¢{¡o»µ½¥†’·5éF7ÏÙu©ò÷Ëü/[óüÈ X~™¿†Õ¾(¨ŞòêšĞL†)-házC–V”'
-n’6´ñ[9¤íÌæt ƒ¼®Ô`Ò…j†Ş¤†nb·ô ‡ç½(ï–ğ}ßë¯yúOĞÀ5ç)hd&¤	Õ[¶»4£™§\¶´ •Oó}cvWÖQ#6I÷§¯yÏºôõøo8Ğ‹^2PÙáLâkĞ!¨ÒˆFÖyÒ„¦7¾Ë¤ÍäÒ‚–7:³I+Ê_òıÏAÎ:¾†OXÊÕQ­˜Ué@±&5ÔxŞ3I7zˆ½Ò‹êŠeÅ÷kŞïªMi@±KÑôò Íh&Ö3ôS1­hıSû—·¡¼IÚÑ7ay†>mHç§¯yWh=ÃB×Û®óJµkYºÑÍ=Y^Ùy•)6VT9·KÚ^Ş¤52˜t£›ív¥=ï;v\Ùn‰ıÛó¦€j™4¢•Ø$m(¿ÿ2t”õ±dèÒ…Ÿ¶¥}½HËóÒ‹È0ÑÑøb÷–&4{¤ÍÔ¥ÕİCZÑE†+5Ô¸&íJ½…O[-Õ§%iAÏÆ,iE'LºĞE†,5”c¹éA±^Û¸şˆU5 Ø*¨Şã¤ŒddPŞÑÛmH›xÓŞ–f4³¢>¥å°³´¢•oV”6´ë5t´óÔÇt[¥œI,éB[3I}ßã´›t£û©y½=|šÇ^”§Ïò²ù55D»Ò€&2tiFy_üôØ‚jÌ–´¢õI“6´ñ;å5tT£ã±lù(]èzõî 5T=>Ò‹ê>me`ÍòkxŞåHÈû“F4¾¼'Hš¸3ÁófT÷«WiAGÚ&­håÓ<CCÛ‹=SÚÑN;P=›±¥}cÖ¯ëB’ÔP{±ÿÆa£›Ø,=èá/){†‹ò~Nßwæ7¾¯¡oYĞLŞ"-h!6I+Zyz´KÚ8cÒy]é«{)½XÚšç¿·°Òù5Ô¨jVFéÏMÒ‚ª?UZÑÊÕ“6”;CV‘v´¿½hé@y=v¢›²T½<Ä6)ÛÊ
-±ê…U´ÿéÍ?é@õwCt¢<»aa=İ?2$tTß¦%hD§4¡z'§kFy‡´¢õUfGÚĞIì’ª2)LjOO#ö¢Ìp¾†Ø-èx±eI':‰=R>í&beñ5ÌZº´ ô­iEYÛIÚĞÆ¥d¨Ò‰rutv©*ÛÄºôpU;I/Ê»åõ½¹Ì9¾æí©sJèÛ–F”YÖ1iBù¾!£z€kAõ.iG;õfé@5G:ÑÉ¯L“.”¿7:=ÖĞC†+½èå*°úÆìák^l‹Ò€†—wiD#±IšĞÄœÙóf4›¥Õ]f[ÑJl‘6´q,wíhçÎÓ%è$C•.tq7Â”zˆíÒ‹^~ÓŒNÔÜªHª¾-iAçÇUZÑÊı’Q
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using Microsoft.Identity.Client;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAccountTimeZoneSQL : CommonDataBaseInteraction, IDLAccountTimeZone
+    {
+        CommonInfo connection = null;
+        public DLAccountTimeZoneSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLAccountTimeZoneSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+        public async Task<AccountTimeZone?> GET()
+        {
+            string storeProcCommand = "Account_TimeZone";
+            object? param = new { Action = "GET" };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<AccountTimeZone?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+
+        }
+
+        public async Task<Int32> Save(string TimeZone, int AccountID = 0, string? TimeZoneTitle = null)
+        {
+            string storeProcCommand = "Account_TimeZone";
+            object? param = new { TimeZone };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int32>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

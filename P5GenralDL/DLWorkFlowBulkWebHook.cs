@@ -1,1 +1,25 @@
-s about to be printed.+The name of the document shown to the user.6The page settings of the page currently being printed.+Occurs after the document has been printed.QIndicates that the graphics origin is located at the user-specified page margins.1Retrieves the print controller for this document.(Occurs once for each page to be printed.RRetrieves the settings for the printer the document is currently being printed to.\Occurs before each page is printed.  Useful for changing PageSettings for a particular page.FPaperSize cannot be changed unless the Kind property is set to Custom.ÅSystem.Drawing.Common is not supported on non-Windows platforms. See https://aka.ms/systemdrawingnonwindows for more information.1Defines an object that sends output to a printe
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWorkFlowBulkWebHook
+    {
+        public static IDLWorkFlowBulkWebHook GetDLWorkFlowBulkWebHook(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLWorkFlowBulkWebHookSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLWorkFlowBulkWebHookPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

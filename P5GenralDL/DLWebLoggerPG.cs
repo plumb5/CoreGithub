@@ -1,8 +1,98 @@
-);c=R(c,a);var e=R(d,a);d={};for(var f=0;f<c.length;f++)a=c.charAt(f),a in d||(d[a]=e.charAt(f));c="";for(f=0;f<b.length;f++)a=b.charAt(f),c+=a in d?d[a]:a;return c},3);T("true",2,!1,!1,function(){return!0},0);function Xb(a){O.call(this,3);this.c=a.substring(1,a.length-1)}p(Xb,O);Xb.prototype.a=function(){return this.c};Xb.prototype.toString=function(){return"Literal: "+this.c};function Yb(a){O.call(this,1);this.c=a}p(Yb,O);Yb.prototype.a=function(){return this.c};Yb.prototype.toString=function(){return"Number: "+this.c};function Zb(a,b){O.call(this,a.i);this.h=a;this.c=b;this.g=a.g;this.b=a.b;1==this.c.length&&(a=this.c[0],a.w||a.c!=$b||(a=a.o,"*"!=a.f()&&(this.f={name:a.f(),u:null})))}p(Zb,O);function ac(){O.call(this,4)}p(ac,O);ac.prototype.a=function(a){var b=new I;a=a.a;9==a.nodeType?J(b,a):J(b,a.ownerDocument);return b};ac.prototype.toString=function(){return"Root Helper Expression"};function bc(){O.call(this,4)}p(bc,O);bc.prototype.a=function(a){var b=new I;J(b,a.a);return b};bc.prototype.toString=function(){return"Context Helper Expression"};
-function cc(a){return"/"==a||"//"==a}Zb.prototype.a=function(a){var b=this.h.a(a);if(!(b instanceof I))throw Error("Filter expression must evaluate to nodeset.");a=this.c;for(var c=0,d=a.length;c<d&&b.l;c++){var e=a[c],f=L(b,e.c.s);if(e.g||e.c!=dc)if(e.g||e.c!=ec){var g=N(f);for(b=e.a(new pa(g));g=N(f);)g=e.a(new pa(g)),b=Fb(b,g)}else g=N(f),b=e.a(new pa(g));else{for(g=N(f);(b=N(f))&&(!g.contains||g.contains(b))&&b.compareDocumentPosition(g)&8;g=b);b=e.a(new pa(g))}}return b};
-Zb.prototype.toString=function(){var a="Path Expression:"+z(this.h);if(this.c.length){var b=Ea(this.c,function(a,b){return a+z(b)},"Steps:");a+=z(b)}return a};function fc(a,b){this.a=a;this.s=!!b}
-function Tb(a,b,c){for(c=c||0;c<a.a.length;c++)for(var d=a.a[c],e=L(b),f=b.l,g,h=0;g=N(e);h++){var r=a.s?f-h:h+1;g=d.a(new pa(g,r,f));if("number"==typeof g)r=r==g;else if("string"==typeof g||"boolean"==typeof g)r=!!g;else if(g instanceof I)r=0<g.l;else throw Error("Predicate.evaluate returned an unexpected type.");if(!r){r=e;g=r.f;var w=r.a;if(!w)throw Error("Next must be called at least once before remove.");var n=w.b,w=w.a;n?n.a=w:g.a=w;w?w.b=n:g.b=n;g.l--;r.a=null}}return b}
-fc.prototype.toString=function(){return Ea(this.a,function(a,b){return a+z(b)},"Predicates:")};function gc(a){O.call(this,1);this.c=a;this.g=a.g;this.b=a.b}p(gc,O);gc.prototype.a=function(a){return-Q(this.c,a)};gc.prototype.toString=function(){return"Unary Expression: -"+z(this.c)};function hc(a){O.call(this,4);this.c=a;Kb(this,Fa(this.c,function(a){return a.g}));Lb(this,Fa(this.c,function(a){return a.b}))}p(hc,O);hc.prototype.a=function(a){var b=new I;A(this.c,function(c){c=c.a(a);if(!(c instanceof I))throw Error("Path expression must evaluate to NodeSet.");b=Fb(b,c)});return b};hc.prototype.toString=function(){return Ea(this.c,function(a,b){return a+z(b)},"Union Expression:")};function U(a,b,c,d){O.call(this,4);this.c=a;this.o=b;this.h=c||new fc([]);this.w=!!d;b=this.h;b=0<b.a.length?b.a[0].f:null;a.J&&b&&(a=b.name,a=D?a.toLowerCase():a,this.f={name:a,u:b.u});a:{a=this.h;for(b=0;b<a.a.length;b++)if(c=a.a[b],c.g||1==c.i||0==c.i){a=!0;break a}a=!1}this.g=a}p(U,O);
-U.prototype.a=function(a){var b=a.a,c=this.f,d=null,e=null,f=0;c&&(d=c.name,e=c.u?R(c.u,a):null,f=1);if(this.w)if(this.g||this.c!=ic)if(b=L((new U(jc,new y("node"))).a(a)),c=N(b))for(a=this.m(c,d,e,f);c=N(b);)a=Fb(a,this.m(c,d,e,f));else a=new I;else a=xb(this.o,b,d,e),a=Tb(this.h,a,f);else a=this.m(a.a,d,e,f);return a};U.prototype.m=function(a,b,c,d){a=this.c.v(this.o,a,b,c);return a=Tb(this.h,a,d)};
-U.prototype.toString=function(){var a="Step:"+z("Operator: "+(this.w?"//":"/"));this.c.j&&(a+=z("Axis: "+this.c));a+=z(this.o);if(this.h.a.length){var b=Ea(this.h.a,function(a,b){return a+z(b)},"Predicates:");a+=z(b)}return a};function kc(a,b,c,d){this.j=a;this.v=b;this.s=c;this.J=d}kc.prototype.toString=function(){return this.j};var lc={};function V(a,b,c,d){if(lc.hasOwnProperty(a))throw Error("Axis already created: "+a);b=new kc(a,b,c,!!d);return lc[a]=b}
-V("ancestor",function(a,b){for(var c=new I;b=b.parentNode;)a.a(b)&&Gb(
+﻿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWebLoggerPG : CommonDataBaseInteraction, IDLWebLogger
+    {
+        CommonInfo connection;
+        public DLWebLoggerPG()
+        {
+            connection = GetDBConnection();
+        }
+
+
+        public async Task<long> SaveLog(WebLogger logDetails)
+        {
+            try
+            {
+                string storeProcCommand = "select * from web_logger_save(@LogUniqueId,@RequestType,@AccountId,@UserInfoUserId,@UserName,@UserEmail,@ChannelName,@ControllerName,@ActionName,@IpAddress,@LogContent,@Headers,@RequestedMethod,@Useragent,@AbsoluteUri,@CallType,@StatusCode,@CreatedDate,@CustomMessage)";
+                object? param = new { logDetails.LogUniqueId, logDetails.RequestType, logDetails.AccountId, logDetails.UserInfoUserId, logDetails.UserName, logDetails.UserEmail, logDetails.ChannelName, logDetails.ControllerName, logDetails.ActionName, logDetails.IpAddress, logDetails.LogContent, logDetails.Headers, logDetails.RequestedMethod, logDetails.Useragent, logDetails.AbsoluteUri, logDetails.CallType, logDetails.StatusCode, logDetails.CreatedDate, logDetails.CustomMessage };
+
+                using var db = GetDbConnection(connection.Connection);
+                return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
+            }
+            catch (Exception ex)
+            {
+                return 00;
+            }
+        }
+
+        public async Task<int> GetMaxCount(WebLogger logDetails, DateTime FromDateTime, DateTime ToDateTime, string UserIdList)
+        {
+            string storeProcCommand = "select * from web_logger_getmaxcount(@FromDateTime, @ToDateTime, @AccountId, @UserIdList)";
+            object? param = new { FromDateTime, ToDateTime, logDetails.AccountId, UserIdList };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
+
+        }
+
+        public async Task<List<WebLogger>> GetLogData(WebLogger logDetails, DateTime FromDateTime, DateTime ToDateTime, int OffSet, int FetchNext, string UserIdList)
+        {
+            string storeProcCommand = "select * from SelectVisitorAutoSuggest(@FromDateTime, @ToDateTime, @OffSet, @FetchNext, @AccountId, @UserIdList )";
+            object? param = new { FromDateTime, ToDateTime, OffSet, FetchNext, logDetails.AccountId, UserIdList };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<WebLogger>(storeProcCommand, param)).ToList();
+
+        }
+
+        public async Task<List<WebLogger>> GetLogsForNotification(WebLogger logDetails, string UserIdList)
+        {
+            string storeProcCommand = "select * from web_logger_getlogsfornotification(@AccountId,@UserIdList)";
+            object? param = new { logDetails.AccountId, UserIdList };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<WebLogger>(storeProcCommand, param)).ToList();
+
+        }
+
+        public async Task<WebLogger?> GetLogDetails(WebLogger logDetails)
+        {
+            string storeProcCommand = "select * from web_logger_getlogdetails(@AccountId,@LogId)";
+            object? param = new { logDetails.AccountId, logDetails.LogId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<WebLogger>(storeProcCommand, param);
+
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

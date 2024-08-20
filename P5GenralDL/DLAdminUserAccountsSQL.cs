@@ -1,3 +1,54 @@
-†t<{í¨hğlüa	İ†ê¦Tí}mıĞÃûv8¡%©¡:aI+Úh«´£6¤:m—tĞn)÷{ƒÖÑ»Qöêv‚ïñ-Ô¤ê«äHÊ	ãC'è;ÁıiBm–j´IZÑE[¥nÚ,eCşhÍ	Í´&-¨Ñ^iEÛŸNKÒNhÒ‰.Ú"4h‡t£›¶Jzh§ô¢—¶¡…›,ºÉ%Mh§íRGµ7¤´GºĞEûÓ@ÏŸ–™¤,³Â	5C+­IÊ²úSG¶Iºhÿíÿw.ŒœÕuÖFg)Ë+Ë[B«¡ZîÒ†6Ú&íè Ò‰^Úşı›÷B»¥	Õ†Ÿj´GZÑúÚşIÚh¯´£6Iå¦×'è¥Íhgoÿh“4¡™vHjO=I+Z9!KÙ;
-mA‡¡ıO—%©£ƒŠt¢‹¶JÚŸnôÒvtòlSÏÖ¤	Õ†)uTºt¢óµ5Iºi‡ô<]…6£ËĞJÒ†vZ—:ê´G:ĞA;¥åvZ’ªÛ¹Rn'
-mAÃP–Å'mh£ÒvÚ,uÔi—t ƒ¶H'ziıûäş^hMšPöö,5Ôh«´¢“ö§ëéáOè1T'4iEí”´]ºQb$ôòWOáÒ„nZ“ôşi'ğ·Mı½ EšĞÄ¹CšÑNkRGí”NtÑş4Ğ éFµLšX–ôl[šPm¸RGµáH':_[›t¡ëµû“´]ºÑM›¤çişhÍ	-O[’jœ¥í´&uÔi‹t ‹¶KZ“²·8íDË@m•Nô¼¶7é}Z×SOhT¿Z“n”÷môïçĞ{¡íÒ„¾ÛÙ–¤†­K+ºhMè¦ÒƒÚ%½è¥•v–õ6¤	M´?Íh§İRGö§Ü¯sn-¨'”Z’:ª”F¡utZi¯´¡œÛË?}nÙÃùOñë¤³º8«JÚ,İè¥utr§“å¤†VN(Ò†6Ú*íh§ı©£NÛ¤´?è¥íèbÙúhš†ön45Z—V´¾v~Ò†®?=–¤êÎ†t£—¶£›e[Ë¦”e'ÑJOFûÓ–¤êİ\Ò.Ú.TËBºÑK;ÑË²«e[šPmø©£ƒöH':_ÛMºP¾çŞOhĞVéF7m’ôÒ¶§‡Ÿ^çË¨KZz’jœ›¥í´?uÔi‹t ‹¶JZ“î§IM†jC•VÔi¯t ƒ¶I'Ê=Œ‚fî!'Ú.Íh¡RCµá§í´Kê¨ÓNé@í‘zÿôZBËŠ–-iF3m•´Ğn©¡FÛ¤­´GÚÚ í¨qgµ?m	­şµaó§jí•´EºÑóÚ¤÷iK´†¶ŒvÚ"uTºt¢“vHºhhĞNéF7íOÏÓ^^ë	í†VÚ%mh§íRGvKºh‡4Ğ =R–¹6ê†jÃ•6´½viGûkW’:ê´&è ÍÒ‰^ÚŠ¾RG¢-ÒŒÚ%5Ôh«´¢vKuÚ&(_©ó“NôoÙú,¡“eSËº4£™ö§­´CÚĞEëÒ@7mHÏÓ5iºÖÓø¶„FBµìHY¶+mG7Nyúo?QœÃM=ÏıÚĞÎY?u”›$(Ï3~ºĞ ÍÒıôÚ‚^C+­IÚh§´£ƒ¶I'zi×ÓËO¯û%Ú!ÍèÛ,I5Ú%­h§-RG6¤½´MlHÚ°¥Í´?-h¡½RCöH+ÊíOÚĞE{¥m’n”½µ¢™½ù£ÍÒ„Z—j´EZQ6´$tÓšô ‡Ö¥÷iI´-í´Cê¨Óşt<5£½¨±¬òĞj¨nrJÊ¯6>©£NÒ.Ú,4h·”[o…¶¢ÍPm8Ò†6Úv”ïÏç“:ê´[:ĞA›¤Ú#İèıÓlj;_=qB–f´ĞšÔP£ıiE;m“:ê´U:Pm¨³Á?Ú&M¨½¶~ÒŠVÚ.mè¢5i AëÒnÚ)=Oç÷´%t&
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminUserAccountsSQL : CommonDataBaseInteraction, IDLAdminUserAccounts
+    {
+        CommonInfo connection;
+        public DLAdminUserAccountsSQL()
+        {
+            connection = GetDBConnection();
+        }
+        
+        public async Task<List<AdminUserAccounts>> GetDetails(List<int> Users)
+        {
+            string storeProcCommand = "Admin_GetUserAccountDetails";
+            object? param = new { Action = "GetDetails", Users = string.Join(",", new List<int>(Users).ToArray()) };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<AdminUserAccounts>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}
+

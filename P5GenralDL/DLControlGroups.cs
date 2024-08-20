@@ -1,1 +1,26 @@
-™õ{/®[Ž!{cªkà{›¦Yu5{Þ¢+h+|%ÚZÆ|k™^Lî|®”ª>¸|ñË0R}4ŠÕôÌz‚ÓÇéhzˆÏRÞzÊèÒžz™Æ“Ç@z§Â^»çz¾¾E°|zÚº-¤ózû¶™a{'±Ü–{Z­ _{©;tÂ{Í¤±gÇ| Zo|P›(L£|‘–>y|Ò×0}‹‚ô,z‹ÙèÀzÔwÝVz’ÏãÑïz˜Ë\Æ“z£Æì»@z¹Â¯ÝzÕ¾1¤[zõ¹Â˜Ð{!µQ{S°È€â{‡¬tR{¿§-ge{ú¢Z|7œçL[|u—y>;|µ‘ß/ë|õŒ.ó™zŸÞ1è"z›Ù|Ü®z˜ÔÊÑBz—ÐÅçzËtºšz³ÆÔ¯?zÐÂ.£Äzð½x˜A{¸¿Œ‡{L³ë€e{}®ásã{±©£g{ç¤7YÉ|ž¢L|Z˜Ù=þ|—’ä/·|ÖŒÚ÷Ë„‡Jìƒ„/~Óá;ƒÙ~eÕöƒ‡~Ê¾ƒ:}´¿’‚ï}e´I‚¬}4¨Ê‚q}/.‚<}2‘K‚}6„óæ}@x#Ä}jjì¦}®][†}þOVe~o@ñD2\"°÷ƒÆ„¢ëÍƒrƒïà‹ƒ"ƒDÕJ‚×‚¥Ê‚”‚¾í‚T…³¨‚¨/é€ºœš»€o¾’€9„ns€ w§[€jxE€\î,€Nï€@€ï€V1þ€Î€±öXƒ‰ûë‚Æ‰ßÛ‚{ˆ"Ôž‚7‡DÉmú†r¾HÂ…¨³„ò§“d„Yœ;ƒÑ1ƒ[ƒè‚õw*€ó‚™j€å‚K\‚€Ó‚N‰€»ë@.€œË1¢€{®õ¢‚uXêf‚+Ž)ß,åÓò¥‹çÈÄmŠÛ½¡9‰Ù²cˆé¦õ€åˆ›n€À‡F¢€¤†Œƒa€•…ßv¬€Ž…=i€ˆ„§\€~„N#€kƒ˜?Ï€Oƒ1I
+ï»¿using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLControlGroups
+    {
+        public static IDLControlGroups GetDLControlGroups(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLControlGroupsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLControlGroupsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

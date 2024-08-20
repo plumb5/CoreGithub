@@ -1,4 +1,47 @@
-	MÒŒf4K+ZÑ"uÔÑzu}¸3$}¥-hCo‡/5©¡†vôYWo„4S7WtJ5tIut£…
-¼¨#IÚĞ,íhGzßƒF UZĞ‚¾RCmè]QE &ut¡½£:Ò‚Ô¥.t¡–B-¡T5t~jè#uÔÑŒN*ÌŠiCúJ;ÚÑ†:ûæ	5iA:¤†vt¢‹
-+¡KšÑŠ©£+ÔôÎ¬´HZĞ*ut¡¯ô„„z5t†¦ëêPGïºåFB—´ =RC©»>H:Ğ„ê–„>ÒŒV´H]hCïX@»´ RG:¥=èBßtõFè–jè‘:ê¡ûÚĞ&M¨•P+è#5ÔĞŒöm$´HZĞWj¨¡T˜	5iF3:¤­è”t .uÔÑ…ŞÙntYè2ô wC\=¤†šBŸíêĞGÚÑfô®f"Ğ‚>ú,´¢wTG MZĞ‚šÔÑ…véA:ÑÛEŒ@]j¨¡½c2İè]‹D\}GB×k	}¤-h‘jèÿºŸhÅ½&7ôï—hE+jRGíè³è´ Sê¨£Î:º¤†vtK¥Âü =¡şM¨?èƒf©¡-Ò‰NôEo'mRC5©£vtSaWt çCèI¨KZĞ-5ÔĞw Ü ‚f4£´¢ÍRG7ZĞ;›"Ğ&-hAMú¢/Ú¥.tHOè“PGŸŠVôHí¡ëƒÔQGôÎè4Kíh‘Nt¡/ZJh©hG›‡¶…NôÎÇtIZĞ-ut¡GzB5ßvB»¡-RG}Ñ;ß"Ğ&5´£&èD‡t¡è];E .5ÔĞ%uÔÑ:¼¢Gjh=	½«¤4K5´ ;…î„ViF3úJ]hCï|‹@»´ RG:¥=è
--·n©¡vµ„Ş¾iú w=fiAZĞ{åˆ@+zWîè+-hA›t¡5éAÚÑf¡­£Cê¨£.¥‚}@jú Gj(uçéD'úHºĞŒŞOZĞÛ@+êê¾è}h“´ &uÔÑ.=èAº-t:¥:êè“è’jè–Nt¢GºĞªk@½ïs#Ğ$5ÔĞGê¨£MTH-Ò†6ôE3òBzGuÚ¥-è:ºĞÿõ¹ÜUËa«ÃV‹Z5…Ö„n©¡=RG=t%ôÎ¦ô‘V´¢YjhG‹t¢}¥]hC[	m5©¡†©£NÔ¨`uiC;ºÑ»Ö#®î„:*ú n¡ŞÑ,uÔÑŠŞÙ¾Ò}Ğ&5´£&èD‡t¡è.¡»¢.5ÔĞ-uÔÑƒ**œÒ†6ô‘v´£94î¹‘Ğ"-hA_©¡†64Q!%Ô¤­è:êèBo·5İÒ‚–«6’t¡}Ğl¡¹£Yê¨£½3:}¥­h“ÚQ“Nt¢CºĞ…NôÎãÔ¥­è’jè‘:ê¡óz{»h’v´£ÚØã–Ğ,-hA+j9Ô2úJ+ZÑ&ut¡†Ş¹iA:¥]¨KzĞ…Şîoº¥†z¤z¨@oG!MÒvô‘Nt¢õê-RC}¥:ÚĞ•BWBMZĞ‚viC:¤íèDo§-uiAº¤†ºÑ{@´¢5t}:ºĞÚî¹$ÍÒ‚´ ·[V©¡}¥:jè=kD ]jhG‡t¢uéBºĞ\BsE·ÔPİ¤:šĞ»:ˆ@iCš¥íhA+ûVZ¥-h“¾hG}©ğ&Ô¥Íè–V´¢ÿëïÎ­öòÊu®9TËQGzÏ@è#-hA³ÔÑ…ÔR¨%ô•ÚÑ&uÔÑŞóR:¤†vtJ':Ñ%]èB÷ÕÃ'¶o\ëƒ4¡	}¥ú„î&Íh¾ºüHZB·I+Z¯î±¤/ú^=gJzGÜú0©¡:MÚÑº>H:Ğ%¨_M«HºP“îĞ”Ñ‰¦‚Zè~¤uÔ¤]è’nô ½çâêy¤	Mè+}ĞÒŒVÔ¥/Ú®>ã‘êh“.t¡KºÑ:éAºÑÌ^ä'ÔiF}¥=´dt¡¥ 5tué‹6tKí¡;IGhMhAëƒRá|ÚÑ&è¸Zö+è=.uÔ¯ÖQ¥]è”nt£[zĞsõ†Ş³ qÕ—4¡éjó)}Ğ'tiFóÕéUZĞº‹´¢õª*}Ñ÷êúWÚB×?j¨…"íh¿ºK:Ğ-è¼zf–:ê¡;IºP“nôßıá$éAÏÕ4zÏëÄÕı&4]Í§Jô¹ZF’f4£]ZĞrµ-­è:“´¡íRC;:¥¡^¤è–:ê¡ëƒt¡}¤İè+=¡–BÏ@íAtK3š¯¾#IZĞ"­hE
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+
+namespace P5GenralDL
+{
+    public class DLAdminWebLoggerPG : CommonDataBaseInteraction, IDLAdminWebLogger
+    {
+        CommonInfo connection;
+        public DLAdminWebLoggerPG()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<long> SaveLog(AdminWebLogger logDetails)
+        {
+            string storeProcCommand = "select adminweb_logger_save(@LogUniqueId,@RequestType,@AccountId,@UserInfoUserId,@UserName,@UserEmail,@ChannelName,@ControllerName,@ActionName,@IpAddress,@LogContent,@Headers,@RequestedMethod,@Useragent,@AbsoluteUri,@CallType,@StatusCode,@CreatedDate)";
+            object? param = new { logDetails.LogUniqueId, logDetails.RequestType, logDetails.AccountId, logDetails.UserInfoUserId, logDetails.UserName, logDetails.UserEmail, logDetails.ChannelName, logDetails.ControllerName, logDetails.ActionName, logDetails.IpAddress, logDetails.LogContent, logDetails.Headers, logDetails.RequestedMethod, logDetails.Useragent, logDetails.AbsoluteUri, logDetails.CallType, logDetails.StatusCode, logDetails.CreatedDate };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

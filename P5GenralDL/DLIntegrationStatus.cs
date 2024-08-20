@@ -1,1 +1,25 @@
-$’$”UÛm$’$“RÔÛl$’$“P–Ûl$’‚Ÿ[Õ&^$Ÿ~"ZW%î$›wvZØ%$˜pu[é$–$•i]5$“$“b¢^@$’$“\Ø^$’$’Vq^Ó$’$’Pá_/$’$’HÕ`#$’$’AøaW$’$’;]b‘$“$’6LcÃ$“$’0°f$”$’*Ah1$®$’%Bk+$²$’$Êkõ)Ú$’$˜k}9Ó$’$•k®K‘$’$”k™^$’$“lvp$’$“mÈú$’$“lş’¾$’$”l,¥ƒ$’$”kq¶<$’$“j$ÅT$’$’h®Ï$’$’f™ÖÎ$’$’dÛ$’$’`¸ÛG$’$’^tÛm$’$’[ÕÛm$’$’ZNÛm$’€”]ü&^$ z^G%$›sÜ_¬%$˜l"aC$“$–etaé$’$”^Ñc$’$“XÒc¯$’$“Qve$“$’KeÖ$’$’CıfÕ$’$’>(gŒ$’$’9,h`$’$’3gj4$“$’-|lW$“$’(1n–$$’$ÅpÏ%!$’$¤qƒ(@$’$“q7m$’$’q¬H¹$’$’rfZÓ$’$’smS$’$“t7~8$’$’vV$’$’ve Û$’$’u3²©$’$’sVÂf$’$’rÃÍÎ$’$’p•ÖH$’$’nŞÙ¦$’$’k¢ÛF$’$’h|Ûl$’$’f@Ûm$’$’d1Ûm$’}6cl%é$ vc$—$oxdÖ$”$™hòeğ$’$—bfá$’$•[³gd$’$”Süi‘$“$“Mªjã%$’FŒkù$“$’@ål$’$’;ßm±$’$’6§o$’$’0êpä$’$’+qs€$“$’&ëue$™$’$ŞwO%$’$—wë'$$’$’w÷4ñ$’$’xEEz$’$’xâW$’$’zIjØ$’$’{|O$’$’}0Œ÷$’$’R™$’$’ü®$’$’~‘½$’$’}
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLIntegrationStatus
+    {
+        public static IDLIntegrationStatus GetDLIntegrationStatus(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIntegrationStatusSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIntegrationStatusPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

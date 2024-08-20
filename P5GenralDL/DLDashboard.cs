@@ -1,2 +1,25 @@
-}‰2t±}ú'¢v¾~v³’Y€m«ËZÏ€@£ÿ\Œ€œ'^Eî”F_÷ËŒ^a£«„ZcQ|0ewsîfÂdkth„Tb¢jUCYrl21Oön"F>p<9r,%1ótN9'ŒvzY²ÌWÍ…ó«Y›…†£T[f…›ˆ]-„²“±^ë„M‹Ğ`¡ƒìƒÓb[ƒ{±dƒ3sweæ‚Ükg·‚…b>i–‚,YkÎO¨m{qEıoŠ<q´€É1Ïsó€}'xv=€2²V°‹oªgXƒŠÉ¢®ZUŠ#šè\#‰~“]êˆÚ‹=_¬ˆ7ƒGaq‡”{-c@†ôrûe†Wj“fö…¹aÕhã…X»jÛ„mOWlãƒÁE¹oƒ;ÒqE‚f1¬sŸµ'gv±†U´İ©ÎWŠü¢Y_šJ[28’|]UŠ¨^ÍŒo‚º`‹Šz§bxŠ¥r}dZ‰ÃjfFˆİakh@‡ğX\jE†ıOl[†Eun…;pãƒ÷1ŠsU‚å'WuÔÎ°õTÜ–4©:Vµ•¡zX“é™³Zg’Ã‘ç\=‘ŸŠ^{‚1_éWz%aÍ1rc¸i¬e¯‹áag´Š­WÿiÆ‰pN´kêˆ)E3n+†×;lp’…u1is„'Hu¦‚“°PT1›l¨›V™õ ãWè˜€™"YÄ—‘[[•«‰]x”N­_W’ğy§aA‘ŒqŒc3(i?e1¼`g@CW¥i^‹¾NfkŠ,DòmİˆŒ;;pP†Ú1IrŞ…':u{ƒS¯£S¢ §ûU}µ MWYœğ˜•Y7›7Ô[™‘‰\ó—û+^Ø–fy+`Ç”Çqb¾“&hÓdÂ‘|`;fÚÀWMióNkBŒD³m›Š,;
-pˆ/1*r®†#'-
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLDashboard
+    {
+        public static IDLDashboard GetDLDashboard(int AccountId,string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLDashboardSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLDashboardPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

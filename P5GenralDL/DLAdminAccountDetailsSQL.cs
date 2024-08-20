@@ -1,6 +1,60 @@
-@Ãµ­?h%[Õ†:’Gí?-‡ìBËı©_{ÿëE(_ÒºKM?ó—­],íª½¿lÛêCß?½õt2f\]¸ûSÈN5¢-Ş­&4‘]jF3ßƒşÓ‚²[­hå«©ÚPö;«ªT8êDù½í?]èú§»Ÿÿoş–;7ÿk3Ï²ÖAÏ?½mõ¢ŒtÿÔ‡ò”Ãzèb¤×G…¨4p5«åŞÛjBO§üiF3mjAÇÄG­heöÿ©6´qôÛÔvf:ê@{âªN”ã¬Õ…nZÕƒÿj™U½èet’úĞÇW4ºÉÉf5¡‰c²¦f4ókjAıÚÉ§V´òwª«u¾í§v”Ñ9Eè eM(sŞ£.t“íêA}n«½Ì÷Ô‡>õzãv6Õ€2OŞKjD#¿«&4q$¨ÍÔ]jAË¯Â®jE+k>«mTØjG9¾U(W˜^W':y²)«]Ô=êF7×,›zPş"½®^ô2—ÃTú¸G“ĞËøŞÀÒ®Ñø«{ÿ4¡‰ç©‹šQ±ZĞÂõå¦V”cÓó©eß¸·ÚQ¾Š¸ş²åˆjvu¢“£ƒ¦.tQ!¨İ´·ª=TèêE"ú3®“åı§d³šĞÄoóªıÙ[-háÙëO­h¥nSê–Aí(3¼?è ÇM¨£ÓÕnö´K=èáI–O½è¥ÂTúøv4}{ÍüûçWwM5 ‰
-KÍ(g;wªutŠZQ~›;ªíÔ½ê@İv†:ÑÉètu¡ìÏö§ôP·ªuÀ¿ìC"‡ğ±´¡4’MjB¹°¦šQŞ':W-haÔ«ZQæ'»ŸÚĞÆÒŠÚÑÎqËŸt­êDyBc=u¡‹lW7ºÑÿï=èiŸ>¾ÛZ½ŒŞTêH42Ò‘ùª^Wjß§ÚQg7mê@gNE(ÛÀ	êEyÓl•–¥D¶ )£™ıóPZÈNµ¢\^Wmhc–ÚÑÎqVS:Ènu¢“Ù
-‚ÊÌìAsD#mxjBÓ/;²šQŸşùÔŠ>²-¬¡Â]©sÕ€ò¤ìëjD]ÚS3šÿéé·«åÊ÷
-jEë?İ!jCÇWí¨_ğjê@‚:QgRzÉFõ¡º­ŒCıÈV5 lW#yÚ¿¨	mThjGíÅRÊÓ§ªY>u¡‡º[½èåŞ¤Ò·f/Új/ÑÈÓ™ŸšPyKP3š©°Õ‚v²Qè {Õ‰²U½èıe÷§Ò‹ş‘h¨½xjDÙ­N”£ºÕ…®_¶fu£|¯xmõ ‡lQ/z™ß÷SiïHd+:2š¹2Ô‚²KèüémêB÷OÛ§ÔëìU½(×fÎSúÈ6t²­ÏºQhàÌh©Md“šÑÌkª­d‹ÚĞFºÚÑK¶©´w}dºÈ^5¢‘ìRÊ¯°*KãÌs¼©Ô3‚«NtQ¡¨İÿô–ÔƒzÒûÔ‹^*4õ¡¬‹kv³.öG¶«œo5¢™ìPÊ^7¨d·:ÑùO_XY](=ŸºÑÍâUzÈõ¢—¾ı)=>‰lDOF¹s»ZĞB…¨V´Qáÿ<n9ÿÕyCb[k —ZC}èãH.£—µr9»¸Ğ@ÿ4¢öò©å-æü©µ—I­hE‹ÚĞN… t­êDÙ¤^ô’mêCYõÑcŸ;XQ(çøë©TèjBKûÓŒN²C]èâïõQ7ê÷§¥½Üóèß÷¯½üóßì\j@9vÚOh¤BRÊÓşk«Íÿô®™Ô‚ş^?µ¢õŸŞ¹»ÚĞÉÒ²ºP¾ò’ºQŞú{]=èa.à¤^Ôq0Îeò>j@Ù©FÔï(45¡‰ìR3šÉvµ …=æR+ZÉµ¡<°³ÚQÎpvQ:8¢ŠêD-ÛêF7K›êAÙ‹FF'~d—PF§5¢‘ìVšÉFµ ìQ;ÚYÇAè@?u¢óŸîrŠº~š>––ÑĞ@…¨F4’jB[ÔŸfÔ^,µ …ºY­hå—uÕ†¶ÿêİMíhÿm©{ª,m«]¼ş§İd¯zPfu™Q½è%ûÔ‡ò$ç_6³æ3ë¸}jDc–_Vš‡¢f´P!ª­d«ÚĞA6«å¨nÿéB×OßR7º¹6ş©=,­©ŒC±oj‰h$ÛÕ„&²KÍ(Gsªmd·ÚQç8éê@éqÿÔ‰roí,•×N6 u ş.†:ÑÉu½§R¡}TP[@¦ÑóË¢^”#÷ü©e>ÑÑÎ¶Ó?4¨TøÓ„&®±~jF33ßÿç¸å_¼ğ¿
-KHÖªhå7Ô†6ş"uµ£
-Yèø¯öÕ‰N²E](OI§n”w¦gPÏO‡#RÑ‘ĞôOïÚAÍ¨}ÛjE+o:eµ¡ìU;Êı‘Õ²O(óì¦.Ôo:uu£›ö~êAÏ/»¯zQ¶¢ò—}èûUXlE“7ïgUÊSÖ{¨ÜZjBKjFyO÷eµ å§{ªíTˆê@¹{›:ÑÉ=é«.t1:Uİè¦nQzÈ6õ¢—cÈ¡>”ûíû¡‹1[u«Ğ@İ¢F4rîuÔ„:fMÍh¦BWZÉşiCÙ¡vtêD'£~Õ….²[İè¦nTzĞ¬^Ô9³ªúĞÇÂ†nÆlû†ëQÊ;„+ª,í©	MÜŸîjF³ó©-ôí¨­ü½îjCÙ«ntó]RzXZT/ú‡=‹Ê8ÚPz*Z9¢ªjCu“ÚÑN…©têD'uŸºPWİèfNõ¬Ô¾õ¢ü.ŞRéÛıh™zúÛkÌ7Õˆ&²GÍ(×cWSÊ±ŞMjE+ÚĞIß¦ºĞE/ªºÑı_­ûSj‡zQöí/ûPö·£­úq~·ÿ4 ºMhD·šĞÄõ·?Íh&ÛÕ‚ZÔŠ
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Dapper;
+using System.Data;
+
+namespace P5GenralDL
+{
+    public class DLAdminAccountDetailsSQL : CommonDataBaseInteraction, IDLAdminAccountDetails
+    {
+        CommonInfo connection;
+        public DLAdminAccountDetailsSQL()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<List<Account>> GetAllAccountDetails(int? Offset = 0, int? fetchnext = 0, short? AccountType = null, string AccountName = null, DateTime? CreatedFromDateTime = null, DateTime? CreatedTodateTime = null, DateTime? ExpiryFromDateTime = null, DateTime? ExpiryTodateTime = null, short? Status = null)
+        {
+            string storeProcCommand = "Account_Details";
+            object? param = new { Action = "GetAllAccountDetailsForAdmin", Offset, fetchnext, AccountType, AccountName, CreatedFromDateTime, CreatedTodateTime, ExpiryFromDateTime, ExpiryTodateTime, Status };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<Account>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+
+        public async Task<List<Account>> GetAccountDetailsByAccountType(short FeatureGroupId)
+        {
+            string storeProcCommand = "Account_Details";
+            object? param = new { Action = "GetDetailsByAccountType", FeatureGroupId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<Account>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

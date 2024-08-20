@@ -1,18 +1,76 @@
-dÖdædöeee&e6eFeVefeve†e–e¦e¶eÆeÖeæeöfff&f6fFfVfffvf†f–f¦f¶fÆfÖfæföggg&g6gFgVgfgvg†g–g¦g¶gÆgÖgægöhhh&h6hFhVhfhvh†h–h¦h¶hÆhÖhæhöiii&i6iFiVifivi†i–i¦i¶iÆiÖiæiöjjj&j6jFjVjfjvj†j–j¦j¶jÆjÖjæjökkk&k6kFkVkfkvk†k–k¦k¶kÆkÖkækölll&l6lFlVlflvl†l–l¦l¶lÆlÖlælömmm&m6mFmVmfmvm†m–m¦m¶mÆmÖmæmönnn&n6nFnVnfnvn†n–n¦n¶nÆnÖnæn÷ooo'o7oGoWogowo‡o—o§o·oÇo×oço÷ppp'p7pGpWpgpwp‡p—p§p·pÇp×pçp÷qqq'q7qGqWqgqwq‡q—q§q·qÇq×qçq÷rrr'r7rGrWrgrwr‡r—r§r·rÇr×rçr÷sss's7sGsWsgsws‡s—s§s·sÇs×sçs÷ttt't7tGtWtgtwt‡t—t§t·tÇt×tçt÷uuu'u7uGuWuguwu‡u—u§u·uÇu×uçu÷vvv'v7vGvWvgvwv‡v—v§v·vÇv×vçv÷www'w7wGwWwgwww‡w—w§w·wÇw×wçw÷xxx'x7xGxWxgxwx‡x—x§x·xÇx×xçx÷yyy'y7yGyWygywy‡y—y§y·yÇy×yçy÷zzz'z7zGzWzgzwz‡z—z§z·zÇz×zçz÷{{{'{7{G{W{g{w{‡{—{§{·{Ç{×{ç{÷|||'|7|G|W|g|w|‡|—|§|·|Ç|×|ç|÷}}}'}7}G}W}g}w}‡}—}§}·}Ç}×}ç}÷~~~'~7~G~W~g~w~‡~—~§~·~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””)”9”I”Y”i”y”‰”™”©”¹”É”Ù”é”ù•	••)•9•I•Y•i•y•‰•™•©•¹•É•Ù•é•ù–	––)–9–I–Y–i–y–‰–™–©–¹–É–Ù–é–ù—	——)—9—I—Y—i—y—‰—™—©—¹—É—Ù—é—ù˜	˜˜)˜9˜I˜Y˜i˜y˜‰˜™˜©˜¹˜É˜Ù˜é˜ù™	™™)™9™I™Y™i™y™‰™™™©™¹™É™Ù™é™ùš	šš)š9šIšYšišyš‰š™š©š¹šÉšÙšéšù›	››)›9›I›Y›i›y›‰›™›©›¹›É›Ù›é›ùœ	œœ)œ9œIœYœiœyœ‰œ™œ©œ¹œÉœÙœéœù	)9IYiy‰™©¹ÉÙéù	)9IYiy‰™©¹ÉÙéùŸ	ŸŸ)Ÿ9ŸIŸYŸiŸyŸ‰Ÿ™Ÿ©Ÿ¹ŸÉŸÙŸéŸù 	  ) 9 I Y i y ‰ ™ © ¹ É Ù é ù¡	¡¡)¡9¡I¡Y¡i¡y¡‰¡™¡©¡¹¡É¡Ù¡é¡ù¢	¢¢*¢:¢J¢Z¢j¢z¢Š¢š¢ª¢º¢Ê¢Ú¢ê¢ú£
-££*£:£J£Z£j£z£Š£š£ª£º£Ê£Ú£ê£ú¤
-¤¤*¤:¤J¤Z¤j¤z¤Š¤š¤ª¤º¤Ê¤Ú¤ê¤ú¥
-¥¥*¥:¥J¥Z¥j¥z¥Š¥š¥ª¥º¥Ê¥Ú¥ê¥ú¦
-¦¦*¦:¦J¦Z¦j¦z¦Š¦š¦ª¦º¦Ê¦Ú¦ê¦ú§
-§§*§:§J§Z§j§z§Š§š§ª§º§Ê§Ú§ê§ú¨
-¨¨*¨:¨J¨Z¨j¨z¨Š¨š¨ª¨º¨Ê¨Ú¨ê¨ú©
-©©*©:©J©Z©j©z©Š©š©ª©º©Ê©Ú©ê©úª
-ªª*ª:ªJªZªjªzªŠªšªªªºªÊªÚªêªú«
-««*«:«J«Z«j«z«Š«š«ª«º«Ê«Ú«ê«ú¬
-¬¬*¬:¬J¬Z¬j¬z¬Š¬š¬ª¬º¬Ê¬Ú¬ê¬ú­
-­­*­:­J­Z­j­z­Š­š­ª­º­Ê­Ú­ê­ú®
-®®*®:®J®Z®j®z®Š®š®ª®º®Ê®Ú®ê®ú¯
-¯¯*¯:¯J¯Z¯j¯z¯Š¯š¯ª¯º¯Ê¯Ú¯ê¯ú°
-°°*°:°J°Z°j°z°Š°š°ª°º°Ê°Ú°ê°ú±
-±±*±:±J±Z±j±z±Š±š±ª±º±Ê±Ú±ê±ú²
-²²*²:²J²Z²j²z²Š²š²ª²º²Ê²Ú²ê²ú³
-³³*³;³K³[³k³{
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using Newtonsoft.Json;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLFormRulesPG : CommonDataBaseInteraction, IDLFormRules
+    {
+        CommonInfo connection = null;
+        public DLFormRulesPG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLFormRulesPG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<bool>  Save(FormRules rulesData)
+        {
+            List<FormRules> rules = new List<FormRules>();
+            rules.Add(rulesData);
+            var settings = new JsonSerializerSettings();
+            settings.ContractResolver = new LowercaseContractResolver();
+            var rulesjson = JsonConvert.SerializeObject(rules, Formatting.Indented, settings);
+
+            string storeProcCommand = "select form_rules_save(@rulesjson)"; 
+            object? param = new { rulesjson };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param)>0;
+        }
+
+        public async Task<FormRules?>  Get(int FormId)
+        {
+            string storeProcCommand = "select * from form_rules_get(@FormId)"; 
+            object? param = new { FormId };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<FormRules?>(storeProcCommand, param);
+        }
+
+        public async Task<FormRules?> GetRawRules(int FormId)
+        {
+            string storeProcCommand = "select * from form_rules_getrawrules(@FormId)";
+            object? param = new { FormId };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<FormRules?>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                }
+            }
+            disposed = true;
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

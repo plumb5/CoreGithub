@@ -1,9 +1,38 @@
-©"^oè”Níh”*<ŒUê·Ra]Ò¥şt—*,íA­TáÓRÍ9Z¯’»>P/U¸ç‹F©Âf&šÒTeSZ?‡DéB«-D<1Ğ*Ÿˆnı¤Ÿf8¨•*lÄESšz'şIë'¨>tH‡ÔĞ%eÏñ§&µÒ÷:êR®—?½¥
-¿Ñ¥õÙ¨±>¥
-ÿG›”m´šEø>ÒÁ“ÒÉ“]ÒÅ“İÒÍİV»	¿™è‘¨I'êRçI†4¸£Ñ”&]G¯ôrGKwµ°BõúH	è[ªpsG›´i†D»´óB‡tp†Ğ)e¯âè’ş=kĞ-ı»7ÑOÊUı§Gz¸çQ—†Æ¾è•^)Gûª-<wĞGúğ$@›´ñ$@»´ó„Ak©D4{Ğ%]<5Ğ-İ<5Ğ#5¨K'Ò¿'šRV¼¥§–JØˆ‹>Rîùƒviç>F‡tjìŸÖ¢¯îR…­üÓ,U¤Ÿ½Ò+¥«Ê÷³ÑVª°ÏÒ©u©K]êµ(ÂçItJ™!Ğ-İÒDSš¬Mª7kC‡tHİÒMè'=Ô€Z©Â–hJEo©Â5iÖ)'ò5CßR…ùyÑ%]»Ñ*”¸Ë/úI?ôHô¢VZQê?4¤!}Ğ*Ÿ°e¬íV¡D¼×Ğ.íšáE]Ê{ÖB£TaÏùw'Ú·ZLøáŠûô6©°ğR…=7ĞOª>yCO©"»Q/UØ¼F©â®øIõ.¨°×}¤ÖÑjá=>´I›6Ñ-å+Ø5)gp¢Yª°8Mïz
-¿qĞš°/Mijm´UID¾æè*­(õ…ºÔ56Ñ,Uøsz¥W3li¯ÃTH?t”*ü½İÒ­±ı¤ŸÔĞ#=RG­Tá¿ó .ué¨Vp—¢o©Â·w´K»:ÙĞ!Ò]ÒÅºÔ¹ÎĞ”¦~¦´^‰ª7Ñ&å¼:¤ƒU Kêœc4¤Áİ¦4¹ûÑ+½\}R½C*üx¢ôáîG_)o>íÒ¿§
-:¤ƒ{ÒÉ¹@—”+µ¡Gzxj .uhHƒû½ÒË+­—<¢Æô‘>Üóh—²¶‰éàE§trÇ¢KÊÚº¥›«=ÒÃı†šÔ¸¢Ğ²â½ÒË},­·Š‡»}¥/w,Ú¤Cc­E~b¡µ("¶mt—*â?İ¹äDFá‰w !fl×æ°ÖxÄ"°ˆåıár		¿æ£úúºº}Ûİ£Ö¼;«/ê½¿õJœ=«ñPcÍñA¨¿$[ê
-%VêEİ¨w±Æ\+©O(15Ô„òir\èŒ‡ãö»bU{Rc‘±ËÎjl·1öJjBk?¨9”s-µ¡µE}Ñ½ÕJÌ>†ºĞÅ>dõ ‡
-ñöyï­ŞèÍÚW]¡Äè½¢‡
-Ç
-E=¡Ä8>óıC,2Æ³n5£™£-u¡ê%fÙçİ·ô‡GyîƒZW	=ÔØbc–¾Ğ{„;W]¨=u£›º%ßÍs®®”ö£ÖPb¾½ªmÔ}Ônöß£¥8Œ±Öê…^T¸ÔõÙŞêƒ>¬MjBšÕJÌz–ÚÑNİ¦.t¡U=è¡nAs4Æ[­¡Äºö«öPbìŞÕ–ÔJ¬:+±Æ¼ÇQê75£­jG=ã®Nt:ÙÔ….'›ºÑíSzœV(ïíÄxÖP/ôò¹Pôq²©	M±šÑì´RZœ5jE
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System.Data;
+
+namespace P5GenralDL
+{
+    public class DLAdminGeoLocationDatabaseTableSQL : CommonDataBaseInteraction, IDLAdminGeoLocationDatabaseTable
+    {
+        CommonInfo connection;
+        public DLAdminGeoLocationDatabaseTableSQL()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<bool> CreateTempTableCreation(string dynamicTableName)
+        {
+            string storeProcCommand = "GeoLocation_DatabaseTable";
+            object? param = new { @Action = "TempTableCreation", dynamicTableName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
+        }
+
+        public async Task<bool> RenameTableName(string dynamicTableName)
+        {
+            string storeProcCommand = "GeoLocation_DatabaseTable";
+            object? param = new { @Action = "RenameTableName", dynamicTableName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
+        }
+    }
+}
+
+
+

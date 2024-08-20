@@ -1,3 +1,66 @@
-èE;}(5©¡RG]hô¡Ô¥†tKºBméF7ú cë}¥†Ú¤:ú¡FÖĞ.íhG‡t ÒÔû×˜ìÍÔñèÌˆ^J„®Ÿ´¢-RG7úH/zÑŠz	HmRCúIuÔ¤'u?è@·¡=Ò…®TÿI7zĞ‚F/Í@_é‹6´J5´KuÔĞ[SoC‡´£]©3æÕˆ‚^©¡–ºZZhDêƒ¾lûô•:êhC£—f ŸôA´K¨IºĞ)İèA3]DC·ÔPK=?©£ô«©_CiGZÑÎ±õ‚viE+:¤†:Qc­¡KÚÑ©£^tÒîdÏîOºPG4ú[Z¥ú Mjè@?éBjÒnt qœN©¡†.t£{ Æj1=©üÿÊ¡ciE+úH7ºÑWzÑ‹V4ZÎ@›ÔPC?©£v4f¯Ô¤è.t¡uaÄ‡.©¡†éBzÑ˜ÿ"Zêz¥íh“t Ÿt£íÒ›Ú~¨¡­¢RC]èWB#R]ú¢/º¥:zĞ¨f Wê(Ûú;hA£v>RC}¥:ZÑ˜2Ğ&íhG?4Öh—V´¢&5ÔĞÆj1Ò}Ñ…^Z¸u©£éE/zSyË("uÿ¤ú Ejè@éB7Z¥½hG£¿e &­¨¡CºĞ‹ôaÛ§¥WÚÑ6é@úoÏ·ø³ù«Í_iÏ£ÚQP“V´¢Sj¨¡Y1¢ .}Ñ†é@Ùó[¤nôA£›VéF7ÚPc­¡ŸÔPCMºPG‡ô ]è İÑP—v´£G:Ğ:gA'G1úJ+ZÑ&í¨¡ºhaÔ¤/ÚĞ)ut£¾›^iEÙ‡õ“nt£EzSwAt7´¡Mj¨¡ŸÔQG;zÙ‡û¡&5ÔĞ%uÔQOÍ÷~"º¥íè•t¤úÊJZ¤­èƒ>è#}¥:ZÑèh“:ĞOê¨£†FÈ@‡ÔĞN4Öz¨K5t£F»VĞ#­(-ìŸ´£-è …QĞ&}ÑíÒ†6Ô¤è:êèB£·d F¿È@·ÔPCºia7ôJeÛS¤:ú 'ö7}Ñ¨3d UZÑŠ6©¡†~©¼ïvé‹¾¨IÚĞ!ut£³:uiE+º¥nôH/zSï­´PZ¤†úJu´JzĞ†6Úmı¤í¨IºĞ~ñWP—V´¢Gj¨…®Y¤èƒvÚí}¥/ÚĞ&]èFş–.iE+êRG7º¥7uô¢ÃĞ‘ºt†F İìÃ.h“V´¢]ÚQC=ÑB:¥/ÚĞ%uÔÑ“z%4"ôßŞƒ^÷güG©Qû´HéB7ZÑ‰#
-Ú¥­èjèDc$(è’6´¡5CzĞ­2Ğ‹Fµ•İ?©£-h|ƒè+­hE«ÔQG›ô¢ıĞ¨ãd =Ôù?#PC£˜©¡†N©£.4ziêRCºÑÁ¶£ WZQø©¡†>è¤…YĞWú¢/Ú¤mè'ut£]zS×èzÑ]RG7z¥´àìÙ-¨7´¡Ujè@›ÔQG;gIjRC:¤İèBOH=Ò†¶PŸEj¨¡ÔQG_ôÒîmh•v´£Ÿt í©%æÊÔ¤­èjèDcVÌ@—´¡u©§>Úv£Ï‹ò¯­Gú¡­RG7úIoê[PCßıĞ%5t .uÔÑƒÆ(—^©¡´à?éB7ú 1G4´I5´KuÔĞ¾†iGºĞ˜W3Ğ#­hE¯ÔPöaÿPk¡©EêèA4Æ’´I+ZÑOú¡Ú¥nÔ¤½èDg	H]Ò†6Ô¥†tKuô¢1‹¡ç'İèF×wè#5ÔĞWê¨£¹%mÒú¡±:È@MZÑŠ©¡†NôÒÂ-è’¾è‹n©£=©OŒDèıI+ZÑ"ut£ô¢­hTwˆĞûı)Æ_şêS[:jÒ›úüĞ>†tIºĞ-İèFô¢7tÏ‚¾Ïû ´¢­hŒhCc=QĞOZÑŠšÔPCë€tJÚĞ%ut£Æø‘iE+z¥ÒÂúI/zÑµ‘úJhEcTÉ@?©¡†véBjÒnt “£˜RCu©£İè¢…ÕĞ+íhOõ"è@tÓîŞè‹F?Ï@›ôE+úIºQ“^ô¢½%4"Õ¥ú¡[jè@t¡ª9‚w,"ĞGjè@_©£mhySKC»ÔPC§ÔQGU£ˆ†ºÔĞ´¶ĞˆĞóC?¶ıZ¤:ú¢Ñ/2Ğ*}ĞmRCúIİ¨¡q½šN©¡†.©£:uÈt£›ö@ÔQZ¸?éM=?´ çAô•:Ğ*İèF?ôrl·¡]j¨¡#µşB#Ğ‰ÆÊ2]h|ó¨Kut£Q‰Ï@´¢5ôÌ"ut£cuZÑ¾†6©¡†v©£Úi¡7tH:Ğ…F­#u4ÖYè–:êèA£‚—^©£l»~hTå2Ğ‚^öáô‘V´¢Uj¨¡M:Ñ‰~Ò‹^´§¶a"
-jRGhœ%è’V´¢.uÔÑÆ¨1Ğ#u”mı‡Æ•–Z·´×ø«Á_=jk¡­Òn´¡QY‰hè'5t¢&uô mojkè‘v”=ÛEºÑƒVôãØ¿‚~ÒŠVÔ¤†:ĞN½ Sú¢u©£½hô"ôiE+úH;ÚÑWêèF«ô¢ıĞQB#R»´¡5iGRG]hÔP2P—t ]Ûjè‘Ê¶÷']èAÔiÁ'úIutKzĞƒnö—JçEZÑŠ¾RC­è¡…SĞ&}ÑíÒ†6Ô¤t 1.e .­hE·ôC;z¤ŞT‚_Œ@­Ò†úIut¢1.e Kjè@]ºPG3]DKõŸÔPC©£}Ñ­2ĞOú¢íÒvtJ:Ğ%]èBjIDA·´¢½RC-uÿĞF­ Eú¢}¥nôCcŒÊ@Mê¨£CzÑ‹N´—ĞˆÔ%
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System.Data;
+
+namespace P5GenralDL
+{
+    public class DLAdminUserInfoSQL : CommonDataBaseInteraction, IDLAdminUserInfo
+    {
+        CommonInfo connection;
+        public DLAdminUserInfoSQL()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<MLAdminUserInfo?> GetDetails(string EmailId)
+        {
+            string storeProcCommand = "Admin_GetUserDetails";
+            object? param = new { Action = "GET", EmailId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<MLAdminUserInfo?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        public async Task<long> UpdateLastSignedIn(int UserId)
+        {
+            string storeProcCommand = "Admin_GetUserDetails";
+            object? param = new { Action = "Save", UserId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        public async Task<long> InsertEventLog(int UserId, int AccountId, string AccountName, string Description, string MailTo, string MailFrom, string Subject, string BodyMessage, string UserName)
+        {
+            string storeProcCommand = "Admin_GetUserDetails";
+            object? param = new { Action = "InsertEventLog", UserId, AccountId, AccountName, Description, MailTo, MailFrom, Subject, BodyMessage, UserName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<long>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}
+

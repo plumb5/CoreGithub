@@ -1,6 +1,78 @@
-(a,b,c){return Pb(function(a,b){return a==b},a,b,c,!0)});S("!=",3,2,function(a,b,c){return Pb(function(a,b){return a!=b},a,b,c,!0)});S("and",2,2,function(a,b,c){return Mb(a,c)&&Mb(b,c)});S("or",1,2,function(a,b,c){return Mb(a,c)||Mb(b,c)});function Sb(a,b){if(b.a.length&&4!=a.i)throw Error("Primary expression must evaluate to nodeset if filter has predicate(s).");O.call(this,a.i);this.c=a;this.h=b;this.g=a.g;this.b=a.b}p(Sb,O);Sb.prototype.a=function(a){a=this.c.a(a);return Tb(this.h,a)};Sb.prototype.toString=function(){var a="Filter:"+z(this.c);return a+=z(this.h)};function Ub(a,b){if(b.length<a.C)throw Error("Function "+a.j+" expects at least"+a.C+" arguments, "+b.length+" given");if(null!==a.A&&b.length>a.A)throw Error("Function "+a.j+" expects at most "+a.A+" arguments, "+b.length+" given");a.H&&A(b,function(b,d){if(4!=b.i)throw Error("Argument "+d+" to function "+a.j+" is not of type Nodeset: "+b);});O.call(this,a.i);this.v=a;this.c=b;Kb(this,a.g||Fa(b,function(a){return a.g}));Lb(this,a.G&&!b.length||a.F&&!!b.length||Fa(b,function(a){return a.b}))}
-p(Ub,O);Ub.prototype.a=function(a){return this.v.m.apply(null,Ia(a,this.c))};Ub.prototype.toString=function(){var a="Function: "+this.v;if(this.c.length)var b=Ea(this.c,function(a,b){return a+z(b)},"Arguments:"),a=a+z(b);return a};function Vb(a,b,c,d,e,f,g,h,r){this.j=a;this.i=b;this.g=c;this.G=d;this.F=e;this.m=f;this.C=g;this.A=l(h)?h:g;this.H=!!r}Vb.prototype.toString=function(){return this.j};var Wb={};
-function T(a,b,c,d,e,f,g,h){if(Wb.hasOwnProperty(a))throw Error("Function already created: "+a+".");Wb[a]=new Vb(a,b,c,d,!1,e,f,g,h)}T("boolean",2,!1,!1,function(a,b){return Mb(b,a)},1);T("ceiling",1,!1,!1,function(a,b){return Math.ceil(Q(b,a))},1);T("concat",3,!1,!1,function(a,b){return Ea(Ja(arguments,1),function(b,d){return b+R(d,a)},"")},2,null);T("contains",2,!1,!1,function(a,b,c){b=R(b,a);a=R(c,a);return-1!=b.indexOf(a)},2);T("count",1,!1,!1,function(a,b){return b.a(a).l},1,1,!0);
-T("false",2,!1,!1,function(){return!1},0);T("floor",1,!1,!1,function(a,b){return Math.floor(Q(b,a))},1);T("id",4,!1,!1,function(a,b){function c(a){if(D){var b=e.all[a];if(b){if(b.nodeType&&a==b.id)return b;if(b.length)return Ha(b,function(b){return a==b.id})}return null}return e.getElementById(a)}var d=a.a,e=9==d.nodeType?d:d.ownerDocument;a=R(b,a).split(/\s+/);var f=[];A(a,function(a){a=c(a);!a||0<=Ca(f,a)||f.push(a)});f.sort(sb);var g=new I;A(f,function(a){J(g,a)});return g},1);
-T("lang",2,!1,!1,function(){return!1},1);T("last",1,!0,!1,function(a){if(1!=arguments.length)throw Error("Function last expects ()");return a.f},0);T("local-name",3,!1,!0,function(a,b){return(a=b?Hb(b.a(a)):a.a)?a.localName||a.nodeName.toLowerCase():""},0,1,!0);T("name",3,!1,!0,function(a,b){return(a=b?Hb(b.a(a)):a.a)?a.nodeName.toLowerCase():""},0,1,!0);T("namespace-uri",3,!0,!1,function(){return""},0,1,!0);
-T("normalize-space",3,!1,!0,function(a,b){return(b?R(b,a):G(a.a)).replace(/[\s\xa0]+/g," ").replace(/^\s+|\s+$/g,"")},0,1);T("not",2,!1,!1,function(a,b){return!Mb(b,a)},1);T("number",1,!1,!0,function(a,b){return b?Q(b,a):+G(a.a)},0,1);T
+﻿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWebHookTrackerSQL : CommonDataBaseInteraction, IDLWebHookTracker
+    {
+        CommonInfo connection;
+        public DLWebHookTrackerSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLWebHookTrackerSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<bool> Save(WebHookTracker webHookTracker)
+        {
+            string storeProcCommand = "WebHookTracker_Details";
+            object? param = new { Action = "Save", webHookTracker.PostedUrl, webHookTracker.Response, webHookTracker.ResponseCode, webHookTracker.ResponseFromServer, webHookTracker.CallingSource, webHookTracker.RequestBody, webHookTracker.FormorChatId, webHookTracker.WebHookId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
+
+        }
+
+        public async Task<List<WebHookTracker>> GetList(WebHookTracker webHookTracker, DateTime FromDateTime, DateTime ToDateTime, int OffSet, int FetchNext)
+        {
+            string storeProcCommand = "WebHookTracker_Details";
+            object? param = new { Action = "GetList", webHookTracker.Response, webHookTracker.ResponseCode, webHookTracker.ResponseFromServer, webHookTracker.PostedUrl, webHookTracker.CallingSource, FromDateTime, ToDateTime, OffSet, FetchNext };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<WebHookTracker>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+
+        }
+
+        public async Task<int> GetMaxCount(WebHookTracker webHookTracker, DateTime FromDateTime, DateTime ToDateTime)
+        {
+            string storeProcCommand = "WebHookTracker_Details";
+            object? param = new { Action = "GetMaxCount", webHookTracker.Response, webHookTracker.ResponseCode, webHookTracker.ResponseFromServer, webHookTracker.PostedUrl, webHookTracker.CallingSource, FromDateTime, ToDateTime };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

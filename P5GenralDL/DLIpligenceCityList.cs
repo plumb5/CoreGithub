@@ -1,1 +1,25 @@
-$í$í}ï-$í$í~†8Ç$í$íÄ7Eù$í$ìÇ©TÓ$í$ìÖêc⁄$í$íàªs<$í$íãËÇ$í$íéKí˛$ì$íë4†h$ì$íî≠æ$ì$íñw∏Y$ì$íò·¬¡$ì$ìôä ¸$ì$ìöf–˛$ì$íöf’á$ìPÂkÿ$í$íL-l›$î$íH>oè$î$íDph$ì$í@Hpñ%$í<ƒp∑$î$í9ùq;$í$í5¸qﬂ$í$í31t$í$í/Êu˘$í$í-)xÒ$í$í*â{X$í$í'Û}Í$í$í&#Ä$í$í$õÇF$î$í$ìÑy%$í$íÑπ%#$í$íÖá&©$í$íÖ‘)a$í$íÜ…6ü$í$íà)CI$í$íäxS:$í$íçb1$í$íêOr$ì$íì1Åì$ì$íñYëö$ì$íòˆüÆ$ì$íõI¨w$î$íû∑Ï$î$ìüú¬0$î$ñ†& ≥$î$ï†´–˙$ì$í†∏’f$ìNqR$í$ìJra$î$íFÛt1$î$íC\t…$î$í?Iu7$ì$í;œv}$ì$í9&vÚ$í$í6x™$í$í2Äz¨$í$í/Æ|Ú$í$í-|$í$í)ŒÇè$í$í'ÑÒ$í$í%õáæ$í$í%	äd$ï$í$îås%u$í$íç%$í$íç‡%œ$í$ìé‹'+$í$ìè‘3U$í$ìê @H$ì$ííÛOº$ì$íï`^$ì$ìò7oÄ$î$íõçÖ$î$íû≈ê$î$í°≈üä$î$í§M´c$î$í•∏g$ï$ì¶æ¡ç$ï$ñß∏ Ê$ï$ñß√—]$î$ïßŒ’_$ïK∆u$í$íHÆwX$í$ìEƒx$î$ìB2y5$ì$ì>Ëz}$í$í;·{h$í$í9V|«$í$í6%~±$í$í2pÄù$í$í/†ÉC$í$í-g
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLIpligenceCityList
+    {
+        public static IDLIpligenceCityList GetDLIpligenceCityList(string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpligenceCityListSQL();
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLIpligenceCityListPG();
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

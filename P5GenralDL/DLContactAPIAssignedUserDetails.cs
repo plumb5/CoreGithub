@@ -1,1 +1,25 @@
-XÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZåZõ[[[%[5[E[U[e[u[…[•[¥[µ[Å[Õ[å[õ\\\%\5\E\U\e\u\…\•\¥\µ\Å\Õ\å\õ]]]%]5]E]U]e]u]…]•]¥]µ]Å]Õ]æ]ö^^^&^6^F^V^f^v^†^–^¦^¶^Æ^Ö^æ^ö___&_6_F_V_f_v_†_–_¦_¶_Æ_Ö_æ_ö```&`6`F`V`f`v`†`–`¦`¶`Æ`Ö`æ`öaaa&a6aFaVafava†a–a¦a¶aÆaÖaæaöbbb&b6bFbVbfbvb†b–b¦b¶bÆbÖbæböccc&c6cFcVcfcvc†c–c¦c¶cÆcÖcæcöddd&d6dFdVdfdvd†d–d¦d¶dÆdÖdædöeee&e6eFeVefeve†e–e¦e¶eÆeÖeæeöfff&f6fFfVfffvf†f–f¦f¶fÆfÖfæföggg&g6gFgVgfgvg†g–g¦g¶gÆgÖgægöhhh&h6hFhVhfhvh†h–h¦h¶hÆhÖhæhöiii&i6iFiVifivi†i–i¦i¶iÆiÖiæiöjjj&j6jFjVjfjvj†j–j¦j¶jÆjÖjæjökkk&k6kFkVkfkvk†k–k¦k¶kÆkÖkækölll&l6lFlVlflvl†l–l¦l¶lÆlÖlælömmm&m6mFmVmfmvm†m–m¦m¶mÆmÖmæmönnn&n6nFnVnfnvn†n–n¦n¶nÆnÖnæn÷ooo'o7oGoWogowo‡o—o§o·oÇo×oço÷ppp'p7pGpWpgpwp‡p—p§p·pÇp×pçp÷qqq'q7qGqWqgqwq‡q—q§q·qÇq×qçq÷rrr'r7rGrWrgrwr‡r
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLContactAPIAssignedUserDetails
+    {
+        public static IDLContactAPIAssignedUserDetails GetDLContactAPIAssignedUserDetails(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactAPIAssignedUserDetailsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactAPIAssignedUserDetailsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

@@ -1,2 +1,60 @@
-Ó˜k!x„Pvø:­b6ß0˜CoĞŒå×Ğzš…›=t‚Ú§ÌŠús†æ^?­l°ĞóšV]Y¸{µ°xLè§+4qaÓÊÛ¥İ´ãk±ô&å§­º@óš#´f¡Í®¡»iÖ2iE³öJ-ödr˜µ>±0ÜB¨ë­~œ)ô}06^CË^}ìZöZ8ßÛCË–×oDÔŸú"“…Ş4j[Ğzš…•tçPO³0²m¡+”ïUµŠ!-”¢ÓVÍ[hQ#T#¼ÅsğÙ´,³¸†ºÚ-±Í\ Ú-‘d-s­,x=>Ó¾ª…µÌZ%¶ğöÇZO³	7=¡ùòIòU¼iaG!–i°0÷L¡whVzPÚCîíïC•ÂÂŒ{5GXœ¶½£3Fãóz…æÄâ­|-ŒF·ĞÊ×Bt›zÓzÕÂ-à”X·I-ô¬Ø«Û¤ZõZ´PâÔ±ö-¯ß¦ÑŸå4%ÖQ#âZO³¸ÇvZÅÇÚÃzƒ2*wkÊÂ¾^§] ¼YØmG3’…5„> é±{è¥õíi“Ú²ĞSoZÍ[˜e¡”H=>hoa­òÕoXˆšçĞª7÷¾n¡4±^ìUäná¼áZe³p;e¡¹áµ†ÖÓ,ì‹¤õÕIví×Ğ4ç	÷Pl`Æy“Ú¹²°RŞCg(#x×…ö,ÔÅZ>³Ï¡;”³ì	ôË¥}>M;Û?­sĞ)¥…Â5tƒf±óÅëìwÏ]6Zˆš/¡x2ïWw+9O(3Yúæ¢÷,xç-OZì‡ÿîû-Ã¢Ó;#…ş-ı9A3b>BËFãÇ=´ÊnaO³Ó–åJy…êLÏÂ‰Ğ-´ú‚…õÉKè¥}¯yšvâ$9ëBË±k<¢û-G(V;êzÓ:C¹Ù»¥s-œ¥„jtµxTyÒ4'“±Awÿ,ôÒ%tr·¤ëU7-®×öƒN¥,ô±Ø«¸ĞÂ®èz…f—`­,ä{	­[hÉ±A·»-¼­™RèDÈÂ9s<©~c¡}ßCg¨ë­ó]µ¶µp:·†ÎPvêÏ—Ğòƒ…3„=tƒf—üUìdQ]o«â»¢T{Tv‡‡Ğê7âÍ¤ÕÜn¡çÅÍí¼³„–-ÜÙìªÄrˆešÛ-ĞN[ıÍÂ¦~Úå6Ør	-?XÈáİ¡;{ÆSè	u„İ«îU§<"”9”RdïkB«†,D¶jÈÂ»Â±W»\"Öä sdûË±WkPe»†–,¯_VÓŸ4ï»L¡”˜·}¦Õ¦ÅÑm—X'MîjÜCëizËJ‰ó%Ãm]¡”øèÊ£ÆZ^·°Ú‰Š$,Ú;z×ÄB„İôÍ	À-t„ò6ì“V),~Z·EÏtÏ|Ë“füx]ã…RÄ¿Zu[xw.­O;ƒÏ«íIíZè±G(-*#W·IE>js}@)ñËùXˆúiô`Ï=£†¾gag{Å²>{_BË2³Ó-´,³¸Û½‰ca¤MmêôŞÂLv¡ÙÕè´Õ,ô‹Œ:Ó—dw2OÓnq)i«FğN{‡fÙi«"‰øWQ…ÛŒ±L;öySCš,ôÍxGQ…™,9èîµ…{„Ş ¹5„Ş¡Ùy½„–bÿí¿Š[Ví(XlÍ²%/<óÊî»š½,|Õl½Bmù£=­İ1ÎŠOû]Öô1ÍÚ÷:BS~Úå›İw5WZÈ¡ÓV´¼~%SnPæ¿µiùÁÂ¹cè	e½Úm@7Á-ì£]B«v[ï¡e¯Åi»Ú-±`9lŠG-¬¤¡åIi¯¡å+È¦4ïv34oÈŸ¡eƒ…¹ò-ŸYğäºCwö::‡ò™…Ù{è	Í)ñªøØMZEÖS¶ìµ_¤Ú;·ĞšNĞ¬ôV¨öE,D·ĞJk!œCëiVèChyÇÂú¯Ó–w,Ìíoµ({I¶¼c!6İCñNî•)1Õ–{åİôş¯…9"u¡¸ÛBÔ±„VÙ,ä°‡®Pf¤.…Î-øa-{-Ğä«HÍÂ}ê¦e™…v6†®Pö³ºæµ³b¡•Ä¿Šı-¬)¡whî>tÚzš…»F±W{(b§N{Bíßû{;Yxî:C‰š»UëN›…Ù`­,ì5§ı.E-¬—ĞJäÓöêÎŠ…(©éÍú:ıX¿™j!úz	½Ao¬ïÎĞÊŠ`ë´#Ô£gß&İ4ÛZˆÉöĞÊ×º_h¯Ãâ§óÕlk¡i“ÚQ°È†gi¬âIàJq	¥ŞÎÆ¾¤=ïĞ|açú€æô¾é
-åË–İRµ×lq‰vGõ¡»)£\ı;¡åía‚j<³pÂ´
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System.Data;
+
+
+namespace P5GenralDL
+{
+    public class DLAdminGeoLocationDatabaseUrlSQL : CommonDataBaseInteraction, IDLAdminGeoLocationDatabaseUrl
+    {
+        CommonInfo connection;
+        public DLAdminGeoLocationDatabaseUrlSQL()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<Int32> SaveGeoLocationDatabaseUrl(AdminGeoLocationDatabaseUrl geoLocationDatabase)
+        {
+            string storeProcCommand = "GeoLocation_DatabaseUrl";
+            object? param = new { Action = "Save", geoLocationDatabase.IpDatabaseAPIURL };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int32>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+        public async Task<AdminGeoLocationDatabaseUrl?> GetGeoLocationDatabaseUrl()
+        {
+            string storeProcCommand = "GeoLocation_DatabaseUrl";
+            object? param = new { Action = "GET" };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<AdminGeoLocationDatabaseUrl?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+
+
+    }
+}

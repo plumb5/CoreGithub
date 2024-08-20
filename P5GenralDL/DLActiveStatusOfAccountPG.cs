@@ -1,1 +1,57 @@
-¢iç]è!6H/ªqPßê7¯!¶Hª­y¤MÄViF9î-h!¶K+Z¹oÔcÚˆõÊ:ÚYU¾Ònb§ô ‡çt½½Ì5fÌú¾†ãä”T}»ÒŒfÖ,›´ ômDiE_ßÎôØ†²·×ĞÑA†$(÷›gXè&¶Hz˜y^zÜ±íÕªÜ–&4»¤ÍÔ¤­Äš´¡'¿´£‹XWC¼QºŸö¾ÿÓyKeú5<«¦O-äªÒŠVN¸Ò†6Î$Š´£F†)U›Ê³”ñŸŒˆçÕÖNÒö·†µ=v l×Õ¥Ê{xÂgJÙ®+»Ñ•ÑÌ3ZCZP¥åï„ì+è&¶JzèE‘RÃV^U¶:ØW:Qå'Kª} J7ºùîv)5œBÕÀyù×¡KÚ‰İÒb‡t¢—XÕË3!_Ãûq–4 |›n‘F”• ;¥	åœl5iFßê×¤eßù´¡ú5ˆÒÒ·¯A:¸Âây'ºˆRC·ĞxìF7±Şãƒê¹í.½èå®-êmœ¹sÅ#h"¯I3ÚşôïÔíhç·2J:xÓ“ÇÎ§œ/KÒ…ê9GWCOËÒnVÚ¼Şƒ^bÊy÷×¼OÛYĞDl“f4³ªáZĞB†#­h%Ã”6´q_¹kG'±KºĞÅÜÊÕPõøH7ºY»½Òƒb]/zùª†È8ÄòbËOZÑúúvMÚĞFl•v´s<;Òb›t¢“7eéB×Ë0‡ÔPV2ÿåİèfÿİÒƒÒãÒ¥ôXgî· œ¹±CĞÀY³I#šˆÒŒfF2IZxŸ]–VTãày':y›‰ç](Û¸ş¤e•à¸ôÑüõí5œİi@±YQ3$iBõä[—f´¡H+Z¹*µ¤mÄ6iGßØ¾t ƒzM:ÑE¯ÁP#Ã’nt;¥å9s¤e–ê=fğ5\UÍÒ€†?Íÿíï}áß˜¾†j–r%4Q¹I3ª1u­hå¾ş.m¨FäH5Vf‹t£ŒHó^ôPÃ–^Tß2cø®ò˜4 z¶®H#šù´,-háNN×Š6b›´£÷Té@õ^éDçS‹Ò…y‡t£zÊÈ¤=Ä.éE/çYeñ5ÜkkÒ€2¸F4²²âš¨7I3ª1óØ‚b«´¢•Ø#mh#vI;Ê^ÒRCX“nt›¥å.Ò‹^îv,hÿFç5dp(Ï?Í%h"¶J3šy"wHZ‰íÒ†ªÇAÚÑNì”tğÚ¤Äze]äõ†^bôxh^Y¥ekŸ´ …kJ[ZÑJl–6´½™Şö¼íTæ±d(Ò‰Nş·gXè"ÖÕP{£~—t£›{<ö ‡ºô>¼ÕûE~Ò„&VÉ«4£³)-¨¾¡¢³%m¨ö‡"íhG½²jÌL:QıíÁ!]èzç'I52léF7Ÿæzˆ=Ò‹^R®Œ}ÍË°£4 ‘WšĞDl“f”‘œAZĞBl‘V´¾ïæ6iCÛS»Òv2,)#i?>MõZ@±GÑHì”&T½pÍ(óÜëZĞC†%½(G£İQ®`}g¡IĞÀŠI#¹*¥	åÌgiFóÓ¤å—liGµ÷]é@=ÎÒ‰N´JºÈë}3TßX¯a£›{ĞÃ*ø<oÙß˜¾†ÏÕ|ÓÃ˜Ş%h vJ#©Æ¤	ÍÄz†‚îQÒŠvb·t ½ (ãd?©¡oœìx†b£ô¢|]Y%ø¶à–”¹ÁÒˆFòfiBß^n—f4sõ(Hjd(Òj»^éAÕ¯ì¢º6AŞÎ¼ıkÈ0¤Íd8Ò‚ò;5³´¢sw”6´ñ>»)í¨Ş¶¸¤e»ıû´‰j¯ÿIª¿âj¨›¤İTæzĞCì–^ôrÚQfş_C†,hàL¸I#‰-Ò„&ğ¼-ÄViE+sE“6”õ€ëy;jdğ¼e8CJ#½ğÇ€î°KÒˆòÍ:?é@ÙB7J
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLActiveStatusOfAccountPG : CommonDataBaseInteraction, IDLActiveStatusOfAccount
+    {
+        CommonInfo connection;
+        public DLActiveStatusOfAccountPG(int AccountId)
+        {
+            connection = GetDBConnection(AccountId);
+        }
+
+        public DLActiveStatusOfAccountPG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }        
+
+        public async Task<ActiveStatusOfAccount?> GetActiveStatus()
+        {
+            string storeProcCommand = "select * from activestatus_foraccount()";
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<ActiveStatusOfAccount?>(storeProcCommand);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

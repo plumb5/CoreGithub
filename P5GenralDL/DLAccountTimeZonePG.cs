@@ -1,2 +1,66 @@
-lİò.„D¹=¶@9S,nÍœóJèg‹ée´TÍrÎ+á‰·œóJ°uurÎ+áhå!*)Á¶ª•”`[u ’¼ï9Õyt¡’a$[-ôE‚ßİt„NØºï„¾H°İL(=ª=LWè‡Õô€:ãòK “)¯<¸—ä½	‰hü!”–ç½Ì±Ú-ïMHhùf¹Ix+Ø5Ë™»„ŠÎPg<š.Ğ:ÓªÜj¯.VPçV”Ü6gáŒ·êo†œ¦”º{ÓêvÓˆAÂWµÊ¶A9§n7wõ%øL£¾Æ±=ä3x\M¨¿LîÊÕƒ„Œ›iÔWBÎ8ŸÁ“pæªÈ¢¾"sç	fÓÊx{zˆñ&Áv1êHø†syˆêH°­ÜN¨Ç[åvA9WWOee%<¸÷åİ	.Ó¨™[W'ï^HÈ¸3 ¶î¹Š’`[G£t·6öPÚ­®ÒùL›„;Ñƒéİñ`¿¹¶’ğ>KyhP®èG-ª#áIúÅ4ª#¡÷ÇÍ[òy³ò©«bŞCûjùH°M#	3åò5•à¡lg(•®«m®ÿ$ØJK Î2W…èlz@~Ë6ú–[÷Œ\ÿI°İL©Ÿ,«ÑŸë?	OIí¦”:<éuß:M'¨#+Jd¬ÓZ]+¯Jdm2È$øõÉÕ[Ê€íl:BÃn:Al‹®PW½™nPÿë§SªÎŠì9îJnu&¾O¨sLÉıûzKqÍµ—ÛÉ´ƒÒ'ÏÎ4ú¤„ç¨Ó:aÛ›ÎP}zX :ß±’?Wè‡Š!r“Yyˆñ(Áv5=¡Î¸b¸D»¶4Ÿû’ğFÇdÚCGl›i´›„«Ly˜¡+¶®dîõKˆa1İ¡œ?®ŞÔ‘]ØÎ¦ÑÏ$ØšæJO‚ífYHøWGÓ:àÁ1äúOÂwƒ›éİ°-¿¯„9úÃô€:²šë´Şiª:”JŞƒé¥’­7¡'¶‹)Õ•Å6:†|†IBVÓ	z`ëšåªDÂS‰»)½„]ræù“£M<œĞ\iHä¡úÃÔC‰,ş
-4"“p´Ët‚.Øö¦+Ôÿ†]gºAOl'SGvñÎÿaJ/™Gl[Îò%T§èİe;?L(ëšjÍœKğp˜R³åÄƒ#Ë'o$ÌEÓˆL"ÛÅm‘OŞHğë^’³[	ÔõÍÙ­î9»•ğ5w-g·lWSê Ùmì0¡+¶›éõˆ=MwhÃ¶"£Ìc·Õ•Ìy¬„§\õœÇJøÆ<6ş.&ÓˆAÂÙè4$Dv™Ğu´h	O‰Ì¦ÑîGšæL8eÁƒ–óM‰âİš·¬9•p†Ÿì‹ÈÆãfz4¨×Ì£)5mŒ¼:c¶Ê™íÜM{(­]½3Ÿ‘àw2¥µOüVõòY	¶³iÅoµUÎ$Ü›(ø½lİ3rÖ!áÀÃì$?{Fî$KøÖÀmÕ‘àa3=¡´öY~£µ%ì¦7”‘WWÛœ¡HøJØfÚA{l{ÓêwcÓ:É¶Ú-w’%¼E·š.PúwÕ7g3¾‚ĞLw¨ãÅÃ–s‘”z™öPİÉc˜?(mq=L#^	O–Í¦tÆ¶3] şÚ_Å°B¶ƒi´…„ïå¦ÑlËC´…„w„lÛ‘[çx7Sâå¹òÚİrÖ!‘‡Ê"gí_½é]ñ{šnPUı•FÕ%±U³|A‚‡Û4ú¤„v«xO(ßå!2–°f> 9oI°íMÉ˜ç~s.".¦‘±³id,ág·PîfK°-Q	Wºfu°;YñRŞ¬_ñF$ø]M©ƒ¿´~”mô	ïM”ßÊİıªNÎ$øİL;¨¿-¸˜öPWr7JJ¸ÃR¶Ô5sÆù<ƒD­Y}2Ÿm—°Æ/5“ğİà‡éußéL£fv™R3¿ÚdJÍx¶}í7w¶%ØÎ¦=Ôß#v¹³-Áƒã}‘0İL'èŒ­cÈ]p	ÿÖKm…rıkÎ"Ÿm—ğo†:Hğ»˜PúÎYñ6è‰íjJ/ñ.xµPî‚Kt^¯±™»à<¸åsn*á„É´‡º:îg97•p–óÑrn*¡ê,Ÿ¤—ğ•Q·qî£Køn»3Îy¬YÔLB§iÔL‚ífz@ol]ßÜ—°såxs\"Ûi0Œ%¼öqÏ·lóÀßñ5Úñ·Ú[oJE–[÷—ÜI–ğıjG;Éèa~%òÇ†ÚïLs–¹¿,ÁÖ‘åş²Dã±®ùL½„5ÇiºC&Óêç¢+úáúÀÖ} çå½Ó[ç¥œ—K4C©ëTÎË%Øî¦#”óRE¶NP×á0¡ş÷”:Ó¨ƒ„«íeuğÔ\Åuà×•Ì9¼„É¥üPW§"‹êHÈ¢"£:[‡­¯Š9ß—°ŠuÆ9ß—ğTâa:BÉxL
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAccountTimeZonePG : CommonDataBaseInteraction,IDLAccountTimeZone
+    {
+        CommonInfo connection = null;
+        public DLAccountTimeZonePG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLAccountTimeZonePG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<AccountTimeZone?> GET()
+        {
+            string storeProcCommand = "select * from account_timezone_get()";
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<AccountTimeZone?>(storeProcCommand);
+
+
+        }
+
+        public async Task<Int32> Save(string TimeZone, int AccountID = 0, string? TimeZoneTitle = null)
+        {
+            string storeProcCommand = "select account_timezone_save(@TimeZone)";
+            object? param = new { TimeZone };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int32>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

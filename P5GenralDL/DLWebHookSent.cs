@@ -1,2 +1,24 @@
-ce();b.push.apply(b,arguments);return a.apply(this,b)}}
-function p(a,b){function c(){}c.prototype=b.prototype;a.L=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.K=function(a,c,f){for(var d=Array(arguments.length-2),e=2;e<arguments.length;e++)d[e-2]=arguments[e];return b.prototype[c].apply(a,d)}};function ga(a,b){this.code=a;this.a=q[a]||ha;this.message=b||"";a=this.a.replace(/((?:^|\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\s\xa0]+/g,"")});b=a.length-5;if(0>b||a.indexOf("Error",b)!=b)a+="Error";this.name=a;a=Error(this.message);a.name=this.name;this.stack=a.stack||""}p(ga,Error);var ha="unknown error",q={15:"element not selectable",11:"element not visible"};q[31]=ha;q[30]=ha;q[2
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWebHookSent
+    {
+        public static IDLWebHookSent GetDLWebHookSent(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLWebHookSentSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLWebHookSentPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

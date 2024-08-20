@@ -1,8 +1,76 @@
-(a);if(d.defaultView&&d.defaultView.getComputedStyle&&(d=d.defaultView.getComputedStyle(a,null))){c=d[c]||d.getPropertyValue(c)||"";break a}c=""}a=c||Fc(a,b);if(null===a)a=null;else if(0<=Ca(La,b)){b:{var e=a.match(Oa);if(e&&(b=Number(e[1]),c=Number(e[2]),d=Number(e[3]),e=Number(e[4]),0<=b&&255>=b&&0<=c&&255>=c&&0<=d&&255>=d&&0<=e&&1>=e)){b=[b,c,d,e];break b}b=null}if(!b)b:{if(d=a.match(Pa))if(b=
-Number(d[1]),c=Number(d[2]),d=Number(d[3]),0<=b&&255>=b&&0<=c&&255>=c&&0<=d&&255>=d){b=[b,c,d,1];break b}b=null}if(!b)b:{b=a.toLowerCase();c=ia[b.toLowerCase()];if(!c&&(c="#"==b.charAt(0)?b:"#"+b,4==c.length&&(c=c.replace(Ma,"#$1$1$2$2$3$3")),!Na.test(c))){b=null;break b}b=[parseInt(c.substr(1,2),16),parseInt(c.substr(3,2),16),parseInt(c.substr(5,2),16),1]}a=b?"rgba("+b.join(", ")+")":a}return a}
-function Fc(a,b){var c=a.currentStyle||a.style,d=c[b];!l(d)&&"function"==ba(c.getPropertyValue)&&(d=c.getPropertyValue(b));return"inherit"!=d?l(d)?d:null:(a=Ec(a))?Fc(a,b):null}
-function Gc(a,b,c){function d(a){var b=Hc(a);return 0<b.height&&0<b.width?!0:K(a,"PATH")&&(0<b.height||0<b.width)?(a=Y(a,"stroke-width"),!!a&&0<parseInt(a,10)):"hidden"!=Y(a,"overflow")&&Fa(a.childNodes,function(a){return 3==a.nodeType||K(a)&&d(a)})}function e(a){return Ic(a)==Z&&Ga(a.childNodes,function(a){return!K(a)||e(a)||!d(a)})}if(!K(a))throw Error("Argument to isShown must be of type Element");if(K(a,"BODY"))return!0;if(K(a,"OPTION")||K(a,"OPTGROUP"))return a=vb(a,function(a){return K(a,"SELECT")}),
-!!a&&Gc(a,!0,c);var f=Jc(a);if(f)return!!f.B&&0<f.rect.width&&0<f.rect.height&&Gc(f.B,b,c);if(K(a,"INPUT")&&"hidden"==a.type.toLowerCase()||K(a,"NOSCRIPT"))return!1;f=Y(a,"visibility");return"collapse"!=f&&"hidden"!=f&&c(a)&&(b||Kc(a))&&d(a)?!e(a):!1}var Z="hidden";
-function Ic(a){function b(a){function b(a){return a==g?!0:!Y(a,"display").lastIndexOf("inline",0)||"absolute"==c&&"static"==Y(a,"position")?!1:!0}var c=Y(a,"position");if("fixed"==c)return w=!0,a==g?null:g;for(a=Ec(a);a&&!b(a);)a=Ec(a);return a}function c(a){var b=a;if("visible"==r)if(a==g&&h)b=h;else if(a==h)return{x:"visible",y:"visible"};b={x:Y(b,"overflow-x"),y:Y(b,"overflow-y")};a==g&&(b.x="visible"==b.x?"auto":b.x,b.y="visible"==b.y?"auto":b.y);return b}function d(a){if(a==g){var b=(new wb(f)).a;
-a=b.scrollingElement?b.scrollingElement:Va||"CSS1Compat"!=b.compatMode?b.body||b.documentElement:b.documentElement;b=b.parentWindow||b.defaultView;a=B&&ab("10")&&b.pageYOffset!=a.scrollTop?new Ra(a.scrollLeft,a.scrollTop):new Ra(b.pageXOffset||a.scrollLeft,b.pageYOffset||a.scrollTop)}else a=new Ra(a.scrollLeft,a.scrollTop);return a}var e=Lc(a);var f=F(a),g=f.documentElement,h=f.body,r=Y(g,"overflow"),w;for(a=b(a);a;a=b(a)){var n=c(a);if("visible"!=n.x||"visible"!=n.y){var C=Hc(a);if(!C.width||!C.height)return Z;
-var M=e.a<C.a,P=e.b<C.b;if(M&&"hidden"==n.x||P&&"hidden"==n.y)return Z;if(M&&"visible"!=n.x||P&&"visible"!=n.y){M=d(a);P=e.b<C.b-M.y;if(e.a<C.a-M.x&&"visible"!=n.x||P&&"visible"!=n.x)return Z;e=Ic(a);return e==Z?Z:"scroll"}M=e.f>=C.a+C.width;C=e.c>=C.b+C.height;if(M&&"hidden"==n.x||C&&"hidden"==n.y)r
+﻿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLWebLogsPG : CommonDataBaseInteraction, IDLWebLogs
+    {
+        CommonInfo connection;
+        public DLWebLogsPG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLWebLogsPG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<int> SaveLog(WebLogs logs)
+        {
+            string storeProcCommand = "select * from web_logs_save(@AdsId,@UserInfoUserId,@UserName,@UserEmailId,@Controller,@ChannelType,@Actions,@RequestContent,@IpAddress)";
+            object? param = new { logs.AdsId, logs.UserInfoUserId, logs.UserName, logs.UserEmailId, logs.Controller, logs.ChannelType, logs.Actions, logs.RequestContent, logs.IpAddress };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
+
+        }
+
+        public async Task<bool> UpdateLog(WebLogs logs)
+        {
+            string storeProcCommand = "select * from web_logs_update(@Id,@ResponseContent,@ActionDescription)";
+            object? param = new { logs.Id, logs.ResponseContent, logs.ActionDescription };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param) > 0;
+
+        }
+
+        public async Task<Int32> GetMaxCount(WebLogs logDetails, DateTime FromDateTime, DateTime ToDateTime)
+        {
+            string storeProcCommand = "select * from web_logs_getmaxcount(@FromDateTime, @ToDateTime,@AdsId)";
+            object? param = new { FromDateTime, ToDateTime, logDetails.AdsId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param);
+
+        }
+
+        public async Task<List<WebLogs>> GetReportData(WebLogs logDetails, DateTime FromDateTime, DateTime ToDateTime, int OffSet, int FetchNext)
+        {
+            string storeProcCommand = "select * from web_logs_getlist(@FromDateTime, @ToDateTime, @OffSet, @FetchNext, @AdsId)";
+            object? param = new { FromDateTime, ToDateTime, OffSet, FetchNext, logDetails.AdsId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<WebLogs>(storeProcCommand, param)).ToList();
+
+        }
+
+        public async Task<List<WebLogs>> GetLogsForNotification(int AdsId)
+        {
+            string storeProcCommand = "select * from web_logs_getlogsfornotification(@AdsId)";
+            object? param = new { AdsId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<WebLogs>(storeProcCommand, param)).ToList();
+
+        }
+    }
+}

@@ -1,18 +1,88 @@
-XÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZåZõ[[[%[5[E[U[e[u[…[•[¥[µ[Å[Õ[å[õ\\\%\5\E\U\e\u\…\•\¥\µ\Å\Õ\å\õ]]]%]5]E]U]e]u]…]•]¥]µ]Å]Õ]æ]ö^^^&^6^F^V^f^v^†^–^¦^¶^Æ^Ö^æ^ö___&_6_F_V_f_v_†_–_¦_¶_Æ_Ö_æ_ö```&`6`F`V`f`v`†`–`¦`¶`Æ`Ö`æ`öaaa&a6aFaVafava†a–a¦a¶aÆaÖaæaöbbb&b6bFbVbfbvb†b–b¦b¶bÆbÖbæböccc&c6cFcVcfcvc†c–c¦c¶cÆcÖcæcöddd&d6dFdVdfdvd†d–d¦d¶dÆdÖdædöeee&e6eFeVefeve†e–e¦e¶eÆeÖeæeöfff&f6fFfVfffvf†f–f¦f¶fÆfÖfæföggg&g6gFgVgfgvg†g–g¦g¶gÆgÖgægöhhh&h6hFhVhfhvh†h–h¦h¶hÆhÖhæhöiii&i6iFiVifivi†i–i¦i¶iÆiÖiæiöjjj&j6jFjVjfjvj†j–j¦j¶jÆjÖjæjökkk&k6kFkVkfkvk†k–k¦k¶kÆkÖkækölll&l6lFlVlflvl†l–l¦l¶lÆlÖlælömmm&m6mFmVmfmvm†m–m¦m¶mÆmÖmæmönnn&n6nFnVnfnvn†n–n¦n¶nÆnÖnæn÷ooo'o7oGoWogowo‡o—o§o·oÇo×oço÷ppp'p7pGpWpgpwp‡p—p§p·pÇp×pçp÷qqq'q7qGqWqgqwq‡q—q§q·qÇq×qçq÷rrr'r7rGrWrgrwr‡r—r§r·rÇr×rçr÷sss's7sGsWsgsws‡s—s§s·sÇs×sçs÷ttt't7tGtWtgtwt‡t—t§t·tÇt×tçt÷uuu'u7uGuWuguwu‡u—u§u·uÇu×uçu÷vvv'v7vGvWvgvwv‡v—v§v·vÇv×vçv÷www'w7wGwWwgwww‡w—w§w·wÇw×wçw÷xxx'x7xGxWxgxwx‡x—x§x·xÇx×xçx÷yyy'y7yGyWygywy‡y—y§y·yÇy×yçy÷zzz'z7zGzWzgzwz‡z—z§z·zÇz×zçz÷{{{'{7{G{W{g{w{‡{—{§{·{Ç{×{ç{÷|||'|7|G|W|g|w|‡|—|§|·|Ç|×|ç|÷}}}'}7}G}W}g}w}‡}—}§}·}Ç}×}ç}÷~~~'~7~G~W~g~w~‡~—~§~·~Ç~×~ç~÷'7GWgw‡—§·Ç×ç÷€€€(€8€H€X€h€x€ˆ€˜€¨€¸€È€Ø€è€ø(8HXhxˆ˜¨¸ÈØèø‚‚‚(‚8‚H‚X‚h‚x‚ˆ‚˜‚¨‚¸‚È‚Ø‚è‚øƒƒƒ(ƒ8ƒHƒXƒhƒxƒˆƒ˜ƒ¨ƒ¸ƒÈƒØƒèƒø„„„(„8„H„X„h„x„ˆ„˜„¨„¸„È„Ø„è„ø………(…8…H…X…h…x…ˆ…˜…¨…¸…È…Ø…è…ø†††(†8†H†X†h†x†ˆ†˜†¨†¸†È†Ø†è†ø‡‡‡(‡8‡H‡X‡h‡x‡ˆ‡˜‡¨‡¸‡È‡Ø‡è‡øˆˆˆ(ˆ8ˆHˆXˆhˆxˆˆˆ˜ˆ¨ˆ¸ˆÈˆØˆèˆø‰‰‰(‰8‰H‰X‰h‰x‰ˆ‰˜‰¨‰¸‰È‰Ø‰è‰øŠŠŠ(Š8ŠHŠXŠhŠxŠˆŠ˜Š¨Š¸ŠÈŠØŠèŠø‹‹‹(‹8‹H‹X‹h‹x‹ˆ‹˜‹¨‹¸‹È‹Ø‹è‹øŒŒŒ(Œ8ŒHŒXŒhŒxŒˆŒ˜Œ¨Œ¸ŒÈŒØŒèŒø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø(8HXhxˆ˜¨¸ÈØèø‘‘‘)‘9‘I‘Y‘i‘y‘‰‘™‘©‘¹‘É‘Ù‘é‘ù’	’’)’9’I’Y’i’y’‰’™’©’¹’É’Ù’é’ù“	““)“9“I“Y“i“y“‰“™“©“¹“É“Ù“é“ù”	””)”9”I”Y”i”y”‰”™”©”¹”É”Ù”é”ù•	••)•9•I•Y•i•y•‰•™•©•¹•É•Ù•é•ù–	––)–9–I–Y–i–y–‰–™–©–¹–É–Ù–é–ù—	——)—9—I—Y—i—y—‰—™—©—¹—É—Ù—é—ù˜	˜˜)˜9˜I˜Y˜i˜y˜‰˜™˜©˜¹˜É˜Ù˜é˜ù™	™™)™9™I™Y™i™y™‰™™™©™¹™É™Ù™é™ùš	šš)š9šIšYšišyš‰š™š©š¹šÉšÙšéšù›	››)›9›I›Y›i›y›‰›™›©›¹›É›Ù›é›ùœ	œœ)œ9œIœYœiœyœ‰œ™œ©œ¹œÉœÙœéœù	)9IYiy‰™©¹ÉÙéù	)9IYiy‰™©¹ÉÙéùŸ	ŸŸ)Ÿ9ŸIŸYŸiŸyŸ‰Ÿ™Ÿ©Ÿ¹ŸÉŸÙŸéŸù 	  ) 9 I Y i y ‰ ™ © ¹ É Ù é ù¡	¡¡)¡9¡I¡Y¡i¡y¡‰¡™¡©¡¹¡É¡Ù¡é¡ù¢	¢¢*¢:¢J¢Z¢j¢z¢Š¢š¢ª¢º¢Ê¢Ú¢ê¢ú£
-££*£:£J£Z£j£z£Š£š£ª£º£Ê£Ú£ê£ú¤
-¤¤*¤:¤J¤Z¤j¤z¤Š¤š¤ª¤º¤Ê¤Ú¤ê¤ú¥
-¥¥*¥:¥J¥Z¥j¥z¥Š¥š¥ª¥º¥Ê¥Ú¥ê¥ú¦
-¦¦*¦:¦J¦Z¦j¦z¦Š¦š¦ª¦º¦Ê¦Ú¦ê¦ú§
-§§*§:§J§Z§j§z§Š§š§ª§º§Ê§Ú§ê§ú¨
-¨¨*¨:¨J¨Z¨j¨z¨Š¨š¨ª¨º¨Ê¨Ú¨ê¨ú©
-©©*©:©J©Z©j©z©Š©š©ª©º©Ê©Ú©ê©úª
-ªª*ª:ªJªZªjªzªŠªšªªªºªÊªÚªêªú«
-««*«:«J«Z«j«z«Š«š«ª«º«Ê«Ú«ê«ú¬
-¬¬*¬:¬J¬Z¬j¬z¬Š¬š¬ª¬º¬Ê¬Ú¬ê¬ú­
-­­*­:­J­Z­j­z­Š­š­ª­º­Ê­Ú­ê­ú®
-®®*®:®J®Z®j®z®Š®š®ª®º®Ê®Ú®ê®ú¯
-¯¯*¯:¯J¯Z¯j¯z¯Š¯š¯ª¯º¯Ê¯Ú¯ê¯ú°
-°°*°:°J°Z°j°z°Š°š°ª°º°Ê°Ú°ê°ú±
-±±*±:±J±Z±j±z±Š±š±ª±º±Ê±Ú±ê±ú²
-²²*²:²J²Z²j²z²Š²š²ª²º²Ê²Ú²ê²ú³
-³³*³;³K³[³k³{³‹³›³«³»³Ë³Û³ë³û´´´+´;´K´[´k´{´‹´›´«´»´Ë´Û´ë´ûµµµ+µ;µKµ[µkµ{µ‹µ›µ«µ»µËµÛµëµû¶¶¶+¶;¶K¶[¶k¶{¶‹¶›¶«¶»¶Ë¶Û¶ë¶û···+·;·K·[·k·{·‹·›·«·»·Ë·Û·ë·û¸¸¸+¸;¸K¸[¸k¸{¸‹¸›¸«¸»¸Ë¸Û¸ë¸û¹¹¹+¹;¹K¹[¹k¹{¹‹¹›¹«¹»¹Ë¹Û¹ë¹ûººº+º
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLCoBrowserInformationSQL : CommonDataBaseInteraction, IDLCoBrowserInformation
+    {
+        CommonInfo connection;
+        public DLCoBrowserInformationSQL(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLCoBrowserInformationSQL(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<Int32> Save(CoBrowserInformation coBrowserInformation)
+        {
+            string storeProcCommand = "CoBrowser_Information";
+
+            object? param = new
+            {
+                Action = "Save",
+                coBrowserInformation.CustomerName,
+                coBrowserInformation.CustomerPhone,
+                coBrowserInformation.SessionId,
+                coBrowserInformation.RequestDate,
+                coBrowserInformation.CoBrowserLink,
+                coBrowserInformation.UserInfoUserId,
+                coBrowserInformation.LastAssignedUserInfoUserId,
+                coBrowserInformation.IsNewUserAssigned,
+                coBrowserInformation.VendorStatusCode,
+                coBrowserInformation.VendorStatusDescription
+            };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<int>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+        public async Task<CoBrowserInformation?> GetLastAssignedUserDetails()
+        {
+            string storeProcCommand = "CoBrowser_Information)";
+            object? param = new { Action = "GetLastAssignedUser" };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<CoBrowserInformation?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+
+        }
+        public async Task<CoBrowserInformation?> GetCoBrowserInformation(int UserId)
+        {
+            string storeProcCommand = "CoBrowser_Information";
+            object? param = new { Action= "GetUserCoBrowserInfo", UserId };
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<CoBrowserInformation?>(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+ 
+}
+}

@@ -1,4 +1,72 @@
-'»¥=d+z¯†^!{¤d»t¢óeı'uÔ_¶%éBÙ İOK"›Ñ’ÑL6JZÈiEÛSRC’´£“ì§:Ù,¥ßzÈV´1;--Òˆ²½K3ª¥hÒ‚V²SÚPõkÒv²K:ĞAvH'zÈnÔè×Ôï”F4¾ìHÒ„V²KÚP#›¥eÎV.ô­èİ[½B¶HšÈviF3Ù*-è$ëRGÙ&İ(Ÿ·™¤çéd;:"ÚÈf©¡ƒ¬K':É©£š‡#]¨z˜Rz˜ÌÃş¡3 êaIíd£t |
-=K'ºÈ~ºŸúlA= l“F4‘5iF3ÙOÚÈ©¡F¶K;:É.©£NvH×ÓÅ¾oıĞUĞBvJ+ZÉš´¡¬K=d;ºO·æaI#Ê<ì Í¨æáHZÉ&iC™‡ó“v´“-Ò²Q:ÑI¶Ju²IºĞM¶IÏÓÈfôD4’íÒ„&²MšÑLvHZÉš´¡êwJ]d‡t£¬ÍÎºç"¯ui@Ù(Íh&»¤-d‹´¢êwK:ÉÖ?·¬Ÿó¯ŞòÜ_IA7ºkJzÈ&ôÍ¼BÖ¥d³4¢Zö%Íh»sjŒP¤d?uÔÉVéBYCïYÒ+d›4 FvJ;ÚÉšt ôP’ÔQÍd—î§)‘-hÊh!;¥ejªyXÒN²Iê¨æaK×ÓœÈV4gT=iE+Ù%mh{Ù¤†Ù-íh'¥=dzß4|…l’”~[‘f4“ÍÒ‚6²&5ÔÈ)ÕßËZ@k@Ù*h$Û¥	Md›4£“ì:ºÈšt£ÌChcšæaHÉfiB+Ù)mè [¥UGºÑMvHÊ§Û#zÏ³^!;¥d“4¡¬Kíd‹t ÌÙRGl“.ôMè=ûz…¬Iªq«ÔÑE¶K÷ÓÁv6:2šÉNiy:+Ù†Î†6².5”~½£N¿È.iDéaiFÕÃ‘´‘MRCÙÖ×OÚÑC¶¢‹V ¤d—4¡‰l’ft’İRGl–.”vEïÊ+d‹4 ‰l—f4“­Òòô4²C;Ù&èë7å uTıvéB7Ù$=è!;î{l¿% SÑÆEj¨:[Ò²S:ÑIöHu².]([õşI÷ÓÈ.4d4“Ò‚2nIRÆçihb‰S`„((­eiFõ×>-h%[¥eûıÛs¢±ïñïÆ25ĞÁXM:Q'Û¥=O- ™¥ÌZJ“F4’ÍÒ„&²CšÑL¶HZÉNiC;Ù*¨–bI':Év©£›ì–TË6ĞÂ²éh{‚4 ‰ì”f4“Ò‚²[ZÑJ6Iª~ÔÑE6K7Ê'¯zêÈ|*Z#šÉiAÙ.­h#kRC;Ù!è$û©£NÖ¥=d¥÷(ş
-Ù%¨z8RCì–v´_½GEt ì)F•Nt‘ÒıÔÙ†ZFÙ"­è$»¤:Ù&]O'Ù™Ğéè&kÒƒ2;;¢÷ø÷
-Ù)h"›¤Íd]ZĞI¶JÕ<,éF7ÙOél²]md·ÔPÖÅŒÒÒÃÉRGì§ëé.d+º+Ú®æ¤†#iGÙ$è$[¥:Ù"]è"Û¤ûéId+z2šÉš´ ê×¥†ªß.íè${¤jv†t¡çeó{îqõ–‚iEëÓ¤USÚQ'¥Õ<,éFÙŠŞ+ÚWÈnixYCcFçSRGõ×t£‡lGïq•r³¤d§4¢‘l”&4‘uiF3Ù$-¨ú]RGÙ,İè~ÙşéAÙŠŞãæ+d‹4 ‰l“f´‘­RC;Ù!è!+½G²WÈº4 ,ÛøIÕ²-é~ZÙ‰ÖŒ²GZŸ6{ÙĞÖQú]úÿqÚà_±<ßLß«¬W+JšÈiF3Ù$-h#»¤†Ù,í(=¬Úé¡²EÑL¶IÊ<ıÓŠN²Cê¨“5éz:éwÿĞi¨æ´KÊ¸gJÕ¸Ÿ.t“]Òƒ«%ô‘^a—´’Ò†ª³%è kÒ‰²Ş?©£N¶KºÉ)ı®Dv +£™l’t’=RGl–®§;¼l©èh{ZƒÔĞÎE:ĞC¶¡‡™<ì§Md—4£ZŠ.-¨z8RCìv”Z¼:ß¯NŞ¢¦4¢‰l—fT=,iA™IRG5“[ºĞCÖĞ{äx…ì‘4‘ÒŒÒÃùIª¶ÔÑE6H÷ÓÈœõ‚FCl’ö§9‘=hÎh!›¥eÜ9¤†jÜ*íh'ëÒ²M:ÑIvIu²&]è"»¥İd»ô<-‘ìAKBµlCZQ>İ¤md—ÔP#›¥íd·t N¶HúÖ[AºŸ¶IÖĞæ¨²QºQ¶³]Ñ{¼x…l–4‘5iF3Ù"-è$;¥ª‡*İè~Ù¥=d½G‘WÈ&i@Ù.h#›¥†²C:ÑIöSGì’.TıN)ıHv£#¡™ì’´]­9Hío„¥d³t¢‡,Ê/ŞB¶HÈviD#Ù*Mh!;¤U¿Mj¨‘]ÒN²ı/ç-÷=ş•3ÖÖXë©'ÆrÔ3ª´¢õeK’6”9õ è!›ÑÅì­@öÓˆF²CšP:«AšÑÌUZĞF6J5²MÚÑC¶ ûvvY“4“uiAÙ.ev[Fû¡' ç©Háén¡ßş“ª™Ò²&¨“uéBÙŞcÚ+d·4 ¬K#šÈiFÕï’J¿+HJ¿ãÓ‰.²IºŸÆH6¢1¡…l•V´‘mRCl—vt’ıÔQ';¤ëiJdMUSZQ>3IªyXÒ²½WY·ğ	Ø?iDÙ!Íh&¥md]j¨‘MÒª‡ƒz(ê!K#J^¥-d?­h#kRCÕÃ§d‡ÔQ'Û¥=dZo¿·Òğ´ÑÃú¡ÍĞNvJJ»IUKºĞC¶£F¦¶4 ¬K#ÉiBÙ%5”~ÏO:P>C'J':É~ê¨“MÒ….²Ÿî§=Íhh&ûiAY“jd›´£“ì”:êdMºĞEvKéŒãuË†ê¯ui:ìD'êói¨;ª†t¡çe[FïÑé²SĞD¶I3ª9siAÙ!­(Y:ª5´¤İd›ô çfóè¦ßİÈšÔĞN6JJı'uÔÉféBÙˆŞ+ÄWÈi@ì§UU:ĞAöO¿;7Ã™ü«ÉXMc9êŒµ¥]dMºQ-Ïyï1ø–ôtiF#tiEÙ"5ÔÈNiGÙ&¨fÚ¥ëiPU[ZÑú²ó'mh{Ùj¨‘Òv²Ÿôè}Çæ²Ÿ†§)‘54e4“MÒ‚²Åù”:êd³t=-ÌïŠh1ÔÈiGw/©£·JÊ²z'¯mÒ€6²Ij¨æÌ¤İd‡ô<méªå€¶ŒFÒŠN²Uê¨–Â¥ë©i\©eTã.iEíeK’vTKq¤İd«ô çihgÎ¸şËş“F4‘ÒŒf²Ÿ´‘ÍRCÙ$¨zhè ‡¡ª4¢‘¬KšÈš4£™ì’´’íÒ†v²[:Põ;¥em¶ uÔÉºt¡‡lDïuå+d—4 ‰l‘fTó»¥mdMjOµ€º´3Â‘”¥èAê(K±>]è!›Ğ{}…l”4­ÒˆF²IšĞF¶Iíd³t ƒ¬K':ÉV©£NvIºÈ6é~ºÕïFwDÕ¯IÊQšÑJ¶KÚÈ&©
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System.Data;
+
+namespace P5GenralDL
+{
+    public class DLAdminMasterCreditSQL : CommonDataBaseInteraction, IDLAdminMasterCredit
+    {
+        CommonInfo connection;
+        public DLAdminMasterCreditSQL()
+        {
+            connection = GetDBConnection();
+        }
+
+        public async Task<Int32> SaveDetails(AdminMasterCredit masterCredit)
+        {
+            string storeProcCommand = "Master_Credit";
+            object? param = new { Action = "Save", masterCredit.ConsumableType, masterCredit.ProviderName, masterCredit.CreditAllocated, masterCredit.CreditConsumed, masterCredit.LastModifiedByUserName, masterCredit.Remarks };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure);
+        }
+
+        public async Task<bool> UpdateCreditConsumed(AdminMasterCredit masterCredit)
+        {
+            string storeProcCommand = "Master_Credit";
+            object? param = new { Action = "UpdateCreditConsumed", masterCredit.CreditConsumed, masterCredit.LastModifiedByUserName, masterCredit.ConsumableType, masterCredit.ProviderName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteAsync(storeProcCommand, param, commandType: CommandType.StoredProcedure) > 0;
+        }
+
+        public async Task<List<AdminMasterCredit>> SelectMasterCredit(AdminMasterCredit masterCredit)
+        {
+            string storeProcCommand = "Master_Credit";
+            object? param = new { Action = "SelectMasterCredit", masterCredit.ConsumableType };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<AdminMasterCredit>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+
+        public async Task<List<MLAdminMasterCredit>> GetFeatureWiseMaxCount()
+        {
+            string storeProcCommand = "Master_Credit";
+            object? param = new { Action = "GetFeatureWiseMaxCount" };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<MLAdminMasterCredit>(storeProcCommand, param, commandType: CommandType.StoredProcedure)).ToList();
+        }
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

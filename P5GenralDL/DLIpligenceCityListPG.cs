@@ -1,5 +1,60 @@
-$’v5$’$’sw3,$’$’q0è$’$’oL.$’$’lç+Î$’$’j¥)x$’$’h'$’$’dÃ%8$“$’`×$›$˜$’[u$”$ç$’VW$’'$’Pà$’*Ï$’K“$’.è$’G–$“3Ü$’F$”:S$’Fœ%CK$’IM$”J†$’Lå$“S²$’Oğ$”bó$’Qä$“sk$’Tq$’ƒV$’UÂ$’“b$’V$’¢ï$’Vº$’²=$’VM$’À/$’V$’Í.$’T#$’ÕT$’Q$’Ù]$’O¸$’Ûf$’Lª$’Úø$’Jæ$’Úø$’w’;è$•$’ré9-$’$’n`6º$’$’k4ë$’$’hN2Ü$’$’eR0è$’$’c:.ƒ$’$’`£,@$’$’^()|$’$’[¼'„$’$’YO%[$“$’Uh$¬$ª$’Pi$–%$’Kp$’(F$’E?$’+ó$’@{$“0-$’>ú%5¶$’@)%=Y$’C÷$”EB$’Eò$’R¹$’Gæ$’c$’HÊ$’s$’I6$’‚•$’J$’’g$’J‹$’¢!$’Jo$’±{$’Iÿ$’¿Ó$’I$’Ìd$’FÃ$’Ô$’E$’Ú$’B$’Ûf$’?C$’Ú‰$’=œ$’Úˆ$’q|=%$’kç:$“$’g#8l$’$’cR6’$’$’_Ñ4¬$’$’\L2í$’$’Y‚1$’$’V</$’$’Sl,$’$’Qò)Ş$“$’P	'r$“$’Mİ%‚$–$’Jl$½$½$’Eª$—%¬$’@$“)@$’:Õ$”-$’8‰%1d$’:%u8\$’=j$”Cá$’>a$’TV$’>–$’d $’>b$’sx$’>e$’‚Á$’=µ$’‘ş$’<´$’ Ê$’:î$’¯—$’9¿$’¾%$’9$’Êç$’7Ÿ$’Ô9$’6Î$’Ùú$’5$’Ûj$’3³$’Ûh$’2™$’Úø$’k¬?K%
-$’eÓ<z$–$’`2:"$“$’\8•$’$’Xá6Ö$’$’U4Ö$’$’QV3?$’$’M.1ˆ$’$’HÙ/$“$’E]-$%$’C*G%$’Cz'f$“$’B%L$—$’@$¬$À$’;Î$©%ç$’5…$™(ù$’2a%w-g$’50$™6$’5û$•G-$’5A$•U¹$’4®$•fH$’2“$•v	$’/>$•ƒe$’+¾$”’$’-—$”Ÿİ$’-J$”®v$’,Z$“¼$’+ì$“Ê|$’*È$•×Ô$’,ï$–Ù}$’,X$˜Ûk$’+›$˜Ûl$’+—$™Ûj$’gÉA›%|$’`>l%
-$’Z&<$”$’U:Ó$’$’Qô9•$’$’N¢8	$’$’Jl6¢$’$’E°4‘$’$’?¾2$’$’:Å0&$“$’7g.-$“$’6C,F$’$’6É)f$“$’7È&\$—$’6£$»$À$’4›$Â$Ø$’-Ì)Ô$’-7Ã:$$’.‘LKP$’)3 åXÄ$’(t$åg·$’&í$åuÀ$’&l$ªƒb$’&…$˜‘.$’&$ºŸ[$’%$º¬â$’%F$¨¼$’%v$¬Í$$’%$ÓÙå$’&{$ëØ¶$’'$%\Û]$’&¯%\Ûm$’&³%^Ûm$’dmBä%ñ$’\³?Ò%ì$’Uá=$—$’QÁ;ã$”$’Nt:á$’$’Ka:$“$’F68z$“$’@æ5J$“$’;w2„$“$’51I$’$’2¥0$’$’1D/$’$’0}-‘$’$’/v+«$’$’/)i$˜$’,=&t $’#	#	#	#	"&%a5$’ %ÖEp$’#%ÛU$’$Ú&Óe&$’%
-'9t$’$é&¹‚$’$æ%¯¡$’$á%Uç$’$Ñ$ğ¬Y$’$¾$º»$’$Ğ$ÒÊç$’$ß'¾Ó”$’$ê'î×d$’%]'şÚŞ$’%Z'üÛm$’%\'ûÛm$’bíC¥&d$’YÃ?í%‚$’S"=%$’OU<_%$’K¸;ã$“$’Hš:æ$“$’D”9›%$’?'6Ù%$’8‹4>$“$’4'2€$’$’1û0Ø$’$’0¿0$’$’/q/$’$’-h-ı$’$’*§-)$–$’'>.$Î$’.¤s$’[-Ê5;$’$Ü/˜CÒ$’$Í/FT$’%-^c›$’%
-+ërÃ$’%+€f$’%+ËŒö$’$—*;šó$’%*Aª‰$’$—)X¹\$’$–)éÆ\$’$˜+Ğ]$
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLIpligenceCityListPG : CommonDataBaseInteraction, IDLIpligenceCityList
+    {
+        CommonInfo connection;
+        public DLIpligenceCityListPG()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<List<IpligenceCityList>> GET(string CityName)
+        {
+            string storeProcCommand = "select * from ipligence_citylist_getcitylist(@CityName)";
+            object? param = new { CityName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<IpligenceCityList>(storeProcCommand, param)).ToList();
+        }
+        public async Task<IpligenceDAS?> GetCityCoOrdinate(string CityName)
+        {
+            string storeProcCommand = "select * from ipligence_citylist_getcitycoordinate(@CityName)";
+            object? param = new { CityName };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<IpligenceDAS?>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}
+

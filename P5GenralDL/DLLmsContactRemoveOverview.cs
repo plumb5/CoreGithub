@@ -1,4 +1,25 @@
-8%$–$’—%
-$–$’Ÿq%W$•$’¡3%Ï$–$’£ü0$”$’¦İ@E$–$“©ÆUÊ$–$’­AnÓ$•$’¯ì‡á$–$’°£½$–$’­»Â¹$“$’«
-Ôu$”$’¨VÚ=$”$’¥ŠÛ>$“$’¢‘Ûk$“$’ŸyÛm$“$’›Ûm$”$’—×Ûm$”$’”ÊÛm$”$’’aÛm$“ŒxÚs$’$Ï„3Úå$“$¼|ÂÚ°$•$ÄsØÇ$“$Êi(Õg$’$ÃXÉi$’$½H+¿$“$¶9´ı$“$­.P®$“$§&­©æ$“$ %O¨‰$”$š$–§%$›$’§ó%$œ$’¨ì%$œ$’ª%
-$œ$’¬µ%O$™$’®×%w$š$’±Y-Ê$–$“µ";ø$˜%¸´Oy$™$“¼:iA$˜$’¿¼ƒZ$š$’Á› Ã$š$’ÀÄ½ù$–$’ºeÔû$˜$’¶§Ú$˜$’´ÛR$˜$’°[Ûi$—$’®Ûm$•$’¬nÛm$–$’«èÛm$–$’ªRÛm$—$’©­Ûm$–óÚ÷$’$Î{ŞÛi$•$ºsÎÛd%s$Âk×Úu$“$ÊagÖš$’$ÆVYÑs$”$ÀGlÇ$ $»9>¾q$°$´,Âµ³%$®&ø²A$•$ª$Ü±.$“$¦$•±€$”$¥$’² $–$¥$’³ï%$¥$’¶4%$¦$’¹U$Ë$¥$’»ÿ%}$£$’¿z+)$›$’Ã6m$—$“ÆßG½$–$’Ëa©$˜$’Î1|6$œ$’Ï¿™$$’Ñ·ö$$’ÌÜĞ¢$$’ÇDØÍ$›$’Ã2Û9$š$’¿ÅÛV$™$’½|Ûl$˜$’¼¾Ûm$—$’½3Ûm$—$’¼°Ûm$˜$’¼ŸÛm$—zÛj$”$ËrúÛl%s$¸kÛk$–$ÀaÆÚ$“$Ê[BÙÌ$“$ÉPêÔ°$ $ÆC`Í0$$Ã7kÅ¬%$$¾,i¾à$Ÿ$¸'K¼7$¡$´$Ùºò$”$±$•»½$•$°$’½Z%$°$’¿Ú%$°$’
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLmsContactRemoveOverview
+    {
+        public static IDLLmsContactRemoveOverview GetDLLmsContactRemoveOverview(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactRemoveOverviewSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactRemoveOverviewPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

@@ -1,2 +1,24 @@
-Ú÷$“$þ%FÚö$’%$–Úø$’%$’Úú$’%$’Úû$’%$’Ûl$’%$’Ûm$˜%$’Ûm$²$ö$’Ûm'D$á$’Ûm6+$Ê$’ÛmFý$¶$’Ûm_|$¶$’Ûm{$¶$’Ûm–€$¶$’Ûm±V$¶$’ÛmÇ–$µ$’ÛmÔ4$±$’ÛmØB$«$“ÛlÚ²$£$’Û3Û0$”$’Û3Û4$’$’Û3Ûm$’$’Û3Ûm$’`5Úú$’$ YÛl$’$¸RHÛm$’$¹LÛm$’$ÆF(Ûm$’$Ø>£Ûm$’$å8ÕÛm$’$î2XÛm$’$õ+Ûk$’$ü(4Úú$’%%HÛj$’%$ÏÛl$’%$“Ûm$’%($’Ûm$’%7$’Ûm$’%<$’Ûm$’%6$’Ûm$”%&$’Ûm$¬%$’Ûm%w$ñ$’Ûm1”$Ñ$’Ûm@O$³$’ÛmUÅ$¶$’Ûmq($¸$’ÛmŠ§$·$’Ûm§C$¸$’Ûm¼©$·$’ÛmÎn$³$“Ûm×d$®%ÛmÚ+$¥$’ÛmÚ÷$—$’ÛmÛ4$’$’ÛmÛm$’$’ÛmÛm$’Ûl$’$’$–Ûm$’$’$–Ûm$’$’$–Ûm$’$’$–Ûm$’%$–Ûm$’%X$–Ûm$”'$—Ûm%,Á$—Ûk%2…$˜Úú$”<õ$™Úø$’J6$šÚú$’YË$œÛh$’kÈ$Úü$’~Ü$Ûk$’K$žÛm$’¢v$žÛm$’´å$žÛm$’Ãl$žÛm$’Ï
-$ Ûm$’Ö6$£Ûm$’Ú[$©Ûk$’Û$°Úú$’Ûk$¸Úø$’Ûm$¼Úî$’Ûm$»ÙM$’Ûm$µ×Œ$’Ûm$°Ô¹$’Ûm$«Ðå$’Ûm$¥Ëä$’Ûm$žÈx$’Ûm$›Å$’Ûm$À $’Ûm$¯Ûm$’$’$–Ûm$’$’$–Ûm$’$’$–Ûm$’$’$–Ûm$’$—$–Ûm$’%F$–Ûm$’&Ž$—Ûl$•+G$—Ûk%1$˜Úû$•;]$™Úù$“G¶$›Úú$”Vô$œÛj%hŽ$Û
+ï»¿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLmsContactImportRejectedDetails
+    {
+        public static IDLLmsContactImportRejectedDetails GetDLLmsContactImportRejectedDetails(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactImportRejectedDetailsSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLmsContactImportRejectedDetailsPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

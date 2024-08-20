@@ -1,1 +1,24 @@
-şuyTîvxIUÚwŒ>FÂx¼2ç¨z'^{Y¿ñ‚ùr·ˆ‚Ãrp¯‚‘rÜ¦™‚csK‚=s¼•{‚t0ŒÇûtªƒëØu1zõ³uÄqÁ‘vch*zw^*jwÃSÓ]xˆI.Ny^>(=zM2Ğ+{P'N|]¿v‚v··ëvê®ŸÂw¦$wV}w‘•awÏŒcFxƒ*xbzx¾qq€óy#gâ€ãy“]í€ØzS¡€Ïz™I€Æ{1>	€¼{Ü2¸€²|˜'=€©}^¾ôI{g¶Œ'{g®{g¥¦€æ{g&€É{k”¡€®{x‹ş€”{Šƒ0€~{¡zG€g{Äq!€V{ğgš€M|#]°€H|bSn€E|®HŞ€C}=è€B}h2 €@}Ü'-€?~X¾u€‚€9¶€bÿ­§€DÇ¥3€(”œ¸€d”8õ6‹›à‚ÔÏ~ôyò¿~ÛpÔ³~ÉgU²~Æ]s·~ÈS:À~ÌH³È~Ò=ÆÏ~ç2†×'ŞI½ôÅ…$µ—¡„°­4€„?¤ÆcƒÒœPLƒk“Ô8ƒ‹;(‚ª‚y‚SyŸ‚p‰¸gn]7#$S@€àH…W€§= h€z2jx€R'ˆ€-½lŠµ~ğ‰p¬»~ÎˆÈ¤T~´ˆ$›ã~ ‡…“i~†éŠÔ~…†R‚~…ÁyF~…6p9~}„­fÊ~€„!\ö~ ƒRË~ÌƒHS~ñ‚y=xø2K%|&õ>¼Ü~zH´Œ~Z_¬6~?x£Ô~*Œ•›g~‹¹’ñ~ŠãŠ`~Š«~‰@xà~ˆvoÚ~‡«ft~†Ú\ª~9†RŠ
+ï»¿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLContactGroup
+    {
+        public static IDLContactGroup GetDLContactGroup(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactGroupPG(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLContactGroupSQL(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

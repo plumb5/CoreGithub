@@ -1,5 +1,87 @@
-Ûm@'Š~RÛmW®UR×Ûm¸–STÛlÀôŒ!R±ÛkÚ­†òQgÛlÛZµP‚ÛmÛhwN„ÛmÛmm;JRÛjÛmbıE¡ÛYÛmYœ@±ÛÛmQ;IÙ§ÛmJ®7AÖÇÛmD2ïÒvÛl>Q/zÎæÛ_80.Ë¼Ûb0/ÃÉ$Û\(N*ÃÆ*ÛU%›&vÄÙÛ`$ËÛm¨†$’&SÛm°ö$’&OÛmºç$’&xÛmÒĞ$’&„ÛmÚÿ$’&ªÛmÛP$’'ÛiÛ[$’'ˆÛeÛh$’'¯Ú	Ûl$’'îÓÃÛm$’+y¿êÛm$”6y¬_Ûm$šF’‰®Ûm%‘[şkäÛm-dpè[âÛm={xÍUğÛmZTyğS«Ûm£lzITÙÛmÈíyR±ÛmÚßt‡N%ÛmÛ[mïLmÛmÛjgIÛmÛm_xD˜ÛmÛmWÔ?cÛlÛmPù:;ÛfÛmK6cÚ[ÛmEÌ2-ÙƒÛm@†.‰×ÉÛl:µ-×ÛP4™-HÕ™ÛM,Œ*àÔ»Ûb'&‹Ò¯Ûi%^$ŸÑ‹Úï$ÂÛm°]$’&`Ûmº…$’&OÛmĞÈ$’&tÛmÛ%$’&kÛmÛd$’&pÛiÛD$’&œÛQÛj$’&îÚÀÛk$’'ÕGÛ5$’&çÁdÛl$’(m²Ûm$”/î–«Ûm$§=àz€Ûm&sQcùÛm-báV—Ûm=Vh	L@Ûm{f`NÛm¬Ğf¢NÆÛmÍØf~KğÛmÛc-HíÛmÛ<^fEşÛmÛiYXAŞÛmÛmT=ãÛmÛmNŞ9€ÛmÛmIõ5cÛlÛmEQ1pÛfÛm@¬-ªÚ§Ûm;·+Ù›Ûl6¡(õÙ9Û_1	))×øÛb))'^×¼Û_%±%G×¬Ûl%$“×¢Ûj$¹Ûm¹É$’&tÛmËÊ$’&HÛmÛG$’&oÛmÛD$’&ZÛmÛ\$’&NÛhÛh$’&WÛNÛl$’&…ØFÛl$’&¦ÉãÛl$’&w´ÙÛm$’'€Ûm$”,‡†Ûm$œ8KseÛm(
-G£\bÛm-ULNtÛm<ÛYNChÛmƒ!W¬FÛm¬¤W¼GiÛmÍ4WÍEtÛmÙmU’@¢ÛmÛaR0=dÛmÛZN;ÛmÛlK6âÛmÛmGK3œÛmÛmC0ÛmÛm?®-0ÛlÛm;o)ÊÛjÛm7	&ÕÛeÛm2S&ÚîÛk,¿&µÙ÷Û^&3%ŒÙÉÛA%$—Ù¼Ûm$å$’Ù¼Ûm$°ÛmÊÈ$’&‰ÛmÛV$’&>ÛmÛR$’&kÛmÛe$’&XÛlÛk$’&9ÛJÛk$’&%Ù®Ûl$’&+Ğ˜Û4$’&T·~Ûl$’&|£áÛm$’'3‹äÛm$”*~wûÛm$Å3`i2Ûl'ó?!SÿÛm+WICÛm?AM:IÛm‹sLÏ;aÛm­òLÑ=pÛmÈêL¾<=ÛmÕKQ9 ÛmÛ5Hã6ZÛmÛPF%2ÌÛmÛZCI0ÛmÛk@d-$ÛmÛm=J*§ÛmÛm9Í(6ÛmÛm5ú&kÛmÛm1â&ÛlÛm-$²ÛjÛl(ó%ÚôÚü%8$—ÚòÛk$¶$“ÚòÛm$¶$’ÚñÛm$«ÛmÚD$’&šÛmÛg$’&GÛmÛi$’&kÛlÛM$’&QÛUÛk$’&"Û4Ûk$’%ı×Úû$’%ìÀÛk$’&«;Ûm$’&m‘4Ûm$’&Çy#Ûm$”(Oj3Ûm$¤-¾_ÀÛm$ú7OTÛm0u>3<ÛmKÂB‰2Ûm?CÑ4>Ûm©&D.4lÛmÄ~CÛ4»ÛmÓBÔ1ÖÛm×ú@÷.*ÛmÛ1>­+ĞÛmÛd<e)ŒÛmÛX9Ü'KÛmÛl6Ğ&ÛmÛm3g$ÜÛmÛm/˜%ÛmÛm+˜$›ÛmÛm'Æ$”ÛlÛm&$”Û2Ûk$ó$“Û2Ûm$¦$’Û2Ûm$¦$’Û2Ûm$§ÛmÛi$’&¤ÛmÛj$’&\ÛmÛ`$’&nÛiÛi$’&DÛ@Ûk$’&ØèÚú$’%ÙÏfÚ‹$’%Á±2Ûk$’%Ùš`Ûm$’&|Ûm$’&7j£Ûm$˜&È^Ûm$Æ)¾T5Ûm%]0"9”Ûm- 5K,›Ûm`õ8•+³Ûm‘:m+!Ûm¨{;P,iÛm½ı;>-`ÛmÏ_:n*nÛmÒê8ú(MÛm×=7%ìÛmÚG4õ$ÅÛmÚ‹2„$¥ÛmÛi/"$±ÛmÛl+°$ÍÛmÛm)$–ÛmÛm&Ë$“ÛmÛm%‚$’ÛmÛm%!$’ÛlÛm$Ù$’ÛlÛm$¸$’ÛlÛm$­$’ÛlÛm$£ÛmÛl$’&­ÛmÛl$’&ŠÛmÛl$’&|ÛRÛl$’&7Û)Ûi$’%íÕÑÚŒ$’%·¾õÛj$’%— œÛm$’%Œˆ9Ûm$’%™k¿Ûm$“%¬[ƒÛm$¿%ÙQ¿Ûm$ç&ËB«Ûm(˜(İ.-Ûm3Õ+€(KÛmkD-–&sÛm’8/L'!Ûm§I0[&ñÛmº0s(pÛmËj/¸(7ÛmĞ¼.8&óÛmÖu+ï%ÏÛmÙ”)”%˜ÛmÛ'‰%€ÛmÚø%à%	ÛmÛk%R$ÍÛmÛm%$“ÛmÛm$ï$’ÛmÛm$ê$’ÛmÛm$ñ$’ÛmÛm$Î$’ÛmÛm$¹$’ÛmÛm$²$’ÛmÛm$«ÛmÛm$’&³ÛmÛm$’&œÛlÛm$’&|Û]Ûm$’&Ø9Úú$’%ÇÊ&Úú$’%ªûÛk$’%l®Ûm$“%TmÂÛm$’%I[¶Ûm$“%LPCÛm$²%a@ßÛm$ò%“0¹Ûm)z%ß&®Ûm= &&zÛmq/&.%ùÛm•ê&~%øÛm©¬&Ÿ&7Ûm·5&©'†ÛmÉ‡&Œ&mÛmÒ-&;%òÛmÔÕ%¥%ÛmØ”%r$–ÛmÛ%%$”ÛmÚù$É$“ÛmÛ3$¥$’ÛmÛl$ $’ÛmÛm$¶$’ÛmÛm$Å$’ÛmÛm$Ã$’ÛmÛm$¼$’ÛmÛm$º$’ÛmÛm$¹$’ÛmÛm$¸ÛmÛm$’&´ÛmÛm$’&ÛjÛm$’&nÚÚú$’%ÇÔ<ÚŠ$’%†»Ûi$’%^–Ûl$”%?s¢Ûm%%"]Ûm$”%M)Ûm$–$ÿAÛm$Ë$ú+ÛÛm%Y$ø%Ûm(š$ø%ÛmNE$ı$”ÛmxD%$’Ûm™î%$“Ûm¬|%	$”ÛmºÑ%$“ÛmÈh%$•ÛmÑ•$÷%Ûm×D$é%ÛmÙK$Ù%ÛmÚğ$Ä$”ÛmÛ1$§$’ÛmÛ3$—$’ÛmÛl$—$’ÛmÛm$¢$’ÛmÛm$«$’ÛmÛm$°$’ÛmÛm$·$’ÛmÛm$»$’ÛmÛm$¼$’ÛmÛm$¼ÛmÛm$’&²ÛmÛm$’&—Û*Ûm$’&U×)Ú‹$’%ÃÚø$’%H¡êÛj$’%+‚[Ûm$“%]Ûm$Ë$ôI¦Ûm$”$è>.Ûm$™$á/ßÛm$ç$Û*6Ûm&ƒ$Ô$ÑÛm/)$Í$•ÛmZæ$É$’Ûm}($Ç$’Ûm‡$Å$’Ûm¯¥$Ã$’Ûm¹Í$Â$’ÛmÆ?$À$’ÛmÒÔ$¼$“Ûm×F$·$•ÛmØÜ$±%ÛmÚí$«$”ÛmÚù$¤$’ÛmÛ3$›$’ÛmÛl$˜$’ÛmÛm$¡$’ÛmÛm$¨$’ÛmÛm$®$’ÛmÛm$·$’ÛmÛm$¼$’ÛmÛm$¾$’ÛmÛm$¾Ûl$“$•$’Ûm$’%$’Ûm$’%ô$”Ûm$’'ñ$•Ûk$’-$—Úú$’3™$˜Úø$’<w$™Úø$’HÒ$›Úû$“V÷$œÛk$•f@$Ûl%w2$Ûm%ˆ$ŸÛm$” İ$ŸÛm$’²‚$ŸÛm$’¾P$Ûm$“ÌØ$Ûm$”×Z$œÛm$ËÛD$œÛm$•Ûj$¢Ûm$ÌÛm$¨Ûm$”Ûm$¯Ûj$“Ûm$·Ûl%Ûm$¼Û2%Ûm$ºÚ÷$•Ûm$»Ùº$’Ûm$¶ÔÜ$’Ûm$­Ó$’Ûm$¥Îş$’Ûm$ ÌX$’Ûm$šÊÚ$’Ûm$˜Ç|$’Ûm$™Æ‡$’Ûm$¤Ûm$’$’$’Ûm$’$Í$’Ûl$’%$”Ûm$’'u$–Ûl$”+‰$™Ûk%2ˆ$œÛi%;b$ Úû$•FÇ$¥Ûi%Tb$«Úı$•bö$²Ûl$—s.$»Ûm%u„k$ÅÛm$—›Q$ËÛm$–­J$ØÛm$ÒºŸ$ğÛm%ìÊš$ûÛm%ïÖq$üÛm%}ÚÑ$ğÛm%Úõ$ÚÛm%
-Úû$ÏÛm%	Ûl$ŞÛh%
-Ûm%Úp%yÛm%Úø%Ûm$ñÙé$–Ûm$ÊÕ]$’Ûm$³ÒÍ$’Ûm$«ÍË$’Ûm$¥ËÕ$’Ûm$¢É‚$’Ûm$ŸÄ{$’Ûm$Áû$’Ûm$›¼Y$’Ûm$™Ûm$’$’$’Ûm$’$”$’Ûm$’%	$•Ûm$’&_$™Ûm$”)'$ŸÛl%0m$£Ûl%8¸$§Ûl%
-D$®Ûl%éQk$·Ûl%~`$ÖÛm%òoÅ%!Ûm&€œ%CÛm&/•ì%ç
+ï»¿using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using Dapper;
+
+namespace P5GenralDL
+{
+    public class DLLandingPageTemplateFilePG : CommonDataBaseInteraction, IDLLandingPageTemplateFile
+    {
+        CommonInfo connection = null;
+        public DLLandingPageTemplateFilePG(int adsId)
+        {
+            connection = GetDBConnection(adsId);
+        }
+
+        public DLLandingPageTemplateFilePG(string connectionString)
+        {
+            connection = new CommonInfo() { Connection = connectionString };
+        }
+
+        public async Task<int> Save(LandingPageTemplateFile TemplateFile)
+        {
+            string storeProcCommand = "select landingpage_templatefile_save(@LandingPageId, @TemplateFileName, @TemplateFileType, @TemplateFileConten)";
+            object? param = new { TemplateFile.LandingPageId, TemplateFile.TemplateFileName, TemplateFile.TemplateFileType, TemplateFile.TemplateFileContent };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int16>(storeProcCommand, param);
+        }
+
+        public async Task<bool> Update(LandingPageTemplateFile TemplateFile)
+        {
+            string storeProcCommand = "select landingpage_templatefile_update(@Id, @TemplateFileContent)";
+            object? param = new { TemplateFile.Id, TemplateFile.TemplateFileContent };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int16>(storeProcCommand, param) > 0;
+        }
+
+        public async Task<bool> Delete(int TemplateId)
+        {
+            string storeProcCommand = "select landingpage_templatefile_delete(@TemplateId)";
+            object? param = new { TemplateId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.ExecuteScalarAsync<Int16>(storeProcCommand, param) > 0;
+        }
+
+        public async Task<List<LandingPageTemplateFile>> GetTemplateFiles(LandingPageTemplateFile TemplateFile)
+        {
+            string storeProcCommand = "select *  from landingpage_templatefile_gettemplatefiles(@LandingPageId)";
+            object? param = new { TemplateFile.LandingPageId };
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<LandingPageTemplateFile>(storeProcCommand, param)).ToList();
+        }
+
+        public async Task<LandingPageTemplateFile> GetSingleFileType(LandingPageTemplateFile TemplateFile)
+        {
+            string storeProcCommand = "select *  from landingpage_templatefile_getsinglefiletype(@LandingPageId,@TemplateFileType)";
+            object? param = new { TemplateFile.LandingPageId, TemplateFile.TemplateFileType };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryFirstOrDefaultAsync<LandingPageTemplateFile>(storeProcCommand, param);
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}
+

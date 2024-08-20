@@ -1,15 +1,100 @@
-dert werden kann. Die Apostrophe werden in der Ausgabezeichenfolge nicht angezeigt.
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-Der Standardformatbezeichner "O" oder "o" (und die benutzerdefinierte Formatzeichenfolge "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") nutzt die drei Möglichkeiten von ISO 8601 zur Darstellung von Zeitzoneninformationen, um die Kind-Eigenschaft der DateTime-Werte beizubehalten:
+namespace P5GenralDL
+{
+    public class VisitorDetails : IDisposable
+    {
+        public string GcmRegId { get; set; }
+        public string BrowserName { get; set; }
+        public int ContactId { get; set; }
+        public string MachineId { get; set; }
+        public string TrackIp { get; set; }
+        public string SessionRefeer { get; set; }
+        public int AdsId { get; set; }
+        public int FormId { get; set; }
+        public int BrowserId { get; set; }
+        public int FormType { get; set; }
+        public int BannerId { get; set; }
+        public int FormVariantId { get; set; }
+        public string PageUrl { get; set; }
+        public string Referrer { get; set; }
+        public string Domain { get; set; }
+        public string RefferDomain { get; set; }
+        public string[] CaptureFormFilledIds { get; set; }
+        public string ExternalEmailIdIsThere { get; set; }
+        public string Country { get; set; }
+        public string StateName { get; set; }
+        public string City { get; set; }
+        public string SearchKeyword { get; set; }
+        public int IsAdSenseOrAdWord { get; set; }
+        public string EndpointUrl { get; set; }
+        public string tokenkey { get; set; }
+        public string authkey { get; set; }
 
-    Die Zeitzonenkomponente von Datums- und Uhrzeitwerten von DateTimeKind.Local ist die UTC-Abweichung (z. B. +01:00, -07:00). Alle DateTimeOffset-Werte werden ebenfalls in diesem Format dargestellt.
+        public string RedirectUrl { get; set; }
+        public string Name { get; set; }
+        public string EmailId { get; set; }
+        public string PhoneNumber { get; set; }
+        public int LeadType { get; set; }
 
-    Die Zeitzonenkomponente von Datums- und Uhrzeitwerten von DateTimeKind.Utc verwenden "Z" (entspricht der Abweichung 0), um UTC darzustellen.
+        public bool OnPageOrInPage { get; set; }
+        public string KookooSid { get; set; }
+        public DateTime? CreateDate { get; set; }
+        public string Session { get; set; }
+        public string PageParameters { get; set; }
 
-    Datums- und Uhrzeitwerte von DateTimeKind.Unspecified umfassen keine Zeitzoneninformationen.
+        public DateTime? Age { get; set; }
 
-Da der Standardformatbezeichner "O" oder "o" einem internationalen Standard entspricht, werden bei der Formatierung oder Analyse mit diesem Bezeichner immer die invariante Kultur und der gregorianische Kalender verwendet.
+        public class VisitorApiDetails
+        {
+            public string GcmProjectNo { get; set; }
+            public string GcmApiKey { get; set; }
+            public int TotalVisits { get; set; }
+            public int PresentVisit { get; set; }
+            public string VapidPrivateKey { get; set; }
+            public string VapidPublicKey { get; set; }
+        }
 
-Zeichenfolgen zur Übergabe an die Parse-, TryParse-, ParseExact- und TryParseExact-Methoden von DateTime und DateTimeOffset können mithilfe der Formatbezeichner "O" oder "o" analysiert werden, wenn sie in einem dieser Formate vorliegen. Im Fall von DateTime-Objekten sollte die aufgerufene Analyseüberladung außerdem einen styles-Parameter mit dem Wert "DateTimeStyles.RoundtripKind" enthalten. Beachten Sie, dass Sie nicht die gleichen Ergebnisse wie für "O" oder "o" erhalten, wenn Sie eine Analysemethode mit der benutzerdefinierten Formatzeichenfolge aufrufen, die dem Formatbezeichner "O" oder "o" entspricht. Dafür gibt es folgenden Grund: Analysemethoden, die eine Zeichenfolge mit benutzerdefiniertem Format verwenden, können die Zeichenfolgendarstellung von Datums- und Uhrzeitwerten nicht analysieren, denen die Zeitzonenkomponente fehlt oder die "Z" zur Angabe von UTC verwenden.Sekunde (1–2 Stellen)�Der benutzerdefinierte Formatbezeichner "s" repräsentiert die Sekunden als eine Zahl zwischen 0 und 59. Das Ergebnis steht für ganze Sekunden, die seit der letzten Minute vergangen sind. Ein einstelliger Sekundenwert wird ohne führende Null formatiert.
+        public class NotificationMessage
+        {
+            public string Title { get; set; }
+            public string Message { get; set; }
+            public string Image { get; set; }
+        }
 
-Bei Verwendung des Formatbezeichners "s" ohne weitere benutzerdefinierte Formatbezeichner wird er als Standardformatbezeichner "s" für Datum und Uhrzeit interpretiert.Sekunde (2 Stellen)�Der benutzerdefinierte Formatbezeichner "ss" (plus beliebig viele zusätzliche s-Bezeichner) repräsentiert die Sekunden als eine Zahl zwischen 00 und 59. Das Ergebnis steht für ganze Sekunden, die seit der letzten Minute vergangen sind. Ein einstelliger Sekundenwert wird mit einer führenden Null formatiert.Kurzes Datumsformat�Der Standardformatbezeichner "d" repräsentiert eine benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge, die durch die DateTimeFormatInfo.ShortDatePattern-Eigenschaft einer bestimmten Kultur definiert wird. Die von der ShortDatePattern-Eigenschaft der invarianten Kultur zurückgegebene benutzerdefinierte Formatzeichenfolge lautet beispielsweise "MM/dd/yyyy".Kurzes Uhrzeitformat�Der Standardformatbezeichner "t" repräsentiert eine benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge, die durch die aktuelle DateTimeFormatInfo.ShortTimePattern-Eigenschaft definiert ist. Die benutzerdefinierte Formatzeichenfolge für die invariante Kultur l
+        public class VapidList
+        {
+            public string EndpointUrl { get; set; }
+            public string tokenkey { get; set; }
+            public string authkey { get; set; }
+        }
+        #region Dispose Method
+
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    PageUrl = Referrer = Domain = RefferDomain = ExternalEmailIdIsThere = null;
+                    CaptureFormFilledIds = null;
+                    //dispose managed ressources
+                }
+            }
+            //dispose unmanaged ressources
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

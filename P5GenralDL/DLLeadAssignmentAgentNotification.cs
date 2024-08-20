@@ -1,1 +1,25 @@
-ÛfMb²Ç`€ÛXxS³~]4ÛQª<®8]‹ÚsØ›¦@VwÛMÛZœ¤TáÛRÛN’$VoÛ?Ûl†SñÙáÛmxBR»ÔÙÛmh´NÏÍ"ÛlYdH¢ÅÚÛiLÍ@î¼SÛfBÏ<	´ÃÛi;M6s­8Ûk54¼¨Ûk.Ò2‹£ÎÛf)œ-H&ÛR%z'š…Úâ$¤Ûm›:$’&gÛm¤Õ$’&/Ûm¬ª$’&YÛmµB$’&wÛmÉ6$’&ËÛmÙ$’'ÛmÚÔ$’(ÛiÛ0$’(ØÛ;ÛU$’+;ÚpÛb$’3”×ïÛk$’CÊÑÛl$•VŒ³­Ûm$«méÚÛm2­…©tÛm>)–îchÛkV¿œ`°Ûg„$°Q^ÛgªlšSÛbÕˆ”èY@Û]ÛVŒ™PÒÛeÛI‚ÊP*ÛIÛlwÏNFÛ2Ûml KTÚÄÛm`7EÖÕHÛmTÁA‚ĞîÛmKw;ÛÊ…ÛkC¥6Â€Û_<ç1ë»ìÛQ6Ğ2î·ƒÛ[.H0h³1Û^(%+¡®ˆÛ\%X&ªÈÛM$°Ûm£$’&ZÛm®$’&9Ûmµä$’&XÛmËÄ$’&aÛmØC$’&~ÛmÚô$’&½ÛiÛ8$’'ÛfÛ^$’(DÛ(Ûg$’)>ØwÛl$’-dÍÛm$’7ÓºÛm$œI˜ÕÛm$ÏaâwËÛm)&ypkÛm@'…8T|ÛmPÌˆÍS:Ûmˆ³‰9R¯Ûm¹·†ÑSnÛmÚ‚Q)ÛmÛ={OÛmÛWr¸MÛjÛlimH¾ÛMÛm_ŞD6ÚäÛmVô?ÙüÛmO:G×ÁÛlHN5ˆÓ«Û_B51kÏÔÛc<¦.ËùÛC6º0 È»Ûf-!->ÄÛC'-)hÁÏÛi%;%ÁÛ_$³Ûmª¨$’&JÛmµ_$’&6ÛmÉ$’&RÛmØê$’&MÛmÚÿ$’&OÛmÛP$’&ÛiÛ[$’'ÛEÛh$’'ŠØÀÛl$’'ŠÏ¯Ûm$’(ö»IÛm$“1§UÛm$¯?ÙˆuÛm$»V¤lÿÛm*dk£]xÛm8bsÓV,ÛmM·tÀSÛm“|uS¥Ûm½msäRÛmÖÿpL…ÛmÛTiüJæÛmÛ
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLeadAssignmentAgentNotification
+    {
+        public static IDLLeadAssignmentAgentNotification GetDLLeadAssignmentAgentNotification(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLeadAssignmentAgentNotificationSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLeadAssignmentAgentNotificationPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

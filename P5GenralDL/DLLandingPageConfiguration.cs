@@ -1,1 +1,25 @@
-É\ÉlÉ|ÉŒÉœÉ¬É¼ÉÌÉÜÉìÉüÊÊÊ,Ê<ÊLÊ\ÊlÊ|ÊŒÊœÊ¬Ê¼ÊÌÊÜÊìÊüËËË,Ë<ËLË\ËlË|ËŒËœË¬Ë¼ËÌËÜËìËüÌÌÌ,Ì<ÌLÌ\ÌlÌ|ÌŒÌœÌ¬Ì¼ÌÌÌÜÌìÌüÍÍÍ,Í<ÍLÍ\ÍlÍ|ÍŒÍœÍ¬Í¼ÍÌÍÜÍìÍüÎÎÎ,Î<ÎLÎ\ÎlÎ|ÎŒÎœÎ¬Î¼ÎÌÎÜÎìÎüÏÏÏ,Ï<ÏLÏ\ÏlÏ|ÏŒÏœÏ¬Ï¼ÏÌÏÜÏìÏüÐÐÐ,Ð<ÐLÐ\ÐlÐ|ÐŒÐœÐ¬Ð¼ÐÌÐÜÐìÐüÑÑÑ,Ñ<ÑLÑ\ÑlÑ|ÑŒÑœÑ¬Ñ¼ÑÌÑÜÑìÑüÒÒÒ,Ò<ÒLÒ\ÒlÒ|ÒŒÒœÒ¬Ò¼ÒÌÒÜÒìÒüÓÓÓ,Ó<ÓLÓ\ÓlÓ|ÓŒÓœÓ¬Ó¼ÓÌÓÜÓìÓüÔÔÔ,Ô<ÔLÔ\ÔlÔ|ÔŒÔœÔ¬Ô¼ÔÌÔÜÔìÔüÕÕÕ,Õ<ÕLÕ]ÕmÕ}ÕÕÕ­Õ½ÕÍÕÝÕíÕýÖÖÖ-Ö=ÖMÖ]ÖmÖ}ÖÖÖ­Ö½ÖÍÖÝÖíÖý×××-×=×M×]×m×}×××­×½×Í×Ý×í×ýØØØ-Ø=ØMØ]ØmØ}ØØØ­Ø½ØÍØÝØíØýÙÙÙ-Ù=ÙMÙ]ÙmÙ}ÙÙÙ­Ù½ÙÍÙÝÙíÙýÚÚÚ-Ú=ÚMÚ]ÚmÚ}ÚÚÚ­Ú½ÚÍÚÝÚíÚýÛÛÛ-Û=ÛMÛ]ÛmÛ}ÛÛÛ­Û½ÛÍÛÝÛíÛýÜÜÜ-Ü=ÜMÜ]ÜmÜ}ÜÜÜ­Ü½ÜÍÜÝÜíÜýÝÝÝ-Ý=ÝMÝ]ÝmÝ}ÝÝÝ­Ý½ÝÍÝÝÝíÝýÞÞÞ-Þ=ÞMÞ]ÞmÞ}ÞÞÞ­Þ½ÞÍÞÝÞíÞýßßß-ß=ßMß]ßmß}ßßß­ß½ßÍßÝßíßýààà-à=àMà]àmà}ààà­à½àÍàÝàíàýááá-á=áMá]ámá}ááá­á½áÍáÝáíáýâââ-â=âM
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLandingPageConfiguration
+    {
+        public static IDLLandingPageConfiguration GetDLLandingPageConfiguration(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLandingPageConfigurationSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLandingPageConfigurationPG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

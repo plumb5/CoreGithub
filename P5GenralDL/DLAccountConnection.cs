@@ -1,1 +1,25 @@
--h°CñVTO‘ñ6¥±ìv¥S˚§Ù≠“âÍ9ª“Ö.Ê–•›‘∫‘PcUÍËA≥Ù¢óE˙P&y/zcÑËë&4±≤)Õh¶vH™IviE+∂¥°ödívTœ‰îNt¢Y∫–≈˛ÌˇwÓ\fz5”ß^Üz§é:◊Ì“Éj“Sz—Kmí>T_+3GhEtX“Ñ&:¸§ÕÃ4IZòiìV¥“˜”ÜÍÌ“éÍô]“Åjªt°≠“çn÷‡RC5©ág›!=®ﬁÛÚßó3>q⁄5iAKËz.mh„jÂJX´I∫Q›˘-5‘BÎΩRGù´uÈAœ_ÌsÈC{€h>—◊§	MËêÊP‚Ï∫§-‘iE+kH“Ü6j]⁄—Nmìtpµ#ùËD´‘PcIÍ®”wKz–*ΩË•√ë>Ù±^’ñVkÿ“Ñ&¥H3öÈ0•’S2§’Ã>mhˇÎ€öt¢ìæü.t±Ü)›Ë¶Ôí™ôô‘—Ûß˜H/zÈÈC2áOEËí&4°EZ–B_ì÷P¬⁄Å6¥±≤'ÌË@ßt°5ÈF73€RC5á)=®ûíO/zYYF{k⁄€ñf4sﬂä¥†Ö;d“äVV÷•mtH“éÍm…“âNÙ'›Ë¶√êj\ÌIuVñ§=Ï≠J/z—+}Ëc:ç√Ω"˙6iBö•ÕÙ˝IZË[§≠tx“Ü6‘•’;T•ÃaI':Èì.Tü’]j®Q;§’€R§}hGsö√ßÕ\≠IZòŒß’wÄU:–¡é“âjoW∫–EmFg)Œ∫ˇˆﬂÉæúW	kﬂÙ8m'n:z—ã~µ}˙MÑ3(a√é4áÁ∂'-h•√íˆP¬ÜÈ@kò“âNj≥t°ã´]©°∆’ä‘Qß√îÙ∞ã+ΩË•oñ>TsòËéD†&MhbEö—Ã’¶¥†Ö⁄-≠hE≥¥°ç]$iG;Î
+Ôªøusing IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAccountConnection
+    {
+        public static IDLAccountConnection GetDLAccountConnection(string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLAccountConnectionSQL();
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLAccountConnectionPG();
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}

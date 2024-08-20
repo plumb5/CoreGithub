@@ -1,11 +1,57 @@
-…VjÉAoÀYh/Mg(;Şc	½ ŒİC&òœïÛíÓ,Da¶Ğ*±Å#[Û yÕÂJ"~Ğ>ÍÂ˜°„Pn
-umj¶µ0'_?YÜ¢®´(½n1í«³°ì´åuqë)´f!ú²iV´½|„VÙ,.E×±îTX8c<B)Ñ¾ñŠ'õ†›…ør¦9ÍÂZäZ¥°x>yÓÊ2«Eßç³°‹eÚeYÈáz@Y}õH¡“‹Ò>:íAÙrsamJmæ<§Ë¦ÙËB¾¡ÚeYØ=¤hF²x_ÓmG3’Åşí§iF²xİ²vÚªiS
-½µmqÚn}ç
-%šİ#Ì¹A™{Ş9T/´¸lï§PfwÚj;÷€î›ÚAZˆ¥µƒ´p~º†–,ÄÓR5ÛZ¨·<Móª…´ÔüSû;3İú„Ò7÷[hå`qKOE-œ.wå3«ƒgèMŒêZŞ±“BOèI›CËgúfJ¡ÙV‚ÏÚí-¬›V½Y\óÇz@‰;]·Ğzš…xÀªÙÖÂÍ„WèÍ&ŞÑnÒÂ,²éìÇÂâ‚êM2³SÓòº…èC¦9ØBÏJ¾ÚõYØ?ï¡åu\BË¿ïè>¤Åão?Mó¦ÅóÅïh†´Ğ[âÍ…×Åš:Ö,bqÚš®PzVç0‘CâzVw,¬ß¶ĞêÇúĞZ~°p†Û9”,D÷ÿjİòœşUZgZ²â~"ß©mÅı,¬‡ĞÊs¯N[ş·¸v¾ºih¡¥”Ú9Y¸–|uïÎÂŞ6ùjdñH±ŞCË',¡:'²pz7†ÎĞôóÔ¶byæö¤İ±77ìºiïeqmƒâ~û¡Û÷>Có´”Xó”Åşíö­ÙÀÂl»‡¾ isè%NÖ^×HlqÛêRètßÂ^<T£«Å9ôˆ©ˆ…:¦Ş^1-Œğchµcî:A'×ĞŞiË#[Òjd³ˆöù“ßôµˆöäwY-DßÉ×o­ZX¡å3‹ë­Ÿ¦1ÁB;KÙ´Â¶°b}„VÙ,œ5-,Œ@yšÖ¼î¡Œ¡ä@Ì§Ş—=¡¹ÑzAõÆ—…Vr‡ªG[ˆj$_õM«¤!”R°ìÈÊK=ÖBÇEa,§®¦47šV{°`Yü 5¤…½Êº@³Óè´äÀÊ’Ûñúc•ÍÂ¸¿‡PnÛåi~kÕâ´YCúıTía
-­§Y¨·xG£†…Ó¹ÎzÔhZ5dá_Z‰b(¼³…NPN—Ï”M«E=`
-]¡Ü“¸:mÙ`amz†^Pn{t]hh¡¿m¡OhîÌPEÁ-¬B_¡U63Şñ{—æ´¦4§ÀTïPX×_¡?d/î÷#-¶!5?êTÕBDì
-­|-ÌøÉAQeñ€ªş&a\ßC5[ğdòÕéœ…vv@µ;³°nÉÓÔ[,Œ“Tû‹÷*m¯ÚÅu±&_µ‹-ë´úr•…ó²{hå`}Û ½Š„È`ûW»¥8¡ºW`ñ>¡½£vf¡æ›nĞÜ¯ßCË^ä«›cæÂøA+wsKJ¬“÷r;í
-eí”v6i5nany…>¡xç˜ÿ«uËt›ùW‰£­Ékƒfõ{= ¹U»CukÀÂl{†–è:BË¯{hÙ`a¤Hy´ª¶°Z¿ º;eaÆ†–e·Ù¦:a±°Æy„nPvdWÊö$í3iãi­s-œÍ¡4Ñ÷N[ueáÏZ–Y˜½¶Ğj/Æçxò…}çx½C9ìÚÖ9†Å–Shµmë¡ŒKí­ª-ìOn¡e™…•DêM‹gænÓšİñºCs7-ŞÑû9zSìÕ‰……§í¡UC¢\)…¢0’¬B“ƒb(ï½%´f±eï´4m2-j‡î‰î4¥;ªŸ|µ
-µpú<‡–½¯³Şô„z…Òwÿ&ÍHFÁÔ…F
-IÖóñÃeÿî-WÕ±…»ú·Ğ	ÊjñJ;Ó¨bávæºB‰ã¼óİ¡‰ÛŞYç½F‚=´ük¡Şî¡Õ,n%[ÓJë‹wf;âËM(o¨mı´²×âÊ}ÖıN‹×Nm™¢Ùnö¦:Ùµ°œB'¨ë˜/”èõ4}ó­z³pr¾A5ÂX¸s5‡Ş¡±a-,DßS
-­°-öd{]§µVÂ±W#Œ…[‡ÏĞê],o1ëe¯Åşm4–
+ï»¿using Dapper;
+using DBInteraction;
+using IP5GenralDL;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLAdminUserDetailsPG : CommonDataBaseInteraction, IDLAdminUserDetails
+    {
+        CommonInfo connection;
+        public DLAdminUserDetailsPG()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<IEnumerable<MLAdminUserInfo>> GetAllUser(string UserIdList=null)
+        {
+            string storeProcCommand = "select * from admin_userdetails_getalluser(@UserIdList)";
+            object? param = new { UserIdList };
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryAsync<MLAdminUserInfo>(storeProcCommand, param);
+        }
+
+        public async Task<IEnumerable<MLAdminUserInfo>> SelectAllUsers()
+        {
+            string storeProcCommand = "select * from admin_userdetails_selectallusers()";
+
+            using var db = GetDbConnection(connection.Connection);
+            return await db.QueryAsync<MLAdminUserInfo>(storeProcCommand);
+        }
+        #region Dispose Method
+        bool disposed;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    connection = null;
+                }
+            }
+            disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        #endregion End of Dispose Method
+    }
+}

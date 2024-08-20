@@ -1,14 +1,49 @@
-v,° ğ€	êÜ~
-ÛØ¾…¹@›èÙ5Ö8Â¾*±ƒ{œÀ^ØÅê-!ÊÅ³®SØ`€qŸ˜Xbœ{/Pç&Üzcµz±ƒöb±ƒš7Ñfû`œ{oPç&";:·‚ÂMx#­sÙ^k°À‚ÅL0oác£éZ`¥B{LM¾{cƒ‹ÔeÖ5˜.‹ğX†½±‹ü
-Úù±ÆÄ*AMŒğñµd
--6Ì°;0wÌ1ç0îâÄ40âL@šá+Œ»¯Õ‘vÓİ½,°/Æß€m Z&,baê˜°*nOŸ+Oôò…f2;˜:&bÙÂË[·1uGXì…ÖĞÁç.nLOd½°7‹Ôˆ¨X˜Æ@x¬i
-„¯yŒ)|Œ2ëƒ~ÇàX`qÍ°Ähy0µL˜ù¿üö§XUã€-¼‘ÛÓ ˆôı˜E¸÷`¾{cü	™jPD/OŒA}B ¯¿'Ò|°À‚ÂL{oLS!ìÄ`…Õİ9°Æš68àcaê™‹ÄÔ³‚Åªi"j6öÁ¾PM±,0Şƒ8vQ„OøÁãíØXbym°m˜`¢±ÆZld^ØÁÜ AøZ½e
-->Øûc1OÔGå±c†Ù=Ícéîk­ªgÂ¼ÛØPè ÎMØš½°7…êŒD¯ì‹ı(ğŸ.¦¬ôEJÈ
-S/„Å,L½§²°Àâ®5,±¼Û7¸oac…
-TD¯\˜®…è}0ZL-Ó+±öÇ&û¢Ñ²Ñòc†%…nğ;+¬n¡Ø ¯âÁY:v°s-1µ¬àªgÅ-ÜØûR $Ní…éš‰èÃ}Ézà`ê™è	Ãó[×X`ÁÆLá/lcÌË0Í‹ˆÌÄ4.b¢lØ¤@Í‹°8i^„™%¦q±g0KÁÔ;BôÚûa²:–P¡BÃó[0naaš‘YmlßºÇ
-kè A„[b{Qø š&NmÃÔ4Ñ+SÏ
-?¨¦‰^{c2…ŒÓ¤æ åÁ3Ø oŒ‡c1›ÄÛ,°ÀV+ù/ÿí•Ã*^™\àÏ}ÔÁ^Ø›B5*âä@_ˆ·£1µƒµqq'˜·ğ`Û>X`©°kŒ[ßpî±;Ø›Bul¢W-LçVP˜àspnx0İ0ÑıXqÃe,Ş oL¯ÂBv#W–XŞc?¦A31XaÅ&6È­ol°¡pÀîÄt§
+ï»¿using Dapper;
+using DBInteraction;
+using P5GenralML;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-ø*4Ç40bª7öÅø[Ó1Í†èU´Òš1½3ÙÙy0Çü>ocqÍµÀÕŞTb£“Ú :!,s0uBô±ÀÔ	qNBºx…¨ zcÆ?:4‘¹o{?˜`Ş³llc›BKxÃİÓ%¾lcšQg7v0¦Ğj
-„õìƒ})LP=uö`4}…Lâ˜ğÆÉ†rê0î–ØÓóƒê™ˆÎÀã%Õ Q§¦—˜è¶Æèù,æ‰¯ó.6lcâ8¨A±Ì0ñ¾ƒ°êcõ‰Ü³0M‚h3Ç˜`ŞÂÇ6Ö&8Â§ê±ƒ
-Ô$ˆ™=ØûQø š!|û¬k»…æ š!Òg°À’Âup"w-¬d7üÌ
+namespace P5GenralDL
+{
+    public class DLBlackListPasswordPG : CommonDataBaseInteraction, IDLBlackListPassword
+    {
+        CommonInfo connection;
+        public DLBlackListPasswordPG()
+        {
+            connection = GetDBConnection();
+        }
+        public async Task<List<BlackListPassword>>  GetBlackListNameExists()
+        {
+            string storeProcCommand = "select * from blacklistpassowrd_info_getblacklistnames()";
+
+            using var db = GetDbConnection(connection.Connection);
+            return (await db.QueryAsync<BlackListPassword>(storeProcCommand)).ToList();
+
+        }
+
+        #region Dispose Method
+        private bool _disposed = false;
+        protected void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                _disposed = true;
+                if (disposing)
+                {
+
+                }
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion End of Dispose Method
+    }
+}

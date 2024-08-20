@@ -1,1 +1,25 @@
-ITIdItI„I”I¤I´IÄIÔIäIôJJJ$J4JDJTJdJtJ„J”J¤J´JÄJÔJäJôKKK$K4KDKTKdKtK„K”K¤K´KÄKÔKäKôLLL$L4LDLTLdLtL„L”L¤L´LÄLÕLåLõMMM%M5MEMUMeMuM…M•M¥MµMÅMÕMåMõNNN%N5NENUNeNuN…N•N¥NµNÅNÕNåNõOOO%O5OEOUOeOuO…O•O¥OµOÅOÕOåOõPPP%P5PEPUPePuP…P•P¥PµPÅPÕPåPõQQQ%Q5QEQUQeQuQ…Q•Q¥QµQÅQÕQåQõRRR%R5RERUReRuR…R•R¥RµRÅRÕRåRõSSS%S5SESUSeSuS…S•S¥SµSÅSÕSåSõTTT%T5TETUTeTuT…T•T¥TµTÅTÕTåTõUUU%U5UEUUUeUuU…U•U¥UµUÅUÕUåUõVVV%V5VEVUVeVuV…V•V¥VµVÅVÕVåVõWWW%W5WEWUWeWuW…W•W¥WµWÅWÕWåWõXXX%X5XEXUXeXuX…X•X¥XµXÅXÕXåXõYYY%Y5YEYUYeYuY…Y•Y¥YµYÅYÕYåYõZZZ%Z5ZEZUZeZuZ…Z•Z¥ZµZÅZÕZåZõ[[[%[5[E[U[e[u[…[•[¥[µ[Å[Õ[å[õ\\\%\5\E\U\e\u\…\•\¥\µ\Å\Õ\å\õ]]]%]5]E]U]e]u]…]•]¥]µ]Å]Õ]æ]ö^^^&^6^F^V^f^v^†^–^¦^¶^Æ^Ö^æ^ö___&_6_F_V_f_v_†_–_¦_¶_Æ_Ö_æ_ö```&`6`
+ï»¿using IP5GenralDL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5GenralDL
+{
+    public class DLLandingPage
+    {
+        public static IDLLandingPage GetDLLandingPage(int AccountId, string vendor)
+        {
+            if (vendor.Equals("mssql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLandingPageSQL(AccountId);
+            }
+            else if (vendor.Equals("npgsql", StringComparison.OrdinalIgnoreCase))
+            {
+                return new DLLandingPagePG(AccountId);
+            }
+            throw new ArgumentException("Unknown sql vendor: " + vendor);
+        }
+    }
+}
