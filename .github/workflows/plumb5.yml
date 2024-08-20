@@ -22,6 +22,6 @@ jobs:
         dotnet-version: '8.0.x'
       
     - name: Build solution
-      run: dotnet build -c Release --verbosity minimal /home/runner/work/CoreGithub/CoreGithub/P5GenralML/P5GenralDL.csproj
+      run: dotnet build -c Release --verbosity minimal /home/runner/work/CoreGithub/CoreGithub/P5GenralDL/P5GenralDL.csproj
       
    
