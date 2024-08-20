@@ -7,18 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreGithub", "CoreGithub\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin", "Admin\Admin.csproj", "{755887F3-368C-4109-8BE8-4DF4CAABA3DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5", "Plumb5\Plumb5.csproj", "{48E7877D-703D-4350-AFF1-C341E3D7A7B5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5GenralFunction", "Plumb5GenralFunction\Plumb5GenralFunction.csproj", "{BC9A39E7-12D2-4529-B4E9-3DBA13EE48C5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P5GenralDL", "P5GenralDL\P5GenralDL.csproj", "{86781673-D076-46CF-A28B-1EEF4B0CF76C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DBInteraction", "DBInteraction\DBInteraction.csproj", "{3773CCC5-69BE-4EB5-9BF8-7BEA49EB3269}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IP5GenralDL", "IP5GenralDL\IP5GenralDL.csproj", "{84BDC29F-86A8-4123-8DF9-19ABB573A3B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P5GenralML", "P5GenralML\P5GenralML.csproj", "{614AF33D-4003-484D-A4E6-DF894B0AF3A7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
