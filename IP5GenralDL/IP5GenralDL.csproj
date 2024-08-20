@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DBInteraction\DBInteraction.csproj" />
-    <ProjectReference Include="..\P5GenralML\P5GenralML.csproj" />
+    <ProjectReference Include="..\P5GenralML\P5GenralML.csproj" ServiceNameOverride="ApiProj"/>
   </ItemGroup>
 
 </Project>
