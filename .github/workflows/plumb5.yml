@@ -31,4 +31,27 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release --no-build --no-restore /home/runner/work/CoreGithub/CoreGithub/Plumb5/Plumb5.csproj
 
-   
+   - name: Stop AppPool
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
+       
+    - name: Upload Files
+      id: upload
+      uses: Creepios/sftp-action@v1.0.3
+      with:
+        host: ${{ secrets.FTP_HOST }}
+        port: 22
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/publish/*.dll'
+        remotePath: './'
+
+    - name: Start AppPool
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?actiontype=start&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
