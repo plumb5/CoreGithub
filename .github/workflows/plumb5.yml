@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+      
+  schedule: ## Schedule the job to run at 12.am daily.
+    - cron: '32 19 * * *'
 jobs:
   upload_files:
     runs-on: ubuntu-latest      
