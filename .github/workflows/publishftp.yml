@@ -32,5 +32,6 @@ jobs:
         port: 22
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/publish/appsettings.json'
+        localPath: '/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/'
         remotePath: './deploy-test'
+        additionalPaths:'{"/home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/appsettings.json":"./deploy-test/appsettings.json"}'
