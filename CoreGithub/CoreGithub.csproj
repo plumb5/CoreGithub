@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\P5GenralML\P5GenralML.csproj" />
+  </ItemGroup>
+
 </Project>

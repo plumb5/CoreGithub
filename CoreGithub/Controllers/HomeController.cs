@@ -1,6 +1,7 @@
 using CoreGithub.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using P5GenralML;
 
 namespace CoreGithub.Controllers
 {
@@ -16,6 +17,7 @@ namespace CoreGithub.Controllers
 
         public IActionResult Index()
         {
+            Account ac=new Account();
             return View();
         }
 
