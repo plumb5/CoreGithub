@@ -10,7 +10,7 @@ jobs:
   upload_files:
     runs-on: ubuntu-latest      
    
-    if : ${{ github.event.commits[0].message == 'plumb5' }}
+    #if : ${{ github.event.commits[0].message == 'plumb5' }}
     name: Upload a builded file.
     steps:  
     - name: Logging
