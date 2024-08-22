@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Plumb5GenralFunction
 {
+
     public class CommonFunction
     {
         public DataSet Decode(DataSet data)
