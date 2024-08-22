@@ -4,6 +4,7 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>disable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,6 +16,7 @@
 		<EmbeddedResource Remove="Areas\ManageUsers\Data\**" />
 		<None Remove="Areas\Mail\Data\**" />
 		<None Remove="Areas\ManageUsers\Data\**" />
+    <Content Remove="wwwroot\**" />
 	</ItemGroup>
 
 	<ItemGroup>
