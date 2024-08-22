@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IP5GenralDL", "IP5GenralDL\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5GenralFunction", "Plumb5GenralFunction\Plumb5GenralFunction.csproj", "{2CD0F8DF-C3A6-4E59-BED5-F7CDD4911181}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5", "Plumb5\Plumb5.csproj", "{F930E582-807B-4D14-8961-629C4CCCD4FF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
