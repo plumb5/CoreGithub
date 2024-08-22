@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Browser Notificaion Templates";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+
+}
+
+<link href="/Content/select2/css/select2.min.css" rel="stylesheet" />
+<script src="/Content/select2/js/select2.full.min.js"></script>
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Browser Notification Templates</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Browser Notification</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Browser Notification Templates</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem">
+                <a class="tap-nav-link active" href="javascript:void(0)"><i class="fa fa-check-square-o font-16 pr-2"></i>Active</a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/WebPush/TemplateArchive"><i class="fa fa-archive font-16 pr-2"></i>Archive</a>
+            </div>
+        </div>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap pl-2 pr-2">
+            <div class="actionWrap">
+                <div class="createBtnWrap">
+                    <button type="button" class="btn btn-primary btn-sm smstemplate"><a class="DesignPermission" onclick="CreateEditTemplate(0)" href="javascript:void(0)">Create Template</a></button>
+                </div>
+            </div>
+            <div class="searchWrap">
+                <div class="searchInput w-250">
+                    <input class="form-control form-control-sm contsearchfocus" type="text" name="" placeholder="Search Campaigns or Templates" id="ui_txtSearchTemplate">
+                    <div class="searchIcon">
+                        <i class="icon ion-android-search"></i>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Export"); }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white border-top-0 position-relative">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table id="ui_tblReportData" class="table tbl-td-ta-lft">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-80 td-wid-5 text-center">Preview</th>
+                                    <th scope="col" class="helpIcon m-p-w-190 td-wid-35">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Template Name <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th scope="col" class="helpIcon m-p-w-190 td-wid-40">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Campaign Name <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150 td-wid-20" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Created Date<i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Paging"); }
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="modal fade bd-example-modal-sm" id="deleterow" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Archive this Row?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to archive this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Archive</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm show" id="tempexistmod" tabindex="-1" role="dialog" wfd-invisible="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Template already exists</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>A template with the same name already exists in the archive. Do you want to restore it ?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:void(0)" id="archiverestore" type="button" class="btn btn-primary">Yes</a>
+                <a href="javascript:void(0)" id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">No</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bnotiftempwrp hideDiv" id="TemplatePreview">
+    <div class="notifprevmain">
+        <div class="notifbanwrp"></div>
+        <div class="notiprevcontent">
+            <div class="notiprevcontwrp">
+                <div class="notifbelcont">
+                    <div class="notificonwrp"></div>
+                    <div class="notifititcontwrp">
+                        <h3 class="notiftitle">Title</h3>
+                        <p class="notifdescript">Message</p>
+                    </div>
+                </div>
+                <div class="notifbtnwrp mt-2">
+                    <button id="notifsubbtn" type="button" class="btn btn-notifprimary w-49 mr-1">
+                        <a class="bnotbtn1" href="#">Take a Look</a>
+                    </button>
+                    <button id="notifcanbtn" type="button" class="btn btn-notisecondary w-49">
+                        <a class="bnotbtn2"
+                           href="#">Cancel</a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@{ Html.RenderPartial("_CreateWebPushTemplate"); }
+@{ Html.RenderPartial("_CreateBrowserNotificationTestCampaign"); }
+<script src="~/js/UserCustomEventsAttributes.js"></script>
+<script src="~/js/WebPush/Template.js"></script>

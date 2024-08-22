@@ -1,0 +1,348 @@
+﻿@{
+    ViewBag.Title = "SMS Campaigns Responses";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Campaigns Responses</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Mail</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Reports</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Campaigns Responses</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0);">Scheduled Campaigns</a></div>
+        </div>
+        @{
+            Html.RenderPartial("_Export");
+        }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap border-bottom">
+                <div class="showingWrap pt-2 pb-2">
+                    @{
+                        Html.RenderPartial("_PageHeadingWithDate");
+                    }
+                </div>
+                <div class="iconsWrap-docu">
+                    <div class="emailtempdropdown w-200 mr-2 m-w-150px">
+                        <select class="form-control addCampName" data-placeholder="" id="ui_dlltemplateCampaign">
+                            <option value="0">Filter by Templates</option>
+                        </select>
+                    </div>
+                    <div class="emailtempdropdown w-200 mr-2 m-w-150px">
+                        <select class="form-control addCampName" data-placeholder="" id="ui_ddCampaignnames">
+                            <option value="0">Filter by Campaigns</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="subdivWrap border-top-0">
+                <div class="selectedItemWrap">
+                    <div class="checkBxCount">
+                        <span class="checkedCount">1</span> Campaigns selected
+                    </div>
+                    <div class="addgrupcampresp ml-3">
+                        <button class="btn btn-third btn-sm addremcampres ContributePermission" type="button"><i class="icon ion-android-people"></i> <span>Add/Remove Group</span></button>
+                        <button title="Download Report" class="btn btn-primary btn-sm downldreprt" type="button" data-toggle="modal" data-target=".bd-example-modal-sm">
+                            <i class="icon ion-ios-cloud-download"></i> <span>Download Report</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="scheduledresponses">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+                            <div class="tableWrapper">
+                                <div class="table-responsive campaignresponse">
+                                    <table id="ui_tableReport" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input selchbxall" id="contacts_check" name="example1">
+                                                        <label class="custom-control-label" for="contacts_check"></label>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="helpIcon m-p-w-250 td-wid-15">
+                                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                    Campaign Identifier
+                                                </th>
+                                                <th class="helpIcon m-p-w-250 td-wid-15" scope="col">
+                                                    <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                    Campaign Name
+                                                </th>
+                                                <th class="helpIcon m-p-w-160 td-wid-7" scope="col">
+                                                    Sent
+                                                </th>
+                                                <th class="helpIcon m-p-w-140  td-wid-7" scope="col">
+                                                    Delivered
+                                                </th>
+                                                <th class="helpIcon m-p-w-140  td-wid-7" scope="col">
+                                                    Pending
+                                                </th>
+                                                <th class="helpIcon m-p-w-140  td-wid-7" scope="col">
+                                                    Clicked
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-7" scope="col">
+                                                    URL's
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-7" scope="col">
+                                                    Unique Clicks
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-7" scope="col">
+                                                    Optout
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-7" scope="col">
+                                                    Bounce
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-7" scope="col">
+                                                    Error
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trbodyReportData">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @{
+                                Html.RenderPartial("_Paging");
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Remove Group</h6>
+            <div>
+                <i title="Export" class="font-20 icon ion-close ion-ios-download-outline" id="ui_exportDownloadsmsdetails"></i>
+                &nbsp;&nbsp;&nbsp;
+                <i id="close-popup" class="icon ion-close"></i>
+            </div>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="remvgrupcont" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap">
+                        <div class="form-group row">
+                            <label class="frmlbltxt col-sm-4">Action</label>
+                            <div class="spamscoreradi col-sm-8">
+                                <div class="filetypewrap">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_rad_AddGroup" name="addremovetype" class="custom-control-input" value="create">
+                                        <label class="custom-control-label" for="ui_rad_AddGroup">Create</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_rad_Add" name="addremovetype" class="custom-control-input" checked="checked">
+                                        <label class="custom-control-label" for="ui_rad_Add">Add</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="ui_rad_Remove" name="addremovetype" class="custom-control-input">
+                                        <label class="custom-control-label" for="ui_rad_Remove">Remove</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creatcampfildwrp hideDiv">
+                            <h6 class="box-title pl-0 pb-3">Create New Group</h6>
+                            <div class="form-group">
+                                <label class="frmlbltxt">Group Name</label>
+                                <input type="text" class="form-control" name="" id="ui_GroupName" maxlength="200">
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt">Group Description</label>
+                                <input type="text" class="form-control" name="" id="ui_GroupNameDescription" maxlength="200">
+                            </div>
+                            <div class="btnwrp mb-4">
+                                <button id="campcreategroup" type="button" class="btn btn-third">Create</button>
+                                <button class="btn btn-secondary clscreategrp" type="button">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt">Select Group</label>
+                            <div class="emailtempdropdown">
+                                <select class="form-control addCampName" data-placeholder="Select Group(s)" id="ui_ddlGroup">
+                                    <option value="0">Select Group</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chbxcampreswrp mt-4">
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="opencampres" name="Campaign" value="1">
+                                <label class="custom-control-label" for="opencampres">Delivered</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="clickcampres" name="Campaign" value="2">
+                                <label class="custom-control-label" for="clickcampres">Click</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="optoutcampres" name="Campaign" value="3">
+                                <label class="custom-control-label" for="optoutcampres">Bounced</label>
+                            </div>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" class="custom-control-input" id="bouncecampres" name="Campaign" value="4">
+                                <label class="custom-control-label" for="bouncecampres">Errors</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Sent" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="tblSmsResponses">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-30 m-p-w-170" scope="col">Phone Number</th>
+                                        <th class="helpIcon td-wid-30 m-p-w-120" scope="col">Response ID &nbsp;<i class="icon ion-ios-help-outline"></i><div class="toottipWrap"></div></th>
+                                        <th class="td-wid-40 m-p-w-120" scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trSentdata">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="Error" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="tblSmsResponses1">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-20 m-p-w-170" scope="col">Phone Number</th>
+                                        <th class="helpIcon td-wid-20 m-p-w-120" scope="col">Response ID&nbsp;<i class="icon ion-ios-help-outline"></i><div class="toottipWrap"></div></th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Reason</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trBounced">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="SmsEffectivenessURL" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-40 m-p-w-170" scope="col">URL</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Total Click</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Total Unique-Click</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trSmsEffectivenessUrl">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="SmsUniqueClick" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-30 m-p-w-170" scope="col">Phone Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trSmsEffectivenessContact">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="SmsTotalClick" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table" id="tblSmsTotalclick">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-20 m-p-w-170" scope="col">Phone Number</th>
+                                        <th class="helpIcon td-wid-20 m-p-w-120" scope="col">Response ID&nbsp;<i class="icon ion-ios-help-outline"></i><div class="toottipWrap"></div></th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Url Link</th>
+                                        <th class="td-wid-30 m-p-w-120" scope="col">Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_trTotalclick">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            @* Pagging pop up bottom *@
+            <div class="pagiWrap p-0 w-100" id="ui_Paggingdiv">
+                <p class="text-color-error font-11 w-100 mb-2">Response details are delayed by 5 mins</p>
+                <div class="paginItem">
+                    <div class="showrowWrap mr-3">
+                        <label class="rowTxt">Show rows: </label>
+                        <select class="rowdropdown" name="" id="">
+                            <option value="">10</option>
+                        </select>
+                    </div>
+                    <div class="pagiarrow">
+                        <div class="pagicount">
+                            <label class="rowTxt pl-2" id="ui_Paging"></label>
+                        </div>
+                        <div class="arrowWrap">
+                            <div class="arrleft disableDiv" id="ui_BackpopPaging">
+                                <i class="icon ion-chevron-left"></i>
+                            </div>
+                            <div class="arrleft" id="ui_NextPopPaging">
+                                <i class="icon ion-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @* Add to group pop up bottom *@
+            <div class="btnwrp hideDiv" id="ui_Groupsdiv">
+                <button id="ui_btnAddOrRemove" class="btn btn-primary mr-2" type="button">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("_InnerPaging");
+        }
+    </div>
+</div>
+<!--Popover html-->
+<!--Popover html-->
+
+@{
+    Html.RenderPartial("_ExportInnerPageData");
+}
+
+<div class="camptypwrap hideDiv">
+    <p><strong>Campaign Type:</strong> <span id="ui_popoverDataCampaign">NA</span></p>
+    <p><strong>Sent To:</strong> <span id="ui_popoverDataSentTo">NA</span></p>
+    <p><strong>Unicode Message:</strong> <span id="ui_popoverDataIsUnicodeMessage">NA</span></p>
+    <p><strong>Stopped Reason:</strong> <span id="ui_popoverDataStoppedReason">NA</span></p>
+    <p><strong>SSP Name:</strong> <span id="lblConfigurationName"></span></p>
+</div>
+<script src="~/js/Sms/SmsReport.js"></script>
+<script src="~/js/Sms/SmsPopOverReport.js"></script>
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>

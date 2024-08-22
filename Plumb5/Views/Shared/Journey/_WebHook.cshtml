@@ -1,0 +1,120 @@
+﻿<div id="dvcustompopupwebhook" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Web Hook</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody p-3">
+            <div class="wrkflwwebhookwrp">
+                <div class="form-group">
+                    <label class="frmlbltxt" for="">Request URL</label>
+                    <input type="text" name="" class="form-control" id="ui_txtRequestUrl">
+                </div>
+                <div class="form-group">
+                    <label class="frmlbltxt" for="">Method</label>
+                    <select name="" class="form-control" id="ui_ddl_MethodType">
+                        <option value="select">Select Method</option>
+                        <option value="Post">Post</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="frmlbltxt" for="">Content Type</label>
+                    <select name="" class="form-control" id="ui_ddl_ContentType">
+                        <option value="select">Select Content Type</option>
+                        <option value="Form">Form</option>
+                        <option value="Raw Body">Raw Body</option>
+                    </select>
+                </div>
+                <div id="rawbodytxtinpt" class="form-group hideDiv">
+                    <label class="frmlbltxt" for="">Body</label>
+                    <textarea name="" id="ui_txtRequestBody" class="form-control" cols="3" rows="3"></textarea>
+                    <small class="form-text text-muted">
+                        Data to be sent with the request. You may need to add a
+                        'Content-Type' header such as 'application/xml' or 'text/plain'.
+                    </small>
+                </div>
+                <div id="formtxtinput" class="form-group hideDiv">
+                    <label class="frmlbltxt w-100" for="">Data</label>
+                    <div class="adddatafildwrp">
+
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-action adddatafild" id="btndatadetails">
+                            <i class="fa fa-plus"></i>
+                            Add
+                        </button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu drpdowndatafield">
+                            <a class="dropdown-item adddatafild" href="javascript:void(0)">Add Plumb5 Field</a>
+                            <a class="dropdown-item adddatacustfild" href="javascript:void(0)">Add Custom Field</a>
+                        </div>
+                    </div>
+                    <small class="text-muted d-block pt-2">
+                        Data to be sent with the request in key/value
+                        pairs.
+                    </small>
+                </div>
+
+                <div class="form-group">
+
+                    <label class="frmlbltxt w-100" for="">Headers</label>
+
+                    <div class="addheaderfildwrp">
+
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-action addheaderfild">
+                            <i class="fa fa-plus"></i>
+                            Add
+                        </button>
+                    </div>
+
+
+                    @*<div id="trheader0">
+                <div class="datawrkflwinpt mb-3">
+                    <div class="datainptitemwrp w-45 mr-2">
+                        <input type="text" name="" class="form-control" id="txtheaderKey_0">
+                    </div>
+                    <div class="datainptitemwrp w-45">
+                        <input type="text" name="" class="form-control" id="txtheaderValue_0">
+                    </div>
+                    <i class="icon ion-ios-close-outline clsedatawrkflw"></i>
+                </div>
+                <button type="button" class="btn btn-action addheaderfild">
+                    <i class="fa fa-plus"></i>
+                    Add
+                </button>
+            </div>*@
+                    <small class="text-muted d-block pt-2">
+                        Headers to be sent with the request in key/value
+                        pairs.
+                    </small>
+                </div>
+                <div class="basicautenwrp">
+                    <label class="frmlbltxt w-100" for="">Basic Authentication</label>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <input type="text" name="" class="form-control" id="ui_txt_BasicAuthenticationKey">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <input type="text" name="" class="form-control" id="ui_txt_BasicAuthenticationValue">
+                        </div>
+                    </div>
+                    <small class="text-muted d-block pt-2">
+                        Basic Authentication username and password. if
+                        needed.
+                    </small>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <a href="javascript:void(0)" class="btn btn-primary mr-2" id="btnsavewebhookdetails">Save</a>
+                <a href="javascript:void(0)" class="btn btn-secondary clsepopup" id="btnclosewebhookdetails">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>

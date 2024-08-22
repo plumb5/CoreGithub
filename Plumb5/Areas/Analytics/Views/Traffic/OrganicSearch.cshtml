@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Organic Search";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Organic Search</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Web</a></li>
+            <li class="breadcrumb-item"><a href="#">Traffic Sources</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Organic Search</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{ Html.RenderPartial("_PageHeadingWithDate"); }
+            </div>
+            @{ Html.RenderPartial("_Export"); }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white border-top-0 position-relative">
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-190">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Sources <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Sessions <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-160" scope="col">
+                                        <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Avg.time on site <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        Page Visited <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        Search Keys <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap"></div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_trbodyReportData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                @{ Html.RenderPartial("_Paging"); }
+                <div class="rightPopupwrap">
+                    <div class="popupslideItem">
+                        <div class="topbandWrap">
+                            <h6>Page Visits</h6>
+                            <i class="icon ion-android-close"></i>
+                        </div>
+                        <div class="popup-body">
+                            <div class="popuptblWrap">
+                                <div class="table-responsive">
+                                    <table class="table tbl-pageVisits">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-70 m-p-w-170" scope="col">Page Name</th>
+                                                <th class="td-wid-30 m-p-w-120" scope="col">Page Depth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trsourcereport">
+                                        </tbody>
+                                    </table>
+                                    <table class="table tbl-searchkey">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-70 m-p-w-170" scope="col">Search Key</th>
+                                                <th class="td-wid-30 m-p-w-120" scope="col">Sessions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trsearchreport">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/Analytics/Web_Traffic_OrganicSearch.js"></script>

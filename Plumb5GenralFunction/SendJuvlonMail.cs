@@ -556,15 +556,15 @@ namespace Plumb5GenralFunction
             }
         }
 
-        private async void AppendMailTemplate()
+        private void AppendMailTemplate()
         {
             MailTemplateFile mailTemplateFile;
             using (var objBL = DLMailTemplateFile.GetDLMailTemplateFile(AccountId, SQLProvider))
             {
-                mailTemplateFile = await objBL.GetSingleFileType(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
+                mailTemplateFile = objBL.GetSingleFileTypeSync(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName).ConfigureAwait(false).GetAwaiter().GetResult();
             MainContentOftheMail.Append(fileString);
         }
         private Tuple<List<string>, List<KeyValuePair<string, string>>, string, List<KeyValuePair<string, string>>> GetReplaceFieldList(StringBuilder htmlContent, string MailSubject)
@@ -728,7 +728,7 @@ namespace Plumb5GenralFunction
                 {
                     Dictionary<string, string> attach = new Dictionary<string, string>();
                     SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-                    byte[] attachmentbyte = awsUpload.GetFileContentStringBytes(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                    byte[] attachmentbyte = awsUpload.GetFileContentStringBytes(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname).ConfigureAwait(false).GetAwaiter().GetResult();
                     attach.Add(mailTemplateAttachment[i].AttachmentFileName, Convert.ToBase64String(attachmentbyte));
                     attachments.Add(attach);
                 }

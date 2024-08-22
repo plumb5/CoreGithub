@@ -1326,18 +1326,18 @@ namespace Plumb5GenralFunction
 
                     return dsExcelFields;
                 }
-                else if (extension == ".xlsx")
-                {
-                    DataSet dataSet = new DataSet();
-                    DataTable dataTable = ReadExcelFiles(fileFullPath);
-                    dataSet.Tables.Add(dataTable.Copy());
-                    return dataSet;
-                }
+                //else if (extension == ".xlsx")
+                //{
+                //    DataSet dataSet = new DataSet();
+                //    DataTable dataTable = ReadExcelFiles(fileFullPath);
+                //    dataSet.Tables.Add(dataTable.Copy());
+                //    return dataSet;
+                //}
                 else
                 {
                     OleDbCommand cmd = GetImportCommand(fileFullPath);
                     try
-                    {
+                    {                       
                         DataSet ds = new DataSet();
                         DataSet dsClone = new DataSet();
                         using (OleDbDataAdapter oleda = new OleDbDataAdapter())

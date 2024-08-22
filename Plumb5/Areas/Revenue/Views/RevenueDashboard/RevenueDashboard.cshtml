@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<div class="container">
+    <section class="sheet">
+        <div class="pageheader">
+            <h6 class="pagetitle">Customer Revenue</h6>
+            <ol class="breadcrumb slim-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Advanced</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Customer Revenue</li>
+            </ol>
+        </div>
+
+        <div class="topTabWrap">
+            <div class="iconTopNav">
+                <div class="topIconItem"></div>
+                <div class="topIconItem"></div>
+                <div class="topIconItem"></div>
+            </div>
+            <div class="tabItemWrap">
+                <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0)"><i class="fa fa-inr font-16 pr-2"></i> Revenue</a></div>
+                <div class="tabItem"><a class="tap-nav-link" href="/Revenue/RevenueChannels"><i class="icon ion-load-b font-16 pr-2"></i> Channels</a></div>
+            </div>
+
+            <div class="iconsWrap">
+                @{
+                    Html.RenderPartial("_Export");
+                }
+                <a href=" /Revenue/RevenueSettings" class="btn btn-primary mr-2">Settings <i class="fa fa-cog"></i></a>
+            </div>
+        </div>
+        <div class="box-white mr-tp-15">
+            <div class="showDateIconWrap border-bottom">
+                <div class="showDateWrap brd-bttm-none mb-0">
+                    @{
+                        Html.RenderPartial("_PageHeadingWithDate");
+                    }
+                </div>
+
+                <div class="iconsWrap-docu">
+                    <div class="emailtempdropdown d-flex mr-2">
+                        <select id="revenueeventnames" class="form-control mr-2 w-50 addCampName mr-2">
+                            <option value="0" label="select" selected="">Select</option>
+                        </select>
+                        <select id="revenueortransactiontype" class="form-control ml-2">
+                            <option value="Revenue" selected="">Revenue</option>
+                            <option value="Transaction">Transaction</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="charteeWrap position-relative h-350">
+                <canvas id="sessionsData"></canvas>
+            </div>
+        </div>
+    </section>
+    <section class="sheet mt-3">
+        <div class="row m-gut">
+            <div class="col-sm-6 col-md-4 col-lg-4 p-gut">
+                <div class="border bg-white text-center">
+                    <h6 class="pt-4 font-14 text-color-queued font-weight-normal" id="lbltotaltype">Total Revenue Generated</h6>
+                    <h2 class="revenuecur pb-2" id="lbltotalrevenue"><i class="fa fa-inr"></i>0</h2>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 p-gut">
+                <div class="border bg-white text-center">
+                    <h6 class="pt-4 font-14 text-color-queued font-weight-normal" id="lbldirecttype">Revenue Through Uploaded Data</h6>
+                    <h2 class="revenuecur pb-2" id="lbluploadedrevenue"><i class="fa fa-inr"></i>0</h2>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 p-gut">
+                <div class="border bg-white text-center">
+                    <h6 class="pt-4 font-14 text-color-queued font-weight-normal" id="lblcampaigntype">Revenue Through Campaigns</h6>
+                    <h2 class="revenuecur pb-2" id="lblcampaignsrevenue"><i class="fa fa-inr"></i>0</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sheet">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white mt-3">
+                    <div class="tableWrapper">
+                        <div class="table-responsive min-h-300">
+                            <table class="table tbl-td-ta-lft" id="ui_tableReport">
+                                <thead id="ui_tbRevenueHeader">
+                                    <tr>
+                                        <th scope="col" class="helpIcon m-p-w-120 td-wid-50">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Event Day<i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap">
+                                                Event Day
+                                            </div>
+                                        </th>
+                                        <th class="helpIcon m-p-w-120 td-wid-25" scope="col">
+                                            <div class="sortWrap">
+                                                <i class="icon ion-arrow-down-c addColor"></i>
+                                            </div>
+                                            <span id="ui_changetextRevenue">Revenue Generated</span>
+                                            <span id="ui_BindRevenueRupees"></span> <i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap" id="ui_changetextRevenuetooltip">
+                                                Revenue Generated
+                                            </div>
+                                        </th>
+                                        <th class="helpIcon m-p-w-140 td-wid-25" scope="col" id="ui_useraverage">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>Avg revenue per user <span id="ui_BindUserRupees"></span> <i class="icon ion-ios-help-outline"></i>
+                                            <div class="toottipWrap">
+                                                Avg revenue per user
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="ui_tbodyReportData">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @{
+                        Html.RenderPartial("_Paging");
+                    }
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<script src="~/js/Chart.js"></script>
+<script src="~/js/Revenue/RevenueDashboard.js"></script>
+
+

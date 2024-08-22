@@ -1,0 +1,209 @@
+﻿@using Newtonsoft.Json
+@using P5GenralML
+@using Plumb5GenralFunction
+@using Plumb5.Models
+
+@{
+    ViewBag.Title = "Plumb5 :: Lead Management Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+@{
+    LoginInfo? CustomerInfo = null;
+    if (!String.IsNullOrEmpty(Context.Session.GetString("UserInfo")))
+        CustomerInfo = JsonConvert.DeserializeObject<LoginInfo?>(Context.Session.GetString("UserInfo"));
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="http://p5beta.plumb5.io/js/d3.v4.js"></script>
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Lead Management Dashboard</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Lead Management</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Dashboard
+            </li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+            </div>
+            <div class="iconsWrap">
+                <a href="/Prospect/HierarchyDashboard"
+                   class="btn btn-primary mr-2"><i class="fa fa-sitemap mr-2"></i>Hierarchy</a>
+                <div class="ordbydropdown">
+                    <button class="btn btn-sm mr-2 border-0" title="Order By" id="" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-sort-amount-desc mr-0"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" x-placement="bottom-start" style="position: absolute;transform: translate3d(133px, 150px, 0px);top: 0px;left: 0px; will-change: transform;">
+                        <a class="dropdown-item lmsorderbymenu" data-ordername="Created Date" href="javascript:void(0)">Created Date</a>
+                        <a class="dropdown-item lmsorderbymenu" data-ordername="Updated Date" href="javascript:void(0)">Updated Date</a>
+                    </div>
+                </div>
+                <div class="lmsiconwrp d-flex">
+                    <i class="icon ion-ios-printer-outline"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chtdashwrp mr-tp-15">
+        <div class="row m-gut">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 p-gut">
+                <div class="row m-gut">
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 p-gut m-mb-2">
+                        <div class="box-white p-3">
+                            <div class="small-box-title">Total Leads</div>
+                            <div class="lmscountwrap">
+                                <h2 class="text-color-blue" id="ui_h2_LeadsIn">0</h2>
+                                <div class="lmsperwrap align-self-end">
+                                    <p id="ui_p_leadspercent" class="leadwondasper"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 p-gut">
+                        <div class="box-white p-3">
+                            <div class="small-box-title">Revenue</div>
+                            <div class="lmscountwrap">
+                                <h2 class="text-color-success" id="ui_revenueCount">0</h2>
+                                <div class="lmsperwrap align-self-end">
+                                    <p id="ui_p_revenuepercent" class="leadwondasper"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 p-gut mt-2">
+                        <div class="box-white p-3">
+                            <div class="small-box-title">closed Won</div>
+                            <div class="lmscountwrap">
+                                <h2 class="text-col-pur font-weight-bold" id="ui_h1_LeadWon">0</h2>
+                                <div class="lmsperwrap align-self-end">
+                                    <p id="ui_p_LeadWon" class="leadwondasper"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 p-gut mt-2">
+                        <div class="box-white p-3">
+                            <div class="small-box-title">Closed Lost</div>
+                            <div class="lmscountwrap">
+                                <h2 class="text-color-error font-weight-bold" id="ui_h1_LeadLost">0</h2>
+                                <div class="lmsperwrap align-self-end">
+                                    <p id="ui_p_LeadLost" class="leadwondasper"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 p-gut mt-2">
+                        <div class="small-box-trans small-box-bg-col-pur">
+                            <h6>Planned Follow Ups</h6>
+                            <h2 class="m-0" id="ui_h2_plannedleads">0</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 p-gut mt-2">
+                        <div class="small-box-trans small-box-bg-col-pink">
+                            <h6>Missed Follow Ups</h6>
+                            <h2 class="m-0" id="ui_h2_missedleads">0</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 p-gut mt-2 m-mb-2">
+                        <div class="small-box-trans small-box-bg-col-yellow">
+                            <h6>Completed Follow Ups</h6>
+                            <h2 class="m-0" id="ui_h2_completedleads">0</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 p-gut">
+                <div class="box-white">
+                    <h6 class="box-title">Top 5 Users By Sources</h6>
+                    <div class="charteeWrap position-relative h-250">
+                        <canvas id="top5sourcewiselms"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 p-gut mt-2">
+                <div class="box-white">
+                    <h6 class="box-title">Top 10 Performer</h6>
+                    <div class="charteeWrap position-relative h-350">
+                        <canvas id="topperformerlms"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 p-gut mt-2">
+                <div class="box-white">
+                    <h6 class="box-title">Label Wise Leads</h6>
+                    <div class="charteeWrap position-relative h-350">
+                        <canvas id="labelwiseleads"></canvas>
+                        <div class="no-data hideDiv" id="ui_divLeadFormsNoData">There is no data to view</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-12 col-lg-12 col-xl-12 p-gut mt-2">
+                <div class="box-white">
+                    <h6 class="box-title text-center">
+                        STAGE WISE VS SOURCE WISE REPORT
+                    </h6>
+                    <div class="tableWrapper mt-4">
+                        <div class="table-responsive min-h-100">
+                            <table class="table mb-0" id="ui_tblReportData">
+                                <thead id="tblheading">
+                                </thead>
+                                <tbody id="ui_tbodyReportData">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 p-gut mt-2">
+                <div class="box-white">
+                    <h6 class="box-title">Campaign Details</h6>
+                    <div class="charteeWrap position-relative h-300">
+                        <canvas id="campaignwiselms"></canvas>
+                        <div class="no-data hideDiv" id="ui_divcampaignwiselms">There is no data to view</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 p-gut mt-2">
+                <div class="box-white">
+                    <h6 class="box-title">Top 5 Users By Stages</h6>
+                    <div class="charteeWrap position-relative h-300">
+                        <canvas id="ui_canvas_AllSourcesData"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-gut mt-2">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-gut">
+                <div class="row m-gut h-100">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut m-mb-3">
+                        <div class="box-white h-100">
+                            <h6 class="box-title">Stage Wise vs Label Wise</h6>
+                            <div class="charteeWrap position-relative h-350">
+                                <canvas id="stagelabelwiselms"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 p-gut">
+                        <div class="box-white h-100">
+                            <h6 class="box-title">Source Wise vs Label Wise</h6>
+                            <div class="charteeWrap position-relative h-350">
+                                <canvas id="sourcelabelwiselms"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/Prospect/LmsNewDashboard.js"></script>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IP5GenralDL
 {
-    public interface IDLFormBannerLoadClick
+    public interface IDLFormBannerLoadClick : IDisposable
     {
         void SaveUpdateForImpression(int FormBannerId, string TrackIp, string MachineId, string SessionRefeer);
         void UpdateFormResponse(int FormBannerId, string TrackIp, string MachineId = null, string SessionRefeer = null);

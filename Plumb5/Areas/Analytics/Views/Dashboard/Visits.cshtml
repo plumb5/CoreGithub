@@ -1,0 +1,171 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Visits";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Sessions</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Web</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Analytics Overview</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sessions</li>
+        </ol>
+    </div>
+    <div class="topTabWrap brd-TRL">
+        @{
+            Html.RenderPartial("_PageHeadingWithDate");
+        }
+        @{
+            Html.RenderPartial("_Export");
+        }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="charteeWrap position-relative h-350">
+            <canvas id="ui_canvas_sessionData"></canvas>
+        </div>
+    </div>
+</section>
+<section class="sheet">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="box-white mt-4">
+                <div class="filterWap hideDiv">
+                    <div class="box-white-sess">
+                        <div class="filtrTitWrp">
+                            <h6 class="advncdFilt">Advanced Filter</h6>
+                            <div class="clseFitr">
+                                <i class="icon ion-close-round"></i>
+                            </div>
+                        </div>
+                        <div class="filterMainAppnd">
+                            <div class="filterItemWrap">
+                                <div class="filterItem">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                                            <div class="filtBtnWrap">
+                                                <div class="btnFilItem">
+                                                    <div class="dropdown">
+                                                        <button class="btn-action dropdown-toggle w-160pc" type="button" id="includeBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Sessions <i class="icon ion-android-arrow-dropdown"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="javascript:void(0);">Sessions</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Visitor Ip Address</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btnFilItem">
+                                                    <div class="dropdown">
+                                                        <button class="btn-action-blu dropdown-toggle w-180pc" type="button" id="clientId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Something else here <i class="icon ion-android-arrow-dropdown"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <div class="filtSearch">
+                                                                <input class="form-control form-control-sm" type="text" name="" id="">
+                                                                <i class="icon ion-android-search"></i>
+                                                            </div>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Action</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Another action</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Something else here</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btnFilItem">
+                                                    <div class="dropdown">
+                                                        <button class="btn-action dropdown-toggle w-160pc" type="button" id="includeBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Containing <i class="icon ion-android-arrow-dropdown"></i>
+                                                        </button>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="javascript:void(0);">Containing</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Exactly matching</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Begins with</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Ends with</a>
+                                                            <a class="dropdown-item" href="javascript:void(0);">Containing</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btnFilItem">
+                                                    <input class="form-control form-control-sm" type="text" name="" id="">
+                                                </div>
+                                                <div class="clseWrapFilt">
+                                                    <i class="icon ion-ios-close"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="andFiltWrap">
+                                    and
+                                </div>
+                            </div>
+                        </div>
+                        <div class="addfilterItem mt-min-1 mb-3">
+                            <button class="btn-addFilter" type="button" id="addFilterItem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="icon ion-plus-round"></i> Add a dimension
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tableWrapper">
+                    <div class="table-responsive">
+                        <table class="table first-row" id="ui_tableReport">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="helpIcon m-p-w-100">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Day <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Day </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-120" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Sessions <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Sessions </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-150" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Unique Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Unique Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-120" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Page Views <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Page Views </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-140" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> New Visitors <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">New Visitors </div>
+                                    </th>
+                                    <th class="helpIcon m-p-w-120" scope="col">
+                                        <div class="sortWrap">
+                                            <i class="icon ion-arrow-down-c addColor"></i>
+
+                                        </div> Avg Time <i class="icon ion-ios-help-outline"></i>
+                                        <div class="toottipWrap">Avg Time </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyReportData"></tbody>
+                        </table>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_Paging");
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/Analytics/Web_AnalyticsOverView_Sessions.js"></script>

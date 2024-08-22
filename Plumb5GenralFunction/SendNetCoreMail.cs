@@ -867,7 +867,7 @@ namespace Plumb5GenralFunction
                     for (var i = 0; i < mailTemplateAttachment.Count; i++)
                     {
                         NetCoreAttachments attachmentsinfo = new NetCoreAttachments();
-                        Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                        Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname).ConfigureAwait(false).GetAwaiter().GetResult();
                         attachmentsinfo.fileContent = Convert.ToString(fileStream.ReadAsBytes());
                         attachmentsinfo.fileName = mailTemplateAttachment[i].AttachmentFileName;
                         attachmentVarinfo.Add(attachmentsinfo);
@@ -922,7 +922,7 @@ namespace Plumb5GenralFunction
                     for (var i = 0; i < mailTemplateAttachment.Count; i++)
                     {
                         NetCoreAttachments attachmentsinfo = new NetCoreAttachments();
-                        Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                        Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname).ConfigureAwait(false).GetAwaiter().GetResult(); ;
                         attachmentsinfo.fileContent = Convert.ToString(fileStream.ReadAsBytes());
                         attachmentsinfo.fileName = mailTemplateAttachment[i].AttachmentFileName;
                         attachmentVarinfo.Add(attachmentsinfo);
@@ -1066,16 +1066,16 @@ namespace Plumb5GenralFunction
             }
         }
 
-        private async void AppendMailTemplate()
+        private void AppendMailTemplate()
         {
             MailTemplateFile mailTemplateFile;
 
             using (var objBL = DLMailTemplateFile.GetDLMailTemplateFile(AccountId, SQLProvider))
             {
-                mailTemplateFile = await objBL.GetSingleFileType(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
+                mailTemplateFile = objBL.GetSingleFileTypeSync(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName).ConfigureAwait(false).GetAwaiter().GetResult();
             MainContentOftheMail.Append(fileString);
         }
 

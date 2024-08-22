@@ -1,0 +1,69 @@
+﻿<div id="dvcontrolgroup" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Create Control Group</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="createcntrlgroup" class="groupaccordWrap hideDiv">
+                    <div class="box-white pt-4 pr-4 pl-4">
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="ui_txt_NewCntrlGrpName">Group Name</label>
+                            <input type="text" class="form-control form-control-sm" id="ui_txt_NewCntrlGrpName">
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="ui_txtarea_NewCntrlGrpDescription">Description</label>
+                            <textarea class="form-control" id="ui_txtarea_NewCntrlGrpDescription" cols="3" rows="3"></textarea>
+                        </div>
+                        <div class="contcountWrap pt-2 pb-2">
+                            <p>Counts: <span id="grpconts" class="text-blu"></span> Contacts</p>
+                        </div>
+                        <div class="form-group mb-0">
+                            <label class="frmlbltxt" for="ctrlgrpsize">Control Group Size</label>
+                            <input type="range" class="custom-range w-100" value="5" min="5" max="95" step="1" id="ctrlgrpsize">
+                            <div class="d-flex align-items-center justify-content-between h-35">
+                                <p id="cntrlgrpsizval" class="frmlbltxt pb-0">5%</p>
+                                <p class="frmlbltxt pb-0">95%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-white mt-3">
+                        <div class="notctrlgrp p-3">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="notctrlgrp"
+                                       name="notctrlgrp">
+                                <label class="custom-control-label" for="notctrlgrp">
+                                    Create Group for contacts not
+                                    in the control Group
+                                </label>
+                            </div>
+                        </div>
+                        <div class="notcntrlgrpcont p-3 border-top hideDiv">
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="ui_txt_NotCntrlGrpName">Group Name</label>
+                                <input type="text" class="form-control form-control-sm" id="ui_txt_NotCntrlGrpName">
+                            </div>
+                            <div class="form-group">
+                                <label class="frmlbltxt" for="ui_txtarea_NotCntrlGrpDescription">Description</label>
+                                <textarea name="" class="form-control" id="ui_txtarea_NotCntrlGrpDescription" cols="3" rows="3"></textarea>
+                            </div>
+                            <div class="contcountWrap pt-2 pb-2">
+                                <p>Counts: <span id="notgrpconts" class="text-blu"></span> Contacts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnControlGroup">Save Group</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

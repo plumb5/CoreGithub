@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Manage Campaigns";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+@{
+
+    @Html.Partial("_CampaignDraft", new ViewDataDictionary(ViewData) { { "channel", "Mail" } }) 
+    
+}

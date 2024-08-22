@@ -1,0 +1,68 @@
+﻿<!--Popup window left-->
+<div class="popupcontainer hideDiv" id="ui_dvAddNewReports">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Add New Report</h6>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="lmsnewreport" class="lmsnwsavedrepwrp p-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Reported By</label>
+                                <select class="form-control select2drpdwnbrd" name="" id="myrepanalreportby" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myrepconditionswrap p-4 bg-white">
+                        <div class="myrepcontionitem">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Fields</label>
+                                <select class="form-control select2drpdwnbrd" name="" id="ui_SessionTrackerColumn_1" data-placeholder="Add Fields">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Value</label>
+                                <input type="text" name="" class="form-control" id="ui_SessionTrackerColumnvalue_1">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="addmyrepbtnwrap d-flex justify-content-end">
+                        <button id="addnewconditionbtn" type="button" class="btn btn-white-bg mt-4"><i class="icon ion-plus-round font-12 mr-1"></i> Add New Condition</button>
+                    </div>
+                    <div class="lmssaverepdet mt-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="lmssaverepopt" name="lmssaverepopt" />
+                            <label class="custom-control-label" for="lmssaverepopt">Save Report</label>
+                        </div>
+                        <div class="lmssaverepdetwrp mt-3 hideDiv">
+                            <div class="form-group">
+                                <label for="" class="frmlbltxt">Report Name</label>
+                                <input type="text" name="" class="form-control" id="ui_ReportName" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_btnsavereport">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popup window left-->
+
+<script src="~/js/Analytics/AnalyticsReportFilter.js"></script>

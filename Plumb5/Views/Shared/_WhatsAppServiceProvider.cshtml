@@ -1,0 +1,375 @@
+﻿<script src="~/js/intlTelInput.js"></script>
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">WhatsApp Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">WhatsApp</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active" data-setttype="configuration">Configuration</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white p-3">
+                    <div class="smssettheadwrap topTabWrap brd-TRL">
+                        WhatsApp Service Provider (WSP)
+                        <a id="Ui_addvendors" href="javascript:void(0);" data-toggle="modal" class="mr-3 btn btn-primary btn-sm DesignPermission">Add Vendors</a>
+                    </div>
+                    <div class="addemailWrap m-mb-3">
+
+                        <div class="tableWrapper tbl-settings">
+                            <div class="table-responsive min-h-300">
+
+                                <table class="table tbl-td-ta-lft border-right border-left" id="ui_whatsappsercivetblReportData">
+                                    <thead>
+                                        <tr>
+                                            <th class="helpIcon td-wid-30 m-p-w-190" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Configuration Name</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap">Configuration Name of the Whatsapp service provider (WSP).</div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-25 m-p-w-190" scope="col">
+                                                <div class="spacBet">
+                                                    <div>WSP</div>
+                                                    <div class="th-iconWrp">
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap">
+                                                            An Whatsapp service provider (WSP) are companies that allow users to send SMS campaigns to a list of subscribers.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-25 m-p-w-220" scope="col">
+                                                <div class="spacBet">
+                                                    <div>API Key</div>
+                                                    <div class="th-iconWrp">
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap">
+                                                            API Key to be used ONLY for Promotional Whatsapp Campaign
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-35 m-p-w-220" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Created Date/Updated Date</div>
+
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-15 m-p-w-150" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Actions</div>
+
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyReportData">
+                                        <tr id="ui_NotConfigured">
+                                            <td colspan="4" class="text-center font-weight-bold selprovid">
+                                                You
+                                                don't have any WSP configured. <a href="javascript:void(0)" data-toggle="modal">
+                                                    Click
+                                                    here
+                                                </a> to Select provider to Add WSP
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="h-70"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!--Modal-->
+<div class="modal fade" id="addemailsett" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Email Id</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email Address</label>
+                        <input class="form-control" type="text" name="" id="">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Add Email</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal-->
+<!--Modal-->
+<div class="modal fade" id="addprovidermod" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select WhatsApp Service Provider</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="exampleInputEmail1">Provider Name</label>
+                        <div class="custselectwrap">
+                            <input type="text" class="form-control drpdownselected text-int-30" name=""
+                                   value="Select" id="">
+                            <div class="drpdwnarrw">
+                                <i class="icon ion-android-arrow-dropdown"></i>
+                            </div>
+                            <div class="selproviderwrap">
+                                <div class="selctproviderItem" data-providercampname="Interakt (India)"
+                                     data-providercamplogo="logointerakt">
+                                    <div class="compdetails">
+                                        <div class="provcomplogo logointerakt"></div>
+                                        <div class="provcompname  ml-2">Interakt</div>
+                                    </div>
+                                    <div class="providcount">India</div>
+                                </div>
+                                @*<div class="selctproviderItem" data-providercampname="Gupshup (India)"
+                                data-providercamplogo="logogupshup">
+                                <div class="compdetails">
+                                <div class="provcomplogo logogupshup"></div>
+                                <div class="provcompname ml-2">Gupshup</div>
+                                </div>
+                                <div class="providcount">India</div>
+                                </div>
+                                <div class="selctproviderItem" data-providercampname="Infobip (India)"
+                                data-providercamplogo="logoInfobip">
+                                <div class="compdetails">
+                                <div class="provcomplogo logoInfobip"></div>
+                                <div class="provcompname ml-2">Infobip</div>
+                                </div>
+                                <div class="providcount">India</div>
+                                </div>
+                                <div class="selctproviderItem" data-providercampname="Aclmobile (India)"
+                                data-providercamplogo="logotaclmobile">
+                                <div class="compdetails">
+                                <div class="provcomplogo logotaclmobile"></div>
+                                <div class="provcompname ml-2">Aclmobile</div>
+                                </div>
+                                <div class="providcount">India</div>
+                                </div>
+                                <div class="selctproviderItem" data-providercampname="Kaleyra (India)"
+                                data-providercamplogo="logokayleyra">
+                                <div class="compdetails">
+                                <div class="provcomplogo logokayleyra"></div>
+                                <div class="provcompname ml-2">Kaleyra</div>
+                                </div>
+                                <div class="providcount">India</div>
+                                </div>
+                                <div class="selctproviderItem" data-providercampname="Yellow AI (India)"
+                                data-providercamplogo="logoyellowai">
+                                <div class="compdetails">
+                                <div class="provcomplogo logoyellowai"></div>
+                                <div class="provcompname ml-2">Yellow AI</div>
+                                </div>
+                                <div class="providcount">South Africa</div>
+                                </div>*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">API Key</label>
+                        <input class="form-control" type="text" name="" id="">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal-->
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletegroups" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Group?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger"
+                        data-dismiss="modal">
+                    Delete
+                </button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary"
+                        data-dismiss="modal">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<!--Popup window right-->
+<div class="popupcontainer hideDiv" id="wsppopcontainer">
+    <div class="popupItem w-450 m-p-wid-300 position-relative popup-tbl">
+        <div class="popuptitle">
+            <h6>WhatsApp Settings</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-20">
+                <div class="form-group">
+                    <label class="frmlbltxt" for="exampleInputEmail1">Provider Name</label>
+                    <div class="custselectwrap">
+                        <input type="text" class="form-control drpdownselected text-int-30" name="" value="Select" id="ui_ddlprovider">
+                        <div class="drpdwnarrw">
+                            <i class="icon ion-android-arrow-dropdown"></i>
+                        </div>
+                        <div class="selproviderwrap">
+                            <div class="selctproviderItem" data-providercampname="Interakt (India)" data-campname="interakt" data-providercamplogo="logointerakt">
+                                <div class="compdetails">
+                                    <div class="provcomplogo logointerakt"></div>
+                                    <div class="provcompname  ml-2">Interakt</div>
+                                </div>
+                                <div class="providcount">India</div>
+                            </div>
+                            @*<div class="selctproviderItem" data-providercampname="Gupshup (India)" data-campname="gupshup" data-providercamplogo="logogupshup">
+                            <div class="compdetails">
+                            <div class="provcomplogo logogupshup"></div>
+                            <div class="provcompname ml-2">Gupshup</div>
+                            </div>
+                            <div class="providcount">India</div>
+                            </div>
+                            <div class="selctproviderItem" data-providercampname="Infobip (India)" data-campname="infobip" data-providercamplogo="logoInfobip">
+                            <div class="compdetails">
+                            <div class="provcomplogo logoInfobip"></div>
+                            <div class="provcompname ml-2">Infobip</div>
+                            </div>
+                            <div class="providcount">India</div>
+                            </div>
+                            <div class="selctproviderItem" data-providercampname="Aclmobile (India)" data-campname="aclmobile" data-providercamplogo="logotaclmobile">
+                            <div class="compdetails">
+                            <div class="provcomplogo logotaclmobile"></div>
+                            <div class="provcompname ml-2">Aclmobile</div>
+                            </div>
+                            <div class="providcount">India</div>
+                            </div>
+                            <div class="selctproviderItem" data-providercampname="Kaleyra (India)" data-campname="kaleyra" data-providercamplogo="logokayleyra">
+                            <div class="compdetails">
+                            <div class="provcomplogo logokayleyra"></div>
+                            <div class="provcompname ml-2">Kaleyra</div>
+                            </div>
+                            <div class="providcount">India</div>
+                            </div>
+                            <div class="selctproviderItem" data-providercampname="Yellow AI (India)" data-campname="yellow ai " data-providercamplogo="logoyellowai">
+                            <div class="compdetails">
+                            <div class="provcomplogo logoyellowai"></div>
+                            <div class="provcompname ml-2">Yellow AI</div>
+                            </div>
+                            <div class="providcount">South Africa</div>
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="transtypwrap mt-4">
+                        @*<div class="form-group">
+                        <label class="frmlbltxt" for="">Name your configuration</label>
+                        <input type="text" class="form-control" name="" id="">
+                        </div>*@
+                        <div class="form-group">
+                            <label class="frmlbltxt">Configuration Name</label>
+                            <input type="text" class="form-control" id="ui_ConfigurationName" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">WhatsApp Business Number</label>
+                            <div class="codewithphone">
+                                <div class="iti iti--allow-dropdown iti--separate-dial-code">
+                                    <div class="iti__flag-container">
+                                        <input type="tel" class="form-control w-40px mr-2" id="intrnatphone" />
+                                    </div>
+                                    <input type="text" class="form-control" name="" id="ui_txtWspbussinessnumber" maxlength="13" autocomplete="off" data-intl-tel-input-id="0" style="padding-left: 74px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">API Key</label>
+                            <input type="password" class="form-control" id="ui_txtApikey" autocomplete="off" maxlength="100">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Base Url</label>
+                            <input class="form-control" id="ui_txtbaseurl" autocomplete="off" maxlength="100">
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="trans">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse" href="#apicallbackurl" data-parent="#promoandtranskey" aria-expanded="false" aria-controls="apicallbackurl">
+                                API Callback URL
+                            </a>
+                        </div>
+                        <div id="apicallbackurl" class="collapse" role="tabpanel" data-parent="#promoandtranskey" aria-labelledby="headingThree" style="">
+                            <div class="card-body">
+                                <div class="transwrap pt-2 pl-3 pr-3 pb-3">
+                                    <div class="form-group">
+                                        <label class="frmlbltxt">Add the WSP Callback URL to receive delivery reports.</label>
+                                        <p class="text-muted" id="ui_DeliveryAPI">No Url to bind</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="custom-control custom-checkbox m-2">
+                        <input type="checkbox" class="custom-control-input" id="ui_chkDefaultvendor" />
+                        <label class="custom-control-label" for="ui_chkDefaultvendor">Set as default WSP</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+                <div class="btnwrp mb-0">
+                    <button class="btn btn-primary mr-2" id="btnaddwsp" type="button">Add WSP</button>
+                    <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--Popup window right-->
+    @*<script src="~/js/SendCallToContact.js"></script>*@
+    <script src="~/js/WhatsApp/WhatsAppSettings.js"></script>
+    <!--<script src="js/sidebar.js"></script>
+    <script src="js/custom.js"></script>-->
+    <!-- <script src="js/jquery-3.2.1.slim.min.js"></script> -->
+    <!--<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>-->

@@ -36,7 +36,7 @@ namespace Plumb5GenralFunction
         //    AwsBucketURL = AllConfigURLDetails.KeyValueForConfig["AWS_BUCKET_URL"] + @"/" + folderName;
         //}
 
-        public string UploadFiles(string keyName, string filePath)
+        public async Task<string> UploadFiles(string keyName, string filePath)
         {
             string ResponseId = "";
             if (keyName != null && !string.IsNullOrEmpty(keyName) && filePath != null && !string.IsNullOrEmpty(filePath) && bucketname != null && !string.IsNullOrEmpty(bucketname))
@@ -51,7 +51,7 @@ namespace Plumb5GenralFunction
                         //ContentType = "text/plain"
                     };
 
-                    PutObjectResponse response = client.PutObject(putRequest);
+                    PutObjectResponse response = await client.PutObjectAsync(putRequest);
 
                     if (response.HttpStatusCode.ToString() == "OK" && response.ETag != null && response.ETag != "")
                         ResponseId = response.ETag.Replace("\"", "").ToString();
@@ -67,7 +67,7 @@ namespace Plumb5GenralFunction
             return ResponseId;
         }
 
-        public string UploadFileContent(string keyName, string ContentBody)
+        public async Task<string> UploadFileContent(string keyName, string ContentBody)
         {
             string ResponseId = "";
             if (keyName != null && !string.IsNullOrEmpty(keyName) && ContentBody != null && !string.IsNullOrEmpty(ContentBody) && bucketname != null && !string.IsNullOrEmpty(bucketname))
@@ -81,7 +81,7 @@ namespace Plumb5GenralFunction
                         ContentBody = ContentBody
                     };
 
-                    PutObjectResponse response = client.PutObject(putRequest);
+                    PutObjectResponse response = await client.PutObjectAsync(putRequest);
 
                     if (response.HttpStatusCode.ToString() == "OK" && response.ETag != null && response.ETag != "")
                         ResponseId = response.ETag.Replace("\"", "").ToString();
@@ -97,7 +97,7 @@ namespace Plumb5GenralFunction
             return ResponseId;
         }
 
-        public string UploadFileStream(string keyName, Stream InputStream)
+        public async Task<string> UploadFileStream(string keyName, Stream InputStream)
         {
             string ResponseId = "";
             if (keyName != null && !string.IsNullOrEmpty(keyName) && InputStream != null && bucketname != null && !string.IsNullOrEmpty(bucketname))
@@ -111,7 +111,7 @@ namespace Plumb5GenralFunction
                         InputStream = InputStream
                     };
 
-                    PutObjectResponse response = client.PutObject(putRequest);
+                    PutObjectResponse response = await client.PutObjectAsync(putRequest);
 
                     if (response.HttpStatusCode.ToString() == "OK" && response.ETag != null && response.ETag != "")
                         ResponseId = response.ETag.Replace("\"", "").ToString();
@@ -127,7 +127,7 @@ namespace Plumb5GenralFunction
             return ResponseId;
         }
 
-        public void DownloadFiles(string keyName, string filePath, string BucketPath)
+        public async Task DownloadFiles(string keyName, string filePath, string BucketPath)
         {
             try
             {
@@ -137,9 +137,9 @@ namespace Plumb5GenralFunction
                     Key = keyName
                 };
 
-                GetObjectResponse getresponse = client.GetObject(getRequest);
+                GetObjectResponse getresponse = await client.GetObjectAsync(getRequest);
                 if (getresponse != null)
-                    getresponse.WriteResponseStreamToFile(filePath);
+                    await getresponse.WriteResponseStreamToFileAsync(filePath, true, default);
             }
             catch (Exception ex)
             {
@@ -150,7 +150,7 @@ namespace Plumb5GenralFunction
             }
         }
 
-        public Stream GetFileContentStream(string keyName, string BucketPath)
+        public async Task<Stream> GetFileContentStream(string keyName, string BucketPath)
         {
             try
             {
@@ -160,7 +160,7 @@ namespace Plumb5GenralFunction
                     Key = keyName
                 };
 
-                GetObjectResponse getresponse = client.GetObject(getRequest);
+                GetObjectResponse getresponse = await client.GetObjectAsync(getRequest);
                 if (getresponse != null)
                     return getresponse.ResponseStream;
             }
@@ -175,7 +175,7 @@ namespace Plumb5GenralFunction
             return null;
         }
 
-        public string GetFileContentString(string keyName, string BucketPath)
+        public async Task<string> GetFileContentString(string keyName, string BucketPath)
         {
             try
             {
@@ -185,7 +185,7 @@ namespace Plumb5GenralFunction
                     Key = keyName,
                 };
 
-                GetObjectResponse getresponse = client.GetObject(getRequest);
+                GetObjectResponse getresponse = await client.GetObjectAsync(getRequest);
                 if (getresponse != null)
                 {
                     byte[] responseByte = getresponse.ResponseStream.ReadAsBytes();
@@ -203,7 +203,7 @@ namespace Plumb5GenralFunction
             return null;
         }
 
-        public bool DeleteFile(string keyName, string BucketPath)
+        public async Task<bool> DeleteFile(string keyName, string BucketPath)
         {
             bool status = false;
             try
@@ -214,7 +214,7 @@ namespace Plumb5GenralFunction
                     Key = keyName
                 };
 
-                DeleteObjectResponse response = client.DeleteObject(request);
+                DeleteObjectResponse response = await client.DeleteObjectAsync(request);
 
                 if (response.HttpStatusCode.ToString() == "OK")
                     status = true;
@@ -239,7 +239,7 @@ namespace Plumb5GenralFunction
             return status;
         }
 
-        public Tuple<string, string> UploadClientFiles(string FileName, Stream InputStream)
+        public async Task<Tuple<string, string>> UploadClientFiles(string FileName, Stream InputStream)
         {
             string ResponseId = string.Empty;
             string _BucketName = string.Empty;
@@ -258,7 +258,7 @@ namespace Plumb5GenralFunction
                     //ContentType = "text/plain"
                 };
 
-                PutObjectResponse response = client.PutObject(putRequest);
+                PutObjectResponse response = await client.PutObjectAsync(putRequest);
 
                 if (response.HttpStatusCode.ToString() == "OK" && response.ETag != null && response.ETag != "")
                     ResponseId = response.ETag.Replace("\"", "").ToString();
@@ -282,7 +282,7 @@ namespace Plumb5GenralFunction
             return new Tuple<string, string>(_FileName, _BucketName);
         }
 
-        public bool ListingContentAndDownloadFiles(string keyName, string downloadLocation, string BucketPath)
+        public async Task<bool> ListingContentAndDownloadFiles(string keyName, string downloadLocation, string BucketPath)
         {
             bool result = false;
             try
@@ -293,7 +293,7 @@ namespace Plumb5GenralFunction
                     Prefix = $"allimages/{keyName}/"
                 };
 
-                ListObjectsResponse response = client.ListObjects(request);
+                ListObjectsResponse response = await client.ListObjectsAsync(request);
 
                 foreach (S3Object obj in response.S3Objects)
                 {
@@ -312,12 +312,12 @@ namespace Plumb5GenralFunction
                                 Key = filename
                             };
 
-                            GetObjectResponse Response = client.GetObject(getRequest);
+                            GetObjectResponse Response = await client.GetObjectAsync(getRequest);
                             if (Response != null && obj.Size > 0)
                             {
                                 using (Stream responseStream = Response.ResponseStream)
                                 {
-                                    Response.WriteResponseStreamToFile(downloadLocation + "\\" + filename);
+                                  await  Response.WriteResponseStreamToFileAsync(downloadLocation + "\\" + filename, true, default);
                                 }
                             }
                         }
@@ -340,7 +340,7 @@ namespace Plumb5GenralFunction
             return result;
         }
 
-        public bool ListingFilesAndDeleteFiles(string keyName, string BucketPath)
+        public async Task<bool> ListingFilesAndDeleteFiles(string keyName, string BucketPath)
         {
             bool result = false;
             try
@@ -351,7 +351,7 @@ namespace Plumb5GenralFunction
                     Prefix = $"allimages/{keyName}/"
                 };
 
-                ListObjectsResponse response = client.ListObjects(request);
+                ListObjectsResponse response = await client.ListObjectsAsync(request);
                 foreach (S3Object obj in response.S3Objects)
                 {
                     try
@@ -369,7 +369,7 @@ namespace Plumb5GenralFunction
                                     Key = filename
                                 };
 
-                                DeleteObjectResponse deleteresponse = client.DeleteObject(deleterequest);
+                                DeleteObjectResponse deleteresponse = await client.DeleteObjectAsync(deleterequest);
 
                                 //if (deleteresponse.HttpStatusCode.ToString() == "OK")
                                 //    status = true;

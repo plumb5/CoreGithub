@@ -1,0 +1,90 @@
+﻿
+
+<div class="card hideDiv" id="dvdomainValidation">
+    <div class="card-header" role="tab" id="headingThree">
+        <a class="tx-gray-800 transition collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+            Domain Validation
+        </a>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body">
+            <div class="addemailWrap m-mb-3">
+                <div class="tableWrapper tbl-settings">
+                    <div class="table-responsive">
+                        <table class="table tbl-td-ta-lft" id="ui_tblDomainValidationReportData">
+                            <thead>
+                                <tr>
+                                    <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                        <div class="spacBet">
+                                            <div>Domain Name</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>SPF</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>DKIM</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>CNAME</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>DMARC</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>MX</div>
+                                        </div>
+                                    </th>
+                                    <th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                        <div class="spacBet">
+                                            <div>Verification Link</div>
+                                        </div>
+                                    </th>
+                                    @*<th class="helpIcon td-wid-13 m-p-w-150" scope="col">
+                                            <div class="spacBet">
+                                                <div>Delete</div>
+                                            </div>
+                                        </th>*@
+                                </tr>
+                            </thead>
+                            <tbody id="ui_tbodyDomainValidationReportData">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletedomain" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this Domain?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="deleteDomainConfirm" type="button" class="btn btn-danger" data-id="0" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<script src="~/js/JSLINQ.js"></script>
+<script src="~/js/Mail/MailDomainValidation.js"></script>

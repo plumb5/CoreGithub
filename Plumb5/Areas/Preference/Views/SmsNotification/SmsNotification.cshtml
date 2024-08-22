@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "SmsNotification";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem m-border-bottom " data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem active" data-setttype="tabcontseven">SMS Notifications</div>
+        <div class="setttabitem  font-12" data-setttype="tabconteight" onclick="javascript: window.location.href = 'WhatsAppNotification'">WhatsApp Notifications</div>
+
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="tabcontseven" class="setttabcontainer p-0">
+                        <div class="topTabWrap mt-0 border-bottom">
+                            <div class="showingWrap">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="enablesms" name="enablesmsopt">
+                                    <label class="custom-control-label" for="enablesms">Enable SMS Notifications</label>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tableWrapper">
+                            <div class="table-responsive">
+                                <table class="table sms-tbl tbody tbl-td-ta-lft" id="ui_tblReportData">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="helpIcon m-p-w-80 td-wid-5 text-center">Preview</th>
+                                            <th class="helpIcon m-p-w-250 td-wid-25" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>Template Name</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                                </div>
+                                            </th>
+                                            @*<th class="helpIcon m-p-w-250 td-wid-15" scope="col">
+                                            <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                            <div class="spacBet">
+                                            <div>
+                                            Template Identifier
+                                            </div>
+                                            <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                            </div>
+                                            </th>*@
+                                            <th class="helpIcon m-p-w-250 td-wid-20" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>
+                                                        Vendor Registered Template Id
+                                                    </div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon m-p-w-190 td-wid-20" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>
+                                                        Message
+                                                    </div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-15 m-p-w-170" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>Updated Date</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap"> </div></div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyReportData"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        @{
+                            Html.RenderPartial("_Paging");
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Test Modal-->
+<div class="modal fade" id="testdltsmstemp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Mobile Number</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @*<div class="checkeebx-group row w-100 mt-4">
+                <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                <label class="frmlbltxt" for="">Content Type</label>
+                </div>
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="ui_rad_SmsPromotional" name="dltcampaignType" class="custom-control-input">
+                <label class="custom-control-label" for="ui_rad_SmsPromotional">Promotional</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="ui_rad_SmsTransactional" name="dltcampaignType" class="custom-control-input" checked>
+                <label class="custom-control-label" for="ui_rad_SmsTransactional">Transactional</label>
+                </div>
+                </div>
+                </div>*@
+                <div class="form-group mt-4 w-75 mr-auto ml-auto">
+                    <label for="" class="frmlbltxt">Mobile Number</label>
+                    <input type="text" name="" class="form-control" id="ui_txt_SmsIndividualPhoneNumber">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnTestSms" type="button" class="btn btn-primary" onclick="SmsNotificationTemplate.SendIndividualTestSMS();">Test SMS</button>
+                <button id="btncancelTestSms" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Test Modal-->
+<!--Popup window right-->
+<div id="ui_Edit_SmsNotificationDetails" class="popupcontainer hideDiv">
+    <div class="popupItem w-550 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Edit DLT Template</h6>
+                @*<small class="popupsubtitle"></small>*@
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="editdlttemppop" class="popcontWrap">
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txt_TemplateName">Template Name</label>
+                        <input disabled="disabled" type="text" class="form-control" id="ui_txt_TemplateName">
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txtArea_MessageContent">Message Content</label>
+                        <textarea disabled="disabled" class="form-control" id="ui_txtArea_MessageContent" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txt_VendorTemplateId">Vendor Registered Template Id</label>
+                        <input type="text" class="form-control" id="ui_txt_VendorTemplateId">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fttrsubcanbtn" class="popupfooter">
+            <div class="btnwrp">
+                <a href="javascript:void(0);" class="btn btn-primary mr-2 btn-next" id="ui_btn_UpdateSmsNotificationTemplate" TemplateId="0">Update</a>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popup window right-->
+
+<script src="~/js/Preference/SmsNotificationTemplate.js"></script>

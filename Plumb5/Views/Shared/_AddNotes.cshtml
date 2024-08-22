@@ -1,0 +1,52 @@
+﻿<div class="popupcontainer hideDiv" id="dv_LmsNotes">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>ADD NOTES</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div id="lmsaddnotes" class="lmspopupswindwrp pad-20">
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="">Add Note</label>
+                        <textarea name="" class="form-control" id="txtRemarks" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="ui_NotesAttachmentfiles" aria-describedby="inputGroupFileAddon01">
+                        <label id="ui_lbl_NotesAttachment" class="custom-file-label" for="ui_NotesAttachmentfiles">Choose file</label>
+                    </div>
+                    <p class="pt-2 text-color-queued font-12">Accepted Files: *.jpeg, *.jpg, *.gif, *.png, *.pdf, *.xls. *.xlsx, *.ppt, *.pptx,</p>
+                    <div class="lmsviewnoteswrp mt-4" id="ui_dvLastNotes">
+                        <div class="tableWrapper bg-white">
+                            <div class="table-responsive min-h-300">
+                                <table class="table mb-0 border" id="ui_tblReportData">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="helpIcon m-p-w-190 td-wid-70">
+                                                Last Notes
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyNotes">
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="btnSaveNotesDetails">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button" id="btnCancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

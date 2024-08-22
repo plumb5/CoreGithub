@@ -1,0 +1,341 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Form Report";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Reports</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Web</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Forms & Banners</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Reports</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem"><a class="tap-nav-link active" href="javascript:void(0);">Embedded Forms</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/CaptureForm/Response/PopUpForms">Pop-Up Forms</a></div>
+            <div class="tabItem"><a class="tap-nav-link" href="/CaptureForm/Response/TaggedForms">Tagged Forms</a></div>
+        </div>
+        @{
+            Html.RenderPartial("_Export");
+        }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap border-bottom">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+                <div class="iconsWrap-docu">
+                    <div class="emailtempdropdown w-200 mr-2 m-w-150px">
+                        <select id="ui_drpdwn_AllEmbeddedForms" class="form-control addCampName" data-placeholder="">
+                            <option label="Search Forms" value="0">Search Forms</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="frmrepsubtabwrp">
+                <div class="frmsubtabitem">
+                    <div id="forms" class="frmrepsubmenu active">By Forms</div>
+                    <div id="response" class="frmrepsubmenu">By Response</div>
+                </div>
+                <div class="frmresponsefiltwrp">
+                    <a id="ui_clear_CustomReport" href="javascript:void(0)" class="badge badge-pill badge-secondary clrcustrep hideDiv">
+                        Clear Filter
+                        <i class="icon ion-android-close"></i>
+                    </a>
+                    <div class="frmresfunnwrp dropdown hideDiv">
+                        <i class="fa fa-filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div id="ui_filter_Dropdown" class="dropdown-menu dropdown-menu-right keepopen" aria-labelledby="addLandingpage">
+                            <div class="drop-form p-4">
+                                <h4 class="dropdown-head">Custom Reports</h4>
+                                @*<div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                <input type="text" class="form-control" id="startdatefrmrepcust" placeholder="From Date">
+                                </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                <div class="form-group">
+                                <input type="text" class="form-control" id="enddatefrmrepcust" placeholder="To Date">
+                                </div>
+                                </div>
+                                </div>*@
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select name="" class="form-control addCampName" id="ui_drpdwn_CustomReportsByForm">
+                                                <option value="0">By Form</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <select name="" class="form-control addCampName" id="ui_drpdwn_FilterByFields">
+                                                <option value="0">By Fields</option>
+                                                <option value="1">PageUrl</option>
+                                                <option value="2">Search Keyword</option>
+                                                <option value="3">Referrer</option>
+                                                <option value="4">AdSense</option>
+                                                <option value="5">AdWord</option>
+                                                <option value="6">UTM Tag Source</option>
+                                                <option value="7">Utm Medium</option>
+                                                <option value="8">Utm Campaign</option>
+                                                <option value="9">Utm Term</option>
+                                                <option value="10">Utm Content</option>
+                                                <option value="11">MailSubscribe</option>
+                                                <option value="12">MailOverallSubscribe</option>
+                                                <option value="13">SmsSubscribe</option>
+                                                <option value="14">SmsOverallSubscribe</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="ui_div_FilterFieldsAnswerByText" class="col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="ui_txt_FilterByFieldsAnswer" placeholder="Answer">
+                                        </div>
+                                    </div>
+                                    <div id="ui_div_FilterFieldsAnswerByDropDown" class="col-sm-6 col-md-6 hideDiv">
+                                        <div class="form-group">
+                                            <select name="" class="form-control" id="ui_drpdwn_FilterByFieldsAnswer">
+                                                <option value="0">Select</option>
+                                                <option value="1">True</option>
+                                                <option value="2">False</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-12 col-md-12">
+                                        <input type="text" class="form-control" id="ui_txt_FilterByText" placeholder="By Text">
+                                    </div>
+                                </div>
+                                <div class="btnWrap">
+                                    <button id="ui_btn_CustomReport" type="button" class="btn-active btn-block">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scheduledresponses">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+                            <div class="tableWrapper">
+                                <div class="table-responsive campaignresponse">
+                                    <table id="tbl-forms" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="helpIcon m-p-w-250 td-wid-40">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+
+                                                    </div>
+                                                    <div class="spacBet">
+                                                        <div>Form Identifier</div>
+                                                        <div class="th-iconWrp">
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Unique Identifier for the form
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-15" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+
+                                                    </div>
+                                                    <div class="spacBet">
+                                                        <div>Impressions</div>
+                                                        <div class="th-iconWrp">
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Number of times the form has appeared to the user in the time interval selected.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-150 td-wid-15" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+
+                                                    </div>
+                                                    <div class="spacBet">
+                                                        <div>Responses</div>
+                                                        <div class="th-iconWrp">
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Number of times the form has been filled up by the user in the time interval selected.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-150  td-wid-15" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+
+                                                    </div>
+                                                    <div class="spacBet">
+                                                        <div>Closed</div>
+                                                        <div class="th-iconWrp">
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Number of times the form was closed up by the user in the time interval selected.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-150  td-wid-15" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+
+                                                    </div>
+                                                    <div class="spacBet">
+                                                        <div>Conversion Rate</div>
+                                                        <div class="th-iconWrp">
+                                                            <i class="icon ion-ios-help-outline"></i>
+                                                            <div class="toottipWrap">
+                                                                Percentage of Impressions by Response.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_tblReportData_EmbeddedForms"></tbody>
+                                    </table>
+                                    <table id="tbl-response" class="table tbl-frmrepresp hideDiv">
+                                        <thead>
+                                            <tr>
+                                                <th class="helpIcon td-wid-10 m-p-w-40" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div> UCP
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap">
+                                                        Unified Customer Profile
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="helpIcon m-p-w-220 td-wid-40">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div> Primary Response Field
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap">
+                                                        The first field that was answered the user.
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-190 td-wid-30" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div> IP Address
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap">
+                                                        IP Address of the User's Machine.
+                                                    </div>
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-20" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>Date
+                                                    <i class="icon ion-ios-help-outline"></i>
+                                                    <div class="toottipWrap">
+                                                        Date of the reponse.
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_tblReportData_EmbeddedResponse"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            @{
+                                Html.RenderPartial("_Paging");
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@{
+    Html.RenderPartial("_ContactUCP");
+}
+
+<!--Popup window right-->
+<div id="dv_responsedetails" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Add Remove Group</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="tbl-frmresdet" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table id="ui_tbl_FormResponseDetails" class="table tbl-frmresdetail">
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="tbl-frmmultivar" class="camppopupwrppr hideDiv">
+                    <div class="popcontWrap p-0">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-35 m-p-w-170" scope="col">Form Name</th>
+                                        <th class="td-wid-15 m-p-w-120" scope="col">Impressions</th>
+                                        <th class="td-wid-15 m-p-w-120" scope="col">Responses</th>
+                                        <th class="td-wid-15 m-p-w-120" scope="col">Closed</th>
+                                        <th class="td-wid-20 m-p-w-120" scope="col">Conversion Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @*<tr class="bg-winnr">
+                                    <td class="text-left wordbreak">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                    <td>4356</td>
+                                    <td>356</td>
+                                    <td>4356</td>
+                                    <td>1356</td>
+                                    </tr>
+                                    <tr>
+                                    <td class="text-left wordbreak">The printing and typesetting industry.</td>
+                                    <td>323</td>
+                                    <td>344</td>
+                                    <td>323</td>
+                                    <td>344</td>
+                                    </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Popup window right-->
+
+<script src="~/js/CaptureForm/EmbeddedForms.js"></script>
+<script src="~/js/bootstrap-select.min.js"></script>

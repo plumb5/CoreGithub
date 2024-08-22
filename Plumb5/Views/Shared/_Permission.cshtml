@@ -1,0 +1,139 @@
+﻿@{
+    P5GenralML.LoginInfo user = JsonConvert.DeserializeObject<LoginInfo>(Context.Session.GetString("UserInfo"));
+}
+@{
+    P5GenralML.PermissionsLevels permissionsList = JsonConvert.DeserializeObject<PermissionsLevels>(Context.Session.GetString("PermissionsLevels" + user.UserId.ToString()));
+}
+@{
+    List<P5GenralML.PermissionSubLevels> subPermissionsList = JsonConvert.DeserializeObject<List<P5GenralML.PermissionSubLevels>>(Context.Session.GetString("PermissionsSubLevels" + user.UserId.ToString()));
+}
+
+@if (permissionsList != null)
+{
+    @Html.HiddenFor(model => permissionsList.Id)
+    @Html.HiddenFor(model => permissionsList.Name)
+    @Html.HiddenFor(model => permissionsList.PermissionDescription)
+    @Html.HiddenFor(model => permissionsList.IsSuperAdmin)
+    @Html.HiddenFor(model => permissionsList.MaskData)
+
+
+    @Html.HiddenFor(model => permissionsList.UserRole)
+    @Html.HiddenFor(model => permissionsList.UserRoleHasFullControl)
+    @Html.HiddenFor(model => permissionsList.UserRoleView)
+    @Html.HiddenFor(model => permissionsList.UserRoleContribute)
+
+    @Html.HiddenFor(model => permissionsList.Contacts)
+    @Html.HiddenFor(model => permissionsList.ContactsHasFullControl)
+    @Html.HiddenFor(model => permissionsList.ContactsView)
+    @Html.HiddenFor(model => permissionsList.ContactsContribute)
+    @Html.HiddenFor(model => permissionsList.ContactsDesign)
+    @Html.HiddenFor(model => permissionsList.ContactsGuest)
+
+    @Html.HiddenFor(model => permissionsList.Analytics)
+    @Html.HiddenFor(model => permissionsList.AnalyticsHasFullControl)
+    @Html.HiddenFor(model => permissionsList.AnalyticsView)
+    @Html.HiddenFor(model => permissionsList.AnalyticsContribute)
+    @Html.HiddenFor(model => permissionsList.AnalyticsGuest)
+    @Html.HiddenFor(model => permissionsList.AnalyticsDesign)
+
+    @Html.HiddenFor(model => permissionsList.Forms)
+    @Html.HiddenFor(model => permissionsList.FormsHasFullControl)
+    @Html.HiddenFor(model => permissionsList.FormsView)
+    @Html.HiddenFor(model => permissionsList.FormsContribute)
+    @Html.HiddenFor(model => permissionsList.FormsDesign)
+    @Html.HiddenFor(model => permissionsList.FormsGuest)
+
+    @Html.HiddenFor(model => permissionsList.EmailMarketing)
+    @Html.HiddenFor(model => permissionsList.EmailMarketingHasFullControl)
+    @Html.HiddenFor(model => permissionsList.EmailMarketingView)
+    @Html.HiddenFor(model => permissionsList.EmailMarketingContribute)
+    @Html.HiddenFor(model => permissionsList.EmailMarketingDesign)
+    @Html.HiddenFor(model => permissionsList.EmailMarketingGuest)
+
+    @Html.HiddenFor(model => permissionsList.LeadManagement)
+    @Html.HiddenFor(model => permissionsList.LeadManagementHasFullControl)
+    @Html.HiddenFor(model => permissionsList.LeadManagementView)
+    @Html.HiddenFor(model => permissionsList.LeadManagementContribute)
+    @Html.HiddenFor(model => permissionsList.LeadManagementGuest)
+
+    @Html.HiddenFor(model => permissionsList.Social)
+    @Html.HiddenFor(model => permissionsList.SocialHasFullControl)
+    @Html.HiddenFor(model => permissionsList.SocialView)
+    @Html.HiddenFor(model => permissionsList.SocialContribute)
+    @Html.HiddenFor(model => permissionsList.SocialDesign)
+    @Html.HiddenFor(model => permissionsList.SocialGuest)
+
+    @Html.HiddenFor(model => permissionsList.Mobile)
+    @Html.HiddenFor(model => permissionsList.MobileHasFullControl)
+    @Html.HiddenFor(model => permissionsList.MobileView)
+    @Html.HiddenFor(model => permissionsList.MobileContribute)
+    @Html.HiddenFor(model => permissionsList.MobileDesign)
+    @Html.HiddenFor(model => permissionsList.MobileGuest)
+
+    @Html.HiddenFor(model => permissionsList.MobilePushNotification)
+    @Html.HiddenFor(model => permissionsList.MobilePushNotificationHasFullControl)
+    @Html.HiddenFor(model => permissionsList.MobilePushNotificationView)
+    @Html.HiddenFor(model => permissionsList.MobilePushNotificationContribute)
+    @Html.HiddenFor(model => permissionsList.MobilePushNotificationDesign)
+    @Html.HiddenFor(model => permissionsList.MobilePushNotificationGuest)
+
+    @Html.HiddenFor(model => permissionsList.MobileEngagement)
+    @Html.HiddenFor(model => permissionsList.MobileEngagementHasFullControl)
+    @Html.HiddenFor(model => permissionsList.MobileEngagementView)
+    @Html.HiddenFor(model => permissionsList.MobileEngagementContribute)
+    @Html.HiddenFor(model => permissionsList.MobileEngagementDesign)
+    @Html.HiddenFor(model => permissionsList.MobileEngagementGuest)
+
+    @Html.HiddenFor(model => permissionsList.SMS)
+    @Html.HiddenFor(model => permissionsList.SMSHasFullControl)
+    @Html.HiddenFor(model => permissionsList.SMSView)
+    @Html.HiddenFor(model => permissionsList.SMSContribute)
+    @Html.HiddenFor(model => permissionsList.SMSDesign)
+    @Html.HiddenFor(model => permissionsList.SMSGuest)
+
+    @Html.HiddenFor(model => permissionsList.SiteChat)
+    @Html.HiddenFor(model => permissionsList.SiteChatHasFullControl)
+    @Html.HiddenFor(model => permissionsList.SiteChatView)
+    @Html.HiddenFor(model => permissionsList.SiteChatContribute)
+    @Html.HiddenFor(model => permissionsList.SiteChatDesign)
+    @Html.HiddenFor(model => permissionsList.SiteChatGuest)
+
+    @Html.HiddenFor(model => permissionsList.MainUserId)
+    @Html.HiddenFor(model => permissionsList.CreatedByUserId)
+
+    @Html.HiddenFor(model => permissionsList.WorkFlow)
+    @Html.HiddenFor(model => permissionsList.WorkFlowHasFullControl)
+    @Html.HiddenFor(model => permissionsList.WorkFlowView)
+    @Html.HiddenFor(model => permissionsList.WorkFlowContribute)
+    @Html.HiddenFor(model => permissionsList.WorkFlowDesign)
+    @Html.HiddenFor(model => permissionsList.WorkFlowGuest)
+
+    @Html.HiddenFor(model => permissionsList.WebPushNotification)
+    @Html.HiddenFor(model => permissionsList.WebPushNotificationHasFullControl)
+    @Html.HiddenFor(model => permissionsList.WebPushNotificationView)
+    @Html.HiddenFor(model => permissionsList.WebPushNotificationContribute)
+    @Html.HiddenFor(model => permissionsList.WebPushNotificationDesign)
+    @Html.HiddenFor(model => permissionsList.WebPushNotificationGuest)
+
+    @Html.HiddenFor(model => permissionsList.Whatsapp)
+    @Html.HiddenFor(model => permissionsList.WhatsappHasFullControl)
+    @Html.HiddenFor(model => permissionsList.WhatsappContribute)
+    @Html.HiddenFor(model => permissionsList.WhatsappDesign)
+    @Html.HiddenFor(model => permissionsList.WhatsappGuest)
+    @Html.HiddenFor(model => permissionsList.WhatsappView)
+}
+
+@if (subPermissionsList != null)
+{
+    foreach (var subPermissions in subPermissionsList)
+    {
+        @Html.HiddenFor(m => subPermissions.FeatureName, new { Value = true, Class = "SubPermission", id = subPermissions.FeatureName })
+
+    }
+}
+
+@{
+    Html.RenderPartial("_PermissionDenied");
+}
+
+<script src="~/js/PermissionAccess.js"></script>

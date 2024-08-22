@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: RealTime Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<link href="~/Content/css/jquery-jvectormap-2.0.5.css" rel="stylesheet" />
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">RealTime Dashboard</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">RealTime Dashboard</li>
+        </ol>
+    </div>
+    <div class="realtimewrap mr-tp-15 mb-3">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 m-mb-3">
+                <div class="box-white h-100">
+                    <div class="activuserwrp">
+                        <h1 id="spnActiveUser">0</h1>
+                        <p>Active Visitors On Site</p>
+                    </div>
+                    <div class="streambarwrap">
+                        <canvas id="realtimevisitor"></canvas>
+                    </div>
+                    <div class="byvisitorswrp border-bottom mb-3">
+                        <h6 class="box-title pl-3 pt-1">By Visitor Type</h6>
+                        <div class="row mt-3">
+                            <div class="col-6 pl-30">
+                                <p id="txtNew" class="m-0 frmlbltxt text-left">New (0)</p>
+                            </div>
+                            <div class="col-6 pr-30">
+                                <p id="txtRet" class="m-0 frmlbltxt text-right">Returning (0)</p>
+                            </div>
+                        </div>
+                        <div class="newsretrnwrp">
+                            <div id="dvnew" class="realnewwrp">
+                                <div class="realnewban mb-3 mt-1"></div>
+                            </div>
+                            <div id="dvret" class="realretrnwrp">
+                                <div class="realretban mt-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="byvisitorswrp mb-3">
+                        <h6 class="box-title pl-3 pt-0">By Platform</h6>
+                        <div class="row mt-3">
+                            <div class="col-6 pl-30">
+                                <p id="txtweb" class="m-0 frmlbltxt text-left">Web (0)</p>
+                            </div>
+                            <div class="col-6 pr-30">
+                                <p id="txtmob" class="m-0 frmlbltxt text-right">Mobile (0)</p>
+                            </div>
+                        </div>
+                        <div class="newsretrnwrp">
+                            <div id="dvweb" class="realnewwrp">
+                                <div class="webrelplat mb-2 mt-1"></div>
+                            </div>
+                            <div id="dvmob" class="realretrnwrp">
+                                <div class="mobrelplat mt-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                <div class="box-white h-100">
+                    <div class="worldmapwrp">
+                        <div id="world-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ucptblwrp h-350 overflow-y-auto">
+        <div class="box-white">
+            <div class="tableWrapper">
+                <div class="realtimetblgrid">
+                    <table id="ui_tblReportData" class="table tbl-frmrepresp  sticky-header">
+                        <thead>
+                            <tr>
+                                <th class="td-wid-5 m-p-w-40 header" scope="col">UCP</th>
+                                <th scope="col" class="m-p-w-220 td-wid-30 header">
+                                    <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>Visitors
+                                </th>
+                                <th class="m-p-w-190 td-wid-15 header" scope="col">
+                                    <div class="sortWrap"><i class="fa fa-caret-up addColor"></i><i class="fa fa-caret-down addColor"></i></div>Source
+                                </th>
+                                <th class="m-p-w-250 td-wid-30 header" scope="col">Page URL</th>
+                                <th class="m-p-w-190 td-wid-20 header" scope="col">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ui_tbodyReportData"></tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+@{
+    Html.RenderPartial("_ContactUCP");
+}
+<script>
+    var _CallApi = '@System.Configuration.ConfigurationManager.AppSettings["RealTimeDashboard"]';
+</script>
+<script src="~/js/moment.min.js"></script>
+<script src="~/js/Chart.bundle.js"></script>
+<script src="~/js/Chart.js"></script>
+<script src="~/js/chartjs-plugin-streaming@1.8.0.js"></script>
+<script src="~/Js/jquery-jvectormap-2.0.5.min.js"></script>
+<script src="~/js/jquery-jvectormap-world-mill.js"></script>
+<script src="~/js/d3.min.js"></script>
+<script src="~/js/sankey.js"></script>
+<script src="~/js/Dashboard/Realtime.js"></script>

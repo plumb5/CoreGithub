@@ -1,0 +1,132 @@
+﻿<div class="popupcontainer hideDiv" id="ui_divContactPopUp">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle LeadTab">
+            <div class="popuptitlwrp">
+                <h6 id="ui_h6ContactPopUpTitle">Create Lead</h6>
+                <small class="popupsubtitle" id="ui_smallContactPopUpSubTitle"></small>
+            </div>
+            <i id="ui_iCancelCreateContact" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+                <div class="lmspopupswindwrp">
+                    <div id="lmscreatelead" class="lmspopupswindwrp pad-20">
+                        <form id="ui_formContactProperty"></form>
+                        <div class="form-check-custom" id="dv_verifyemail">
+                            <div class="checkboxtitle">Verify Email</div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="ui_isemail_yes" name="isemail" value="1">
+                                <label class="custom-control-label" for="ui_isemail_yes">Yes</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="ui_isemail_No" name="isemail" value="0">
+                                <label class="custom-control-label" for="ui_isemail_No">No</label>
+                            </div>
+                        </div>
+                        <div class="showcontactdetials hideDiv">
+                            <div class="subscribewrap mb-2">
+                                <div class="table-responsive min-h-300">
+                                    <div class="contcountWrap pt-2 pb-2">
+                                        <p>
+
+                                            Email: <span class="text-blu" id="Totalmailcount">0</span>,
+                                            Phone Number: <span class="text-blu" id="Totalphonenumbercount">0</span>
+                                        </p>
+
+                                    </div>
+
+                                    <table class="table tbl-td-ta-lft border bg-white">
+                                        <thead>
+                                            <tr>
+                                                <th class="helpIcon td-wid-30 m-p-w-170" scope="col">
+                                                    Verified Email
+                                                </th>
+                                                <th class="helpIcon td-wid-40 m-p-w-150" scope="col">
+                                                    Un-Verified Email
+                                                </th>
+                                                <th class="helpIcon td-wid-30 m-p-w-150" scope="col">
+                                                    Invalid
+                                                    Email
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="subscribTit m-0" id="verifiedmailcount">0</p>
+                                                </td>
+                                                <td>
+                                                    <p class="subscribTit m-0" id="unverifiedmailcount">0</p>
+                                                </td>
+                                                <td>
+                                                    <p class="subscribTit m-0" id="invalidmailcount">0</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="table tbl-td-ta-lft border bg-white">
+                                        <thead>
+                                            <tr>
+                                                <th class="helpIcon td-wid-50 m-p-w-170" scope="col">
+                                                    Subscribe
+                                                </th>
+                                                <th class="helpIcon td-wid-50 m-p-w-150" scope="col">
+                                                    Unsubscribe
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        Email : <span class="countItem font-weight-bold" id="mailsubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        Email : <span class="countItem font-weight-bold" id="mailunsubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        SMS : <span class="countItem font-weight-bold" id="smssubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        SMS : <span class="countItem font-weight-bold" id="smsunsubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        Whatsapp : <span class="countItem font-weight-bold" id="whatsappsubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p class="subscribTit m-0">
+                                                        Whatsapp : <span class="countItem font-weight-bold" id="whatsappunsubscribecount">0</span>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter df-ac-sbet" id="dv_btncreatefooter">
+            <div class="btnwrp">
+                <button id="ui_btn_SubmitCreateContact" class="btn btn-primary mr-2" type="button" BindType="NEW" disabled="disabled">Create Lead</button>
+                <button class="btn btn-secondary" id="ui_btnCancelCreateContact" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/ManageContact/CreateOrUpdateContact.js"></script>

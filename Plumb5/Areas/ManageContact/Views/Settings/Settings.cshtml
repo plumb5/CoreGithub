@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Contacts Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/css/toggles-full.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javasctipt:void(0);">Contacts</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active"><a href="javascript:void(0);">Contact Merge Configuration</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ContactProperties/">Contact Properties</a></div>
+        <div class="setttabitem"><a href="/ManageContact/FtpImportSettings">FTP Import Settings</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ApiImportRequest">API Import Requests</a></div>
+        <div class="setttabitem"><a href="/ManageContact/ApiImportSettings">API Import Responses</a></div>
+    </div>
+    <div class="box-white p-0">
+        <div id="contmergconfig" class="setttabcontainer">
+            <div class="contmergeconfigwrp">
+                <div class="card-body">
+                    <div class="contsettwrp">
+                        <div class="w-50 m-w-100">
+                            <p>Please specify the key fields that need to be updated. You can choose multiple fields.</p>
+                            <p>The system will merge these fields whenever a new contact information is received.</p>
+                            <h6 class="box-title p-0 pt-3 pb-3 text-center">Merge Fields</h6>
+                            <div id="bwsnotisettcollapsetwo" class="contmergfildwrp">
+                                <div class="contmergfilditem">
+                                    <div class="subcribeWrap mb-3">
+                                        <div class="contsetlblwrp">
+                                            <label class="unsubTxt pr-4">Primary Email</label>
+                                        </div>
+                                        <div class="toggle-wrapper">
+                                            <div class="toggle toggle-light primary contactssett" style="height: 26px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subcribeWrap mb-3">
+                                        <div class="contsetlblwrp">
+                                            <label class="unsubTxt pr-4">Primary SMS</label>
+                                        </div>
+                                        <div class="toggle-wrapper">
+                                            <div class="toggle toggle-light primary contactssett" style="height: 26px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subcribeWrap mb-3 mt-4">
+                                        <div class="contsetlblwrp">
+                                            <label class="unsubTxt pr-4">Alternate Email</label>
+                                        </div>
+                                        <div class="toggle-wrapper">
+                                            <div class="toggle toggle-light primary contactssett" style="height: 26px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="subcribeWrap mb-3">
+                                        <div class="contsetlblwrp">
+                                            <label class="unsubTxt pr-4">Alternate SMS</label>
+                                        </div>
+                                        <div class="toggle-wrapper">
+                                            <div class="toggle toggle-light primary contactssett" style="height: 26px; width: 60px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="bwsnote mt-2 font-weight-light">
+                                <b>Note: </b>
+                                This is a one-time operation as involves re-building of the system indexes for optimization. This will be a permanent change & will reflect within 24 hrs of the changes made, depending on the size of data.
+                            </p>
+                            <p class=" font-weight-light">
+                                If you need to change the settings again, please contact <a href="mailto:Support@plumb5.com" class="font-weight-bold">Support@plumb5.com.</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <button id="ui_btnSaveContactSetting" type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="~/js/toggles.min.js"></script>
+<script src="~/js/ManageContact/Settings.js"></script>

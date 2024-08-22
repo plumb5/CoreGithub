@@ -1,0 +1,763 @@
+﻿@inject IWebHostEnvironment _webHostEnvironment
+@inject P5MemoryCache _P5Chache
+
+@{
+    string webRootPath = _webHostEnvironment.WebRootPath;
+    var TimeZoneData = await Plumb5GenralFunction.Helper.ReadJsonFile(webRootPath);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/client:platform.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/ionicons/css/ionicons.css" />
+    <link rel="stylesheet" href="~/Content/css/plumb5-style.css" />
+    <link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+    <script src="~/js/GenralJsEngagment.js"></script>
+    <script src="~/js/JSLINQ.js"></script>
+    <script src="~/js/printThis.js"></script>
+    <script src="/Content/select2/js/select2.full.min.js"></script>
+</head>
+<body class="A4 landscape">
+
+
+    @if (Context.Session.GetString("UserInfo") == null || Context.Session.GetString("AccountInfo") == null || Context.Session.GetString("MyAccountsDetails") == null)
+    {
+        Url.ActionLink("SignOut", "Login");
+    }
+    else
+    {
+        LoginInfo? CustomerInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("UserInfo")))
+            CustomerInfo = JsonConvert.DeserializeObject<LoginInfo?>(Context.Session.GetString("UserInfo"));
+
+        DomainInfo? AccountInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("AccountInfo")))
+            AccountInfo = JsonConvert.DeserializeObject<DomainInfo?>(Context.Session.GetString("AccountInfo"));
+
+        PermissionsLevels? PermissionDetails = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MyPermission")))
+            PermissionDetails = JsonConvert.DeserializeObject<PermissionsLevels>(Context.Session.GetString("MyPermission"));
+
+        List<Purchase> PurchaseList = new List<Purchase>();
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MLPurchase")))
+            PurchaseList = JsonConvert.DeserializeObject<List<Purchase>>(Context.Session.GetString("MLPurchase"));
+
+        MyAccountsDetails? MyAccountsDetails = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MyAccountsDetails")))
+            MyAccountsDetails = JsonConvert.DeserializeObject<MyAccountsDetails?>(Context.Session.GetString("MyAccountsDetails"));
+
+        List<Account> AccountList = null;
+        if (MyAccountsDetails != null)
+            AccountList = MyAccountsDetails.accounts;
+
+        string? AccountTimeZoneData = await _P5Chache.GetAccountTimeZoneFromCachedMemory(AccountInfo.AdsId);
+
+        <script>
+            var Plumb5AccountId = @AccountInfo.AdsId;
+            var Plumb5AccountName = "@AccountInfo.AccountName";
+            var Plumb5AccountDomain = "@AccountInfo.DomainName";
+            var Plumb5AccountTimeZone = "@AccountInfo.Timezone";
+            var Plumb5UserId = @CustomerInfo.UserId;
+
+
+            var TimeZoneDataList = JSON.parse(`@TimeZoneData`.replace(/&quot;/g, '"').replace(/&#xD;&#xA;/g, ""));
+            var TimeZoneData = TimeZoneDataList["TimeZoneList"]["" + Plumb5AccountTimeZone + ""];
+            var OnlineUrl = '@Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["ONLINEURL"].ToString()';
+            var SessionTimeout = '@Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["SESSION_TIMEOUT"].ToString()';
+            var AccountTimeZone = '@AccountTimeZoneData';
+            var TemplatePath = "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BUCKETPATH"])" + "/" + "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["TEMPLATEBUCKETMAINFOLDER"])" + "/";
+            var ClientImagePath = "@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BUCKETPATH"])";
+        </script>
+
+        <div class="top-header">
+            <div class="container-fluid">
+                <div class="logo-menu-left">
+                    <div class="logo">
+                        <div class="logoWrap">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                    <div class="barMenu" title="Collapse">
+                        <div class="barIcon"></div>
+                        <div class="barIcon"></div>
+                        <div class="barIcon"></div>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_ApplicationMenuRightTabDetails");
+                }
+                @{
+                    Html.RenderPartial("_Permission");
+                }
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="sidebar">
+                @if (PurchaseList != null)
+                {
+                    <ul class="nav nav-sidebar">
+                        @if (PurchaseList.Where(x => x.FeatureId == 31 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Dashboard))
+                        {
+                            <li class="sidebar-nav-item with-sub dash">
+                                <a class="sidebar-nav-link" href="javascript:void(0);">
+                                    <i class="icon ion-ios-home-outline"></i>Dashboard
+                                </a>
+                                <ul class="nav sidebar-nav-sub dashboardmenu">
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Dashboard/DashboardOverview">Overview</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Dashboard/Realtime">Realtime</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Dashboard/CampaignCalendar">Campaign Calendar</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Dashboard/CampaignOverView">Campaign OverView</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        }
+                        @if (PurchaseList.Where(x => x.FeatureId == 31 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Contacts))
+                        {
+                            <li class="sidebar-nav-item with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-ios-people-outline"></i>Contacts
+                                </a>
+                                <ul class="nav sidebar-nav-sub contactGroup" id="ui_lnkContactSubTabs">
+                                    <li class="nav-sub-item" id="dvManageContacts">
+                                        <a class="nav-sub-link" href="/ManageContact/Contact">Manage Contacts</a>
+                                    </li>
+                                    <li class="nav-sub-item" id="dvManageGroup">
+                                        <a class="nav-sub-link" href="/ManageContact/Group">Manage Group</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/ManageContact/ContactEmailValidationOverView">Group Validation</a>
+                                    </li>
+                                    <li class="nav-sub-item" id="dvContactImport">
+                                        <a class="nav-sub-link" href="/ManageContact/ContactImportOverViews">Contact Import</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/ManageContact/ContactDeDuplicateOverView">Manage Duplicates</a>
+                                    </li>
+
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/ManageContact/Settings">Settings</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+                        @if (PurchaseList.Where(x => x.FeatureId == 1 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Analytics || PermissionDetails.Forms || PermissionDetails.WebPushNotification))
+                        {
+                            <li class="sidebar-nav-item with-sub" id="ui_lnkAnalyticsSubTabs">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-ios-analytics-outline"></i>Web
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-anlyover">
+                                    @if (PurchaseList.Where(x => x.FeatureId == 1 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Analytics))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Analytics Overview</a>
+                                            <ul class="submenu-with-submenu nav-sub-realtime">
+                                                <li>
+                                                    <a href="/Analytics/Dashboard/Visits">Sessions</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Audience/Visitors">Visitors</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Audience/Cities">Geography</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Dashboard/NewReturn">Behaviour</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Audience/Browser">Technology</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Analytics/SiteSearchOverView">Site Search</a>
+                                        </li>
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Traffic Sources</a>
+                                            <ul class="nav-sub-allSources">
+                                                <li>
+                                                    <a href="/Analytics/Traffic/AllSources">All Sources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/Referral">Referral</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/OrganicSearch">Organic Search</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/PaidCampaigns">Paid Campaigns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/SocialSources">Social Sources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/EmailSources">Email Sources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/SmsSources">SMS Sources</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Traffic/VisitorsFlow">Visitor Flows</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Conversions</a>
+                                            <ul class="nav-sub-conversions">
+                                                <li>
+                                                    <a href="/Analytics/Conversions/Goal">Goals</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Conversions/AttributionModel">Attribution Model</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Content Analysis</a>
+                                            <ul class="nav-sub-contAnalysis">
+                                                <li>
+                                                    <a href="/Analytics/Content/PopularPages">Popular Pages</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Content/TopEntryPages">Top Entry Pages</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Content/TopExitPages">Top Exit Pages</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Analytics/Content/EventTracking">Event Tracking</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 2 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Forms))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Forms & Banners</a>
+                                            <ul class="nav-sub-frmbaners">
+                                                <li>
+                                                    <a href="/CaptureForm/Dashboard">Dashboard</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/CaptureForm/ManageEmbeddedForms">Manage Forms</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/CaptureForm/Response/EmbeddedForms">Reports</a>
+                                                </li>
+                                                @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                                {
+                                                    <li>
+                                                        <a href="/CaptureForm/Settings">Settings</a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 23 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.WebPushNotification))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Browser Notifications</a>
+                                            <ul class="nav-sub-brwsenotif" id="ui_lnkWebPushSubTabs">
+                                                <li>
+                                                    <a href="/WebPush/Dashboard">Dashboard</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/WebPush/Template">Templates</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/WebPush/ManageBrowserNotifications/Scheduled">Manage Notifications</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/WebPush/Subscribers">Subscribers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/WebPush/Report">Reports</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/WebPush/WebPushIndividualResponse">Alert and Notifications</a>
+                                                </li>
+                                                @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                                {
+                                                    <li>
+                                                        <a href="/WebPush/Setting">Settings</a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 35 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0)
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Analytics/LandingPage">
+                                                Landing
+                                                Pages
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+                        @if (PurchaseList.Where(x => x.FeatureId == 27 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Mobile || PermissionDetails.MobilePushNotification || PermissionDetails.MobileEngagement))
+                        {
+                            <li class="sidebar-nav-item with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-iphone"></i>Mobile
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-anlyovermob">
+                                    @if (PurchaseList.Where(x => x.FeatureId == 27 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Mobile))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Analytics Overview</a>
+                                            <ul class="nav-sub-realtimemob">
+                                                <li id="ui_lnkMobileAnalyticsSessions">
+                                                    <a href="/MobileAnalytics/MobileApp/Visits">Sessions</a>
+                                                </li>
+                                                <li id="ui_lnkMobileAnalyticsVisitors">
+                                                    <a href="/MobileAnalytics/MobileApp/Visitors">Visitors</a>
+                                                </li>
+                                                <li id="ui_lnkMobileAnalyticsGeography">
+                                                    <a href="/MobileAnalytics/MobileApp/Cities">Geography</a>
+                                                </li>
+                                                <li id="ui_lnkMobileAnalyticsBehaviour">
+                                                    <a href="/MobileAnalytics/MobileApp/NewReturn">Behaviour</a>
+                                                </li>
+                                                <li id="ui_lnkMobileAnalyticsTechnology">
+                                                    <a href="/MobileAnalytics/MobileApp/OperatingSystem">Technology</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">Content Analysis</a>
+                                            <ul class="nav-sub-contAnalysismob">
+                                                <li id="ui_lnkMobileAnalyticsPopularPages">
+                                                    <a href="/MobileAnalytics/MobileApp/PopularPages">Popular Pages</a>
+                                                </li>
+                                                <li id="ui_lnkMobileAnalyticsEventTracking">
+                                                    <a href="/MobileAnalytics/MobileApp/EventTracking">Event Tracking</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 26 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.MobilePushNotification))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">
+                                                Push
+                                                Notifications
+                                            </a>
+                                            <ul class="nav-sub-contPushnotifmob">
+                                                <li id="ui_lnkMobilePushDashboard"><a href="/MobilePushNotification/Dashboard">Dashboard</a></li>
+                                                <li id="ui_lnkMobilePushManageCampaigns"><a href="/MobilePushNotification/Schedules">Manage Campaigns</a></li>
+                                                <li id="ui_lnkMobilePushTemplates"><a href="/MobilePushNotification/MobilePushTemplate">Templates</a></li>
+                                                <li id="ui_lnkMobilePushSubscribers"><a href="/MobilePushNotification/MobileDeviceInfo">Subscribers</a></li>
+                                                <li id="ui_lnkMobilePushReports"><a href="/MobilePushNotification/Report">Reports</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 14 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.MobileEngagement))
+                                    {
+                                        <li class="nav-sub-item sub-with-sub">
+                                            <a class="nav-sub-link" href="javascript:void(0)">
+                                                In-App
+                                                Notifications
+                                            </a>
+                                            <ul class="nav-sub-continAppnotifmob">
+                                                <li id="ui_lnkMobileInAppDashboard"><a href="/MobileInApp/DashBoard">Dashboard</a></li>
+                                                <li id="ui_lnkMobileInAppManageCampaigns"><a href="/MobileInApp/ManageCampaign">Manage Campaigns</a></li>
+                                                <li id="ui_lnkMobileInAppReports"><a href="/MobileInApp/Reports">Reports</a></li>
+                                            </ul>
+                                        </li>
+                                    }
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li id="ui_lnkMobileSettings" class="nav-sub-item mobSettings">
+                                            <a class="nav-sub-link" href="/MobilePushNotification/MobilePushSettings">
+                                                Settings
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        @if (PurchaseList.Where(x => x.FeatureId == 3 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.EmailMarketing))
+                        {
+                            <li class="sidebar-nav-item  with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-ios-email-outline"></i>Mail
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-mail">
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Mail/MailDashboard">Dashboard</a>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Manage</a>
+                                        <ul class="nav-sub-mailmanage">
+                                            <li>
+                                                <a href="/Mail/Schedules">Campaigns</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Mail/MailTemplate">Templates</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Reports</a>
+                                        <ul class="nav-sub-mailreports">
+                                            <li>
+                                                <a href="/Mail/Responses">Campaign Responses</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Mail/BouncedHard">Bounced Contacts</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Mail/individualResponse">Alerts & Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li class="nav-sub-item" id="ui_lnkMailConfigration">
+                                            <a class="nav-sub-link" href="/Mail/MailSettings">Settings</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        @if (PurchaseList.Where(x => x.FeatureId == 4 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.SMS))
+                        {
+                            <li class="sidebar-nav-item with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-ios-chatbubble-outline"></i>SMS
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-sms">
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Sms/SmsDashboard">Dashboard</a>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Manage</a>
+                                        <ul class="nav-sub-mailmanage">
+                                            <li><a href="/Sms/Schedules">Campaigns</a></li>
+                                            <li><a href="/Sms/Template">Templates</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Reports</a>
+                                        <ul class="nav-sub-mailreports">
+                                            <li>
+                                                <a href="/Sms/Report">Campaign Responses</a>
+                                            </li>
+                                            <li>
+                                                <a href="/Sms/SmsIndividualResponse">Alerts & Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li class="nav-sub-item" id="ui_lnkSMSConfigration"><a class="nav-sub-link" href="/Sms/SmsSettings">Settings</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+                        @if (PurchaseList.Where(x => x.FeatureId == 34 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Whatsapp))
+                        {
+                            <li class="sidebar-nav-item with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-social-whatsapp-outline"></i>Whatsapp
+                                </a>
+
+                                <ul class="nav sidebar-nav-sub nav-sub-whatsapp">
+                                    <li id="ui_lnkWhatsAppDashboard" class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/WhatsApp/WhatsAppDashboard">Dashboard</a>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Manage</a>
+                                        <ul class="nav-sub-mailmanage">
+                                            <li id="ui_lnkWhatsAppCampaign"><a href="/WhatsApp/Schedules">Campaigns</a></li>
+                                            <li id="ui_lnkWhatsAppTemplate"><a href="/WhatsApp/WhatsAppTemplates">Templates</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0);">Reports</a>
+                                        <ul class="nav-sub-mailreports">
+                                            <li id="ui_lnkWhatsAppCampaignResponses">
+                                                <a href="/WhatsApp/Report">Campaign Responses</a>
+                                            </li>
+                                            <li id="ui_lnkWhatsAppAlertResponses">
+                                                <a href="/WhatsApp/WhatsAppIndividualResponse">Alerts & Notifications</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li id="ui_lnkWhatsAppSettings" class="nav-sub-item"><a class="nav-sub-link" href="/WhatsApp/WhatsAppSettings">Settings</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+
+
+
+                        @if (PurchaseList.Where(x => x.FeatureId == 7 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.SiteChat))
+                        {
+                            <li class="sidebar-nav-item with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-ios-chatboxes-outline"></i>Live Chat
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-livechat">
+                                    <li class="nav-sub-item"><a class="nav-sub-link" href="/Chat/Dashboard">Dashboard</a></li>
+                                    <li class="nav-sub-item"><a class="nav-sub-link" href="/Chat/AllChat">Manage</a></li>
+                                    <li class="nav-sub-item"><a class="nav-sub-link" href="/Chat/Responses">Reports</a></li>
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li class="nav-sub-item"><a class="nav-sub-link" href="/Chat/Configuration">Settings</a></li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        @*@if (PurchaseList.Where(x => x.FeatureId == 24).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.WhatsApp))
+                {
+                <li class="sidebar-nav-item mailDet">
+                <a class="sidebar-nav-link" href="javascript:void(0)">
+                <i class="icon ion-social-whatsapp-outline"></i>Whatsapp
+                </a>
+                </li>
+                }*@
+                        @*@if (PurchaseList.Where(x => x.FeatureId == 12 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Social))
+                {
+                <li class="sidebar-nav-item  with-sub">
+                <a class="sidebar-nav-link" href="javascript:void(0)">
+                <i class="icon ion-android-share-alt"></i>Social
+                </a>
+                <ul class="nav sidebar-nav-sub nav-sub-social">
+                <li class="nav-sub-item sub-with-sub">
+                <a class="nav-sub-link" href="javascript:void(0);">
+                <i class="fa fa-facebook-official mr-2"></i>Facebook Page
+                </a>
+                <ul class="nav-sub-social">
+                <li id="ui_lnkFacebookPageDashboard"><a href="/FacebookPage/Dashboard">Page Insights</a></li>
+                <li id="ui_lnkFacebookPageScheduledPosts"><a href="/FacebookPage/ScheduledPosts">Manage Posts</a></li>
+                <li id="ui_lnkFacebookPageManageContacts"><a href="/FacebookPage/FacebookContacts">Manage Contacts</a></li>
+                @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1 )
+                {
+                <li id="ui_lnkFacebookPageSettings"><a href="/FacebookPage/Settings">Settings</a></li>
+                }
+                </ul>
+                </li>
+                </ul>
+                </li>
+                }*@
+                        @if (PurchaseList.Where(x => x.FeatureId == 6 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.LeadManagement))
+                        {
+                            <li class="sidebar-nav-item  with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)">
+                                    <i class="icon ion-android-list"></i>Lead Management
+                                </a>
+                                <ul class="nav sidebar-nav-sub nav-sub-lms">
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Prospect/Dashboard">Dashboard</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Prospect/Leads">Leads</a>
+                                    </li>
+                                    <li class="nav-sub-item">
+                                        <a class="nav-sub-link" href="/Prospect/FollowUps">Follow-Ups</a>
+                                    </li>
+                                    <li class="nav-sub-item sub-with-sub">
+                                        <a class="nav-sub-link" href="javascript:void(0)">Reports</a>
+                                        <ul class="nav-sub-leadreports">
+                                            <li><a href="/Prospect/Reports/MyReports">My Reports</a></li>
+                                            <li><a href="/Prospect/Reports/ScheduledMailAlerts">Scheduled Mail Alerts</a></li>
+                                            <li><a href="/Prospect/Reports/ScheduledSmsAlerts">Scheduled SMS Alerts</a></li>
+                                            <li><a href="/Prospect/Reports/scheduledwhatsappalerts">Scheduled WhatsApp Alerts</a></li>
+                                            <li><a href="/Prospect/ContactArchive">Archive</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-sub-item" id="dvLmsContactImport">
+                                        <a class="nav-sub-link" href="/Prospect/ContactImportOverViews">Import Overview</a>
+                                    </li>
+                                    @if (PurchaseList.Where(x => x.FeatureId == 33 && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.LeadScoring))
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Prospect/leadscoring">Lead Scoring</a>
+                                        </li>
+                                    }
+                                    @if (PermissionDetails == null || CustomerInfo.IsSuperAdmin == 1)
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Prospect/Settings">Settings</a>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                        @if ((PurchaseList.Where(x => x.FeatureId == 22 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0 || PurchaseList.Where(x => x.FeatureId == 25 && x.AccountId == AccountInfo.AdsId && x.FeatureStatus == true).Count() > 0) && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.WorkFlow || PermissionDetails.Segmentation))
+                        {
+                            <li class="sidebar-nav-item  with-sub">
+                                <a class="sidebar-nav-link" href="javascript:void(0)"><i class="icon ion-ios-settings"></i>Advanced</a>
+                                <ul class="nav sidebar-nav-sub nav-sub-adv">
+                                    @if (PurchaseList.Where(x => x.FeatureId == 22 && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.WorkFlow))
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Journey/Workflows">Journey Designer</a>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 25 && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.Segmentation))
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/SegmentBuilder/CreateSegment">Segment Builder</a>
+                                        </li>
+                                    }
+                                    @if (PurchaseList.Where(x => x.FeatureId == 36 && x.FeatureStatus == true).Count() > 0 && (CustomerInfo.IsSuperAdmin == 1 || PermissionDetails == null || PermissionDetails.CustomEvents))
+                                    {
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/CustomEvents/CustomEventsOverview/">Custom Events</a>
+                                        </li>
+
+                                        <li class="nav-sub-item">
+                                            <a class="nav-sub-link" href="/Revenue/RevenueDashboard/">Revenue</a>
+                                        </li>
+                                    }
+
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                }
+            </div>
+            <div class="mainpanel lmsreportwid" id="ui_mainpanel">
+                <div class="container" id="ui_divViewPageContainer">
+                    @RenderBody()
+                </div>
+                <div class="footer" id="ui_divMasterFooter">
+                    <div class="container">
+                        <div class="copyriteWrp">
+                            <span>© 2014 onwards. All Rights Reserved. Plumb5 is brought to you by Decisive Analytical Systems PVT.Ltd.</span>
+                            <span>
+                                <a href="https://plumb5.com/terms.html" target="_blank">Terms of use</a>  / <a href="https://plumb5.com/privacy.html" target="_blank">Privacy Policy</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Loading DIV Start-->
+        <div id="ui_divPageLoading" class="spinnerWrap">
+            <div class="spinnerItem position-relative">
+                <div class="sk-wave">
+                    <div class="sk-rect sk-rect1"></div>
+                    <div class="sk-rect sk-rect2"></div>
+                    <div class="sk-rect sk-rect3"></div>
+                    <div class="sk-rect sk-rect4"></div>
+                    <div class="sk-rect sk-rect5"></div>
+                </div>
+            </div>
+        </div>
+        <!--Loading DIV End-->
+        <!--Success Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterSuccess">
+            <div class="alert alert-success mt-2">
+                <strong>Well done!</strong>
+                <span id="ui_span_MasterSuccess_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true" onclick="RemoveShowErrorMessage();">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Success Message DIV End-->
+        <!--Error Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterError">
+            <div class="alert alert-danger mt-2">
+                <strong>Oh snap! </strong>
+                <span id="ui_span_MasterError_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Error Message DIV End-->
+        <!--Contact Setting Modal Start-->
+        <div class="modal fade bd-example-modal-sm" id="ui_divContactSetting" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header delete-modal-header">
+                        <h5 class="modal-title">Setting is pending?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Contact merge Settings has not be Saved.<br />
+                            Please visit Settings Page under Contact and Click Save.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="ui_btnRedirectContactSetting" type="button" class="btn btn-secondary">Save Settings</button>
+                        <button id="ui_btnCancelContactSetting" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Contact Setting Modal End-->
+        <!--Confirmation to Execute longer Method-->
+        <div class="modal fade bd-example-modal-sm show" id="HttpMethodConfirmation" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header delete-modal-header">
+                        <h5 class="modal-title">Data Loading</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Query Taking longer to execute than expected time
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-id=0 data-dismiss="modal" onclick="javascript:document.getElementById('HttpMethodConfirmation').style.display='none'">Continue</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelHttpMethod()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="clkMethodConfirmation" data-toggle="modal" data-target="#HttpMethodConfirmation" href="javascript:void(0)" style="display:none">MethodConfirmation</a>
+        <!--End Confirmation to Execute longer Method-->
+
+        <script src="~/js/sidebar.js"></script>
+        <script src="~/js/custom.js"></script>
+        <script src="~/js/Chart.bundle.js"></script>
+        <script src="~/js/Chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+        <script src="~/js/AccountMaster.js"></script>
+        @*<script src="~/js/CoBrowserInformation.js"></script>*@
+        Html.RenderPartial("_P5TrackingScript");
+    }
+
+
+</body>
+</html>

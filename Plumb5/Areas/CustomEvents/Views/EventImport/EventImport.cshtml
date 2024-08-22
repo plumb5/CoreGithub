@@ -1,0 +1,205 @@
+﻿@{
+    ViewBag.Title = "EventImport";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet hideDiv" id="ui_sectionCustomEventImport_Start">
+    <div class="pageheader">
+        <h6 class="pagetitle">Upload Custom Data</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Advanced</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Custom Events</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Upload Custom Data</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportWrap">
+            <div class="customuplddatawrp">
+                <div class="contactImportItem">
+                    <div class="choosfileWrap">
+                        <div class="dradprogressbar">
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar h-2" style="width:0%"></div>
+                            </div>
+                        </div>
+                        <div class="dropWrapper position-relative">
+                            <div class="droparea">
+                                <div class="dropareainner">
+                                    <div class="row">
+                                        <div class="col-md-12 d-flex align-items-center">
+                                            <i class="icon ion-android-person fa-3x mr-3"></i>
+                                            <div class="dragdropwrap">
+                                                <p class="dragtext">
+                                                    Drag and drop or
+                                                    <input id="ui_btnFileImportChoose" class="uploadbtn"
+                                                           type="button" value="Choose a file" /> to
+                                                    upload your contacts.
+                                                </p>
+                                                <p class="dragtext">
+                                                    All .csv, xlsx, and .xls file types
+                                                    are supported.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <input id="ui_fileContactImport" class="upload" type="file" accept=".csv,.xls,.xlsx" />
+                            </div>
+                            <p class="font-11 mt-3 text-color-queued">
+                                Please ensure that eventname,
+                                emailid/phonenumber and
+                                eventdate are
+                                the first three
+                                data points on each row.Download our
+                                <a href="~/template/P5_Sample_Event.csv" target="_blank">sample CSV</a> file to see the format required.
+                                @* You may also read <a href="javascript:void(0)" target="_blank">our documentation</a> for more details on CSV uploads.*@
+                            </p>
+                            <div class="filesNameWrap hideDiv" id="ui_divImportFileDetails">
+                                <div class="fildetWrap">
+                                    <div class="filclsewrap" id="ui_divCloseImportFileDetails">
+                                        <i class="icon ion-android-close"></i>
+                                    </div>
+                                    <div class="fildets">
+                                        <div class="filicn">
+                                            <i class="icon ion-document"></i>
+                                        </div>
+                                        <div class="fildetItem">
+                                            <p class="fileNameTxt" id="ui_pImportFileName"></p>
+                                            <p class="filesizNum mb-3" id="ui_pImportFileSize"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="custeventtblwrp">
+                    <div class="tableWrapper">
+                        <div class="table-responsive td-tr-bg-white min-h-100">
+                            <table class="table tbl-td-ta-lft border">
+                                <thead>
+                                    <tr>
+                                        <th class="td-wid-20 m-p-w-150" scope="col">eventname</th>
+                                        <th class="td-wid-20 m-p-w-150" scope="col">emailid</th>
+                                        <th class="td-wid-25 m-p-w-400" scope="col">eventdate </th>
+                                        <th class="td-wid-20 m-p-w-60" scope="col">product1</th>
+                                        <th class="td-wid-15 m-p-w-60" scope="col">product2</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>add_to_cart</td>
+                                        <td>john@gmail.com</td>
+                                        <td>2022-12-03 04:37:59 AM</td>
+                                        <td>Iphone 7</td>
+                                        <td>7000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>add_to_cart</td>
+                                        <td>ram@gmail.com</td>
+                                        <td>2022-12-13 07:21:33 pM</td>
+                                        <td>Iphone 14</td>
+                                        <td>7000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-page-footer">
+                <div class="backbtnWrap">
+
+                </div>
+                <div class="nextbtnWrap">
+                    <a class="btn btn-primary disableDiv" id="ui_btnCustomEventImport_Start_Next">
+                        Next
+                        <i class="icon ion-chevron-right pl-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sheet hideDiv" id="ui_sectionCustomEventImport_Mapping">
+    <div class="pageheader">
+        <h6 class="pagetitle">Custom Data Map Columns</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Advanced</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Custom Events</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Map Columns</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15 border-0">
+        <div class="contimportWrap">
+            <div class="container-page-body p-0">
+                <div class="mapcustdatacolWrap">
+                    <div class="tableWrapper">
+                        <div class="table-responsive">
+                            <table class="table border tbl-mapcolumn">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="helpIcon m-p-w-100 td-wid-10">
+                                            Matched
+                                        </th>
+                                        <th class="helpIcon m-p-w-190 td-wid-20" scope="col">
+                                            Column
+                                            header from file
+                                        </th>
+                                        <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                            Existing
+                                            Data Type
+                                        </th>
+                                        <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                            Uploaded
+                                            Data Type
+                                        </th>
+                                        <th class="helpIcon m-p-w-190 td-wid-15" scope="col">
+                                            Preview
+                                            Information
+                                        </th>
+                                        <th class="helpIcon m-p-w-220 td-wid-15" scope="col">
+                                            Plumb5
+                                            Field
+                                        </th>
+                                        <th class="helpIcon m-p-w-100 td-wid-10" scope="col">
+                                            Actions
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ui_tbodyReportData"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-page-footer">
+                <div class="backbtnWrap">
+                    <a class="btn btn-second" id="ui_btnBackToCustomEventImport_Start">
+                        <i class="icon ion-chevron-left pr-2"></i> Back
+                    </a>
+                </div>
+                <div class="nextbtnWrap d-flex align-items-center">
+                    <div class="nextbtnItem">
+                        <a class="btn btn-primary" id="ui_btnCustomEventImport_Submit">
+                            Finish
+                            <i class="icon ion-chevron-right pl-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@{ Html.RenderPartial("_AddCustomField"); }
+
+<!--CustomField PopUp-->
+<link rel="stylesheet" href="~/Content/select2/css/select2.min.css" />
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/CustomEvents/EventImport.js"></script>

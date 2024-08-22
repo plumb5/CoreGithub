@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "CustomEventsSegment";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Custom Events Segment Builder</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Advanced</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Custom Events Segment Builder</li>
+        </ol>
+    </div>
+
+    <div class="segtoptabwrp">
+        <div class="seggrouptitwrp">
+            <div class="seggroupnamwrp">
+                <input type="text" class="form-control form-control-sm mr-2" disabled="" value="CustomEvents-1" name="" id="txtGroupName">
+                <i id="editseggrpname" class="fa fa-pencil"></i>
+            </div>
+            <div class="seggroupdescrpwrp">
+                <input type="text" class="form-control form-control-sm mr-2" disabled="" value="Custom Group Description" name="" id="txtGroupDescription">
+                <i id="editseggrpdescrp" class="fa fa-pencil"></i>
+            </div>
+        </div>
+        <div class="segserchmicwrp">
+            <input type="text" name="" placeholder="Please tell me about the segment you want to create" class="form-control hideDiv" id="">
+            <i class="fa fa-microphone mr-20" style="display:none;"></i>
+            @*<p class="lstupdtxt" id="lblLastUpdate"></p>*@
+        </div>
+        @*<div class="segserchmicwrp" id="ui_existingDatabase">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="ui_existingdatabase" name="databasedetails" class="custom-control-input" wfd-id="id2" checked="checked" value="false">
+                    <label class="custom-control-label" for="ui_existingdatabase">Existing Database</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="ui_nowonwards" name="databasedetails" class="custom-control-input" wfd-id="id3" value="true">
+                    <label class="custom-control-label" for="ui_nowonwards">Now Onwards</label>
+                </div>
+            </div>*@
+
+        <div class="segserchmicwrp">
+            <div class="onetimedatabasewrap mt-3" id="ui_datewise">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button id="onetimedrpdown" class="btn btn-secondary" type="button">
+                            Event Date
+                        </button>
+                        <div class="dropdown-menu">
+                            <a data-onetimedate="Event Date" class="dropdown-item onetimedateoption" href="#">Event Date</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Start Date" id="startdate" />
+                    <input type="text" class="form-control" placeholder="End Date" id="enddate" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="addsegconditwrp" class="box-white p-4 border-top-0 position-relative">
+        <div class="lastupdateseg"><p class="small" id="lblLastUpdate"></p></div>
+        <h6 class="box-title p-0">If Conditions Matches:</h6>
+        <div class="box-litgrey">
+            <div class="segconditfldwrp segmentcond">
+                <div class="row m-gut">
+                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-10">
+                        <div class="form-group">
+                            <select name="tablename" id="table_1" class="form-control addCampName" OnChange="SegmentBuilderUtil.BindingColumnName(1)">
+                                <option value="select">Select Table</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-10">
+                        <div class="form-group">
+                            <select name="columnname" id="column_1" class="form-control addCampName" OnChange="SegmentBuilderUtil.BindingInputValue(1)">
+                                <option value="select">Select Column</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-10">
+                        <div class="form-group">
+                            <select name="logic" id="logic_1" class="form-control addCampName" onchange="SegmentBuilderUtil.DisableCommonField(1)">
+                                <option value="Equals">Equals</option>
+                                <option value="In">In</option>
+                                <option value="Like">Like</option>
+                                <option value="GreaterOrEquals">GreaterThan Or Equals</option>
+                                <option value="GreaterThan">GreaterThan</option>
+                                <option value="LessOrEquals">LessThan Or Equals</option>
+                                <option value="LessThan">LessThan</option>
+                                <option value="NotEquals">NotEquals</option>
+                                <option value="NotLike">NotLike</option>
+                                <option value="IsNotEmpty">IsNotEmpty</option>
+                                <option value="IsEmpty">IsEmpty</option>
+                                <option value="CountEquals">No.Of Occurences Is Equals</option>
+                                <option value="CountGreaterThan">No.Of Occurences Is GreaterThan</option>
+                                <option value="CountLessThan">No.Of Occurences Is LessThan</option>
+                                <option value="CountNotEquals">No.Of Occurences Is NotEquals</option>
+                                <option value="AverageEquals">Average Of Selected Column Is Equals</option>
+                                <option value="AverageGreaterThan">Average Of Selected Column Is GreaterThan</option>
+                                <option value="AverageLessThan">Average Of Selected Column Is LessThan</option>
+                                <option value="AverageNotEquals">Average Of Selected Column Is NotEquals</option>
+                                <option value="TotalEquals">Total Of Selected Column Is Equals</option>
+                                <option value="TotalGreaterThan">Total Of Selected Column Is GreaterThan</option>
+                                <option value="TotalLessThan">Total Of Selected Column Is LessThan</option>
+                                <option value="TotalNotEquals">Total Of Selected Column Is NotEquals</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 p-gut m-mb-10">
+                        <input type="text" name="value" class="form-control form-control-sm" id="value_1">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="segappndconditwrp">
+
+            </div> -->
+
+            <button onclick="CreateSubCondition(1);" id="BtnAddCond_1" type="button" class="btn btn-transcol addanthrnewconditbtn ContributePermission">+ Add another condition</button>
+        </div>
+
+        <div class="segaddnewgrpbtnwrp">
+            <div class="segbrdbtnwrp">
+                <div class="segbrdwid"></div>
+                <button type="button" class="btn btn-third segaddnewgrpbtn ContributePermission">Add a new Segment Group</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="segsavebtnwrp">
+        <p class="text-color-error font-11 w-100 mb-2" style="margin-left: 20px;">The segment will create based on the custom events date time</p>
+        <a href="javascript:void(0)" class="btn btn-secondary mr-2 ContributePermission" onclick="SegmentBuilderUtil.TestQuery();" id="btnTest">Test</a>
+        <a id="ui_btn_CreateSegment" href="javascript:void(0)" class="btn btn-primary">Save</a>
+    </div>
+</section>
+
+<script src="~/js/CustomEvents/CustomEventsSegment.js"></script>

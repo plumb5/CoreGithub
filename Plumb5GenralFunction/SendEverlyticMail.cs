@@ -639,15 +639,15 @@ namespace Plumb5GenralFunction
             }
         }
 
-        private async void AppendMailTemplate()
+        private void AppendMailTemplate()
         {
             MailTemplateFile mailTemplateFile;
             using (var objBL = DLMailTemplateFile.GetDLMailTemplateFile(AccountId, SQLProvider))
             {
-                mailTemplateFile = await objBL.GetSingleFileType(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
+                mailTemplateFile = objBL.GetSingleFileTypeSync(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName).ConfigureAwait(false).GetAwaiter().GetResult();
             MainContentOftheMail.Append(fileString);
         }
 

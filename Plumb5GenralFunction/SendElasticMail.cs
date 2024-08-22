@@ -583,7 +583,7 @@ namespace Plumb5GenralFunction
                 for (var i = 0; i < mailTemplateAttachment.Count; i++)
                 {
                     SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-                    attachments += ";" + awsUpload.GetFileContentString(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                    attachments += ";" + awsUpload.GetFileContentString(mailTemplateAttachment[i].AttachmentFileName, awsUpload._bucketName);
                 }
             }
 
@@ -727,7 +727,7 @@ namespace Plumb5GenralFunction
                 mailTemplateFile = objBL.GetSingleFileTypeSync(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName).ConfigureAwait(false).GetAwaiter().GetResult();
             MainContentOftheMail.Append(fileString);
         }
 

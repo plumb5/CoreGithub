@@ -1,0 +1,164 @@
+﻿<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="box-white border-top-0">
+            <div class="tableWrapper" style="margin-bottom: 15px;">
+                <div class="table-responsive sticky-hscroll">
+                    <table class="table manageContacts" id="ui_tblReportData">
+                        <thead id="ui_trheadReportData">
+                            <tr>
+                                <th id="dv_CheckBox" class="td-wid-2 m-p-w-40" scope="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input selchbxall" id="contacts_check" name="example1">
+                                        <label class="custom-control-label" for="contacts_check"></label>
+                                    </div>
+                                </th>
+                                <th scope="col" class="helpIcon m-p-w-120 td-wid-8">
+                                    <div class="sortWrap">
+                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                    </div>
+                                    Label<i class="icon ion-ios-help-outline"></i>
+                                    <div class="toottipWrap"></div>
+                                </th>
+                                <th scope="col" class="helpIcon m-p-w-220 td-wid-19">
+                                    <div class="sortWrap">
+                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                    </div>
+                                    Name<i class="icon ion-ios-help-outline"></i>
+                                    <div class="toottipWrap"></div>
+                                </th>
+                                <th class="helpIcon m-p-w-190 td-wid-19" scope="col">
+                                    <div class="sortWrap">
+                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                    </div>
+                                    Email<i class="icon ion-ios-help-outline"></i>
+                                    <div class="toottipWrap"></div>
+                                </th>
+                                <th class="helpIcon m-p-w-190 td-wid-19" scope="col">
+                                    <div class="sortWrap">
+                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                    </div>
+                                    Phone Number<i class="icon ion-ios-help-outline"></i>
+                                    <div class="toottipWrap"></div>
+                                </th>
+                                <th class="helpIcon m-p-w-160 td-wid-13" scope="col">
+                                    Stage
+                                    <div class="toottipWrap"></div>
+                                </th>
+                                <th class="helpIcon m-p-w-190 td-wid-20" scope="col">
+                                    <div class="sortWrap">
+                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                    </div>
+                                    Last Updated Date
+                                    <div class="toottipWrap"></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="ui_tbodyReportData"></tbody>
+                    </table>
+                </div>
+            </div>
+            @{
+                Html.RenderPartial("_Paging");
+            }
+        </div>
+    </div>
+</div>
+
+
+
+@{
+    Html.RenderPartial("_AssignMultipleLead");
+}
+@*@{ Html.RenderPartial("_AssignMultipleSource"); }*@
+@{
+    Html.RenderPartial("_AssignMultipleStage");
+}
+@{
+    Html.RenderPartial("_AssignSingleLead");
+}
+@{
+    Html.RenderPartial("_AssignSingleLeadLabel");
+}
+@{
+    Html.RenderPartial("_AssignMultipleLeadLabel");
+}
+@{
+    Html.RenderPartial("_AssignSingleStage");
+}
+@{
+    Html.RenderPartial("_ConfirmFollowUpCompleted");
+}
+@{
+    Html.RenderPartial("_ContactUCP");
+}
+
+@*@{ Html.RenderPartial("_CreateOrUpdateGroup"); }*@
+@{
+    Html.RenderPartial("_DeleteLead");
+}
+@{
+    Html.RenderPartial("_LeadCustomReportPopUp");
+}
+@{
+    Html.RenderPartial("_LmsSavedCustomReport");
+}
+@{
+    Html.RenderPartial("_LeadHistory");
+}
+@{
+    Html.RenderPartial("_ViewFollowUp");
+}
+
+
+<div class="popupcontainer hideDiv" id="div_EditFollowupNote">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6 id="mainTab">Manage Lead</h6>
+                <small class="popupsubtitle"></small>
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont">
+
+                <div id="lmseditlead" class="lmspopupswindwrp">
+                    <div class="lmsedittabwrap">
+                        <div data-lmsedittab="editleadtabscontent" class="lmsedittabitem active" id="tabLead">Edit Leads</div>
+                        <div data-lmsedittab="lmsaddfollowup" class="lmsedittabitem" id="tabFollowup">Add Follow-Up</div>
+                        <div data-lmsedittab="lmsaddnotes" class="lmsedittabitem" id="tabNote">Add Notes</div>
+                    </div>
+                    <div class="lmstabcontentwrap pad-20">
+                        <div id="editleadtabscontent" class="editlmstabscont">
+
+                            @{
+                                Html.RenderPartial("_CreateLead");
+                            }
+
+                        </div>
+                        <div id="lmsaddfollowup" class="editlmstabscont hideDiv">
+                            @{
+                                Html.RenderPartial("_AddFollowUp");
+                            }
+
+                        </div>
+                        <div id="lmsaddnotesNew" class="editlmstabscont hideDiv">
+                            @{
+                                Html.RenderPartial("_AddLmsNotes");
+                            }
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="~/js/sticky-hscroll.js"></script>
+<script src="~/js/Prospect/LeadsActionTab.js"></script>
+<script src="~/js/Prospect/LmsDefaultInitialise.js"></script>
+<script src="~/js/Prospect/LeadReportBinding.js"></script>

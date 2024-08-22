@@ -1,0 +1,31 @@
+﻿
+<div class="pagiWrap hideDiv" id="ui_divPaging">
+    <div class="paginItem">
+        <div class="showrowWrap">
+            <label class="rowTxt" for="">Show rows: </label>
+            <select class="rowdropdown" name="pageRows" id="drp_RecordsPerPage">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="1000">1000</option>
+            </select>
+        </div>
+        <div class="pagiarrow">
+            <div class="pagicount">
+                <label class="rowTxt pl-2">Showing</label>
+                <label class="rowTxt pl-2" for="" id="ui_lblPagingDesc">&nbsp;</label>
+            </div>
+            <div class="arrowWrap">
+                <div class="arrleft" id="ui_divPreviousPage" title="Previous">
+                    <i class="icon ion-chevron-left"></i>
+                </div>
+                <div class="arrleft" id="ui_divNextPage" title="Next">
+                    <i class="icon ion-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/Paging.js"></script>

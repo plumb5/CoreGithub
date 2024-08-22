@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "LeadAssignNotificationSetting";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Form Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Web</a></li>
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Forms & Banners</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/CaptureForm/Settings">Configuration</a></div>
+        <div class="setttabitem" data-setttype="javascript:void(0);"><a href="/CaptureForm/NotificationRules">Notification Rules</a></div>
+        <div class="setttabitem active" data-setttype="javascript:void(0);"><a href="/CaptureForm/LeadAssignNotificationSetting">Lead Assignment Agent Notification</a></div>
+    </div>
+
+    @{
+        Html.RenderPartial("_LeadAssignmentAgentNotification");
+    }
+</section>
+
+
+

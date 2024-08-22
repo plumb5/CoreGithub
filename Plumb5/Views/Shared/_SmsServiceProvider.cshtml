@@ -1,0 +1,413 @@
+﻿@{
+    var SmsVendorList = Plumb5GenralFunction.SmsGeneralBaseFactory.SMSVendorList;
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">SMS Settings</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">SMS</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Settings</li>
+        </ol>
+    </div>
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem active" data-setttype="configuration">Configuration</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white p-3">
+                    <div class="smssettheadwrap topTabWrap brd-TRL">
+                        SMS Service Provider (SSP)
+
+                        <a id="Ui_addvendors" href="javascript:void(0);" data-toggle="modal" class="mr-3 btn btn-primary btn-sm DesignPermission">Add Vendors</a>
+
+                    </div>
+                    <div class="addemailWrap m-mb-3">
+                        <div class="embtnwrap border-right border-left hideDiv">
+                            <button type="button" class="btn btn-primary btn-sm selprovid">Add Provider</button>
+                        </div>
+                        <div class="tableWrapper tbl-settings">
+                            <div class="table-responsive">
+                                <table class="table tbl-td-ta-lft border-right border-left" id="ui_tblReportData">
+                                    <thead>
+                                        <tr>
+                                            <th class="helpIcon td-wid-20 m-p-w-190" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Configuration Name</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap">Configuration Name</div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-190" scope="col">
+                                                <div class="spacBet">
+                                                    <div>SSP</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap">Service Provider</div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-220" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Promotional API Key</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap">Promotion Api Key</div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-220" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Transactional API Key</div>
+                                                    <div class="th-iconWrp"><i class="icon ion-ios-help-outline"></i><div class="toottipWrap">Transactional Api Key</div></div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-150" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Created Date/Updated Date</div>
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-150" scope="col">
+                                                <div class="spacBet">
+                                                    <div>Actions</div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodySmsConfigurationDetails">
+                                        <tr id="ui_NotConfigured">
+                                            <td colspan="5" class="text-center font-weight-bold">You don't have any SSP configured. <a href="javascript:void(0)" id="addprovidermod">Click here</a> to Select provider to Add SSP</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="h-70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Delete Confirm Modal-->
+<div class="modal fade bd-example-modal-sm" id="deletegroups" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header delete-modal-header">
+                <h5 class="modal-title">Delete this settings?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This action can't be undone. Are you sure that you want to permanently delete this row?</p>
+            </div>
+            <div class="modal-footer">
+                @*<button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal" onclick="smsSettingUtil.DeleteVendorDetails();">Delete</button>*@
+                <button id="deleteRowConfirm" type="button" class="btn btn-danger" data-dismiss="modal">Delete</button>
+                <button id="cancelRowConfirm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete Confirm Modal-->
+<!--Popup window right-->
+<div class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative popup-tbl">
+        <div class="popuptitle">
+            <h6>SMS Settings</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-20">
+                <div class="form-group">
+                    <label class="frmlbltxt" for="exampleInputEmail1">Provider Name</label>
+                    <div class="custselectwrap">
+                        <input type="text" class="form-control drpdownselected text-int-30" value="Select" id="ui_ServiceProvider" />
+                        <div class="drpdwnarrw">
+                            <i class="icon ion-android-arrow-dropdown"></i>
+                        </div>
+                        <div class="selproviderwrap">
+                            @foreach (var item in SmsVendorList)
+                            {
+                                <div class="selctproviderItem" data-providercampname="@item.Name" data-providercamplogo="@item.Logo">
+                                    <div class="compdetails">
+                                        <div class="@item.IconStyle"></div>
+                                        <div class="provcompname ml-2">@item.Name</div>
+                                    </div>
+                                    <div class="providcount">@item.CountryCode</div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="dltradiwrp df-ac-sbet hideDiv" id="ui_divDltDetails">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="ui_chkDltRequired" />
+                        <label class="custom-control-label" for="ui_chkDltRequired">DLT Required</label>
+                        <span>
+                            <i class="icon ion-information-circled dashinfotip">
+                                <div class="dashtooltipwrp" style="left: 0px; overflow-y: scroll; height: 300px;top:18px;">
+                                    <div class="dashtooltiptit">DLT HEADER DETAILS</div>
+                                    <div class="dashtooltipbody">
+                                    </div>
+                                </div>
+                            </i>
+                        </span>
+                    </div>
+
+                    <div class="dltdrpdwnwrp w-60">
+                        <select class="form-control hideDiv" id="ui_ddlDltOperator">
+                            <option value="select">Select DLT Operator</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="frmlbltxt">Configuration Name</label>
+                    <input type="text" class="form-control" id="ui_ConfigurationName" autocomplete="off">
+                </div>
+                <div class="transtypwrap mt-4">
+                    <div id="promoandtranskey" class="accordion-one" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="headingOne">
+                                <a data-toggle="collapse" data-parent="#promoandtranskey" href="#promotionalaccrd" aria-expanded="true" aria-controls="promotionalaccrd" class="tx-gray-800 transition collapsed">
+                                    Promotional Settings
+                                </a>
+                            </div><!-- card-header -->
+
+                            <div id="promotionalaccrd" data-parent="#promoandtranskey" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    <div class="promowrp pt-2 pl-3 pr-3 pb-3">
+                                        @* NetCore *@
+                                        <div class="sspfrmwrap mt-3 NetCoreProvider hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreConfigurationUrlProm" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Feed Id</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreFeedIdProm" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreSenderNameProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">User Name</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreUserNameProm" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Password</label>
+                                                <input type="password" class="form-control" id="ui_NetcorePasswordProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* General Vendor Feilds *@
+                                        <div class="sspfrmwrap mt-3 GeneralProvider hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_GeneralConfigurationUrlProm" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_GeneralSenderNameProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">User Name</label>
+                                                <input type="text" class="form-control" id="ui_GeneralUserNameProm" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Password</label>
+                                                <input type="password" class="form-control" id="ui_GeneralPasswordProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* Tmarc *@
+                                        <div class="sspfrmwrap mt-3 Tmarc hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_TmarcConfigurationUrlProm" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Api Key</label>
+                                                <input type="password" class="form-control" id="ui_TmarcApiKeyProm" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_TmarcSenderNameProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* Promotexter *@
+                                        <div class="sspfrmwrap mt-3 Promotexter hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterConfigurationUrlProm" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Id</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterSenderIdProm" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">ApiKey</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterApiKeyProm" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Api Secret</label>
+                                                <input type="password" class="form-control" id="ui_PromotexterApiSecretProm" autocomplete="off" maxlength="100">
+                                            </div>
+
+                                        </div>
+                                        @*<div class="form-group">
+                                        <label class="frmlbltxt">Telemarketer Id</label>
+                                        <input type="text" class="form-control" id="ui_TelemarketerIdProm" autocomplete="off" maxlength="100">
+                                        </div>*@
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Entity Id</label>
+                                            <input type="text" class="form-control" id="ui_EntityIdProm" autocomplete="off" maxlength="100" placeholder="optional">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="trans">
+                                <a class="tx-gray-800 transition collapsed" data-toggle="collapse" href="#transactionalaccrd" data-parent="#promoandtranskey" aria-expanded="false" aria-controls="transactionalaccrd">
+                                    Transactional Settings
+                                </a>
+                            </div>
+                            <div id="transactionalaccrd" class="collapse" role="tabpanel" data-parent="#promoandtranskey" aria-labelledby="headingTwo">
+                                <div class="card-body">
+                                    <div class="transwrap pt-2 pl-3 pr-3 pb-3">
+                                        @* NetCore *@
+                                        <div class="sspfrmwrap mt-3 NetCoreProvider hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreConfigurationUrlTrans" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Feed Id</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreFeedIdTrans" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreSenderNameTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">User Name</label>
+                                                <input type="text" class="form-control" id="ui_NetcoreUserNameTrans" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Password</label>
+                                                <input type="password" class="form-control" id="ui_NetcorePasswordTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* General Vendor Feilds *@
+                                        <div class="sspfrmwrap mt-3 GeneralProvider hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_GeneralConfigurationUrlTrans" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_GeneralSenderNameTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">User Name</label>
+                                                <input type="text" class="form-control" id="ui_GeneralUserNameTrans" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Password</label>
+                                                <input type="password" class="form-control" id="ui_GeneralPasswordTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* Tmarc *@
+                                        <div class="sspfrmwrap mt-3 Tmarc hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_TmarcConfigurationUrlTrans" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Api Key</label>
+                                                <input type="password" class="form-control" id="ui_TmarcApiKeyTrans" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Name</label>
+                                                <input type="text" class="form-control" id="ui_TmarcSenderNameTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                        </div>
+
+                                        @* Promotexter *@
+                                        <div class="sspfrmwrap mt-3 Promotexter hideDiv">
+
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Configuration URL</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterConfigurationUrlTrans" autocomplete="off">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Sender Id</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterSenderIdTrans" autocomplete="off" maxlength="100">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">ApiKey</label>
+                                                <input type="text" class="form-control" id="ui_PromotexterApiKeyTrans" autocomplete="off" maxlength="300">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="frmlbltxt">Api Secret</label>
+                                                <input type="password" class="form-control" id="ui_PromotexterApiSecretTrans" autocomplete="off" maxlength="100">
+                                            </div>
+
+                                        </div>
+                                        @*<div class="form-group">
+                                        <label class="frmlbltxt">Telemarketer Id</label>
+                                        <input type="text" class="form-control" id="ui_TelemarketerIdTrans" autocomplete="off" maxlength="100">
+                                        </div>*@
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Entity Id</label>
+                                            <input type="text" class="form-control" id="ui_EntityIdTrans" autocomplete="off" maxlength="100" placeholder="optional">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="trans">
+                                <a class="tx-gray-800 transition collapsed" data-toggle="collapse" href="#apicallbackurl" data-parent="#promoandtranskey" aria-expanded="false" aria-controls="apicallbackurl">
+                                    API Callback URL
+                                </a>
+                            </div>
+                            <div id="apicallbackurl" class="collapse" role="tabpanel" data-parent="#promoandtranskey" aria-labelledby="headingThree" style="">
+                                <div class="card-body">
+                                    <div class="transwrap pt-2 pl-3 pr-3 pb-3">
+                                        <div class="form-group">
+                                            <label class="frmlbltxt">Add the ESP Callback URL to receive delivery reports.</label>
+                                            <p class="text-muted" id="ui_DeliveryAPI">No Url to bind</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-control custom-checkbox m-2">
+                            <input type="checkbox" class="custom-control-input" id="ui_chkDefaultvendor" />
+                            <label class="custom-control-label" for="ui_chkDefaultvendor">Set as default SSP</label>
+                        </div>
+                        <!-- card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_btnSaveDetails" data-Id="0">Submit</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popup window right-->
+
+<script src="~/js/Sms/SmsSettings.js"></script>

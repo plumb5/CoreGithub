@@ -1688,7 +1688,7 @@ namespace Plumb5GenralFunction
                 mailTemplateFile = await objDL.GetSingleFileType(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(accountId, templateDetails.Id);
-            return awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            return await awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName);
         }
         public void BulkAssignMailandSmsNotification(List<string> BulkUserInfoUserIds, int AdsId)
         {

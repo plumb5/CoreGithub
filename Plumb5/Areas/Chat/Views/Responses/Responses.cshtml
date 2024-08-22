@@ -1,0 +1,389 @@
+﻿
+@{
+    ViewData["Title"] = "Responses";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <div class="contentHead">
+            <h6 class="pagetitle">Chat Reports</h6>
+            <small class="totalCountTitle"><span id="ui_span_ChatName"></span></small>
+        </div>
+        <h6 class="pagetitle"></h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0);">Live Chat</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chat Reports</li>
+        </ol>
+    </div>
+    <div class="topTabWrap">
+        <div class="iconTopNav">
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+            <div class="topIconItem"></div>
+        </div>
+        <div class="tabItemWrap">
+            <div class="tabItem">
+                <a class="tap-nav-link active" href="javascript:void(0);">
+                    Visitor Responses
+                </a>
+            </div>
+            <div class="tabItem">
+                <a class="tap-nav-link" href="/Chat/AgentReport">
+                    Agent Reports
+                </a>
+            </div>
+        </div>
+        @{
+            Html.RenderPartial("_Export");
+        }
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="contimportrepwrap">
+            <div class="showDateIconWrap border-bottom">
+                <div class="showingWrap pt-2 pb-2">
+                    @{
+                        Html.RenderPartial("_PageHeadingWithDate");
+                    }
+                </div>
+            </div>
+            <div class="frmrepsubtabwrp">
+                <div class="frmsubtabitem">
+                    <div id="allvisitors" class="chatrepsubmenu active">All Visitors</div>
+                    <div id="bannedvisitors" class="chatrepsubmenu">Banned Visitors</div>
+                </div>
+                <div class="frmresponsefiltwrp">
+                    <a id="ui_clear_CustomReport" href="javascript:void(0)" class="badge badge-pill badge-secondary clrcustrep hideDiv">
+                        Clear Filter
+                        <i class="icon ion-android-close"></i>
+                    </a>
+                    <div class="frmresfunnwrp dropdown hideDiv">
+                        <i class="fa fa-filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                        <div id="ui_filter_Dropdown" class="dropdown-menu dropdown-menu-right keepopen" aria-labelledby="addLandingpage">
+                            <div class="drop-form p-4">
+                                <h4 class="dropdown-head">Custom Reports</h4>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <select name="" class="form-control" id="ddlChatRepeatTime">
+                                                <option value="0">Select Interaction</option>
+                                                <option value="0-0">00</option>
+                                                <option value="1-10">01-10</option>
+                                                <option value="11-20">11-20</option>
+                                                <option value="21-30">21-30</option>
+                                                <option value="31-40">31-40</option>
+                                                <option value="41-50">41-50</option>
+                                                <option value=">50">&gt;50</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"
+                                                   id="txtIpAddress" placeholder="Search Ip">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-12 col-md-12">
+                                        <input type="text" class="form-control" id="txtSearchContent"
+                                               placeholder="Search Content">
+                                    </div>
+                                </div>
+
+                                <div class="btnWrap">
+                                    <button id="ui_txtSearchFilter" type="button" class="btn-active btn-block">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scheduledresponses">
+                <div class="subdivWrap border-0">
+                    <div class="selectedItemWrap">
+                        <div class="checkBxCount">
+                            <span class="checkedCount">0</span> Contacts selected
+                        </div>
+                        <div class="addDropdownWrap ContributePermission">
+                            <select id="ui_ddlGroup" class="form-control form-control-sm addCampName w-100"
+                                    data-placeholder="Add to Group">
+                                <option label="Choose one">Add to Group</option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="box-white border-0 position-relative">
+                            <div class="tableWrapper">
+                                <div class="table-responsive campaignresponse">
+                                    <table id="ui_tableReport" class="table tbl-frmrepresp allvisitors">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input selchbxall chatvistor"
+                                                               id="contacts_check" name="example1">
+                                                        <label class="custom-control-label"
+                                                               for="contacts_check"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">UCP</th>
+                                                <th scope="col" class="helpIcon m-p-w-220 td-wid-25">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Visitors
+                                                </th>
+                                                <th class="helpIcon m-p-w-190 td-wid-20" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    IP Address
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-20" scope="col">
+                                                    Date
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-20" scope="col">
+                                                    Location
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trbodyReportData">
+                                        </tbody>
+                                    </table>
+                                    <table id="ui_tableReportBanned" class="table tbl-frmrepresp bannedvisitors hideDiv">
+                                        <thead>
+                                            <tr>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input selchbxall"
+                                                               id="contactsbanned_check" name="example1">
+                                                        <label class="custom-control-label"
+                                                               for="contactsbanned_check"></label>
+                                                    </div>
+                                                </th>
+                                                <th class="td-wid-5 m-p-w-40" scope="col">UCP</th>
+                                                <th scope="col" class="helpIcon m-p-w-220 td-wid-25">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    Visitors
+                                                </th>
+                                                <th class="helpIcon m-p-w-190 td-wid-20" scope="col">
+                                                    <div class="sortWrap">
+                                                        <i class="icon ion-arrow-down-c addColor"></i>
+                                                    </div>
+                                                    IP Address
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-20" scope="col">
+                                                    Date
+                                                </th>
+                                                <th class="helpIcon m-p-w-170 td-wid-20" scope="col">
+                                                    Location
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ui_trbodyReportDatabanned">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="pagiWrap">
+                                @{
+                                    Html.RenderPartial("_Paging");
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+@{
+    Html.RenderPartial("_ContactUCP");
+}
+<!--Modal-->
+<div class="modal fade bd-example-modal-sm" id="mailtranscript" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Mail Transcript</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="">Email Id</label>
+                        <input type="text" name="" class="form-control" id="txtSendEmailId">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal" id="ui_SendTranscriptMail">Send Mail</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal-->
+<!--Popup window right-->
+<div id="dv_responsedetails" class="popupcontainer hideDiv">
+    <div class="popupItem w-450 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <h6>Send Mail to Visitors</h6>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont h-100">
+                <div id="chatsendmailvis" class="chatsendmail h-100 hideDiv">
+                    <div class="chattomailwrp bg-white h-40p pl-3">
+                        <span class="mr-2 pl-2 frmlbltxt">To</span><input type="text" placeholder="" class="form-control border-0" name="" id="ui_ToEmailId">
+                    </div>
+                    <div class="chattomailwrp bg-white h-40p pl-3 border-top">
+                        <span class="mr-2 pl-2 frmlbltxt">From</span><input type="text" placeholder="Enter from email" class="form-control border-0" name="" id="ui_FromEmailId">
+                    </div>
+                    <div class="chatsubjwrp h-40p">
+                        <input type="text" placeholder="Subject" class="form-control text-int-20" name="" id="ui_Subject">
+                    </div>
+                    <div class="chatmailbody bg-white h-100">
+                        <textarea name="" id="ui_MailBody" class="form-control border-0 h-100" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div id="chattransdet" class="chatdetailswrp p-3 hideDiv">
+                    <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+                                   aria-expanded="true" aria-controls="collapseFour"
+                                   class="tx-gray-800 transition collapsed">
+                                    Chat Details
+                                </a>
+
+                            </div><!-- card-header -->
+                            <div id="collapseFour" class="collapse show" role="tabpanel"
+                                 aria-labelledby="collapseFour" data-parent="#accordion">
+
+                                <div class="card-body p-0">
+                                    <div class="table-responsive min-h-0">
+                                        <table class="table mb-0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-left td-wid-50 m-p-w-220">
+                                                        Primary
+                                                        Email
+                                                    </td>
+                                                    <td class="text-left td-wid-50 m-p-w-220" id="ui_PrimaryEmail">
+                                                        NA
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left td-wid-50 m-p-w-220">
+                                                        Primary Phone
+                                                    </td>
+                                                    <td class="text-left td-wid-50 m-p-w-220" id="ui_PrimaryPhoneNumber">
+                                                        NA
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left td-wid-50 m-p-w-220">
+                                                        Secondary Email
+                                                    </td>
+                                                    <td class="text-left td-wid-50 m-p-w-220" id="ui_SecondaryEmail">
+                                                        rajeshgupta@gmail.com
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left td-wid-50 m-p-w-220">
+                                                        Secondary Phone
+                                                    </td>
+                                                    <td class="text-left td-wid-50 m-p-w-220" id="ui_SecondaryPhoneNumber">
+                                                        NA
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left td-wid-50 m-p-w-220">
+                                                        Location
+                                                    </td>
+                                                    <td class="text-left td-wid-50 m-p-w-220" id="ui_ChatCity">
+                                                        NA
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="">
+                                <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                                   data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                   aria-controls="collapseFive">
+                                    Chat Transript
+                                </a>
+                            </div>
+                            <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="collapseFive"
+                                 data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="chattranswrp" id="ui_chattextdetailstransscript">
+                                        <div class="no-data">There is no data for this view.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popupfooter">
+            <div class="btnwrp">
+                <button class="btn btn-primary mr-2" type="button" id="ui_SendMail">Send Mail</button>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--Popup window right-->
+<!--Modal confirm-->
+<div class="modal fade bd-example-modal-sm" id="confirmDialog" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add to Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><span class="visitorsCount"></span> Selected Visitors will be added to the following Group</p>
+                <p class="font-bold"><span>Group Name:</span> <span class="addgroupname"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="addtoGroupdis" class="btn btn-primary" data-dismiss="modal">
+                    Add to
+                    Group
+                </button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal confirm-->
+
+<script src="~/Content/select2/js/select2.full.min.js"></script>
+<script src="~/js/Chat/Reports.js"></script>
+

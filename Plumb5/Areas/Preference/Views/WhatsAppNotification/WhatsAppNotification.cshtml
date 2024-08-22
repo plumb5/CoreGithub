@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "WhatsAppNotification";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Preferences</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Preferences</li>
+        </ol>
+    </div>
+
+    <div class="setttabwrap mr-tp-15">
+        <div class="setttabitem  font-12 m-border-bottom " data-setttype="tabcontone" onclick="javascript: window.location.href = 'IpRestrictions'">IP Restrictions</div>
+        <div class="setttabitem  font-12 m-border-bottom" data-setttype="tabconttwo" onclick="javascript: window.location.href = 'CampaignIdentifier'">Campaign Identifier</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontthree" onclick="javascript: window.location.href = 'IntegrationStatus'">Integration Status</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'ChannelCredits'">Channel Credits</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfive" onclick="javascript: window.location.href = 'TimeZone'">Time Zone</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontfour" onclick="javascript: window.location.href = 'DndHours'">DND Hours</div>
+        <div class="setttabitem  font-12" data-setttype="tabcontseven" onclick="javascript: window.location.href = 'SmsNotification'">SMS Notifications</div>
+        <div class="setttabitem  font-12 active" data-setttype="tabconteight">WhatsApp Notifications</div>
+    </div>
+    <div class="settcontainer">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="box-white">
+                    <div id="tabcontseven" class="setttabcontainer p-0">
+                        <div class="topTabWrap mt-0 border-bottom">
+                            <div class="showingWrap">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="enableWhatsApp" name="enablewhatsopt">
+                                    <label class="custom-control-label" for="enableWhatsApp">Enable WhatsApp Notifications</label>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <div class="dropdwnwrp">
+                                    <select name="" class="form-control" id="ddlAccount">
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tableWrapper">
+                            <div class="table-responsive">
+                                <table class="table WhatsApp-tbl tbody tbl-td-ta-lft">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="helpIcon m-p-w-80 td-wid-5 text-center">Preview</th>
+                                            <th class="helpIcon m-p-w-250 td-wid-25" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div> Template Name
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                    Name of the the WhatsApp Notification Template
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon m-p-w-250 td-wid-25" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div> White Listed Template Name
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                    Name of the the WhatsApp White Listed Template
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon m-p-w-190 td-wid-25" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div> Message
+                                                <i class="icon ion-ios-help-outline"></i>
+                                                <div class="toottipWrap">
+                                                    WhatsApp notification message body.
+                                                </div>
+                                            </th>
+                                            <th class="helpIcon td-wid-20 m-p-w-170" scope="col">
+                                                <div class="sortWrap"><i class="icon ion-arrow-down-c addColor"></i></div>
+                                                <div class="spacBet">
+                                                    <div>Updated Date</div>
+                                                    <div class="th-iconWrp">
+                                                        <i class="icon ion-ios-help-outline"></i>
+                                                        <div class="toottipWrap">
+                                                            Last updated date for the template.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="ui_tbodyReportData">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        @{
+                            Html.RenderPartial("_Paging");
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@{
+    Html.RenderPartial("_WhatsAppPreview");
+}
+<!--Popup window right-->
+<div id="ui_Edit_WhatsAppNotificationDetails" class="popupcontainer hideDiv">
+    <div class="popupItem w-550 m-p-wid-300 position-relative">
+        <div class="popuptitle">
+            <div class="popuptitlwrp">
+                <h6>Edit DLT Template</h6>
+                @*<small class="popupsubtitle"></small>*@
+            </div>
+            <i id="close-popup" class="icon ion-close"></i>
+        </div>
+        <div class="popupbody">
+            <div class="popupbodycont pad-10">
+                <div id="editdlttemppop" class="popcontWrap">
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txt_TemplateName">Template Name</label>
+                        <input disabled="disabled" type="text" class="form-control" id="ui_txt_TemplateName">
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txtArea_TemplateContent">Template Content</label>
+                        <textarea disabled="disabled" class="form-control" id="ui_txtArea_TemplateContent" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="frmlbltxt" for="ui_txt_VendorTemplateId">White Listed Template Name</label>
+                        <input type="text" class="form-control" id="ui_txt_VendorTemplateId">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fttrsubcanbtn" class="popupfooter">
+            <div class="btnwrp">
+                <a href="javascript:void(0);" class="btn btn-primary mr-2 btn-next" id="ui_btn_UpdateWhatsAppNotificationTemplate" TemplateId="0">Update</a>
+                <button class="btn btn-secondary clsepopup" type="button">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Popup window right-->
+<script src="~/js/Preference/WhatsAppNotificationTemplate.js"></script>

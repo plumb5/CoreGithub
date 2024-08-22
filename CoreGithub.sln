@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IP5GenralDL", "IP5GenralDL\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5GenralFunction", "Plumb5GenralFunction\Plumb5GenralFunction.csproj", "{2CD0F8DF-C3A6-4E59-BED5-F7CDD4911181}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumb5", "Plumb5\Plumb5.csproj", "{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{2CD0F8DF-C3A6-4E59-BED5-F7CDD4911181}.Release|x64.Build.0 = Release|x64
 		{2CD0F8DF-C3A6-4E59-BED5-F7CDD4911181}.Release|x86.ActiveCfg = Release|x86
 		{2CD0F8DF-C3A6-4E59-BED5-F7CDD4911181}.Release|x86.Build.0 = Release|x86
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|x64.Build.0 = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Debug|x86.Build.0 = Debug|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|x64.ActiveCfg = Release|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|x64.Build.0 = Release|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|x86.ActiveCfg = Release|Any CPU
+		{A89012CE-ABA3-4EC4-B9A1-B2B965847D9B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

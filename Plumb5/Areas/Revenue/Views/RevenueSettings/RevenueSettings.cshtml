@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Revenue Settings";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Revenue Mapping</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item"><a href="javascrip:void(0)">Advanced</a></li>
+            <li class="breadcrumb-item"><a href="javascrip:void(0)">Revenue</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Revenue Mapping</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+        <div class="campaingmaincontainer">
+
+            <div id="dvSettings" class="container-page-body p-0">
+                <div class="container-fluid pl-0 pr-0">
+                    <div class="revsetttop">
+                        <h2 class="sett-title">Select the currency in which you report your revenues, and map all purchase events you're sending to the Plumb5 as a revenue event.</h2>
+                    </div>
+                    <div class="currencywrp">
+                        <div class="form-group">
+                            <label class="frmlbltxt" for="">Revenue Currency</label>
+                            <select id="ddlCurrency" class="form-control">
+                                <option value="select">Select Currency</option>
+                                <option value="inr">Indian Ruppee (INR)</option>
+                                <option value="usd">United States Dollar (USD)</option>
+                                @*<option value="gbp">United Kingdom Pound (GBP)</option>
+                                <option value="zar">South Africa Rand (ZAR)</option>
+                                <option value="lkr">Sri Lanka Rupee (LKR)</option>
+                                <option value="try">Turkey (TRY)</option>
+                                <option value="qar">Qatar Riyal (QAR)</option>
+                                <option value="myr">Malaysia Ringgit (MYR)</option>
+                                <option value="aud">Australia Dollar (AUD)</option>*@
+                            </select>
+                        </div>
+                    </div>
+                    <div class="currencymappwrap" id="dvRevenueSettings">
+                        @*<div class="currencyitemwrp">
+                        <div class="form-group mr-3 mob-mr-0 dsk-50-mob-100">
+                        <label class="frmlbltxt" for="">Revenue Event Name</label>
+                        <select id="" class="form-control ddlRevenue">
+                        <option value="select">Select</option>
+                        <option value="cart" selected="">Add to cart</option>
+                        </select>
+                        </div>
+                        <div class="form-group dsk-50-mob-100">
+                        <label class="frmlbltxt" for="">Revenue Attribute (Amount)</label>
+                        <select id="" class="form-control ddlAttribute">
+                        <option value="select">Select</option>
+                        <option value="price" selected="">Product price</option>
+                        <option value="custom">Custom price</option>
+                        </select>
+                        </div>
+                        <div style="width: 50px;"></div>
+                        </div>*@
+                        <div class="currencyitems">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-page-footer">
+                <div class="backbtnWrap">
+                    <button id="addeventfrm" type="button" class="btn btn-second">Add Event <i class="fa fa-plus"></i></button>
+                </div>
+                <div class="nextbtnWrap">
+
+                    <button type="button" class="btn btn-primary" id="btnSave">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+
+
+<script src="~/js/Revenue/Settings.js"></script>

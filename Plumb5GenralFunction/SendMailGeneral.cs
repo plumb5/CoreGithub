@@ -206,13 +206,13 @@ namespace Plumb5GenralFunction
                 {
                     if (mailConfigration.ProviderName == "Elastic Mail")
                     {
-                        attachments += ";" + awsUpload.GetFileContentString(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                        attachments += ";" + awsUpload.GetFileContentString(mailTemplateAttachment[i].AttachmentFileName, awsUpload._bucketName);
                     }
                     else if (mailConfigration.ProviderName == "NetCore Falconide")
                     {
                         if (!falconideAttachment.ContainsKey(mailTemplateAttachment[i].AttachmentFileName))
                         {
-                            Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname);
+                            Stream fileStream = awsUpload.GetFileContentStream(mailTemplateAttachment[i].AttachmentFileName, awsUpload.bucketname).ConfigureAwait(false).GetAwaiter().GetResult();
                             string fileString = Convert.ToString(fileStream.ReadAsBytes());
                             falconideAttachment.Add(mailTemplateAttachment[i].AttachmentFileName, fileString);
                         }
@@ -934,7 +934,7 @@ namespace Plumb5GenralFunction
                 mailTemplateFile = await objDL.GetSingleFileType(new MailTemplateFile() { TemplateId = templateDetails.Id, TemplateFileType = ".HTML" });
             }
             SaveDownloadFilesToAws awsUpload = new SaveDownloadFilesToAws(AccountId, templateDetails.Id);
-            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload.bucketname);
+            string fileString = awsUpload.GetFileContentString(mailTemplateFile.TemplateFileName, awsUpload._bucketName).ConfigureAwait(false).GetAwaiter().GetResult();
             MainContentOftheMail.Append(fileString);
         }
 

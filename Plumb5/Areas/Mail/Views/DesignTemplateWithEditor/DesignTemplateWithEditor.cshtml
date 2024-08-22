@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Template Editor";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+<script type="text/javascript">
+    var BeeEditorAuthUrl = '@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BEEEDITORAUTHURL"])';
+    var BeeEditorClientId = '@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BEEEDITORCLIENTID"])';
+    var BeeEditorClientSecret = '@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["BEEEDITORCLIENTSECRET"])';
+    var ClientServerName = '@Convert.ToString(Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["CLIENTSERVERNAME"])';
+</script>
+<div class="pageheader">
+    <div class="contentHead">
+        <h6 class="pagetitle">Template Editor</h6>
+        <small class="totalCountTitle">Template Name: <span id="ui_span_TemplateName"></span></small>
+    </div>
+    <ol class="breadcrumb slim-breadcrumb">
+        <li class="breadcrumb-item"><a href="javasctipt:void(0);">Mail</a></li>
+        <li class="breadcrumb-item"><a href="javasctipt:void(0);">Templates</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Template Editor</li>
+    </ol>
+</div>
+<div class="backwrp">
+    <a href="/Mail/MailTemplate"><i class="icon ion-ios-arrow-left pr-2"></i>Back</a>
+</div>
+<div id="bee-plugin-container" style="height:575px;">
+</div>
+<script src="~/js/UserCustomEventsAttributes.js"></script>
+<script src="//app-rsrc.getbee.io/plugin/BeePlugin.js"></script>
+<script src="~/js/Mail/DesignTemplateWithEditor.js"></script>

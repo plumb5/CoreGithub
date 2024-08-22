@@ -1,0 +1,762 @@
+﻿@{
+    ViewBag.Title = "Plumb5 :: Dashboard";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/gridstack.min.css" />
+<script src="~/js/gridstack.all.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Dashboard</h6>
+        <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+        </ol>
+    </div>
+    <div class="box-white mr-tp-15">
+
+        <div class="showDateIconWrap">
+            <div class="showDateWrap brd-bttm-none mb-0">
+                @{
+                    Html.RenderPartial("_PageHeadingWithDate");
+                }
+            </div>
+
+
+            <div class="iconsWrap">
+                <div class="dropdown">
+                    <i class="icon ion-ios-calendar-outline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                    <div id="dvDashBoardAlert" class="dropdown-menu dropdown-menu-right keepopen" aria-labelledby="addLandingpage" x-placement="bottom-end" style="position: absolute; transform: translate3d(18px, 32px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <div class="drop-form-dash p-4">
+                            <h4 class="dropdown-head">Send Report Via Mail</h4>
+                            <div class="sendmailoptionwrp mb-3">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input checked type="radio" id="senddashboardrep" name="sendreporttype" class="custom-control-input" value="senddashboardreports">
+                                    <label class="custom-control-label font-weight-bold" for="senddashboardrep">Send Analytical Report</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="sendleadrep" name="sendreporttype" class="custom-control-input" value="sendleadreports">
+                                    <label class="custom-control-label font-weight-bold" for="sendleadrep">Send Leads Report</label>
+                                </div>
+                            </div>
+                            <div id="senddashboardreports" class="dashboardreprtmail">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="TO" id="txtToEmailId" />
+                                    <small class="text-muted font-11">
+                                        Add multiple emails ids followed by
+                                        commas.
+                                    </small>
+                                </div>
+                                <div class="checkeebx-group row w-100 mb-3 overflow-x-vis">
+                                    <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                        <label class="frmlbltxt" for="">Frequency</label>
+                                    </div>
+                                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="Weekly" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="Weekly">Weekly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">Weekly Report</div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the
+                                                            user on every 8th, 16th, 22nd &amp; 29th of Every
+                                                            Month. The report shows metrics for 7 days from
+                                                            the received Date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="Fornightly" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="Fornightly">Fortnightly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">Fornightly Report</div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the
+                                                            user on every 16th &amp; 29th of Every Month. The
+                                                            report shows metrics for 15 days from the
+                                                            received Date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="Monthly" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="Monthly">Monthly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">Monthly Report</div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the
+                                                            user on the 1st of Every Month. The report shows
+                                                            metrics for past month from the received Date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="Quarterly" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="Quarterly">Quarterly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">Quarterly Report</div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the
+                                                            user on the 1st of Every Month. The report shows
+                                                            metrics for past 3 months from the received
+                                                            Date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="btnWrap">
+                                    <button type="button" class="btn-active btn-block" id="ui_btnMailAlert" data_id="0">Save</button>
+                                </div>
+                            </div>
+                            <div id="sendleadreports" class="dashboardreprtmail hideDiv">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="TO" id="txtToEmailIdLead">
+                                    <small class="text-muted font-11">
+                                        Add multiple emails ids followed by
+                                        commas.
+                                    </small>
+                                </div>
+                                <div class="checkeebx-group row w-100 mb-3 overflow-x-vis">
+                                    <div class="lblwrap col-sm-4 col-md-4 col-lg-4 col-xl-4 text-right-lbl">
+                                        <label class="frmlbltxt" for="">Frequency</label>
+                                    </div>
+                                    <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="DailyLead" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="DailyLead">Daily</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">
+                                                            Daily Report
+                                                        </div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the user on every day.
+                                                            The report shows metrics for 24 hours.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="WeeklyLead" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="WeeklyLead">Weekly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">
+                                                            Weekly Report
+                                                        </div>
+                                                        <div class="dashtooltipbody">
+                                                            Report mailed to the user on Every
+                                                            Monday before EOD. The report shows
+                                                            metrics for 7 days from the received
+                                                            date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline">
+                                            <input type="checkbox" id="MonthlyLead" name="mailfrequency" class="custom-control-input">
+                                            <label class="custom-control-label" for="MonthlyLead">Monthly</label>
+                                            <span>
+                                                <i class="icon ion-information-circled dashinfotip">
+                                                    <div class="dashtooltipwrp">
+                                                        <div class="dashtooltiptit">
+                                                            Monthly Report
+                                                        </div>
+                                                        <div class="dashtooltipbody">
+                                                            Report Mailed to the user on the 1st of
+                                                            Every Month. The report shows metrics
+                                                            for past month from the received Date.
+                                                        </div>
+                                                    </div>
+                                                </i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btnWrap">
+                                    <button type="button" class="btn-active btn-block" id="ui_btnMailAlertLead" data_id="0">
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <i class="icon ion-grid font-22 gridsave" title="Arrange"></i>
+                <i class="fa fa-floppy-o font-20 saveIcnbtn hideDiv" title="Save"></i>
+                <i class="icon ion-ios-gear-outline icndisble widgticnadd" title="Edit Dashboard"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sheet">
+    <div class="widgetswrp mt-4">
+        <div class="grid-stack">
+        </div>
+    </div>
+    <div class="nodatadashwrp mt-4 hideDiv">
+        <div class="box-white h-100 df-ac-cc">
+            <p>
+                Click on the <i class="icon ion-android-settings"></i> setting icon <br> to add widgets
+                for your dashboard.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+<!--rightpopup start here-->
+<div class="dashpopupwrp" id="dvDashboardSelectWidgets">
+    <div class="widgetItemwrp">
+        <div class="popupItem">
+            <div class="popuptitle">
+                <h6>Select Dashboard Widgets</h6>
+                <i id="close-popup" class="icon ion-close clsewidpopup"></i>
+            </div>
+            <div class="popupbody p-3 widgetcountwrp">
+                <div id="accordion" class="accordion-one" role="tablist" aria-multiselectable="true">
+                    @*Web Analytics Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                               aria-expanded="true" aria-controls="collapseOne"
+                               class="tx-gray-800 transition collapsed">
+                                Web Analytics <span class="widgtWebAnaly">(0)</span>
+                            </a>
+                        </div><!-- card-header -->
+                        <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="sessuniq" data-id="dvsessionsVsUnique" data-function="CreateSessionsUniqueVisitorsChart"
+                                                       data-title="Web Analytics : Sessions Vs Unique Visitors" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="sessuniq">Sessions Vs Unique Visitors</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="Countries" data-id="dvCountries" data-table="1" data-function="GetCountriesData"
+                                                       data-title="Web Analytics : Countries" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="Countries">Countries</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="Cities" data-id="dvCities" data-table="1" data-function="GetCitiesData"
+                                                       data-title="Web Analytics : Cities" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="Cities">Cities</label>
+                                            </div>
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="mobdesk">
+                                            <label class="custom-control-label" for="mobdesk">Mobile Vs Desktop</label>
+                                            </div>*@
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="newretrn" data-id="dvNewVsReturn" data-function="CreateNewReturnChart"
+                                                       data-title="Web Analytics : New Vs Return" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="newretrn">New Vs Return</label>
+                                            </div>
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="timesite" data-id="dvTimeOnSite" data-function="CreateTimeOnSiteChart"
+                                            data-title="Web Analytics : Time On Site" data-widgettype="WebAnalytics">
+                                            <label class="custom-control-label" for="timesite">Time On Site</label>
+                                            </div>*@
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="timetrend" data-id="dvTimeTrends" data-function="CreateTimeTrendsChart"
+                                            data-title="Web Analytics : Time Trends" data-widgettype="WebAnalytics">
+                                            <label class="custom-control-label" for="timetrend">Time Trends</label>
+                                            </div>*@
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="popupage" data-id="dvPopularPage" data-table="1" data-function="GetPopularPageData"
+                                                       data-title="Web Analytics : Popular Pages" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="popupage">Popular Pages</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="topentrypage" data-id="dvTopEntryPages" data-table="1" data-function="GetTopEntryPagesData"
+                                                       data-title="Web Analytics : Top Entry Pages" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="topentrypage">Top Entry Pages</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="topexistpage" data-id="dvTopExitPages" data-table="1" data-function="GetTopExitPagesData"
+                                                       data-title="Web Analytics : Top Exit Pages" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="topexistpage">Top Exit Pages</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="Frequency" data-id="dvFrequency" data-function="CreateFrequencyChart"
+                                                       data-title="Web Analytics : Frequency" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label"
+                                                       for="Frequency">Frequency</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="Recency" data-id="dvRecency" data-function="CreateRecencyChart"
+                                                       data-title="Web Analytics : Recency" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="Recency">Recency</label>
+                                            </div>
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="TimeSpent" data-id="dvTimeSpent" data-function="CreateTimeSpentChart"
+                                            data-title="Web Analytics : Time Spent" data-widgettype="WebAnalytics">
+                                            <label class="custom-control-label" for="TimeSpent">Time Spent</label>
+                                            </div>*@
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl" id="PageDepth" data-id="dvPageDepth" data-function="CreatePageDepthChart"
+                                                       data-title="Web Analytics : Page Depth" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="PageDepth">Page Depth</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl"
+                                                       id="alltraffsour" data-id="dvAllTrafficSource" data-function="CreateAllTrafficSourceChart"
+                                                       data-title="Web Analytics : All Traffic Sources" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="alltraffsour"> All Traffic Sources</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl"
+                                                       id="emailtrafsour" data-id="dvEmailTrafficSource" data-function="CreateEmailTrafficSourceChart"
+                                                       data-title="Web Analytics : Email Traffic Sources" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="emailtrafsour">Email Traffic Sources </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebAnl"
+                                                       id="smstraffsour" data-id="dvSmsTrafficSource" data-function="CreateSmsTrafficSourceChart"
+                                                       data-title="Web Analytics : Sms Traffic Sources" data-widgettype="WebAnalytics">
+                                                <label class="custom-control-label" for="smstraffsour">Sms Traffic Sources</label>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Web Analytics Ends*@
+
+                    @*Web Engagement Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                               aria-controls="collapseTwo">
+                                Web Engagement <span class="widgtWebEng">(0)</span>
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo"
+                             data-parent="#accordion">
+
+                            <div class="card-body">
+                                <div class="chkbxwrp">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng" id="frmsubmis" data-id="dvFormSubmissionOverTime" data-function="CreateFormSubmissionOverTimeChart"
+                                                       data-title="Web Engagement : Form Submissions Over Time" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="frmsubmis">Form Submissions Over Time</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng" id="aggrfrms" data-id="dvFormAggregateData" data-function="CreateAggregateFormDataWidgetChart" data-StaticHtml="1"
+                                                       data-title="Web Engagement : Aggregate Forms Data Widget" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="aggrfrms">Aggregate Forms Data Widget</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng"
+                                                       id="frmplatfrmdis" data-id="dvFormPlatformDistributionChart" data-function="CreatePlatformDistributionChart"
+                                                       data-title="Web Engagement : Form Platform Distribution" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="frmplatfrmdis">Form Platform Distribution</label>
+                                            </div>
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                            id="webpushovrtme" data-id="dvWebPushOverTime" data-function="CreatePlatformDistributionChart">
+                                            <label class="custom-control-label" for="webpushovrtme">Web Push Over Time</label>
+                                            </div>*@
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng"
+                                                       id="webpushengrate" data-id="dvWebPushEngagementRate" data-function="CreateWebPushEngagementRateChart" data-StaticHtml="1"
+                                                       data-title="Web Push Engagement Rate" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="webpushengrate">Web Push Engagement Rate</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng"
+                                                       id="webpushdelirate" data-id="dvWebPushDeliveryRate" data-function="CreateWebPushDeliveryRateChart" data-StaticHtml="1"
+                                                       data-title="Web Push Delivery Rate" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="webpushdelirate">Web Push Delivery Rate</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountWebEng"
+                                                       id="webpushsubs" data-id="dvWebPushSubscribers" data-function="CreateWebPushSubscribers" data-StaticHtml="1"
+                                                       data-title="Web Push Subscriber" data-widgettype="WebEngagement">
+                                                <label class="custom-control-label" for="webpushsubs">Web Push Subscriber</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Web Engagement Ends*@
+
+                    @*Mail Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                               aria-controls="collapseTwo">
+                                Mail <span class="widgtEmail">(0)</span>
+                            </a>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountemail" id="campeffect" data-id="dvMailCampaignEffectiveness" data-graphName="emaileffective"
+                                                       data-title="Mail Engagement : Mail Campaign Effectiveness" data-widgettype="Mail">
+                                                <label class="custom-control-label" for="campeffect">Mail Campaign Effectiveness</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountemail"
+                                                       id="perfrmovrtime" data-id="dvMailPerformance" data-function="CreateMailPerformanceOverTimeChart"
+                                                       data-title="Mail Engagement : Mail Performance Over Time" data-widgettype="Mail">
+                                                <label class="custom-control-label" for="perfrmovrtime">Mail Performance Over Time</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountemail"
+                                                       id="engmentrate" data-id="dvMailEngagementRate" data-function="CreateMailEngagementRateChart" data-StaticHtml="1"
+                                                       data-title="Mail Engagement : Mail Engagement Rate" data-widgettype="Mail">
+                                                <label class="custom-control-label" for="engmentrate">Mail Engagement Rate</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input chkbxcountemail" id="delirate" data-id="dvMailDeliveryRate" data-function="CreateMailDeliveryRateChart"
+                                                       data-StaticHtml="1" data-title="Mail Engagement : Mail Delivery Rate" data-widgettype="Mail">
+                                                <label class="custom-control-label" for="delirate">Mail Delivery Rate</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Mail Ends*@
+
+                    @*SMS Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingFour">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                               aria-controls="collapseTwo">
+                                Sms <span class="widgtSms">(0)</span>
+                            </a>
+                        </div>
+
+                        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input widgetSMSchkbx"
+                                                       id="smscampeffect" data-id="dvSmsCampaignEffectiveness" data-graphName="smseffective"
+                                                       data-title="SMS Engagement : SMS Campaign Effectiveness" data-widgettype="Sms">
+                                                <label class="custom-control-label" for="smscampeffect">SMS Campaign Effectiveness</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input widgetSMSchkbx"
+                                                       id="smsperfrmovrtime" data-id="dvSmsPerformanceOverTime" data-function="CreateSmsPerformanceOverTimeChart"
+                                                       data-title="SMS Engagement : SMS Performance Over Time" data-widgettype="Sms">
+                                                <label class="custom-control-label"
+                                                       for="smsperfrmovrtime">SMS Performance Over Time</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input widgetSMSchkbx"
+                                                       id="smsengmentrate" data-id="dvSmsEngagementRate" data-function="CreateSmsEngagementRateChart" data-StaticHtml="1"
+                                                       data-title="SMS Engagement : SMS Engagement Rate" data-widgettype="Sms">
+                                                <label class="custom-control-label" for="smsengmentrate">SMS Engagement Rate</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input widgetSMSchkbx"
+                                                       id="smsdelirate" data-id="dvSmsDeliveryRate" data-function="CreateSmsDeliveryRateChart" data-StaticHtml="1"
+                                                       data-title="SMS Engagement : SMS Delivery Rate" data-widgettype="Sms">
+                                                <label class="custom-control-label" for="smsdelirate">SMS Delivery Rate</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*SMS Ends*@
+
+                    @*Mobile Analytics Starts*@
+                    <div class="card">
+
+                        <div class="card-header" role="tab" id="headingFive">
+
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                               aria-controls="collapseFive">
+
+                                Mobile Analytics <span class="widgetMobAnaly">(0)</span>
+
+                            </a>
+
+                        </div>
+
+                        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive"
+                             data-parent="#accordion">
+
+                            <div class="card-body">
+                                <div class="chkbxwrp">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobanlywidget"
+                                                       id="mobilesessvsuniqvis" data-id="dvMobilessionsVsUnique" data-function="CreateMobileSessionsUniqueVisitorsChart"
+                                                       data-title="Mobile Analytics : Sessions Vs Unique Visitors" data-widgettype="MobileAnalytics">
+                                                <label class="custom-control-label" for="mobilesessvsuniqvis">Sessions Vs Unique Visitors</label>
+                                            </div>
+                                            @*<div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                            id="webanalCountries" data-id="dvMobileCountries" data-function="CreateMobileCountriesMap">
+                                            <label class="custom-control-label"
+                                            for="webanalCountries">Countries</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input"
+                                            id="webanalCities" data-id="dvMobileCities" data-function="CreateMobileCitiesMap">
+                                            <label class="custom-control-label"
+                                            for="webanalCities">Cities</label>
+                                            </div>*@
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobanlywidget"
+                                                       id="mobilewebanalnewretrn" data-id="dvMobileNewVsReturn" data-function="CreateMobileNewVsReturnChart"
+                                                       data-title="Mobile Analytics : New Vs Return" data-widgettype="MobileAnalytics">
+                                                <label class="custom-control-label" for="mobilewebanalnewretrn">
+                                                    New Vs Return
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobanlywidget"
+                                                       id="mobilewebanaltimeonapp" data-id="dvMobileTimeOnApp" data-function="CreateMobileTimeOnAppChart"
+                                                       data-title="Mobile Analytics : Time On App" data-widgettype="MobileAnalytics">
+                                                <label class="custom-control-label" for="mobilewebanaltimeonapp">Time On App</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobanlywidget"
+                                                       id="mobilewebanalFrequency" data-id="dvMobileFrequency" data-function="CreateMobileFrequencyChart"
+                                                       data-title="Mobile Analytics : Frequency" data-widgettype="MobileAnalytics">
+                                                <label class="custom-control-label"
+                                                       for="mobilewebanalFrequency">Frequency</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobanlywidget"
+                                                       id="mobilewebanalRecency" data-id="dvMobileRecency" data-function="CreateMobileRecencyChart"
+                                                       data-title="Mobile Analytics : Recency" data-widgettype="MobileAnalytics">
+                                                <label class="custom-control-label"
+                                                       for="mobilewebanalRecency">Recency</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    @*Mobile Analytics Ends*@
+
+                    @*Mobile Engagement Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingSix">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                               aria-controls="collapseSix">
+                                Mobile Engagement <span class="widgetMobEngage">(0)</span>
+                            </a>
+                        </div>
+                        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp chkbxmobanalcount">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobaengagewidget" id="mobpushengage" data-id="dvMobilePushEngagementRate"
+                                                       data-function="CreateMobilePushEngagementRateChart" data-StaticHtml="1" data-title="Mobile Push Engagement Rate" data-widgettype="MobilePushEngagement">
+                                                <label class="custom-control-label" for="mobpushengage">Mobile Push Engagement Rate</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobaengagewidget" id="mobpushengagedeli"
+                                                       data-function="CreateMobilePushDeliveryRateChart" data-StaticHtml="1" data-title="Mobile Push Delivery Rate" data-widgettype="MobilePushEngagement">
+                                                <label class="custom-control-label" for="mobpushengagedeli">Mobile Push Delivery Rate </label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input mobaengagewidget" id="mobpushengagepussub" data-id="dvMobilePushSubscribers"
+                                                       data-function="CreateMobilePushSubscribers" data-StaticHtml="1" data-title="Mobile Push Subscriber" data-widgettype="MobilePushEngagement">
+                                                <label class="custom-control-label" for="mobpushengagepussub">Mobile Push Subscriber</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Mobile Engagement Ends*@
+
+                    @*Live Chat Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingSeven">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseSeven" aria-expanded="false"
+                               aria-controls="collapseSeven">
+                                Live Chat <span class="widgetLiveChat">(0)</span>
+                            </a>
+                        </div>
+                        <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp chkbxmobanalcount">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input liveChatwidget" id="converschat" data-id="dvChatConversations" data-function="GetConversationsDetails"
+                                                       data-title="Live Chat : Conversations" data-StaticHtml="1" data-widgettype="LiveChat">
+                                                <label class="custom-control-label" for="converschat">Conversations Widget</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input liveChatwidget" id="chatperforms" data-id="dvChatPerformance" data-function="CreateChatPerformanceChart"
+                                                       data-title="Live Chat : Chat Performance" data-widgettype="LiveChat">
+                                                <label class="custom-control-label" for="chatperforms">Chat Performance</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Live Chat Ends*@
+
+                    @*Lead Management Starts*@
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingeigt">
+                            <a class="tx-gray-800 transition collapsed" data-toggle="collapse"
+                               data-parent="#accordion" href="#collapseeigt" aria-expanded="false"
+                               aria-controls="collapseeigt">
+                                Lead Management <span class="widgetLMS">(0)</span>
+                            </a>
+                        </div>
+                        <div id="collapseeigt" class="collapse" role="tabpanel" aria-labelledby="headingeigt"
+                             data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="chkbxwrp chkbxmobanalcount">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input lmswidget" id="leadsumm" data-id="dvLeadSummary" data-function="BindLeadSummary"
+                                                       data-title="Lead Management : Lead Summary" data-StaticHtml="1" data-widgettype="LeadManagement">
+                                                <label class="custom-control-label" for="leadsumm">Lead Summary</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input lmswidget" id="topstages" data-id="dvLmstopstage" data-function="CreateLmsTopStageChart"
+                                                       data-title="Lead Management : Top Stages" data-widgettype="LeadManagement">
+                                                <label class="custom-control-label" for="topstages">Top Stages</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input lmswidget" id="toplmssources" data-id="dvLmstopsource" data-function="CreateLmsTopSourceChart"
+                                                       data-title="Lead Management : Top Sources" data-widgettype="LeadManagement">
+                                                <label class="custom-control-label" for="toplmssources">Top Sources</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*Lead Management Ends*@
+
+                </div>
+            </div>
+            <div class="popupfooter">
+                <div class="df-ac-sbet w-100">
+                    <div class="btnwrp">
+                        <button class="btn btn-primary mr-2" type="button" id="btnWidgetSave">Save</button>
+                        <button class="btn btn-secondary clsewidpopup" type="button">Cancel</button>
+                    </div>
+                    <div class="widgcountwrp">
+                        <i class="icon ion-ios-refresh-outline widgtrefresh"></i>
+                        <p class="mb-0">
+                            Selected Widgets: <span class="daswidgcount">0</span> / <span class="text-color-error">9</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--rightpopup End here-->
+
+
+
+<script src="~/js/Chart.bundle.js"></script>
+<script src="~/js/Chart.js"></script>
+<script src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.5.0"></script>
+<script src="~/js/d3.v4.js"></script>
+<script>
+    d3version4 = d3
+    window.d3 = null
+</script>
+<script src="~/js/d3.min.js"></script>
+<script>
+    d3version3 = d3
+</script>
+<link href="~/Content/css/flags.css" rel="stylesheet" />
+<link href="~/Content/leaflet.css" rel="stylesheet" />
+<script src="~/js/Dashboard/Dashboard.js"></script>
+<script src="~/js/Dashboard/Dashboard_WebAnalytics_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_WebEngagement_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_Mail_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_SMS_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_MobileAnalytics_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_MobileEngagement_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_LiveChat_Widgets.js"></script>
+<script src="~/js/Dashboard/Dashboard_LeadManagement_Widgets.js"></script>
+<script src="~/js/leaflet.js"></script>

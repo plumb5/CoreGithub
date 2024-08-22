@@ -1,0 +1,46 @@
+﻿<div class="rightPopupwrap">
+    <div class="popupslideItem">
+        <div class="topbandWrap">
+            <h6 id="spnTitle">Edit Custom Field</h6>
+            <i class="icon ion-android-close"></i>
+        </div>
+        <div class="popup-body">
+            <div class="popuptblWrap">
+                <div class="slidPopup p-4 tbl-eventTrack">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="ui_txtFieldName" autocomplete="off" placeholder="Field Name">
+                    </div>
+                    <div class="form-group">
+                        <select id="ui_ddlFieldType" class="form-control">
+                            <option value="1">Text Box</option>
+                            <option value="2">Multiline</option>
+                            <option value="3">DropDown</option>
+                            <option value="4">Radio Button</option>
+                            <option value="5">Checkbox</option>
+                            <option value="6">Date</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="tr_FieldOptions">
+                        <textarea type="text" class="form-control" id="ui_txtFieldOptions" placeholder="Field Options"></textarea>
+                    </div>
+                    <div class="radioBtn mb-3">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="ui_radMandatory" checked="checked" name="eventname1">
+                            <label class="custom-control-label" for="ui_radMandatory">Yes</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="ui_radNotMandatory" name="eventname1">
+                            <label class="custom-control-label" for="ui_radNotMandatory">No</label>
+                        </div>
+                    </div>
+                    <div class="btnWrap mt-4">
+                        <button type="button" class="btn btn-primary mr-2" id="btnUpdate">Update</button>
+                        <button type="button" class="btn btn-secondary" id="btnCancel">Cancel</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

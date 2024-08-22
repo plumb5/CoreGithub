@@ -1,0 +1,146 @@
+﻿@using Newtonsoft.Json
+@using P5GenralML
+@using Plumb5GenralFunction
+@using Plumb5.Models
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumb5 :: Tag An Existing Form</title>
+    <link rel="stylesheet" href="~/Content/css/plumb5-style.css">
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/upload-editor.css">
+    <link href="~/Content/select2/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/ionicons/css/ionicons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="~/Content/select2/js/select2.full.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <link href="~/Content/dist/devices.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/js/jscolor.js"></script>
+    <link href="~/Content/css/form-editor-main-style.css" rel="stylesheet" />
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <script src="~/js/GenralJsEngagment.js"></script>
+    <script src="~/js/JSLINQ.js"></script>
+</head>
+<body>
+
+    @if (Context.Session.GetString("UserInfo") == null || Context.Session.GetString("AccountInfo") == null || Context.Session.GetString("MyAccountsDetails") == null)
+    {
+        Context.Response.Redirect("~/Login/SignOut");
+    }
+    else
+    {
+        LoginInfo? CustomerInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("UserInfo")))
+            CustomerInfo = JsonConvert.DeserializeObject<LoginInfo?>(Context.Session.GetString("UserInfo"));
+
+        DomainInfo? AccountInfo = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("AccountInfo")))
+            AccountInfo = JsonConvert.DeserializeObject<DomainInfo?>(Context.Session.GetString("AccountInfo"));
+
+        List<Purchase> PurchaseList = new List<Purchase>();
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MLPurchase")))
+            PurchaseList = JsonConvert.DeserializeObject<List<Purchase>>(Context.Session.GetString("MLPurchase"));
+
+        MyAccountsDetails? MyAccountsDetails = null;
+        if (!String.IsNullOrEmpty(Context.Session.GetString("MyAccountsDetails")))
+            MyAccountsDetails = JsonConvert.DeserializeObject<MyAccountsDetails?>(Context.Session.GetString("MyAccountsDetails"));
+        
+        var AccountList = MyAccountsDetails.accounts;
+
+        <script>
+            var Plumb5AccountId = @AccountInfo.AdsId;
+            var Plumb5UserId = @CustomerInfo.UserId;
+            var OnlineUrl = '@Plumb5GenralFunction.AllConfigURLDetails.KeyValueForConfig["ONLINEURL"].ToString()';
+        </script>
+
+        <div class="top-header">
+            <div class="container-fluid">
+                <div class="logo-menu-left">
+                    <div class="logo">
+                        <div class="logoWrap">
+                            <a href="javascript:void(0);"></a>
+                        </div>
+                    </div>
+                </div>
+                @{
+                    Html.RenderPartial("_ApplicationMenuRightTabDetails");
+                }
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="pageconthead">
+                <h6 class="pagetitle">Form Editor</h6>
+                <ol class="breadcrumb slim-breadcrumb">
+                    <li class="breadcrumb-item"><a href="/CaptureForm/ManageTaggedForms"><i class="icon ion-ios-arrow-left mr-1"></i> Go Back</a></li>
+                </ol>
+            </div>
+            <div class="tagfrmeditwrp">
+                <div class="taggextfrmwrp">
+                    <div class="taggextfrmitem">
+                        <input type="text" name="" placeholder="Enter the URL of the page containing the form" class="form-control h-60px font-16" id="ui_txtInPageUrl">
+                        <button type="button" class="btn btn-primary taggobtn" id="btnTagForm">Go</button>
+                    </div>
+                    <p class="bwsnote mt-3"><b>Note:</b> <span>Please make sure that the Plumb5 Google Chrome Extension is installed.</span></p>
+                    <p class="bwsnote pt-1"><b>Plumb5 Extension Status:</b> <b class="text-color-blue">Installed</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer editor">
+            <div class="container">
+                <div class="copyriteWrp">
+                    <span>© 2014 onwards. All Rights Reserved. Plumb5 is brought to you by Decisive Analytical Systems PVT.Ltd.</span>
+                    <span><a href="https://plumb5.com/terms.html" target="_blank">Terms of use</a>  / <a href="https://plumb5.com/privacy.html" target="_blank">Privacy Policy</a></span>
+                </div>
+            </div>
+        </div>
+
+        <!--Loading DIV Start-->
+        <div id="ui_divPageLoading" class="spinnerWrap">
+            <div class="spinnerItem position-relative">
+                <div class="sk-wave">
+                    <div class="sk-rect sk-rect1"></div>
+                    <div class="sk-rect sk-rect2"></div>
+                    <div class="sk-rect sk-rect3"></div>
+                    <div class="sk-rect sk-rect4"></div>
+                    <div class="sk-rect sk-rect5"></div>
+                </div>
+            </div>
+        </div>
+        <!--Loading DIV End-->
+        <!--Error Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterError">
+            <div class="alert alert-danger mt-2">
+                <strong>Oh snap! </strong>
+                <span id="ui_span_MasterError_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Error Message DIV End-->
+        <!--Success Message DIV Start-->
+        <div class="errMesWrapper hideDiv" id="ui_div_MasterSuccess">
+            <div class="alert alert-success mt-2">
+                <strong>Well done!</strong>
+                <span id="ui_span_MasterSuccess_Message">&nbsp;</span>
+                <button type="button" class="alert-close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+        <!--Success Message DIV End-->
+
+        <script src="~/js/AccountMaster.js"></script>
+        <script src="~/js/CaptureForm/TaggedFormEditor.js"></script>
+    }
+</body>
+</html>
