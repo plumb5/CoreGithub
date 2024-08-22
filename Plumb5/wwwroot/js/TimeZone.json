@@ -1,8 +1,0 @@
-{
-  "TimeZoneList": {
-    "IST": [ "Asia/Kolkata", -330 ],
-    "SAST": [ "Africa/Johannesburg", -120 ],
-    "EAT": [ "Africa/Nairobi", -180 ],
-    "EST": [ "America/New_York", 300 ]
-  }
-}
