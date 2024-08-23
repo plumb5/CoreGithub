@@ -13,7 +13,14 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    steps:    
+    steps: 
+      - name: Stop AppPool
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
+          method: 'GET'
+          customHeaders: '{"Content-Type": "application/json"}'
+       
       - name: "Checkout"
         uses: actions/checkout@v4
         with:
@@ -36,4 +43,9 @@ jobs:
           # sync: "full"
           # Port for SFTP access to server
           remote-port: 22
-
+      - name: Stop AppPool
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://iis.plumb5.in/?actiontype=start&site=GitHubPublish'
+          method: 'GET'
+          customHeaders: '{"Content-Type": "application/json"}'
