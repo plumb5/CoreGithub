@@ -13,6 +13,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    
+    if : ${{ github.event.commits[0].message == 'plumb5' }}
     steps: 
       - name: Stop AppPool
         uses: fjogeleit/http-request-action@v1
@@ -39,7 +41,7 @@ jobs:
           
           # Path for specific folder on server for files deployment
           local-path: ./Plumb5/wwwroot/js
-          remote-path: /wwwroot/js
+          remote-path: /Plumb5/wwwroot/js
           # sync: "full"
           # Port for SFTP access to server
           remote-port: 22
