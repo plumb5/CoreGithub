@@ -10,7 +10,7 @@ jobs:
   upload_files:
     runs-on: ubuntu-latest      
    
-    if : ${{ github.event.commits[0].message == 'plumb5asset' }}
+    if : ${{ github.event.commits[0].message == 'asset' }}
     name: Upload a builded file.
     steps:  
     
@@ -33,6 +33,8 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: './Plumb5/wwwroot/Content/css/'
         remotePath: './wwwroot/Content/css/'
+        additionalPaths: '{"./Plumb5/wwwroot/js/":"./wwwroot/js/"}' 
+       
 
     - name: Start AppPool
       uses: fjogeleit/http-request-action@v1
