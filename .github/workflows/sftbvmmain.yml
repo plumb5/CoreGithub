@@ -13,38 +13,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
-      
-      - name: Build solution
-        run: dotnet build -c Release --verbosity minimal
-
-      - name: Run tests
-        run: dotnet test -c Release --verbosity minimal --no-build --no-restore
-
-      - name: Publish
-        run: dotnet publish -c Release --no-build --no-restore
-
-      - name: Upload Core artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: Core
-          path: /home/runner/work/CoreGithub/CoreGithub/CoreGithub/bin/Release/net8.0/publish/
-
-
-  deploy_core:
-      name: Deploy Core
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
-    
+    steps:    
       - name: "Checkout"
         uses: actions/checkout@v4
         with:
@@ -62,8 +31,8 @@ jobs:
           
           
           # Path for specific folder on server for files deployment
-          local-path: /home/runner/work/CoreGithub/CoreGithub
-          remote-path: /deploy-test
+          local-path: ./Plumb5/wwwroot/js
+          remote-path: ./wwwroot/js
           # sync: "full"
           # Port for SFTP access to server
           remote-port: 22
