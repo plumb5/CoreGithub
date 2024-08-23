@@ -40,6 +40,13 @@ jobs:
        url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
        method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
+
+    - name: Delete old files
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/folder?name=Plumb5'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
        
     - name: Upload Files
       id: upload
@@ -50,7 +57,7 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/publish/'
-        remotePath: './'
+        remotePath: './Plumb5'
 
     - name: Start AppPool
       uses: fjogeleit/http-request-action@v1
