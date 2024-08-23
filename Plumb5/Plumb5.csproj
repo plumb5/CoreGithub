@@ -34,6 +34,7 @@
 		<None Remove="wwwroot\json\**" />
 		<None Remove="wwwroot\lib\**" />
 		<None Remove="wwwroot\TrackerScript\**" />
+    <Content Remove="wwwroot\**" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,7 +42,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="wwwroot\favicon.ico" />
+	  <Content Remove="wwwroot\favicon.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
