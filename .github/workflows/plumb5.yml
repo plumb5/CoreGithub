@@ -13,7 +13,19 @@ jobs:
     if : ${{ github.event.commits[0].message == 'plumb5' }}
     name: Plumb5 Publish.
     steps:      
-   
+    - name: Stop AppPool
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
+
+    - name: Delete old files
+      uses: fjogeleit/http-request-action@v1
+      with:
+       url: 'https://iis.plumb5.in/folder?name=Plumb5'
+       method: 'GET'
+       customHeaders: '{"Content-Type": "application/json"}'
     - name: Checkout
       uses: actions/checkout@v2.3.4
      
@@ -31,19 +43,7 @@ jobs:
     - name: Publish
       run: dotnet publish -c Release --no-build --no-restore /home/runner/work/CoreGithub/CoreGithub/Plumb5/Plumb5.csproj
    
-    - name: Stop AppPool
-      uses: fjogeleit/http-request-action@v1
-      with:
-       url: 'https://iis.plumb5.in/?actiontype=stop&site=GitHubPublish'
-       method: 'GET'
-       customHeaders: '{"Content-Type": "application/json"}'
-
-    - name: Delete old files
-      uses: fjogeleit/http-request-action@v1
-      with:
-       url: 'https://iis.plumb5.in/folder?name=Plumb5'
-       method: 'GET'
-       customHeaders: '{"Content-Type": "application/json"}' 
+     
        
     - name: Upload Files
       id: upload
