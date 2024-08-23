@@ -14,6 +14,7 @@ $(document).ready(() => {
    
 });
 
+
 $("#btnSavedReport").click(function () {
     $(".popuptitlwrp h6").html('SAVED REPORTS');
     $('#dvSavedReports').removeClass("hideDiv");
