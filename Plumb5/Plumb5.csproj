@@ -10,17 +10,38 @@
 	<ItemGroup>
 		<Compile Remove="Areas\Mail\Data\**" />
 		<Compile Remove="Areas\ManageUsers\Data\**" />
+		<Compile Remove="wwwroot\Content\**" />
+		<Compile Remove="wwwroot\css\**" />
+		<Compile Remove="wwwroot\images\**" />
+		<Compile Remove="wwwroot\json\**" />
+		<Compile Remove="wwwroot\lib\**" />
+		<Compile Remove="wwwroot\TrackerScript\**" />
 		<Content Remove="Areas\Mail\Data\**" />
 		<Content Remove="Areas\ManageUsers\Data\**" />
 		<EmbeddedResource Remove="Areas\Mail\Data\**" />
 		<EmbeddedResource Remove="Areas\ManageUsers\Data\**" />
+		<EmbeddedResource Remove="wwwroot\Content\**" />
+		<EmbeddedResource Remove="wwwroot\css\**" />
+		<EmbeddedResource Remove="wwwroot\images\**" />
+		<EmbeddedResource Remove="wwwroot\json\**" />
+		<EmbeddedResource Remove="wwwroot\lib\**" />
+		<EmbeddedResource Remove="wwwroot\TrackerScript\**" />
 		<None Remove="Areas\Mail\Data\**" />
 		<None Remove="Areas\ManageUsers\Data\**" />
-    <Content Remove="wwwroot\**" />
+		<None Remove="wwwroot\Content\**" />
+		<None Remove="wwwroot\css\**" />
+		<None Remove="wwwroot\images\**" />
+		<None Remove="wwwroot\json\**" />
+		<None Remove="wwwroot\lib\**" />
+		<None Remove="wwwroot\TrackerScript\**" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Compile Remove="Areas\Prospect\Controllers\ContactArchiveController.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="wwwroot\favicon.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
