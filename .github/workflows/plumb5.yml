@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest      
    
     if : ${{ github.event.commits[0].message == 'plumb5' }}
-    name: Upload a builded file.
+    name: Plumb5 Publish.
     steps:  
     - name: Logging
       run: echo "Msg:${{github.event.commits[0].message}}"
@@ -30,9 +30,6 @@ jobs:
      
     - name: Run tests
       run: dotnet test -c Release --verbosity minimal --no-build --no-restore /home/runner/work/CoreGithub/CoreGithub/Plumb5/Plumb5.csproj
-     
-    - name: Publish
-      run: dotnet publish -c Release --no-build --no-restore /home/runner/work/CoreGithub/CoreGithub/Plumb5/Plumb5.csproj
 
     - name: Stop AppPool
       uses: fjogeleit/http-request-action@v1
@@ -47,7 +44,10 @@ jobs:
        url: 'https://iis.plumb5.in/folder?name=Plumb5'
        method: 'GET'
        customHeaders: '{"Content-Type": "application/json"}'
-       
+   
+    - name: Publish
+      run: dotnet publish -c Release --no-build --no-restore /home/runner/work/CoreGithub/CoreGithub/Plumb5/Plumb5.csproj
+
     - name: Upload Files
       id: upload
       uses: Creepios/sftp-action@v1.0.3
@@ -59,6 +59,24 @@ jobs:
         localPath: '/home/runner/work/CoreGithub/CoreGithub/Plumb5/bin/Release/net8.0/publish/'
         remotePath: './Plumb5'
 
+    - name: "Checkout"
+      uses: actions/checkout@v4
+      with:
+          fetch-depth: 0
+          
+    - name: Upload content files changes        
+      uses: milanmk/actions-file-deployer@master
+      with:
+          remote-protocol: sftp
+          remote-host: ${{ secrets.FTP_HOST }}
+          remote-user: ${{ secrets.FTP_USER }}
+          remote-password: ${{ secrets.FTP_PASSWORD }}          
+          
+          local-path: ./Plumb5/wwwroot/js
+          remote-path: /Plumb5/wwwroot/js
+          # sync: "full"
+          remote-port: 22
+          
     - name: Start AppPool
       uses: fjogeleit/http-request-action@v1
       with:
