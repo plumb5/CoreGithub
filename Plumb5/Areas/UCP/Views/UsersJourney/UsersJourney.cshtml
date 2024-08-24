@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "UsersJourney";
+    Layout = "~/Views/Shared/PlumbAccountMaster.cshtml";
+}
+
+<section class="sheet">
+    <div class="pageheader">
+        <h6 class="pagetitle">Contact UCP</h6>
+        <div class="contactUcpbread">
+            <ol class="breadcrumb slim-breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Contacts</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Contacts UCP</li>
+            </ol>
+        </div>
+    </div>
+    <div class="container-UCP" style="height:300px">
+        <div class="row">
+            <label id="urlid"> Please Enter a proper url values in following format https://dashboard.plumb5.com/ucp/usersJourney?aid=0&cid=0&mid=0 </label>
+
+        </div>
+    </div>
+</section>
+
+
+@{
+    Html.RenderPartial("_ContactUCP");
+}
+<script src="~/js/UsersJourney.js"></script>
