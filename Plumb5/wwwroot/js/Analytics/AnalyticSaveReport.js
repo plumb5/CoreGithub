@@ -14,7 +14,7 @@ $(document).ready(() => {
    
 });
 
-//test..kkddrrr55555 ggggg tttt bbbbb
+//test.
 $("#btnSavedReport").click(function () {
     $(".popuptitlwrp h6").html('SAVED REPORTS');
     $('#dvSavedReports').removeClass("hideDiv");
